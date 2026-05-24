@@ -18,6 +18,7 @@ const FileConverterPrivacyPolicy = () => {
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
+
             <section>
               <p>
                 Welcome to{" "}
@@ -48,8 +49,7 @@ const FileConverterPrivacyPolicy = () => {
 
               <p className="mt-4">
                 All file processing and conversions are performed locally on
-                your device whenever possible. Your files are not uploaded to
-                any external server by us.
+                your device whenever possible.
               </p>
             </section>
 
@@ -58,47 +58,14 @@ const FileConverterPrivacyPolicy = () => {
                 Permissions Used
               </h2>
 
-              <p>
-                File Converter may request the following permissions only for
-                app functionality:
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Storage / Media Access</li>
+                <li>Internet Permission</li>
+              </ul>
+
+              <p className="mt-4">
+                The app does not upload or store personal files.
               </p>
-
-              <div className="space-y-6 mt-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">
-                    Storage / Media Access
-                  </h3>
-
-                  <p>Used to:</p>
-
-                  <ul className="list-disc pl-6 mt-3 space-y-2">
-                    <li>Select files for conversion</li>
-                    <li>Save converted files</li>
-                    <li>
-                      Access images, audio, video, and documents chosen by the
-                      user
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">
-                    Internet Permission
-                  </h3>
-
-                  <p>Used for:</p>
-
-                  <ul className="list-disc pl-6 mt-3 space-y-2">
-                    <li>Loading advertisements through Google AdMob</li>
-                    <li>Checking app updates or external links</li>
-                  </ul>
-
-                  <p className="mt-4">
-                    The app does not use internet access to upload or store
-                    your personal files.
-                  </p>
-                </div>
-              </div>
             </section>
 
             <section>
@@ -109,34 +76,6 @@ const FileConverterPrivacyPolicy = () => {
               <p>
                 File Converter uses Google AdMob to display ads.
               </p>
-
-              <p className="mt-4">
-                Third-party services such as AdMob may collect limited
-                non-personal information for ad personalization and analytics
-                according to their own privacy policies.
-              </p>
-
-              <div className="mt-4 space-y-2">
-                <p>Learn more:</p>
-
-                <a
-                  href="https://policies.google.com/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
-                >
-                  Google Privacy Policy
-                </a>
-
-                <a
-                  href="https://support.google.com/admob"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
-                >
-                  Google AdMob
-                </a>
-              </div>
             </section>
 
             <section>
@@ -144,62 +83,11 @@ const FileConverterPrivacyPolicy = () => {
                 File Privacy
               </h2>
 
-              <p>
-                Your files remain under your control.
-              </p>
-
-              <p className="mt-4">
-                We do not:
-              </p>
-
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Upload files to our servers</li>
-                <li>Access your private documents</li>
-                <li>Share files with third parties</li>
+                <li>Your files remain under your control</li>
+                <li>We do not upload files to servers</li>
+                <li>We do not share files with third parties</li>
               </ul>
-
-              <p className="mt-4">
-                All conversions are initiated manually by the user.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Data Security
-              </h2>
-
-              <p>
-                We aim to provide a secure and reliable experience. However,
-                users are responsible for maintaining backups of important
-                files.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Children’s Privacy
-              </h2>
-
-              <p>
-                File Converter is not directed toward children under the age of
-                13.
-              </p>
-
-              <p className="mt-4">
-                We do not knowingly collect personal information from children.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Changes to This Privacy Policy
-              </h2>
-
-              <p>
-                We may update this Privacy Policy from time to time. Any
-                updates will be reflected on this page with a revised “Last
-                Updated” date.
-              </p>
             </section>
 
             <section>
@@ -207,18 +95,16 @@ const FileConverterPrivacyPolicy = () => {
                 Contact Us
               </h2>
 
-              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                  CH TECH GIANT (OPC) PRIVATE LIMITED
-                </h3>
-
+              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6">
                 <div className="space-y-2">
+                  <p>CH TECH GIANT (OPC) PRIVATE LIMITED</p>
                   <p>Davangere, Karnataka 577001</p>
                   <p>Email: info@chtechgiant.com</p>
                   <p>Phone: +91 9980785020</p>
                 </div>
               </div>
             </section>
+
           </div>
         </motion.div>
       </div>

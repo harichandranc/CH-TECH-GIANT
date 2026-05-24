@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const InvoiceMakerPrivacyPolicy = () => {
+const ImageToPDFPrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-[#050816] text-white pt-32 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -10,7 +10,7 @@ const InvoiceMakerPrivacyPolicy = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
-            Privacy Policy – Invoice Maker
+            Privacy Policy – Image to PDF
           </h1>
 
           <p className="text-gray-400 mb-10">
@@ -21,9 +21,13 @@ const InvoiceMakerPrivacyPolicy = () => {
 
             <section>
               <p>
-                Welcome to Invoice Maker developed by
+                Welcome to{" "}
                 <span className="text-cyan-400 font-semibold">
-                  {" "}CH TECH GIANT
+                  Image to PDF
+                </span>{" "}
+                developed by{" "}
+                <span className="text-cyan-400 font-semibold">
+                  CH TECH GIANT (OPC) PRIVATE LIMITED
                 </span>.
               </p>
 
@@ -39,13 +43,13 @@ const InvoiceMakerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                Invoice Maker does not collect, store, or share any personal
+                Image to PDF does not collect, store, or share personal
                 information from users.
               </p>
 
               <p className="mt-4">
-                All invoice data created within the app is stored locally on
-                your device unless you choose to export or share it yourself.
+                All image processing and PDF generation are performed locally
+                on your device whenever possible.
               </p>
             </section>
 
@@ -54,22 +58,58 @@ const InvoiceMakerPrivacyPolicy = () => {
                 Permissions Used
               </h2>
 
-              <ul className="list-disc pl-6 space-y-3">
-                <li>
-                  <strong>Storage / Files Access</strong> — Used to save,
-                  export, and share invoices or PDF files created by the user.
-                </li>
-
-                <li>
-                  <strong>Internet Access</strong> — May be used for
-                  advertisements or optional online features.
-                </li>
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Storage / Photos Access</li>
+                <li>Select images from your device</li>
+                <li>Save generated PDF files</li>
+                <li>Share exported PDF documents</li>
               </ul>
 
               <p className="mt-4">
-                The app does not access your personal contacts, messages,
-                photos, or sensitive information without your permission.
+                The app only accesses files selected by the user.
               </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                File Handling
+              </h2>
+
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>Your images remain on your device</li>
+                <li>We do not upload files to servers</li>
+                <li>We do not share user data</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Advertising
+              </h2>
+
+              <p>
+                This app may display advertisements provided by Google AdMob.
+              </p>
+
+              <div className="mt-4">
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300"
+                >
+                  Google Privacy Policy
+                </a>
+
+                <a
+                  href="https://support.google.com/admob"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 mt-2"
+                >
+                  AdMob Policy
+                </a>
+              </div>
             </section>
 
             <section>
@@ -78,20 +118,9 @@ const InvoiceMakerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                Your invoice data remains on your device. We do not upload or
-                store your business data on our servers.
+                Since processing occurs locally on the device, your files
+                remain under your control.
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Third-Party Services
-              </h2>
-
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Google Play Services</li>
-                <li>Google AdMob</li>
-              </ul>
             </section>
 
             <section>
@@ -120,12 +149,9 @@ const InvoiceMakerPrivacyPolicy = () => {
               </h2>
 
               <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                  CH TECH GIANT (OPC) PRIVATE LIMITED
-                </h3>
-
                 <div className="space-y-2">
-                  <p>Davangere, Karnataka 577001, India</p>
+                  <p>CH TECH GIANT (OPC) PRIVATE LIMITED</p>
+                  <p>Davangere, Karnataka – 577001</p>
                   <p>Email: info@chtechgiant.com</p>
                   <p>Phone: +91 9980785020</p>
                 </div>
@@ -139,4 +165,4 @@ const InvoiceMakerPrivacyPolicy = () => {
   );
 };
 
-export default InvoiceMakerPrivacyPolicy;
+export default ImageToPDFPrivacyPolicy;
