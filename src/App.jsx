@@ -21,6 +21,10 @@ import InvoiceDesign from "./pages/services/InvoiceDesign";
 
 import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
 import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
+import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
+import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
+import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
+
 
 function App() {
   return (
@@ -77,6 +81,21 @@ function App() {
             <Route
               path="/apps/cgpa-sgpa-calculator/privacy-policy"
               element={<CGPASGPAPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/invoice-maker/privacy-policy"
+              element={<InvoiceMakerPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/file-converter/privacy-policy"
+              element={<FileConverterPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/file-renamer/privacy-policy"
+              element={<FileRenamerPrivacyPolicy />}
             />
 
             <Route
