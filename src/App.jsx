@@ -19,6 +19,8 @@ import ITConsulting from "./pages/services/ITConsulting";
 import PamphletDesign from "./pages/services/PamphletDesign";
 import InvoiceDesign from "./pages/services/InvoiceDesign";
 
+import PrivacyPolicy from "./pages/apps/world-clock/PrivacyPolicy";
+
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +43,7 @@ function App() {
             <Route path="/services/pamphlet-design" element={<PamphletDesign />} />
             <Route path="/services/invoice-design" element={<InvoiceDesign />} />
             <Route path="/components/ScrollToTop" element={<ScrollToTop />} />
+            <Route path="/world-clock/privacy-policy" element={<PrivacyPolicy />} />
 
           </Routes>
         </main>
