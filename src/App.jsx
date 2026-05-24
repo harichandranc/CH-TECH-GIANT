@@ -43,7 +43,7 @@ function App() {
             <Route path="/services/pamphlet-design" element={<PamphletDesign />} />
             <Route path="/services/invoice-design" element={<InvoiceDesign />} />
             <Route path="/components/ScrollToTop" element={<ScrollToTop />} />
-            <Route path="/world-clock/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/world-clock/privacy-policy" element={<WorldClockPrivacyPolicy />} />
 
           </Routes>
         </main>
