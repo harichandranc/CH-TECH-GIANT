@@ -20,6 +20,7 @@ import PamphletDesign from "./pages/services/PamphletDesign";
 import InvoiceDesign from "./pages/services/InvoiceDesign";
 
 import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
+import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
 
 function App() {
   return (
@@ -71,6 +72,11 @@ function App() {
             <Route
               path="/apps/world-clock/privacy-policy"
               element={<WorldClockPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/cgpa-sgpa-calculator/privacy-policy"
+              element={<CGPASGPAPrivacyPolicy />}
             />
 
             <Route

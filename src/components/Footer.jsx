@@ -101,24 +101,6 @@ function Footer() {
               </a>
 
               <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  w-11 h-11 rounded-xl
-                  border border-cyan-500/10
-                  bg-white/5
-                  flex items-center justify-center
-                  text-gray-300
-                  hover:bg-cyan-500
-                  hover:text-black
-                  transition-all duration-300
-                "
-              >
-                <FaLinkedinIn />
-              </a>
-
-              <a
                 href="https://wa.me/919980785020"
                 target="_blank"
                 rel="noreferrer"
