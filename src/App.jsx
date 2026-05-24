@@ -19,11 +19,13 @@ import ITConsulting from "./pages/services/ITConsulting";
 import PamphletDesign from "./pages/services/PamphletDesign";
 import InvoiceDesign from "./pages/services/InvoiceDesign";
 
-import PrivacyPolicy from "./pages/apps/world-clock/PrivacyPolicy";
+import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <div className="bg-[#050816] text-white min-h-screen flex flex-col">
         <Navbar />
 
@@ -35,16 +37,46 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path ="/services/app-development" element={<AppDevelopment />} />
-            <Route path="/services/web-development" element={<WebDevelopment />} />
-            <Route path="/services/software-development" element={<SoftwareDevelopment />} />
-            <Route path="/services/game-development" element={<GameDevelopment />} />
-            <Route path="/services/it-consulting" element={<ITConsulting />} />
-            <Route path="/services/pamphlet-design" element={<PamphletDesign />} />
-            <Route path="/services/invoice-design" element={<InvoiceDesign />} />
-            <Route path="/components/ScrollToTop" element={<ScrollToTop />} />
-            <Route path="/world-clock/privacy-policy" element={<WorldClockPrivacyPolicy />} />
 
+            <Route
+              path="/services/app-development"
+              element={<AppDevelopment />}
+            />
+
+            <Route
+              path="/services/web-development"
+              element={<WebDevelopment />}
+            />
+
+            <Route
+              path="/services/software-development"
+              element={<SoftwareDevelopment />}
+            />
+
+            <Route
+              path="/services/game-development"
+              element={<GameDevelopment />}
+            />
+
+            <Route
+              path="/services/it-consulting"
+              element={<ITConsulting />}
+            />
+
+            <Route
+              path="/services/pamphlet-design"
+              element={<PamphletDesign />}
+            />
+
+            <Route
+              path="/apps/world-clock/privacy-policy"
+              element={<WorldClockPrivacyPolicy />}
+            />
+
+            <Route
+              path="/services/invoice-design"
+              element={<InvoiceDesign />}
+            />
           </Routes>
         </main>
 
