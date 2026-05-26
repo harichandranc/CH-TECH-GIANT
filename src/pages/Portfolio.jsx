@@ -9,7 +9,6 @@ const projects = [
     image: "/projects/cgpacalculator.jpg",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator&pcampaignid=web_share",
   },
-
   {
     title: "File Converter",
     category: "app",
@@ -17,7 +16,6 @@ const projects = [
     image: "/projects/fileconverter.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter&pcampaignid=web_share",
   },
-
   {
     title: "World Clock App",
     category: "app",
@@ -25,7 +23,6 @@ const projects = [
     image: "/projects/worldclock.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock&pcampaignid=web_share",
   },
-
   {
     title: "File Renamer",
     category: "app",
@@ -33,7 +30,6 @@ const projects = [
     image: "/projects/filerenamer.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share",
   },
-
   {
     title: "Invoice Maker",
     category: "app",
@@ -41,7 +37,6 @@ const projects = [
     image: "/projects/invoicemaker.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share",
   },
-
   {
     title: "Image To PDF",
     category: "app",
@@ -91,7 +86,6 @@ const Portfolio = () => {
 
         {/* FILTERS */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-
           {filters.map((filter) => (
             <button
               key={filter}
@@ -105,15 +99,17 @@ const Portfolio = () => {
               {filter}
             </button>
           ))}
-
         </div>
 
         {/* PROJECT GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -121,15 +117,15 @@ const Portfolio = () => {
                 delay: index * 0.1,
               }}
               whileHover={{ y: -10 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
             >
 
               {/* IMAGE */}
-              <div className="h-64 overflow-hidden">
+              <div className="h-48 md:h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  className="w-full h-full object-contain bg-black group-hover:scale-105 transition duration-700 p-2"
                 />
               </div>
 
@@ -150,22 +146,17 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
-                {/* BUTTON */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-6 text-cyan-400 font-semibold hover:text-cyan-300 transition"
-                >
-                  View Project →
-                </a>
+                {/* INSTALL BUTTON */}
+                <div className="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/30">
+                  Install App
+                </div>
 
               </div>
 
               {/* GLOW */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500"></div>
 
-            </motion.div>
+            </motion.a>
           ))}
 
         </div>
