@@ -153,9 +153,13 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
-                {/* INSTALL BUTTON */}
+                {/* ACTION BUTTON */}
                 <div className="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/30">
-                  Install App
+                  {project.category === "app"
+                    ? "Install App"
+                    : project.category === "software"
+                    ? "Install Software"
+                    : "Visit Website"}
                 </div>
 
               </div>

@@ -9,10 +9,10 @@ const services = [
   },
 
   {
-    title: "Game Development",
+    title: "Software Development",
     description:
-      "Interactive 2D & 3D gaming experiences with immersive gameplay.",
-    image: "/services/game.jpeg",
+      "Custom desktop and enterprise software development solutions.",
+    image: "/services/software.jpg",
   },
 
   {
@@ -21,6 +21,14 @@ const services = [
       "Modern responsive websites and scalable web applications.",
     image: "/services/web.jpg",
   },
+
+  {
+    title: "Game Development",
+    description:
+      "Interactive 2D & 3D gaming experiences with immersive gameplay.",
+    image: "/services/game.jpeg",
+  },
+
 
   {
     title: "IT Consulting",
@@ -36,12 +44,7 @@ const services = [
     image: "/services/phamplet.png",
   },
 
-  {
-    title: "Software Development",
-    description:
-      "Custom desktop and enterprise software development solutions.",
-    image: "/services/invoice.png",
-  },
+  
 ];
 
 const Services = () => {
