@@ -34,7 +34,7 @@ const projects = [
     title: "PDF Converter",
     category: "web",
     description: "Convert images into high quality PDF files.",
-    image: "/projects/pdfconverter.png",
+    image: "/projects/pdfconverter.jpg",
     link: "https://pdfconverter.chtechgiant.com",
   },
   {
