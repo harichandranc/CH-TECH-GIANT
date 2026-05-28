@@ -26,6 +26,14 @@ import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
 
+import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
+import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
+import IOSDevelopment from "./pages/services/app-development/IOSDevelopment";
+import ReactNativeDevelopment from "./pages/services/app-development/ReactNativeDevelopment";
+import HybridAppDevelopment from "./pages/services/app-development/HybridAppDevelopment";
+import EcommerceAppDevelopment from "./pages/services/app-development/EcommerceAppDevelopment";
+import MobileAppDevelopment from "./pages/services/app-development/MobileAppDevelopment";
+
 function App() {
   return (
     <BrowserRouter>
@@ -107,6 +115,43 @@ function App() {
               path="/services/invoice-design"
               element={<InvoiceDesign />}
             />
+
+            <Route
+              path="/app-development/flutter-development"
+              element={<FlutterDevelopment />}
+            />
+
+            <Route
+              path="/app-development/android-development"
+              element={<AndroidDevelopment />}
+            />
+
+            <Route
+              path="/app-development/ios-development"
+              element={<IOSDevelopment />}
+            />
+
+            <Route
+              path="/app-development/react-native-development"
+              element={<ReactNativeDevelopment />}
+            />
+
+            <Route
+              path="/app-development/hybrid-app-development"
+              element={<HybridAppDevelopment />}
+            />
+
+            <Route
+              path="/app-development/ecommerce-app-development"
+              element={<EcommerceAppDevelopment />}
+            />
+
+            <Route
+              path="/app-development/mobile-app-development"
+              element={<MobileAppDevelopment />}
+            />
+
+
           </Routes>
         </main>
 

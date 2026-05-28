@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <!-- Home -->
+
+  <url>
+    <loc>https://chtechgiant.com/</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/app.webp
+      </image:loc>
+      <image:title>App Development Services</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/web.jpg
+      </image:loc>
+      <image:title>Web Development Services</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/software.jpg
+      </image:loc>
+      <image:title>Software Development Services</image:title>
+    </image:image>
+  </url>
+
+  <!-- About -->
+
+  <url>
+    <loc>https://chtechgiant.com/about</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/about/about.jpg
+      </image:loc>
+      <image:title>About CH TECH GIANT</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services -->
+
+  <url>
+    <loc>https://chtechgiant.com/services/app-development</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/app.webp
+      </image:loc>
+      <image:title>App Development</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/web-development</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/web.jpg
+      </image:loc>
+      <image:title>Web Development</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/software-development</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/software.jpg
+      </image:loc>
+      <image:title>Software Development</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/game-development</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/game.jpeg
+      </image:loc>
+      <image:title>Game Development</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/it-consulting</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/itconsult.jpg
+      </image:loc>
+      <image:title>IT Consulting</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/pamphlet-design</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/pamphlet.png
+      </image:loc>
+      <image:title>Pamphlet Design</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/services/invoice-design</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/invoice.png
+      </image:loc>
+      <image:title>Invoice Design</image:title>
+    </image:image>
+  </url>
+
+  <!-- Portfolio -->
+
+  <url>
+    <loc>https://chtechgiant.com/portfolio</loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/cgpacalculator.jpg
+      </image:loc>
+      <image:title>CGPA Calculator App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/fileconverter.png
+      </image:loc>
+      <image:title>File Converter App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/filerenamer.png
+      </image:loc>
+      <image:title>File Renamer App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/img2pdf%20copy.png
+      </image:loc>
+      <image:title>Image to PDF App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/invoicemaker.png
+      </image:loc>
+      <image:title>Invoice Maker App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/pdfconverter.jpg
+      </image:loc>
+      <image:title>PDF Converter App</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/worldclock.png
+      </image:loc>
+      <image:title>World Clock App</image:title>
+    </image:image>
+  </url>
+
+  <!-- Dedicated Project Image Pages -->
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/worldclock.png
+      </image:loc>
+      <image:title>
+        World Clock Flutter App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/fileconverter.png
+      </image:loc>
+      <image:title>
+        File Converter App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/filerenamer.png
+      </image:loc>
+      <image:title>
+        File Renamer App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/img2pdf%20copy.png
+      </image:loc>
+      <image:title>
+        Image to PDF App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/invoicemaker.png
+      </image:loc>
+      <image:title>
+        Invoice Maker App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://pdfconverter.chtechgiant.com
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/pdfconverter.jpg
+      </image:loc>
+      <image:title>
+        PDF Converter App
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator&pcampaignid=web_share
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/projects/cgpacalculator.jpg
+      </image:loc>
+      <image:title>
+        CGPA Calculator App
+      </image:title>
+    </image:image>
+  </url>
+
+</urlset>

@@ -216,7 +216,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="bg-[#050816] text-white overflow-hidden">
+      <div className="bg-black text-white overflow-hidden">
 
         {/* VIDEO SECTION */}
         <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden">
