@@ -178,11 +178,118 @@
     </image:image>
   </url>
 
+    <!-- App Development Service Pages -->
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/flutter-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/flutter.jpg
+      </image:loc>
+      <image:title>
+        Flutter App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/android-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/android.jpg
+      </image:loc>
+      <image:title>
+        Android App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/ios-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/ios.jpg
+      </image:loc>
+      <image:title>
+        iOS App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/react-native-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/react-native.jpg
+      </image:loc>
+      <image:title>
+        React Native App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/hybrid-app-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/hybrid-app.jpg
+      </image:loc>
+      <image:title>
+        Hybrid App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/ecommerce-app-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/ecommerce-app.jpg
+      </image:loc>
+      <image:title>
+        Ecommerce App Development
+      </image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>
+      https://chtechgiant.com/app-development/mobile-app-development
+    </loc>
+
+    <image:image>
+      <image:loc>
+        https://chtechgiant.com/services/mobile-app.jpg
+      </image:loc>
+      <image:title>
+        Mobile App Development
+      </image:title>
+    </image:image>
+  </url>
+
   <!-- Dedicated Project Image Pages -->
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock
     </loc>
 
     <image:image>
@@ -197,7 +304,7 @@
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter
     </loc>
 
     <image:image>
@@ -212,7 +319,7 @@
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner
     </loc>
 
     <image:image>
@@ -227,7 +334,7 @@
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter
     </loc>
 
     <image:image>
@@ -242,7 +349,7 @@
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app
     </loc>
 
     <image:image>
@@ -272,7 +379,7 @@
 
   <url>
     <loc>
-      https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator&pcampaignid=web_share
+      https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator
     </loc>
 
     <image:image>
