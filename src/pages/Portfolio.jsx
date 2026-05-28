@@ -31,6 +31,13 @@ const projects = [
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share",
   },
   {
+    title: "PDF Converter",
+    category: "web",
+    description: "Convert images into high quality PDF files.",
+    image: "/projects/pdfconverter.png",
+    link: "https://pdfconverter.chtechgiant.com",
+  },
+  {
     title: "Invoice Maker",
     category: "app",
     description: "Professional invoice generation app.",
