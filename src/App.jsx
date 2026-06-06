@@ -34,6 +34,8 @@ import HybridAppDevelopment from "./pages/services/app-development/HybridAppDeve
 import EcommerceAppDevelopment from "./pages/services/app-development/EcommerceAppDevelopment";
 import MobileAppDevelopment from "./pages/services/app-development/MobileAppDevelopment";
 
+import SchoolERPSystem from "./pages/services/software-development/SchoolERPSystem";
+
 function App() {
   return (
     <BrowserRouter>
@@ -149,6 +151,11 @@ function App() {
             <Route
               path="/app-development/mobile-app-development"
               element={<MobileAppDevelopment />}
+            />
+
+            <Route
+              path="/services/software-development/school-erp-system"
+              element={<SchoolERPSystem />}
             />
 
 

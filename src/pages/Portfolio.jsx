@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -50,6 +51,14 @@ const projects = [
     description: "Convert images into high quality PDF files.",
     image: "/projects/img2pdf copy.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share",
+  },
+  {
+    title: "School ERP System",
+    category: "software",
+    description:
+      "Smartly manage students, staff, academics, attendance, and school operations in one centralized platform.",
+    image: "/projects/schoolerp.png",
+    link: "/services/software-development/school-erp-system",
   },
 ];
 
@@ -110,66 +119,91 @@ const Portfolio = () => {
 
         {/* PROJECT GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, index) => {
+            const isInternal = project.link.startsWith("/");
 
-          {filteredProjects.map((project, index) => (
-            <motion.a
-              key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-              }}
-              whileHover={{ y: -10 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
-            >
-
-              {/* IMAGE */}
-              <div className="h-48 md:h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain bg-black group-hover:scale-105 transition duration-700 p-2"
-                />
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-6">
-
-                <div className="mb-4">
-                  <span className="px-4 py-1 rounded-full text-xs uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                    {project.category}
-                  </span>
+            const CardContent = (
+              <>
+                {/* IMAGE */}
+                <div className="h-48 md:h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-contain bg-black group-hover:scale-105 transition duration-700 p-2"
+                  />
                 </div>
 
-                <h2 className="text-2xl font-bold mb-3">
-                  {project.title}
-                </h2>
+                {/* CONTENT */}
+                <div className="p-6">
+                  <div className="mb-4">
+                    <span className="px-4 py-1 rounded-full text-xs uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                      {project.category}
+                    </span>
+                  </div>
 
-                <p className="text-gray-400 leading-relaxed mb-5">
-                  {project.description}
-                </p>
+                  <h2 className="text-2xl font-bold mb-3">
+                    {project.title}
+                  </h2>
 
-                {/* ACTION BUTTON */}
-                <div className="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/30">
-                  {project.category === "app"
-                    ? "Install App"
-                    : project.category === "software"
-                    ? "Install Software"
-                    : "Visit Website"}
+                  <p className="text-gray-400 leading-relaxed mb-5">
+                    {project.description}
+                  </p>
+
+                  <div className="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/30">
+                    {project.category === "app"
+                      ? "Install App"
+                      : project.category === "software"
+                      ? "View Software"
+                      : "Visit Website"}
+                  </div>
                 </div>
 
-              </div>
+                {/* GLOW */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500"></div>
+              </>
+            );
 
-              {/* GLOW */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500"></div>
+            if (isInternal) {
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                  }}
+                  whileHover={{ y: -10 }}
+                >
+                  <Link
+                    to={project.link}
+                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
+                  >
+                    {CardContent}
+                  </Link>
+                </motion.div>
+              );
+            }
 
-            </motion.a>
-          ))}
-
+            return (
+              <motion.a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{ y: -10 }}
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
+              >
+                {CardContent}
+              </motion.a>
+            );
+          })}
         </div>
 
       </div>
