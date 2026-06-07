@@ -152,18 +152,18 @@ const Home = () => {
       {/* SEO */}
       <Helmet>
         <title>
-          CH TECH GIANT | App Development, Web Development &
+          CH TECH GIANT | App Development, Web Development, Game Development &
           Software Solutions
         </title>
 
         <meta
           name="description"
-          content="CH TECH GIANT provides premium app development, web development, software development, and game development services for startups, businesses, and enterprises."
+          content="CH TECH GIANT provides premium app development, web development, software development and game development services for startups, businesses, and enterprises."
         />
 
         <meta
           name="keywords"
-          content="app development company, web development company, software development company, flutter app development, game development company, CH TECH GIANT, Davanagere"
+          content="app development company, web development company, software development company, flutter app development, game development company, CH TECH GIANT, Davanagere, Karanataka, India"
         />
 
         <meta name="author" content="CH TECH GIANT" />
