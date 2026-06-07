@@ -66,7 +66,7 @@ function App() {
             />
 
             <Route
-              path="/services/software-development"
+              path="/software-development"
               element={<SoftwareDevelopment />}
             />
 
