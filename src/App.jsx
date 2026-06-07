@@ -37,6 +37,14 @@ import MobileAppDevelopment from "./pages/services/app-development/MobileAppDeve
 import SchoolERPSystem from "./pages/services/software-development/SchoolERPSystem";
 
 import WebDevelopmentDavangere from "./pages/services/web-development/SEO/WebDevelopmentDavangere";
+import WebDevelopmentMangalore from "./pages/services/web-development/SEO/WebDevelopmentMangalore";
+import WebDevelopmentMysore from "./pages/services/web-development/SEO/WebDevelopmentMysore";
+import WebDevelopmentShivamogga from "./pages/services/web-development/SEO/WebDevelopmentShivamogga";
+import WebDevelopmentTumakuru from "./pages/services/web-development/SEO/WebDevelopmentTumakuru";
+import WebDevelopmentBangalore from "./pages/services/web-development/SEO/WebDevelopmentBangalore";
+import WebDevelopmentHubli from "./pages/services/web-development/SEO/WebDevelopmentHubli";
+import WebDevelopmentDharwad from "./pages/services/web-development/SEO/WebDevelopmentDharwad";
+import WebDevelopmentBellary from "./pages/services/web-development/SEO/WebDevelopmentBellary";
 
 function App() {
   return (
@@ -170,6 +178,45 @@ function App() {
               element={<WebDevelopmentDavangere />}
             />
 
+            <Route
+              path="/web-development-mangalore"
+              element={<WebDevelopmentMangalore />}
+            />
+
+            <Route
+              path="/web-development-mysore"
+              element={<WebDevelopmentMysore />}
+            />
+
+            <Route
+              path="/web-development-shivamogga"
+              element={<WebDevelopmentShivamogga />}
+            />
+
+            <Route
+              path="/web-development-tumakuru"
+              element={<WebDevelopmentTumakuru />}
+            />
+
+            <Route
+              path="/web-development-bangalore"
+              element={<WebDevelopmentBangalore />}
+            />
+
+            <Route
+              path="/web-development-hubli"
+              element={<WebDevelopmentHubli />}
+            />
+
+            <Route
+              path="/web-development-dharwad"
+              element={<WebDevelopmentDharwad />}
+            />
+
+            <Route
+              path="/web-development-bellary"
+              element={<WebDevelopmentBellary />}
+            />
 
           </Routes>
         </main>

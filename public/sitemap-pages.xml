@@ -141,10 +141,55 @@
     <priority>0.5</priority>
   </url>
 
+
+  <!-- Web Development SEO Pages -->
+
   <url>
     <loc>https://chtechgiant.com/web-development-davangere</loc>
     <priority>0.5</priority>
   </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-bangalore</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-dharwad</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-bellary</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-mysore</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-shivamogga</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-tumakuru</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-mangalore</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/web-development-hubli</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Software Development Pages -->
 
   <url>
     <loc>https://chtechgiant.com/software-development/school-erp-system</loc>
