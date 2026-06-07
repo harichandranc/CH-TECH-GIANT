@@ -13,31 +13,31 @@ import { Link, NavLink } from "react-router-dom";
 const serviceLinks = [
   {
     name: "Web Development",
-    path: "/services/web-development",
+    path: "/web-development",
   },
   {
     name: "App Development",
-    path: "/services/app-development",
+    path: "/app-development",
   },
   {
     name: "Software Development",
-    path: "/services/software-development",
+    path: "/software-development",
   },
   {
     name: "Game Development",
-    path: "/services/game-development",
+    path: "/game-development",
   },
   {
     name: "IT Consulting",
-    path: "/services/it-consulting",
+    path: "/it-consulting",
   },
   {
     name: "Pamphlet Design",
-    path: "/services/pamphlet-design",
+    path: "/pamphlet-design",
   },
   {
     name: "Invoice Design",
-    path: "/services/invoice-design",
+    path: "/invoice-design",
   },
 ];
 

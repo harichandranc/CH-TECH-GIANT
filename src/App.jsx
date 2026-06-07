@@ -56,12 +56,12 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
             <Route
-              path="/services/app-development"
+              path="/app-development"
               element={<AppDevelopment />}
             />
 
             <Route
-              path="/services/web-development"
+              path="/web-development"
               element={<WebDevelopment />}
             />
 
@@ -71,18 +71,23 @@ function App() {
             />
 
             <Route
-              path="/services/game-development"
+              path="/game-development"
               element={<GameDevelopment />}
             />
 
             <Route
-              path="/services/it-consulting"
+              path="/it-consulting"
               element={<ITConsulting />}
             />
 
             <Route
-              path="/services/pamphlet-design"
+              path="/pamphlet-design"
               element={<PamphletDesign />}
+            />
+
+            <Route
+              path="/invoice-design"
+              element={<InvoiceDesign />}
             />
 
             <Route
