@@ -36,6 +36,8 @@ import MobileAppDevelopment from "./pages/services/app-development/MobileAppDeve
 
 import SchoolERPSystem from "./pages/services/software-development/SchoolERPSystem";
 
+import WebDevelopmentDavangere from "./pages/services/web-development/SEO/WebDevelopmentDavangere";
+
 function App() {
   return (
     <BrowserRouter>
@@ -114,7 +116,7 @@ function App() {
             />
 
             <Route
-              path="/services/invoice-design"
+              path="/invoice-design"
               element={<InvoiceDesign />}
             />
 
@@ -154,8 +156,13 @@ function App() {
             />
 
             <Route
-              path="/services/software-development/school-erp-system"
+              path="/software-development/school-erp-system"
               element={<SchoolERPSystem />}
+            />
+
+            <Route
+              path="/web-development-davangere"
+              element={<WebDevelopmentDavangere />}
             />
 
 
