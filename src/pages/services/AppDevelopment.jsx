@@ -20,25 +20,21 @@ const services = [
     title: "Android App Development",
     description:
       "Custom Android applications built for startups, businesses, and enterprises using modern technologies.",
-    path: "/../android-development",
   },
   {
     title: "iOS App Development",
     description:
       "Premium iPhone and iPad applications optimized for performance, security, and user experience.",
-    path: "/../ios-development",
   },
   {
     title: "Flutter App Development",
     description:
       "Single codebase mobile applications for Android and iOS with faster development and lower costs.",
-    path: "/../flutter-development",
   },
   {
     title: "Enterprise Mobile Apps",
     description:
       "Professional React Native solutions with modern technology and scalable architecture.",
-    path: "/../react-native-development",
   },
   {
     title: "App UI/UX Design",
