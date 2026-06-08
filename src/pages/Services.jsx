@@ -7,7 +7,7 @@ const services = [
     description:
       "Android and cross-platform mobile app development with premium UI and smooth performance.",
     image: "/services/app.webp",
-    link: "/app-development",
+    link: "/../app-development",
   },
 
   {
@@ -15,7 +15,7 @@ const services = [
     description:
       "Custom desktop and enterprise software development solutions.",
     image: "/services/software.jpg",
-    link: "/software-development",
+    link: "/../software-development",
   },
 
   {
