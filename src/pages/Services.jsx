@@ -15,7 +15,7 @@ const services = [
     description:
       "Custom desktop and enterprise software development solutions.",
     image: "/services/software.jpg",
-    link: "/services/software-development",
+    link: "/software-development",
   },
 
   {
@@ -23,7 +23,7 @@ const services = [
     description:
       "Modern responsive websites and scalable web applications.",
     image: "/services/web.jpg",
-    link: "/services/web-development",
+    link: "/web-development",
   },
 
   {
@@ -31,7 +31,7 @@ const services = [
     description:
       "Interactive 2D & 3D gaming experiences with immersive gameplay.",
     image: "/services/game.jpeg",
-    link: "/services/game-development",
+    link: "/game-development",
   },
 
   {
@@ -39,7 +39,7 @@ const services = [
     description:
       "Professional technology consulting and business digital transformation solutions.",
     image: "/services/itconsult.jpg",
-    link: "/services/it-consulting",
+    link: "/it-consulting",
   },
 
   {
@@ -47,14 +47,14 @@ const services = [
     description:
       "Modern futuristic Pamphlets and flyers with premium templates.",
     image: "/services/pamphlet.png",
-    link: "/services/pamphlet-design",
+    link: "/pamphlet-design",
   },
   {
     title: "Invoice Design",
     description:
       "Modern futuristic Invoice templates with premium designs.",
     image: "/services/invoice.png",
-    link: "/services/invoice-design",
+    link: "/invoice-design",
   },
 ];
 
