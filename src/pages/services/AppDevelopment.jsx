@@ -20,6 +20,7 @@ const services = [
     title: "Android App Development",
     description:
       "Custom Android applications built for startups, businesses, and enterprises using modern technologies.",
+    link: "/../android-development",
   },
   {
     title: "iOS App Development",
