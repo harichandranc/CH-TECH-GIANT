@@ -99,7 +99,7 @@ const WebDevelopmentMangalore = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                Leading Web Development Company in Karnataka,
+                Leading Web Development Company in Karnataka serving Mangalore,
                 Karnataka
               </h2>
 

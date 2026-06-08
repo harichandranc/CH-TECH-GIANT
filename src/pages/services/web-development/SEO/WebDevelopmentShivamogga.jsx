@@ -85,7 +85,7 @@ const WebDevelopmentShivamogga = () => {
 
       <div className="bg-[#050816] text-white">
         <PageBanner
-          title="Web Development Company in Shivamogga"
+          title="Web Development Company in Karntaka serving Shivamogga"
           subtitle="Professional Website Development Services for Businesses, Startups, Schools, and Organizations Across Karnataka."
         />
 

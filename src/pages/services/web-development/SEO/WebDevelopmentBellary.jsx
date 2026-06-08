@@ -49,49 +49,33 @@ const faqData = [
   },
 ];
 
-const WebDevelopmentDavanagere = () => {
+const WebDevelopmentBellary = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "CH TECH GIANT (OPC) PRIVATE LIMITED",
     description:
-      "Web Development Company in Davanagere providing website development, e-commerce development, MERN stack development, software development and app development services.",
+      "Web Development Company in Bellary providing website development, e-commerce development, MERN stack development, software development and app development services.",
     telephone: "+91-9980785020",
     email: "info@chtechgiant.com",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Davanagere",
-      addressRegion: "Karnataka",
-      postalCode: "577001",
-      addressCountry: "IN",
-    },
-    areaServed: [
-      "Davanagere",
-      "Harihar",
-      "Chitradurga",
-      "Shivamogga",
-      "Haveri",
-      "Karnataka",
-      "India",
-    ],
   };
 
   return (
     <>
       <Helmet>
         <title>
-          Web Development Company in Davanagere | Website Development
+          Web Development Company in Bellary | Website Development
           Services Karnataka | CH TECH GIANT
         </title>
 
         <meta
           name="description"
-          content="CH TECH GIANT is a leading web development company in Davanagere, Karnataka. We provide website development, custom web applications, e-commerce development, MERN stack solutions, React development, and SEO-friendly websites."
+          content="CH TECH GIANT is a leading web development company in Bellary, Karnataka. We provide website development, custom web applications, e-commerce development, MERN stack solutions, React development, and SEO-friendly websites."
         />
 
         <meta
           name="keywords"
-          content="Web Development Company Davanagere, Website Development Davanagere, Website Developers Davanagere, Web Design Company Davanagere, Web Development Karnataka, React Development Company, MERN Stack Development, Website Development Services Karnataka"
+          content="Web Development Company Bellary, Website Development Bellary, Website Developers Bellary, Web Design Company Bellary, Web Development Karnataka, React Development Company, MERN Stack Development, Website Development Services Karnataka"
         />
 
         <script type="application/ld+json">
@@ -101,7 +85,7 @@ const WebDevelopmentDavanagere = () => {
 
       <div className="bg-[#050816] text-white">
         <PageBanner
-          title="Web Development Company in Davanagere"
+          title="Web Development Company in Bellary"
           subtitle="Professional Website Development Services for Businesses, Startups, Schools, and Organizations Across Karnataka."
         />
 
@@ -115,13 +99,13 @@ const WebDevelopmentDavanagere = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                Leading Web Development Company in Davanagere,
+                Leading Web Development Company in Karnataka,
                 Karnataka
               </h2>
 
               <p className="text-gray-400 leading-relaxed mb-5">
                 CH TECH GIANT is a trusted web development company in
-                Davanagere helping businesses establish a strong online
+                Karnataka helping businesses establish a strong online
                 presence through modern, responsive, and SEO-friendly
                 websites. We develop websites that are visually
                 appealing, fast-loading, secure, and optimized for
@@ -161,7 +145,6 @@ const WebDevelopmentDavanagere = () => {
                 <p>✔ React & MERN Stack Experts</p>
                 <p>✔ Fast Website Performance</p>
                 <p>✔ Affordable Pricing</p>
-                <p>✔ Local Support in Davanagere</p>
                 <p>✔ Ongoing Maintenance & Support</p>
               </div>
             </motion.div>
@@ -177,7 +160,7 @@ const WebDevelopmentDavanagere = () => {
 
             <p className="text-gray-400 max-w-4xl mx-auto">
               We provide comprehensive website development services
-              for businesses across Davanagere, Karnataka, and India.
+              for businesses across Bellary, Karnataka, and India.
             </p>
           </div>
 
@@ -197,7 +180,7 @@ const WebDevelopmentDavanagere = () => {
         <SectionWrapper>
           <div className="bg-white/5 border border-cyan-500/10 rounded-3xl p-10">
             <h2 className="text-4xl font-bold mb-6">
-              Professional Website Development Services in Davanagere
+              Professional Website Development Services in Bellary
             </h2>
 
             <div className="space-y-6 text-gray-400 leading-relaxed">
@@ -275,9 +258,7 @@ const WebDevelopmentDavanagere = () => {
 
             <p className="text-gray-400 leading-relaxed mb-5">
               We provide web development services throughout
-              Davanagere and surrounding regions including Harihar,
-              Chitradurga, Haveri, Shivamogga, Hubballi, Bengaluru,
-              and across Karnataka.
+              Bellary and surrounding regions across Karnataka.
             </p>
 
             <p className="text-gray-400 leading-relaxed">
@@ -298,7 +279,7 @@ const WebDevelopmentDavanagere = () => {
             <p className="text-gray-300 leading-relaxed mb-5">
               CH TECH GIANT (OPC) PRIVATE LIMITED is a software,
               website, mobile app, and game development company
-              located in Davanagere, Karnataka.
+              located in Karnataka.
             </p>
 
             <p className="text-gray-300 leading-relaxed">
@@ -341,12 +322,12 @@ const WebDevelopmentDavanagere = () => {
 
             <p className="text-gray-400 max-w-3xl mx-auto mb-6">
               Looking for a reliable web development company in
-              Davanagere? Contact CH TECH GIANT today and let's
+              Karnataka? Contact CH TECH GIANT today and let's
               discuss your project requirements.
             </p>
 
             <div className="space-y-2 text-gray-300">
-              <p>📍 Davanagere, Karnataka – 577001</p>
+              <p>📍 Karnataka</p>
               <p>📞 +91 9980785020</p>
               <p>✉️ info@chtechgiant.com</p>
             </div>
@@ -357,4 +338,4 @@ const WebDevelopmentDavanagere = () => {
   );
 };
 
-export default WebDevelopmentDavanagere;
+export default WebDevelopmentBellary;

@@ -216,7 +216,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="bg-black text-white overflow-hidden">
+      <div className="bg-black text-white overflow-x-hidden">
 
         {/* VIDEO SECTION */}
         <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden">
@@ -239,7 +239,7 @@ const Home = () => {
         </section>
 
         {/* HERO CONTENT */}
-        <section className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 overflow-hidden">
+        <section className="relative px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-14 sm:py-20 md:py-28 overflow-hidden">
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
 

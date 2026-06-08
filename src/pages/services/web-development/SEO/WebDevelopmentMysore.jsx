@@ -99,7 +99,7 @@ const WebDevelopmentMysore = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                Leading Web Development Company in Karnataka
+                Leading Web Development Company in Karnataka serving Mysore
               </h2>
 
               <p className="text-gray-400 leading-relaxed mb-5">
