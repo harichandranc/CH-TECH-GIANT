@@ -7,7 +7,7 @@ const services = [
     description:
       "Android and cross-platform mobile app development with premium UI and smooth performance.",
     image: "/services/app.webp",
-    link: "/services/app-development",
+    link: "/app-development",
   },
 
   {
