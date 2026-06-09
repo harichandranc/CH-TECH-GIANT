@@ -32,6 +32,23 @@ const projects = [
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share",
   },
   {
+    title: "School ERP System",
+    category: "software",
+    description:
+      "Smartly manage students, staff, academics, attendance, and school operations in one centralized platform.",
+    image: "/projects/schoolerp.png",
+    link: "/software-development/school-erp-system",
+  },
+  
+  {
+    title: "Invoice Maker",
+    category: "app",
+    description: "Professional invoice generation app.",
+    image: "/projects/invoicemaker.png",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share",
+  },
+
+  {
     title: "PDF Converter",
     category: "web",
     description: "Convert images into high quality PDF files.",
@@ -39,11 +56,11 @@ const projects = [
     link: "https://pdfconverter.chtechgiant.com",
   },
   {
-    title: "Invoice Maker",
-    category: "app",
-    description: "Professional invoice generation app.",
-    image: "/projects/invoicemaker.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share",
+    title: "Sample Files",
+    category: "web",
+    description: "Download Every types of sample files.",
+    image: "/projects/samplefiles.png",
+    link: "https://samplefiles.chtechgiant.com",
   },
   {
     title: "Image To PDF",
@@ -52,14 +69,8 @@ const projects = [
     image: "/projects/img2pdf copy.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share",
   },
-  {
-    title: "School ERP System",
-    category: "software",
-    description:
-      "Smartly manage students, staff, academics, attendance, and school operations in one centralized platform.",
-    image: "/projects/schoolerp.png",
-    link: "/software-development/school-erp-system",
-  },
+  
+  
 ];
 
 const filters = ["all", "web", "app", "software", "game"];
