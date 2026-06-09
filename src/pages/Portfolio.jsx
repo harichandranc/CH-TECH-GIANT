@@ -58,7 +58,7 @@ const projects = [
     description:
       "Smartly manage students, staff, academics, attendance, and school operations in one centralized platform.",
     image: "/projects/schoolerp.png",
-    link: "/services/software-development/school-erp-system",
+    link: "/software-development/school-erp-system",
   },
 ];
 
