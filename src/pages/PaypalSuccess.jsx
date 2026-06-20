@@ -1,8 +1,70 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  useSearchParams,
+  Link,
+} from "react-router-dom";
+
 import PageBanner from "../components/PageBanner";
 import SectionWrapper from "../components/SectionWrapper";
 
 function PaypalSuccess() {
+  const [searchParams] =
+    useSearchParams();
+
+  const [loading, setLoading] =
+    useState(true);
+
+  const [success, setSuccess] =
+    useState(false);
+
+  useEffect(() => {
+    const capturePayment =
+      async () => {
+        try {
+          const token =
+            searchParams.get(
+              "token"
+            );
+
+          if (!token) {
+            setLoading(false);
+            return;
+          }
+
+          const response =
+            await fetch(
+              "https://api.webcodshop.chtechgiant.com/api/payments/paypal/capture-order",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type":
+                    "application/json",
+                },
+                body: JSON.stringify({
+                  orderId: token,
+                }),
+              }
+            );
+
+          const data =
+            await response.json();
+
+          if (
+            data.success
+          ) {
+            setSuccess(true);
+          }
+
+          setLoading(false);
+        } catch (error) {
+          console.error(error);
+          setLoading(false);
+        }
+      };
+
+    capturePayment();
+  }, [searchParams]);
+
   return (
     <div className="bg-black text-white min-h-screen">
       <PageBanner
@@ -21,29 +83,47 @@ function PaypalSuccess() {
               text-center
             "
           >
-            <div className="text-6xl mb-4">✅</div>
+            {loading && (
+              <>
+                <div className="text-6xl mb-4">
+                  ⏳
+                </div>
 
-            <h2 className="text-3xl font-bold text-green-400 mb-4">
-              Payment Completed Successfully
-            </h2>
+                <h2 className="text-3xl font-bold text-cyan-400 mb-4">
+                  Verifying Payment...
+                </h2>
+              </>
+            )}
 
-            <p className="text-gray-300 mb-6">
-              Your PayPal payment has been received successfully.
-              Our system is processing your order.
-            </p>
+            {!loading &&
+              success && (
+                <>
+                  <div className="text-6xl mb-4">
+                    ✅
+                  </div>
 
-            <div className="bg-zinc-900 rounded-xl p-5 text-left mb-6">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-3">
-                What's Next?
-              </h3>
+                  <h2 className="text-3xl font-bold text-green-400 mb-4">
+                    Payment Completed Successfully
+                  </h2>
 
-              <ul className="space-y-2 text-gray-300">
-                <li>• Your payment has been verified.</li>
-                <li>• Your order is being processed.</li>
-                <li>• Download access will be provided shortly.</li>
-                <li>• A confirmation email may be sent to you.</li>
-              </ul>
-            </div>
+                  <p className="text-gray-300 mb-6">
+                    Your PayPal payment has been captured successfully.
+                  </p>
+                </>
+              )}
+
+            {!loading &&
+              !success && (
+                <>
+                  <div className="text-6xl mb-4">
+                    ❌
+                  </div>
+
+                  <h2 className="text-3xl font-bold text-red-400 mb-4">
+                    Payment Verification Failed
+                  </h2>
+                </>
+              )}
 
             <Link
               to="/"
@@ -58,7 +138,7 @@ function PaypalSuccess() {
                 font-semibold
               "
             >
-              Back to Home
+              Back To Home
             </Link>
           </div>
         </div>

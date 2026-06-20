@@ -131,10 +131,6 @@ function App() {
               element={<ImageToPDFPrivacyPolicy />}
             />
 
-            <Route
-              path="/invoice-design"
-              element={<InvoiceDesign />}
-            />
 
             <Route
               path="/app-development/flutter-development"
