@@ -52,7 +52,11 @@ function PaypalSuccess() {
           console.log(data);
 
           alert(
-            JSON.stringify(data)
+            JSON.stringify(
+                data,
+                null,
+                2,
+            )
           );
 
           if (
