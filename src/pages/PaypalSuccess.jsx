@@ -51,9 +51,13 @@ function PaypalSuccess() {
 
 
           if (
-            data.success
+            data.success ||
+            data.message ===
+              "Order already processed"
           ) {
             setSuccess(true);
+          } else {
+            setSuccess(false);
           }
 
           setLoading(false);
