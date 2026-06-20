@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   useSearchParams,
   Link,
@@ -11,13 +11,24 @@ function PaypalSuccess() {
   const [searchParams] =
     useSearchParams();
 
+  const hasCaptured =
+    useRef(false);
+
   const [loading, setLoading] =
     useState(true);
 
   const [success, setSuccess] =
     useState(false);
 
+  const [message, setMessage] =
+    useState("");
+
   useEffect(() => {
+    if (hasCaptured.current)
+      return;
+
+    hasCaptured.current = true;
+
     const capturePayment =
       async () => {
         try {
@@ -27,7 +38,14 @@ function PaypalSuccess() {
             );
 
           if (!token) {
+            setSuccess(false);
+
+            setMessage(
+              "Invalid PayPal order."
+            );
+
             setLoading(false);
+
             return;
           }
 
@@ -40,15 +58,17 @@ function PaypalSuccess() {
                   "Content-Type":
                     "application/json",
                 },
-                body: JSON.stringify({
-                  orderId: token,
-                }),
+                body: JSON.stringify(
+                  {
+                    orderId:
+                      token,
+                  }
+                ),
               }
             );
 
           const data =
             await response.json();
-
 
           if (
             data.success ||
@@ -56,13 +76,31 @@ function PaypalSuccess() {
               "Order already processed"
           ) {
             setSuccess(true);
+
+            setMessage(
+              data.message ||
+                "Your PayPal payment has been captured successfully."
+            );
           } else {
             setSuccess(false);
-          }
 
-          setLoading(false);
+            setMessage(
+              data.message ||
+                "Payment verification failed."
+            );
+          }
         } catch (error) {
-          console.error(error);
+          console.error(
+            "PayPal Capture Error:",
+            error
+          );
+
+          setSuccess(false);
+
+          setMessage(
+            "Something went wrong while verifying your payment."
+          );
+        } finally {
           setLoading(false);
         }
       };
@@ -82,10 +120,12 @@ function PaypalSuccess() {
           <div
             className="
               rounded-2xl
-              border border-green-500/20
-              bg-green-500/5
+              border
               p-8
               text-center
+              backdrop-blur-sm
+              shadow-xl
+              bg-white/5
             "
           >
             {loading && (
@@ -97,6 +137,12 @@ function PaypalSuccess() {
                 <h2 className="text-3xl font-bold text-cyan-400 mb-4">
                   Verifying Payment...
                 </h2>
+
+                <p className="text-gray-300">
+                  Please wait while we
+                  verify your PayPal
+                  payment.
+                </p>
               </>
             )}
 
@@ -108,12 +154,25 @@ function PaypalSuccess() {
                   </div>
 
                   <h2 className="text-3xl font-bold text-green-400 mb-4">
-                    Payment Completed Successfully
+                    Payment Completed
+                    Successfully
                   </h2>
 
                   <p className="text-gray-300 mb-6">
-                    Your PayPal payment has been captured successfully.
+                    {message}
                   </p>
+
+                  <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 mb-6">
+                    <p className="text-sm text-green-300">
+                      Your order has
+                      been confirmed.
+                      Check your email
+                      for purchase
+                      details and
+                      download
+                      instructions.
+                    </p>
+                  </div>
                 </>
               )}
 
@@ -125,8 +184,25 @@ function PaypalSuccess() {
                   </div>
 
                   <h2 className="text-3xl font-bold text-red-400 mb-4">
-                    Payment Verification Failed
+                    Payment Verification
+                    Failed
                   </h2>
+
+                  <p className="text-gray-300 mb-6">
+                    {message}
+                  </p>
+
+                  <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 mb-6">
+                    <p className="text-sm text-red-300">
+                      If the payment
+                      was deducted from
+                      your account,
+                      please contact
+                      support with your
+                      PayPal transaction
+                      details.
+                    </p>
+                  </div>
                 </>
               )}
 
