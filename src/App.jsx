@@ -222,14 +222,14 @@ function App() {
             />
 
             <Route
-              path="/paypal-success"
-              element={<PaypalSuccess />}
-            />
+  path="/paypal-success"
+  element={<PaypalSuccess />}
+/>
 
-            <Route
-              path="/payment-cancel"
-              element={<PaypalCancel />}
-            />
+<Route
+  path="/paypal-cancel"
+  element={<PaypalCancel />}
+/>
 
           </Routes>
         </main>
