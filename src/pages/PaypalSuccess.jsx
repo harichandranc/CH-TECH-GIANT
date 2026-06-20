@@ -49,15 +49,6 @@ function PaypalSuccess() {
           const data =
             await response.json();
 
-          console.log(data);
-
-          alert(
-            JSON.stringify(
-                data,
-                null,
-                2,
-            )
-          );
 
           if (
             data.success
