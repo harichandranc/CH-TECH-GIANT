@@ -46,6 +46,9 @@ import WebDevelopmentHubli from "./pages/services/web-development/SEO/WebDevelop
 import WebDevelopmentDharwad from "./pages/services/web-development/SEO/WebDevelopmentDharwad";
 import WebDevelopmentBellary from "./pages/services/web-development/SEO/WebDevelopmentBellary";
 
+import PaypalSuccess from "./pages/PaypalSuccess";
+import PaypalCancel from "./pages/PaypalCancel";
+
 function App() {
   return (
     <BrowserRouter>
@@ -216,6 +219,16 @@ function App() {
             <Route
               path="/web-development-bellary"
               element={<WebDevelopmentBellary />}
+            />
+
+            <Route
+              path="/paypal-success"
+              element={<PaypalSuccess />}
+            />
+
+            <Route
+              path="/payment-cancel"
+              element={<PaypalCancel />}
             />
 
           </Routes>
