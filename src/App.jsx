@@ -48,6 +48,7 @@ import WebDevelopmentBellary from "./pages/services/web-development/SEO/WebDevel
 
 import PaypalSuccess from "./pages/PaypalSuccess";
 import PaypalCancel from "./pages/PaypalCancel";
+import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 
 function App() {
   return (
@@ -129,6 +130,11 @@ function App() {
             <Route
               path="/apps/image-to-pdf/privacy-policy"
               element={<ImageToPDFPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/web-codshop/privacy-policy"
+              element={<WebCodshopPrivacyPolicy />}
             />
 
 
