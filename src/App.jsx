@@ -49,6 +49,7 @@ import WebDevelopmentBellary from "./pages/services/web-development/SEO/WebDevel
 import PaypalSuccess from "./pages/PaypalSuccess";
 import PaypalCancel from "./pages/PaypalCancel";
 import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
+import WebCodshopDeleteAccount from "./pages/apps/WebCodshopDeleteAccount";
 
 function App() {
   return (
@@ -135,6 +136,11 @@ function App() {
             <Route
               path="/apps/web-codshop/privacy-policy"
               element={<WebCodshopPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/web-codshop/delete-account"
+              element={<WebCodshopDeleteAccount />}
             />
 
 
