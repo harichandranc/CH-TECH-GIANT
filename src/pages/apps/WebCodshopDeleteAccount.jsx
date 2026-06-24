@@ -120,7 +120,7 @@ const WebCodshopDeleteAccount = () => {
                     CH TECH GIANT (OPC) PRIVATE LIMITED
                   </p>
                   <p>Davangere, Karnataka – 577001</p>
-                  <p>Email: support@chtechgiant.com</p>
+                  <p>Email: info@chtechgiant.com</p>
                   <p>Website: https://chtechgiant.com</p>
                   <p>Phone: +91 9980785020</p>
                 </div>
