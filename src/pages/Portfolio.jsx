@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 const projects = [
   {
+    title: "Web Codshop",
+    category: "app",
+    description: "premium website templates, source codes, and college projects Marketplace app.",
+    image: "/projects/webcodshop.png",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop&pcampaignid=web_share",
+  },
+  {
     title: "CGPA SGPA Calculator",
     category: "app",
     description: "Smart CGPA & SGPA calculation mobile app.",
