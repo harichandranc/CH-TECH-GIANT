@@ -25,6 +25,7 @@ import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
 import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
+import PDFLockUnlockPrivacyPolicy from "./pages/apps/PdfLockUnlockPrivacyPolicy";
 
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
@@ -137,6 +138,12 @@ function App() {
               path="/apps/web-codshop/privacy-policy"
               element={<WebCodshopPrivacyPolicy />}
             />
+
+            <Route
+              path="/apps/pdf-lock-unlock/privacy-policy"
+              element={<PDFLockUnlockPrivacyPolicy />}
+            />
+
 
             <Route
               path="/apps/web-codshop/delete-account"
