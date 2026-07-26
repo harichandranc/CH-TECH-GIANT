@@ -63,6 +63,13 @@ const projects = [
     link: "https://pdfconverter.chtechgiant.com",
   },
   {
+    title: "PDF Lock Unlock",
+    category: "app",
+    description: "Protect and Unlock PDF Files with Password.",
+    image: "/projects/img2pdf copy.png",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
+  },
+  {
     title: "Sample Files",
     category: "web",
     description: "Download Every types of sample files.",
