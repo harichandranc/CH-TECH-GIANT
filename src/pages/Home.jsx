@@ -126,7 +126,7 @@ const latestApps = [
     description:
       "All-in-one file conversion toolkit with PDF, image, audio, video, and text tools.",
     image: "/projects/fileconverter.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter&pcampaignid=web_share",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
   },
 
   {
@@ -134,16 +134,17 @@ const latestApps = [
     description:
       "Bulk file renaming and file cleaning utility with modern automation tools.",
     image: "/projects/filerenamer.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
   },
 
   {
     title: "World Clock",
     description:
-      "Modern world clock application with multiple timezone support and clean UI experience.",
-    image: "/projects/worldclock.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock&pcampaignid=web_share",
+      "premium website templates, source codes, and college projects Marketplace app.",
+    image: "/projects/webcodshop.png",
+    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
   },
+
 ];
 
 const Home = () => {
