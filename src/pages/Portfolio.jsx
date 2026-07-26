@@ -66,7 +66,7 @@ const projects = [
     title: "PDF Lock Unlock",
     category: "app",
     description: "Protect and Unlock PDF Files with Password.",
-    image: "/projects/img2pdf copy.png",
+    image: "/projects/pdf_lock_unlock.jpeg",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
   },
   {
