@@ -1,4 +1,36 @@
 {
+  "redirects": [
+    {
+      "source": "/who-we-are",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/who-we-are/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/app-development-services",
+      "destination": "/app-development",
+      "permanent": true
+    },
+    {
+      "source": "/app-development-services/",
+      "destination": "/app-development",
+      "permanent": true
+    },
+    {
+      "source": "/startup-it-services",
+      "destination": "/it-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/startup-it-services/",
+      "destination": "/it-consulting",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
