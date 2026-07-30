@@ -46,6 +46,14 @@ const projects = [
     image: "/projects/schoolerp.png",
     link: "/software-development/school-erp-system",
   },
+  {
+  title: "Hospital Management System",
+  category: "software",
+  description:
+    "A secure role-based Hospital Management System for managing departments, doctors, staff, patients, and hospital administration through a centralized dashboard with modern web technologies.",
+  image: "/projects/hospitalmanagementsystem.webp",
+  link: "/software-development/hospital-management-system",
+},
   
   {
     title: "Invoice Maker",
