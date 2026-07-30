@@ -248,7 +248,7 @@ function App() {
             />
 
             <Route
-              path="/software-deveopment/hospital-management-system"
+              path="/software-development/hospital-management-system"
               element={<HospitalManagementSystem />}
             />
 
