@@ -42,7 +42,7 @@ const projects = [
     title: "School ERP System",
     category: "software",
     description:
-      "Smartly manage students, staff, academics, attendance, and school operations in one centralized platform.",
+      "Smartly manage students, staff, academics, attendance, and school operations in one centralized dashboard.",
     image: "/projects/schoolerp.png",
     link: "/software-development/school-erp-system",
   },
