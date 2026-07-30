@@ -11,6 +11,22 @@ const hospitalFeatures = [
   "Patient Management",
   "Department Management",
 ];
+const screenshots = [
+  "/projects/hospital-management-system/thumbnail.webp",
+  "/projects/hospital-management-system/1.webp",
+  "/projects/hospital-management-system/2.webp",
+  "/projects/hospital-management-system/3.webp",
+  "/projects/hospital-management-system/4.webp",
+  "/projects/hospital-management-system/5.webp",
+  "/projects/hospital-management-system/6.webp",
+  "/projects/hospital-management-system/7.webp",
+  "/projects/hospital-management-system/8.webp",
+  "/projects/hospital-management-system/9.webp",
+  "/projects/hospital-management-system/10.webp",
+  "/projects/hospital-management-system/11.webp",
+  "/projects/hospital-management-system/12.webp",
+  "/projects/hospital-management-system/13.webp",
+];
 
 const HospitalManagementSystem = () => {
   return (
@@ -247,6 +263,41 @@ const HospitalManagementSystem = () => {
 
         </div>
       </SectionWrapper>
+
+      {/* Screenshots */}
+    <SectionWrapper>
+    <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold mb-4">
+        Application Screenshots
+        </h2>
+
+        <p className="text-gray-400 max-w-3xl mx-auto">
+        Explore the Hospital Management System interface, including
+        authentication, dashboards, department management, doctor profiles,
+        staff management, patient management, and other core modules.
+        </p>
+    </div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {screenshots.map((image, index) => (
+        <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="group overflow-hidden rounded-3xl border border-cyan-500/10 bg-white/5 backdrop-blur-xl"
+        >
+            <img
+            src={image}
+            alt={`Hospital Management System Screenshot ${index + 1}`}
+            loading="lazy"
+            className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+            />
+        </motion.div>
+        ))}
+    </div>
+    </SectionWrapper>
 
       {/* Technology */}
       <SectionWrapper>
