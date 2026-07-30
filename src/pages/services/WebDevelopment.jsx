@@ -29,29 +29,7 @@ const portfolio = [
     description:
       "Modern corporate website designed for business growth with responsive UI and premium animations.",
   },
-  {
-    title: "Hospital Management System",
-    image: [
-      "/services/web development/thumbnail.webp",
-      "/services/web development/1.webp",
-      "/services/web development/2.webp",
-      "/services/web development/3.webp",
-      "/services/web development/4.webp",
-      "/services/web development/5.webp",
-      "/services/web development/6.webp",
-      "/services/web development/7.webp",
-      "/services/web development/8.webp",
-      "/services/web development/9.webp",
-      "/services/web development/10.webp",
-      "/services/web development/11.webp",
-      "/services/web development/12.webp",
-      "/services/web development/13.webp",
-    ],
-    category: "Healthcare",
-    tech: "HTML • CSS • JS • Node.js • MongoDB",
-    description:
-      "Complete hospital ERP with Admin, Doctor, Staff and Patient dashboards.",
-  },
+  
   {
     title: "Fashion Store Landing Page",
     image: [
@@ -67,46 +45,6 @@ const portfolio = [
     tech: "React • Tailwind CSS",
     description:
       "Premium fashion e-commerce landing page with modern shopping experience.",
-  },
-  {
-    title: "Restaurant Website",
-    image: "/images/portfolio/restaurant.jpg",
-    category: "Restaurant",
-    tech: "React",
-    description:
-      "Responsive restaurant website with menu, reservation and gallery pages.",
-  },
-  {
-    title: "Photography Portfolio",
-    image: "/images/portfolio/photo.jpg",
-    category: "Portfolio",
-    tech: "React • Tailwind CSS",
-    description:
-      "Elegant photographer portfolio with fullscreen gallery and animations.",
-  },
-  {
-    title: "School Website",
-    image: "/images/portfolio/school.jpg",
-    category: "Education",
-    tech: "React",
-    description:
-      "School landing page with admissions, events and responsive layout.",
-  },
-  {
-    title: "Gym Landing Page",
-    image: "/images/portfolio/gym.jpg",
-    category: "Fitness",
-    tech: "HTML • CSS • JavaScript",
-    description:
-      "Modern fitness landing page with membership plans and trainer section.",
-  },
-  {
-    title: "Blog Platform",
-    image: "/images/portfolio/blog.jpg",
-    category: "Education",
-    tech: "MERN Stack",
-    description:
-      "Complete blogging platform with authentication, comments and image uploads.",
   },
 ];
 
