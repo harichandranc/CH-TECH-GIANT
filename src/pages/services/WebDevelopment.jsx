@@ -12,39 +12,36 @@ const features = [
   "SEO Friendly Development",
 ];
 
-const portfolio = [
+const services = [
   {
-    title: "Corporate Business Website",
-    image: [
-      "/services/web development/fashion landing page/thumbnail.webp",
-      "/services/web development/fashion landing page/1.webp",
-      "/services/web development/fashion landing page/2.webp",
-      "/services/web development/fashion landing page/3.webp",
-      "/services/web development/fashion landing page/4.webp",
-      "/services/web development/fashion landing page/5.webp",
-      "/services/web development/fashion landing page/6.webp",
-    ],
-    category: "Business",
-    tech: "HTML • CSS • JavaScript",
+    title: "Business Website Development",
     description:
-      "Modern corporate website designed for business growth with responsive UI and premium animations.",
+      "Professional websites designed to establish a strong online presence and generate leads.",
   },
-  
   {
-    title: "Fashion Store Landing Page",
-    image: [
-      "/services/web development/fashion landing page/thumbnail.webp",
-      "/services/web development/fashion landing page/1.webp",
-      "/services/web development/fashion landing page/2.webp",
-      "/services/web development/fashion landing page/3.webp",
-      "/services/web development/fashion landing page/4.webp",
-      "/services/web development/fashion landing page/5.webp",
-      "/services/web development/fashion landing page/6.webp",
-    ],
-    category: "E-Commerce",
-    tech: "React • Tailwind CSS",
+    title: "E-Commerce Development",
     description:
-      "Premium fashion e-commerce landing page with modern shopping experience.",
+      "Scalable online stores with secure payment gateways and seamless shopping experiences.",
+  },
+  {
+    title: "Custom Web Applications",
+    description:
+      "Tailor-made web applications built specifically for your business processes and goals.",
+  },
+  {
+    title: "CMS Development",
+    description:
+      "Easy-to-manage content management systems that simplify website administration.",
+  },
+  {
+    title: "Admin Dashboard Development",
+    description:
+      "Powerful dashboards with analytics, reporting, and management capabilities.",
+  },
+  {
+    title: "Website Maintenance",
+    description:
+      "Continuous updates, monitoring, security improvements, and technical support.",
   },
 ];
 
@@ -61,39 +58,6 @@ const technologies = [
   "Vercel",
   "TypeScript",
   "REST APIs",
-];
-
-const services = [
-  {
-    title: "Business Website Development",
-    description:
-      "Professional responsive websites for businesses, startups, and organizations.",
-  },
-  {
-    title: "Custom Web Applications",
-    description:
-      "Scalable web applications tailored to your business requirements.",
-  },
-  {
-    title: "E-Commerce Development",
-    description:
-      "Online shopping websites with secure payment gateway integration.",
-  },
-  {
-    title: "Admin Dashboard Development",
-    description:
-      "Powerful dashboards with analytics, user management, and reporting.",
-  },
-  {
-    title: "CMS Development",
-    description:
-      "Content management systems for easy website administration.",
-  },
-  {
-    title: "Website Maintenance",
-    description:
-      "Regular updates, security monitoring, backups, and technical support.",
-  },
 ];
 
 const processSteps = [
@@ -202,7 +166,7 @@ const WebDevelopment = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolio.map((service, index) => (
+          {services.map((service, index) => (
             <div
               key={index}
               className="bg-white/5 border border-cyan-500/10 rounded-3xl p-6"
