@@ -63,6 +63,39 @@ const technologies = [
   "REST APIs",
 ];
 
+const services = [
+  {
+    title: "Business Website Development",
+    description:
+      "Professional responsive websites for businesses, startups, and organizations.",
+  },
+  {
+    title: "Custom Web Applications",
+    description:
+      "Scalable web applications tailored to your business requirements.",
+  },
+  {
+    title: "E-Commerce Development",
+    description:
+      "Online shopping websites with secure payment gateway integration.",
+  },
+  {
+    title: "Admin Dashboard Development",
+    description:
+      "Powerful dashboards with analytics, user management, and reporting.",
+  },
+  {
+    title: "CMS Development",
+    description:
+      "Content management systems for easy website administration.",
+  },
+  {
+    title: "Website Maintenance",
+    description:
+      "Regular updates, security monitoring, backups, and technical support.",
+  },
+];
+
 const processSteps = [
   "Discovery",
   "Planning",
