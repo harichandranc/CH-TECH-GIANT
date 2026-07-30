@@ -202,7 +202,7 @@ const WebDevelopment = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {portfolio.map((service, index) => (
             <div
               key={index}
               className="bg-white/5 border border-cyan-500/10 rounded-3xl p-6"
