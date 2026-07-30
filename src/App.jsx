@@ -36,6 +36,7 @@ import EcommerceAppDevelopment from "./pages/services/app-development/EcommerceA
 import MobileAppDevelopment from "./pages/services/app-development/MobileAppDevelopment";
 
 import SchoolERPSystem from "./pages/services/software-development/SchoolERPSystem";
+import HospitalManagementSystem from "./pages/services/software-development/HospitalMangementSystem";
 
 import WebDevelopmentDavangere from "./pages/services/web-development/SEO/WebDevelopmentDavangere";
 import WebDevelopmentMangalore from "./pages/services/web-development/SEO/WebDevelopmentMangalore";
@@ -237,14 +238,19 @@ function App() {
             />
 
             <Route
-  path="/paypal-success"
-  element={<PaypalSuccess />}
-/>
+              path="/paypal-success"
+              element={<PaypalSuccess />}
+            />
 
-<Route
-  path="/paypal-cancel"
-  element={<PaypalCancel />}
-/>
+            <Route
+              path="/paypal-cancel"
+              element={<PaypalCancel />}
+            />
+
+            <Route
+              path="/software-deveopment/hospital-mangement-system"
+              element={<HospitalManagementSystem />}
+            />
 
           </Routes>
         </main>
