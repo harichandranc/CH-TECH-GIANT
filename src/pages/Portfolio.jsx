@@ -50,7 +50,7 @@ const projects = [
   title: "Hospital Management System",
   category: "software",
   description:
-    "A secure role-based Hospital Management System for managing departments, doctors, staff, patients, and hospital administration through a centralized dashboard with modern web technologies.",
+    "A secure role-based Hospital Management System for managing departments, doctors, staff, patients, & hospital administration through a dashboard",
   image: "/projects/hospitalmanagementsystem.webp",
   link: "/software-development/hospital-management-system",
 },
