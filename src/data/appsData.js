@@ -31,26 +31,36 @@ const apps = [
   },
   {
     id: 4,
+    title: "Web Codshop",
+    category: "Business",
+    description:
+      "Marketplace dedicated to website source code, web templates, and professional web development resources.",
+    image: "/projects/webcodshop.png",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
+  },
+  {
+    id: 5,
     title: "Invoice Maker",
     category: "Business",
     description:
       "Generate professional invoices, quotations, and receipts with PDF export and sharing.",
     image: "/projects/invoicemaker.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.invoicegenerator",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator",
   },
   {
-    id: 5,
+    id: 6,
     title: "CGPA & SGPA Calculator",
     category: "Education",
     description:
       "Calculate semester SGPA and overall CGPA accurately with support for multiple grading systems.",
-    image: "/projects/cgpacalculator.png",
+    image: "/projects/cgpacalculator.jpg",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator",
   },
   {
-    id: 6,
+    id: 7,
     title: "Image Compressor",
     category: "Photography",
     description:
@@ -60,24 +70,24 @@ const apps = [
       "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
   },
   {
-    id: 7,
+    id: 8,
     title: "PDF Converter",
     category: "Productivity",
     description:
-      "Convert PDF files to multiple formats and create PDFs from images and documents.",
-    image: "/projects/pdfconverter.png",
+      "Convert Any Image Format to PDFs.",
+    image: "/projects/img2pdf copy.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.pdfconverter",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter",
   },
   {
-    id: 8,
-    title: "QR & Barcode Scanner",
+    id: 9,
+    title: "PDF Lock Unlock",
     category: "Utilities",
     description:
-      "Fast QR code and barcode scanner with history, flashlight support, and sharing options.",
-    image: "/projects/qr-scanner.png",
+      "Lock and unlock PDF files with a password.",
+    image: "/projects/pdf-lock-unlock.jpeg",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.qrscanner",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
   },
 ];
 
