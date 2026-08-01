@@ -366,36 +366,6 @@ const appCategories = [
 },
 {
   id: 22,
-  title: "Messaging App Development",
-  image: "/images/app-categories/messaging.png",
-  description:
-    "Develop secure instant messaging applications with real-time chat, voice calls, video calls, file sharing, and end-to-end encryption.",
-  features: [
-    "Instant Chat",
-    "Voice Calling",
-    "Video Calling",
-    "Media Sharing",
-    "Group Chats",
-    "End-to-End Encryption",
-  ],
-},
-{
-  id: 23,
-  title: "Calling App Development",
-  image: "/images/app-categories/calling.png",
-  description:
-    "Create high-quality VoIP and internet calling applications with crystal-clear audio, video conferencing, and secure communication.",
-  features: [
-    "VoIP Calling",
-    "HD Voice",
-    "Video Meetings",
-    "Call Recording",
-    "Call History",
-    "Contact Sync",
-  ],
-},
-{
-  id: 24,
   title: "Community App Development",
   image: "/images/app-categories/community.png",
   description:
@@ -410,7 +380,7 @@ const appCategories = [
   ],
 },
 {
-  id: 25,
+  id: 23,
   title: "Video Streaming App",
   image: "/images/app-categories/video-streaming.png",
   description:
@@ -425,7 +395,7 @@ const appCategories = [
   ],
 },
 {
-  id: 26,
+  id: 24,
   title: "Music Streaming App",
   image: "/images/app-categories/music.png",
   description:
@@ -440,7 +410,7 @@ const appCategories = [
   ],
 },
 {
-  id: 27,
+  id: 25,
   title: "News & Magazine App",
   image: "/images/app-categories/news.png",
   description:
@@ -455,7 +425,7 @@ const appCategories = [
   ],
 },
 {
-  id: 28,
+  id: 26,
   title: "Sports App Development",
   image: "/images/app-categories/sports.png",
   description:
@@ -470,22 +440,7 @@ const appCategories = [
   ],
 },
 {
-  id: 29,
-  title: "Gaming App Development",
-  image: "/images/app-categories/gaming.png",
-  description:
-    "Create immersive mobile gaming applications with multiplayer support, leaderboards, in-app purchases, and engaging gameplay.",
-  features: [
-    "Multiplayer Mode",
-    "Leaderboards",
-    "Achievements",
-    "Cloud Saves",
-    "In-App Purchases",
-    "Game Analytics",
-  ],
-},
-{
-  id: 30,
+  id: 27,
   title: "Event & Conference App",
   image: "/images/app-categories/event.png",
   description:
@@ -500,7 +455,7 @@ const appCategories = [
   ],
 },
 {
-  id: 31,
+  id: 28,
   title: "Job Portal App Development",
   image: "/images/app-categories/job.webp",
   description:
@@ -515,7 +470,7 @@ const appCategories = [
   ],
 },
 {
-  id: 32,
+  id: 29,
   title: "Real Estate App Development",
   image: "/images/app-categories/real-estate.webp",
   description:
@@ -530,7 +485,7 @@ const appCategories = [
   ],
 },
 {
-  id: 33,
+  id: 30,
   title: "CRM Application",
   image: "/images/app-categories/crm.webp",
   description:
@@ -545,7 +500,7 @@ const appCategories = [
   ],
 },
 {
-  id: 34,
+  id: 31,
   title: "ERP Application",
   image: "/images/app-categories/erp.webp",
   description:
@@ -560,22 +515,7 @@ const appCategories = [
   ],
 },
 {
-  id: 35,
-  title: "Banking & FinTech App",
-  image: "/images/app-categories/fintech.webp",
-  description:
-    "Secure financial applications supporting digital payments, banking services, investments, wallets, and transaction monitoring.",
-  features: [
-    "Digital Wallet",
-    "Money Transfer",
-    "Bill Payments",
-    "Bank Integration",
-    "KYC",
-    "Fraud Detection",
-  ],
-},
-{
-  id: 36,
+  id: 32,
   title: "Cloud Based Application",
   image: "/images/app-categories/cloud.webp",
   description:
@@ -590,7 +530,7 @@ const appCategories = [
   ],
 },
 {
-  id: 37,
+  id: 33,
   title: "GPS & Geo-Fencing App",
   image: "/images/app-categories/gps.webp",
   description:
@@ -605,7 +545,7 @@ const appCategories = [
   ],
 },
 {
-  id: 38,
+  id: 34,
   title: "Directory App Development",
   image: "/images/app-categories/directory.webp",
   description:
@@ -620,7 +560,7 @@ const appCategories = [
   ],
 },
 {
-  id: 39,
+  id: 35,
   title: "Utility App Development",
   image: "/images/app-categories/utility.webp",
   description:
@@ -635,7 +575,7 @@ const appCategories = [
   ],
 },
 {
-  id: 40,
+  id: 36,
   title: "Lifestyle App Development",
   image: "/images/app-categories/lifestyle.webp",
   description:
@@ -650,7 +590,7 @@ const appCategories = [
   ],
 },
 {
-  id: 41,
+  id: 37,
   title: "On-Demand Service App",
   image: "/images/app-categories/on-demand.webp",
   description:
@@ -665,7 +605,7 @@ const appCategories = [
   ],
 },
 {
-  id: 42,
+  id: 38,
   title: "Enterprise Mobile App",
   image: "/images/app-categories/enterprise.webp",
   description:
@@ -680,7 +620,7 @@ const appCategories = [
   ],
 },
 {
-  id: 43,
+  id: 39,
   title: "Push Notification Solutions",
   image: "/images/app-categories/push.webp",
   description:
@@ -695,7 +635,7 @@ const appCategories = [
   ],
 },
 {
-  id: 44,
+  id: 40,
   title: "Feedback & Survey App",
   image: "/images/app-categories/feedback.webp",
   description:
@@ -710,7 +650,7 @@ const appCategories = [
   ],
 },
 {
-  id: 45,
+  id: 41,
   title: "Startup MVP Development",
   image: "/images/app-categories/startup.webp",
   description:
@@ -725,7 +665,7 @@ const appCategories = [
   ],
 },
 {
-  id: 46,
+  id: 42,
   title: "AI Powered Application",
   image: "/images/app-categories/ai.webp",
   description:
@@ -755,7 +695,7 @@ const appCategories = [
   ],
 },
 {
-  id: 48,
+  id: 43,
   title: "IoT Application",
   image: "/images/app-categories/iot.webp",
   description:
@@ -770,7 +710,7 @@ const appCategories = [
   ],
 },
 {
-  id: 49,
+  id: 44,
   title: "Logistics & Fleet App",
   image: "/images/app-categories/logistics.webp",
   description:
@@ -785,7 +725,7 @@ const appCategories = [
   ],
 },
 {
-  id: 50,
+  id: 45,
   title: "Inventory Management App",
   image: "/images/app-categories/inventory.webp",
   description:
@@ -800,22 +740,7 @@ const appCategories = [
   ],
 },
 {
-  id: 51,
-  title: "POS Application",
-  image: "/images/app-categories/pos.webp",
-  description:
-    "Modern Point of Sale applications for retail stores, restaurants, supermarkets, and service businesses with billing and inventory integration.",
-  features: [
-    "Billing",
-    "Inventory",
-    "Receipts",
-    "Customer Management",
-    "Sales Reports",
-    "Multi-Store Support",
-  ],
-},
-{
-  id: 52,
+  id: 46,
   title: "Courier Delivery App",
   image: "/images/app-categories/courier.webp",
   description:
@@ -830,7 +755,7 @@ const appCategories = [
   ],
 },
 {
-  id: 53,
+  id: 47,
   title: "Salon & Spa App",
   image: "/images/app-categories/salon.webp",
   description:
@@ -845,7 +770,7 @@ const appCategories = [
   ],
 },
 {
-  id: 54,
+  id: 48,
   title: "Appointment Booking App",
   image: "/images/app-categories/appointment.webp",
   description:
@@ -860,7 +785,7 @@ const appCategories = [
   ],
 },
 {
-  id: 55,
+  id: 49,
   title: "Agriculture App",
   image: "/images/app-categories/agriculture.webp",
   description:
@@ -875,7 +800,7 @@ const appCategories = [
   ],
 },
 {
-  id: 56,
+  id: 50,
   title: "Manufacturing App",
   image: "/images/app-categories/manufacturing.webp",
   description:
@@ -890,7 +815,7 @@ const appCategories = [
   ],
 },
 {
-  id: 57,
+  id: 51,
   title: "Booking & Reservation App",
   image: "/images/app-categories/booking.webp",
   description:
@@ -905,7 +830,7 @@ const appCategories = [
   ],
 },
 {
-  id: 58,
+  id: 52,
   title: "Business Automation App",
   image: "/images/app-categories/business.webp",
   description:
@@ -920,7 +845,7 @@ const appCategories = [
   ],
 },
 {
-  id: 59,
+  id: 53,
   title: "Custom Enterprise Solution",
   image: "/images/app-categories/custom.webp",
   description:
@@ -935,7 +860,7 @@ const appCategories = [
   ],
 },
 {
-  id: 60,
+  id: 54,
   title: "Custom Mobile Application",
   image: "/images/app-categories/custom-mobile.webp",
   description:
