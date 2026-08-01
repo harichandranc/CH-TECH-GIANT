@@ -19,12 +19,12 @@ const Apps = () => {
         category === "All" || app.category === category;
 
       const matchesSearch =
-        app.title
-          .toLowerCase()
-          .includes(search.toLowerCase()) ||
-        app.description
-          .toLowerCase()
-          .includes(search.toLowerCase());
+        (app.title || "")
+            .toLowerCase()
+            .includes(search.toLowerCase()) ||
+        (app.description || "")
+            .toLowerCase()
+            .includes(search.toLowerCase());
 
       return matchesCategory && matchesSearch;
     });

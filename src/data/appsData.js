@@ -1,7 +1,7 @@
 const apps = [
   {
     id: 1,
-    name: "World Clock",
+    title: "World Clock",
     category: "Utilities",
     description:
       "View the current time across multiple countries and cities with a beautiful and easy-to-use interface.",
@@ -11,7 +11,7 @@ const apps = [
   },
   {
     id: 2,
-    name: "Everything Converter",
+    title: "Everything Converter",
     category: "Utilities",
     description:
       "Convert images, videos, audio, documents, archives, and many more file formats from one app.",
@@ -21,7 +21,7 @@ const apps = [
   },
   {
     id: 3,
-    name: "Bulk File Renamer",
+    title: "Bulk File Renamer",
     category: "Productivity",
     description:
       "Rename thousands of files instantly using prefixes, suffixes, numbering, replacement rules, and more.",
@@ -31,7 +31,7 @@ const apps = [
   },
   {
     id: 4,
-    name: "Invoice Generator",
+    title: "Invoice Generator",
     category: "Business",
     description:
       "Generate professional invoices, quotations, and receipts with PDF export and sharing.",
@@ -41,7 +41,7 @@ const apps = [
   },
   {
     id: 5,
-    name: "CGPA & SGPA Calculator",
+    title: "CGPA & SGPA Calculator",
     category: "Education",
     description:
       "Calculate semester SGPA and overall CGPA accurately with support for multiple grading systems.",
@@ -51,7 +51,7 @@ const apps = [
   },
   {
     id: 6,
-    name: "Image Compressor",
+    title: "Image Compressor",
     category: "Photography",
     description:
       "Compress images to your desired file size while maintaining excellent quality.",
@@ -61,7 +61,7 @@ const apps = [
   },
   {
     id: 7,
-    name: "PDF Converter",
+    title: "PDF Converter",
     category: "Productivity",
     description:
       "Convert PDF files to multiple formats and create PDFs from images and documents.",
@@ -71,7 +71,7 @@ const apps = [
   },
   {
     id: 8,
-    name: "QR & Barcode Scanner",
+    title: "QR & Barcode Scanner",
     category: "Utilities",
     description:
       "Fast QR code and barcode scanner with history, flashlight support, and sharing options.",
