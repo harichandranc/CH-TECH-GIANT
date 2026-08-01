@@ -680,7 +680,7 @@ const appCategories = [
   ],
 },
 {
-  id: 47,
+  id: 43,
   title: "Chatbot Application",
   image: "/images/app-categories/chatbot.webp",
   description:
@@ -691,21 +691,6 @@ const appCategories = [
     "Lead Generation",
     "Live Chat",
     "Knowledge Base",
-    "Analytics",
-  ],
-},
-{
-  id: 43,
-  title: "IoT Application",
-  image: "/images/app-categories/iot.webp",
-  description:
-    "Create IoT mobile applications for smart homes, industrial automation, healthcare devices, asset tracking, and connected ecosystems.",
-  features: [
-    "Device Monitoring",
-    "Real-Time Data",
-    "Remote Control",
-    "Alerts",
-    "Cloud Integration",
     "Analytics",
   ],
 },
@@ -1490,7 +1475,7 @@ const AppDevelopment = () => {
         <div className="grid md:grid-cols-4 gap-8">
 
         <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
-        <h2 className="text-5xl font-bold text-cyan-400 mb-3">60+</h2>
+        <h2 className="text-5xl font-bold text-cyan-400 mb-3">50+</h2>
         <p className="text-gray-300">App Categories Covered</p>
         </div>
 
