@@ -17,7 +17,7 @@ const apps = [
       "Convert images, videos, audio, documents, archives, and many more file formats from one app.",
     image: "/projects/fileconverter.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.converter",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const apps = [
       "Rename thousands of files instantly using prefixes, suffixes, numbering, replacement rules, and more.",
     image: "/projects/filerenamer.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.filerenamer",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const apps = [
       "Calculate semester SGPA and overall CGPA accurately with support for multiple grading systems.",
     image: "/projects/cgpacalculator.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.cgpacalculator",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator",
   },
   {
     id: 6,
