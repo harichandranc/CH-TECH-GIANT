@@ -457,7 +457,7 @@ const appCategories = [
 {
   id: 28,
   title: "Job Portal App Development",
-  image: "/images/app-categories/job.webp",
+  image: "/images/app-categories/job.png",
   description:
     "Develop modern recruitment platforms connecting employers and job seekers with AI-powered matching, resume management, and interview scheduling.",
   features: [
@@ -472,7 +472,7 @@ const appCategories = [
 {
   id: 29,
   title: "Real Estate App Development",
-  image: "/images/app-categories/real-estate.webp",
+  image: "/images/app-categories/real-estate.png",
   description:
     "Property listing applications with advanced search, virtual tours, agent management, mortgage calculators, and appointment booking.",
   features: [
@@ -487,7 +487,7 @@ const appCategories = [
 {
   id: 30,
   title: "CRM Application",
-  image: "/images/app-categories/crm.webp",
+  image: "/images/app-categories/crm.png",
   description:
     "Customer Relationship Management applications to streamline sales, customer interactions, lead tracking, and business growth.",
   features: [
@@ -502,7 +502,7 @@ const appCategories = [
 {
   id: 31,
   title: "ERP Application",
-  image: "/images/app-categories/erp.webp",
+  image: "/images/app-categories/erp.png",
   description:
     "Enterprise Resource Planning applications integrating finance, HR, inventory, operations, and reporting into one platform.",
   features: [
@@ -517,7 +517,7 @@ const appCategories = [
 {
   id: 32,
   title: "Cloud Based Application",
-  image: "/images/app-categories/cloud.webp",
+  image: "/images/app-categories/cloud.png",
   description:
     "Cloud-native applications with secure data storage, real-time synchronization, scalability, and high availability.",
   features: [
@@ -532,7 +532,7 @@ const appCategories = [
 {
   id: 33,
   title: "GPS & Geo-Fencing App",
-  image: "/images/app-categories/gps.webp",
+  image: "/images/app-categories/gps.png",
   description:
     "Location-aware applications using GPS tracking, geo-fencing, live navigation, and location analytics for businesses.",
   features: [
@@ -547,7 +547,7 @@ const appCategories = [
 {
   id: 34,
   title: "Directory App Development",
-  image: "/images/app-categories/directory.webp",
+  image: "/images/app-categories/directory.png",
   description:
     "Business directory applications that organize companies, services, and contact information with search and filtering.",
   features: [
@@ -562,7 +562,7 @@ const appCategories = [
 {
   id: 35,
   title: "Utility App Development",
-  image: "/images/app-categories/utility.webp",
+  image: "/images/app-categories/utility.png",
   description:
     "Utility applications that simplify everyday tasks, productivity, file management, conversions, and device optimization.",
   features: [
@@ -577,7 +577,7 @@ const appCategories = [
 {
   id: 36,
   title: "Lifestyle App Development",
-  image: "/images/app-categories/lifestyle.webp",
+  image: "/images/app-categories/lifestyle.png",
   description:
     "Lifestyle applications covering fashion, beauty, food, travel, wellness, shopping, and personalized recommendations.",
   features: [
@@ -592,7 +592,7 @@ const appCategories = [
 {
   id: 37,
   title: "On-Demand Service App",
-  image: "/images/app-categories/on-demand.webp",
+  image: "/images/app-categories/on-demand.png",
   description:
     "Develop on-demand applications for home services, beauty, repairs, healthcare, and other instant booking businesses.",
   features: [
@@ -607,7 +607,7 @@ const appCategories = [
 {
   id: 38,
   title: "Enterprise Mobile App",
-  image: "/images/app-categories/enterprise.webp",
+  image: "/images/app-categories/enterprise.png",
   description:
     "Enterprise-grade mobile applications designed for large organizations with secure workflows, integrations, and role-based access.",
   features: [
@@ -622,7 +622,7 @@ const appCategories = [
 {
   id: 39,
   title: "Push Notification Solutions",
-  image: "/images/app-categories/push.webp",
+  image: "/images/app-categories/push.png",
   description:
     "Increase user engagement with intelligent push notification systems featuring segmentation, automation, and analytics.",
   features: [
@@ -637,7 +637,7 @@ const appCategories = [
 {
   id: 40,
   title: "Feedback & Survey App",
-  image: "/images/app-categories/feedback.webp",
+  image: "/images/app-categories/feedback.png",
   description:
     "Collect valuable customer insights using survey and feedback applications with analytics, forms, and reporting dashboards.",
   features: [
@@ -652,7 +652,7 @@ const appCategories = [
 {
   id: 41,
   title: "Startup MVP Development",
-  image: "/images/app-categories/startup.webp",
+  image: "/images/app-categories/startup.png",
   description:
     "Transform innovative ideas into Minimum Viable Products (MVPs) with rapid development, scalable architecture, and market-ready solutions.",
   features: [
@@ -667,7 +667,7 @@ const appCategories = [
 {
   id: 42,
   title: "AI Powered Application",
-  image: "/images/app-categories/ai.webp",
+  image: "/images/app-categories/ai.png",
   description:
     "Develop intelligent AI-powered mobile applications using machine learning, natural language processing, computer vision, and predictive analytics to automate business processes and enhance user experiences.",
   features: [
@@ -682,7 +682,7 @@ const appCategories = [
 {
   id: 43,
   title: "Chatbot Application",
-  image: "/images/app-categories/chatbot.webp",
+  image: "/images/app-categories/chatbot.png",
   description:
     "Build AI chatbot applications that provide instant customer support, automate conversations, generate leads, and improve customer engagement.",
   features: [
@@ -697,7 +697,7 @@ const appCategories = [
 {
   id: 44,
   title: "Logistics & Fleet App",
-  image: "/images/app-categories/logistics.webp",
+  image: "/images/app-categories/logistics.png",
   description:
     "Develop logistics applications for fleet management, shipment tracking, warehouse operations, and route optimization.",
   features: [
@@ -712,7 +712,7 @@ const appCategories = [
 {
   id: 45,
   title: "Inventory Management App",
-  image: "/images/app-categories/inventory.webp",
+  image: "/images/app-categories/inventory.png",
   description:
     "Inventory management applications that simplify stock control, barcode scanning, warehouse operations, supplier management, and reporting.",
   features: [
@@ -727,7 +727,7 @@ const appCategories = [
 {
   id: 46,
   title: "Courier Delivery App",
-  image: "/images/app-categories/courier.webp",
+  image: "/images/app-categories/courier.png",
   description:
     "Courier management applications with parcel booking, shipment tracking, delivery scheduling, proof of delivery, and customer notifications.",
   features: [
@@ -742,7 +742,7 @@ const appCategories = [
 {
   id: 47,
   title: "Salon & Spa App",
-  image: "/images/app-categories/salon.webp",
+  image: "/images/app-categories/salon.png",
   description:
     "Appointment booking applications for salons, spas, and wellness centers with staff scheduling, online payments, and loyalty programs.",
   features: [
@@ -757,7 +757,7 @@ const appCategories = [
 {
   id: 48,
   title: "Appointment Booking App",
-  image: "/images/app-categories/appointment.webp",
+  image: "/images/app-categories/appointment.png",
   description:
     "Develop appointment scheduling applications for doctors, consultants, service providers, and businesses with calendar integration.",
   features: [
@@ -772,7 +772,7 @@ const appCategories = [
 {
   id: 49,
   title: "Agriculture App",
-  image: "/images/app-categories/agriculture.webp",
+  image: "/images/app-categories/agriculture.png",
   description:
     "Agriculture applications that assist farmers with crop management, weather forecasts, market prices, irrigation monitoring, and farm analytics.",
   features: [
@@ -787,7 +787,7 @@ const appCategories = [
 {
   id: 50,
   title: "Manufacturing App",
-  image: "/images/app-categories/manufacturing.webp",
+  image: "/images/app-categories/manufacturing.png",
   description:
     "Manufacturing applications for production planning, quality control, workforce management, maintenance scheduling, and operational efficiency.",
   features: [
@@ -802,7 +802,7 @@ const appCategories = [
 {
   id: 51,
   title: "Booking & Reservation App",
-  image: "/images/app-categories/booking.webp",
+  image: "/images/app-categories/booking.png",
   description:
     "Booking applications for hotels, travel, events, healthcare, sports, and service providers with real-time availability and online payments.",
   features: [
@@ -817,7 +817,7 @@ const appCategories = [
 {
   id: 52,
   title: "Business Automation App",
-  image: "/images/app-categories/business.webp",
+  image: "/images/app-categories/business.png",
   description:
     "Business automation applications that streamline workflows, approvals, document management, communication, and reporting.",
   features: [
@@ -832,7 +832,7 @@ const appCategories = [
 {
   id: 53,
   title: "Custom Enterprise Solution",
-  image: "/images/app-categories/custom.webp",
+  image: "/images/app-categories/custom.png",
   description:
     "Tailor-made enterprise applications designed specifically for your organization's workflows, processes, and long-term digital transformation goals.",
   features: [
@@ -847,7 +847,7 @@ const appCategories = [
 {
   id: 54,
   title: "Custom Mobile Application",
-  image: "/images/app-categories/custom-mobile.webp",
+  image: "/images/app-categories/custom-mobile.png",
   description:
     "Need something unique? We design and develop fully customized mobile applications based on your business goals, target audience, and industry requirements.",
   features: [
