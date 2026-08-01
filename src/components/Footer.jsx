@@ -146,6 +146,13 @@ function Footer() {
               </NavLink>
 
               <NavLink
+                to="/apps"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Our Apps
+              </NavLink>
+
+              <NavLink
                 to="/portfolio"
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
