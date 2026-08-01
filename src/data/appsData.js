@@ -5,7 +5,7 @@ const apps = [
     category: "Utilities",
     description:
       "View the current time across multiple countries and cities with a beautiful and easy-to-use interface.",
-    image: "/apps/world-clock.webp",
+    image: "/projects/worldclock.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock",
   },
