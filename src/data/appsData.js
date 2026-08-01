@@ -11,11 +11,11 @@ const apps = [
   },
   {
     id: 2,
-    title: "Everything Converter",
+    title: "File Converter",
     category: "Utilities",
     description:
       "Convert images, videos, audio, documents, archives, and many more file formats from one app.",
-    image: "/apps/everything-converter.webp",
+    image: "/projects/fileconverter.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.converter",
   },
@@ -25,17 +25,17 @@ const apps = [
     category: "Productivity",
     description:
       "Rename thousands of files instantly using prefixes, suffixes, numbering, replacement rules, and more.",
-    image: "/apps/bulk-file-renamer.webp",
+    image: "/projects/filerenamer.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.filerenamer",
   },
   {
     id: 4,
-    title: "Invoice Generator",
+    title: "Invoice Maker",
     category: "Business",
     description:
       "Generate professional invoices, quotations, and receipts with PDF export and sharing.",
-    image: "/apps/invoice-generator.webp",
+    image: "/projects/invoicemaker.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.invoicegenerator",
   },
@@ -45,7 +45,7 @@ const apps = [
     category: "Education",
     description:
       "Calculate semester SGPA and overall CGPA accurately with support for multiple grading systems.",
-    image: "/apps/cgpa-calculator.webp",
+    image: "/projects/cgpacalculator.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.cgpacalculator",
   },
@@ -55,7 +55,7 @@ const apps = [
     category: "Photography",
     description:
       "Compress images to your desired file size while maintaining excellent quality.",
-    image: "/apps/image-compressor.webp",
+    image: "/projects/image-compressor.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
   },
@@ -65,7 +65,7 @@ const apps = [
     category: "Productivity",
     description:
       "Convert PDF files to multiple formats and create PDFs from images and documents.",
-    image: "/apps/pdf-converter.webp",
+    image: "/projects/pdfconverter.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.pdfconverter",
   },
@@ -75,7 +75,7 @@ const apps = [
     category: "Utilities",
     description:
       "Fast QR code and barcode scanner with history, flashlight support, and sharing options.",
-    image: "/apps/qr-scanner.webp",
+    image: "/projects/qr-scanner.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.qrscanner",
   },
