@@ -1353,12 +1353,6 @@ const AppDevelopment = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent"></div>
 
-                  {/* Badge */}
-                  <div className="absolute top-5 left-5">
-                    <span className="px-4 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold uppercase tracking-wider">
-                      Mobile Solution
-                    </span>
-                  </div>
 
                   {/* Title */}
                   <div className="absolute bottom-5 left-6 right-6">
@@ -1398,7 +1392,7 @@ const AppDevelopment = () => {
                       </p>
 
                       <p className="text-cyan-400 font-semibold text-sm">
-                        Android • iOS • Flutter
+                        Android • iOS 
                       </p>
                     </div>
 
