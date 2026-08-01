@@ -32,7 +32,7 @@ const apps = [
   {
     id: 4,
     title: "Web Codshop",
-    category: "Business",
+    category: "Education",
     description:
       "Marketplace dedicated to website source code, web templates, and professional web development resources.",
     image: "/projects/webcodshop.png",
@@ -71,7 +71,7 @@ const apps = [
   },
   {
     id: 8,
-    title: "PDF Converter",
+    title: "Image to PDF Converter",
     category: "Productivity",
     description:
       "Convert Any Image Format to PDFs.",
