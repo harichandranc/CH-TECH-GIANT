@@ -1363,7 +1363,7 @@ const AppDevelopment = () => {
               className="group overflow-hidden rounded-3xl bg-gradient-to-b from-white/5 to-white/[0.03] border border-cyan-500/10 hover:border-cyan-400 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-500"
             >
               {/* Image */}
-              <div className="relative aspect-[9/16] overflow-hidden">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={app.image}
                   alt={app.title}
