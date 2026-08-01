@@ -1323,115 +1323,96 @@ const AppDevelopment = () => {
         {/* Mobile Apps We Develop */}
         <SectionWrapper>
           <div className="text-center mb-14">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-4"
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Mobile Apps We Develop
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-gray-400 max-w-4xl mx-auto leading-relaxed"
-            >
-              We build powerful mobile applications tailored to different industries and
-              business models. From startups to enterprises, our experienced developers
-              create secure, scalable, and feature-rich mobile solutions that help
-              businesses increase customer engagement, streamline operations, and drive
-              growth.
-            </motion.p>
+            <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              We build powerful mobile applications tailored to different industries
+              and business models. From startups to enterprises, our experienced
+              developers create secure, scalable, and feature-rich mobile solutions
+              that help businesses increase customer engagement, streamline operations,
+              and drive growth.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {appCategories.map((app, index) => (
-              <motion.div
-              key={app.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.05,
-              }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="group overflow-hidden rounded-3xl bg-gradient-to-b from-white/5 to-white/[0.03] border border-cyan-500/10 hover:border-cyan-400 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-500"
-            >
-              {/* Image */}
-              <div className="relative h-60 overflow-hidden">
-                <img
-                  src={app.image}
-                  alt={app.title}
-                  className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-                />
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {appCategories.map((app) => (
+              <div
+                key={app.id}
+                className="overflow-hidden rounded-3xl bg-gradient-to-b from-white/5 to-white/[0.03] border border-cyan-500/10 hover:border-cyan-400 transition-colors duration-300"
+              >
+                {/* Image */}
+                <div className="relative aspect-video overflow-hidden bg-[#06101c]">
+                  <img
+                    src={app.image}
+                    alt={app.title}
+                    className="w-full h-full object-cover"
+                  />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent"></div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent"></div>
 
-                {/* Badge */}
-                <div className="absolute top-5 left-5">
-                  <span className="px-4 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold uppercase tracking-wider">
-                    Mobile Solution
-                  </span>
-                </div>
-
-                {/* Title */}
-                <div className="absolute bottom-5 left-6 right-6">
-                  <h3 className="text-2xl font-bold text-white leading-tight">
-                    {app.title}
-                  </h3>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-7">
-
-                <p className="text-gray-400 leading-7 mb-6">
-                  {app.description}
-                </p>
-
-                {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8">
-                  {app.features.map((feature, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center text-sm text-gray-300"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-cyan-400 mr-3"></div>
-
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Bottom */}
-                <div className="flex items-center justify-between pt-6 border-t border-white/10">
-
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-gray-500">
-                      Custom Development
-                    </p>
-
-                    <p className="text-cyan-400 font-semibold">
-                      Android • iOS • Flutter
-                    </p>
+                  {/* Badge */}
+                  <div className="absolute top-5 left-5">
+                    <span className="px-4 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold uppercase tracking-wider">
+                      Mobile Solution
+                    </span>
                   </div>
 
-                  <a
-                    href="/contact"
-                    className="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition"
-                  >
-                    Get Quote
-                  </a>
-
+                  {/* Title */}
+                  <div className="absolute bottom-5 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white leading-tight">
+                      {app.title}
+                    </h3>
+                  </div>
                 </div>
 
+                {/* Content */}
+                <div className="p-7">
+
+                  <p className="text-gray-400 text-[15px] leading-7 mb-6">
+                    {app.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="grid grid-cols-2 gap-x-5 gap-y-3 mb-8">
+                    {app.features.map((feature, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start text-sm text-gray-300"
+                      >
+                        <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 mr-3 shrink-0"></div>
+
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Bottom */}
+                  <div className="flex items-center justify-between border-t border-white/10 pt-6">
+
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-gray-500">
+                        Custom Development
+                      </p>
+
+                      <p className="text-cyan-400 font-semibold text-sm">
+                        Android • iOS • Flutter
+                      </p>
+                    </div>
+
+                    <a
+                      href="/contact"
+                      className="px-5 py-2.5 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-colors duration-300"
+                    >
+                      Get Quote
+                    </a>
+
+                  </div>
+
+                </div>
               </div>
-            </motion.div>
             ))}
           </div>
         </SectionWrapper>
