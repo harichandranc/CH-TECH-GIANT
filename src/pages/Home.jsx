@@ -138,9 +138,9 @@ const latestApps = [
   },
 
   {
-    title: "World Clock",
+    title: "Web Codshop",
     description:
-      "premium website templates, source codes, and college projects Marketplace app.",
+      "premium website templates, source codes, and college projects with reports Marketplace app.",
     image: "/projects/webcodshop.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
   },
