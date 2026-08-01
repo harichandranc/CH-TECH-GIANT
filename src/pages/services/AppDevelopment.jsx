@@ -67,7 +67,7 @@ const appCategories = [
   {
     id: 2,
     title: "iOS App Development",
-    image: "/images/app-categories/ios.webp",
+    image: "/images/app-categories/ios.png",
     description:
       "Premium iPhone and iPad applications designed for speed, security, and exceptional user experiences. Our iOS apps are optimized for every Apple device.",
     features: [
@@ -82,7 +82,7 @@ const appCategories = [
   {
     id: 3,
     title: "Flutter App Development",
-    image: "/images/app-categories/flutter.webp",
+    image: "/images/app-categories/flutter.png",
     description:
       "Develop Android and iOS applications using a single Flutter codebase, reducing development cost while maintaining excellent performance.",
     features: [
@@ -97,7 +97,7 @@ const appCategories = [
   {
     id: 4,
     title: "Dating App Development",
-    image: "/images/app-categories/dating.webp",
+    image: "/images/app-categories/dating.png",
     description:
       "Create modern dating applications with intelligent matching, location-based discovery, secure messaging, voice & video calling, and premium subscriptions.",
     features: [
@@ -112,7 +112,7 @@ const appCategories = [
   {
     id: 5,
     title: "E-Commerce App Development",
-    image: "/images/app-categories/ecommerce.webp",
+    image: "/images/app-categories/ecommerce.png",
     description:
       "Launch feature-rich online shopping applications with secure payment gateways, inventory management, customer analytics, and order tracking.",
     features: [
@@ -127,7 +127,7 @@ const appCategories = [
   {
     id: 6,
     title: "Shopping App Development",
-    image: "/images/app-categories/shopping.webp",
+    image: "/images/app-categories/shopping.png",
     description:
       "Deliver engaging shopping experiences with personalized recommendations, loyalty programs, multiple payment options, and seamless checkout.",
     features: [
@@ -142,7 +142,7 @@ const appCategories = [
   {
     id: 7,
     title: "Marketplace App Development",
-    image: "/images/app-categories/marketplace.webp",
+    image: "/images/app-categories/marketplace.png",
     description:
       "Develop multi-vendor marketplace applications connecting buyers and sellers with secure transactions, vendor dashboards, and commission management.",
     features: [
@@ -157,7 +157,7 @@ const appCategories = [
   {
     id: 8,
     title: "Food Delivery App Development",
-    image: "/images/app-categories/food.webp",
+    image: "/images/app-categories/food.png",
     description:
       "Build food delivery solutions for restaurants, cloud kitchens, and aggregators with real-time tracking, online payments, and customer engagement features.",
     features: [
@@ -172,7 +172,7 @@ const appCategories = [
   {
     id: 9,
     title: "Restaurant App Development",
-    image: "/images/app-categories/restaurant.webp",
+    image: "/images/app-categories/restaurant.png",
     description:
       "Digital restaurant applications for online ordering, reservations, menu management, loyalty programs, and customer relationship management.",
     features: [
@@ -187,7 +187,7 @@ const appCategories = [
   {
     id: 10,
     title: "Grocery Delivery App Development",
-    image: "/images/app-categories/grocery.webp",
+    image: "/images/app-categories/grocery.png",
     description:
       "Smart grocery delivery applications with inventory management, instant ordering, scheduled deliveries, and secure payment solutions.",
     features: [
@@ -202,7 +202,7 @@ const appCategories = [
   {
   id: 11,
   title: "Medical App Development",
-  image: "/images/app-categories/medical.webp",
+  image: "/images/app-categories/medical.png",
   description:
     "Develop secure medical applications that help healthcare providers deliver better patient care through digital health solutions, online consultations, prescriptions, and health monitoring.",
   features: [
@@ -217,7 +217,7 @@ const appCategories = [
 {
   id: 12,
   title: "Hospital Management App",
-  image: "/images/app-categories/hospital.webp",
+  image: "/images/app-categories/hospital.png",
   description:
     "Comprehensive hospital management applications for clinics and healthcare organizations with appointment scheduling, billing, patient management, and medical record systems.",
   features: [
@@ -232,7 +232,7 @@ const appCategories = [
 {
   id: 13,
   title: "Pharmacy App Development",
-  image: "/images/app-categories/pharmacy.webp",
+  image: "/images/app-categories/pharmacy.png",
   description:
     "Online pharmacy applications that allow customers to order medicines, upload prescriptions, schedule deliveries, and receive medicine reminders.",
   features: [
@@ -247,7 +247,7 @@ const appCategories = [
 {
   id: 14,
   title: "Fitness & Health App",
-  image: "/images/app-categories/fitness.webp",
+  image: "/images/app-categories/fitness.png",
   description:
     "Build engaging fitness applications with workout tracking, nutrition plans, wearable integration, progress analytics, and health monitoring.",
   features: [
@@ -262,7 +262,7 @@ const appCategories = [
 {
   id: 15,
   title: "Educational App Development",
-  image: "/images/app-categories/education.webp",
+  image: "/images/app-categories/education.png",
   description:
     "Interactive educational applications for schools, colleges, coaching institutes, and online learning platforms with engaging digital learning experiences.",
   features: [
@@ -277,7 +277,7 @@ const appCategories = [
 {
   id: 16,
   title: "Learning Management System",
-  image: "/images/app-categories/lms.webp",
+  image: "/images/app-categories/lms.png",
   description:
     "Powerful Learning Management Systems (LMS) that enable organizations to deliver online courses, assessments, certifications, and learner analytics.",
   features: [
@@ -292,7 +292,7 @@ const appCategories = [
 {
   id: 17,
   title: "School ERP App",
-  image: "/images/app-categories/school.webp",
+  image: "/images/app-categories/school.png",
   description:
     "End-to-end school ERP solutions that automate admissions, attendance, fee management, examinations, communication, and academic reporting.",
   features: [
@@ -307,7 +307,7 @@ const appCategories = [
 {
   id: 18,
   title: "Travel App Development",
-  image: "/images/app-categories/travel.webp",
+  image: "/images/app-categories/travel.png",
   description:
     "Travel applications for booking flights, hotels, tour packages, itineraries, and travel experiences with GPS navigation and digital payments.",
   features: [
@@ -322,7 +322,7 @@ const appCategories = [
 {
   id: 19,
   title: "Hotel & Resort App",
-  image: "/images/app-categories/hotel.webp",
+  image: "/images/app-categories/hotel.png",
   description:
     "Modern hotel and resort booking applications with room reservations, digital check-in, guest services, online payments, and loyalty programs.",
   features: [
@@ -337,7 +337,7 @@ const appCategories = [
 {
   id: 20,
   title: "Taxi Booking App",
-  image: "/images/app-categories/taxi.webp",
+  image: "/images/app-categories/taxi.png",
   description:
     "Build taxi and ride-hailing applications with live GPS tracking, fare estimation, driver management, secure payments, and ride history.",
   features: [
@@ -352,7 +352,7 @@ const appCategories = [
 {
   id: 21,
   title: "Social Networking App",
-  image: "/images/app-categories/social.webp",
+  image: "/images/app-categories/social.png",
   description:
     "Build engaging social networking applications that connect people through posts, stories, messaging, communities, and real-time interactions.",
   features: [
@@ -367,7 +367,7 @@ const appCategories = [
 {
   id: 22,
   title: "Messaging App Development",
-  image: "/images/app-categories/messaging.webp",
+  image: "/images/app-categories/messaging.png",
   description:
     "Develop secure instant messaging applications with real-time chat, voice calls, video calls, file sharing, and end-to-end encryption.",
   features: [
@@ -382,7 +382,7 @@ const appCategories = [
 {
   id: 23,
   title: "Calling App Development",
-  image: "/images/app-categories/calling.webp",
+  image: "/images/app-categories/calling.png",
   description:
     "Create high-quality VoIP and internet calling applications with crystal-clear audio, video conferencing, and secure communication.",
   features: [
@@ -397,7 +397,7 @@ const appCategories = [
 {
   id: 24,
   title: "Community App Development",
-  image: "/images/app-categories/community.webp",
+  image: "/images/app-categories/community.png",
   description:
     "Build online community applications where users can connect, discuss topics, organize events, and share knowledge securely.",
   features: [
@@ -412,7 +412,7 @@ const appCategories = [
 {
   id: 25,
   title: "Video Streaming App",
-  image: "/images/app-categories/video-streaming.webp",
+  image: "/images/app-categories/video-streaming.png",
   description:
     "Launch OTT and video streaming platforms with HD streaming, subscriptions, recommendations, watchlists, and multi-device support.",
   features: [
@@ -427,7 +427,7 @@ const appCategories = [
 {
   id: 26,
   title: "Music Streaming App",
-  image: "/images/app-categories/music.webp",
+  image: "/images/app-categories/music.png",
   description:
     "Develop music streaming applications featuring playlists, podcasts, offline downloads, recommendations, and premium memberships.",
   features: [
@@ -442,7 +442,7 @@ const appCategories = [
 {
   id: 27,
   title: "News & Magazine App",
-  image: "/images/app-categories/news.webp",
+  image: "/images/app-categories/news.png",
   description:
     "Create digital news and magazine applications with live updates, personalized feeds, offline reading, bookmarks, and push notifications.",
   features: [
@@ -457,7 +457,7 @@ const appCategories = [
 {
   id: 28,
   title: "Sports App Development",
-  image: "/images/app-categories/sports.webp",
+  image: "/images/app-categories/sports.png",
   description:
     "Develop sports applications with live scores, match schedules, player statistics, fantasy leagues, and fan engagement features.",
   features: [
@@ -472,7 +472,7 @@ const appCategories = [
 {
   id: 29,
   title: "Gaming App Development",
-  image: "/images/app-categories/gaming.webp",
+  image: "/images/app-categories/gaming.png",
   description:
     "Create immersive mobile gaming applications with multiplayer support, leaderboards, in-app purchases, and engaging gameplay.",
   features: [
@@ -487,7 +487,7 @@ const appCategories = [
 {
   id: 30,
   title: "Event & Conference App",
-  image: "/images/app-categories/event.webp",
+  image: "/images/app-categories/event.png",
   description:
     "Develop event and conference management applications with registrations, ticketing, live schedules, networking, and attendee engagement.",
   features: [
