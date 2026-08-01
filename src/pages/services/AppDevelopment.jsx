@@ -54,9 +54,9 @@ const appCategories = [
     title: "Android App Development",
     image: "/images/app-categories/android.png",
     description:
-      "Build powerful, scalable, and feature-rich Android applications for startups, SMEs, and enterprises. We develop high-performance Android apps with intuitive user interfaces and seamless user experiences.",
+      "Build powerful, scalable, and feature-rich Android applications for startups, SMEs, and enterprises. We develop high-performance Android apps.",
     features: [
-      "Native Android Development",
+      "Android Development",
       "Material UI Design",
       "Google API Integration",
       "Firebase Integration",
