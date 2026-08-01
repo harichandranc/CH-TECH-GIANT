@@ -1525,73 +1525,39 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Why Choose Us */}
-
         <SectionWrapper>
+          <div className="text-center mb-14">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5">
+              Why Choose CH TECH GIANT
+            </h2>
 
-        <div className="text-center mb-14">
+            <p className="text-gray-400 max-w-4xl mx-auto leading-8">
+              We combine innovative technologies, modern design principles, and industry
+              experience to deliver reliable mobile applications that help businesses
+              grow faster.
+            </p>
+          </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-5">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8"
+              >
+                <div className="w-14 h-14 mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400">
+                  {item.icon}
+                </div>
 
-        Why Choose CH TECH GIANT
+                <h3 className="text-2xl font-semibold mb-4">
+                  {item.title}
+                </h3>
 
-        </h2>
-
-        <p className="text-gray-400 max-w-4xl mx-auto leading-8">
-
-        We combine innovative technologies, modern design principles, and industry
-        experience to deliver reliable mobile applications that help businesses
-        grow faster.
-
-        </p>
-
-        </div>
-
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-
-        {whyChooseUs.map((item,index)=>(
-
-        <motion.div
-
-        key={index}
-
-        initial={{opacity:0,y:40}}
-
-        whileInView={{opacity:1,y:0}}
-
-        transition={{delay:index*0.08}}
-
-        viewport={{once:true}}
-
-        whileHover={{y:-8}}
-
-        className="bg-white/5 border border-cyan-500/10 hover:border-cyan-400 rounded-3xl p-8 transition-all duration-300"
-
-        >
-
-        <div className="text-5xl mb-6">
-
-        {item.icon}
-
-        </div>
-
-        <h3 className="text-2xl font-semibold mb-4">
-
-        {item.title}
-
-        </h3>
-
-        <p className="text-gray-400 leading-7">
-
-        {item.description}
-
-        </p>
-
-        </motion.div>
-
-        ))}
-
-        </div>
-
+                <p className="text-gray-400 leading-7">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </SectionWrapper>
 
         <SectionWrapper>
