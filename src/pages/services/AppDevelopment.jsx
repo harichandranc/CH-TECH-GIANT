@@ -1374,64 +1374,42 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Technologies */}
-
         <SectionWrapper>
+          <div className="text-center mb-14">
+            <h2 className="text-4xl md:text-5xl font-bold mb-5">
+              Technologies We Use
+            </h2>
 
-        <div className="text-center mb-14">
+            <p className="text-gray-400 max-w-4xl mx-auto leading-8">
+              Our developers use modern technologies and industry best practices to
+              build secure, high-performance and scalable mobile applications for
+              startups, businesses and enterprises.
+            </p>
+          </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-5">
-        Technologies We Use
-        </h2>
+          <div className="space-y-8">
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className="bg-white/5 rounded-3xl border border-cyan-500/10 p-8"
+              >
+                <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
+                  {tech.category}
+                </h3>
 
-        <p className="text-gray-400 max-w-4xl mx-auto leading-8">
-        Our developers use modern technologies and industry best practices to build secure,
-        high-performance and scalable mobile applications for startups, businesses and enterprises.
-        </p>
-
-        </div>
-
-        <div className="space-y-8">
-
-        {technologies.map((tech,index)=>(
-
-        <motion.div
-        key={index}
-        initial={{opacity:0,y:40}}
-        whileInView={{opacity:1,y:0}}
-        transition={{delay:index*0.08}}
-        viewport={{once:true}}
-        className="bg-white/5 rounded-3xl border border-cyan-500/10 p-8"
-        >
-
-        <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-
-        {tech.category}
-
-        </h3>
-
-        <div className="flex flex-wrap gap-4">
-
-        {tech.items.map((item,i)=>(
-
-        <div
-        key={i}
-        className="px-5 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 hover:bg-cyan-500 hover:text-black transition duration-300"
-        >
-
-        {item}
-
-        </div>
-
-        ))}
-
-        </div>
-
-        </motion.div>
-
-        ))}
-
-        </div>
-
+                <div className="flex flex-wrap gap-4">
+                  {tech.items.map((item, i) => (
+                    <div
+                      key={i}
+                      className="px-5 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </SectionWrapper>
 
         {/* Why Choose Us */}
