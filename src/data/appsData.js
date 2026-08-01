@@ -85,7 +85,7 @@ const apps = [
     category: "Utilities",
     description:
       "Lock and unlock PDF files with a password.",
-    image: "/projects/pdf-lock-unlock.jpeg",
+    image: "/projects/pdf_lock_unlock.jpeg",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
   },

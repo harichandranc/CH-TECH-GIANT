@@ -267,25 +267,7 @@ const Apps = () => {
 
             </p>
 
-            {/* Version */}
-
-            <div className="flex justify-between text-sm text-gray-400 border-t border-white/10 border-b border-white/10 py-4">
-
-              <div>
-
-                <p className="text-gray-500">
-
-                  Version
-
-                </p>
-
-                <p className="font-semibold text-white">
-
-                  {app.version}
-
-                </p>
-
-              </div>
+            <div className="flex justify-between items-center">
 
               <div>
 
