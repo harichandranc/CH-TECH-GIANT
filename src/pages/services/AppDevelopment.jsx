@@ -52,7 +52,7 @@ const appCategories = [
   {
     id: 1,
     title: "Android App Development",
-    image: "/images/app-categories/android.webp",
+    image: "/images/app-categories/android.png",
     description:
       "Build powerful, scalable, and feature-rich Android applications for startups, SMEs, and enterprises. We develop high-performance Android apps with intuitive user interfaces and seamless user experiences.",
     features: [
