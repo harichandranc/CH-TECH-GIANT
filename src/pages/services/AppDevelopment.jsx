@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
+import SectionNavigator from "../../components/SectionNavigator";
 
 const features = [
   "Android App Development",
@@ -831,21 +832,6 @@ const appCategories = [
 },
 {
   id: 53,
-  title: "Custom Enterprise Solution",
-  image: "/images/app-categories/custom.png",
-  description:
-    "Tailor-made enterprise applications designed specifically for your organization's workflows, processes, and long-term digital transformation goals.",
-  features: [
-    "Custom Modules",
-    "Enterprise Security",
-    "Cloud Ready",
-    "API Integration",
-    "Scalable",
-    "Long-Term Support",
-  ],
-},
-{
-  id: 54,
   title: "Custom Mobile Application",
   image: "/images/app-categories/custom-mobile.png",
   description:
@@ -1136,7 +1122,7 @@ const AppDevelopment = () => {
         />
 
         {/* Hero Section */}
-        <SectionWrapper>
+        <SectionWrapper id="hero">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -1200,7 +1186,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Services */}
-        <SectionWrapper>
+        <SectionWrapper id="services">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
               Our App Development Services
@@ -1231,7 +1217,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Mobile Apps We Develop */}
-        <SectionWrapper>
+        <SectionWrapper id="mobile-apps">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Mobile Apps We Develop
@@ -1323,7 +1309,7 @@ const AppDevelopment = () => {
 
         {/* Industries We Serve */}
 
-        <SectionWrapper>
+        <SectionWrapper id="industries">
 
         <div className="text-center mb-14">
 
@@ -1374,7 +1360,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Technologies */}
-        <SectionWrapper>
+        <SectionWrapper id="technologies">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
               Technologies We Use
@@ -1413,7 +1399,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Why Choose Us */}
-        <SectionWrapper>
+        <SectionWrapper id="why-us">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
               Why Choose CH TECH GIANT
@@ -1448,7 +1434,7 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        <SectionWrapper>
+        <SectionWrapper id="stats">
 
         <div className="grid md:grid-cols-4 gap-8">
 
@@ -1477,7 +1463,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* Process */}
-        <SectionWrapper>
+        <SectionWrapper id="process">
           <h2 className="text-4xl font-bold text-center mb-12">
             Our Development Process
           </h2>
@@ -1506,7 +1492,7 @@ const AppDevelopment = () => {
 
 
         {/* SEO Content */}
-        <SectionWrapper>
+        <SectionWrapper id="seo">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 text-center">
               Professional Mobile App Development Solutions
@@ -1539,7 +1525,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* FAQ */}
-        <SectionWrapper>
+        <SectionWrapper id="faq">
           <h2 className="text-4xl font-bold text-center mb-12">
             Frequently Asked Questions
           </h2>
@@ -1579,7 +1565,7 @@ const AppDevelopment = () => {
         </SectionWrapper>
 
         {/* CTA */}
-        <SectionWrapper>
+        <SectionWrapper id="cta">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/20 rounded-3xl p-10 text-center">
             <h2 className="text-4xl font-bold mb-4">
               Ready To Build Your App?
@@ -1598,6 +1584,21 @@ const AppDevelopment = () => {
             </a>
           </div>
         </SectionWrapper>
+        <SectionNavigator
+        sections={[
+          "hero",
+          "services",
+          "mobile-apps",
+          "industries",
+          "technologies",
+          "why-us",
+          "stats",
+          "process",
+          "seo",
+          "faq",
+          "cta",
+        ]}
+      />
       </div>
     </>
   );
