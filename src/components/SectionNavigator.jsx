@@ -5,31 +5,30 @@ const SectionNavigator = ({ sections = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (!sections.length) return;
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = sections.indexOf(entry.target.id);
-            if (index !== -1) {
-              setCurrentIndex(index);
-            }
-          }
+        let active = 0;
+
+        sections.forEach((id, index) => {
+        const element = document.getElementById(id);
+
+        if (!element) return;
+
+        if (scrollPosition >= element.offsetTop) {
+            active = index;
+        }
         });
-      },
-      {
-        threshold: 0.45,
-      }
-    );
 
-    sections.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+        setCurrentIndex(active);
+    };
 
-    return () => observer.disconnect();
-  }, [sections]);
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+    }, [sections]);
 
   const scrollToSection = (index) => {
     if (index < 0 || index >= sections.length) return;
