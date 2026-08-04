@@ -70,7 +70,9 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
             <Route path="/apps" element={<Apps />} />
+            <Route path="/:lang/apps" element={<Apps />} />
 
             <Route
               path="/app-development"

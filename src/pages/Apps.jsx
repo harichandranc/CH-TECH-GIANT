@@ -1,169 +1,351 @@
 import { useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { translations, categoryTranslations } from "../locales";
 import { motion } from "framer-motion";
 import { FaGooglePlay, FaDownload, FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import apps from "../data/appsData";
 
-const categories = [
+const rawCategories = [
   "All",
   ...new Set(apps.map((app) => app.category)),
 ];
 
 const Apps = () => {
+  const { lang } = useParams();
+
+  const language = lang === "zh" ? "zh" : "en";
+
+  const t = translations[language];
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+
+  if (lang) return;
+
+  const browserLanguage = navigator.language.toLowerCase();
+
+  if (browserLanguage.startsWith("zh")) {
+    navigate("/zh/apps", {
+      replace: true,
+    });
+  }
+
+}, [lang, navigate]);
 
   const filteredApps = useMemo(() => {
-    return apps.filter((app) => {
-      const matchesCategory =
-        category === "All" || app.category === category;
+  return apps.filter((app) => {
+    const matchesCategory =
+      category === "All" || app.category === category;
 
-      const matchesSearch =
-        (app.title || "")
-            .toLowerCase()
-            .includes(search.toLowerCase()) ||
-        (app.description || "")
-            .toLowerCase()
-            .includes(search.toLowerCase());
+    const title =
+      typeof app.title === "object"
+        ? (app.title[language] || app.title.en)
+        : app.title;
 
-      return matchesCategory && matchesSearch;
-    });
-  }, [search, category]);
+    const description =
+      typeof app.description === "object"
+        ? (app.description[language] || app.description.en)
+        : app.description;
+
+    const matchesSearch =
+      title.toLowerCase().includes(search.toLowerCase()) ||
+      description.toLowerCase().includes(search.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+}, [search, category, language]);
 
   return (
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
-    {/* HERO */}
-<section className="relative py-24 px-6">
+      <Helmet>
+      <html lang={language} />
 
-  <div className="max-w-7xl mx-auto">
+      <title>
+        {language === "zh"
+          ? "CH TECH GIANT 官方 Android 应用下载"
+          : "CH TECH GIANT Android Apps"}
+      </title>
 
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-center"
-    >
-
-      <span className="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mb-6">
-        Official CH TECH GIANT Apps
-      </span>
-
-      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-        Download Our
-        <span className="text-cyan-400"> Android Apps</span>
-      </h1>
-
-      <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
-        Discover high-quality productivity, PDF, business,
-        education and utility applications developed by
-        <span className="text-cyan-400">
-          {" "}
-          CH TECH GIANT (OPC) PRIVATE LIMITED
-        </span>.
-      </p>
-
-    </motion.div>
-
-    {/* STATS */}
-
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: .2 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16"
-    >
-
-      <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-        <h2 className="text-4xl font-black text-cyan-400">
-          {apps.length}
-        </h2>
-        <p className="text-gray-400 mt-2">
-          Applications
-        </p>
-      </div>
-
-      <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-        <h2 className="text-4xl font-black text-cyan-400">
-          100%
-        </h2>
-        <p className="text-gray-400 mt-2">
-          Free Download
-        </p>
-      </div>
-
-      <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-        <h2 className="text-4xl font-black text-cyan-400">
-          Android
-        </h2>
-        <p className="text-gray-400 mt-2">
-          Supported
-        </p>
-      </div>
-
-      <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-        <h2 className="text-4xl font-black text-cyan-400">
-          24×7
-        </h2>
-        <p className="text-gray-400 mt-2">
-          Updates
-        </p>
-      </div>
-
-    </motion.div>
-
-    {/* SEARCH */}
-
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: .3 }}
-      className="mt-14 max-w-3xl mx-auto relative"
-    >
-
-      <FaSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
-
-      <input
-        type="text"
-        placeholder="Search applications..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full bg-white/5 border border-white/10 rounded-2xl h-16 pl-16 pr-6 outline-none focus:border-cyan-400 transition text-white placeholder:text-gray-500"
+      <meta
+        name="description"
+        content={
+          language === "zh"
+            ? "下载 CH TECH GIANT 官方 Android 应用，包括 PDF 工具、文件转换器、办公软件、教育应用和更多免费 Android 应用。"
+            : "Download official Android apps from CH TECH GIANT including PDF tools, file converters, invoice maker, productivity apps and more."
+        }
       />
 
-    </motion.div>
+      <meta
+        name="keywords"
+        content={
+          language === "zh"
+            ? "Android应用, PDF工具, PDF转换器, 文件转换器, 免费应用"
+            : "Android Apps, PDF Converter, File Converter, Invoice Maker, Productivity Apps"
+        }
+      />
 
-    {/* CATEGORY */}
+      <link
+        rel="canonical"
+        href={`https://chtechgiant.com${language === "zh" ? "/zh/apps" : "/apps"}`}
+      />
 
-    <div className="flex flex-wrap justify-center gap-4 mt-12">
+      <link
+        rel="alternate"
+        hrefLang="en"
+        href="https://chtechgiant.com/apps"
+      />
 
-      {categories.map((item) => (
+      <link
+        rel="alternate"
+        hrefLang="zh-CN"
+        href="https://chtechgiant.com/zh/apps"
+      />
 
-        <button
-          key={item}
-          onClick={() => setCategory(item)}
-          className={`px-6 py-3 rounded-full transition font-semibold border
+      <meta property="og:locale" content={language === "zh" ? "zh_CN" : "en_US"} />
 
-          ${
-            category === item
+      <meta property="og:type" content="website" />
 
-              ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
+      <meta
+        property="og:title"
+        content={
+          language === "zh"
+            ? "CH TECH GIANT 官方 Android 应用"
+            : "CH TECH GIANT Android Apps"
+        }
+      />
 
-              : "bg-white/5 border-white/10 hover:border-cyan-400"
+      <meta
+        property="og:description"
+        content={
+          language === "zh"
+            ? "下载官方 Android 应用"
+            : "Download official Android apps."
+        }
+      />
 
-          }`}
+      <meta
+        property="og:url"
+        content={`https://chtechgiant.com${language === "zh" ? "/zh/apps" : "/apps"}`}
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta
+        name="twitter:title"
+        content={
+          language === "zh"
+            ? "CH TECH GIANT 官方 Android 应用"
+            : "CH TECH GIANT Android Apps"
+        }
+      />
+
+      <meta
+        name="twitter:description"
+        content={
+          language === "zh"
+            ? "下载官方 Android 应用"
+            : "Download official Android apps."
+        }
+      />
+
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href="https://chtechgiant.com/apps"
+      />
+      <script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name:
+    language === "zh"
+      ? "CH TECH GIANT 官方 Android 应用"
+      : "CH TECH GIANT Android Apps",
+  inLanguage:
+    language === "zh"
+      ? "zh-CN"
+      : "en",
+  url:
+    `https://chtechgiant.com${
+      language === "zh"
+      ? "/zh/apps"
+      : "/apps"
+    }`,
+  publisher: {
+    "@type": "Organization",
+    name: "CH TECH GIANT"
+  }
+})}
+</script>
+    </Helmet>
+
+    
+    {/* HERO */}
+    <section className="relative py-24 px-6">
+
+      <div className="max-w-7xl mx-auto">
+
+        <div className="flex justify-center mt-8 gap-3">
+
+  <Link
+    to="/apps"
+    className={`px-5 py-2 rounded-full border transition
+      ${
+        language === "en"
+          ? "bg-cyan-500 text-black border-cyan-500"
+          : "border-white/20 hover:border-cyan-500"
+      }`}
+  >
+    🇺🇸 English
+  </Link>
+
+  <Link
+    to="/zh/apps"
+    className={`px-5 py-2 rounded-full border transition
+      ${
+        language === "zh"
+          ? "bg-cyan-500 text-black border-cyan-500"
+          : "border-white/20 hover:border-cyan-500"
+      }`}
+  >
+    🇨🇳 简体中文
+  </Link>
+
+</div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
         >
 
-          {item}
+          <span className="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mb-6">
+            {t.officialApps}
+          </span>
 
-        </button>
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+            {t.heroTitle1}
+            <span className="text-cyan-400"> {t.heroTitle2} </span>
+          </h1>
 
-      ))}
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
+          {t.heroDescription}{" "}
+          <span className="text-cyan-400">
+            CH TECH GIANT (OPC) PRIVATE LIMITED
+          </span>.
+        </p>
 
-    </div>
+        </motion.div>
 
-  </div>
+        {/* STATS */}
 
-</section>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16"
+        >
+
+          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+            <h2 className="text-4xl font-black text-cyan-400">
+              {apps.length}
+            </h2>
+            <p className="text-gray-400 mt-2">
+              {t.applications}
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+            <h2 className="text-4xl font-black text-cyan-400">
+              100%
+            </h2>
+            <p className="text-gray-400 mt-2">
+              {t.freeDownload}
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+            <h2 className="text-4xl font-black text-cyan-400">
+              Android
+            </h2>
+            <p className="text-gray-400 mt-2">
+              {t.supported}
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+            <h2 className="text-4xl font-black text-cyan-400">
+              24×7
+            </h2>
+            <p className="text-gray-400 mt-2">
+              {t.updates}
+            </p>
+          </div>
+
+        </motion.div>
+
+        {/* SEARCH */}
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .3 }}
+          className="mt-14 max-w-3xl mx-auto relative"
+        >
+
+          <FaSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
+
+          <input
+            type="text"
+            placeholder={t.search}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full bg-white/5 border border-white/10 rounded-2xl h-16 pl-16 pr-6 outline-none focus:border-cyan-400 transition text-white placeholder:text-gray-500"
+          />
+
+        </motion.div>
+
+        {/* CATEGORY */}
+
+        <div className="flex flex-wrap justify-center gap-4 mt-12">
+
+          {rawCategories.map((item) => (
+
+            <button
+              key={item}
+              onClick={() => setCategory(item)}
+              className={`px-6 py-3 rounded-full transition font-semibold border
+
+              ${
+                category === item
+
+                  ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
+
+                  : "bg-white/5 border-white/10 hover:border-cyan-400"
+
+              }`}
+            >
+
+            {categoryTranslations[language][item] || item}
+
+            </button>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
 {/* APPS GRID */}
 
 <section className="px-6 pb-24">
@@ -178,12 +360,11 @@ const Apps = () => {
     >
 
       <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
-        Our Applications
+        {t.ourApps}
       </h2>
 
       <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto">
-        Download our latest Android applications directly from
-        Google Play or install the official APK.
+        {t.ourAppsDesc}
       </p>
 
     </motion.div>
@@ -215,7 +396,7 @@ const Apps = () => {
 
               <span className="px-3 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold">
 
-                FEATURED
+                {t.featured}
 
               </span>
 
@@ -229,7 +410,11 @@ const Apps = () => {
 
             <img
               src={app.image}
-              alt={app.title}
+              alt={
+                typeof app.title === "object"
+                  ? (app.title[language] || app.title.en)
+                  : app.title
+              }
               className="h-full object-contain transition duration-500 group-hover:scale-105"
             />
 
@@ -243,7 +428,7 @@ const Apps = () => {
 
               <span className="text-cyan-400 text-sm font-semibold">
 
-                {app.category}
+                {categoryTranslations[language][app.category] || app.category}
 
               </span>
 
@@ -257,13 +442,17 @@ const Apps = () => {
 
             <h3 className="text-2xl font-bold mb-3">
 
-              {app.title}
+              {typeof app.title === "object"
+              ? (app.title[language] || app.title.en)
+              : app.title}
 
             </h3>
 
             <p className="text-gray-400 leading-7 mb-6">
 
-              {app.description}
+              {typeof app.description === "object"
+                ? (app.description[language] || app.description.en)
+                : app.description}
 
             </p>
 
@@ -273,7 +462,7 @@ const Apps = () => {
 
                 <p className="text-gray-500">
 
-                  Size
+                  {t.size}
 
                 </p>
 
@@ -298,7 +487,7 @@ const Apps = () => {
                 className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
               >
                 <FaGooglePlay />
-                Google Play
+                {t.googlePlay}
               </a>
 
               <a
@@ -308,7 +497,7 @@ const Apps = () => {
                 className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
               >
                 <FaDownload />
-                APK
+                {t.apk}
               </a>
 
             </div>
@@ -332,11 +521,11 @@ const Apps = () => {
       <div className="text-center py-24">
 
         <h2 className="text-3xl font-bold mb-4">
-          No Applications Found
+          {t.noApps}
         </h2>
 
         <p className="text-gray-400">
-          Try searching with another keyword.
+          {t.noAppsDesc}
         </p>
 
       </div>
@@ -357,15 +546,13 @@ const Apps = () => {
 
         <h2 className="text-4xl font-black mb-5">
 
-          More Apps Coming Soon 🚀
+          {t.moreApps}
 
         </h2>
 
         <p className="text-gray-300 max-w-3xl mx-auto leading-8">
 
-          We continuously build powerful Android applications,
-          productivity tools, business software and utility apps.
-          Bookmark this page to stay updated with our latest releases.
+          {t.moreAppsDesc}
 
         </p>
 
