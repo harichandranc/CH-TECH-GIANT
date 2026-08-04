@@ -27,7 +27,7 @@ const en = {
 
   apk: "APK",
 
-  noApps: "No Applications Found",
+  noApps: "No Applications Founded",
 
   noAppsDesc: "Try searching with another keyword.",
 
