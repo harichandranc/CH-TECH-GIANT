@@ -478,31 +478,31 @@ const Apps = () => {
 
                         {/* ACTION BUTTONS */}
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className={`grid ${app.apk ? "grid-cols-2" : "grid-cols-1"} gap-4 mt-8`}>
+  <a
+    href={app.playStore}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
+  >
+    <FaGooglePlay />
+    {t.googlePlay}
+  </a>
 
-              <a
-                href={app.playStore}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
-              >
-                <FaGooglePlay />
-                {t.googlePlay}
-              </a>
+  {app.apk && (
+    <a
+      href={app.apk}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
+    >
+      <FaDownload />
+      {t.apk}
+    </a>
+  )}
+</div>
 
-              <a
-                href={app.apk}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
-              >
-                <FaDownload />
-                {t.apk}
-              </a>
-
-            </div>
-
-          </div>
+</div>
 
           {/* Hover Glow */}
 

@@ -13,6 +13,7 @@ const apps = [
     image: "/projects/worldclock.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock",
+    apk: "http://147.93.110.58:8080/WorldClock.apk",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const apps = [
     image: "/projects/fileconverter.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
+    apk: "http://147.93.110.58:8080/FileConverter.apk",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const apps = [
     image: "/projects/filerenamer.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
+    apk: "http://147.93.110.58:8080/BulkFileRenamer.apk",
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ const apps = [
     image: "/projects/webcodshop.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
+    apk: null,
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ const apps = [
     image: "/projects/invoicemaker.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator",
+    apk: "http://147.93.110.58:8080/InvoiceMaker.apk",
   },
   {
     id: 6,
@@ -88,6 +93,7 @@ const apps = [
     image: "/projects/cgpacalculator.jpg",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator",
+    apk: "http://147.93.110.58:8080/CGPASGPACalculator.apk",
   },
   {
     id: 7,
@@ -103,6 +109,7 @@ const apps = [
     image: "/projects/image-compressor.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
+    apk: null,
   },
   {
     id: 8,
@@ -118,6 +125,7 @@ const apps = [
     image: "/projects/img2pdf copy.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter",
+    apk: "http://147.93.110.58:8080/ImageToPDFConverter.apk",
   },
   {
     id: 9,
@@ -133,6 +141,7 @@ const apps = [
     image: "/projects/pdf_lock_unlock.jpeg",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
+    apk: "http://147.93.110.58:8080/PDFLockUnlock.apk",
   },
 ];
 
