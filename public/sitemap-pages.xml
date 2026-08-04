@@ -141,11 +141,21 @@
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://chtechgiant.com/apps</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+      <loc>https://chtechgiant.com/zh/apps</loc>
+      <priority>0.9</priority>
+  </url>
+
 
   <!-- Web Development SEO Pages -->
 
   <url>
-    <loc>https://chtechgiant.com/web-development-davangere</loc>
+    <loc>https://chtechgiant.com/web-development-davanagere</loc>
     <priority>0.8</priority>
   </url>
 
