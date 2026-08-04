@@ -39,7 +39,7 @@ import MobileAppDevelopment from "./pages/services/app-development/MobileAppDeve
 import SchoolERPSystem from "./pages/services/software-development/SchoolERPSystem";
 import HospitalManagementSystem from "./pages/services/software-development/HospitalMangementSystem";
 
-import WebDevelopmentDavangere from "./pages/services/web-development/SEO/WebDevelopmentDavangere";
+import WebDevelopmentDavanagere from "./pages/services/web-development/SEO/WebDevelopmentDavanagere";
 import WebDevelopmentMangalore from "./pages/services/web-development/SEO/WebDevelopmentMangalore";
 import WebDevelopmentMysore from "./pages/services/web-development/SEO/WebDevelopmentMysore";
 import WebDevelopmentShivamogga from "./pages/services/web-development/SEO/WebDevelopmentShivamogga";
@@ -197,8 +197,8 @@ function App() {
             />
 
             <Route
-              path="/web-development-davangere"
-              element={<WebDevelopmentDavangere />}
+              path="/web-development-davanagere"
+              element={<WebDevelopmentDavanagere />}
             />
 
             <Route
