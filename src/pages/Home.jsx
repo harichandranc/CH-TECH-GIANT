@@ -201,15 +201,24 @@ const Home = () => {
      LANGUAGE
   ======================================================= */
 
-  const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
+  const supportedLanguages = [
+    "zh",
+    "es",
+    "pt",
+    "de",
+    "ko",
+    "ja",
+  ];
 
-  const language =
-    supportedLanguages.includes(lang) ? lang : "en";
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
 
   const t = translations[language];
 
   const currentLanguage =
-    languages.find((item) => item.code === language) || languages[0];
+    languages.find((item) => item.code === language) ||
+    languages[0];
 
   /* =======================================================
      AUTO LANGUAGE DETECTION
@@ -359,10 +368,9 @@ const Home = () => {
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
 
-    const selected =
-      languages.find(
-        (item) => item.code === selectedLanguage
-      );
+    const selected = languages.find(
+      (item) => item.code === selectedLanguage
+    );
 
     if (selected) {
       navigate(selected.path);
@@ -531,11 +539,11 @@ const Home = () => {
             HEADER / LANGUAGE SWITCHER
         =================================================== */}
 
-        <section className="relative px-4 pt-6 sm:pt-8">
+        <section className="relative px-4 pt-0 sm:pt-0">
 
-          {/* MOBILE LANGUAGE DROPDOWN */}
+          {/* MOBILE + DESKTOP LANGUAGE DROPDOWN */}
 
-          <div className="absolute top-2 right-4 z-50 sm:hidden">
+          <div className="flex justify-end w-full relative z-50">
 
             <div className="relative">
 
@@ -543,7 +551,7 @@ const Home = () => {
                 value={language}
                 onChange={handleLanguageChange}
                 aria-label="Select language"
-                className="appearance-none bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-xs font-medium rounded-xl pl-3 pr-9 py-2.5 outline-none cursor-pointer shadow-lg"
+                className="appearance-none bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-xs sm:text-sm font-medium rounded-xl pl-3 pr-9 py-2.5 outline-none cursor-pointer shadow-lg transition"
               >
                 {languages.map((item) => (
                   <option
@@ -559,26 +567,6 @@ const Home = () => {
               <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
 
             </div>
-
-          </div>
-
-          {/* DESKTOP LANGUAGE BUTTONS */}
-
-          <div className="hidden sm:flex justify-center gap-3 flex-wrap">
-
-            {languages.map((item) => (
-              <Link
-                key={item.code}
-                to={item.path}
-                className={`px-5 py-2 rounded-full border transition ${
-                  language === item.code
-                    ? "bg-cyan-500 text-black border-cyan-500"
-                    : "border-white/20 hover:border-cyan-500"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
 
           </div>
 
