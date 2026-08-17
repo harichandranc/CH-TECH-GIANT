@@ -234,6 +234,13 @@ const Apps = () => {
           href="https://chtechgiant.com/pt/apps"
         />
 
+        {/* German */}
+        <link
+          rel="alternate"
+          hrefLang="de"
+          href="https://chtechgiant.com/de/apps"
+        />
+
         {/* Korean */}
         <link
           rel="alternate"
