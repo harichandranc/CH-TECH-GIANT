@@ -436,7 +436,7 @@ const Apps = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-2 md:mt-8"
+            className="text-center mt-2 md:mt-6"
           >
 
             <span className="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mb-6">
