@@ -17,7 +17,11 @@ const Apps = () => {
   const { lang } = useParams();
 
   const language =
-    lang === "zh" || lang === "es"
+    lang === "zh" ||
+    lang === "es" ||
+    lang === "pt" ||
+    lang === "de" ||
+    lang === "ko"
       ? lang
       : "en";
 
@@ -39,6 +43,18 @@ const Apps = () => {
       });
     } else if (browserLanguage.startsWith("es")) {
       navigate("/es/apps", {
+        replace: true,
+      });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt/apps", {
+        replace: true,
+      });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de/apps", {
+        replace: true,
+      });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko/apps", {
         replace: true,
       });
     }
@@ -72,6 +88,12 @@ const Apps = () => {
       ? "https://chtechgiant.com/zh/apps"
       : language === "es"
       ? "https://chtechgiant.com/es/apps"
+      : language === "pt"
+      ? "https://chtechgiant.com/pt/apps"
+      : language === "de"
+      ? "https://chtechgiant.com/de/apps"
+      : language === "ko"
+      ? "https://chtechgiant.com/ko/apps"
       : "https://chtechgiant.com/apps";
 
   const pageTitle =
@@ -79,6 +101,12 @@ const Apps = () => {
       ? "CH TECH GIANT 官方 Android 应用下载"
       : language === "es"
       ? "Descargar aplicaciones Android oficiales de CH TECH GIANT"
+      : language === "pt"
+      ? "Baixar aplicativos Android oficiais da CH TECH GIANT"
+      : language === "de"
+      ? "Offizielle Android-Apps von CH TECH GIANT herunterladen"
+      : language === "ko"
+      ? "CH TECH GIANT 공식 Android 앱 다운로드"
       : "CH TECH GIANT Android Apps";
 
   const pageDescription =
@@ -86,6 +114,12 @@ const Apps = () => {
       ? "下载 CH TECH GIANT 官方 Android 应用，包括 PDF 工具、文件转换器、办公软件、教育应用和更多免费 Android 应用。"
       : language === "es"
       ? "Descarga las aplicaciones Android oficiales de CH TECH GIANT, incluyendo herramientas PDF, convertidores de archivos, aplicaciones de productividad y mucho más."
+      : language === "pt"
+      ? "Baixe os aplicativos Android oficiais da CH TECH GIANT, incluindo ferramentas PDF, conversores de arquivos, aplicativos de produtividade e muito mais."
+      : language === "de"
+      ? "Laden Sie die offiziellen Android-Apps von CH TECH GIANT herunter, darunter PDF-Tools, Dateikonverter, Produktivitäts-Apps und vieles mehr."
+      : language === "ko"
+      ? "PDF 도구, 파일 변환기, 생산성 앱 등을 포함한 CH TECH GIANT의 공식 Android 앱을 다운로드하세요."
       : "Download official Android apps from CH TECH GIANT including PDF tools, file converters, invoice maker, productivity apps and more.";
 
   const keywords =
@@ -93,6 +127,12 @@ const Apps = () => {
       ? "Android应用, PDF工具, PDF转换器, 文件转换器, 免费应用"
       : language === "es"
       ? "aplicaciones Android, herramientas PDF, convertidor PDF, convertidor de archivos, aplicaciones gratuitas"
+      : language === "pt"
+      ? "aplicativos Android, ferramentas PDF, conversor PDF, conversor de arquivos, aplicativos gratuitos"
+      : language === "de"
+      ? "Android Apps, PDF Tools, PDF Konverter, Dateikonverter, kostenlose Apps"
+      : language === "ko"
+      ? "Android 앱, PDF 도구, PDF 변환기, 파일 변환기, 무료 앱, 생산성 앱"
       : "Android Apps, PDF Converter, File Converter, Invoice Maker, Productivity Apps";
 
   const ogLocale =
@@ -100,6 +140,12 @@ const Apps = () => {
       ? "zh_CN"
       : language === "es"
       ? "es_ES"
+      : language === "pt"
+      ? "pt_BR"
+      : language === "de"
+      ? "de_DE"
+      : language === "ko"
+      ? "ko_KR"
       : "en_US";
 
   const schemaLanguage =
@@ -107,6 +153,12 @@ const Apps = () => {
       ? "zh-CN"
       : language === "es"
       ? "es"
+      : language === "pt"
+      ? "pt-BR"
+      : language === "de"
+      ? "de"
+      : language === "ko"
+      ? "ko-KR"
       : "en";
 
   return (
@@ -152,6 +204,20 @@ const Apps = () => {
           rel="alternate"
           hrefLang="es"
           href="https://chtechgiant.com/es/apps"
+        />
+
+        {/* Portuguese */}
+        <link
+          rel="alternate"
+          hrefLang="pt-BR"
+          href="https://chtechgiant.com/pt/apps"
+        />
+
+        {/* Korean */}
+        <link
+          rel="alternate"
+          hrefLang="ko-KR"
+          href="https://chtechgiant.com/ko/apps"
         />
 
         {/* Default */}
@@ -257,6 +323,38 @@ const Apps = () => {
               }`}
             >
               🇪🇸 Español
+            </Link>
+
+            <Link
+              to="/pt/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "pt"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇧🇷 Português
+            </Link>
+
+            <Link
+              to="/de/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "de"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇩🇪 Deutsch
+            </Link>
+            <Link
+              to="/ko/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "ko"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇰🇷 한국어
             </Link>
 
           </div>
