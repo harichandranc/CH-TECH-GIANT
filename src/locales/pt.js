@@ -136,6 +136,63 @@ const pt = {
         "Aplicativo Marketplace com templates de sites premium, códigos-fonte e projetos universitários com relatórios.",
     },
   },
+
+  // =========================
+  // SERVICES PAGE
+  // =========================
+
+  ourServices: "Nossos Serviços",
+
+  whatWe: "O Que",
+
+  provide: "Oferecemos",
+
+  servicesDescription:
+    "A CH TECH GIANT oferece soluções de software premium, aplicativos modernos, sites futuristas e experiências digitais escaláveis para empresas.",
+
+  serviceData: {
+    appDevelopment: {
+      title: "Desenvolvimento de aplicativos",
+      description:
+        "Desenvolvimento de aplicativos móveis Android e multiplataforma com UI premium e desempenho suave.",
+    },
+
+    softwareDevelopment: {
+      title: "Desenvolvimento de software",
+      description:
+        "Soluções personalizadas de software para desktop e sistemas empresariais.",
+    },
+
+    webDevelopment: {
+      title: "Desenvolvimento web",
+      description:
+        "Sites modernos e responsivos e aplicações web escaláveis.",
+    },
+
+    gameDevelopment: {
+      title: "Desenvolvimento de jogos",
+      description:
+        "Experiências interativas de jogos 2D e 3D com jogabilidade imersiva.",
+    },
+
+    itConsulting: {
+      title: "Consultoria de TI",
+      description:
+        "Consultoria profissional em tecnologia e soluções de transformação digital para empresas.",
+    },
+
+    pamphletDesign: {
+      title: "Design de panfletos",
+      description:
+        "Panfletos e flyers modernos e futuristas com modelos premium.",
+    },
+
+    invoiceDesign: {
+      title: "Design de faturas",
+      description:
+        "Modelos de faturas modernos e futuristas com designs premium.",
+    },
+  },
 };
 
 export default pt;

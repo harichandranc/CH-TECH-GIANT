@@ -135,6 +135,63 @@ const ko = {
         "프리미엄 웹사이트 템플릿, 소스 코드 및 보고서가 포함된 대학 프로젝트를 제공하는 Marketplace 앱입니다.",
     },
   },
+
+  // =========================
+  // SERVICES PAGE
+  // =========================
+
+  ourServices: "서비스",
+
+  whatWe: "우리가",
+
+  provide: "제공하는 것",
+
+  servicesDescription:
+    "CH TECH GIANT는 기업을 위한 프리미엄 소프트웨어 솔루션, 최신 애플리케이션, 미래지향적인 웹사이트 및 확장 가능한 디지털 경험을 제공합니다.",
+
+  serviceData: {
+    appDevelopment: {
+      title: "앱 개발",
+      description:
+        "프리미엄 UI와 원활한 성능을 갖춘 Android 및 크로스 플랫폼 모바일 앱을 개발합니다.",
+    },
+
+    softwareDevelopment: {
+      title: "소프트웨어 개발",
+      description:
+        "맞춤형 데스크톱 소프트웨어 및 기업용 소프트웨어 솔루션을 제공합니다.",
+    },
+
+    webDevelopment: {
+      title: "웹 개발",
+      description:
+        "현대적이고 반응형인 웹사이트와 확장 가능한 웹 애플리케이션을 개발합니다.",
+    },
+
+    gameDevelopment: {
+      title: "게임 개발",
+      description:
+        "몰입감 있는 게임플레이를 제공하는 인터랙티브 2D 및 3D 게임을 개발합니다.",
+    },
+
+    itConsulting: {
+      title: "IT 컨설팅",
+      description:
+        "전문적인 기술 컨설팅 및 기업의 디지털 전환을 위한 솔루션을 제공합니다.",
+    },
+
+    pamphletDesign: {
+      title: "팸플릿 디자인",
+      description:
+        "프리미엄 템플릿을 활용한 현대적이고 미래지향적인 팸플릿과 전단지를 디자인합니다.",
+    },
+
+    invoiceDesign: {
+      title: "송장 디자인",
+      description:
+        "프리미엄 디자인을 적용한 현대적이고 미래지향적인 송장 템플릿을 제공합니다.",
+    },
+  },
 };
 
 export default ko;

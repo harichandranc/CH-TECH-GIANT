@@ -135,6 +135,63 @@ const ja = {
         "プレミアムWebサイトテンプレート、ソースコード、レポート付き大学プロジェクトを提供するMarketplaceアプリです。",
     },
   },
+
+  // =========================
+  // SERVICES PAGE
+  // =========================
+
+  ourServices: "サービス",
+
+  whatWe: "私たちが",
+
+  provide: "提供するもの",
+
+  servicesDescription:
+    "CH TECH GIANTは、企業向けにプレミアムなソフトウェアソリューション、最新のアプリケーション、未来的なWebサイト、拡張可能なデジタル体験を提供しています。",
+
+  serviceData: {
+    appDevelopment: {
+      title: "アプリ開発",
+      description:
+        "プレミアムなUIとスムーズなパフォーマンスを備えたAndroidおよびクロスプラットフォームのモバイルアプリを開発します。",
+    },
+
+    softwareDevelopment: {
+      title: "ソフトウェア開発",
+      description:
+        "カスタムデスクトップソフトウェアおよび企業向けソフトウェアソリューションを提供します。",
+    },
+
+    webDevelopment: {
+      title: "Web開発",
+      description:
+        "最新のレスポンシブWebサイトと拡張可能なWebアプリケーションを開発します。",
+    },
+
+    gameDevelopment: {
+      title: "ゲーム開発",
+      description:
+        "没入感のあるゲームプレイを実現するインタラクティブな2Dおよび3Dゲームを開発します。",
+    },
+
+    itConsulting: {
+      title: "ITコンサルティング",
+      description:
+        "専門的なITコンサルティングと、企業のデジタルトランスフォーメーションを支援するソリューションを提供します。",
+    },
+
+    pamphletDesign: {
+      title: "パンフレットデザイン",
+      description:
+        "プレミアムなテンプレートを使用した、モダンで未来的なパンフレットやチラシをデザインします。",
+    },
+
+    invoiceDesign: {
+      title: "請求書デザイン",
+      description:
+        "プレミアムなデザインを採用した、モダンで未来的な請求書テンプレートを提供します。",
+    },
+  },
 };
 
 export default ja;

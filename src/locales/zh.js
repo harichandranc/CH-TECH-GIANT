@@ -131,6 +131,63 @@ const zh = {
         "提供高品质网站模板、源代码以及带报告的大学项目的 Marketplace 应用。",
     },
   },
+
+    // =========================
+  // SERVICES PAGE
+  // =========================
+
+  ourServices: "我们的服务",
+
+  whatWe: "我们",
+
+  provide: "提供",
+
+  servicesDescription:
+    "CH TECH GIANT 为企业提供高品质的软件解决方案、现代化应用程序、未来感网站以及可扩展的数字体验。",
+
+  serviceData: {
+    appDevelopment: {
+      title: "应用开发",
+      description:
+        "提供具有高品质用户界面和流畅性能的 Android 及跨平台移动应用开发服务。",
+    },
+
+    softwareDevelopment: {
+      title: "软件开发",
+      description:
+        "提供定制桌面软件和企业级软件开发解决方案。",
+    },
+
+    webDevelopment: {
+      title: "网站开发",
+      description:
+        "提供现代化响应式网站和可扩展的 Web 应用程序开发服务。",
+    },
+
+    gameDevelopment: {
+      title: "游戏开发",
+      description:
+        "打造具有沉浸式游戏体验的互动式 2D 和 3D 游戏。",
+    },
+
+    itConsulting: {
+      title: "IT 咨询",
+      description:
+        "提供专业的技术咨询以及企业数字化转型解决方案。",
+    },
+
+    pamphletDesign: {
+      title: "宣传册设计",
+      description:
+        "提供现代未来感宣传册和传单设计，并配备高品质模板。",
+    },
+
+    invoiceDesign: {
+      title: "发票设计",
+      description:
+        "提供现代未来感发票模板和高品质发票设计。",
+    },
+  },
 };
 
 export default zh;

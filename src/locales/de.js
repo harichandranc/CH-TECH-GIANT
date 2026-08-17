@@ -136,6 +136,63 @@ const de = {
         "Marketplace-App mit hochwertigen Website-Vorlagen, Quellcodes und Hochschulprojekten mit Berichten.",
     },
   },
+
+  // =========================
+  // SERVICES PAGE
+  // =========================
+
+  ourServices: "Unsere Services",
+
+  whatWe: "Was wir",
+
+  provide: "anbieten",
+
+  servicesDescription:
+    "CH TECH GIANT bietet hochwertige Softwarelösungen, moderne Anwendungen, futuristische Websites und skalierbare digitale Erlebnisse für Unternehmen.",
+
+  serviceData: {
+    appDevelopment: {
+      title: "App-Entwicklung",
+      description:
+        "Entwicklung von Android- und plattformübergreifenden mobilen Apps mit hochwertiger Benutzeroberfläche und flüssiger Performance.",
+    },
+
+    softwareDevelopment: {
+      title: "Softwareentwicklung",
+      description:
+        "Individuelle Desktop-Software und Lösungen für Unternehmen.",
+    },
+
+    webDevelopment: {
+      title: "Webentwicklung",
+      description:
+        "Moderne responsive Websites und skalierbare Webanwendungen.",
+    },
+
+    gameDevelopment: {
+      title: "Spieleentwicklung",
+      description:
+        "Interaktive 2D- und 3D-Spiele mit immersivem Spielerlebnis.",
+    },
+
+    itConsulting: {
+      title: "IT-Beratung",
+      description:
+        "Professionelle Technologieberatung und Lösungen für die digitale Transformation von Unternehmen.",
+    },
+
+    pamphletDesign: {
+      title: "Flyer- und Broschürendesign",
+      description:
+        "Moderne futuristische Broschüren und Flyer mit hochwertigen Vorlagen.",
+    },
+
+    invoiceDesign: {
+      title: "Rechnungsdesign",
+      description:
+        "Moderne futuristische Rechnungsvorlagen mit hochwertigen Designs.",
+    },
+  },
 };
 
 export default de;

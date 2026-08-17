@@ -10,41 +10,73 @@ const services = [
     image: "/services/app.webp",
     link: "/app-development",
   },
-
   {
     key: "softwareDevelopment",
     image: "/services/software.jpg",
     link: "/software-development",
   },
-
   {
     key: "webDevelopment",
     image: "/services/web.jpg",
     link: "/web-development",
   },
-
   {
     key: "gameDevelopment",
     image: "/services/game.jpeg",
     link: "/game-development",
   },
-
   {
     key: "itConsulting",
     image: "/services/itconsult.jpg",
     link: "/it-consulting",
   },
-
   {
     key: "pamphletDesign",
     image: "/services/pamphlet.png",
     link: "/pamphlet-design",
   },
-
   {
     key: "invoiceDesign",
     image: "/services/invoice.png",
     link: "/invoice-design",
+  },
+];
+
+const languages = [
+  {
+    code: "en",
+    path: "/services",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh/services",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es/services",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/services",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de/services",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/services",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/services",
+    label: "🇯🇵 日本語",
   },
 ];
 
@@ -61,11 +93,16 @@ const Services = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
 
-  const language = supportedLanguages.includes(lang) ? lang : "en";
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
 
   const t = translations[language];
 
-  // Automatically detect browser language on the base /services URL
+  /* =====================================================
+     AUTO LANGUAGE DETECTION
+  ===================================================== */
+
   useEffect(() => {
     if (lang) return;
 
@@ -83,8 +120,14 @@ const Services = () => {
       navigate("/ko/services", { replace: true });
     } else if (browserLanguage.startsWith("ja")) {
       navigate("/ja/services", { replace: true });
+    } else {
+      navigate("/services", { replace: true });
     }
   }, [lang, navigate]);
+
+  /* =====================================================
+     LOCALIZED SERVICE PATH
+  ===================================================== */
 
   const getLocalizedPath = (path) => {
     if (language === "en") {
@@ -99,7 +142,76 @@ const Services = () => {
 
       <div className="max-w-7xl mx-auto">
 
-        {/* HEADER */}
+        {/* =================================================
+            LANGUAGE SWITCHER
+            Desktop = Buttons
+            Mobile = Dropdown
+        ================================================= */}
+
+        <div className="flex justify-center mb-16">
+
+          {/* MOBILE DROPDOWN */}
+          <div className="block md:hidden w-full max-w-xs">
+
+            <label
+              htmlFor="mobile-language"
+              className="sr-only"
+            >
+              Language
+            </label>
+
+            <select
+              id="mobile-language"
+              value={language}
+              onChange={(e) => {
+                const selectedLanguage = languages.find(
+                  (item) => item.code === e.target.value
+                );
+
+                if (selectedLanguage) {
+                  navigate(selectedLanguage.path);
+                }
+              }}
+              className="w-full h-12 rounded-xl border border-white/20 bg-[#050816] px-4 text-white outline-none focus:border-cyan-400 transition cursor-pointer"
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-[#050816] text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+
+          </div>
+
+          {/* DESKTOP LANGUAGE BUTTONS */}
+          <div className="hidden md:flex justify-center gap-3 flex-wrap">
+
+            {languages.map((item) => (
+              <Link
+                key={item.code}
+                to={item.path}
+                className={`px-5 py-2 rounded-full border transition ${
+                  language === item.code
+                    ? "bg-cyan-500 text-black border-cyan-500"
+                    : "border-white/20 hover:border-cyan-500"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* =================================================
+            HEADER
+        ================================================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,11 +224,15 @@ const Services = () => {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-black mb-6">
+
             {t.whatWe}
+
             {" "}
+
             <span className="text-cyan-400">
               {t.provide}
             </span>
+
           </h1>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -125,11 +241,16 @@ const Services = () => {
 
         </motion.div>
 
-        {/* SERVICES GRID */}
+        {/* =================================================
+            SERVICES GRID
+        ================================================= */}
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => {
-            const serviceData = t.serviceData[service.key];
+
+            const serviceData =
+              t.serviceData[service.key];
 
             return (
               <Link
@@ -139,8 +260,14 @@ const Services = () => {
               >
 
                 <motion.div
-                  initial={{ opacity: 0, y: 60 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{
+                    opacity: 0,
+                    y: 60,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
                   transition={{
                     duration: 0.6,
                     delay: index * 0.1,
@@ -152,6 +279,7 @@ const Services = () => {
                 >
 
                   {/* IMAGE */}
+
                   <div className="relative h-72 overflow-hidden">
 
                     <img
@@ -161,12 +289,14 @@ const Services = () => {
                     />
 
                     {/* OVERLAY */}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
                     </div>
 
                   </div>
 
                   {/* CONTENT */}
+
                   <div className="relative p-8 -mt-20 z-10">
 
                     <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl p-6">
@@ -184,6 +314,7 @@ const Services = () => {
                   </div>
 
                   {/* GLOW EFFECT */}
+
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500">
                   </div>
 
