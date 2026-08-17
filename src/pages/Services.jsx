@@ -152,32 +152,33 @@ const Services = () => {
 
           {/* MOBILE LANGUAGE DROPDOWN */}
 
-          <div className="md:hidden flex justify-center w-full relative z-50">
-            <select
-              id="mobile-language"
-              value={language}
-              onChange={(e) => {
-                const selectedLanguage = languages.find(
-                  (item) => item.code === e.target.value
-                );
+          {/* MOBILE LANGUAGE DROPDOWN */}
+<div className="md:hidden fixed top-4 right-4 z-50">
+  <select
+    id="mobile-language"
+    value={language}
+    onChange={(e) => {
+      const selectedLanguage = languages.find(
+        (item) => item.code === e.target.value
+      );
 
-                if (selectedLanguage) {
-                  navigate(selectedLanguage.path);
-                }
-              }}
-              className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
-            >
-              {languages.map((item) => (
-                <option
-                  key={item.code}
-                  value={item.code}
-                  className="bg-[#050816] text-white"
-                >
-                  {item.label}
-                </option>
-              ))}
-            </select>
-          </div>
+      if (selectedLanguage) {
+        navigate(selectedLanguage.path);
+      }
+    }}
+    className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816]/95 px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+  >
+    {languages.map((item) => (
+      <option
+        key={item.code}
+        value={item.code}
+        className="bg-[#050816] text-white"
+      >
+        {item.label}
+      </option>
+    ))}
+  </select>
+</div>
 
           {/* DESKTOP LANGUAGE BUTTONS */}
 
