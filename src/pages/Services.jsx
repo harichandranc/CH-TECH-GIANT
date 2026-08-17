@@ -148,11 +148,11 @@ const Services = () => {
             Mobile = Dropdown
         ================================================= */}
 
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-2 md:mb-16">
 
-          {/* MOBILE DROPDOWN */}
           {/* MOBILE LANGUAGE DROPDOWN */}
-          <div className="absolute top-4 right-4 z-30 md:hidden">
+
+          <div className="md:hidden flex justify-center w-full relative z-50">
             <select
               id="mobile-language"
               value={language}
@@ -165,7 +165,7 @@ const Services = () => {
                   navigate(selectedLanguage.path);
                 }
               }}
-              className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816]/90 px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+              className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
             >
               {languages.map((item) => (
                 <option
@@ -180,8 +180,8 @@ const Services = () => {
           </div>
 
           {/* DESKTOP LANGUAGE BUTTONS */}
-          <div className="hidden md:flex justify-center gap-3 flex-wrap">
 
+          <div className="hidden md:flex justify-center gap-3 flex-wrap">
             {languages.map((item) => (
               <Link
                 key={item.code}
@@ -195,7 +195,6 @@ const Services = () => {
                 {item.label}
               </Link>
             ))}
-
           </div>
 
         </div>
