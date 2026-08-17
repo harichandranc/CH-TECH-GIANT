@@ -138,7 +138,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-10 overflow-hidden">
+    <div className="min-h-screen bg-black text-white px-6 py-6 overflow-hidden">
 
       <div className="max-w-7xl mx-auto">
 
@@ -181,7 +181,7 @@ const Services = () => {
 
           {/* DESKTOP LANGUAGE BUTTONS */}
 
-          <div className="hidden md:flex justify-center gap-3 flex-wrap">
+          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-6">
             {languages.map((item) => (
               <Link
                 key={item.code}
