@@ -181,7 +181,7 @@ const Services = () => {
 
           {/* DESKTOP LANGUAGE BUTTONS */}
 
-          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-6">
+          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
             {languages.map((item) => (
               <Link
                 key={item.code}
