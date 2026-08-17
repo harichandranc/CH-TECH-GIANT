@@ -1,4 +1,8 @@
 const ko = {
+  // =========================
+  // APPS PAGE
+  // =========================
+
   officialApps: "CH TECH GIANT 공식 앱",
 
   heroTitle1: "저희의",
@@ -35,6 +39,102 @@ const ko = {
 
   moreAppsDesc:
     "저희는 강력한 Android 애플리케이션, 생산성 도구, 비즈니스 소프트웨어 및 유틸리티 앱을 지속적으로 개발하고 있습니다.",
+
+  // =========================
+  // HOME PAGE
+  // =========================
+
+  homeHeroTitle1: "프리미엄",
+
+  homeHeroTitle2: "디지털 솔루션 구축",
+
+  homeHeroDescription:
+    "스타트업, 기업 및 조직을 위해 프리미엄 웹사이트, 모바일 앱, 소프트웨어 시스템, 창의적인 디자인 및 확장 가능한 디지털 솔루션을 개발합니다.",
+
+  exploreServices: "서비스 살펴보기",
+
+  contactUs: "문의하기",
+
+  // Services
+
+  ourExpertise: "전문 분야",
+
+  servicesWeProvide: "제공 서비스",
+
+  services: {
+    webDevelopment: {
+      title: "웹 개발",
+      description:
+        "현대적이고 반응형인 웹사이트 및 확장 가능한 웹 애플리케이션.",
+    },
+
+    appDevelopment: {
+      title: "앱 개발",
+      description:
+        "기업을 위한 프리미엄 Android 및 iOS 모바일 앱 솔루션.",
+    },
+
+    softwareDevelopment: {
+      title: "소프트웨어 개발",
+      description:
+        "맞춤형 소프트웨어 시스템 및 기업용 솔루션.",
+    },
+
+    gameDevelopment: {
+      title: "게임 개발",
+      description:
+        "인터랙티브한 2D 및 3D 게임 개발 경험.",
+    },
+  },
+
+  // Industries
+
+  industries: "산업 분야",
+
+  industriesWeServe: "서비스 제공 산업",
+
+  industriesList: {
+    healthcare: "의료",
+    education: "교육",
+    ecommerce: "전자상거래",
+    corporate: "기업",
+    restaurants: "레스토랑",
+    mediaNews: "미디어 및 뉴스",
+  },
+
+  // Technologies
+
+  technologies: "기술",
+
+  technologiesWeUse: "사용 기술",
+
+  // Latest Apps
+
+  latestApps: "최신 앱",
+
+  publishedPlayStoreApps: "Play 스토어에 출시된 앱",
+
+  googlePlayStore: "Google Play 스토어",
+
+  latestAppsData: {
+    fileConverter: {
+      title: "File Converter",
+      description:
+        "PDF, 이미지, 오디오, 비디오 및 텍스트 도구를 포함한 올인원 파일 변환 도구입니다.",
+    },
+
+    fileRenamer: {
+      title: "File Renamer",
+      description:
+        "최신 자동화 기능을 제공하는 대량 파일 이름 변경 및 파일 정리 유틸리티입니다.",
+    },
+
+    webCodshop: {
+      title: "Web Codshop",
+      description:
+        "프리미엄 웹사이트 템플릿, 소스 코드 및 보고서가 포함된 대학 프로젝트를 제공하는 Marketplace 앱입니다.",
+    },
+  },
 };
 
 export default ko;

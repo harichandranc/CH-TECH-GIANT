@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import {
   FaArrowRight,
@@ -26,157 +27,415 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
+import { translations } from "../locales";
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
 const services = [
   {
     icon: <FaCode />,
-    title: "Web Development",
-    description:
-      "Modern responsive websites and scalable web applications.",
+    key: "webDevelopment",
   },
-
   {
     icon: <FaMobileAlt />,
-    title: "App Development",
-    description:
-      "Premium Android & iOS mobile app solutions for businesses.",
+    key: "appDevelopment",
   },
-
   {
     icon: <FaLaptopCode />,
-    title: "Software Development",
-    description:
-      "Custom software systems and enterprise-grade solutions.",
+    key: "softwareDevelopment",
   },
-
   {
     icon: <FaGamepad />,
-    title: "Game Development",
-    description:
-      "Interactive 2D & 3D game development experiences.",
+    key: "gameDevelopment",
   },
 ];
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
 
 const industries = [
   {
     icon: <FaHospital />,
-    title: "Healthcare",
+    key: "healthcare",
   },
-
   {
     icon: <FaGraduationCap />,
-    title: "Education",
+    key: "education",
   },
-
   {
     icon: <FaShoppingCart />,
-    title: "E-Commerce",
+    key: "ecommerce",
   },
-
   {
     icon: <FaBuilding />,
-    title: "Corporate",
+    key: "corporate",
   },
-
   {
     icon: <FaUtensils />,
-    title: "Restaurants",
+    key: "restaurants",
   },
-
   {
     icon: <FaNewspaper />,
-    title: "Media & News",
+    key: "mediaNews",
   },
 ];
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
 
 const technologies = [
   {
     icon: <FaReact />,
     title: "React",
   },
-
   {
     icon: <SiFlutter />,
     title: "Flutter",
   },
-
   {
     icon: <FaNodeJs />,
     title: "Node.js",
   },
-
   {
     icon: <SiFirebase />,
     title: "Firebase",
   },
-
   {
     icon: <SiMongodb />,
     title: "MongoDB",
   },
-
   {
     icon: <SiTailwindcss />,
     title: "Tailwind CSS",
   },
 ];
 
+/* =========================================================
+   LATEST APPS
+========================================================= */
+
 const latestApps = [
   {
-    title: "File Converter",
-    description:
-      "All-in-one file conversion toolkit with PDF, image, audio, video, and text tools.",
+    key: "fileConverter",
     image: "/projects/fileconverter.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
+    link:
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
   },
 
   {
-    title: "File Renamer",
-    description:
-      "Bulk file renaming and file cleaning utility with modern automation tools.",
+    key: "fileRenamer",
     image: "/projects/filerenamer.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
+    link:
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
   },
 
   {
-    title: "Web Codshop",
-    description:
-      "premium website templates, source codes, and college projects with reports Marketplace app.",
+    key: "webCodshop",
     image: "/projects/webcodshop.png",
-    link: "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
+    link:
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
   },
-
 ];
 
+/* =========================================================
+   LANGUAGE LIST
+========================================================= */
+
+const languages = [
+  {
+    code: "en",
+    path: "/",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja",
+    label: "🇯🇵 日本語",
+  },
+];
+
+/* =========================================================
+   HOME COMPONENT
+========================================================= */
+
 const Home = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  /* =======================================================
+     LANGUAGE
+  ======================================================= */
+
+  const language =
+    lang === "zh" ||
+    lang === "es" ||
+    lang === "pt" ||
+    lang === "de" ||
+    lang === "ko" ||
+    lang === "ja"
+      ? lang
+      : "en";
+
+  const t = translations[language];
+
+  /* =======================================================
+     AUTO LANGUAGE DETECTION
+  ======================================================= */
+
+  useEffect(() => {
+    if (lang) return;
+
+    const browserLanguage = navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh", { replace: true });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es", { replace: true });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt", { replace: true });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de", { replace: true });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko", { replace: true });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja", { replace: true });
+    } else {
+      navigate("/", { replace: true });
+    }
+  }, [lang, navigate]);
+
+  /* =======================================================
+     SEO
+  ======================================================= */
+
+  const pageUrl =
+    language === "zh"
+      ? "https://chtechgiant.com/zh"
+      : language === "es"
+      ? "https://chtechgiant.com/es"
+      : language === "pt"
+      ? "https://chtechgiant.com/pt"
+      : language === "de"
+      ? "https://chtechgiant.com/de"
+      : language === "ko"
+      ? "https://chtechgiant.com/ko"
+      : language === "ja"
+      ? "https://chtechgiant.com/ja"
+      : "https://chtechgiant.com";
+
+  const pageTitle =
+    language === "zh"
+      ? "CH TECH GIANT | 应用开发、网站开发、软件开发和游戏开发"
+      : language === "es"
+      ? "CH TECH GIANT | Desarrollo de aplicaciones, sitios web, software y juegos"
+      : language === "pt"
+      ? "CH TECH GIANT | Desenvolvimento de aplicativos, sites, software e jogos"
+      : language === "de"
+      ? "CH TECH GIANT | App-, Web-, Software- und Spieleentwicklung"
+      : language === "ko"
+      ? "CH TECH GIANT | 앱 개발, 웹 개발, 소프트웨어 및 게임 개발"
+      : language === "ja"
+      ? "CH TECH GIANT | アプリ・Web・ソフトウェア・ゲーム開発"
+      : "CH TECH GIANT | App Development, Web Development, Game Development & Software Solutions";
+
+  const pageDescription =
+    language === "zh"
+      ? "CH TECH GIANT 为初创企业、企业和组织提供高品质的应用开发、网站开发、软件开发和游戏开发服务。"
+      : language === "es"
+      ? "CH TECH GIANT ofrece desarrollo profesional de aplicaciones, sitios web, software y juegos para startups, empresas y organizaciones."
+      : language === "pt"
+      ? "A CH TECH GIANT oferece desenvolvimento profissional de aplicativos, sites, software e jogos para startups, empresas e organizações."
+      : language === "de"
+      ? "CH TECH GIANT bietet professionelle Entwicklung von Apps, Websites, Software und Spielen für Startups, Unternehmen und Organisationen."
+      : language === "ko"
+      ? "CH TECH GIANT은 스타트업, 기업 및 조직을 위한 전문적인 앱, 웹사이트, 소프트웨어 및 게임 개발 서비스를 제공합니다."
+      : language === "ja"
+      ? "CH TECH GIANTは、スタートアップ、企業、組織向けに高品質なアプリ、Webサイト、ソフトウェア、ゲーム開発サービスを提供しています。"
+      : "CH TECH GIANT provides premium app development, web development, software development and game development services for startups, businesses, and enterprises.";
+
+  const keywords =
+    language === "zh"
+      ? "应用开发, 网站开发, 软件开发, 游戏开发, Flutter开发, Android应用, CH TECH GIANT"
+      : language === "es"
+      ? "desarrollo de aplicaciones, desarrollo web, desarrollo de software, desarrollo de juegos, Flutter, Android, CH TECH GIANT"
+      : language === "pt"
+      ? "desenvolvimento de aplicativos, desenvolvimento web, desenvolvimento de software, desenvolvimento de jogos, Flutter, Android, CH TECH GIANT"
+      : language === "de"
+      ? "App Entwicklung, Webentwicklung, Softwareentwicklung, Spieleentwicklung, Flutter, Android, CH TECH GIANT"
+      : language === "ko"
+      ? "앱 개발, 웹 개발, 소프트웨어 개발, 게임 개발, Flutter, Android 앱, CH TECH GIANT"
+      : language === "ja"
+      ? "アプリ開発, Web開発, ソフトウェア開発, ゲーム開発, Flutter, Androidアプリ, CH TECH GIANT"
+      : "app development, web development, software development, game development, Flutter app development, Android apps, CH TECH GIANT";
+
+  const ogLocale =
+    language === "zh"
+      ? "zh_CN"
+      : language === "es"
+      ? "es_ES"
+      : language === "pt"
+      ? "pt_BR"
+      : language === "de"
+      ? "de_DE"
+      : language === "ko"
+      ? "ko_KR"
+      : language === "ja"
+      ? "ja_JP"
+      : "en_US";
+
+  const schemaLanguage =
+    language === "zh"
+      ? "zh-CN"
+      : language === "es"
+      ? "es"
+      : language === "pt"
+      ? "pt-BR"
+      : language === "de"
+      ? "de"
+      : language === "ko"
+      ? "ko-KR"
+      : language === "ja"
+      ? "ja-JP"
+      : "en";
+
+  /* =======================================================
+     RENDER
+  ======================================================= */
+
   return (
     <>
-      {/* SEO */}
+      {/* =====================================================
+          SEO
+      ===================================================== */}
+
       <Helmet>
-        <title>
-          CH TECH GIANT | App Development, Web Development, Game Development &
-          Software Solutions
-        </title>
+        <html lang={language} />
+
+        <title>{pageTitle}</title>
 
         <meta
           name="description"
-          content="CH TECH GIANT provides premium app development, web development, software development and game development services for startups, businesses, and enterprises."
+          content={pageDescription}
         />
 
         <meta
           name="keywords"
-          content="app development company, web development company, software development company, flutter app development, game development company, CH TECH GIANT, Davanagere, Karanataka, India"
+          content={keywords}
         />
 
-        <meta name="author" content="CH TECH GIANT" />
+        <meta
+          name="author"
+          content="CH TECH GIANT"
+        />
+
+        <link
+          rel="canonical"
+          href={pageUrl}
+        />
+
+        {/* English */}
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://chtechgiant.com"
+        />
+
+        {/* Chinese */}
+        <link
+          rel="alternate"
+          hrefLang="zh-CN"
+          href="https://chtechgiant.com/zh"
+        />
+
+        {/* Spanish */}
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href="https://chtechgiant.com/es"
+        />
+
+        {/* Portuguese */}
+        <link
+          rel="alternate"
+          hrefLang="pt-BR"
+          href="https://chtechgiant.com/pt"
+        />
+
+        {/* German */}
+        <link
+          rel="alternate"
+          hrefLang="de"
+          href="https://chtechgiant.com/de"
+        />
+
+        {/* Korean */}
+        <link
+          rel="alternate"
+          hrefLang="ko-KR"
+          href="https://chtechgiant.com/ko"
+        />
+
+        {/* Japanese */}
+        <link
+          rel="alternate"
+          hrefLang="ja-JP"
+          href="https://chtechgiant.com/ja"
+        />
+
+        {/* Default */}
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://chtechgiant.com"
+        />
+
+        <meta
+          property="og:locale"
+          content={ogLocale}
+        />
+
+        <meta
+          property="og:type"
+          content="website"
+        />
 
         <meta
           property="og:title"
-          content="CH TECH GIANT | Premium Digital Solutions"
+          content={pageTitle}
         />
 
         <meta
           property="og:description"
-          content="Modern app development, websites, software systems, and scalable digital solutions."
+          content={pageDescription}
         />
 
         <meta
@@ -186,10 +445,8 @@ const Home = () => {
 
         <meta
           property="og:url"
-          content="https://chtechgiant.com"
+          content={pageUrl}
         />
-
-        <meta property="og:type" content="website" />
 
         <meta
           name="twitter:card"
@@ -198,12 +455,17 @@ const Home = () => {
 
         <meta
           name="twitter:title"
-          content="CH TECH GIANT"
+          content={pageTitle}
         />
 
         <meta
           name="twitter:description"
-          content="Premium digital development solutions."
+          content={pageDescription}
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://chtechgiant.com/preview.png"
         />
 
         <meta
@@ -211,16 +473,51 @@ const Home = () => {
           content="#050816"
         />
 
-        <link
-          rel="canonical"
-          href="https://chtechgiant.com"
-        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "CH TECH GIANT",
+            url: pageUrl,
+            description: pageDescription,
+            inLanguage: schemaLanguage,
+            publisher: {
+              "@type": "Organization",
+              name: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+            },
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white overflow-x-hidden">
 
-        {/* VIDEO SECTION */}
-        <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden">
+        {/* ===================================================
+            LANGUAGE SWITCHER
+        =================================================== */}
+
+        <section className="px-4 pt-8">
+          <div className="flex justify-center gap-3 flex-wrap">
+            {languages.map((item) => (
+              <Link
+                key={item.code}
+                to={item.path}
+                className={`px-5 py-2 rounded-full border transition ${
+                  language === item.code
+                    ? "bg-cyan-500 text-black border-cyan-500"
+                    : "border-white/20 hover:border-cyan-500"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ===================================================
+            VIDEO SECTION
+        =================================================== */}
+
+        <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden mt-8">
           <video
             autoPlay
             muted
@@ -239,7 +536,10 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/30"></div>
         </section>
 
-        {/* HERO CONTENT */}
+        {/* ===================================================
+            HERO CONTENT
+        =================================================== */}
+
         <section className="relative px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-14 sm:py-20 md:py-28 overflow-hidden">
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
@@ -263,10 +563,11 @@ const Home = () => {
                 transition={{ duration: 0.7 }}
                 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight"
               >
-                Building Premium
+                {t.homeHeroTitle1}
+
                 <span className="text-cyan-400">
                   {" "}
-                  Digital Solutions
+                  {t.homeHeroTitle2}
                 </span>
               </motion.h1>
 
@@ -279,10 +580,7 @@ const Home = () => {
                 }}
                 className="text-gray-400 text-base md:text-lg leading-relaxed mt-6 md:mt-8 max-w-2xl"
               >
-                We build premium websites, mobile apps,
-                software systems, creative designs, and
-                scalable digital solutions for startups,
-                businesses, and enterprises.
+                {t.homeHeroDescription}
               </motion.p>
 
               <motion.div
@@ -294,18 +592,20 @@ const Home = () => {
                 }}
                 className="flex flex-col sm:flex-row gap-4 md:gap-5 mt-8 md:mt-10"
               >
+
                 <Link to="/services">
                   <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
-                    Explore Services
+                    {t.exploreServices}
                   </button>
                 </Link>
 
                 <Link to="/contact">
                   <button className="w-full sm:w-auto px-8 py-4 rounded-2xl border border-white/20 hover:border-cyan-400 transition flex items-center justify-center gap-2 backdrop-blur-xl bg-white/5">
-                    Contact Us
+                    {t.contactUs}
                     <FaArrowRight />
                   </button>
                 </Link>
+
               </motion.div>
 
             </div>
@@ -314,7 +614,10 @@ const Home = () => {
 
         </section>
 
-        {/* SERVICES */}
+        {/* ===================================================
+            SERVICES
+        =================================================== */}
+
         <section className="px-6 md:px-12 lg:px-20 py-20 md:py-24">
 
           <motion.div
@@ -325,11 +628,11 @@ const Home = () => {
           >
 
             <p className="uppercase tracking-[5px] text-cyan-400 text-sm mb-4">
-              Our Expertise
+              {t.ourExpertise}
             </p>
 
             <h2 className="text-3xl md:text-5xl font-bold">
-              Services We Provide
+              {t.servicesWeProvide}
             </h2>
 
           </motion.div>
@@ -338,7 +641,7 @@ const Home = () => {
 
             {services.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.key}
                 initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08 }}
@@ -351,30 +654,79 @@ const Home = () => {
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                  {service.title}
+                  {t.services[service.key].title}
                 </h3>
 
                 <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                  {service.description}
+                  {t.services[service.key].description}
                 </p>
 
               </motion.div>
             ))}
+
           </div>
 
         </section>
 
-        {/* TECHNOLOGIES */}
+        {/* ===================================================
+            INDUSTRIES
+        =================================================== */}
+
         <section className="px-6 md:px-12 lg:px-20 py-20 md:py-24">
 
           <div className="text-center max-w-3xl mx-auto">
 
             <p className="uppercase tracking-[5px] text-cyan-400 text-sm mb-4">
-              Technologies
+              {t.industries}
             </p>
 
             <h2 className="text-3xl md:text-5xl font-bold">
-              Technologies We Use
+              {t.industriesWeServe}
+            </h2>
+
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-14">
+
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.key}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
+              >
+
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400 mb-5">
+                  {industry.icon}
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-200">
+                  {t.industriesList[industry.key]}
+                </h3>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* ===================================================
+            TECHNOLOGIES
+        =================================================== */}
+
+        <section className="px-6 md:px-12 lg:px-20 py-20 md:py-24">
+
+          <div className="text-center max-w-3xl mx-auto">
+
+            <p className="uppercase tracking-[5px] text-cyan-400 text-sm mb-4">
+              {t.technologies}
+            </p>
+
+            <h2 className="text-3xl md:text-5xl font-bold">
+              {t.technologiesWeUse}
             </h2>
 
           </div>
@@ -382,9 +734,13 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-14">
 
             {technologies.map((tech, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
               >
 
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400 mb-5">
@@ -395,24 +751,27 @@ const Home = () => {
                   {tech.title}
                 </h3>
 
-              </div>
+              </motion.div>
             ))}
 
           </div>
 
         </section>
 
-        {/* LATEST APPS */}
+        {/* ===================================================
+            LATEST APPS
+        =================================================== */}
+
         <section className="px-6 md:px-12 lg:px-20 py-20 md:py-24">
 
           <div className="text-center max-w-3xl mx-auto">
 
             <p className="uppercase tracking-[5px] text-cyan-400 text-sm mb-4">
-              Latest Apps
+              {t.latestApps}
             </p>
 
             <h2 className="text-3xl md:text-5xl font-bold">
-              Published Play Store Apps
+              {t.publishedPlayStoreApps}
             </h2>
 
           </div>
@@ -424,7 +783,7 @@ const Home = () => {
                 href={app.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                key={index}
+                key={app.key}
                 initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08 }}
@@ -434,7 +793,7 @@ const Home = () => {
 
                 <img
                   src={app.image}
-                  alt={app.title}
+                  alt={t.latestAppsData[app.key].title}
                   loading="lazy"
                   className="w-full h-[240px] object-cover"
                 />
@@ -443,17 +802,18 @@ const Home = () => {
 
                   <div className="flex items-center gap-2 text-cyan-400 mb-4">
                     <FaGooglePlay />
+
                     <span className="text-sm">
-                      Google Play Store
+                      {t.googlePlayStore}
                     </span>
                   </div>
 
                   <h3 className="text-2xl font-semibold mb-4">
-                    {app.title}
+                    {t.latestAppsData[app.key].title}
                   </h3>
 
                   <p className="text-gray-400 leading-relaxed">
-                    {app.description}
+                    {t.latestAppsData[app.key].description}
                   </p>
 
                 </div>

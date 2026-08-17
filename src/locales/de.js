@@ -1,4 +1,8 @@
 const de = {
+  // =========================
+  // APPS PAGE
+  // =========================
+
   officialApps: "Offizielle CH TECH GIANT Apps",
 
   heroTitle1: "Laden Sie unsere",
@@ -29,12 +33,109 @@ const de = {
 
   noApps: "Keine Anwendungen gefunden",
 
-  noAppsDesc: "Versuchen Sie, nach einem anderen Suchbegriff zu suchen.",
+  noAppsDesc:
+    "Versuchen Sie, nach einem anderen Suchbegriff zu suchen.",
 
   moreApps: "Weitere Apps kommen bald 🚀",
 
   moreAppsDesc:
     "Wir entwickeln kontinuierlich leistungsstarke Android-Anwendungen, Produktivitätstools, Business-Software und praktische Apps.",
+
+  // =========================
+  // HOME PAGE
+  // =========================
+
+  homeHeroTitle1: "Premium",
+
+  homeHeroTitle2: "Digitallösungen entwickeln",
+
+  homeHeroDescription:
+    "Wir entwickeln hochwertige Websites, mobile Apps, Softwaresysteme, kreative Designs und skalierbare digitale Lösungen für Startups, Unternehmen und Organisationen.",
+
+  exploreServices: "Services entdecken",
+
+  contactUs: "Kontaktieren Sie uns",
+
+  // Services
+
+  ourExpertise: "Unsere Expertise",
+
+  servicesWeProvide: "Unsere Leistungen",
+
+  services: {
+    webDevelopment: {
+      title: "Webentwicklung",
+      description:
+        "Moderne responsive Websites und skalierbare Webanwendungen.",
+    },
+
+    appDevelopment: {
+      title: "App-Entwicklung",
+      description:
+        "Hochwertige Android- und iOS-Mobilanwendungen für Unternehmen.",
+    },
+
+    softwareDevelopment: {
+      title: "Softwareentwicklung",
+      description:
+        "Individuelle Softwaresysteme und Lösungen für Unternehmen.",
+    },
+
+    gameDevelopment: {
+      title: "Spieleentwicklung",
+      description:
+        "Interaktive 2D- und 3D-Spieleentwicklung für einzigartige Erlebnisse.",
+    },
+  },
+
+  // Industries
+
+  industries: "Branchen",
+
+  industriesWeServe: "Branchen, die wir bedienen",
+
+  industriesList: {
+    healthcare: "Gesundheitswesen",
+    education: "Bildung",
+    ecommerce: "E-Commerce",
+    corporate: "Unternehmen",
+    restaurants: "Restaurants",
+    mediaNews: "Medien & Nachrichten",
+  },
+
+  // Technologies
+
+  technologies: "Technologien",
+
+  technologiesWeUse: "Technologien, die wir verwenden",
+
+  // Latest Apps
+
+  latestApps: "Neueste Apps",
+
+  publishedPlayStoreApps: "Veröffentlichte Play Store Apps",
+
+  googlePlayStore: "Google Play Store",
+
+  latestAppsData: {
+    fileConverter: {
+      title: "File Converter",
+      description:
+        "All-in-One-Dateikonvertierungstool mit Funktionen für PDF, Bilder, Audio, Video und Text.",
+    },
+
+    fileRenamer: {
+      title: "File Renamer",
+      description:
+        "Tool zum gleichzeitigen Umbenennen und Bereinigen von Dateien mit modernen Automatisierungsfunktionen.",
+    },
+
+    webCodshop: {
+      title: "Web Codshop",
+      description:
+        "Marketplace-App mit hochwertigen Website-Vorlagen, Quellcodes und Hochschulprojekten mit Berichten.",
+    },
+  },
 };
 
 export default de;
