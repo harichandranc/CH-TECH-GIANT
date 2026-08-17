@@ -7,19 +7,16 @@ const features = [
     description:
       "React, Flutter, MERN Stack, Firebase, AI tools and modern scalable technologies.",
   },
-
   {
     title: "Premium UI/UX",
     description:
       "Clean futuristic interfaces with smooth responsive user experiences.",
   },
-
   {
     title: "Custom Solutions",
     description:
       "Tailored software, mobile apps, and websites designed for businesses and startups.",
   },
-
   {
     title: "Reliable Support",
     description:
@@ -61,9 +58,7 @@ const About = () => {
     <>
       {/* SEO */}
       <Helmet>
-        <title>
-          About Us | CH TECH GIANT
-        </title>
+        <title>About Us | CH TECH GIANT</title>
 
         <meta
           name="description"
@@ -72,18 +67,12 @@ const About = () => {
 
         <meta
           name="keywords"
-          content="about CH TECH GIANT, app development company, web development company, software company in Davanagere, Flutter development, MERN stack development, software solutions"
+          content="about CH TECH GIANT, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, app development company, web development company, software company in Davanagere, Flutter development, MERN stack development, software solutions"
         />
 
-        <meta
-          name="author"
-          content="CH TECH GIANT"
-        />
+        <meta name="author" content="CH TECH GIANT" />
 
-        <meta
-          property="og:title"
-          content="About CH TECH GIANT"
-        />
+        <meta property="og:title" content="About CH TECH GIANT" />
 
         <meta
           property="og:description"
@@ -100,25 +89,16 @@ const About = () => {
           content="https://chtechgiant.com/about"
         />
 
-        <meta
-          property="og:type"
-          content="website"
-        />
+        <meta property="og:type" content="website" />
 
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <link
           rel="canonical"
           href="https://chtechgiant.com/about"
         />
 
-        <meta
-          name="theme-color"
-          content="#050816"
-        />
+        <meta name="theme-color" content="#050816" />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -127,13 +107,21 @@ const About = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "CH TECH GIANT (OPC) PRIVATE LIMITED",
+            "legalName": "CH TECH GIANT (OPC) PRIVATE LIMITED",
             "url": "https://chtechgiant.com",
             "logo": "https://chtechgiant.com/logo.png",
             "description": "Premium software development company offering app development, web development, software solutions, and digital services.",
             "telephone": "+91-9980785020",
             "email": "info@chtechgiant.com",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "CIN",
+              "value": "U62012KA2025OPC203976"
+            },
+            "foundingDate": "2025-06-10",
             "address": {
               "@type": "PostalAddress",
+              "streetAddress": "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere",
               "addressLocality": "Davanagere",
               "addressRegion": "Karnataka",
               "postalCode": "577001",
@@ -145,7 +133,6 @@ const About = () => {
       </Helmet>
 
       <div className="min-h-screen bg-[#050816] text-white px-6 py-24 overflow-hidden">
-
         <div className="max-w-7xl mx-auto">
 
           {/* HEADER */}
@@ -155,7 +142,6 @@ const About = () => {
             transition={{ duration: 0.7 }}
             className="text-center mb-24"
           >
-
             <p className="text-gray-400 uppercase tracking-[5px] mb-4">
               About Us
             </p>
@@ -173,7 +159,6 @@ const About = () => {
               software systems, and futuristic digital experiences for
               businesses and startups.
             </p>
-
           </motion.div>
 
           {/* MAIN SECTION */}
@@ -185,14 +170,12 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-
               <img
                 src="/about/about.jpg"
                 alt="About CH TECH GIANT"
                 loading="lazy"
                 className="rounded-3xl border border-white/10 shadow-2xl object-cover w-full"
               />
-
             </motion.div>
 
             {/* CONTENT */}
@@ -201,7 +184,6 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-
               <h2 className="text-3xl md:text-5xl font-black leading-tight mb-8">
                 Premium Software Solutions
                 For Modern Businesses
@@ -224,21 +206,132 @@ const About = () => {
                 presence with premium technology solutions that combine
                 performance, aesthetics, and user experience.
               </p>
-
             </motion.div>
-
           </div>
 
-          {/* SERVICES */}
+          {/* COMPANY INFORMATION */}
           <section className="mb-24">
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+              <p className="text-gray-400 uppercase tracking-[5px] mb-4">
+                Company Information
+              </p>
 
+              <h2 className="text-3xl md:text-5xl font-black">
+                Official
+                <span className="text-cyan-400">
+                  {" "}
+                  Company Details
+                </span>
+              </h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white/5 border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-xl"
+            >
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+
+                {/* COMPANY NAME */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Legal Name
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    CH TECH GIANT (OPC) PRIVATE LIMITED
+                  </p>
+                </div>
+
+                {/* CIN */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Corporate Identification Number (CIN)
+                  </p>
+                  <p className="text-cyan-400 text-lg font-semibold break-all">
+                    U62012KA2025OPC203976
+                  </p>
+                </div>
+
+                {/* ENTITY TYPE */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Entity Type
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    Private Limited Company
+                  </p>
+                </div>
+
+                {/* INCORPORATION */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Date of Incorporation
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    June 10, 2025
+                  </p>
+                </div>
+
+                {/* ROC */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Registrar of Companies
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    ROC – Bangalore
+                  </p>
+                </div>
+
+                {/* DIRECTOR */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Managing Director
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    Chandrashekar Harichandran
+                  </p>
+                </div>
+
+                {/* APPOINTMENT DATE */}
+                <div>
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Director Appointment Date
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    June 10, 2025
+                  </p>
+                </div>
+
+                {/* REGISTERED ADDRESS */}
+                <div className="md:col-span-2">
+                  <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
+                    Registered Office
+                  </p>
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                    1135/1, Behind BDO Office, Betur Road, Imam Nagara,
+                    Barline Road-Davanagere, Davangere, Davanagere,
+                    Karnataka, India – 577001
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </section>
+
+          {/* SERVICES */}
+          <section className="mb-24">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
                 Our Services
               </p>
@@ -250,11 +343,9 @@ const About = () => {
                   We Provide
                 </span>
               </h2>
-
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-
               {services.map((service, index) => (
                 <motion.div
                   key={index}
@@ -266,28 +357,22 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-xl hover:border-cyan-400/30 transition"
                 >
-
                   <p className="text-gray-300 font-medium">
                     {service}
                   </p>
-
                 </motion.div>
               ))}
-
             </div>
-
           </section>
 
           {/* FEATURES */}
           <div className="mb-24">
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
                 Why Choose Us
               </p>
@@ -299,11 +384,9 @@ const About = () => {
                   & Premium Design
                 </span>
               </h2>
-
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -319,7 +402,6 @@ const About = () => {
                   }}
                   className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:border-cyan-400/30 transition"
                 >
-
                   <h3 className="text-2xl font-bold mb-5">
                     {feature.title}
                   </h3>
@@ -327,24 +409,19 @@ const About = () => {
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>
-
                 </motion.div>
               ))}
-
             </div>
-
           </div>
 
           {/* TECHNOLOGIES */}
           <section className="mb-24">
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
                 Technologies
               </p>
@@ -356,11 +433,9 @@ const About = () => {
                   We Use
                 </span>
               </h2>
-
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-4">
-
               {technologies.map((tech, index) => (
                 <motion.div
                   key={index}
@@ -372,26 +447,20 @@ const About = () => {
                   viewport={{ once: true }}
                   className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-gray-300 backdrop-blur-xl hover:border-cyan-400/30 transition"
                 >
-
                   {tech}
-
                 </motion.div>
               ))}
-
             </div>
-
           </section>
 
           {/* PROCESS */}
           <section className="mb-24">
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
                 Development Process
               </p>
@@ -403,11 +472,9 @@ const About = () => {
                   Process
                 </span>
               </h2>
-
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-
               {process.map((step, index) => (
                 <motion.div
                   key={index}
@@ -419,7 +486,6 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-xl hover:border-cyan-400/30 transition"
                 >
-
                   <div className="text-cyan-400 text-2xl font-black mb-3">
                     0{index + 1}
                   </div>
@@ -427,12 +493,9 @@ const About = () => {
                   <p className="text-gray-300">
                     {step}
                   </p>
-
                 </motion.div>
               ))}
-
             </div>
-
           </section>
 
           {/* MISSION */}
@@ -442,7 +505,6 @@ const About = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-500/10 to-white/5 border border-white/10 rounded-[40px] p-8 md:p-16 text-center"
           >
-
             <p className="text-cyan-400 uppercase tracking-[5px] mb-4">
               Our Mission
             </p>
@@ -462,11 +524,9 @@ const About = () => {
               through modern development standards and exceptional user
               experiences.
             </p>
-
           </motion.div>
 
         </div>
-
       </div>
     </>
   );
