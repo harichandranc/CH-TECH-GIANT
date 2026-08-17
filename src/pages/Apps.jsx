@@ -1,16 +1,53 @@
 import { useMemo, useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { translations, categoryTranslations } from "../locales";
 import { motion } from "framer-motion";
 import { FaGooglePlay, FaDownload, FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 import apps from "../data/appsData";
 
 const rawCategories = [
   "All",
   ...new Set(apps.map((app) => app.category)),
+];
+
+const languages = [
+  {
+    code: "en",
+    path: "/apps",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh/apps",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es/apps",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/apps",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de/apps",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/apps",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/apps",
+    label: "🇯🇵 日本語",
+  },
 ];
 
 const Apps = () => {
@@ -182,8 +219,15 @@ const Apps = () => {
       ? "ja-JP"
       : "en";
 
+  const currentLanguage =
+    languages.find((item) => item.code === language) || languages[0];
+
   return (
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
+
+      {/* =====================================================
+          SEO
+      ===================================================== */}
 
       <Helmet>
 
@@ -319,91 +363,85 @@ const Apps = () => {
 
       </Helmet>
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
       <section className="relative py-24 px-6">
 
         <div className="max-w-7xl mx-auto">
 
-          {/* LANGUAGE SWITCHER */}
-          <div className="flex justify-center mt-8 gap-3 flex-wrap">
+          {/* =================================================
+              LANGUAGE SWITCHER
+              Desktop = Buttons
+              Mobile = Dropdown
+          ================================================= */}
 
-            <Link
-              to="/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "en"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇺🇸 English
-            </Link>
+          <div className="flex justify-center mt-8">
 
-            <Link
-              to="/zh/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "zh"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇨🇳 简体中文
-            </Link>
+            {/* MOBILE DROPDOWN */}
+            <div className="block md:hidden w-full max-w-xs">
 
-            <Link
-              to="/es/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "es"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇪🇸 Español
-            </Link>
+              <label
+                htmlFor="mobile-language"
+                className="sr-only"
+              >
+                Language
+              </label>
 
-            <Link
-              to="/pt/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "pt"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇧🇷 Português
-            </Link>
+              <select
+                id="mobile-language"
+                value={language}
+                onChange={(e) => {
+                  const selectedLanguage = languages.find(
+                    (item) => item.code === e.target.value
+                  );
 
-            <Link
-              to="/de/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "de"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇩🇪 Deutsch
-            </Link>
-            <Link
-              to="/ko/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "ko"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇰🇷 한국어
-            </Link>
+                  if (selectedLanguage) {
+                    navigate(selectedLanguage.path);
+                  }
+                }}
+                className="w-full h-12 rounded-xl border border-white/20 bg-[#050816] px-4 text-white outline-none focus:border-cyan-400 transition cursor-pointer"
+              >
 
-            <Link
-              to="/ja/apps"
-              className={`px-5 py-2 rounded-full border transition ${
-                language === "ja"
-                  ? "bg-cyan-500 text-black border-cyan-500"
-                  : "border-white/20 hover:border-cyan-500"
-              }`}
-            >
-              🇯🇵 日本語
-            </Link>
+                {languages.map((item) => (
+                  <option
+                    key={item.code}
+                    value={item.code}
+                    className="bg-[#050816] text-white"
+                  >
+                    {item.label}
+                  </option>
+                ))}
+
+              </select>
+
+            </div>
+
+            {/* DESKTOP LANGUAGE BUTTONS */}
+            <div className="hidden md:flex justify-center gap-3 flex-wrap">
+
+              {languages.map((item) => (
+                <Link
+                  key={item.code}
+                  to={item.path}
+                  className={`px-5 py-2 rounded-full border transition ${
+                    language === item.code
+                      ? "bg-cyan-500 text-black border-cyan-500"
+                      : "border-white/20 hover:border-cyan-500"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+            </div>
 
           </div>
+
+          {/* =================================================
+              HERO CONTENT
+          ================================================= */}
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -439,7 +477,9 @@ const Apps = () => {
 
           </motion.div>
 
-          {/* STATS */}
+          {/* =================================================
+              STATS
+          ================================================= */}
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -498,7 +538,9 @@ const Apps = () => {
 
           </motion.div>
 
-          {/* SEARCH */}
+          {/* =================================================
+              SEARCH
+          ================================================= */}
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -519,12 +561,13 @@ const Apps = () => {
 
           </motion.div>
 
-          {/* CATEGORY */}
+          {/* =================================================
+              CATEGORY
+          ================================================= */}
 
           <div className="flex flex-wrap justify-center gap-4 mt-12">
 
             {rawCategories.map((item) => (
-
               <button
                 key={item}
                 onClick={() => setCategory(item)}
@@ -534,11 +577,8 @@ const Apps = () => {
                     : "bg-white/5 border-white/10 hover:border-cyan-400"
                 }`}
               >
-
                 {categoryTranslations[language][item] || item}
-
               </button>
-
             ))}
 
           </div>
@@ -547,7 +587,9 @@ const Apps = () => {
 
       </section>
 
-      {/* APPS GRID */}
+      {/* =====================================================
+          APPS GRID
+      ===================================================== */}
 
       <section className="px-6 pb-24">
 
@@ -573,7 +615,6 @@ const Apps = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {filteredApps.map((app, index) => (
-
               <motion.div
                 key={app.id}
                 initial={{ opacity: 0, y: 60 }}
@@ -589,10 +630,9 @@ const Apps = () => {
                 className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl group"
               >
 
-                {/* Featured */}
+                {/* FEATURED */}
 
                 {app.featured && (
-
                   <div className="absolute top-4 left-4 z-20">
 
                     <span className="px-3 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold">
@@ -600,10 +640,9 @@ const Apps = () => {
                     </span>
 
                   </div>
-
                 )}
 
-                {/* Image */}
+                {/* IMAGE */}
 
                 <div className="h-60 bg-black flex items-center justify-center p-6 overflow-hidden">
 
@@ -619,17 +658,15 @@ const Apps = () => {
 
                 </div>
 
-                {/* Content */}
+                {/* CONTENT */}
 
                 <div className="p-6">
 
                   <div className="flex justify-between items-center mb-4">
 
                     <span className="text-cyan-400 text-sm font-semibold">
-
                       {categoryTranslations[language][app.category] ||
                         app.category}
-
                     </span>
 
                     <span className="text-gray-500 text-xs">
@@ -686,42 +723,44 @@ const Apps = () => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
                     >
+
                       <FaGooglePlay />
+
                       {t.googlePlay}
+
                     </a>
 
                     {app.apk && (
-
                       <a
                         href={app.apk}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
                       >
-                        <FaDownload />
-                        {t.apk}
-                      </a>
 
+                        <FaDownload />
+
+                        {t.apk}
+
+                      </a>
                     )}
 
                   </div>
 
                 </div>
 
-                {/* Hover Glow */}
+                {/* HOVER GLOW */}
 
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500" />
 
               </motion.div>
-
             ))}
 
           </div>
 
-          {/* Empty State */}
+          {/* EMPTY STATE */}
 
           {filteredApps.length === 0 && (
-
             <div className="text-center py-24">
 
               <h2 className="text-3xl font-bold mb-4">
@@ -733,7 +772,6 @@ const Apps = () => {
               </p>
 
             </div>
-
           )}
 
           {/* CTA */}
