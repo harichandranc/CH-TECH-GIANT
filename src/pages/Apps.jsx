@@ -21,7 +21,8 @@ const Apps = () => {
     lang === "es" ||
     lang === "pt" ||
     lang === "de" ||
-    lang === "ko"
+    lang === "ko" ||
+    lang === "ja"
       ? lang
       : "en";
 
@@ -55,6 +56,14 @@ const Apps = () => {
       });
     } else if (browserLanguage.startsWith("ko")) {
       navigate("/ko/apps", {
+        replace: true,
+      });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja/apps", {
+        replace: true,
+      });
+    } else {
+      navigate("/apps", {
         replace: true,
       });
     }
@@ -94,6 +103,8 @@ const Apps = () => {
       ? "https://chtechgiant.com/de/apps"
       : language === "ko"
       ? "https://chtechgiant.com/ko/apps"
+      : language === "ja"
+      ? "https://chtechgiant.com/ja/apps"
       : "https://chtechgiant.com/apps";
 
   const pageTitle =
@@ -107,6 +118,8 @@ const Apps = () => {
       ? "Offizielle Android-Apps von CH TECH GIANT herunterladen"
       : language === "ko"
       ? "CH TECH GIANT 공식 Android 앱 다운로드"
+      : language === "ja"
+      ? "CH TECH GIANT 公式Androidアプリをダウンロード"
       : "CH TECH GIANT Android Apps";
 
   const pageDescription =
@@ -120,6 +133,8 @@ const Apps = () => {
       ? "Laden Sie die offiziellen Android-Apps von CH TECH GIANT herunter, darunter PDF-Tools, Dateikonverter, Produktivitäts-Apps und vieles mehr."
       : language === "ko"
       ? "PDF 도구, 파일 변환기, 생산성 앱 등을 포함한 CH TECH GIANT의 공식 Android 앱을 다운로드하세요."
+      : language === "ja"
+      ? "PDFツール、ファイルコンバーター、生産性向上アプリなど、CH TECH GIANTの公式Androidアプリをダウンロードできます。"
       : "Download official Android apps from CH TECH GIANT including PDF tools, file converters, invoice maker, productivity apps and more.";
 
   const keywords =
@@ -133,6 +148,8 @@ const Apps = () => {
       ? "Android Apps, PDF Tools, PDF Konverter, Dateikonverter, kostenlose Apps"
       : language === "ko"
       ? "Android 앱, PDF 도구, PDF 변환기, 파일 변환기, 무료 앱, 생산성 앱"
+      : language === "ja"
+      ? "Androidアプリ, PDFツール, PDF変換, ファイルコンバーター, 無料アプリ, 生産性アプリ"
       : "Android Apps, PDF Converter, File Converter, Invoice Maker, Productivity Apps";
 
   const ogLocale =
@@ -146,6 +163,8 @@ const Apps = () => {
       ? "de_DE"
       : language === "ko"
       ? "ko_KR"
+      : language === "ja"
+      ? "ja_JP"
       : "en_US";
 
   const schemaLanguage =
@@ -159,6 +178,8 @@ const Apps = () => {
       ? "de"
       : language === "ko"
       ? "ko-KR"
+      : language === "ja"
+      ? "ja-JP"
       : "en";
 
   return (
@@ -218,6 +239,13 @@ const Apps = () => {
           rel="alternate"
           hrefLang="ko-KR"
           href="https://chtechgiant.com/ko/apps"
+        />
+
+        {/* Japanese */}
+        <link
+          rel="alternate"
+          hrefLang="ja-JP"
+          href="https://chtechgiant.com/ja/apps"
         />
 
         {/* Default */}
@@ -355,6 +383,17 @@ const Apps = () => {
               }`}
             >
               🇰🇷 한국어
+            </Link>
+
+            <Link
+              to="/ja/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "ja"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇯🇵 日本語
             </Link>
 
           </div>

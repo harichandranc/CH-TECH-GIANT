@@ -4,6 +4,7 @@ import es from "./es";
 import pt from "./pt";
 import de from "./de";
 import ko from "./ko";
+import ja from "./ja";
 
 export const translations = {
   en,
@@ -12,6 +13,7 @@ export const translations = {
   pt,
   de,
   ko,
+  ja,
 };
 
 export const categoryTranslations = {
@@ -79,5 +81,16 @@ export const categoryTranslations = {
     Photography: "사진",
     Finance: "금융",
     PDF: "PDF 도구",
+  },
+
+  ja: {
+    All: "すべて",
+    Utilities: "ユーティリティ",
+    Productivity: "生産性",
+    Education: "教育",
+    Business: "ビジネス",
+    Photography: "写真",
+    Finance: "金融",
+    PDF: "PDFツール",
   },
 };

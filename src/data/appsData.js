@@ -8,6 +8,7 @@ const apps = [
       pt: "Relógio mundial",
       de: "Weltzeituhr",
       ko: "세계 시계",
+      ja: "世界時計",
     },
     category: "Utilities",
     description: {
@@ -17,6 +18,7 @@ const apps = [
       pt: "Veja a hora atual de vários países e cidades com uma interface bonita e fácil de usar.",
       de: "Sehen Sie die aktuelle Uhrzeit in verschiedenen Ländern und Städten mit einer schönen und benutzerfreundlichen Oberfläche.",
       ko: "아름답고 사용하기 쉬운 인터페이스로 여러 국가와 도시의 현재 시간을 확인하세요.",
+      ja: "美しく使いやすいインターフェースで、複数の国や都市の現在時刻を確認できます。",
     },
     image: "/projects/worldclock.png",
     playStore:
@@ -33,6 +35,7 @@ const apps = [
       pt: "Conversor de arquivos",
       de: "Dateikonverter",
       ko: "파일 변환기",
+      ja: "ファイルコンバーター",
     },
     category: "Utilities",
     description: {
@@ -42,6 +45,7 @@ const apps = [
       pt: "Converta imagens, vídeos, áudios, documentos, arquivos compactados e muitos outros formatos em um único aplicativo.",
       de: "Konvertieren Sie Bilder, Videos, Audiodateien, Dokumente, Archive und viele weitere Dateiformate in einer einzigen App.",
       ko: "하나의 앱에서 이미지, 동영상, 오디오, 문서, 압축 파일 및 다양한 파일 형식을 변환하세요.",
+      ja: "1つのアプリで、画像、動画、音声、ドキュメント、アーカイブなど、さまざまなファイル形式を変換できます。",
     },
     image: "/projects/fileconverter.png",
     playStore:
@@ -58,6 +62,7 @@ const apps = [
       pt: "Renomeador de arquivos em massa",
       de: "Massen-Dateiumbenenner",
       ko: "대량 파일 이름 변경",
+      ja: "一括ファイル名変更",
     },
     category: "Productivity",
     description: {
@@ -67,6 +72,7 @@ const apps = [
       pt: "Renomeie milhares de arquivos instantaneamente usando prefixos, sufixos, numeração, regras de substituição e muito mais.",
       de: "Benennen Sie Tausende von Dateien sofort mit Präfixen, Suffixen, Nummerierungen, Ersetzungsregeln und vielem mehr um.",
       ko: "접두사, 접미사, 번호 지정, 교체 규칙 등을 사용하여 수천 개의 파일 이름을 빠르게 변경하세요.",
+      ja: "接頭辞、接尾辞、連番、置換ルールなどを使って、数千のファイル名を一括ですばやく変更できます。",
     },
     image: "/projects/filerenamer.png",
     playStore:
@@ -83,6 +89,7 @@ const apps = [
       pt: "Web Codshop",
       de: "Web Codshop",
       ko: "Web Codshop",
+      ja: "Web Codshop",
     },
     category: "Education",
     description: {
@@ -92,6 +99,7 @@ const apps = [
       pt: "Marketplace dedicado a códigos-fonte de sites, templates web e recursos profissionais para desenvolvimento web.",
       de: "Marktplatz für Website-Quellcode, Webvorlagen und professionelle Ressourcen für die Webentwicklung.",
       ko: "웹사이트 소스 코드, 웹 템플릿 및 전문 웹 개발 리소스를 제공하는 마켓플레이스입니다.",
+      ja: "Webサイトのソースコード、Webテンプレート、プロフェッショナルなWeb開発リソースを提供するマーケットプレイスです。",
     },
     image: "/projects/webcodshop.png",
     playStore:
@@ -108,6 +116,7 @@ const apps = [
       pt: "Criador de faturas",
       de: "Rechnungsersteller",
       ko: "청구서 제작기",
+      ja: "請求書作成",
     },
     category: "Business",
     description: {
@@ -117,6 +126,7 @@ const apps = [
       pt: "Crie faturas, orçamentos e recibos profissionais com opções de exportação e compartilhamento.",
       de: "Erstellen Sie professionelle Rechnungen, Angebote und Quittungen mit PDF-Export und Freigabefunktionen.",
       ko: "PDF 내보내기 및 공유 기능을 사용하여 전문적인 청구서, 견적서 및 영수증을 만들어 보세요.",
+      ja: "PDFへのエクスポートと共有に対応した、プロフェッショナルな請求書、見積書、領収書を作成できます。",
     },
     image: "/projects/invoicemaker.png",
     playStore:
@@ -133,6 +143,7 @@ const apps = [
       pt: "Calculadora de CGPA e SGPA",
       de: "CGPA- & SGPA-Rechner",
       ko: "CGPA 및 SGPA 계산기",
+      ja: "CGPA・SGPA計算機",
     },
     category: "Education",
     description: {
@@ -142,6 +153,7 @@ const apps = [
       pt: "Calcule com precisão o SGPA do semestre e o CGPA geral com suporte para vários sistemas de avaliação.",
       de: "Berechnen Sie den SGPA eines Semesters und den Gesamt-CGPA präzise mit Unterstützung für verschiedene Bewertungssysteme.",
       ko: "다양한 성적 평가 시스템을 지원하여 학기 SGPA와 전체 CGPA를 정확하게 계산하세요.",
+      ja: "複数の成績評価システムに対応し、学期SGPAと総合CGPAを正確に計算できます。",
     },
     image: "/projects/cgpacalculator.jpg",
     playStore:
@@ -158,6 +170,7 @@ const apps = [
       pt: "Compressor de imagens",
       de: "Bildkompressor",
       ko: "이미지 압축기",
+      ja: "画像圧縮ツール",
     },
     category: "Photography",
     description: {
@@ -167,6 +180,7 @@ const apps = [
       pt: "Comprima imagens para o tamanho de arquivo desejado mantendo uma excelente qualidade.",
       de: "Komprimieren Sie Bilder auf die gewünschte Dateigröße und behalten Sie dabei eine hervorragende Qualität bei.",
       ko: "뛰어난 이미지 품질을 유지하면서 원하는 파일 크기로 이미지를 압축하세요.",
+      ja: "高品質を維持しながら、画像を希望するファイルサイズまで圧縮できます。",
     },
     image: "/projects/image-compressor.png",
     playStore:
@@ -183,6 +197,7 @@ const apps = [
       pt: "Conversor de imagem para PDF",
       de: "Bild-zu-PDF-Konverter",
       ko: "이미지 PDF 변환기",
+      ja: "画像からPDFへの変換",
     },
     category: "Productivity",
     description: {
@@ -192,6 +207,7 @@ const apps = [
       pt: "Converta qualquer formato de imagem para um arquivo PDF de forma rápida e fácil.",
       de: "Konvertieren Sie jedes Bildformat schnell und einfach in eine PDF-Datei.",
       ko: "모든 이미지 형식을 빠르고 간편하게 PDF 파일로 변환하세요.",
+      ja: "あらゆる画像形式をすばやく簡単にPDFファイルへ変換できます。",
     },
     image: "/projects/img2pdf copy.png",
     playStore:
@@ -208,6 +224,7 @@ const apps = [
       pt: "Bloquear e desbloquear PDF",
       de: "PDF sperren und entsperren",
       ko: "PDF 잠금 및 잠금 해제",
+      ja: "PDFロック・ロック解除",
     },
     category: "Utilities",
     description: {
@@ -217,6 +234,7 @@ const apps = [
       pt: "Proteja e desbloqueie arquivos PDF usando uma senha.",
       de: "Sperren und entsperren Sie PDF-Dateien mit einem Passwort.",
       ko: "비밀번호를 사용하여 PDF 파일을 잠그거나 잠금을 해제하세요.",
+      ja: "パスワードを使用してPDFファイルをロックまたはロック解除できます。",
     },
     image: "/projects/pdf_lock_unlock.jpeg",
     playStore:
