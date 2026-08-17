@@ -1,12 +1,10 @@
-import { useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useMemo, useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { translations, categoryTranslations } from "../locales";
 import { motion } from "framer-motion";
 import { FaGooglePlay, FaDownload, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 
 import apps from "../data/appsData";
 
@@ -18,554 +16,611 @@ const rawCategories = [
 const Apps = () => {
   const { lang } = useParams();
 
-  const language = lang === "zh" ? "zh" : "en";
+  const language =
+    lang === "zh" || lang === "es"
+      ? lang
+      : "en";
 
   const t = translations[language];
+
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
+    if (lang) return;
 
-  if (lang) return;
+    const browserLanguage = navigator.language.toLowerCase();
 
-  const browserLanguage = navigator.language.toLowerCase();
-
-  if (browserLanguage.startsWith("zh")) {
-    navigate("/zh/apps", {
-      replace: true,
-    });
-  }
-
-}, [lang, navigate]);
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh/apps", {
+        replace: true,
+      });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es/apps", {
+        replace: true,
+      });
+    }
+  }, [lang, navigate]);
 
   const filteredApps = useMemo(() => {
-  return apps.filter((app) => {
-    const matchesCategory =
-      category === "All" || app.category === category;
+    return apps.filter((app) => {
+      const matchesCategory =
+        category === "All" || app.category === category;
 
-    const title =
-      typeof app.title === "object"
-        ? (app.title[language] || app.title.en)
-        : app.title;
+      const title =
+        typeof app.title === "object"
+          ? app.title[language] || app.title.en
+          : app.title;
 
-    const description =
-      typeof app.description === "object"
-        ? (app.description[language] || app.description.en)
-        : app.description;
+      const description =
+        typeof app.description === "object"
+          ? app.description[language] || app.description.en
+          : app.description;
 
-    const matchesSearch =
-      title.toLowerCase().includes(search.toLowerCase()) ||
-      description.toLowerCase().includes(search.toLowerCase());
+      const matchesSearch =
+        title.toLowerCase().includes(search.toLowerCase()) ||
+        description.toLowerCase().includes(search.toLowerCase());
 
-    return matchesCategory && matchesSearch;
-  });
-}, [search, category, language]);
+      return matchesCategory && matchesSearch;
+    });
+  }, [search, category, language]);
+
+  const pageUrl =
+    language === "zh"
+      ? "https://chtechgiant.com/zh/apps"
+      : language === "es"
+      ? "https://chtechgiant.com/es/apps"
+      : "https://chtechgiant.com/apps";
+
+  const pageTitle =
+    language === "zh"
+      ? "CH TECH GIANT 官方 Android 应用下载"
+      : language === "es"
+      ? "Descargar aplicaciones Android oficiales de CH TECH GIANT"
+      : "CH TECH GIANT Android Apps";
+
+  const pageDescription =
+    language === "zh"
+      ? "下载 CH TECH GIANT 官方 Android 应用，包括 PDF 工具、文件转换器、办公软件、教育应用和更多免费 Android 应用。"
+      : language === "es"
+      ? "Descarga las aplicaciones Android oficiales de CH TECH GIANT, incluyendo herramientas PDF, convertidores de archivos, aplicaciones de productividad y mucho más."
+      : "Download official Android apps from CH TECH GIANT including PDF tools, file converters, invoice maker, productivity apps and more.";
+
+  const keywords =
+    language === "zh"
+      ? "Android应用, PDF工具, PDF转换器, 文件转换器, 免费应用"
+      : language === "es"
+      ? "aplicaciones Android, herramientas PDF, convertidor PDF, convertidor de archivos, aplicaciones gratuitas"
+      : "Android Apps, PDF Converter, File Converter, Invoice Maker, Productivity Apps";
+
+  const ogLocale =
+    language === "zh"
+      ? "zh_CN"
+      : language === "es"
+      ? "es_ES"
+      : "en_US";
+
+  const schemaLanguage =
+    language === "zh"
+      ? "zh-CN"
+      : language === "es"
+      ? "es"
+      : "en";
 
   return (
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
+
       <Helmet>
-      <html lang={language} />
 
-      <title>
-        {language === "zh"
-          ? "CH TECH GIANT 官方 Android 应用下载"
-          : "CH TECH GIANT Android Apps"}
-      </title>
+        <html lang={language} />
 
-      <meta
-        name="description"
-        content={
-          language === "zh"
-            ? "下载 CH TECH GIANT 官方 Android 应用，包括 PDF 工具、文件转换器、办公软件、教育应用和更多免费 Android 应用。"
-            : "Download official Android apps from CH TECH GIANT including PDF tools, file converters, invoice maker, productivity apps and more."
-        }
-      />
+        <title>{pageTitle}</title>
 
-      <meta
-        name="keywords"
-        content={
-          language === "zh"
-            ? "Android应用, PDF工具, PDF转换器, 文件转换器, 免费应用"
-            : "Android Apps, PDF Converter, File Converter, Invoice Maker, Productivity Apps"
-        }
-      />
+        <meta
+          name="description"
+          content={pageDescription}
+        />
 
-      <link
-        rel="canonical"
-        href={`https://chtechgiant.com${language === "zh" ? "/zh/apps" : "/apps"}`}
-      />
+        <meta
+          name="keywords"
+          content={keywords}
+        />
 
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://chtechgiant.com/apps"
-      />
+        <link
+          rel="canonical"
+          href={pageUrl}
+        />
 
-      <link
-        rel="alternate"
-        hrefLang="zh-CN"
-        href="https://chtechgiant.com/zh/apps"
-      />
+        {/* English */}
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://chtechgiant.com/apps"
+        />
 
-      <meta property="og:locale" content={language === "zh" ? "zh_CN" : "en_US"} />
+        {/* Chinese */}
+        <link
+          rel="alternate"
+          hrefLang="zh-CN"
+          href="https://chtechgiant.com/zh/apps"
+        />
 
-      <meta property="og:type" content="website" />
+        {/* Spanish */}
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href="https://chtechgiant.com/es/apps"
+        />
 
-      <meta
-        property="og:title"
-        content={
-          language === "zh"
-            ? "CH TECH GIANT 官方 Android 应用"
-            : "CH TECH GIANT Android Apps"
-        }
-      />
+        {/* Default */}
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://chtechgiant.com/apps"
+        />
 
-      <meta
-        property="og:description"
-        content={
-          language === "zh"
-            ? "下载官方 Android 应用"
-            : "Download official Android apps."
-        }
-      />
+        <meta
+          property="og:locale"
+          content={ogLocale}
+        />
 
-      <meta
-        property="og:url"
-        content={`https://chtechgiant.com${language === "zh" ? "/zh/apps" : "/apps"}`}
-      />
+        <meta
+          property="og:type"
+          content="website"
+        />
 
-      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="og:title"
+          content={pageTitle}
+        />
 
-      <meta
-        name="twitter:title"
-        content={
-          language === "zh"
-            ? "CH TECH GIANT 官方 Android 应用"
-            : "CH TECH GIANT Android Apps"
-        }
-      />
+        <meta
+          property="og:description"
+          content={pageDescription}
+        />
 
-      <meta
-        name="twitter:description"
-        content={
-          language === "zh"
-            ? "下载官方 Android 应用"
-            : "Download official Android apps."
-        }
-      />
+        <meta
+          property="og:url"
+          content={pageUrl}
+        />
 
-      <link
-        rel="alternate"
-        hrefLang="x-default"
-        href="https://chtechgiant.com/apps"
-      />
-      <script type="application/ld+json">
-{JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name:
-    language === "zh"
-      ? "CH TECH GIANT 官方 Android 应用"
-      : "CH TECH GIANT Android Apps",
-  inLanguage:
-    language === "zh"
-      ? "zh-CN"
-      : "en",
-  url:
-    `https://chtechgiant.com${
-      language === "zh"
-      ? "/zh/apps"
-      : "/apps"
-    }`,
-  publisher: {
-    "@type": "Organization",
-    name: "CH TECH GIANT"
-  }
-})}
-</script>
-    </Helmet>
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
 
-    
-    {/* HERO */}
-    <section className="relative py-24 px-6">
+        <meta
+          name="twitter:title"
+          content={pageTitle}
+        />
 
-      <div className="max-w-7xl mx-auto">
+        <meta
+          name="twitter:description"
+          content={pageDescription}
+        />
 
-        <div className="flex justify-center mt-8 gap-3">
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: pageTitle,
+            description: pageDescription,
+            inLanguage: schemaLanguage,
+            url: pageUrl,
+            publisher: {
+              "@type": "Organization",
+              name: "CH TECH GIANT",
+            },
+          })}
+        </script>
 
-  <Link
-    to="/apps"
-    className={`px-5 py-2 rounded-full border transition
-      ${
-        language === "en"
-          ? "bg-cyan-500 text-black border-cyan-500"
-          : "border-white/20 hover:border-cyan-500"
-      }`}
-  >
-    🇺🇸 English
-  </Link>
+      </Helmet>
 
-  <Link
-    to="/zh/apps"
-    className={`px-5 py-2 rounded-full border transition
-      ${
-        language === "zh"
-          ? "bg-cyan-500 text-black border-cyan-500"
-          : "border-white/20 hover:border-cyan-500"
-      }`}
-  >
-    🇨🇳 简体中文
-  </Link>
+      {/* HERO */}
+      <section className="relative py-24 px-6">
 
-</div>
+        <div className="max-w-7xl mx-auto">
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
+          {/* LANGUAGE SWITCHER */}
+          <div className="flex justify-center mt-8 gap-3 flex-wrap">
 
-          <span className="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mb-6">
-            {t.officialApps}
-          </span>
-
-          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-            {t.heroTitle1}
-            <span className="text-cyan-400"> {t.heroTitle2} </span>
-          </h1>
-
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
-          {t.heroDescription}{" "}
-          <span className="text-cyan-400">
-            CH TECH GIANT (OPC) PRIVATE LIMITED
-          </span>.
-        </p>
-
-        </motion.div>
-
-        {/* STATS */}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: .2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16"
-        >
-
-          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-            <h2 className="text-4xl font-black text-cyan-400">
-              {apps.length}
-            </h2>
-            <p className="text-gray-400 mt-2">
-              {t.applications}
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-            <h2 className="text-4xl font-black text-cyan-400">
-              100%
-            </h2>
-            <p className="text-gray-400 mt-2">
-              {t.freeDownload}
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-            <h2 className="text-4xl font-black text-cyan-400">
-              Android
-            </h2>
-            <p className="text-gray-400 mt-2">
-              {t.supported}
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
-            <h2 className="text-4xl font-black text-cyan-400">
-              24×7
-            </h2>
-            <p className="text-gray-400 mt-2">
-              {t.updates}
-            </p>
-          </div>
-
-        </motion.div>
-
-        {/* SEARCH */}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: .3 }}
-          className="mt-14 max-w-3xl mx-auto relative"
-        >
-
-          <FaSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
-
-          <input
-            type="text"
-            placeholder={t.search}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-white/5 border border-white/10 rounded-2xl h-16 pl-16 pr-6 outline-none focus:border-cyan-400 transition text-white placeholder:text-gray-500"
-          />
-
-        </motion.div>
-
-        {/* CATEGORY */}
-
-        <div className="flex flex-wrap justify-center gap-4 mt-12">
-
-          {rawCategories.map((item) => (
-
-            <button
-              key={item}
-              onClick={() => setCategory(item)}
-              className={`px-6 py-3 rounded-full transition font-semibold border
-
-              ${
-                category === item
-
-                  ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
-
-                  : "bg-white/5 border-white/10 hover:border-cyan-400"
-
+            <Link
+              to="/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "en"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
               }`}
             >
+              🇺🇸 English
+            </Link>
 
-            {categoryTranslations[language][item] || item}
+            <Link
+              to="/zh/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "zh"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇨🇳 简体中文
+            </Link>
 
-            </button>
+            <Link
+              to="/es/apps"
+              className={`px-5 py-2 rounded-full border transition ${
+                language === "es"
+                  ? "bg-cyan-500 text-black border-cyan-500"
+                  : "border-white/20 hover:border-cyan-500"
+              }`}
+            >
+              🇪🇸 Español
+            </Link>
 
-          ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-10"
+          >
+
+            <span className="inline-block px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mb-6">
+              {t.officialApps}
+            </span>
+
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+
+              {t.heroTitle1}
+
+              <span className="text-cyan-400">
+                {" "}
+                {t.heroTitle2}
+              </span>
+
+            </h1>
+
+            <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
+
+              {t.heroDescription}{" "}
+
+              <span className="text-cyan-400">
+                CH TECH GIANT (OPC) PRIVATE LIMITED
+              </span>.
+
+            </p>
+
+          </motion.div>
+
+          {/* STATS */}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16"
+          >
+
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+
+              <h2 className="text-4xl font-black text-cyan-400">
+                {apps.length}
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                {t.applications}
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+
+              <h2 className="text-4xl font-black text-cyan-400">
+                100%
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                {t.freeDownload}
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+
+              <h2 className="text-4xl font-black text-cyan-400">
+                Android
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                {t.supported}
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-xl">
+
+              <h2 className="text-4xl font-black text-cyan-400">
+                24×7
+              </h2>
+
+              <p className="text-gray-400 mt-2">
+                {t.updates}
+              </p>
+
+            </div>
+
+          </motion.div>
+
+          {/* SEARCH */}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-14 max-w-3xl mx-auto relative"
+          >
+
+            <FaSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
+
+            <input
+              type="text"
+              placeholder={t.search}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full bg-white/5 border border-white/10 rounded-2xl h-16 pl-16 pr-6 outline-none focus:border-cyan-400 transition text-white placeholder:text-gray-500"
+            />
+
+          </motion.div>
+
+          {/* CATEGORY */}
+
+          <div className="flex flex-wrap justify-center gap-4 mt-12">
+
+            {rawCategories.map((item) => (
+
+              <button
+                key={item}
+                onClick={() => setCategory(item)}
+                className={`px-6 py-3 rounded-full transition font-semibold border ${
+                  category === item
+                    ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
+                    : "bg-white/5 border-white/10 hover:border-cyan-400"
+                }`}
+              >
+
+                {categoryTranslations[language][item] || item}
+
+              </button>
+
+            ))}
+
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-    </section>
-{/* APPS GRID */}
+      {/* APPS GRID */}
 
-<section className="px-6 pb-24">
+      <section className="px-6 pb-24">
 
-  <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: .6 }}
-    >
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
 
-      <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
-        {t.ourApps}
-      </h2>
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
+              {t.ourApps}
+            </h2>
 
-      <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto">
-        {t.ourAppsDesc}
-      </p>
+            <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto">
+              {t.ourAppsDesc}
+            </p>
 
-    </motion.div>
+          </motion.div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {filteredApps.map((app, index) => (
+            {filteredApps.map((app, index) => (
 
-        <motion.div
-          key={app.id}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: .5,
-            delay: index * .08,
-          }}
-          whileHover={{
-            y: -8,
-          }}
-          className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl group"
-        >
+              <motion.div
+                key={app.id}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
+                className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl group"
+              >
 
-          {/* Featured */}
+                {/* Featured */}
 
-          {app.featured && (
+                {app.featured && (
 
-            <div className="absolute top-4 left-4 z-20">
+                  <div className="absolute top-4 left-4 z-20">
 
-              <span className="px-3 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold">
+                    <span className="px-3 py-1 rounded-full bg-cyan-500 text-black text-xs font-bold">
+                      {t.featured}
+                    </span>
 
-                {t.featured}
+                  </div>
 
-              </span>
+                )}
+
+                {/* Image */}
+
+                <div className="h-60 bg-black flex items-center justify-center p-6 overflow-hidden">
+
+                  <img
+                    src={app.image}
+                    alt={
+                      typeof app.title === "object"
+                        ? app.title[language] || app.title.en
+                        : app.title
+                    }
+                    className="h-full object-contain transition duration-500 group-hover:scale-105"
+                  />
+
+                </div>
+
+                {/* Content */}
+
+                <div className="p-6">
+
+                  <div className="flex justify-between items-center mb-4">
+
+                    <span className="text-cyan-400 text-sm font-semibold">
+
+                      {categoryTranslations[language][app.category] ||
+                        app.category}
+
+                    </span>
+
+                    <span className="text-gray-500 text-xs">
+                      {app.updated}
+                    </span>
+
+                  </div>
+
+                  <h3 className="text-2xl font-bold mb-3">
+
+                    {typeof app.title === "object"
+                      ? app.title[language] || app.title.en
+                      : app.title}
+
+                  </h3>
+
+                  <p className="text-gray-400 leading-7 mb-6">
+
+                    {typeof app.description === "object"
+                      ? app.description[language] || app.description.en
+                      : app.description}
+
+                  </p>
+
+                  <div className="flex justify-between items-center">
+
+                    <div>
+
+                      <p className="text-gray-500">
+                        {t.size}
+                      </p>
+
+                      <p className="font-semibold text-white">
+                        {app.size}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  {/* ACTION BUTTONS */}
+
+                  <div
+                    className={`grid ${
+                      app.apk
+                        ? "grid-cols-2"
+                        : "grid-cols-1"
+                    } gap-4 mt-8`}
+                  >
+
+                    <a
+                      href={app.playStore}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
+                    >
+                      <FaGooglePlay />
+                      {t.googlePlay}
+                    </a>
+
+                    {app.apk && (
+
+                      <a
+                        href={app.apk}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
+                      >
+                        <FaDownload />
+                        {t.apk}
+                      </a>
+
+                    )}
+
+                  </div>
+
+                </div>
+
+                {/* Hover Glow */}
+
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500" />
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+          {/* Empty State */}
+
+          {filteredApps.length === 0 && (
+
+            <div className="text-center py-24">
+
+              <h2 className="text-3xl font-bold mb-4">
+                {t.noApps}
+              </h2>
+
+              <p className="text-gray-400">
+                {t.noAppsDesc}
+              </p>
 
             </div>
 
           )}
 
-          {/* Image */}
+          {/* CTA */}
 
-          <div className="h-60 bg-black flex items-center justify-center p-6 overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-28"
+          >
 
-            <img
-              src={app.image}
-              alt={
-                typeof app.title === "object"
-                  ? (app.title[language] || app.title.en)
-                  : app.title
-              }
-              className="h-full object-contain transition duration-500 group-hover:scale-105"
-            />
+            <div className="rounded-3xl border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-xl p-12 text-center">
 
-          </div>
+              <h2 className="text-4xl font-black mb-5">
+                {t.moreApps}
+              </h2>
 
-          {/* Content */}
-
-          <div className="p-6">
-
-            <div className="flex justify-between items-center mb-4">
-
-              <span className="text-cyan-400 text-sm font-semibold">
-
-                {categoryTranslations[language][app.category] || app.category}
-
-              </span>
-
-              <span className="text-gray-500 text-xs">
-
-                {app.updated}
-
-              </span>
+              <p className="text-gray-300 max-w-3xl mx-auto leading-8">
+                {t.moreAppsDesc}
+              </p>
 
             </div>
 
-            <h3 className="text-2xl font-bold mb-3">
+          </motion.div>
 
-              {typeof app.title === "object"
-              ? (app.title[language] || app.title.en)
-              : app.title}
+        </div>
 
-            </h3>
-
-            <p className="text-gray-400 leading-7 mb-6">
-
-              {typeof app.description === "object"
-                ? (app.description[language] || app.description.en)
-                : app.description}
-
-            </p>
-
-            <div className="flex justify-between items-center">
-
-              <div>
-
-                <p className="text-gray-500">
-
-                  {t.size}
-
-                </p>
-
-                <p className="font-semibold text-white">
-
-                  {app.size}
-
-                </p>
-
-              </div>
-
-            </div>
-
-                        {/* ACTION BUTTONS */}
-
-            <div className={`grid ${app.apk ? "grid-cols-2" : "grid-cols-1"} gap-4 mt-8`}>
-  <a
-    href={app.playStore}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold h-12 transition duration-300 shadow-lg shadow-cyan-500/30"
-  >
-    <FaGooglePlay />
-    {t.googlePlay}
-  </a>
-
-  {app.apk && (
-    <a
-      href={app.apk}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold h-12 transition duration-300"
-    >
-      <FaDownload />
-      {t.apk}
-    </a>
-  )}
-</div>
-
-</div>
-
-          {/* Hover Glow */}
-
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500" />
-
-        </motion.div>
-
-      ))}
+      </section>
 
     </div>
-
-    {/* Empty State */}
-
-    {filteredApps.length === 0 && (
-
-      <div className="text-center py-24">
-
-        <h2 className="text-3xl font-bold mb-4">
-          {t.noApps}
-        </h2>
-
-        <p className="text-gray-400">
-          {t.noAppsDesc}
-        </p>
-
-      </div>
-
-    )}
-
-    {/* CTA */}
-
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: .6 }}
-      className="mt-28"
-    >
-
-      <div className="rounded-3xl border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-xl p-12 text-center">
-
-        <h2 className="text-4xl font-black mb-5">
-
-          {t.moreApps}
-
-        </h2>
-
-        <p className="text-gray-300 max-w-3xl mx-auto leading-8">
-
-          {t.moreAppsDesc}
-
-        </p>
-
-      </div>
-
-    </motion.div>
-
-  </div>
-
-</section>
-
-</div>
-
   );
 };
 
