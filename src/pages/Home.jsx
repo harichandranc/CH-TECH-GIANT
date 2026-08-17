@@ -18,6 +18,7 @@ import {
   FaReact,
   FaNodeJs,
   FaGooglePlay,
+  FaChevronDown,
 } from "react-icons/fa";
 
 import {
@@ -125,14 +126,12 @@ const latestApps = [
     link:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
   },
-
   {
     key: "fileRenamer",
     image: "/projects/filerenamer.png",
     link:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
   },
-
   {
     key: "webCodshop",
     image: "/projects/webcodshop.png",
@@ -150,36 +149,43 @@ const languages = [
     code: "en",
     path: "/",
     label: "🇺🇸 English",
+    shortLabel: "English",
   },
   {
     code: "zh",
     path: "/zh",
     label: "🇨🇳 简体中文",
+    shortLabel: "中文",
   },
   {
     code: "es",
     path: "/es",
     label: "🇪🇸 Español",
+    shortLabel: "Español",
   },
   {
     code: "pt",
     path: "/pt",
     label: "🇧🇷 Português",
+    shortLabel: "Português",
   },
   {
     code: "de",
     path: "/de",
     label: "🇩🇪 Deutsch",
+    shortLabel: "Deutsch",
   },
   {
     code: "ko",
     path: "/ko",
     label: "🇰🇷 한국어",
+    shortLabel: "한국어",
   },
   {
     code: "ja",
     path: "/ja",
     label: "🇯🇵 日本語",
+    shortLabel: "日本語",
   },
 ];
 
@@ -195,17 +201,15 @@ const Home = () => {
      LANGUAGE
   ======================================================= */
 
+  const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
+
   const language =
-    lang === "zh" ||
-    lang === "es" ||
-    lang === "pt" ||
-    lang === "de" ||
-    lang === "ko" ||
-    lang === "ja"
-      ? lang
-      : "en";
+    supportedLanguages.includes(lang) ? lang : "en";
 
   const t = translations[language];
+
+  const currentLanguage =
+    languages.find((item) => item.code === language) || languages[0];
 
   /* =======================================================
      AUTO LANGUAGE DETECTION
@@ -214,7 +218,8 @@ const Home = () => {
   useEffect(() => {
     if (lang) return;
 
-    const browserLanguage = navigator.language.toLowerCase();
+    const browserLanguage =
+      navigator.language.toLowerCase();
 
     if (browserLanguage.startsWith("zh")) {
       navigate("/zh", { replace: true });
@@ -234,7 +239,7 @@ const Home = () => {
   }, [lang, navigate]);
 
   /* =======================================================
-     SEO
+     SEO URL
   ======================================================= */
 
   const pageUrl =
@@ -252,6 +257,10 @@ const Home = () => {
       ? "https://chtechgiant.com/ja"
       : "https://chtechgiant.com";
 
+  /* =======================================================
+     SEO TITLE
+  ======================================================= */
+
   const pageTitle =
     language === "zh"
       ? "CH TECH GIANT | 应用开发、网站开发、软件开发和游戏开发"
@@ -266,6 +275,10 @@ const Home = () => {
       : language === "ja"
       ? "CH TECH GIANT | アプリ・Web・ソフトウェア・ゲーム開発"
       : "CH TECH GIANT | App Development, Web Development, Game Development & Software Solutions";
+
+  /* =======================================================
+     SEO DESCRIPTION
+  ======================================================= */
 
   const pageDescription =
     language === "zh"
@@ -282,6 +295,10 @@ const Home = () => {
       ? "CH TECH GIANTは、スタートアップ、企業、組織向けに高品質なアプリ、Webサイト、ソフトウェア、ゲーム開発サービスを提供しています。"
       : "CH TECH GIANT provides premium app development, web development, software development and game development services for startups, businesses, and enterprises.";
 
+  /* =======================================================
+     SEO KEYWORDS
+  ======================================================= */
+
   const keywords =
     language === "zh"
       ? "应用开发, 网站开发, 软件开发, 游戏开发, Flutter开发, Android应用, CH TECH GIANT"
@@ -296,6 +313,10 @@ const Home = () => {
       : language === "ja"
       ? "アプリ開発, Web開発, ソフトウェア開発, ゲーム開発, Flutter, Androidアプリ, CH TECH GIANT"
       : "app development, web development, software development, game development, Flutter app development, Android apps, CH TECH GIANT";
+
+  /* =======================================================
+     OG LOCALE
+  ======================================================= */
 
   const ogLocale =
     language === "zh"
@@ -312,6 +333,10 @@ const Home = () => {
       ? "ja_JP"
       : "en_US";
 
+  /* =======================================================
+     SCHEMA LANGUAGE
+  ======================================================= */
+
   const schemaLanguage =
     language === "zh"
       ? "zh-CN"
@@ -326,6 +351,23 @@ const Home = () => {
       : language === "ja"
       ? "ja-JP"
       : "en";
+
+  /* =======================================================
+     CHANGE LANGUAGE
+  ======================================================= */
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+
+    const selected =
+      languages.find(
+        (item) => item.code === selectedLanguage
+      );
+
+    if (selected) {
+      navigate(selected.path);
+    }
+  };
 
   /* =======================================================
      RENDER
@@ -362,56 +404,50 @@ const Home = () => {
           href={pageUrl}
         />
 
-        {/* English */}
+        {/* HREFLANG */}
+
         <link
           rel="alternate"
           hrefLang="en"
           href="https://chtechgiant.com"
         />
 
-        {/* Chinese */}
         <link
           rel="alternate"
           hrefLang="zh-CN"
           href="https://chtechgiant.com/zh"
         />
 
-        {/* Spanish */}
         <link
           rel="alternate"
           hrefLang="es"
           href="https://chtechgiant.com/es"
         />
 
-        {/* Portuguese */}
         <link
           rel="alternate"
           hrefLang="pt-BR"
           href="https://chtechgiant.com/pt"
         />
 
-        {/* German */}
         <link
           rel="alternate"
           hrefLang="de"
           href="https://chtechgiant.com/de"
         />
 
-        {/* Korean */}
         <link
           rel="alternate"
           hrefLang="ko-KR"
           href="https://chtechgiant.com/ko"
         />
 
-        {/* Japanese */}
         <link
           rel="alternate"
           hrefLang="ja-JP"
           href="https://chtechgiant.com/ja"
         />
 
-        {/* Default */}
         <link
           rel="alternate"
           hrefLang="x-default"
@@ -492,11 +528,44 @@ const Home = () => {
       <div className="bg-black text-white overflow-x-hidden">
 
         {/* ===================================================
-            LANGUAGE SWITCHER
+            HEADER / LANGUAGE SWITCHER
         =================================================== */}
 
-        <section className="px-4 pt-8">
-          <div className="flex justify-center gap-3 flex-wrap">
+        <section className="relative px-4 pt-6 sm:pt-8">
+
+          {/* MOBILE LANGUAGE DROPDOWN */}
+
+          <div className="absolute top-5 right-4 z-50 sm:hidden">
+
+            <div className="relative">
+
+              <select
+                value={language}
+                onChange={handleLanguageChange}
+                aria-label="Select language"
+                className="appearance-none bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-xs font-medium rounded-xl pl-3 pr-9 py-2.5 outline-none cursor-pointer shadow-lg"
+              >
+                {languages.map((item) => (
+                  <option
+                    key={item.code}
+                    value={item.code}
+                    className="bg-black text-white"
+                  >
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+
+              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+
+            </div>
+
+          </div>
+
+          {/* DESKTOP LANGUAGE BUTTONS */}
+
+          <div className="hidden sm:flex justify-center gap-3 flex-wrap">
+
             {languages.map((item) => (
               <Link
                 key={item.code}
@@ -510,7 +579,9 @@ const Home = () => {
                 {item.label}
               </Link>
             ))}
+
           </div>
+
         </section>
 
         {/* ===================================================
@@ -518,6 +589,7 @@ const Home = () => {
         =================================================== */}
 
         <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden mt-8">
+
           <video
             autoPlay
             muted
@@ -533,7 +605,8 @@ const Home = () => {
             />
           </video>
 
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/30" />
+
         </section>
 
         {/* ===================================================
@@ -542,7 +615,7 @@ const Home = () => {
 
         <section className="relative px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-14 sm:py-20 md:py-28 overflow-hidden">
 
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-cyan-500/10 blur-[140px] rounded-full"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-cyan-500/10 blur-[140px] rounded-full" />
 
           <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -801,11 +874,13 @@ const Home = () => {
                 <div className="p-6">
 
                   <div className="flex items-center gap-2 text-cyan-400 mb-4">
+
                     <FaGooglePlay />
 
                     <span className="text-sm">
                       {t.googlePlayStore}
                     </span>
+
                   </div>
 
                   <h3 className="text-2xl font-semibold mb-4">
