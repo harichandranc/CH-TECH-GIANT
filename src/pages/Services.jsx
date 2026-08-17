@@ -138,7 +138,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-0 overflow-hidden">
+    <div className="min-h-screen bg-black text-white px-6 py-10 overflow-hidden">
 
       <div className="max-w-7xl mx-auto">
 
