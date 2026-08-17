@@ -4,139 +4,165 @@ const apps = [
     title: {
       en: "World Clock",
       zh: "世界时钟",
+      es: "Reloj mundial",
     },
     category: "Utilities",
     description: {
       en: "View the current time across multiple countries and cities with a beautiful and easy-to-use interface.",
       zh: "通过美观且易于使用的界面查看多个国家和城市的当前时间。",
+      es: "Consulta la hora actual de varios países y ciudades con una interfaz atractiva y fácil de usar.",
     },
     image: "/projects/worldclock.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock",
     apk: "http://147.93.110.58:8080/WorldClock.apk",
   },
+
   {
     id: 2,
     title: {
       en: "File Converter",
       zh: "文件转换器",
+      es: "Convertidor de archivos",
     },
     category: "Utilities",
     description: {
       en: "Convert images, videos, audio, documents, archives, and many more file formats from one app.",
       zh: "在一个应用中转换图片、视频、音频、文档、压缩包及多种文件格式。",
+      es: "Convierte imágenes, vídeos, audio, documentos, archivos comprimidos y muchos otros formatos desde una sola aplicación.",
     },
     image: "/projects/fileconverter.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
     apk: "http://147.93.110.58:8080/FileConverter.apk",
   },
+
   {
     id: 3,
     title: {
       en: "Bulk File Renamer",
       zh: "批量文件重命名",
+      es: "Renombrador masivo de archivos",
     },
     category: "Productivity",
     description: {
       en: "Rename thousands of files instantly using prefixes, suffixes, numbering, replacement rules, and more.",
       zh: "使用前缀、后缀、编号、替换规则等功能快速批量重命名数千个文件。",
+      es: "Renombra miles de archivos al instante utilizando prefijos, sufijos, numeración, reglas de reemplazo y mucho más.",
     },
     image: "/projects/filerenamer.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
     apk: "http://147.93.110.58:8080/BulkFileRenamer.apk",
   },
+
   {
     id: 4,
     title: {
       en: "Web Codshop",
       zh: "Web Codshop",
+      es: "Web Codshop",
     },
     category: "Education",
     description: {
       en: "Marketplace dedicated to website source code, web templates, and professional web development resources.",
       zh: "专注于网站源码、网页模板和专业 Web 开发资源的市场平台。",
+      es: "Marketplace dedicado a códigos fuente de sitios web, plantillas web y recursos profesionales para el desarrollo web.",
     },
     image: "/projects/webcodshop.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
     apk: null,
   },
+
   {
     id: 5,
     title: {
       en: "Invoice Maker",
       zh: "发票制作器",
+      es: "Creador de facturas",
     },
     category: "Business",
     description: {
       en: "Generate professional invoices, quotations, and receipts with PDF export and sharing.",
       zh: "创建专业发票、报价单和收据，并支持导出 PDF 和分享。",
+      es: "Crea facturas, presupuestos y recibos profesionales con opciones para exportar y compartir en PDF.",
     },
     image: "/projects/invoicemaker.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator",
     apk: "http://147.93.110.58:8080/InvoiceMaker.apk",
   },
+
   {
     id: 6,
     title: {
       en: "CGPA & SGPA Calculator",
       zh: "CGPA 和 SGPA 计算器",
+      es: "Calculadora de CGPA y SGPA",
     },
     category: "Education",
     description: {
       en: "Calculate semester SGPA and overall CGPA accurately with support for multiple grading systems.",
       zh: "支持多种评分制度，准确计算学期 SGPA 和总 CGPA。",
+      es: "Calcula con precisión el SGPA del semestre y el CGPA general con compatibilidad para varios sistemas de calificación.",
     },
     image: "/projects/cgpacalculator.jpg",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator",
     apk: "http://147.93.110.58:8080/CGPASGPACalculator.apk",
   },
+
   {
     id: 7,
     title: {
       en: "Image Compressor",
       zh: "图片压缩器",
+      es: "Compresor de imágenes",
     },
     category: "Photography",
     description: {
       en: "Compress images to your desired file size while maintaining excellent quality.",
       zh: "在保持高质量的同时，将图片压缩到所需文件大小。",
+      es: "Comprime imágenes al tamaño de archivo deseado manteniendo una excelente calidad.",
     },
     image: "/projects/image-compressor.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
     apk: null,
   },
+
   {
     id: 8,
     title: {
       en: "Image to PDF Converter",
       zh: "图片转 PDF",
+      es: "Convertidor de imagen a PDF",
     },
     category: "Productivity",
     description: {
       en: "Convert any image format to PDF.",
       zh: "将任何图片格式快速转换为 PDF 文件。",
+      es: "Convierte cualquier formato de imagen a un archivo PDF de forma rápida y sencilla.",
     },
     image: "/projects/img2pdf copy.png",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter",
     apk: "http://147.93.110.58:8080/ImageToPDFConverter.apk",
   },
+
   {
     id: 9,
     title: {
       en: "PDF Lock Unlock",
       zh: "PDF 加密与解密",
+      es: "Bloquear y desbloquear PDF",
     },
     category: "Utilities",
     description: {
       en: "Lock and unlock PDF files with a password.",
       zh: "使用密码对 PDF 文件进行加密和解密。",
+      es: "Protege y desbloquea archivos PDF mediante una contraseña.",
     },
     image: "/projects/pdf_lock_unlock.jpeg",
     playStore:

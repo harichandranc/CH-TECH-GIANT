@@ -1,9 +1,11 @@
 import en from "./en";
 import zh from "./zh";
+import es from "./es";
 
 export const translations = {
   en,
   zh,
+  es,
 };
 
 export const categoryTranslations = {
@@ -27,5 +29,16 @@ export const categoryTranslations = {
     Photography: "摄影",
     Finance: "金融",
     PDF: "PDF 工具",
+  },
+
+  es: {
+    All: "Todas",
+    Utilities: "Utilidades",
+    Productivity: "Productividad",
+    Education: "Educación",
+    Business: "Negocios",
+    Photography: "Fotografía",
+    Finance: "Finanzas",
+    PDF: "Herramientas PDF",
   },
 };
