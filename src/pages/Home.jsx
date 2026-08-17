@@ -535,7 +535,7 @@ const Home = () => {
 
           {/* MOBILE LANGUAGE DROPDOWN */}
 
-          <div className="absolute top-4 right-4 z-50 sm:hidden">
+          <div className="absolute top-2 right-4 z-50 sm:hidden">
 
             <div className="relative">
 
