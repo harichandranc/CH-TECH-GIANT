@@ -164,7 +164,7 @@ const Services = () => {
         navigate(selectedLanguage.path);
       }
     }}
-    className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+    className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
   >
     {languages.map((item) => (
       <option
