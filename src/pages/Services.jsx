@@ -138,7 +138,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-24 overflow-hidden">
+    <div className="min-h-screen bg-black text-white px-6 py-0 overflow-hidden">
 
       <div className="max-w-7xl mx-auto">
 
@@ -151,9 +151,7 @@ const Services = () => {
         <div className="flex justify-center mb-2 md:mb-16">
 
           {/* MOBILE LANGUAGE DROPDOWN */}
-
-          {/* MOBILE LANGUAGE DROPDOWN */}
-<div className="md:hidden fixed top-4 right-4 z-50">
+          <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
   <select
     id="mobile-language"
     value={language}
@@ -166,7 +164,7 @@ const Services = () => {
         navigate(selectedLanguage.path);
       }
     }}
-    className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816]/95 px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+    className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
   >
     {languages.map((item) => (
       <option
@@ -179,6 +177,7 @@ const Services = () => {
     ))}
   </select>
 </div>
+
 
           {/* DESKTOP LANGUAGE BUTTONS */}
 
