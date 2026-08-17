@@ -135,6 +135,63 @@ const en = {
         "Premium website templates, source codes, and college projects with reports Marketplace app.",
     },
   },
-};
 
+  // =========================
+// SERVICES PAGE
+// =========================
+
+ourServices: "Our Services",
+
+whatWe: "What We",
+
+provide: "Provide",
+
+servicesDescription:
+  "CH TECH GIANT delivers premium software solutions, modern applications, futuristic websites, and scalable digital experiences for businesses.",
+
+serviceData: {
+  appDevelopment: {
+    title: "App Development",
+    description:
+      "Android and cross-platform mobile app development with premium UI and smooth performance.",
+  },
+
+  softwareDevelopment: {
+    title: "Software Development",
+    description:
+      "Custom desktop and enterprise software development solutions.",
+  },
+
+  webDevelopment: {
+    title: "Web Development",
+    description:
+      "Modern responsive websites and scalable web applications.",
+  },
+
+  gameDevelopment: {
+    title: "Game Development",
+    description:
+      "Interactive 2D & 3D gaming experiences with immersive gameplay.",
+  },
+
+  itConsulting: {
+    title: "IT Consulting",
+    description:
+      "Professional technology consulting and business digital transformation solutions.",
+  },
+
+  pamphletDesign: {
+    title: "Pamphlet Design",
+    description:
+      "Modern futuristic pamphlets and flyers with premium templates.",
+  },
+
+  invoiceDesign: {
+    title: "Invoice Design",
+    description:
+      "Modern futuristic invoice templates with premium designs.",
+  },
+},
+
+};
 export default en;

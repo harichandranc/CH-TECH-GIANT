@@ -1,64 +1,99 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
+import { translations } from "../locales";
 
 const services = [
   {
-    title: "App Development",
-    description:
-      "Android and cross-platform mobile app development with premium UI and smooth performance.",
+    key: "appDevelopment",
     image: "/services/app.webp",
-    link: "/../app-development",
+    link: "/app-development",
   },
 
   {
-    title: "Software Development",
-    description:
-      "Custom desktop and enterprise software development solutions.",
+    key: "softwareDevelopment",
     image: "/services/software.jpg",
-    link: "/../software-development",
+    link: "/software-development",
   },
 
   {
-    title: "Web Development",
-    description:
-      "Modern responsive websites and scalable web applications.",
+    key: "webDevelopment",
     image: "/services/web.jpg",
-    link: "/../web-development",
+    link: "/web-development",
   },
 
   {
-    title: "Game Development",
-    description:
-      "Interactive 2D & 3D gaming experiences with immersive gameplay.",
+    key: "gameDevelopment",
     image: "/services/game.jpeg",
-    link: "/../game-development",
+    link: "/game-development",
   },
 
   {
-    title: "IT Consulting",
-    description:
-      "Professional technology consulting and business digital transformation solutions.",
+    key: "itConsulting",
     image: "/services/itconsult.jpg",
-    link: "/../it-consulting",
+    link: "/it-consulting",
   },
 
   {
-    title: "Pamphlet Design",
-    description:
-      "Modern futuristic Pamphlets and flyers with premium templates.",
+    key: "pamphletDesign",
     image: "/services/pamphlet.png",
-    link: "/../pamphlet-design",
+    link: "/pamphlet-design",
   },
+
   {
-    title: "Invoice Design",
-    description:
-      "Modern futuristic Invoice templates with premium designs.",
+    key: "invoiceDesign",
     image: "/services/invoice.png",
-    link: "/../invoice-design",
+    link: "/invoice-design",
   },
 ];
 
+const supportedLanguages = [
+  "zh",
+  "es",
+  "pt",
+  "de",
+  "ko",
+  "ja",
+];
+
 const Services = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  const language = supportedLanguages.includes(lang) ? lang : "en";
+
+  const t = translations[language];
+
+  // Automatically detect browser language on the base /services URL
+  useEffect(() => {
+    if (lang) return;
+
+    const browserLanguage = navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh/services", { replace: true });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es/services", { replace: true });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt/services", { replace: true });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de/services", { replace: true });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko/services", { replace: true });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja/services", { replace: true });
+    }
+  }, [lang, navigate]);
+
+  const getLocalizedPath = (path) => {
+    if (language === "en") {
+      return path;
+    }
+
+    return `/${language}${path}`;
+  };
+
   return (
     <div className="min-h-screen bg-black text-white px-6 py-24 overflow-hidden">
 
@@ -73,17 +108,19 @@ const Services = () => {
         >
 
           <p className="text-cyan-400 uppercase tracking-[4px] mb-4">
-            Our Services
+            {t.ourServices}
           </p>
 
           <h1 className="text-5xl md:text-7xl font-black mb-6">
-            What We <span className="text-cyan-400">Provide</span>
+            {t.whatWe}
+            {" "}
+            <span className="text-cyan-400">
+              {t.provide}
+            </span>
           </h1>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-            CH TECH GIANT delivers premium software solutions,
-            modern applications, futuristic websites, and
-            scalable digital experiences for businesses.
+            {t.servicesDescription}
           </p>
 
         </motion.div>
@@ -91,62 +128,70 @@ const Services = () => {
         {/* SERVICES GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {services.map((service, index) => (
-            <Link
-              to={service.link}
-              key={index}
-              className="block"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl cursor-pointer h-full"
+          {services.map((service, index) => {
+            const serviceData = t.serviceData[service.key];
+
+            return (
+              <Link
+                to={getLocalizedPath(service.link)}
+                key={service.key}
+                className="block"
               >
 
-                {/* IMAGE */}
-                <div className="relative h-72 overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0, y: 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                  }}
+                  whileHover={{
+                    y: -10,
+                  }}
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl cursor-pointer h-full"
+                >
 
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                  />
+                  {/* IMAGE */}
+                  <div className="relative h-72 overflow-hidden">
 
-                  {/* OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <img
+                      src={service.image}
+                      alt={serviceData.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    />
 
-                </div>
-
-                {/* CONTENT */}
-                <div className="relative p-8 -mt-20 z-10">
-
-                  <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl p-6">
-
-                    <h2 className="text-3xl font-bold mb-4">
-                      {service.title}
-                    </h2>
-
-                    <p className="text-gray-400 leading-relaxed">
-                      {service.description}
-                    </p>
+                    {/* OVERLAY */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
+                    </div>
 
                   </div>
 
-                </div>
+                  {/* CONTENT */}
+                  <div className="relative p-8 -mt-20 z-10">
 
-                {/* GLOW EFFECT */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500"></div>
+                    <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl p-6">
 
-              </motion.div>
-            </Link>
-          ))}
+                      <h2 className="text-3xl font-bold mb-4">
+                        {serviceData.title}
+                      </h2>
+
+                      <p className="text-gray-400 leading-relaxed">
+                        {serviceData.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  {/* GLOW EFFECT */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500">
+                  </div>
+
+                </motion.div>
+
+              </Link>
+            );
+          })}
 
         </div>
 
