@@ -1712,29 +1712,29 @@ const ko = {
     },
   },
   // =========================
-  // PRIVACY POLICY PAGE
-  // =========================
+// PRIVACY POLICY PAGE
+// =========================
 
-  privacyPolicy: {
-    seo: {
-      title: "개인정보 처리방침 | CH TECH GIANT",
-      description:
-        "CH TECH GIANT (OPC) PRIVATE LIMITED의 개인정보 처리방침을 확인하고, 당사가 귀하의 정보를 어떻게 수집, 이용, 보호 및 관리하는지 알아보세요.",
-      keywords:
-        "CH TECH GIANT 개인정보 처리방침, 개인정보 보호, 데이터 보호, 개인정보, 데이터 보안",
-    },
+privacyPolicy: {
+  seo: {
+    title: "개인정보 처리방침 | CH TECH GIANT",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED의 개인정보 처리방침을 확인하고, 당사가 귀하의 정보를 어떻게 수집, 이용, 보호 및 관리하는지 알아보세요.",
+    keywords:
+      "CH TECH GIANT 개인정보 처리방침, 개인정보 보호, 데이터 보호, 개인정보, 데이터 보안",
+  },
 
-    title: "개인정보 처리방침",
+  title: "개인정보 처리방침",
 
-    subtitle:
-      "귀하의 개인정보 보호와 데이터 보안은 저희에게 매우 중요합니다.",
+  subtitle:
+    "귀하의 개인정보 보호와 데이터 보안은 저희에게 매우 중요합니다.",
 
-    lastUpdated: "최종 업데이트 • 2026년 5월 23일",
+  lastUpdated: "최종 업데이트 • 2026년 5월 23일",
 
-    sections: {
-      companyInformation: {
-        title: "회사 정보",
-        content: `
+  sections: [
+    {
+      title: "회사 정보",
+      content: `
 CH TECH GIANT (OPC) PRIVATE LIMITED는 인도 카르나타카주 다바나게레에 본사를 둔 기술 기업입니다.
 
 당사는 다음과 같은 서비스를 전문으로 제공합니다:
@@ -1747,12 +1747,12 @@ CH TECH GIANT (OPC) PRIVATE LIMITED는 인도 카르나타카주 다바나게레
 웹사이트: https://chtechgiant.com
 이메일: info@chtechgiant.com
 전화번호: +91 9980785020
-        `,
-      },
+      `,
+    },
 
-      informationWeCollect: {
-        title: "수집하는 정보",
-        content: `
+    {
+      title: "수집하는 정보",
+      content: `
 당사 웹사이트 또는 서비스를 이용하실 때 개인정보 및 기술 정보를 수집할 수 있습니다.
 
 수집될 수 있는 정보는 다음과 같습니다:
@@ -1765,12 +1765,12 @@ CH TECH GIANT (OPC) PRIVATE LIMITED는 인도 카르나타카주 다바나게레
 • 브라우저 정보
 • 기기 정보
 • 웹사이트 분석 데이터
-        `,
-      },
+      `,
+    },
 
-      howWeUseInformation: {
-        title: "정보의 이용 방법",
-        content: `
+    {
+      title: "정보의 이용 방법",
+      content: `
 수집된 정보는 다음과 같은 목적으로 사용됩니다:
 • 서비스 제공 및 개선
 • 문의 및 지원 요청에 대한 답변
@@ -1780,12 +1780,12 @@ CH TECH GIANT (OPC) PRIVATE LIMITED는 인도 카르나타카주 다바나게레
 • 무단 활동 방지
 
 당사는 귀하의 개인정보를 제3자에게 판매하거나 대여하지 않습니다.
-        `,
-      },
+      `,
+    },
 
-      thirdPartyServices: {
-        title: "제3자 서비스",
-        content: `
+    {
+      title: "제3자 서비스",
+      content: `
 당사 웹사이트에는 다음과 같은 제3자 플랫폼의 콘텐츠 또는 연동 기능이 포함될 수 있습니다:
 • YouTube
 • Google 서비스
@@ -1793,21 +1793,21 @@ CH TECH GIANT (OPC) PRIVATE LIMITED는 인도 카르나타카주 다바나게레
 • 분석 서비스 제공업체
 
 이러한 서비스는 각자의 개인정보 처리방침에 따라 독립적으로 데이터를 수집할 수 있습니다.
-        `,
-      },
+      `,
+    },
 
-      dataSecurity: {
-        title: "데이터 보안",
-        content: `
+    {
+      title: "데이터 보안",
+      content: `
 CH TECH GIANT는 무단 접근, 오용, 공개 또는 파괴로부터 사용자 데이터를 보호하기 위해 업계 표준의 보안 조치를 사용합니다.
 
 그러나 어떠한 온라인 플랫폼도 완전한 보안을 보장할 수는 없습니다.
-        `,
-      },
+      `,
+    },
 
-      dataRetention: {
-        title: "데이터 보관",
-        content: `
+    {
+      title: "데이터 보관",
+      content: `
 당사는 다음과 같은 목적에 필요한 기간 동안만 사용자 정보를 보관합니다:
 • 서비스 제공
 • 법적 의무 준수
@@ -1815,12 +1815,12 @@ CH TECH GIANT는 무단 접근, 오용, 공개 또는 파괴로부터 사용자 
 • 보안 목적
 
 사용자는 당사에 연락하여 자신의 데이터 삭제를 요청할 수 있습니다.
-        `,
-      },
+      `,
+    },
 
-      yourRights: {
-        title: "귀하의 권리",
-        content: `
+    {
+      title: "귀하의 권리",
+      content: `
 귀하는 다음과 같은 권리를 가질 수 있습니다:
 • 개인정보에 대한 접근
 • 부정확한 정보의 수정
@@ -1829,27 +1829,28 @@ CH TECH GIANT는 무단 접근, 오용, 공개 또는 파괴로부터 사용자 
 • 저장된 데이터 사본 요청
 
 이러한 권리를 행사하려면 다음 이메일로 문의해 주세요:
+
 info@chtechgiant.com
-        `,
-      },
+      `,
+    },
 
-      externalLinks: {
-        title: "외부 링크",
-        content: `
+    {
+      title: "외부 링크",
+      content: `
 당사 웹사이트에는 외부 웹사이트로 연결되는 링크가 포함될 수 있습니다. 당사는 제3자 웹사이트의 개인정보 보호 관행이나 콘텐츠에 대해 책임을 지지 않습니다.
-        `,
-      },
+      `,
+    },
 
-      childrensPrivacy: {
-        title: "아동 개인정보 보호",
-        content: `
+    {
+      title: "아동 개인정보 보호",
+      content: `
 당사의 서비스는 만 13세 미만의 아동을 대상으로 하지 않습니다. 당사는 아동의 개인정보를 고의로 수집하지 않습니다.
-        `,
-      },
+      `,
+    },
 
-      policyUpdates: {
-        title: "정책 업데이트",
-        content: `
+    {
+      title: "정책 업데이트",
+      content: `
 당사는 다음과 같은 사항을 반영하기 위해 본 개인정보 처리방침을 정기적으로 업데이트할 수 있습니다:
 • 법률 변경
 • 서비스 업데이트
@@ -1857,26 +1858,26 @@ info@chtechgiant.com
 • 사업 변경
 
 업데이트된 버전은 이 페이지에 게시됩니다.
-        `,
-      },
+      `,
     },
+  ],
 
-    contact: {
-      title: "문의하기",
+  contact: {
+    title: "문의하기",
 
-      company:
-        "CH TECH GIANT (OPC) PRIVATE LIMITED",
+    company:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED",
 
-      address:
-        "Davanagere, Karnataka - 577001",
+    address:
+      "Davanagere, Karnataka - 577001",
 
-      phone:
-        "+91 9980785020",
+    phone:
+      "+91 9980785020",
 
-      email:
-        "info@chtechgiant.com",
-    },
+    email:
+      "info@chtechgiant.com",
   },
+},
 
 };
 
