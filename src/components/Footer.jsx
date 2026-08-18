@@ -1,22 +1,13 @@
-import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-
 import {
-  HiMenuAlt3,
-  HiX,
-  HiChevronDown,
-} from "react-icons/hi";
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
-const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
-  { name: "Services", path: "/services" },
-  { name: "Our Apps", path: "/apps" },
-];
+import { NavLink } from "react-router-dom";
 
 const serviceLinks = [
   {
@@ -49,300 +40,224 @@ const serviceLinks = [
   },
 ];
 
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const location = useLocation();
-
-  /*
-   * =====================================================
-   * DETECT CURRENT LANGUAGE
-   * =====================================================
-   *
-   * English:
-   * /
-   * /about
-   * /services
-   *
-   * Chinese:
-   * /zh
-   * /zh/about
-   * /zh/services
-   *
-   * Spanish:
-   * /es
-   * /es/about
-   * /es/services
-   *
-   * Portuguese:
-   * /pt
-   * /pt/about
-   * /pt/services
-   *
-   * German:
-   * /de
-   * /de/about
-   * /de/services
-   *
-   * Korean:
-   * /ko
-   * /ko/about
-   * /ko/services
-   *
-   * Japanese:
-   * /ja
-   * /ja/about
-   * /ja/services
-   */
-
-  const pathParts = location.pathname
-    .split("/")
-    .filter(Boolean);
-
-  const currentLang = supportedLanguages.includes(pathParts[0])
-    ? pathParts[0]
-    : "en";
-
-  /*
-   * =====================================================
-   * LOCALIZED PATH
-   * =====================================================
-   *
-   * This keeps the visitor in the current language.
-   *
-   * Example:
-   *
-   * Current page:
-   * /zh/portfolio
-   *
-   * Clicking About:
-   * /zh/about
-   *
-   * Clicking Services:
-   * /zh/services
-   *
-   * Clicking App Development:
-   * /zh/app-development
-   *
-   * English stays without a language prefix.
-   */
-
-  const localizedPath = (path) => {
-    if (currentLang === "en") {
-      return path;
-    }
-
-    return `/${currentLang}${path}`;
-  };
-
-  /*
-   * Close mobile menu when clicking a navigation link.
-   */
-
-  const handleNavigation = () => {
-    setMenuOpen(false);
-  };
-
+function Footer() {
   return (
-    <header className="sticky top-0 z-50 border-b border-cyan-500/10 backdrop-blur-xl bg-black/30">
+    <footer className="border-t border-cyan-500/10 bg-[#050816] pt-12 sm:pt-16 pb-8 px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto w-full">
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* TOP GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
 
-        <div className="flex items-center justify-between h-20">
-
-          {/* =================================================
-              LOGO
-          ================================================= */}
-
-          <Link
-            to={localizedPath("/")}
-            onClick={handleNavigation}
-            className="flex items-center"
-          >
-            <span className="text-2xl font-bold tracking-wide text-white">
+          {/* COMPANY */}
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-5">
               CH TECH GIANT
-            </span>
-          </Link>
+            </h2>
 
-          {/* =================================================
-              DESKTOP NAVIGATION
-          ================================================= */}
+            <p className="text-gray-400 leading-7 text-sm sm:text-base mb-6">
+              Premium software company delivering modern websites,
+              mobile apps, software solutions, and digital experiences
+              for startups and businesses.
+            </p>
 
-          <nav className="hidden md:flex items-center gap-8">
+            {/* SOCIALS */}
+            <div className="flex flex-wrap gap-3">
 
-            {/* MAIN NAVIGATION */}
-
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={localizedPath(link.path)}
-                className={({ isActive }) =>
-                  `relative text-sm font-medium transition-all duration-300 ${
-                    isActive
-                      ? "text-cyan-400"
-                      : "text-gray-300 hover:text-cyan-300"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-
-            {/* =================================================
-                SERVICES DROPDOWN
-            ================================================= */}
-
-            <div className="relative group">
-
-              <button
-                type="button"
-                className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-cyan-300 transition-all duration-300"
-              >
-                Services
-
-                <HiChevronDown className="text-lg" />
-              </button>
-
-              <div
+              <a
+                href="https://www.facebook.com/CHTECHGIANT/"
+                target="_blank"
+                rel="noreferrer"
                 className="
-                  absolute
-                  top-12
-                  right-0
-                  w-72
-                  rounded-2xl
-                  border
-                  border-cyan-500/10
-                  bg-[#0b1120]/95
-                  backdrop-blur-xl
-                  shadow-2xl
-                  p-3
-                  opacity-0
-                  invisible
-                  group-hover:opacity-100
-                  group-hover:visible
-                  transition-all
-                  duration-300
+                  w-10 h-10 sm:w-11 sm:h-11
+                  rounded-xl
+                  border border-cyan-500/10
+                  bg-white/5
+                  flex items-center justify-center
+                  text-gray-300
+                  hover:bg-cyan-500
+                  hover:text-black
+                  transition-all duration-300
                 "
               >
+                <FaFacebookF />
+              </a>
 
-                <div className="flex flex-col gap-1">
+              <a
+                href="https://www.instagram.com/chtechgiant/"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  w-10 h-10 sm:w-11 sm:h-11
+                  rounded-xl
+                  border border-cyan-500/10
+                  bg-white/5
+                  flex items-center justify-center
+                  text-gray-300
+                  hover:bg-cyan-500
+                  hover:text-black
+                  transition-all duration-300
+                "
+              >
+                <FaInstagram />
+              </a>
 
-                  {serviceLinks.map((service) => (
-                    <NavLink
-                      key={service.name}
-                      to={localizedPath(service.path)}
-                      className={({ isActive }) =>
-                        `px-4 py-3 rounded-xl text-sm transition-all duration-300 ${
-                          isActive
-                            ? "bg-cyan-500/20 text-cyan-300"
-                            : "text-gray-300 hover:bg-white/5 hover:text-cyan-300"
-                        }`
-                      }
-                    >
-                      {service.name}
-                    </NavLink>
-                  ))}
+              <a
+                href="https://wa.me/919980785020"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  w-10 h-10 sm:w-11 sm:h-11
+                  rounded-xl
+                  border border-cyan-500/10
+                  bg-white/5
+                  flex items-center justify-center
+                  text-gray-300
+                  hover:bg-cyan-500
+                  hover:text-black
+                  transition-all duration-300
+                "
+              >
+                <FaWhatsapp />
+              </a>
 
-                </div>
+            </div>
+          </div>
 
+          {/* QUICK LINKS */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-5">
+              Quick Links
+            </h3>
+
+            <div className="flex flex-col gap-2.5 sm:gap-3">
+
+              <NavLink
+                to="/"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                About
+              </NavLink>
+
+              <NavLink
+                to="/apps"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Our Apps
+              </NavLink>
+
+              <NavLink
+                to="/portfolio"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Portfolio
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Contact
+              </NavLink>
+
+              <NavLink
+                to="/privacy-policy"
+                className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+              >
+                Privacy Policy
+              </NavLink>
+
+            </div>
+          </div>
+
+          {/* SERVICES */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-5">
+              Services
+            </h3>
+
+            <div className="flex flex-col gap-2.5 sm:gap-3">
+
+              {serviceLinks.map((service) => (
+                <NavLink
+                  key={service.name}
+                  to={service.path}
+                  className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
+                >
+                  {service.name}
+                </NavLink>
+              ))}
+
+            </div>
+          </div>
+
+          {/* CONTACT */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-5">
+              Contact
+            </h3>
+
+            <div className="flex flex-col gap-4 sm:gap-5 text-gray-400 text-sm sm:text-base">
+
+              <div className="flex items-start gap-3 sm:gap-4">
+                <FaMapMarkerAlt className="mt-1 text-cyan-400 flex-shrink-0" />
+
+                <p>
+                  Davanagere,
+                  Karnataka - 577001
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 sm:gap-4">
+                <FaPhoneAlt className="text-cyan-400 flex-shrink-0" />
+
+                <a
+                  href="tel:+919980785020"
+                  className="hover:text-cyan-300 transition"
+                >
+                  +91 9980785020
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3 sm:gap-4">
+                <FaEnvelope className="text-cyan-400 flex-shrink-0" />
+
+                <a
+                  href="mailto:info@chtechgiant.com"
+                  className="hover:text-cyan-300 transition break-all"
+                >
+                  info@chtechgiant.com
+                </a>
               </div>
 
             </div>
+          </div>
 
-          </nav>
+        </div>
 
-          {/* =================================================
-              MOBILE MENU BUTTON
-          ================================================= */}
+        {/* BOTTOM */}
+        <div className="border-t border-white/10 mt-12 sm:mt-14 pt-6 flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-4 text-center lg:text-left text-xs sm:text-sm text-gray-500">
 
-          <button
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={
-              menuOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-            }
-            aria-expanded={menuOpen}
-            className="md:hidden text-white text-3xl"
-          >
-            {menuOpen ? <HiX /> : <HiMenuAlt3 />}
-          </button>
+          <p className="leading-relaxed">
+            © 2026 CH TECH GIANT (OPC) PRIVATE LIMITED.
+            All Rights Reserved.
+          </p>
+
+          <p className="leading-relaxed">
+            Designed & Developed by CH TECH GIANT
+          </p>
 
         </div>
 
       </div>
-
-      {/* =====================================================
-          MOBILE MENU
-      ===================================================== */}
-
-      {menuOpen && (
-        <div className="md:hidden border-t border-cyan-500/10 bg-[#0b1120]/95 backdrop-blur-xl">
-
-          <div className="flex flex-col px-6 py-6 gap-3">
-
-            {/* =================================================
-                MOBILE MAIN NAVIGATION
-            ================================================= */}
-
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={localizedPath(link.path)}
-                onClick={handleNavigation}
-                className={({ isActive }) =>
-                  `px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
-                    isActive
-                      ? "bg-cyan-500/20 text-cyan-300"
-                      : "text-gray-300 hover:bg-white/5 hover:text-cyan-300"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-
-            {/* =================================================
-                MOBILE SERVICES
-            ================================================= */}
-
-            <div className="pt-2">
-
-              <p className="text-cyan-400 text-sm font-semibold mb-3 px-2">
-                Services
-              </p>
-
-              <div className="flex flex-col gap-2">
-
-                {serviceLinks.map((service) => (
-                  <NavLink
-                    key={service.name}
-                    to={localizedPath(service.path)}
-                    onClick={handleNavigation}
-                    className={({ isActive }) =>
-                      `px-4 py-3 rounded-xl text-sm transition-all duration-300 ${
-                        isActive
-                          ? "bg-cyan-500/20 text-cyan-300"
-                          : "text-gray-300 hover:bg-white/5 hover:text-cyan-300"
-                      }`
-                    }
-                  >
-                    {service.name}
-                  </NavLink>
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      )}
-
-    </header>
+    </footer>
   );
 }
 
-export default Navbar;
+export default Footer;
