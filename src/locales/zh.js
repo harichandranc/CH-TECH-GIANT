@@ -1584,134 +1584,124 @@ const zh = {
     agreement:
       "提交此表单即表示您同意我们就您的咨询与您联系。",
   },
+    // =========================
+  // PORTFOLIO PAGE
   // =========================
-// PORTFOLIO PAGE
-// =========================
 
-portfolio: {
-  seo: {
-    title: "作品集 | CH TECH GIANT",
+  portfolio: {
+    seo: {
+      title: "作品集 | CH TECH GIANT",
+      description:
+        "探索由 CH TECH GIANT 开发的网站、移动应用、软件系统和数字项目。",
+      keywords:
+        "CH TECH GIANT 作品集, 网站开发项目, 移动应用项目, 软件项目, 应用开发作品集, 软件开发作品集",
+    },
+
+    eyebrow: "我们的作品集",
+
+    title: "精选",
+
+    titleHighlight: "项目",
+
     description:
-      "探索 CH TECH GIANT 的项目作品集，包括高端移动应用、网站、软件系统和数字解决方案。",
-    keywords:
-      "CH TECH GIANT 作品集, 应用开发项目, 网站开发项目, 软件项目, 移动应用, 软件开发作品集",
-  },
+      "探索由 CH TECH GIANT 打造的高品质网站、移动应用、软件系统和游戏开发项目。",
 
-  eyebrow: "我们的作品集",
-
-  title: "精选",
-
-  titleHighlight: "项目",
-
-  description:
-    "探索由 CH TECH GIANT 打造的高端网站、移动应用、软件系统和游戏开发项目。",
-
-  filters: {
-    all: "全部",
-    web: "网站",
-    app: "应用",
-    software: "软件",
-    game: "游戏",
-  },
-
-  projects: {
-    webCodshop: {
-      title: "Web Codshop",
-      category: "应用",
-      description:
-        "提供高端网站模板、源代码和大学项目的综合市场应用。",
-      action: "安装应用",
+    filters: {
+      all: "全部",
+      web: "网站",
+      app: "应用",
+      software: "软件",
+      game: "游戏",
     },
 
-    cgpaCalculator: {
-      title: "CGPA SGPA 计算器",
-      category: "应用",
-      description:
-        "智能 CGPA 和 SGPA 成绩计算移动应用。",
-      action: "安装应用",
+    categories: {
+      app: "应用",
+      web: "网站",
+      software: "软件",
+      game: "游戏",
     },
 
-    fileConverter: {
-      title: "文件转换器",
-      category: "应用",
-      description:
-        "高级多格式文件转换工具。",
-      action: "安装应用",
+    actions: {
+      installApp: "安装应用",
+      viewSoftware: "查看软件",
+      visitWebsite: "访问网站",
     },
 
-    worldClock: {
-      title: "世界时钟应用",
-      category: "应用",
-      description:
-        "现代化的全球时区追踪应用。",
-      action: "安装应用",
-    },
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "提供高品质网站模板、源代码和大学项目的市场应用。",
+      },
 
-    fileRenamer: {
-      title: "文件重命名器",
-      category: "应用",
-      description:
-        "批量文件重命名工具应用。",
-      action: "安装应用",
-    },
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA 计算器",
+        description:
+          "智能 CGPA 和 SGPA 成绩计算移动应用。",
+      },
 
-    schoolERP: {
-      title: "学校 ERP 系统",
-      category: "软件",
-      description:
-        "通过集中式仪表板智能管理学生、教职员工、学术事务、考勤以及学校运营。",
-      action: "查看软件",
-    },
+      fileConverter: {
+        title: "文件转换器",
+        description:
+          "高级多格式文件转换工具。",
+      },
 
-    hospitalManagement: {
-      title: "医院管理系统",
-      category: "软件",
-      description:
-        "安全的基于角色的医院管理系统，通过仪表板管理科室、医生、员工、患者以及医院行政事务。",
-      action: "查看软件",
-    },
+      worldClock: {
+        title: "世界时钟应用",
+        description:
+          "现代化的全球时区追踪应用。",
+      },
 
-    invoiceMaker: {
-      title: "发票制作器",
-      category: "应用",
-      description:
-        "专业的发票生成应用。",
-      action: "安装应用",
-    },
+      fileRenamer: {
+        title: "文件重命名工具",
+        description:
+          "批量文件重命名实用工具。",
+      },
 
-    pdfConverter: {
-      title: "PDF 转换器",
-      category: "网站",
-      description:
-        "将图像转换为高质量 PDF 文件。",
-      action: "访问网站",
-    },
+      schoolErp: {
+        title: "学校 ERP 系统",
+        description:
+          "通过集中式智能管理平台，高效管理学生、教职员工、教学、考勤以及学校运营。",
+      },
 
-    pdfLockUnlock: {
-      title: "PDF 加密解锁",
-      category: "应用",
-      description:
-        "使用密码保护和解锁 PDF 文件。",
-      action: "安装应用",
-    },
+      hospitalManagementSystem: {
+        title: "医院管理系统",
+        description:
+          "安全的基于角色的医院管理系统，通过统一仪表板管理科室、医生、工作人员、患者和医院行政事务。",
+      },
 
-    sampleFiles: {
-      title: "示例文件",
-      category: "网站",
-      description:
-        "下载各种类型的示例文件。",
-      action: "访问网站",
-    },
+      invoiceMaker: {
+        title: "发票制作工具",
+        description:
+          "专业的发票生成移动应用。",
+      },
 
-    imageToPdf: {
-      title: "图片转 PDF",
-      category: "应用",
-      description:
-        "将图像转换为高质量 PDF 文件。",
-      action: "安装应用",
+      pdfConverter: {
+        title: "PDF 转换器",
+        description:
+          "将图片转换为高质量 PDF 文件。",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF 加密与解锁",
+        description:
+          "使用密码保护和解锁 PDF 文件。",
+      },
+
+      sampleFiles: {
+        title: "示例文件",
+        description:
+          "下载各种类型的示例文件。",
+      },
+
+      imageToPdf: {
+        title: "图片转 PDF",
+        description:
+          "将图片转换为高质量 PDF 文件。",
+      },
     },
   },
-},
+
 };
 
 export default zh;
