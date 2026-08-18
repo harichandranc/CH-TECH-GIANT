@@ -1,146 +1,43 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { useNavigate, useParams } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
-
-const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
-
-const languages = [
-  {
-    code: "en",
-    path: "/about",
-    label: "🇺🇸 English",
-  },
-  {
-    code: "zh",
-    path: "/zh/about",
-    label: "🇨🇳 简体中文",
-  },
-  {
-    code: "es",
-    path: "/es/about",
-    label: "🇪🇸 Español",
-  },
-  {
-    code: "pt",
-    path: "/pt/about",
-    label: "🇧🇷 Português",
-  },
-  {
-    code: "de",
-    path: "/de/about",
-    label: "🇩🇪 Deutsch",
-  },
-  {
-    code: "ko",
-    path: "/ko/about",
-    label: "🇰🇷 한국어",
-  },
-  {
-    code: "ja",
-    path: "/ja/about",
-    label: "🇯🇵 日本語",
-  },
-];
-
-const features = [
-  {
-    title: "Modern Technologies",
-    description:
-      "React, Flutter, MERN Stack, Firebase, AI tools and modern scalable technologies.",
-  },
-  {
-    title: "Premium UI/UX",
-    description:
-      "Clean futuristic interfaces with smooth responsive user experiences.",
-  },
-  {
-    title: "Custom Solutions",
-    description:
-      "Tailored software, mobile apps, and websites designed for businesses and startups.",
-  },
-  {
-    title: "Reliable Support",
-    description:
-      "Professional support and continuous improvements for long-term growth.",
-  },
-];
-
-const technologies = [
-  "React",
-  "Flutter",
-  "Node.js",
-  "Firebase",
-  "MongoDB",
-  "Express.js",
-  "Tailwind CSS",
-  "AI Tools",
-];
-
-const services = [
-  "App Development",
-  "Web Development",
-  "Software Development",
-  "Game Development",
-  "UI/UX Design",
-  "Business Solutions",
-];
-
-const process = [
-  "Planning",
-  "UI/UX Design",
-  "Development",
-  "Testing",
-  "Deployment",
-  "Support",
-];
+import { useLanguage } from "../context/LanguageContext";
+import translations from "../locales";
 
 const About = () => {
-  const { lang } = useParams();
-  const navigate = useNavigate();
+  const { language } = useLanguage();
 
-  const language = supportedLanguages.includes(lang) ? lang : "en";
-
-  const handleLanguageChange = (event) => {
-    const selectedLanguage = event.target.value;
-
-    const selected = languages.find(
-      (item) => item.code === selectedLanguage
-    );
-
-    if (selected) {
-      navigate(selected.path);
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  };
+  const t = translations[language] || translations.en;
+  const aboutT = t.about || translations.en.about;
 
   return (
     <>
       {/* SEO */}
       <Helmet>
-        <title>About Us | CH TECH GIANT</title>
+        <title>{aboutT.seo.title}</title>
 
         <meta
           name="description"
-          content="Learn about CH TECH GIANT (OPC) PRIVATE LIMITED, a modern software company specializing in app development, web development, software solutions, and futuristic digital experiences."
+          content={aboutT.seo.description}
         />
 
         <meta
           name="keywords"
-          content="about CH TECH GIANT, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, app development company, web development company, software company in Davanagere, Flutter development, MERN stack development, software solutions"
+          content={aboutT.seo.keywords}
         />
 
-        <meta name="author" content="CH TECH GIANT" />
+        <meta
+          name="author"
+          content={aboutT.seo.author}
+        />
 
-        <meta property="og:title" content="About CH TECH GIANT" />
+        <meta
+          property="og:title"
+          content={aboutT.seo.ogTitle}
+        />
 
         <meta
           property="og:description"
-          content="Modern software company delivering premium websites, mobile applications, and digital solutions."
+          content={aboutT.seo.ogDescription}
         />
 
         <meta
@@ -169,67 +66,37 @@ const About = () => {
 
         {/* Structured Data */}
         <script type="application/ld+json">
-          {`
-          {
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "CH TECH GIANT (OPC) PRIVATE LIMITED",
-            "legalName": "CH TECH GIANT (OPC) PRIVATE LIMITED",
-            "url": "https://chtechgiant.com",
-            "logo": "https://chtechgiant.com/logo.png",
-            "description": "Premium software development company offering app development, web development, software solutions, and digital services.",
-            "telephone": "+91-9980785020",
-            "email": "info@chtechgiant.com",
-            "identifier": {
+            name: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+            legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+            url: "https://chtechgiant.com",
+            logo: "https://chtechgiant.com/logo.png",
+            description:
+              "Premium software development company offering app development, web development, software solutions, and digital services.",
+            telephone: "+91-9980785020",
+            email: "info@chtechgiant.com",
+            identifier: {
               "@type": "PropertyValue",
-              "propertyID": "CIN",
-              "value": "U62012KA2025OPC203976"
+              propertyID: "CIN",
+              value: "U62012KA2025OPC203976",
             },
-            "foundingDate": "2025-06-10",
-            "address": {
+            foundingDate: "2025-06-10",
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere",
-              "addressLocality": "Davanagere",
-              "addressRegion": "Karnataka",
-              "postalCode": "577001",
-              "addressCountry": "IN"
-            }
-          }
-          `}
+              streetAddress:
+                "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere",
+              addressLocality: "Davanagere",
+              addressRegion: "Karnataka",
+              postalCode: "577001",
+              addressCountry: "IN",
+            },
+          })}
         </script>
       </Helmet>
 
       <div className="min-h-screen bg-[#050816] text-white px-6 overflow-hidden">
-
-        {/* =====================================================
-            LANGUAGE SELECTOR
-            DIRECTLY BELOW NAVBAR
-        ===================================================== */}
-        <div className="relative z-50">
-          <div className="max-w-7xl mx-auto flex justify-end">
-            <div className="relative">
-              <select
-                value={language}
-                onChange={handleLanguageChange}
-                aria-label="Select language"
-                className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
-              >
-                {languages.map((item) => (
-                  <option
-                    key={item.code}
-                    value={item.code}
-                    className="bg-[#050816] text-white"
-                  >
-                    {item.label}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
-            </div>
-          </div>
-        </div>
-
         <div className="max-w-7xl mx-auto">
 
           {/* HEADER */}
@@ -237,24 +104,21 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-center mb-24"
+            className="text-center mb-24 pt-8"
           >
             <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-              About Us
+              {aboutT.hero.eyebrow}
             </p>
 
             <h1 className="text-4xl md:text-7xl font-black leading-tight mb-8">
-              Building Modern
+              {aboutT.hero.title}
               <span className="block text-white/80">
-                Digital Solutions
+                {aboutT.hero.titleHighlight}
               </span>
             </h1>
 
             <p className="max-w-4xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
-              CH TECH GIANT (OPC) PRIVATE LIMITED is a modern software company
-              focused on developing premium websites, mobile applications,
-              software systems, and futuristic digital experiences for
-              businesses and startups.
+              {aboutT.hero.description}
             </p>
           </motion.div>
 
@@ -282,27 +146,17 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-5xl font-black leading-tight mb-8">
-                Premium Software Solutions
-                For Modern Businesses
+                {aboutT.main.title}
               </h2>
 
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
-                We specialize in creating high-performance websites,
-                mobile applications, business software, and scalable
-                digital systems using modern technologies and clean UI design.
-              </p>
-
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
-                Our company focuses on delivering visually modern,
-                performance-optimized, and user-friendly digital products
-                tailored to client requirements and future scalability.
-              </p>
-
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                Our goal is to help businesses establish a strong digital
-                presence with premium technology solutions that combine
-                performance, aesthetics, and user experience.
-              </p>
+              {aboutT.main.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 last:mb-0"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </motion.div>
           </div>
 
@@ -315,14 +169,14 @@ const About = () => {
               className="text-center mb-16"
             >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-                Company Information
+                {aboutT.company.eyebrow}
               </p>
 
               <h2 className="text-3xl md:text-5xl font-black">
-                Official
+                {aboutT.company.title}
                 <span className="text-cyan-400">
                   {" "}
-                  Company Details
+                  {aboutT.company.titleHighlight}
                 </span>
               </h2>
             </motion.div>
@@ -339,90 +193,88 @@ const About = () => {
                 {/* COMPANY NAME */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Legal Name
+                    {aboutT.company.legalNameLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    CH TECH GIANT (OPC) PRIVATE LIMITED
+                    {aboutT.company.legalName}
                   </p>
                 </div>
 
                 {/* CIN */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Corporate Identification Number (CIN)
+                    {aboutT.company.cinLabel}
                   </p>
 
                   <p className="text-cyan-400 text-lg font-semibold break-all">
-                    U62012KA2025OPC203976
+                    {aboutT.company.cin}
                   </p>
                 </div>
 
                 {/* ENTITY TYPE */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Entity Type
+                    {aboutT.company.entityTypeLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    Private Limited Company
+                    {aboutT.company.entityType}
                   </p>
                 </div>
 
                 {/* INCORPORATION */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Date of Incorporation
+                    {aboutT.company.incorporationLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    June 10, 2025
+                    {aboutT.company.incorporation}
                   </p>
                 </div>
 
                 {/* ROC */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Registrar of Companies
+                    {aboutT.company.rocLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    ROC – Bangalore
+                    {aboutT.company.roc}
                   </p>
                 </div>
 
                 {/* DIRECTOR */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Managing Director
+                    {aboutT.company.directorLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    Chandrashekar Harichandran
+                    {aboutT.company.director}
                   </p>
                 </div>
 
                 {/* APPOINTMENT DATE */}
                 <div>
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Director Appointment Date
+                    {aboutT.company.appointmentLabel}
                   </p>
 
                   <p className="text-white text-lg font-semibold">
-                    June 10, 2025
+                    {aboutT.company.appointmentDate}
                   </p>
                 </div>
 
                 {/* REGISTERED ADDRESS */}
                 <div className="md:col-span-2">
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-                    Registered Office
+                    {aboutT.company.addressLabel}
                   </p>
 
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                    1135/1, Behind BDO Office, Betur Road, Imam Nagara,
-                    Barline Road-Davanagere, Davangere, Davanagere,
-                    Karnataka, India – 577001
+                    {aboutT.company.address}
                   </p>
                 </div>
 
@@ -439,20 +291,20 @@ const About = () => {
               className="text-center mb-16"
             >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-                Our Services
+                {aboutT.services.eyebrow}
               </p>
 
               <h2 className="text-3xl md:text-5xl font-black">
-                Digital Services
+                {aboutT.services.title}
                 <span className="text-cyan-400">
                   {" "}
-                  We Provide
+                  {aboutT.services.titleHighlight}
                 </span>
               </h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {services.map((service, index) => (
+              {aboutT.services.items.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -480,20 +332,20 @@ const About = () => {
               className="text-center mb-16"
             >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-                Why Choose Us
+                {aboutT.features.eyebrow}
               </p>
 
               <h2 className="text-3xl md:text-5xl font-black">
-                Innovative Technology
+                {aboutT.features.title}
                 <span className="text-cyan-400">
                   {" "}
-                  & Premium Design
+                  {aboutT.features.titleHighlight}
                 </span>
               </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {aboutT.features.items.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
@@ -529,20 +381,20 @@ const About = () => {
               className="text-center mb-16"
             >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-                Technologies
+                {aboutT.technologies.eyebrow}
               </p>
 
               <h2 className="text-3xl md:text-5xl font-black">
-                Technologies
+                {aboutT.technologies.title}
                 <span className="text-cyan-400">
                   {" "}
-                  We Use
+                  {aboutT.technologies.titleHighlight}
                 </span>
               </h2>
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              {technologies.map((tech, index) => (
+              {aboutT.technologies.items.map((tech, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -568,20 +420,20 @@ const About = () => {
               className="text-center mb-16"
             >
               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-                Development Process
+                {aboutT.process.eyebrow}
               </p>
 
               <h2 className="text-3xl md:text-5xl font-black">
-                Our Working
+                {aboutT.process.title}
                 <span className="text-cyan-400">
                   {" "}
-                  Process
+                  {aboutT.process.titleHighlight}
                 </span>
               </h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {process.map((step, index) => (
+              {aboutT.process.items.map((step, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -612,23 +464,19 @@ const About = () => {
             className="bg-gradient-to-r from-cyan-500/10 to-white/5 border border-white/10 rounded-[40px] p-8 md:p-16 text-center"
           >
             <p className="text-cyan-400 uppercase tracking-[5px] mb-4">
-              Our Mission
+              {aboutT.mission.eyebrow}
             </p>
 
             <h2 className="text-3xl md:text-6xl font-black leading-tight mb-8">
-              Creating Scalable
+              {aboutT.mission.title}
               <span className="text-cyan-400">
                 {" "}
-                Digital Innovation
+                {aboutT.mission.titleHighlight}
               </span>
             </h2>
 
             <p className="max-w-4xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
-              Our mission is to empower startups, businesses, and organizations
-              with innovative technology solutions that drive growth,
-              improve digital presence, and create long-term business value
-              through modern development standards and exceptional user
-              experiences.
+              {aboutT.mission.description}
             </p>
           </motion.div>
 
