@@ -1532,6 +1532,68 @@ const ko = {
       "우리의 미션은 스타트업, 기업 및 조직에 혁신적인 기술 솔루션을 제공하여 성장을 촉진하고 디지털 존재감을 향상시키며, 현대적인 개발 표준과 뛰어난 사용자 경험을 통해 장기적인 비즈니스 가치를 창출하도록 지원하는 것입니다.",
   },
 },
+  // =========================
+  // CONTACT PAGE
+  // =========================
+
+  contact: {
+    seo: {
+      title: "문의하기 | CH TECH GIANT",
+      description:
+        "앱 개발, 웹 개발, 소프트웨어 개발, 게임 개발 및 맞춤형 디지털 솔루션을 위해 CH TECH GIANT에 문의하세요.",
+      keywords:
+        "CH TECH GIANT 문의, 소프트웨어 개발 회사, 앱 개발, 웹 개발, 맞춤형 소프트웨어, 소프트웨어 회사 문의",
+    },
+
+    badge: "함께 만들어 보세요",
+
+    title: "함께 만들어",
+    titleHighlight: "멋진 것을 완성해 보세요.",
+
+    description:
+      "아이디어, 프로젝트 또는 비즈니스 기회가 있으신가요? 자세한 내용을 알려주세요. 최대한 빠르게 답변드리겠습니다.",
+
+    contact: "문의",
+
+    conversationTitle: "대화를 시작해 보세요.",
+
+    conversationDescription:
+      "웹사이트, 모바일 애플리케이션, 게임 또는 맞춤형 소프트웨어가 필요하시다면, 여러분의 아이디어를 현실로 만들어 드릴 준비가 되어 있습니다.",
+
+    email: "이메일",
+
+    response: "응답",
+
+    responseTime: "보통 24시간 이내",
+
+    projectQuestion: "진행하고 싶은 프로젝트가 있으신가요?",
+
+    nameLabel: "이름",
+    namePlaceholder: "홍길동",
+
+    emailLabel: "이메일 주소",
+    emailPlaceholder: "you@example.com",
+
+    subjectLabel: "제목",
+    subjectPlaceholder: "어떻게 도와드릴까요?",
+
+    messageLabel: "메시지",
+    messagePlaceholder:
+      "프로젝트에 대해 간단히 알려주세요...",
+
+    sendMessage: "메시지 보내기",
+
+    sendingMessage: "메시지를 보내는 중...",
+
+    successMessage:
+      "메시지가 성공적으로 전송되었습니다. 곧 답변드리겠습니다.",
+
+    errorMessage:
+      "문제가 발생했습니다. 다시 시도해 주세요.",
+
+    agreement:
+      "이 양식을 제출함으로써 문의 내용과 관련하여 연락을 받는 데 동의합니다.",
+  },
 };
 
 export default ko;

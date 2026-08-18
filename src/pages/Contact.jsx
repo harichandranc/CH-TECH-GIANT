@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -9,13 +9,102 @@ import {
   FiCheckCircle,
   FiArrowUpRight,
 } from "react-icons/fi";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
+import { translations } from "../locales";
+
+const languages = [
+  {
+    code: "en",
+    path: "/contact",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh/contact",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es/contact",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/contact",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de/contact",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/contact",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/contact",
+    label: "🇯🇵 日本語",
+  },
+];
+
+const supportedLanguages = [
+  "zh",
+  "es",
+  "pt",
+  "de",
+  "ko",
+  "ja",
+];
 
 const Contact = () => {
   const form = useRef();
 
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
+
+  const t = translations[language];
+
+  /* =====================================================
+     AUTO LANGUAGE DETECTION
+  ===================================================== */
+
+  useEffect(() => {
+    if (lang) return;
+
+    const browserLanguage = navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh/contact", { replace: true });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es/contact", { replace: true });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt/contact", { replace: true });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de/contact", { replace: true });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko/contact", { replace: true });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja/contact", { replace: true });
+    } else {
+      navigate("/contact", { replace: true });
+    }
+  }, [lang, navigate]);
+
+  /* =====================================================
+     SEND EMAIL
+  ===================================================== */
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -35,6 +124,7 @@ const Contact = () => {
       );
 
       setSuccess(true);
+
       form.current.reset();
 
       setTimeout(() => {
@@ -42,6 +132,7 @@ const Contact = () => {
       }, 5000);
     } catch (err) {
       console.error("EmailJS Error:", err);
+
       setError(true);
 
       setTimeout(() => {
@@ -53,9 +144,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#030712] text-white px-4 sm:px-6 py-20 sm:py-28 flex items-center">
-      {/* Background */}
+    <section className="relative min-h-screen overflow-hidden bg-[#030712] text-white px-4 sm:px-6 py-6">
+
+      {/* =================================================
+          BACKGROUND
+      ================================================= */}
+
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
         <motion.div
           animate={{
             x: [0, 80, 0],
@@ -85,7 +181,12 @@ const Contact = () => {
         />
 
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+
       </div>
+
+      {/* =================================================
+          MAIN CONTAINER
+      ================================================= */}
 
       <motion.div
         initial={{ opacity: 0, y: 35 }}
@@ -93,8 +194,72 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10 w-full max-w-6xl mx-auto"
       >
-        {/* Header */}
+
+        {/* =================================================
+            LANGUAGE SWITCHER
+        ================================================= */}
+
+        <div className="flex justify-center mb-2 md:mb-16">
+
+          {/* MOBILE */}
+
+          <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
+
+            <select
+              id="mobile-language"
+              value={language}
+              onChange={(e) => {
+                const selectedLanguage = languages.find(
+                  (item) => item.code === e.target.value
+                );
+
+                if (selectedLanguage) {
+                  navigate(selectedLanguage.path);
+                }
+              }}
+              className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-[#050816] text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+
+          </div>
+
+          {/* DESKTOP */}
+
+          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
+
+            {languages.map((item) => (
+              <Link
+                key={item.code}
+                to={item.path}
+                className={`px-5 py-2 rounded-full border transition ${
+                  language === item.code
+                    ? "bg-cyan-500 text-black border-cyan-500"
+                    : "border-white/20 hover:border-cyan-500"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* =================================================
+            HEADER
+        ================================================= */}
+
         <div className="text-center mb-12 sm:mb-16">
+
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,106 +267,151 @@ const Contact = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 text-cyan-300 text-sm font-medium mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            Let's work together
+
+            {t.contact.badge}
+
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95]">
-            Let's build
+
+            {t.contact.title}
+
             <br />
+
             <span className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              something great.
+
+              {t.contact.titleHighlight}
+
             </span>
+
           </h1>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-400 text-base sm:text-lg leading-relaxed">
-            Have an idea, project, or business opportunity? Tell us about it.
-            We'll get back to you as soon as possible.
+
+            {t.contact.description}
+
           </p>
+
         </div>
 
-        {/* Main Card */}
+        {/* =================================================
+            MAIN CARD
+        ================================================= */}
+
         <div className="relative">
+
           <div className="absolute -inset-[1px] rounded-[2rem] bg-gradient-to-r from-cyan-500/30 via-transparent to-purple-500/30 opacity-70 blur-sm" />
 
           <div className="relative grid lg:grid-cols-[0.8fr_1.2fr] gap-0 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] backdrop-blur-2xl shadow-2xl">
 
-            {/* Left Side */}
+            {/* =================================================
+                LEFT SIDE
+            ================================================= */}
+
             <div className="relative p-7 sm:p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/10">
+
               <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-400/10 blur-[80px]" />
 
               <div className="relative">
+
                 <p className="text-cyan-400 text-sm font-semibold uppercase tracking-[0.2em] mb-4">
-                  Contact
+                  {t.contact.contact}
                 </p>
 
                 <h2 className="text-2xl sm:text-3xl font-bold mb-5">
-                  Start a conversation.
+                  {t.contact.conversationTitle}
                 </h2>
 
                 <p className="text-gray-400 leading-relaxed mb-10">
-                  Whether you need a website, mobile application, game, or
-                  custom software, we're ready to turn your idea into reality.
+                  {t.contact.conversationDescription}
                 </p>
 
-                <div className="space-y-5">
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl border border-cyan-400/20 bg-cyan-400/10 flex items-center justify-center text-cyan-400">
-                      <FiMail size={19} />
-                    </div>
+                {/* EMAIL */}
 
-                    <div>
-                      <p className="text-xs text-gray-500 uppercase tracking-wider">
-                        Email
-                      </p>
-                      <p className="text-sm sm:text-base text-gray-200">
-                        info@chtechgiant.com
-                      </p>
-                    </div>
+                <div className="flex items-center gap-4">
+
+                  <div className="w-11 h-11 rounded-xl border border-cyan-400/20 bg-cyan-400/10 flex items-center justify-center text-cyan-400">
+                    <FiMail size={19} />
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl border border-purple-400/20 bg-purple-400/10 flex items-center justify-center text-purple-400">
-                      <FiMessageSquare size={19} />
-                    </div>
+                  <div>
 
-                    <div>
-                      <p className="text-xs text-gray-500 uppercase tracking-wider">
-                        Response
-                      </p>
-                      <p className="text-sm sm:text-base text-gray-200">
-                        Usually within 24 hours
-                      </p>
-                    </div>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider">
+                      {t.contact.email}
+                    </p>
+
+                    <p className="text-sm sm:text-base text-gray-200">
+                      info@chtechgiant.com
+                    </p>
+
                   </div>
+
                 </div>
 
+                {/* RESPONSE */}
+
+                <div className="flex items-center gap-4 mt-5">
+
+                  <div className="w-11 h-11 rounded-xl border border-purple-400/20 bg-purple-400/10 flex items-center justify-center text-purple-400">
+                    <FiMessageSquare size={19} />
+                  </div>
+
+                  <div>
+
+                    <p className="text-xs text-gray-500 uppercase tracking-wider">
+                      {t.contact.response}
+                    </p>
+
+                    <p className="text-sm sm:text-base text-gray-200">
+                      {t.contact.responseTime}
+                    </p>
+
+                  </div>
+
+                </div>
+
+                {/* PROJECT */}
+
                 <div className="mt-12 pt-7 border-t border-white/10">
+
                   <div className="flex items-center justify-between text-sm">
+
                     <span className="text-gray-500">
-                      Have a project in mind?
+                      {t.contact.projectQuestion}
                     </span>
 
                     <FiArrowUpRight className="text-cyan-400" />
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
 
-            {/* Form */}
+            {/* =================================================
+                FORM
+            ================================================= */}
+
             <div className="p-7 sm:p-10 lg:p-12">
+
               <form
                 ref={form}
                 onSubmit={sendEmail}
                 className="space-y-5"
               >
 
-                {/* Name */}
+                {/* NAME */}
+
                 <div>
+
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Your Name
+                    {t.contact.nameLabel}
                   </label>
 
                   <div className="relative group">
+
                     <FiUser
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-cyan-400 transition-colors"
                       size={18}
@@ -210,21 +420,26 @@ const Contact = () => {
                     <input
                       type="text"
                       name="user_name"
-                      placeholder="John Doe"
+                      placeholder={t.contact.namePlaceholder}
                       required
                       disabled={loading}
                       className="w-full h-14 bg-white/[0.035] border border-white/10 rounded-xl pl-12 pr-4 text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-cyan-400/[0.03] focus:ring-4 focus:ring-cyan-400/5 disabled:opacity-50"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Email */}
+                {/* EMAIL */}
+
                 <div>
+
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                    {t.contact.emailLabel}
                   </label>
 
                   <div className="relative group">
+
                     <FiMail
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-cyan-400 transition-colors"
                       size={18}
@@ -233,21 +448,26 @@ const Contact = () => {
                     <input
                       type="email"
                       name="user_email"
-                      placeholder="you@example.com"
+                      placeholder={t.contact.emailPlaceholder}
                       required
                       disabled={loading}
                       className="w-full h-14 bg-white/[0.035] border border-white/10 rounded-xl pl-12 pr-4 text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-cyan-400/[0.03] focus:ring-4 focus:ring-cyan-400/5 disabled:opacity-50"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Subject */}
+                {/* SUBJECT */}
+
                 <div>
+
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject
+                    {t.contact.subjectLabel}
                   </label>
 
                   <div className="relative group">
+
                     <FiMessageSquare
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-cyan-400 transition-colors"
                       size={18}
@@ -256,21 +476,26 @@ const Contact = () => {
                     <input
                       type="text"
                       name="subject"
-                      placeholder="How can we help?"
+                      placeholder={t.contact.subjectPlaceholder}
                       required
                       disabled={loading}
                       className="w-full h-14 bg-white/[0.035] border border-white/10 rounded-xl pl-12 pr-4 text-white placeholder:text-gray-600 outline-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-cyan-400/[0.03] focus:ring-4 focus:ring-cyan-400/5 disabled:opacity-50"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Message */}
+                {/* MESSAGE */}
+
                 <div>
+
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Your Message
+                    {t.contact.messageLabel}
                   </label>
 
                   <div className="relative group">
+
                     <FiMessageSquare
                       className="absolute left-4 top-5 text-gray-500 group-focus-within:text-cyan-400 transition-colors"
                       size={18}
@@ -279,15 +504,18 @@ const Contact = () => {
                     <textarea
                       name="message"
                       rows="6"
-                      placeholder="Tell us a little about your project..."
+                      placeholder={t.contact.messagePlaceholder}
                       required
                       disabled={loading}
                       className="w-full min-h-[150px] bg-white/[0.035] border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-gray-600 outline-none resize-none transition-all duration-300 focus:border-cyan-400/60 focus:bg-cyan-400/[0.03] focus:ring-4 focus:ring-cyan-400/5 disabled:opacity-50"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Button */}
+                {/* BUTTON */}
+
                 <motion.button
                   whileHover={!loading ? { scale: 1.015 } : {}}
                   whileTap={!loading ? { scale: 0.98 } : {}}
@@ -295,18 +523,23 @@ const Contact = () => {
                   disabled={loading}
                   className="relative overflow-hidden w-full h-14 rounded-xl font-bold text-base bg-gradient-to-r from-cyan-500 via-cyan-400 to-purple-600 text-black shadow-lg shadow-cyan-500/10 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-70"
                 >
+
                   <span className="relative z-10 flex items-center justify-center gap-2">
+
                     {loading ? (
                       <>
                         <span className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
-                        Sending Message...
+
+                        {t.contact.sendingMessage}
                       </>
                     ) : (
                       <>
-                        Send Message
+                        {t.contact.sendMessage}
+
                         <FiSend size={18} />
                       </>
                     )}
+
                   </span>
 
                   {!loading && (
@@ -317,10 +550,13 @@ const Contact = () => {
                       className="absolute inset-0 bg-white/20 skew-x-12"
                     />
                   )}
+
                 </motion.button>
 
-                {/* Status */}
+                {/* STATUS */}
+
                 <AnimatePresence mode="wait">
+
                   {success && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -328,8 +564,11 @@ const Contact = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="flex items-center justify-center gap-2 rounded-xl border border-green-400/20 bg-green-400/5 px-4 py-3 text-sm text-green-400"
                     >
+
                       <FiCheckCircle size={18} />
-                      Message sent successfully. We'll get back to you soon.
+
+                      {t.contact.successMessage}
+
                     </motion.div>
                   )}
 
@@ -340,21 +579,26 @@ const Contact = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="rounded-xl border border-red-400/20 bg-red-400/5 px-4 py-3 text-center text-sm text-red-400"
                     >
-                      Something went wrong. Please try again.
+                      {t.contact.errorMessage}
                     </motion.div>
                   )}
+
                 </AnimatePresence>
 
                 <p className="text-center text-xs text-gray-600">
-                  By submitting this form, you agree to be contacted regarding
-                  your inquiry.
+                  {t.contact.agreement}
                 </p>
 
               </form>
+
             </div>
+
           </div>
+
         </div>
+
       </motion.div>
+
     </section>
   );
 };

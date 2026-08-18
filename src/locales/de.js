@@ -1532,6 +1532,70 @@ const de = {
       "Unsere Mission ist es, Startups, Unternehmen und Organisationen mit innovativen Technologielösungen zu unterstützen, die Wachstum fördern, die digitale Präsenz verbessern und durch moderne Entwicklungsstandards sowie herausragende Benutzererlebnisse langfristigen geschäftlichen Mehrwert schaffen.",
   },
 },
-};
+  // =========================
+  // CONTACT PAGE
+  // =========================
 
+  contact: {
+    seo: {
+      title: "Kontakt | CH TECH GIANT",
+      description:
+        "Kontaktieren Sie CH TECH GIANT für App-Entwicklung, Webentwicklung, Softwareentwicklung, Spieleentwicklung und individuelle digitale Lösungen.",
+      keywords:
+        "CH TECH GIANT Kontakt, Softwareentwicklungsunternehmen, App-Entwicklung, Webentwicklung, individuelle Software, Kontakt Softwareunternehmen",
+    },
+
+    badge: "Lassen Sie uns zusammenarbeiten",
+
+    title: "Lassen Sie uns",
+    titleHighlight: "etwas Großartiges schaffen.",
+
+    description:
+      "Haben Sie eine Idee, ein Projekt oder eine Geschäftsmöglichkeit? Erzählen Sie uns davon. Wir melden uns so schnell wie möglich bei Ihnen.",
+
+    contact: "Kontakt",
+
+    conversationTitle: "Starten Sie ein Gespräch.",
+
+    conversationDescription:
+      "Egal, ob Sie eine Website, mobile Anwendung, ein Spiel oder eine individuelle Software benötigen – wir sind bereit, Ihre Idee in die Realität umzusetzen.",
+
+    email: "E-Mail",
+
+    response: "Antwort",
+
+    responseTime: "Normalerweise innerhalb von 24 Stunden",
+
+    projectQuestion: "Haben Sie ein Projekt im Sinn?",
+
+    nameLabel: "Ihr Name",
+    namePlaceholder: "Max Mustermann",
+
+    emailLabel: "E-Mail-Adresse",
+    emailPlaceholder: "sie@example.com",
+
+    subjectLabel: "Betreff",
+    subjectPlaceholder: "Wie können wir Ihnen helfen?",
+
+    messageLabel: "Ihre Nachricht",
+    messagePlaceholder:
+      "Erzählen Sie uns etwas über Ihr Projekt...",
+
+    sendMessage: "Nachricht senden",
+
+    sendingMessage: "Nachricht wird gesendet...",
+
+    successMessage:
+      "Nachricht erfolgreich gesendet. Wir melden uns bald bei Ihnen.",
+
+    errorMessage:
+      "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+
+    agreement:
+      "Mit dem Absenden dieses Formulars stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden.",
+  },
+
+
+
+};
 export default de;

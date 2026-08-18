@@ -1387,6 +1387,69 @@ const es = {
 
     canonical: "[https://chtechgiant.com/app-development](https://chtechgiant.com/app-development)",
   },
+    // =========================
+  // CONTACT PAGE
+  // =========================
+
+  contact: {
+    seo: {
+      title: "Contacto | CH TECH GIANT",
+      description:
+        "Contacta con CH TECH GIANT para desarrollo de aplicaciones, desarrollo web, desarrollo de software, desarrollo de videojuegos y soluciones digitales personalizadas.",
+      keywords:
+        "contacto CH TECH GIANT, empresa de desarrollo de software, desarrollo de aplicaciones, desarrollo web, software personalizado, contacto empresa de software",
+    },
+
+    badge: "Trabajemos juntos",
+
+    title: "Construyamos",
+    titleHighlight: "algo increíble.",
+
+    description:
+      "¿Tienes una idea, un proyecto o una oportunidad de negocio? Cuéntanos sobre ello. Nos pondremos en contacto contigo lo antes posible.",
+
+    contact: "Contacto",
+
+    conversationTitle: "Comencemos una conversación.",
+
+    conversationDescription:
+      "Ya sea que necesites un sitio web, una aplicación móvil, un videojuego o un software personalizado, estamos preparados para convertir tu idea en realidad.",
+
+    email: "Correo electrónico",
+
+    response: "Respuesta",
+
+    responseTime: "Normalmente en 24 horas",
+
+    projectQuestion: "¿Tienes un proyecto en mente?",
+
+    nameLabel: "Tu nombre",
+    namePlaceholder: "Juan García",
+
+    emailLabel: "Dirección de correo electrónico",
+    emailPlaceholder: "tu@example.com",
+
+    subjectLabel: "Asunto",
+    subjectPlaceholder: "¿Cómo podemos ayudarte?",
+
+    messageLabel: "Tu mensaje",
+    messagePlaceholder:
+      "Cuéntanos un poco sobre tu proyecto...",
+
+    sendMessage: "Enviar mensaje",
+
+    sendingMessage: "Enviando mensaje...",
+
+    successMessage:
+      "Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.",
+
+    errorMessage:
+      "Algo salió mal. Por favor, inténtalo de nuevo.",
+
+    agreement:
+      "Al enviar este formulario, aceptas que nos pongamos en contacto contigo en relación con tu consulta.",
+  },
+  
 };
 
 export default es;

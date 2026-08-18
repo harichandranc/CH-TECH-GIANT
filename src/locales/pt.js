@@ -1532,6 +1532,68 @@ const pt = {
       "Nossa missão é capacitar startups, empresas e organizações com soluções tecnológicas inovadoras que impulsionem o crescimento, melhorem a presença digital e criem valor empresarial de longo prazo por meio de padrões modernos de desenvolvimento e experiências excepcionais para os usuários.",
   },
 },
+  // =========================
+  // CONTACT PAGE
+  // =========================
+
+  contact: {
+    seo: {
+      title: "Fale Conosco | CH TECH GIANT",
+      description:
+        "Entre em contato com a CH TECH GIANT para desenvolvimento de aplicativos, desenvolvimento web, desenvolvimento de software, desenvolvimento de jogos e soluções digitais personalizadas.",
+      keywords:
+        "contato CH TECH GIANT, empresa de desenvolvimento de software, desenvolvimento de aplicativos, desenvolvimento web, software personalizado, contato empresa de software",
+    },
+
+    badge: "Vamos trabalhar juntos",
+
+    title: "Vamos construir",
+    titleHighlight: "algo incrível.",
+
+    description:
+      "Tem uma ideia, projeto ou oportunidade de negócio? Conte-nos sobre isso. Entraremos em contato com você o mais rápido possível.",
+
+    contact: "Contato",
+
+    conversationTitle: "Vamos iniciar uma conversa.",
+
+    conversationDescription:
+      "Seja para criar um site, aplicativo móvel, jogo ou software personalizado, estamos prontos para transformar sua ideia em realidade.",
+
+    email: "E-mail",
+
+    response: "Resposta",
+
+    responseTime: "Normalmente em até 24 horas",
+
+    projectQuestion: "Tem um projeto em mente?",
+
+    nameLabel: "Seu Nome",
+    namePlaceholder: "João da Silva",
+
+    emailLabel: "Endereço de E-mail",
+    emailPlaceholder: "voce@example.com",
+
+    subjectLabel: "Assunto",
+    subjectPlaceholder: "Como podemos ajudar?",
+
+    messageLabel: "Sua Mensagem",
+    messagePlaceholder:
+      "Conte-nos um pouco sobre o seu projeto...",
+
+    sendMessage: "Enviar Mensagem",
+
+    sendingMessage: "Enviando Mensagem...",
+
+    successMessage:
+      "Mensagem enviada com sucesso. Entraremos em contato em breve.",
+
+    errorMessage:
+      "Algo deu errado. Tente novamente.",
+
+    agreement:
+      "Ao enviar este formulário, você concorda em ser contatado sobre sua solicitação.",
+  },
 };
 
 export default pt;

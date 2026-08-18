@@ -1522,6 +1522,68 @@ const zh = {
       "我们的使命是通过创新的技术解决方案，为初创公司、企业和组织赋能，推动业务增长、提升数字化形象，并通过现代开发标准和卓越的用户体验创造长期商业价值。",
   },
 },
+  // =========================
+  // CONTACT PAGE
+  // =========================
+
+  contact: {
+    seo: {
+      title: "联系我们 | CH TECH GIANT",
+      description:
+        "联系 CH TECH GIANT，获取应用开发、网站开发、软件开发、游戏开发以及定制数字解决方案服务。",
+      keywords:
+        "CH TECH GIANT 联系方式, 软件开发公司, 应用开发, 网站开发, 定制软件, 软件公司联系方式",
+    },
+
+    badge: "让我们一起合作",
+
+    title: "让我们一起打造",
+    titleHighlight: "精彩的数字体验。",
+
+    description:
+      "您有一个想法、项目或商业合作机会吗？欢迎告诉我们。我们会尽快与您联系。",
+
+    contact: "联系我们",
+
+    conversationTitle: "开始交流",
+
+    conversationDescription:
+      "无论您需要网站、移动应用、游戏还是定制软件，我们都准备好将您的想法变成现实。",
+
+    email: "电子邮箱",
+
+    response: "回复",
+
+    responseTime: "通常在 24 小时内回复",
+
+    projectQuestion: "您有项目需要开发吗？",
+
+    nameLabel: "您的姓名",
+    namePlaceholder: "张伟",
+
+    emailLabel: "电子邮箱地址",
+    emailPlaceholder: "you@example.com",
+
+    subjectLabel: "主题",
+    subjectPlaceholder: "我们可以如何帮助您？",
+
+    messageLabel: "您的留言",
+    messagePlaceholder:
+      "请简单介绍一下您的项目...",
+
+    sendMessage: "发送消息",
+
+    sendingMessage: "正在发送消息...",
+
+    successMessage:
+      "消息发送成功。我们会尽快与您联系。",
+
+    errorMessage:
+      "出现了一些问题。请重试。",
+
+    agreement:
+      "提交此表单即表示您同意我们就您的咨询与您联系。",
+  },
 };
 
 export default zh;

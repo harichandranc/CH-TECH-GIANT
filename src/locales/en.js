@@ -1533,6 +1533,68 @@ const en = {
       "Our mission is to empower startups, businesses, and organizations with innovative technology solutions that drive growth, improve digital presence, and create long-term business value through modern development standards and exceptional user experiences.",
   },
 },
+  // =========================
+  // CONTACT PAGE
+  // =========================
+
+  contact: {
+    seo: {
+      title: "Contact Us | CH TECH GIANT",
+      description:
+        "Contact CH TECH GIANT for app development, web development, software development, game development, and custom digital solutions.",
+      keywords:
+        "contact CH TECH GIANT, software development company, app development, web development, custom software, contact software company",
+    },
+
+    badge: "Let's work together",
+
+    title: "Let's build",
+    titleHighlight: "something great.",
+
+    description:
+      "Have an idea, project, or business opportunity? Tell us about it. We'll get back to you as soon as possible.",
+
+    contact: "Contact",
+
+    conversationTitle: "Start a conversation.",
+
+    conversationDescription:
+      "Whether you need a website, mobile application, game, or custom software, we're ready to turn your idea into reality.",
+
+    email: "Email",
+
+    response: "Response",
+
+    responseTime: "Usually within 24 hours",
+
+    projectQuestion: "Have a project in mind?",
+
+    nameLabel: "Your Name",
+    namePlaceholder: "John Doe",
+
+    emailLabel: "Email Address",
+    emailPlaceholder: "you@example.com",
+
+    subjectLabel: "Subject",
+    subjectPlaceholder: "How can we help?",
+
+    messageLabel: "Your Message",
+    messagePlaceholder:
+      "Tell us a little about your project...",
+
+    sendMessage: "Send Message",
+
+    sendingMessage: "Sending Message...",
+
+    successMessage:
+      "Message sent successfully. We'll get back to you soon.",
+
+    errorMessage:
+      "Something went wrong. Please try again.",
+
+    agreement:
+      "By submitting this form, you agree to be contacted regarding your inquiry.",
+  },
 
 };
 
