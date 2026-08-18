@@ -1594,8 +1594,123 @@ const de = {
     agreement:
       "Mit dem Absenden dieses Formulars stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden.",
   },
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
 
+  portfolio: {
+    seo: {
+      title: "Portfolio | CH TECH GIANT",
+      description:
+        "Entdecken Sie Websites, mobile Apps, Softwaresysteme und digitale Projekte, die von CH TECH GIANT entwickelt wurden.",
+      keywords:
+        "CH TECH GIANT Portfolio, Webentwicklungsprojekte, mobile App-Projekte, Softwareprojekte, App-Entwicklungsportfolio, Softwareentwicklungsportfolio",
+    },
 
+    eyebrow: "Unser Portfolio",
+
+    title: "Ausgewählte",
+
+    titleHighlight: "Projekte",
+
+    description:
+      "Entdecken Sie hochwertige Websites, mobile Apps, Software- und Spieleentwicklungsprojekte von CH TECH GIANT.",
+
+    filters: {
+      all: "Alle",
+      web: "Web",
+      app: "App",
+      software: "Software",
+      game: "Spiel",
+    },
+
+    categories: {
+      app: "App",
+      web: "Web",
+      software: "Software",
+      game: "Spiel",
+    },
+
+    actions: {
+      installApp: "App installieren",
+      viewSoftware: "Software ansehen",
+      visitWebsite: "Website besuchen",
+    },
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "Marktplatz-App für hochwertige Website-Vorlagen, Quellcodes und College-Projekte.",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA Calculator",
+        description:
+          "Intelligente mobile App zur Berechnung von CGPA und SGPA.",
+      },
+
+      fileConverter: {
+        title: "File Converter",
+        description:
+          "Fortschrittliches Tool zur Konvertierung verschiedener Dateiformate.",
+      },
+
+      worldClock: {
+        title: "World Clock App",
+        description:
+          "Moderne Anwendung zur Anzeige und Verfolgung von Zeitzonen weltweit.",
+      },
+
+      fileRenamer: {
+        title: "File Renamer",
+        description:
+          "Dienstprogramm zum stapelweisen Umbenennen von Dateien.",
+      },
+
+      schoolErp: {
+        title: "School ERP System",
+        description:
+          "Verwalten Sie Schüler, Mitarbeiter, akademische Bereiche, Anwesenheit und den gesamten Schulbetrieb über ein zentrales Dashboard.",
+      },
+
+      hospitalManagementSystem: {
+        title: "Hospital Management System",
+        description:
+          "Sicheres rollenbasiertes Krankenhausverwaltungssystem zur Verwaltung von Abteilungen, Ärzten, Mitarbeitern, Patienten und der Krankenhausverwaltung über ein Dashboard.",
+      },
+
+      invoiceMaker: {
+        title: "Invoice Maker",
+        description:
+          "Professionelle App zur Erstellung von Rechnungen.",
+      },
+
+      pdfConverter: {
+        title: "PDF Converter",
+        description:
+          "Konvertieren Sie Bilder in hochwertige PDF-Dateien.",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF Lock Unlock",
+        description:
+          "Schützen und entsperren Sie PDF-Dateien mit einem Passwort.",
+      },
+
+      sampleFiles: {
+        title: "Sample Files",
+        description:
+          "Laden Sie verschiedene Arten von Beispieldateien herunter.",
+      },
+
+      imageToPdf: {
+        title: "Image To PDF",
+        description:
+          "Konvertieren Sie Bilder in hochwertige PDF-Dateien.",
+      },
+    },
+  },
 
 };
 export default de;

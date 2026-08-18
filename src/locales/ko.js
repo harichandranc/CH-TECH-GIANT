@@ -1594,6 +1594,123 @@ const ko = {
     agreement:
       "이 양식을 제출함으로써 문의 내용과 관련하여 연락을 받는 데 동의합니다.",
   },
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
+  portfolio: {
+    seo: {
+      title: "포트폴리오 | CH TECH GIANT",
+      description:
+        "CH TECH GIANT가 개발한 웹사이트, 모바일 앱, 소프트웨어 시스템 및 디지털 프로젝트를 확인해 보세요.",
+      keywords:
+        "CH TECH GIANT 포트폴리오, 웹 개발 프로젝트, 모바일 앱 프로젝트, 소프트웨어 프로젝트, 앱 개발 포트폴리오, 소프트웨어 개발 포트폴리오",
+    },
+
+    eyebrow: "우리의 포트폴리오",
+
+    title: "주요",
+
+    titleHighlight: "프로젝트",
+
+    description:
+      "CH TECH GIANT가 제작한 프리미엄 웹사이트, 모바일 앱, 소프트웨어 및 게임 개발 프로젝트를 확인해 보세요.",
+
+    filters: {
+      all: "전체",
+      web: "웹",
+      app: "앱",
+      software: "소프트웨어",
+      game: "게임",
+    },
+
+    categories: {
+      app: "앱",
+      web: "웹",
+      software: "소프트웨어",
+      game: "게임",
+    },
+
+    actions: {
+      installApp: "앱 설치",
+      viewSoftware: "소프트웨어 보기",
+      visitWebsite: "웹사이트 방문",
+    },
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "프리미엄 웹사이트 템플릿, 소스 코드 및 대학 프로젝트를 제공하는 마켓플레이스 앱입니다.",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA Calculator",
+        description:
+          "CGPA 및 SGPA를 간편하게 계산할 수 있는 스마트 모바일 앱입니다.",
+      },
+
+      fileConverter: {
+        title: "File Converter",
+        description:
+          "다양한 파일 형식을 지원하는 고급 파일 변환 도구입니다.",
+      },
+
+      worldClock: {
+        title: "World Clock App",
+        description:
+          "전 세계 시간대를 확인하고 관리할 수 있는 현대적인 애플리케이션입니다.",
+      },
+
+      fileRenamer: {
+        title: "File Renamer",
+        description:
+          "여러 파일의 이름을 한 번에 변경할 수 있는 파일 관리 유틸리티 앱입니다.",
+      },
+
+      schoolErp: {
+        title: "School ERP System",
+        description:
+          "학생, 교직원, 학업, 출석 및 학교 운영을 하나의 중앙 집중식 대시보드에서 효율적으로 관리할 수 있습니다.",
+      },
+
+      hospitalManagementSystem: {
+        title: "Hospital Management System",
+        description:
+          "부서, 의사, 직원, 환자 및 병원 행정을 대시보드에서 안전하게 관리할 수 있는 역할 기반 병원 관리 시스템입니다.",
+      },
+
+      invoiceMaker: {
+        title: "Invoice Maker",
+        description:
+          "전문적인 청구서를 간편하게 생성할 수 있는 모바일 앱입니다.",
+      },
+
+      pdfConverter: {
+        title: "PDF Converter",
+        description:
+          "이미지를 고품질 PDF 파일로 변환할 수 있습니다.",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF Lock Unlock",
+        description:
+          "비밀번호를 사용하여 PDF 파일을 보호하고 잠금을 해제할 수 있습니다.",
+      },
+
+      sampleFiles: {
+        title: "Sample Files",
+        description:
+          "다양한 유형의 샘플 파일을 다운로드할 수 있습니다.",
+      },
+
+      imageToPdf: {
+        title: "Image To PDF",
+        description:
+          "이미지를 고품질 PDF 파일로 변환할 수 있습니다.",
+      },
+    },
+  },
 };
 
 export default ko;

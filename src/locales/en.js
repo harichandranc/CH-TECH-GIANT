@@ -1595,6 +1595,123 @@ const en = {
     agreement:
       "By submitting this form, you agree to be contacted regarding your inquiry.",
   },
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
+  portfolio: {
+    seo: {
+      title: "Portfolio | CH TECH GIANT",
+      description:
+        "Explore websites, mobile apps, software systems, and digital projects developed by CH TECH GIANT.",
+      keywords:
+        "CH TECH GIANT portfolio, web development projects, mobile app projects, software projects, app development portfolio, software development portfolio",
+    },
+
+    eyebrow: "Our Portfolio",
+
+    title: "Featured",
+
+    titleHighlight: "Projects",
+
+    description:
+      "Explore premium websites, mobile apps, software, and game development projects crafted by CH TECH GIANT.",
+
+    filters: {
+      all: "All",
+      web: "Web",
+      app: "App",
+      software: "Software",
+      game: "Game",
+    },
+
+    categories: {
+      app: "App",
+      web: "Web",
+      software: "Software",
+      game: "Game",
+    },
+
+    actions: {
+      installApp: "Install App",
+      viewSoftware: "View Software",
+      visitWebsite: "Visit Website",
+    },
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "Premium website templates, source codes, and college projects marketplace app.",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA Calculator",
+        description:
+          "Smart CGPA & SGPA calculation mobile app.",
+      },
+
+      fileConverter: {
+        title: "File Converter",
+        description:
+          "Advanced multi-format file conversion tool.",
+      },
+
+      worldClock: {
+        title: "World Clock App",
+        description:
+          "Modern world timezone tracking application.",
+      },
+
+      fileRenamer: {
+        title: "File Renamer",
+        description:
+          "Batch file renaming utility app.",
+      },
+
+      schoolErp: {
+        title: "School ERP System",
+        description:
+          "Smartly manage students, staff, academics, attendance, and school operations in one centralized dashboard.",
+      },
+
+      hospitalManagementSystem: {
+        title: "Hospital Management System",
+        description:
+          "A secure role-based Hospital Management System for managing departments, doctors, staff, patients, and hospital administration through a dashboard.",
+      },
+
+      invoiceMaker: {
+        title: "Invoice Maker",
+        description:
+          "Professional invoice generation app.",
+      },
+
+      pdfConverter: {
+        title: "PDF Converter",
+        description:
+          "Convert images into high quality PDF files.",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF Lock Unlock",
+        description:
+          "Protect and unlock PDF files with a password.",
+      },
+
+      sampleFiles: {
+        title: "Sample Files",
+        description:
+          "Download every type of sample file.",
+      },
+
+      imageToPdf: {
+        title: "Image To PDF",
+        description:
+          "Convert images into high quality PDF files.",
+      },
+    },
+  },
 
 };
 

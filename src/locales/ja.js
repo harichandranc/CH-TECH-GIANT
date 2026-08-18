@@ -1532,6 +1532,123 @@ const ja = {
       "私たちの使命は、スタートアップ、企業、組織に革新的なテクノロジーソリューションを提供し、成長を促進し、デジタルプレゼンスを向上させ、最新の開発基準と優れたユーザー体験を通じて長期的なビジネス価値を創出することです。",
   },
 },
+  // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
+  portfolio: {
+    seo: {
+      title: "ポートフォリオ | CH TECH GIANT",
+      description:
+        "CH TECH GIANTが開発したWebサイト、モバイルアプリ、ソフトウェアシステム、デジタルプロジェクトをご覧ください。",
+      keywords:
+        "CH TECH GIANT ポートフォリオ, Web開発プロジェクト, モバイルアプリプロジェクト, ソフトウェアプロジェクト, アプリ開発ポートフォリオ, ソフトウェア開発ポートフォリオ",
+    },
+
+    eyebrow: "私たちのポートフォリオ",
+
+    title: "注目の",
+
+    titleHighlight: "プロジェクト",
+
+    description:
+      "CH TECH GIANTが制作した高品質なWebサイト、モバイルアプリ、ソフトウェア、ゲーム開発プロジェクトをご覧ください。",
+
+    filters: {
+      all: "すべて",
+      web: "Web",
+      app: "アプリ",
+      software: "ソフトウェア",
+      game: "ゲーム",
+    },
+
+    categories: {
+      app: "アプリ",
+      web: "Web",
+      software: "ソフトウェア",
+      game: "ゲーム",
+    },
+
+    actions: {
+      installApp: "アプリをインストール",
+      viewSoftware: "ソフトウェアを見る",
+      visitWebsite: "Webサイトを見る",
+    },
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "高品質なWebサイトテンプレート、ソースコード、大学プロジェクトを提供するマーケットプレイスアプリ。",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA Calculator",
+        description:
+          "CGPAとSGPAを簡単に計算できるスマートなモバイルアプリ。",
+      },
+
+      fileConverter: {
+        title: "File Converter",
+        description:
+          "さまざまなファイル形式に対応した高度なファイル変換ツール。",
+      },
+
+      worldClock: {
+        title: "World Clock App",
+        description:
+          "世界中のタイムゾーンを確認・管理できるモダンなアプリケーション。",
+      },
+
+      fileRenamer: {
+        title: "File Renamer",
+        description:
+          "複数のファイルを一括で名前変更できる便利なユーティリティアプリ。",
+      },
+
+      schoolErp: {
+        title: "School ERP System",
+        description:
+          "学生、スタッフ、学業、出席、学校運営を一つの集中管理ダッシュボードで効率的に管理できます。",
+      },
+
+      hospitalManagementSystem: {
+        title: "Hospital Management System",
+        description:
+          "部門、医師、スタッフ、患者、病院管理をダッシュボードから安全に管理できるロールベースの病院管理システム。",
+      },
+
+      invoiceMaker: {
+        title: "Invoice Maker",
+        description:
+          "プロフェッショナルな請求書を作成できるモバイルアプリ。",
+      },
+
+      pdfConverter: {
+        title: "PDF Converter",
+        description:
+          "画像を高品質なPDFファイルに変換できます。",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF Lock Unlock",
+        description:
+          "パスワードを使用してPDFファイルを保護・ロック解除できます。",
+      },
+
+      sampleFiles: {
+        title: "Sample Files",
+        description:
+          "さまざまな種類のサンプルファイルをダウンロードできます。",
+      },
+
+      imageToPdf: {
+        title: "Image To PDF",
+        description:
+          "画像を高品質なPDFファイルに変換できます。",
+      },
+    },
+  },
 };
 
 export default ja;

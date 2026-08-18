@@ -74,6 +74,7 @@ function App() {
             <Route path="/:lang/services" element={<Services />} />
 
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/:lang/portfolio" element={<Portfolio />} />
 
             <Route path="/contact" element={<Contact />} />
             <Route path="/:lang/contact" element={<Contact />} />
@@ -83,6 +84,7 @@ function App() {
 
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
+
 
             <Route
               path="/app-development"
@@ -94,35 +96,43 @@ function App() {
               element={<AppDevelopment />}
             />
 
+
             <Route
               path="/web-development"
               element={<WebDevelopment />}
             />
+
 
             <Route
               path="/software-development"
               element={<SoftwareDevelopment />}
             />
 
+
             <Route
               path="/game-development"
               element={<GameDevelopment />}
             />
+
 
             <Route
               path="/it-consulting"
               element={<ITConsulting />}
             />
 
+
             <Route
               path="/pamphlet-design"
               element={<PamphletDesign />}
             />
 
+
             <Route
               path="/invoice-design"
               element={<InvoiceDesign />}
             />
+
+            
 
             <Route
               path="/apps/world-clock/privacy-policy"

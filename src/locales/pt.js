@@ -1594,6 +1594,107 @@ const pt = {
     agreement:
       "Ao enviar este formulário, você concorda em ser contatado sobre sua solicitação.",
   },
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
+  portfolio: {
+    eyebrow: "Nosso Portfólio",
+
+    title: "Projetos",
+    titleHighlight: "em Destaque",
+
+    description:
+      "Explore websites premium, aplicativos móveis, sistemas de software e projetos de desenvolvimento de jogos criados pela CH TECH GIANT.",
+
+    filters: {
+      all: "Todos",
+      web: "Web",
+      app: "Aplicativo",
+      software: "Software",
+      game: "Jogo",
+    },
+
+    installApp: "Instalar Aplicativo",
+
+    viewSoftware: "Ver Software",
+
+    visitWebsite: "Visitar Website",
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "Aplicativo de marketplace com templates premium de websites, códigos-fonte e projetos acadêmicos.",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "Calculadora CGPA SGPA",
+        description:
+          "Aplicativo móvel inteligente para cálculo de CGPA e SGPA.",
+      },
+
+      fileConverter: {
+        title: "Conversor de Arquivos",
+        description:
+          "Ferramenta avançada para conversão de arquivos em vários formatos.",
+      },
+
+      worldClock: {
+        title: "Aplicativo World Clock",
+        description:
+          "Aplicativo moderno para acompanhamento de fusos horários do mundo inteiro.",
+      },
+
+      fileRenamer: {
+        title: "Renomeador de Arquivos",
+        description:
+          "Aplicativo utilitário para renomeação de arquivos em lote.",
+      },
+
+      schoolERP: {
+        title: "Sistema ERP Escolar",
+        description:
+          "Gerencie alunos, funcionários, atividades acadêmicas, frequência e operações escolares em um único painel centralizado.",
+      },
+
+      hospitalManagement: {
+        title: "Sistema de Gestão Hospitalar",
+        description:
+          "Sistema seguro de gestão hospitalar baseado em funções para administrar departamentos, médicos, funcionários, pacientes e operações hospitalares por meio de um painel centralizado.",
+      },
+
+      invoiceMaker: {
+        title: "Criador de Faturas",
+        description:
+          "Aplicativo profissional para criação e gerenciamento de faturas.",
+      },
+
+      pdfConverter: {
+        title: "Conversor de PDF",
+        description:
+          "Converta imagens em arquivos PDF de alta qualidade.",
+      },
+
+      pdfLockUnlock: {
+        title: "Bloquear e Desbloquear PDF",
+        description:
+          "Proteja e desbloqueie arquivos PDF usando senhas.",
+      },
+
+      sampleFiles: {
+        title: "Arquivos de Exemplo",
+        description:
+          "Baixe diversos tipos de arquivos de exemplo.",
+      },
+
+      imageToPdf: {
+        title: "Imagem para PDF",
+        description:
+          "Converta imagens em arquivos PDF de alta qualidade.",
+      },
+    },
+  },
 };
 
 export default pt;

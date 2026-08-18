@@ -1449,7 +1449,124 @@ const es = {
     agreement:
       "Al enviar este formulario, aceptas que nos pongamos en contacto contigo en relación con tu consulta.",
   },
-  
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
+  portfolio: {
+    seo: {
+      title: "Portafolio | CH TECH GIANT",
+      description:
+        "Explora sitios web, aplicaciones móviles, sistemas de software y proyectos digitales desarrollados por CH TECH GIANT.",
+      keywords:
+        "portafolio CH TECH GIANT, proyectos de desarrollo web, proyectos de aplicaciones móviles, proyectos de software, portafolio de desarrollo de apps, portafolio de desarrollo de software",
+    },
+
+    eyebrow: "Nuestro Portafolio",
+
+    title: "Proyectos",
+
+    titleHighlight: "Destacados",
+
+    description:
+      "Explora sitios web premium, aplicaciones móviles, software y proyectos de desarrollo de videojuegos creados por CH TECH GIANT.",
+
+    filters: {
+      all: "Todos",
+      web: "Web",
+      app: "App",
+      software: "Software",
+      game: "Juego",
+    },
+
+    categories: {
+      app: "App",
+      web: "Web",
+      software: "Software",
+      game: "Juego",
+    },
+
+    actions: {
+      installApp: "Instalar App",
+      viewSoftware: "Ver Software",
+      visitWebsite: "Visitar Sitio Web",
+    },
+
+    projects: {
+      webCodshop: {
+        title: "Web Codshop",
+        description:
+          "Aplicación de marketplace de plantillas web premium, códigos fuente y proyectos universitarios.",
+      },
+
+      cgpaSgpaCalculator: {
+        title: "CGPA SGPA Calculator",
+        description:
+          "Aplicación móvil inteligente para calcular CGPA y SGPA.",
+      },
+
+      fileConverter: {
+        title: "File Converter",
+        description:
+          "Herramienta avanzada para convertir archivos entre múltiples formatos.",
+      },
+
+      worldClock: {
+        title: "World Clock App",
+        description:
+          "Aplicación moderna para consultar y realizar un seguimiento de las zonas horarias del mundo.",
+      },
+
+      fileRenamer: {
+        title: "File Renamer",
+        description:
+          "Aplicación de utilidad para renombrar archivos en lote.",
+      },
+
+      schoolErp: {
+        title: "School ERP System",
+        description:
+          "Gestiona estudiantes, personal, actividades académicas, asistencia y operaciones escolares desde un panel centralizado.",
+      },
+
+      hospitalManagementSystem: {
+        title: "Hospital Management System",
+        description:
+          "Sistema seguro de gestión hospitalaria basado en roles para administrar departamentos, médicos, personal, pacientes y la administración del hospital desde un panel.",
+      },
+
+      invoiceMaker: {
+        title: "Invoice Maker",
+        description:
+          "Aplicación profesional para crear facturas.",
+      },
+
+      pdfConverter: {
+        title: "PDF Converter",
+        description:
+          "Convierte imágenes en archivos PDF de alta calidad.",
+      },
+
+      pdfLockUnlock: {
+        title: "PDF Lock Unlock",
+        description:
+          "Protege y desbloquea archivos PDF mediante una contraseña.",
+      },
+
+      sampleFiles: {
+        title: "Sample Files",
+        description:
+          "Descarga diferentes tipos de archivos de muestra.",
+      },
+
+      imageToPdf: {
+        title: "Image To PDF",
+        description:
+          "Convierte imágenes en archivos PDF de alta calidad.",
+      },
+    },
+  },
+
 };
 
 export default es;
