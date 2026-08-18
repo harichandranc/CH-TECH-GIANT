@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa";
 
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
@@ -9,6 +10,44 @@ import SectionNavigator from "../../components/SectionNavigator";
 import { translations } from "../../locales";
 
 const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
+
+const languages = [
+  {
+    code: "en",
+    path: "/app-development",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh/app-development",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es/app-development",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/app-development",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de/app-development",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/app-development",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/app-development",
+    label: "🇯🇵 日本語",
+  },
+];
 
 const features = [
   "Android App Development",
@@ -1068,18 +1107,15 @@ const whyChooseUs = [
 
 const AppDevelopment = () => {
   const { lang } = useParams();
+  const navigate = useNavigate();
 
   const language = supportedLanguages.includes(lang) ? lang : "en";
   const t = translations[language];
 
-  /*
-   * App-development translations are stored in:
-   * translations[language].appDevelopment
-   *
-   * The IDs are intentionally preserved so the translated
-   * category data always maps to the correct original card.
-   */
   const appT = t.appDevelopment || {};
+
+  const currentLanguage =
+    languages.find((item) => item.code === language) || languages[0];
 
   const getCategoryTranslation = (id) => {
     const translated = appT.appCategories?.find(
@@ -1105,9 +1141,27 @@ const AppDevelopment = () => {
     return appT.whyChooseUs?.[index] || whyChooseUs[index];
   };
 
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+
+    const selected = languages.find(
+      (item) => item.code === selectedLanguage
+    );
+
+    if (selected) {
+      navigate(selected.path);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <Helmet>
+        <html lang={language} />
+
         <title>
           {appT.metaTitle ||
             "Mobile App Development Company | Android, iOS & Flutter Apps | CH TECH GIANT"}
@@ -1129,13 +1183,52 @@ const AppDevelopment = () => {
           }
         />
 
+        <meta
+          name="author"
+          content="CH TECH GIANT"
+        />
+
         <link
           rel="canonical"
+          href={`https://chtechgiant.com${
+            language === "en" ? "" : `/${language}`
+          }/app-development`}
+        />
+
+        {languages.map((item) => (
+          <link
+            key={item.code}
+            rel="alternate"
+            hrefLang={
+              item.code === "zh"
+                ? "zh-CN"
+                : item.code === "pt"
+                ? "pt-BR"
+                : item.code === "ko"
+                ? "ko-KR"
+                : item.code === "ja"
+                ? "ja-JP"
+                : item.code
+            }
+            href={`https://chtechgiant.com${
+              item.code === "en" ? "" : `/${item.code}`
+            }/app-development`}
+          />
+        ))}
+
+        <link
+          rel="alternate"
+          hrefLang="x-default"
           href="https://chtechgiant.com/app-development"
         />
       </Helmet>
 
-      <div className="bg-[#050816] text-white">
+      <div className="bg-[#050816] text-white min-h-screen">
+
+        {/* =====================================================
+            PAGE BANNER
+        ===================================================== */}
+
         <PageBanner
           title={appT.bannerTitle || "Mobile App Development"}
           subtitle={
@@ -1144,7 +1237,40 @@ const AppDevelopment = () => {
           }
         />
 
-        {/* HERO */}
+        {/* =====================================================
+            LANGUAGE SELECTOR
+            BELOW NAVBAR / PAGE BANNER
+        ===================================================== */}
+
+        <div className="relative z-50 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto flex justify-end pt-4 md:pt-6">
+            <div className="relative">
+              <select
+                value={language}
+                onChange={handleLanguageChange}
+                aria-label="Select language"
+                className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
+              >
+                {languages.map((item) => (
+                  <option
+                    key={item.code}
+                    value={item.code}
+                    className="bg-[#050816] text-white"
+                  >
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+
+              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+            </div>
+          </div>
+        </div>
+
+        {/* =====================================================
+            HERO
+        ===================================================== */}
+
         <SectionWrapper id="hero">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -1169,14 +1295,18 @@ const AppDevelopment = () => {
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                {(appT.features || features).map((feature, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 border border-cyan-500/10 rounded-2xl p-4 hover:border-cyan-400/30 transition"
-                  >
-                    <p className="text-gray-300">{feature}</p>
-                  </div>
-                ))}
+                {(appT.features || features).map(
+                  (feature, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/5 border border-cyan-500/10 rounded-2xl p-4 hover:border-cyan-400/30 transition"
+                    >
+                      <p className="text-gray-300">
+                        {feature}
+                      </p>
+                    </div>
+                  )
+                )}
               </div>
             </motion.div>
 
@@ -1193,16 +1323,18 @@ const AppDevelopment = () => {
               </h2>
 
               <div className="space-y-4 text-gray-400">
-                {(appT.heroBenefits || [
-                  "Android & iOS Specialists",
-                  "Flutter Cross-Platform Experts",
-                  "Modern UI/UX Design",
-                  "Secure Backend Integration",
-                  "Cloud-Based Architecture",
-                  "Fast Development Cycles",
-                  "App Store & Play Store Publishing",
-                  "Long-Term Support & Maintenance",
-                ]).map((item, index) => (
+                {(
+                  appT.heroBenefits || [
+                    "Android & iOS Specialists",
+                    "Flutter Cross-Platform Experts",
+                    "Modern UI/UX Design",
+                    "Secure Backend Integration",
+                    "Cloud-Based Architecture",
+                    "Fast Development Cycles",
+                    "App Store & Play Store Publishing",
+                    "Long-Term Support & Maintenance",
+                  ]
+                ).map((item, index) => (
                   <p key={index}>✔ {item}</p>
                 ))}
               </div>
@@ -1210,11 +1342,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* SERVICES */}
+        {/* =====================================================
+            SERVICES
+        ===================================================== */}
+
         <SectionWrapper id="services">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              {appT.servicesTitle || "Our App Development Services"}
+              {appT.servicesTitle ||
+                "Our App Development Services"}
             </h2>
 
             <p className="text-gray-400 max-w-3xl mx-auto">
@@ -1225,7 +1361,8 @@ const AppDevelopment = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
-              const serviceData = getServiceTranslation(index);
+              const serviceData =
+                getServiceTranslation(index);
 
               return (
                 <div
@@ -1245,11 +1382,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* MOBILE APPS */}
+        {/* =====================================================
+            MOBILE APPS
+        ===================================================== */}
+
         <SectionWrapper id="mobile-apps">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              {appT.mobileAppsTitle || "Mobile Apps We Develop"}
+              {appT.mobileAppsTitle ||
+                "Mobile Apps We Develop"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1260,24 +1401,24 @@ const AppDevelopment = () => {
 
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {appCategories.map((app) => {
-              const translatedApp = getCategoryTranslation(app.id);
+              const translatedApp =
+                getCategoryTranslation(app.id);
 
               return (
                 <div
                   key={app.id}
                   className="overflow-hidden rounded-3xl bg-gradient-to-b from-white/5 to-white/[0.03] border border-cyan-500/10 hover:border-cyan-400 transition-colors duration-300"
                 >
-                  {/* IMAGE */}
                   <div className="relative aspect-video overflow-hidden bg-[#06101c]">
                     <img
                       src={app.image}
                       alt={translatedApp.title}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent" />
 
-                    {/* TITLE */}
                     <div className="absolute bottom-5 left-6 right-6">
                       <h3 className="text-2xl font-bold text-white leading-tight">
                         {translatedApp.title}
@@ -1285,31 +1426,31 @@ const AppDevelopment = () => {
                     </div>
                   </div>
 
-                  {/* CONTENT */}
                   <div className="p-7">
                     <p className="text-gray-400 text-[15px] leading-7 mb-6">
                       {translatedApp.description}
                     </p>
 
-                    {/* FEATURES */}
                     <div className="grid grid-cols-2 gap-x-5 gap-y-3 mb-8">
-                      {translatedApp.features.map((feature, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start text-sm text-gray-300"
-                        >
-                          <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 mr-3 shrink-0"></div>
+                      {translatedApp.features.map(
+                        (feature, i) => (
+                          <div
+                            key={i}
+                            className="flex items-start text-sm text-gray-300"
+                          >
+                            <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 mr-3 shrink-0" />
 
-                          <span>{feature}</span>
-                        </div>
-                      ))}
+                            <span>{feature}</span>
+                          </div>
+                        )
+                      )}
                     </div>
 
-                    {/* BOTTOM */}
                     <div className="flex items-center justify-between border-t border-white/10 pt-6">
                       <div>
                         <p className="text-xs uppercase tracking-widest text-gray-500">
-                          {appT.customDevelopment || "Custom Development"}
+                          {appT.customDevelopment ||
+                            "Custom Development"}
                         </p>
 
                         <p className="text-cyan-400 font-semibold text-sm">
@@ -1317,12 +1458,16 @@ const AppDevelopment = () => {
                         </p>
                       </div>
 
-                      <a
-                        href="/contact"
+                      <Link
+                        to={
+                          language === "en"
+                            ? "/contact"
+                            : `/${language}/contact`
+                        }
                         className="px-5 py-2.5 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-colors duration-300"
                       >
                         {appT.getQuote || "Get Quote"}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1331,11 +1476,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* INDUSTRIES */}
+        {/* =====================================================
+            INDUSTRIES
+        ===================================================== */}
+
         <SectionWrapper id="industries">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.industriesTitle || "Industries We Serve"}
+              {appT.industriesTitle ||
+                "Industries We Serve"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
@@ -1346,14 +1495,20 @@ const AppDevelopment = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
             {industries.map((industry, index) => {
-              const industryData = getIndustryTranslation(index);
+              const industryData =
+                getIndustryTranslation(index);
 
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    delay: index * 0.05,
+                  }}
                   viewport={{ once: true }}
                   whileHover={{ y: -8 }}
                   className="bg-white/5 border border-cyan-500/10 hover:border-cyan-400 rounded-3xl p-7 transition-all duration-300"
@@ -1375,11 +1530,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* TECHNOLOGIES */}
+        {/* =====================================================
+            TECHNOLOGIES
+        ===================================================== */}
+
         <SectionWrapper id="technologies">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.technologiesTitle || "Technologies We Use"}
+              {appT.technologiesTitle ||
+                "Technologies We Use"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
@@ -1390,7 +1549,8 @@ const AppDevelopment = () => {
 
           <div className="space-y-8">
             {technologies.map((tech, index) => {
-              const techData = getTechnologyTranslation(index);
+              const techData =
+                getTechnologyTranslation(index);
 
               return (
                 <div
@@ -1402,14 +1562,16 @@ const AppDevelopment = () => {
                   </h3>
 
                   <div className="flex flex-wrap gap-4">
-                    {techData.items.map((item, i) => (
-                      <div
-                        key={i}
-                        className="px-5 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20"
-                      >
-                        {item}
-                      </div>
-                    ))}
+                    {techData.items.map(
+                      (item, i) => (
+                        <div
+                          key={i}
+                          className="px-5 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20"
+                        >
+                          {item}
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
               );
@@ -1417,11 +1579,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* WHY CHOOSE US */}
+        {/* =====================================================
+            WHY CHOOSE US
+        ===================================================== */}
+
         <SectionWrapper id="why-us">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.whyUsTitle || "Why Choose CH TECH GIANT"}
+              {appT.whyUsTitle ||
+                "Why Choose CH TECH GIANT"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
@@ -1432,7 +1598,8 @@ const AppDevelopment = () => {
 
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             {whyChooseUs.map((item, index) => {
-              const itemData = getWhyChooseTranslation(index);
+              const itemData =
+                getWhyChooseTranslation(index);
 
               return (
                 <div
@@ -1456,15 +1623,20 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* STATS */}
+        {/* =====================================================
+            STATS
+        ===================================================== */}
+
         <SectionWrapper id="stats">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 50+
               </h2>
+
               <p className="text-gray-300">
-                {appT.stats?.[0] || "App Categories Covered"}
+                {appT.stats?.[0] ||
+                  "App Categories Covered"}
               </p>
             </div>
 
@@ -1472,8 +1644,10 @@ const AppDevelopment = () => {
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 100%
               </h2>
+
               <p className="text-gray-300">
-                {appT.stats?.[1] || "Custom Development"}
+                {appT.stats?.[1] ||
+                  "Custom Development"}
               </p>
             </div>
 
@@ -1481,8 +1655,10 @@ const AppDevelopment = () => {
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 24/7
               </h2>
+
               <p className="text-gray-300">
-                {appT.stats?.[2] || "Technical Support"}
+                {appT.stats?.[2] ||
+                  "Technical Support"}
               </p>
             </div>
 
@@ -1490,27 +1666,35 @@ const AppDevelopment = () => {
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 ∞
               </h2>
+
               <p className="text-gray-300">
-                {appT.stats?.[3] || "Innovation & Growth"}
+                {appT.stats?.[3] ||
+                  "Innovation & Growth"}
               </p>
             </div>
           </div>
         </SectionWrapper>
 
-        {/* PROCESS */}
+        {/* =====================================================
+            PROCESS
+        ===================================================== */}
+
         <SectionWrapper id="process">
           <h2 className="text-4xl font-bold text-center mb-12">
-            {appT.processTitle || "Our Development Process"}
+            {appT.processTitle ||
+              "Our Development Process"}
           </h2>
 
           <div className="grid md:grid-cols-5 gap-6">
-            {(appT.process || [
-              "Discovery",
-              "Design",
-              "Development",
-              "Testing",
-              "Launch",
-            ]).map((step, index) => (
+            {(
+              appT.process || [
+                "Discovery",
+                "Design",
+                "Development",
+                "Testing",
+                "Launch",
+              ]
+            ).map((step, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-cyan-500/10 rounded-3xl p-6 text-center"
@@ -1525,7 +1709,10 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* SEO CONTENT */}
+        {/* =====================================================
+            SEO CONTENT
+        ===================================================== */}
+
         <SectionWrapper id="seo">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 text-center">
@@ -1534,44 +1721,52 @@ const AppDevelopment = () => {
             </h2>
 
             <div className="space-y-6 text-gray-400 leading-relaxed">
-              {(appT.seoContent || [
-                "Mobile applications have become essential tools for businesses looking to improve customer engagement, automate processes, and increase revenue. At CH TECH GIANT, we create innovative mobile applications that deliver measurable business results.",
-                "Our development team uses the latest technologies including Flutter, Android, iOS, Firebase, Node.js, and cloud platforms to build secure and scalable applications. Every project is designed with performance, usability, and future growth in mind.",
-                "From healthcare and education to fintech, logistics, e-commerce, and enterprise solutions, we help organizations leverage mobile technology to stay competitive in today's digital marketplace.",
-              ]).map((paragraph, index) => (
+              {(
+                appT.seoContent || [
+                  "Mobile applications have become essential tools for businesses looking to improve customer engagement, automate processes, and increase revenue. At CH TECH GIANT, we create innovative mobile applications that deliver measurable business results.",
+                  "Our development team uses the latest technologies including Flutter, Android, iOS, Firebase, Node.js, and cloud platforms to build secure and scalable applications. Every project is designed with performance, usability, and future growth in mind.",
+                  "From healthcare and education to fintech, logistics, e-commerce, and enterprise solutions, we help organizations leverage mobile technology to stay competitive in today's digital marketplace.",
+                ]
+              ).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
           </div>
         </SectionWrapper>
 
-        {/* FAQ */}
+        {/* =====================================================
+            FAQ
+        ===================================================== */}
+
         <SectionWrapper id="faq">
           <h2 className="text-4xl font-bold text-center mb-12">
-            {appT.faqTitle || "Frequently Asked Questions"}
+            {appT.faqTitle ||
+              "Frequently Asked Questions"}
           </h2>
 
           <div className="space-y-6 max-w-4xl mx-auto">
-            {(appT.faq || [
-              {
-                question:
-                  "How much does mobile app development cost?",
-                answer:
-                  "The cost depends on features, complexity, platforms, and integrations required. We provide custom quotes based on your project requirements.",
-              },
-              {
-                question:
-                  "Do you develop both Android and iOS apps?",
-                answer:
-                  "Yes. We develop Android applications, iOS applications, and Flutter cross-platform apps.",
-              },
-              {
-                question:
-                  "Do you provide post-launch support?",
-                answer:
-                  "Yes. We offer maintenance, updates, monitoring, bug fixes, and feature enhancements after launch.",
-              },
-            ]).map((item, index) => (
+            {(
+              appT.faq || [
+                {
+                  question:
+                    "How much does mobile app development cost?",
+                  answer:
+                    "The cost depends on features, complexity, platforms, and integrations required. We provide custom quotes based on your project requirements.",
+                },
+                {
+                  question:
+                    "Do you develop both Android and iOS apps?",
+                  answer:
+                    "Yes. We develop Android applications, iOS applications, and Flutter cross-platform apps.",
+                },
+                {
+                  question:
+                    "Do you provide post-launch support?",
+                  answer:
+                    "Yes. We offer maintenance, updates, monitoring, bug fixes, and feature enhancements after launch.",
+                },
+              ]
+            ).map((item, index) => (
               <div
                 key={index}
                 className="bg-white/5 rounded-3xl p-6"
@@ -1588,11 +1783,15 @@ const AppDevelopment = () => {
           </div>
         </SectionWrapper>
 
-        {/* CTA */}
+        {/* =====================================================
+            CTA
+        ===================================================== */}
+
         <SectionWrapper id="cta">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/20 rounded-3xl p-10 text-center">
             <h2 className="text-4xl font-bold mb-4">
-              {appT.ctaTitle || "Ready To Build Your App?"}
+              {appT.ctaTitle ||
+                "Ready To Build Your App?"}
             </h2>
 
             <p className="text-gray-400 max-w-3xl mx-auto mb-8">
@@ -1600,14 +1799,23 @@ const AppDevelopment = () => {
                 "Partner with CH TECH GIANT to transform your idea into a powerful mobile application."}
             </p>
 
-            <a
-              href="/contact"
-              className="inline-flex px-8 py-4 rounded-full bg-cyan-500 hover:bg-cyan-400 transition"
+            <Link
+              to={
+                language === "en"
+                  ? "/contact"
+                  : `/${language}/contact`
+              }
+              className="inline-flex px-8 py-4 rounded-full bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold"
             >
-              {appT.ctaButton || "Get Free Consultation"}
-            </a>
+              {appT.ctaButton ||
+                "Get Free Consultation"}
+            </Link>
           </div>
         </SectionWrapper>
+
+        {/* =====================================================
+            SECTION NAVIGATOR
+        ===================================================== */}
 
         <SectionNavigator
           sections={[
