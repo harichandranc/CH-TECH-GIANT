@@ -160,9 +160,9 @@ function PrivacyPolicy() {
       ================================================= */}
 
       <PageBanner
-        title={t.privacyPolicy.pageTitle}
-        subtitle={t.privacyPolicy.pageSubtitle}
-      />
+  title={t.privacyPolicy.title}
+  subtitle={t.privacyPolicy.subtitle}
+/>
 
       {/* =================================================
           PRIVACY POLICY CONTENT
