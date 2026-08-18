@@ -1715,51 +1715,51 @@ const de = {
       },
     },
   },
-    // =========================
-  // PRIVACY POLICY PAGE
   // =========================
+// PRIVACY POLICY PAGE
+// =========================
 
-  privacyPolicy: {
-    seo: {
-      title: "Datenschutzerklärung | CH TECH GIANT",
-      description:
-        "Lesen Sie die Datenschutzerklärung von CH TECH GIANT (OPC) PRIVATE LIMITED und erfahren Sie, wie wir Ihre Informationen erfassen, verwenden, schützen und verwalten.",
-      keywords:
-        "CH TECH GIANT Datenschutzerklärung, Datenschutzrichtlinie, Datenschutz, persönliche Daten, Datensicherheit",
-    },
+privacyPolicy: {
+  seo: {
+    title: "Datenschutzerklärung | CH TECH GIANT",
+    description:
+      "Lesen Sie die Datenschutzerklärung von CH TECH GIANT (OPC) PRIVATE LIMITED. Erfahren Sie, wie wir Ihre Informationen erfassen, verwenden, schützen und verwalten.",
+    keywords:
+      "CH TECH GIANT Datenschutzerklärung, Datenschutz, persönliche Daten, Datensicherheit, Datenschutzrichtlinie",
+  },
 
-    title: "Datenschutzerklärung",
+  title: "Datenschutzerklärung",
 
-    subtitle:
-      "Ihre Privatsphäre und Datensicherheit sind uns wichtig.",
+  subtitle:
+    "Ihre Privatsphäre und die Sicherheit Ihrer Daten sind für uns von großer Bedeutung.",
 
-    lastUpdated: "Zuletzt aktualisiert • 23. Mai 2026",
+  lastUpdated: "Zuletzt aktualisiert • 23. Mai 2026",
 
-    sections: {
-      companyInformation: {
-        title: "Unternehmensinformationen",
-        content: `
+  sections: [
+    {
+      title: "Unternehmensinformationen",
+      content: `
 CH TECH GIANT (OPC) PRIVATE LIMITED ist ein Technologieunternehmen mit Sitz in Davanagere, Karnataka, Indien.
 
-Wir sind spezialisiert auf:
+Wir sind auf folgende Dienstleistungen spezialisiert:
 • App-Entwicklung
 • Webentwicklung
 • Softwareentwicklung
 • Spieleentwicklung
-• IT-Lösungen & digitale Dienstleistungen
+• IT-Lösungen und digitale Dienstleistungen
 
 Website: https://chtechgiant.com
 E-Mail: info@chtechgiant.com
 Telefon: +91 9980785020
-        `,
-      },
+      `,
+    },
 
-      informationWeCollect: {
-        title: "Von uns erfasste Informationen",
-        content: `
-Wir können persönliche und technische Informationen erfassen, wenn Sie mit unserer Website oder unseren Dienstleistungen interagieren.
+    {
+      title: "Von uns erfasste Informationen",
+      content: `
+Wenn Sie unsere Website oder Dienstleistungen nutzen, können wir personenbezogene und technische Informationen erfassen.
 
-Dies kann Folgendes umfassen:
+Zu den möglicherweise erfassten Informationen gehören:
 • Name
 • E-Mail-Adresse
 • Telefonnummer
@@ -1769,118 +1769,118 @@ Dies kann Folgendes umfassen:
 • Browserinformationen
 • Geräteinformationen
 • Website-Analysedaten
-        `,
-      },
+      `,
+    },
 
-      howWeUseInformation: {
-        title: "Wie wir Ihre Informationen verwenden",
-        content: `
-Wir verwenden die erfassten Informationen für folgende Zwecke:
+    {
+      title: "Wie wir Informationen verwenden",
+      content: `
+Die von uns erfassten Informationen können für folgende Zwecke verwendet werden:
 • Bereitstellung und Verbesserung unserer Dienstleistungen
 • Beantwortung von Anfragen und Supportanfragen
-• Bereitstellung von Projektaktualisierungen
+• Bereitstellung von projektbezogenen Updates
 • Verbesserung der Website-Leistung
 • Aufrechterhaltung der Website-Sicherheit
-• Verhinderung unbefugter Aktivitäten
+• Verhinderung betrügerischer oder unbefugter Aktivitäten
 
-Wir verkaufen oder vermieten Ihre persönlichen Informationen nicht an Dritte.
-        `,
-      },
+Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht an Dritte.
+      `,
+    },
 
-      thirdPartyServices: {
-        title: "Drittanbieterdienste",
-        content: `
-Unsere Website kann eingebettete Inhalte oder Integrationen von Drittanbieterplattformen enthalten, wie zum Beispiel:
+    {
+      title: "Drittanbieterdienste",
+      content: `
+Unsere Website kann Inhalte oder Integrationen von Drittanbieterplattformen enthalten, darunter:
 • YouTube
 • Google-Dienste
 • Social-Media-Plattformen
-• Analyseanbieter
+• Anbieter von Analysediensten
 
-Diese Dienste können Daten unabhängig gemäß ihren eigenen Datenschutzrichtlinien erfassen.
-        `,
-      },
+Diese Dienste können Daten gemäß ihren eigenen Datenschutzrichtlinien erfassen.
+      `,
+    },
 
-      dataSecurity: {
-        title: "Datensicherheit",
-        content: `
-CH TECH GIANT verwendet branchenübliche Sicherheitsmaßnahmen, um Benutzerdaten vor unbefugtem Zugriff, Missbrauch, Offenlegung oder Zerstörung zu schützen.
+    {
+      title: "Datensicherheit",
+      content: `
+CH TECH GIANT setzt branchenübliche Sicherheitsmaßnahmen ein, um Benutzerdaten vor unbefugtem Zugriff, Missbrauch, Offenlegung oder Zerstörung zu schützen.
 
-Allerdings kann keine Online-Plattform vollständige Sicherheit garantieren.
-        `,
-      },
+Dennoch kann keine Online-Plattform oder kein Online-System eine vollständige Sicherheit garantieren.
+      `,
+    },
 
-      dataRetention: {
-        title: "Datenaufbewahrung",
-        content: `
-Wir speichern Benutzerinformationen nur so lange, wie dies erforderlich ist für:
-• Erbringung von Dienstleistungen
-• Einhaltung gesetzlicher Vorschriften
-• Geschäftliche Aufzeichnungen
+    {
+      title: "Speicherung von Daten",
+      content: `
+Wir speichern Benutzerinformationen nur so lange, wie dies für folgende Zwecke erforderlich ist:
+• Bereitstellung unserer Dienstleistungen
+• Erfüllung gesetzlicher Verpflichtungen
+• Führung von Geschäftsunterlagen
 • Sicherheitszwecke
 
-Benutzer können die Löschung ihrer Daten beantragen, indem sie uns kontaktieren.
-        `,
-      },
+Benutzer können uns kontaktieren, um die Löschung ihrer Daten zu beantragen.
+      `,
+    },
 
-      yourRights: {
-        title: "Ihre Rechte",
-        content: `
-Sie haben möglicherweise das Recht:
-• Auf Ihre personenbezogenen Daten zuzugreifen
-• Unrichtige Informationen zu korrigieren
-• Die Löschung von Daten zu beantragen
-• Ihre Einwilligung zu widerrufen
-• Eine Kopie der gespeicherten Daten anzufordern
+    {
+      title: "Ihre Rechte",
+      content: `
+Sie können folgende Rechte in Bezug auf Ihre personenbezogenen Daten haben:
+• Zugriff auf Ihre personenbezogenen Daten
+• Berichtigung unrichtiger Informationen
+• Löschung Ihrer Daten beantragen
+• Ihre Einwilligung widerrufen
+• Eine Kopie der gespeicherten Daten anfordern
 
-Um diese Rechte auszuüben, kontaktieren Sie uns unter:
+Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter:
 info@chtechgiant.com
-        `,
-      },
+      `,
+    },
 
-      externalLinks: {
-        title: "Externe Links",
-        content: `
+    {
+      title: "Externe Links",
+      content: `
 Unsere Website kann Links zu externen Websites enthalten. Wir sind nicht für die Datenschutzpraktiken oder Inhalte von Websites Dritter verantwortlich.
-        `,
-      },
+      `,
+    },
 
-      childrensPrivacy: {
-        title: "Datenschutz für Kinder",
-        content: `
+    {
+      title: "Datenschutz von Kindern",
+      content: `
 Unsere Dienstleistungen richten sich nicht an Kinder unter 13 Jahren. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern.
-        `,
-      },
+      `,
+    },
 
-      policyUpdates: {
-        title: "Aktualisierungen der Richtlinie",
-        content: `
+    {
+      title: "Aktualisierungen dieser Richtlinie",
+      content: `
 Wir können diese Datenschutzerklärung regelmäßig aktualisieren, um Folgendes zu berücksichtigen:
-• Gesetzliche Änderungen
+• Änderungen der Gesetzgebung
 • Aktualisierungen unserer Dienstleistungen
 • Verbesserungen der Sicherheit
-• Änderungen im Unternehmen
+• Änderungen im Geschäftsbetrieb
 
-Aktualisierte Versionen werden auf dieser Seite veröffentlicht.
-        `,
-      },
+Die aktualisierte Version wird auf dieser Seite veröffentlicht.
+      `,
     },
+  ],
 
-    contact: {
-      title: "Kontaktieren Sie uns",
+  contact: {
+    title: "Kontakt",
 
-      company:
-        "CH TECH GIANT (OPC) PRIVATE LIMITED",
+    company:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED",
 
-      address:
-        "Davanagere, Karnataka - 577001",
+    address:
+      "Davanagere, Karnataka - 577001",
 
-      phone:
-        "+91 9980785020",
+    phone:
+      "+91 9980785020",
 
-      email:
-        "info@chtechgiant.com",
-    },
+    email:
+      "info@chtechgiant.com",
   },
+},
 
 };
 export default de;

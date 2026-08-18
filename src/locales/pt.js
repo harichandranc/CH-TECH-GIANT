@@ -1715,33 +1715,33 @@ const pt = {
       },
     },
   },
-    // =========================
-  // PRIVACY POLICY PAGE
   // =========================
+// PRIVACY POLICY PAGE
+// =========================
 
-  privacyPolicy: {
-    seo: {
-      title: "Política de Privacidade | CH TECH GIANT",
-      description:
-        "Leia a Política de Privacidade da CH TECH GIANT (OPC) PRIVATE LIMITED para saber como coletamos, usamos, protegemos e gerenciamos suas informações.",
-      keywords:
-        "CH TECH GIANT política de privacidade, privacidade, proteção de dados, informações pessoais, segurança de dados",
-    },
+privacyPolicy: {
+  seo: {
+    title: "Política de Privacidade | CH TECH GIANT",
+    description:
+      "Leia a Política de Privacidade da CH TECH GIANT (OPC) PRIVATE LIMITED. Saiba como coletamos, usamos, protegemos e gerenciamos suas informações.",
+    keywords:
+      "Política de Privacidade CH TECH GIANT, proteção de dados, privacidade, informações pessoais, segurança de dados",
+  },
 
-    title: "Política de Privacidade",
+  title: "Política de Privacidade",
 
-    subtitle:
-      "Sua privacidade e a segurança dos seus dados são importantes para nós.",
+  subtitle:
+    "Sua privacidade e a segurança dos seus dados são muito importantes para nós.",
 
-    lastUpdated: "Última atualização • 23 de maio de 2026",
+  lastUpdated: "Última atualização • 23 de maio de 2026",
 
-    sections: {
-      companyInformation: {
-        title: "Informações da Empresa",
-        content: `
+  sections: [
+    {
+      title: "Informações da Empresa",
+      content: `
 A CH TECH GIANT (OPC) PRIVATE LIMITED é uma empresa de tecnologia com sede em Davanagere, Karnataka, Índia.
 
-Somos especializados em:
+Somos especializados nos seguintes serviços:
 • Desenvolvimento de aplicativos
 • Desenvolvimento web
 • Desenvolvimento de software
@@ -1751,136 +1751,136 @@ Somos especializados em:
 Site: https://chtechgiant.com
 E-mail: info@chtechgiant.com
 Telefone: +91 9980785020
-        `,
-      },
+      `,
+    },
 
-      informationWeCollect: {
-        title: "Informações que Coletamos",
-        content: `
-Podemos coletar informações pessoais e técnicas quando você interage com nosso site ou utiliza nossos serviços.
+    {
+      title: "Informações que Coletamos",
+      content: `
+Ao utilizar nosso site ou nossos serviços, podemos coletar informações pessoais e técnicas.
 
-Isso pode incluir:
+As informações que podem ser coletadas incluem:
 • Nome
 • Endereço de e-mail
 • Número de telefone
-• Informações comerciais
+• Informações relacionadas ao negócio
 • Requisitos do projeto
 • Endereço IP
 • Informações do navegador
 • Informações do dispositivo
 • Dados de análise do site
-        `,
-      },
+      `,
+    },
 
-      howWeUseInformation: {
-        title: "Como Usamos suas Informações",
-        content: `
-Utilizamos as informações coletadas para:
+    {
+      title: "Como Utilizamos as Informações",
+      content: `
+As informações coletadas podem ser utilizadas para:
 • Fornecer e melhorar nossos serviços
 • Responder a consultas e solicitações de suporte
-• Fornecer atualizações sobre projetos
+• Fornecer atualizações relacionadas aos projetos
 • Melhorar o desempenho do site
 • Manter a segurança do site
-• Prevenir atividades não autorizadas
+• Prevenir atividades fraudulentas ou não autorizadas
 
-Não vendemos nem alugamos suas informações pessoais para terceiros.
-        `,
-      },
+Não vendemos nem alugamos suas informações pessoais a terceiros.
+      `,
+    },
 
-      thirdPartyServices: {
-        title: "Serviços de Terceiros",
-        content: `
-Nosso site pode incluir conteúdo incorporado ou integrações de plataformas de terceiros, como:
+    {
+      title: "Serviços de Terceiros",
+      content: `
+Nosso site pode incluir conteúdo ou integrações de plataformas de terceiros, incluindo:
 • YouTube
 • Serviços do Google
-• Plataformas de redes sociais
-• Provedores de análise
+• Plataformas de mídia social
+• Provedores de serviços de análise
 
-Esses serviços podem coletar dados de forma independente de acordo com suas próprias políticas de privacidade.
-        `,
-      },
+Esses serviços podem coletar dados de acordo com suas próprias políticas de privacidade.
+      `,
+    },
 
-      dataSecurity: {
-        title: "Segurança dos Dados",
-        content: `
-A CH TECH GIANT utiliza medidas de segurança padrão do setor para proteger os dados dos usuários contra acesso não autorizado, uso indevido, divulgação ou destruição.
+    {
+      title: "Segurança dos Dados",
+      content: `
+A CH TECH GIANT adota medidas de segurança padrão do setor para proteger os dados dos usuários contra acesso não autorizado, uso indevido, divulgação ou destruição.
 
-No entanto, nenhuma plataforma online pode garantir segurança completa.
-        `,
-      },
+No entanto, nenhum sistema ou plataforma online pode garantir segurança absoluta.
+      `,
+    },
 
-      dataRetention: {
-        title: "Retenção de Dados",
-        content: `
-Mantemos as informações dos usuários apenas pelo período necessário para:
-• Prestação de serviços
-• Cumprimento de obrigações legais
-• Registros comerciais
-• Fins de segurança
+    {
+      title: "Retenção de Dados",
+      content: `
+Mantemos as informações dos usuários somente pelo período necessário para:
+• Fornecer nossos serviços
+• Cumprir obrigações legais
+• Manter registros comerciais
+• Atender a requisitos de segurança
 
-Os usuários podem solicitar a exclusão de seus dados entrando em contato conosco.
-        `,
-      },
+Os usuários podem entrar em contato conosco para solicitar a exclusão de seus dados.
+      `,
+    },
 
-      yourRights: {
-        title: "Seus Direitos",
-        content: `
-Você pode ter o direito de:
-• Acessar seus dados pessoais
+    {
+      title: "Seus Direitos",
+      content: `
+Você poderá ter os seguintes direitos em relação às suas informações pessoais:
+• Acessar suas informações pessoais
 • Corrigir informações incorretas
-• Solicitar a exclusão de dados
+• Solicitar a exclusão dos seus dados
 • Retirar seu consentimento
 • Solicitar uma cópia dos dados armazenados
 
-Para exercer esses direitos, entre em contato conosco:
+Para exercer esses direitos, entre em contato conosco pelo seguinte endereço:
 info@chtechgiant.com
-        `,
-      },
+      `,
+    },
 
-      externalLinks: {
-        title: "Links Externos",
-        content: `
+    {
+      title: "Links Externos",
+      content: `
 Nosso site pode conter links para sites externos. Não somos responsáveis pelas práticas de privacidade ou pelo conteúdo de sites de terceiros.
-        `,
-      },
+      `,
+    },
 
-      childrensPrivacy: {
-        title: "Privacidade de Crianças",
-        content: `
-Nossos serviços não são direcionados a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças.
-        `,
-      },
+    {
+      title: "Privacidade de Crianças",
+      content: `
+Nossos serviços não são destinados a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças.
+      `,
+    },
 
-      policyUpdates: {
-        title: "Atualizações da Política",
-        content: `
+    {
+      title: "Atualizações desta Política",
+      content: `
 Podemos atualizar esta Política de Privacidade periodicamente para refletir:
-• Alterações legais
+• Alterações na legislação
 • Atualizações dos serviços
 • Melhorias de segurança
 • Alterações comerciais
 
-As versões atualizadas serão publicadas nesta página.
-        `,
-      },
+A versão atualizada será publicada nesta página.
+      `,
     },
+  ],
 
-    contact: {
-      title: "Entre em Contato",
+  contact: {
+    title: "Entre em Contato",
 
-      company:
-        "CH TECH GIANT (OPC) PRIVATE LIMITED",
+    company:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED",
 
-      address:
-        "Davanagere, Karnataka - 577001",
+    address:
+      "Davanagere, Karnataka - 577001",
 
-      phone:
-        "+91 9980785020",
+    phone:
+      "+91 9980785020",
 
-      email:
-        "info@chtechgiant.com",
-    },
+    email:
+      "info@chtechgiant.com",
   },
+},
 
 };
 
