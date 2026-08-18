@@ -1377,6 +1377,151 @@ const zh = {
 
     canonical: "[https://chtechgiant.com/app-development](https://chtechgiant.com/app-development)",
   },
+  about: {
+  seo: {
+    title: "关于我们 | CH TECH GIANT",
+    description:
+      "了解 CH TECH GIANT (OPC) PRIVATE LIMITED，一家专注于应用开发、网站开发、软件解决方案以及未来数字体验的现代软件公司。",
+    keywords:
+      "CH TECH GIANT 关于我们, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, 应用开发公司, 网站开发公司, Davanagere 软件公司, Flutter 开发, MERN Stack 开发, 软件解决方案",
+    author: "CH TECH GIANT",
+    ogTitle: "关于 CH TECH GIANT",
+    ogDescription:
+      "一家提供高品质网站、移动应用和数字解决方案的现代软件公司。",
+  },
+
+  hero: {
+    eyebrow: "关于我们",
+    title: "打造现代化",
+    titleHighlight: "数字解决方案",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED 是一家现代软件公司，专注于为企业和初创公司开发高品质网站、移动应用程序、软件系统以及未来化的数字体验。",
+  },
+
+  main: {
+    title: "为现代企业提供高品质软件解决方案",
+    paragraphs: [
+      "我们利用现代技术和简洁的 UI 设计，专注于创建高性能网站、移动应用程序、企业软件以及可扩展的数字系统。",
+      "我们致力于提供现代化、高性能且易于使用的数字产品，并根据客户需求和未来的扩展性进行定制。",
+      "我们的目标是通过兼具性能、美观设计和卓越用户体验的高品质技术解决方案，帮助企业建立强大的数字化形象。",
+    ],
+  },
+
+  company: {
+    eyebrow: "公司信息",
+    title: "官方",
+    titleHighlight: "公司信息",
+
+    legalNameLabel: "法定名称",
+    legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+    cinLabel: "公司识别号码（CIN）",
+    cin: "U62012KA2025OPC203976",
+
+    entityTypeLabel: "企业类型",
+    entityType: "私人有限公司",
+
+    incorporationLabel: "成立日期",
+    incorporation: "2025年6月10日",
+
+    rocLabel: "公司注册处",
+    roc: "ROC – Bangalore",
+
+    directorLabel: "董事总经理",
+    director: "Chandrashekar Harichandran",
+
+    appointmentLabel: "董事任命日期",
+    appointmentDate: "2025年6月10日",
+
+    addressLabel: "注册办公地址",
+    address:
+      "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere, Davangere, Davanagere, Karnataka, India – 577001",
+  },
+
+  services: {
+    eyebrow: "我们的服务",
+    title: "数字服务",
+    titleHighlight: "我们提供",
+
+    items: [
+      "应用开发",
+      "网站开发",
+      "软件开发",
+      "游戏开发",
+      "UI/UX 设计",
+      "企业解决方案",
+    ],
+  },
+
+  features: {
+    eyebrow: "为什么选择我们",
+    title: "创新技术",
+    titleHighlight: "与高品质设计",
+
+    items: [
+      {
+        title: "现代技术",
+        description:
+          "使用 React、Flutter、MERN Stack、Firebase、AI 工具以及现代可扩展技术。",
+      },
+      {
+        title: "高品质 UI/UX",
+        description:
+          "提供简洁、未来感的界面，以及流畅且响应式的用户体验。",
+      },
+      {
+        title: "定制化解决方案",
+        description:
+          "根据企业和初创公司的需求，定制开发软件、移动应用和网站。",
+      },
+      {
+        title: "可靠的支持",
+        description:
+          "提供专业的技术支持和持续改进，助力企业长期发展。",
+      },
+    ],
+  },
+
+  technologies: {
+    eyebrow: "技术",
+    title: "我们使用的",
+    titleHighlight: "技术",
+
+    items: [
+      "React",
+      "Flutter",
+      "Node.js",
+      "Firebase",
+      "MongoDB",
+      "Express.js",
+      "Tailwind CSS",
+      "AI 工具",
+    ],
+  },
+
+  process: {
+    eyebrow: "开发流程",
+    title: "我们的工作",
+    titleHighlight: "流程",
+
+    items: [
+      "规划",
+      "UI/UX 设计",
+      "开发",
+      "测试",
+      "部署",
+      "支持",
+    ],
+  },
+
+  mission: {
+    eyebrow: "我们的使命",
+    title: "创造可扩展的",
+    titleHighlight: "数字创新",
+    description:
+      "我们的使命是通过创新的技术解决方案，为初创公司、企业和组织赋能，推动业务增长、提升数字化形象，并通过现代开发标准和卓越的用户体验创造长期商业价值。",
+  },
+},
 };
 
 export default zh;

@@ -1,5 +1,47 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useNavigate, useParams } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa";
+
+const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
+
+const languages = [
+  {
+    code: "en",
+    path: "/about",
+    label: "🇺🇸 English",
+  },
+  {
+    code: "zh",
+    path: "/zh/about",
+    label: "🇨🇳 简体中文",
+  },
+  {
+    code: "es",
+    path: "/es/about",
+    label: "🇪🇸 Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/about",
+    label: "🇧🇷 Português",
+  },
+  {
+    code: "de",
+    path: "/de/about",
+    label: "🇩🇪 Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/about",
+    label: "🇰🇷 한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/about",
+    label: "🇯🇵 日本語",
+  },
+];
 
 const features = [
   {
@@ -54,6 +96,28 @@ const process = [
 ];
 
 const About = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  const language = supportedLanguages.includes(lang) ? lang : "en";
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+
+    const selected = languages.find(
+      (item) => item.code === selectedLanguage
+    );
+
+    if (selected) {
+      navigate(selected.path);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       {/* SEO */}
@@ -91,7 +155,10 @@ const About = () => {
 
         <meta property="og:type" content="website" />
 
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
 
         <link
           rel="canonical"
@@ -132,7 +199,37 @@ const About = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#050816] text-white px-6 py-24 overflow-hidden">
+      <div className="min-h-screen bg-[#050816] text-white px-6 overflow-hidden">
+
+        {/* =====================================================
+            LANGUAGE SELECTOR
+            DIRECTLY BELOW NAVBAR
+        ===================================================== */}
+        <div className="relative z-50">
+          <div className="max-w-7xl mx-auto flex justify-end">
+            <div className="relative">
+              <select
+                value={language}
+                onChange={handleLanguageChange}
+                aria-label="Select language"
+                className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
+              >
+                {languages.map((item) => (
+                  <option
+                    key={item.code}
+                    value={item.code}
+                    className="bg-[#050816] text-white"
+                  >
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+
+              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto">
 
           {/* HEADER */}
@@ -244,6 +341,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Legal Name
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     CH TECH GIANT (OPC) PRIVATE LIMITED
                   </p>
@@ -254,6 +352,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Corporate Identification Number (CIN)
                   </p>
+
                   <p className="text-cyan-400 text-lg font-semibold break-all">
                     U62012KA2025OPC203976
                   </p>
@@ -264,6 +363,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Entity Type
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     Private Limited Company
                   </p>
@@ -274,6 +374,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Date of Incorporation
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     June 10, 2025
                   </p>
@@ -284,6 +385,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Registrar of Companies
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     ROC – Bangalore
                   </p>
@@ -294,6 +396,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Managing Director
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     Chandrashekar Harichandran
                   </p>
@@ -304,6 +407,7 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Director Appointment Date
                   </p>
+
                   <p className="text-white text-lg font-semibold">
                     June 10, 2025
                   </p>
@@ -314,12 +418,14 @@ const About = () => {
                   <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
                     Registered Office
                   </p>
+
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                     1135/1, Behind BDO Office, Betur Road, Imam Nagara,
                     Barline Road-Davanagere, Davangere, Davanagere,
                     Karnataka, India – 577001
                   </p>
                 </div>
+
               </div>
             </motion.div>
           </section>

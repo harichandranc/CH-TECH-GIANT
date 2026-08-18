@@ -1387,6 +1387,151 @@ const de = {
 
     canonical: "https://chtechgiant.com/app-development",
   },
+  about: {
+  seo: {
+    title: "Über uns | CH TECH GIANT",
+    description:
+      "Erfahren Sie mehr über CH TECH GIANT (OPC) PRIVATE LIMITED, ein modernes Softwareunternehmen, das sich auf App-Entwicklung, Webentwicklung, Softwarelösungen und zukunftsorientierte digitale Erlebnisse spezialisiert.",
+    keywords:
+      "Über CH TECH GIANT, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, App-Entwicklungsunternehmen, Webentwicklungsunternehmen, Softwareunternehmen in Davanagere, Flutter-Entwicklung, MERN-Stack-Entwicklung, Softwarelösungen",
+    author: "CH TECH GIANT",
+    ogTitle: "Über CH TECH GIANT",
+    ogDescription:
+      "Modernes Softwareunternehmen für hochwertige Websites, mobile Anwendungen und digitale Lösungen.",
+  },
+
+  hero: {
+    eyebrow: "Über uns",
+    title: "Moderne",
+    titleHighlight: "Digitale Lösungen",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED ist ein modernes Softwareunternehmen, das sich auf die Entwicklung hochwertiger Websites, mobiler Anwendungen, Softwaresysteme und zukunftsorientierter digitaler Erlebnisse für Unternehmen und Startups konzentriert.",
+  },
+
+  main: {
+    title: "Hochwertige Softwarelösungen für moderne Unternehmen",
+    paragraphs: [
+      "Wir entwickeln leistungsstarke Websites, mobile Anwendungen, Unternehmenssoftware und skalierbare digitale Systeme mit modernen Technologien und einem klaren UI-Design.",
+      "Unser Unternehmen konzentriert sich auf die Entwicklung moderner, leistungsoptimierter und benutzerfreundlicher digitaler Produkte, die auf die Anforderungen unserer Kunden und zukünftige Skalierbarkeit zugeschnitten sind.",
+      "Unser Ziel ist es, Unternehmen dabei zu unterstützen, eine starke digitale Präsenz mit hochwertigen Technologielösungen aufzubauen, die Leistung, Ästhetik und Benutzerfreundlichkeit miteinander verbinden.",
+    ],
+  },
+
+  company: {
+    eyebrow: "Unternehmensinformationen",
+    title: "Offizielle",
+    titleHighlight: "Unternehmensdaten",
+
+    legalNameLabel: "Rechtlicher Name",
+    legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+    cinLabel: "Corporate Identification Number (CIN)",
+    cin: "U62012KA2025OPC203976",
+
+    entityTypeLabel: "Unternehmensform",
+    entityType: "Privatgesellschaft",
+
+    incorporationLabel: "Gründungsdatum",
+    incorporation: "10. Juni 2025",
+
+    rocLabel: "Registergericht",
+    roc: "ROC – Bangalore",
+
+    directorLabel: "Geschäftsführender Direktor",
+    director: "Chandrashekar Harichandran",
+
+    appointmentLabel: "Ernennungsdatum des Direktors",
+    appointmentDate: "10. Juni 2025",
+
+    addressLabel: "Eingetragener Firmensitz",
+    address:
+      "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere, Davangere, Davanagere, Karnataka, India – 577001",
+  },
+
+  services: {
+    eyebrow: "Unsere Dienstleistungen",
+    title: "Digitale Dienstleistungen",
+    titleHighlight: "Wir bieten",
+
+    items: [
+      "App-Entwicklung",
+      "Webentwicklung",
+      "Softwareentwicklung",
+      "Spieleentwicklung",
+      "UI/UX-Design",
+      "Geschäftslösungen",
+    ],
+  },
+
+  features: {
+    eyebrow: "Warum uns wählen",
+    title: "Innovative Technologie",
+    titleHighlight: "& hochwertiges Design",
+
+    items: [
+      {
+        title: "Moderne Technologien",
+        description:
+          "React, Flutter, MERN Stack, Firebase, KI-Tools und moderne skalierbare Technologien.",
+      },
+      {
+        title: "Hochwertiges UI/UX",
+        description:
+          "Klare, futuristische Benutzeroberflächen mit flüssigen und responsiven Benutzererlebnissen.",
+      },
+      {
+        title: "Individuelle Lösungen",
+        description:
+          "Individuell entwickelte Software, mobile Apps und Websites für Unternehmen und Startups.",
+      },
+      {
+        title: "Zuverlässiger Support",
+        description:
+          "Professioneller Support und kontinuierliche Verbesserungen für langfristiges Wachstum.",
+      },
+    ],
+  },
+
+  technologies: {
+    eyebrow: "Technologien",
+    title: "Technologien",
+    titleHighlight: "Die wir verwenden",
+
+    items: [
+      "React",
+      "Flutter",
+      "Node.js",
+      "Firebase",
+      "MongoDB",
+      "Express.js",
+      "Tailwind CSS",
+      "KI-Tools",
+    ],
+  },
+
+  process: {
+    eyebrow: "Entwicklungsprozess",
+    title: "Unser Arbeits",
+    titleHighlight: "prozess",
+
+    items: [
+      "Planung",
+      "UI/UX-Design",
+      "Entwicklung",
+      "Tests",
+      "Bereitstellung",
+      "Support",
+    ],
+  },
+
+  mission: {
+    eyebrow: "Unsere Mission",
+    title: "Skalierbare",
+    titleHighlight: "digitale Innovation schaffen",
+    description:
+      "Unsere Mission ist es, Startups, Unternehmen und Organisationen mit innovativen Technologielösungen zu unterstützen, die Wachstum fördern, die digitale Präsenz verbessern und durch moderne Entwicklungsstandards sowie herausragende Benutzererlebnisse langfristigen geschäftlichen Mehrwert schaffen.",
+  },
+},
 };
 
 export default de;

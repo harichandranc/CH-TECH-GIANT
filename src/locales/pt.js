@@ -1387,6 +1387,151 @@ const pt = {
 
     canonical: "https://chtechgiant.com/app-development",
   },
+  about: {
+  seo: {
+    title: "Sobre Nós | CH TECH GIANT",
+    description:
+      "Saiba mais sobre a CH TECH GIANT (OPC) PRIVATE LIMITED, uma empresa moderna de software especializada em desenvolvimento de aplicativos, desenvolvimento web, soluções de software e experiências digitais futuristas.",
+    keywords:
+      "sobre CH TECH GIANT, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, empresa de desenvolvimento de aplicativos, empresa de desenvolvimento web, empresa de software em Davanagere, desenvolvimento Flutter, desenvolvimento MERN Stack, soluções de software",
+    author: "CH TECH GIANT",
+    ogTitle: "Sobre a CH TECH GIANT",
+    ogDescription:
+      "Empresa moderna de software que oferece websites premium, aplicativos móveis e soluções digitais.",
+  },
+
+  hero: {
+    eyebrow: "Sobre Nós",
+    title: "Construindo Soluções",
+    titleHighlight: "Digitais Modernas",
+    description:
+      "A CH TECH GIANT (OPC) PRIVATE LIMITED é uma empresa moderna de software focada no desenvolvimento de websites premium, aplicativos móveis, sistemas de software e experiências digitais futuristas para empresas e startups.",
+  },
+
+  main: {
+    title: "Soluções de Software Premium Para Empresas Modernas",
+    paragraphs: [
+      "Somos especializados na criação de websites de alto desempenho, aplicativos móveis, softwares empresariais e sistemas digitais escaláveis utilizando tecnologias modernas e um design de interface limpo.",
+      "Nossa empresa se concentra na entrega de produtos digitais modernos, otimizados para desempenho e fáceis de usar, adaptados às necessidades dos clientes e preparados para futuras expansões.",
+      "Nosso objetivo é ajudar as empresas a estabelecer uma forte presença digital com soluções tecnológicas premium que combinam desempenho, estética e experiência do usuário.",
+    ],
+  },
+
+  company: {
+    eyebrow: "Informações da Empresa",
+    title: "Detalhes Oficiais",
+    titleHighlight: "da Empresa",
+
+    legalNameLabel: "Nome Legal",
+    legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+    cinLabel: "Número de Identificação Corporativa (CIN)",
+    cin: "U62012KA2025OPC203976",
+
+    entityTypeLabel: "Tipo de Entidade",
+    entityType: "Empresa Privada de Responsabilidade Limitada",
+
+    incorporationLabel: "Data de Incorporação",
+    incorporation: "10 de junho de 2025",
+
+    rocLabel: "Registro de Empresas",
+    roc: "ROC – Bangalore",
+
+    directorLabel: "Diretor Administrativo",
+    director: "Chandrashekar Harichandran",
+
+    appointmentLabel: "Data de Nomeação do Diretor",
+    appointmentDate: "10 de junho de 2025",
+
+    addressLabel: "Sede Registrada",
+    address:
+      "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere, Davangere, Davanagere, Karnataka, Índia – 577001",
+  },
+
+  services: {
+    eyebrow: "Nossos Serviços",
+    title: "Serviços Digitais",
+    titleHighlight: "Que Oferecemos",
+
+    items: [
+      "Desenvolvimento de Aplicativos",
+      "Desenvolvimento Web",
+      "Desenvolvimento de Software",
+      "Desenvolvimento de Jogos",
+      "Design UI/UX",
+      "Soluções Empresariais",
+    ],
+  },
+
+  features: {
+    eyebrow: "Por Que Nos Escolher",
+    title: "Tecnologia Inovadora",
+    titleHighlight: "& Design Premium",
+
+    items: [
+      {
+        title: "Tecnologias Modernas",
+        description:
+          "React, Flutter, MERN Stack, Firebase, ferramentas de IA e tecnologias modernas e escaláveis.",
+      },
+      {
+        title: "UI/UX Premium",
+        description:
+          "Interfaces limpas e futuristas com experiências de usuário fluidas e responsivas.",
+      },
+      {
+        title: "Soluções Personalizadas",
+        description:
+          "Softwares, aplicativos móveis e websites personalizados desenvolvidos para empresas e startups.",
+      },
+      {
+        title: "Suporte Confiável",
+        description:
+          "Suporte profissional e melhorias contínuas para promover o crescimento a longo prazo.",
+      },
+    ],
+  },
+
+  technologies: {
+    eyebrow: "Tecnologias",
+    title: "Tecnologias",
+    titleHighlight: "Que Utilizamos",
+
+    items: [
+      "React",
+      "Flutter",
+      "Node.js",
+      "Firebase",
+      "MongoDB",
+      "Express.js",
+      "Tailwind CSS",
+      "Ferramentas de IA",
+    ],
+  },
+
+  process: {
+    eyebrow: "Processo de Desenvolvimento",
+    title: "Nosso Processo",
+    titleHighlight: "de Trabalho",
+
+    items: [
+      "Planejamento",
+      "Design UI/UX",
+      "Desenvolvimento",
+      "Testes",
+      "Implantação",
+      "Suporte",
+    ],
+  },
+
+  mission: {
+    eyebrow: "Nossa Missão",
+    title: "Criando Inovação",
+    titleHighlight: "Digital Escalável",
+    description:
+      "Nossa missão é capacitar startups, empresas e organizações com soluções tecnológicas inovadoras que impulsionem o crescimento, melhorem a presença digital e criem valor empresarial de longo prazo por meio de padrões modernos de desenvolvimento e experiências excepcionais para os usuários.",
+  },
+},
 };
 
 export default pt;

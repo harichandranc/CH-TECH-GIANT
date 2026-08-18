@@ -1387,6 +1387,151 @@ const ko = {
 
     canonical: "https://chtechgiant.com/app-development",
   },
+  about: {
+  seo: {
+    title: "회사 소개 | CH TECH GIANT",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED는 앱 개발, 웹 개발, 소프트웨어 솔루션 및 미래 지향적인 디지털 경험을 전문으로 하는 현대적인 소프트웨어 기업입니다.",
+    keywords:
+      "CH TECH GIANT 회사 소개, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, 앱 개발 회사, 웹 개발 회사, Davanagere 소프트웨어 회사, Flutter 개발, MERN Stack 개발, 소프트웨어 솔루션",
+    author: "CH TECH GIANT",
+    ogTitle: "CH TECH GIANT 소개",
+    ogDescription:
+      "프리미엄 웹사이트, 모바일 애플리케이션 및 디지털 솔루션을 제공하는 현대적인 소프트웨어 기업입니다.",
+  },
+
+  hero: {
+    eyebrow: "회사 소개",
+    title: "현대적인",
+    titleHighlight: "디지털 솔루션 구축",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED는 기업과 스타트업을 위해 프리미엄 웹사이트, 모바일 애플리케이션, 소프트웨어 시스템 및 미래 지향적인 디지털 경험을 개발하는 현대적인 소프트웨어 기업입니다.",
+  },
+
+  main: {
+    title: "현대적인 비즈니스를 위한 프리미엄 소프트웨어 솔루션",
+    paragraphs: [
+      "최신 기술과 깔끔한 UI 디자인을 활용하여 고성능 웹사이트, 모바일 애플리케이션, 비즈니스 소프트웨어 및 확장 가능한 디지털 시스템을 개발합니다.",
+      "고객의 요구사항과 향후 확장성을 고려하여 현대적이고 성능이 최적화된 사용자 친화적인 디지털 제품을 제공하는 데 중점을 두고 있습니다.",
+      "성능, 미적 디자인 및 사용자 경험을 결합한 프리미엄 기술 솔루션을 통해 기업이 강력한 디지털 존재감을 구축할 수 있도록 지원하는 것이 우리의 목표입니다.",
+    ],
+  },
+
+  company: {
+    eyebrow: "회사 정보",
+    title: "공식",
+    titleHighlight: "회사 정보",
+
+    legalNameLabel: "법적 회사명",
+    legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+    cinLabel: "법인 식별 번호 (CIN)",
+    cin: "U62012KA2025OPC203976",
+
+    entityTypeLabel: "법인 형태",
+    entityType: "비공개 유한회사",
+
+    incorporationLabel: "설립일",
+    incorporation: "2025년 6월 10일",
+
+    rocLabel: "회사 등록 기관",
+    roc: "ROC – Bangalore",
+
+    directorLabel: "대표이사",
+    director: "Chandrashekar Harichandran",
+
+    appointmentLabel: "이사 선임일",
+    appointmentDate: "2025년 6월 10일",
+
+    addressLabel: "등록 사무소",
+    address:
+      "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere, Davangere, Davanagere, Karnataka, India – 577001",
+  },
+
+  services: {
+    eyebrow: "서비스",
+    title: "디지털 서비스",
+    titleHighlight: "제공 서비스",
+
+    items: [
+      "앱 개발",
+      "웹 개발",
+      "소프트웨어 개발",
+      "게임 개발",
+      "UI/UX 디자인",
+      "비즈니스 솔루션",
+    ],
+  },
+
+  features: {
+    eyebrow: "우리를 선택하는 이유",
+    title: "혁신적인 기술",
+    titleHighlight: "& 프리미엄 디자인",
+
+    items: [
+      {
+        title: "최신 기술",
+        description:
+          "React, Flutter, MERN Stack, Firebase, AI 도구 및 현대적인 확장 가능 기술을 활용합니다.",
+      },
+      {
+        title: "프리미엄 UI/UX",
+        description:
+          "깔끔하고 미래 지향적인 인터페이스와 부드럽고 반응형인 사용자 경험을 제공합니다.",
+      },
+      {
+        title: "맞춤형 솔루션",
+        description:
+          "기업과 스타트업의 요구사항에 맞춘 소프트웨어, 모바일 앱 및 웹사이트를 개발합니다.",
+      },
+      {
+        title: "신뢰할 수 있는 지원",
+        description:
+          "장기적인 성장을 위해 전문적인 지원과 지속적인 개선을 제공합니다.",
+      },
+    ],
+  },
+
+  technologies: {
+    eyebrow: "기술",
+    title: "사용하는",
+    titleHighlight: "기술",
+
+    items: [
+      "React",
+      "Flutter",
+      "Node.js",
+      "Firebase",
+      "MongoDB",
+      "Express.js",
+      "Tailwind CSS",
+      "AI 도구",
+    ],
+  },
+
+  process: {
+    eyebrow: "개발 프로세스",
+    title: "우리의 작업",
+    titleHighlight: "프로세스",
+
+    items: [
+      "기획",
+      "UI/UX 디자인",
+      "개발",
+      "테스트",
+      "배포",
+      "지원",
+    ],
+  },
+
+  mission: {
+    eyebrow: "우리의 미션",
+    title: "확장 가능한",
+    titleHighlight: "디지털 혁신 창조",
+    description:
+      "우리의 미션은 스타트업, 기업 및 조직에 혁신적인 기술 솔루션을 제공하여 성장을 촉진하고 디지털 존재감을 향상시키며, 현대적인 개발 표준과 뛰어난 사용자 경험을 통해 장기적인 비즈니스 가치를 창출하도록 지원하는 것입니다.",
+  },
+},
 };
 
 export default ko;

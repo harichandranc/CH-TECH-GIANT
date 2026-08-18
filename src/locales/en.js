@@ -1387,6 +1387,153 @@ const en = {
 
     canonical: "https://chtechgiant.com/app-development",
   },
+
+  about: {
+  seo: {
+    title: "About Us | CH TECH GIANT",
+    description:
+      "Learn about CH TECH GIANT (OPC) PRIVATE LIMITED, a modern software company specializing in app development, web development, software solutions, and futuristic digital experiences.",
+    keywords:
+      "about CH TECH GIANT, CH TECH GIANT OPC PRIVATE LIMITED, CIN U62012KA2025OPC203976, app development company, web development company, software company in Davanagere, Flutter development, MERN stack development, software solutions",
+    author: "CH TECH GIANT",
+    ogTitle: "About CH TECH GIANT",
+    ogDescription:
+      "Modern software company delivering premium websites, mobile applications, and digital solutions.",
+  },
+
+  hero: {
+    eyebrow: "About Us",
+    title: "Building Modern",
+    titleHighlight: "Digital Solutions",
+    description:
+      "CH TECH GIANT (OPC) PRIVATE LIMITED is a modern software company focused on developing premium websites, mobile applications, software systems, and futuristic digital experiences for businesses and startups.",
+  },
+
+  main: {
+    title: "Premium Software Solutions For Modern Businesses",
+    paragraphs: [
+      "We specialize in creating high-performance websites, mobile applications, business software, and scalable digital systems using modern technologies and clean UI design.",
+      "Our company focuses on delivering visually modern, performance-optimized, and user-friendly digital products tailored to client requirements and future scalability.",
+      "Our goal is to help businesses establish a strong digital presence with premium technology solutions that combine performance, aesthetics, and user experience.",
+    ],
+  },
+
+  company: {
+    eyebrow: "Company Information",
+    title: "Official",
+    titleHighlight: "Company Details",
+
+    legalNameLabel: "Legal Name",
+    legalName: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+    cinLabel: "Corporate Identification Number (CIN)",
+    cin: "U62012KA2025OPC203976",
+
+    entityTypeLabel: "Entity Type",
+    entityType: "Private Limited Company",
+
+    incorporationLabel: "Date of Incorporation",
+    incorporation: "June 10, 2025",
+
+    rocLabel: "Registrar of Companies",
+    roc: "ROC – Bangalore",
+
+    directorLabel: "Managing Director",
+    director: "Chandrashekar Harichandran",
+
+    appointmentLabel: "Director Appointment Date",
+    appointmentDate: "June 10, 2025",
+
+    addressLabel: "Registered Office",
+    address:
+      "1135/1, Behind BDO Office, Betur Road, Imam Nagara, Barline Road-Davanagere, Davangere, Davanagere, Karnataka, India – 577001",
+  },
+
+  services: {
+    eyebrow: "Our Services",
+    title: "Digital Services",
+    titleHighlight: "We Provide",
+
+    items: [
+      "App Development",
+      "Web Development",
+      "Software Development",
+      "Game Development",
+      "UI/UX Design",
+      "Business Solutions",
+    ],
+  },
+
+  features: {
+    eyebrow: "Why Choose Us",
+    title: "Innovative Technology",
+    titleHighlight: "& Premium Design",
+
+    items: [
+      {
+        title: "Modern Technologies",
+        description:
+          "React, Flutter, MERN Stack, Firebase, AI tools and modern scalable technologies.",
+      },
+      {
+        title: "Premium UI/UX",
+        description:
+          "Clean futuristic interfaces with smooth responsive user experiences.",
+      },
+      {
+        title: "Custom Solutions",
+        description:
+          "Tailored software, mobile apps, and websites designed for businesses and startups.",
+      },
+      {
+        title: "Reliable Support",
+        description:
+          "Professional support and continuous improvements for long-term growth.",
+      },
+    ],
+  },
+
+  technologies: {
+    eyebrow: "Technologies",
+    title: "Technologies",
+    titleHighlight: "We Use",
+
+    items: [
+      "React",
+      "Flutter",
+      "Node.js",
+      "Firebase",
+      "MongoDB",
+      "Express.js",
+      "Tailwind CSS",
+      "AI Tools",
+    ],
+  },
+
+  process: {
+    eyebrow: "Development Process",
+    title: "Our Working",
+    titleHighlight: "Process",
+
+    items: [
+      "Planning",
+      "UI/UX Design",
+      "Development",
+      "Testing",
+      "Deployment",
+      "Support",
+    ],
+  },
+
+  mission: {
+    eyebrow: "Our Mission",
+    title: "Creating Scalable",
+    titleHighlight: "Digital Innovation",
+    description:
+      "Our mission is to empower startups, businesses, and organizations with innovative technology solutions that drive growth, improve digital presence, and create long-term business value through modern development standards and exceptional user experiences.",
+  },
+},
+
 };
 
 export default en;
