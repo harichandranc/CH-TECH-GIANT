@@ -1459,7 +1459,7 @@ const es = {
       description:
         "Explora sitios web, aplicaciones móviles, sistemas de software y proyectos digitales desarrollados por CH TECH GIANT.",
       keywords:
-        "portafolio CH TECH GIANT, proyectos de desarrollo web, proyectos de aplicaciones móviles, proyectos de software, portafolio de desarrollo de apps, portafolio de desarrollo de software",
+        "portafolio CH TECH GIANT, proyectos de desarrollo web, proyectos de aplicaciones móviles, proyectos de software, portafolio de desarrollo de aplicaciones, portafolio de desarrollo de software",
     },
 
     eyebrow: "Nuestro Portafolio",
@@ -1474,93 +1474,93 @@ const es = {
     filters: {
       all: "Todos",
       web: "Web",
-      app: "App",
+      app: "Aplicación",
       software: "Software",
-      game: "Juego",
+      game: "Videojuego",
     },
 
     categories: {
-      app: "App",
+      app: "Aplicación",
       web: "Web",
       software: "Software",
-      game: "Juego",
+      game: "Videojuego",
     },
 
     actions: {
-      installApp: "Instalar App",
-      viewSoftware: "Ver Software",
-      visitWebsite: "Visitar Sitio Web",
+      installApp: "Instalar aplicación",
+      viewSoftware: "Ver software",
+      visitWebsite: "Visitar sitio web",
     },
 
     projects: {
       webCodshop: {
         title: "Web Codshop",
         description:
-          "Aplicación de marketplace de plantillas web premium, códigos fuente y proyectos universitarios.",
+          "Aplicación de marketplace con plantillas web premium, códigos fuente y proyectos universitarios.",
       },
 
       cgpaSgpaCalculator: {
-        title: "CGPA SGPA Calculator",
+        title: "Calculadora CGPA SGPA",
         description:
           "Aplicación móvil inteligente para calcular CGPA y SGPA.",
       },
 
       fileConverter: {
-        title: "File Converter",
+        title: "Conversor de Archivos",
         description:
           "Herramienta avanzada para convertir archivos entre múltiples formatos.",
       },
 
       worldClock: {
-        title: "World Clock App",
+        title: "Aplicación Reloj Mundial",
         description:
-          "Aplicación moderna para consultar y realizar un seguimiento de las zonas horarias del mundo.",
+          "Aplicación moderna para consultar y realizar un seguimiento de las zonas horarias de todo el mundo.",
       },
 
       fileRenamer: {
-        title: "File Renamer",
+        title: "Renombrador de Archivos",
         description:
-          "Aplicación de utilidad para renombrar archivos en lote.",
+          "Aplicación de utilidad para renombrar archivos por lotes.",
       },
 
       schoolErp: {
-        title: "School ERP System",
+        title: "Sistema ERP Escolar",
         description:
-          "Gestiona estudiantes, personal, actividades académicas, asistencia y operaciones escolares desde un panel centralizado.",
+          "Gestiona estudiantes, personal, actividades académicas, asistencia y operaciones escolares desde un único panel centralizado.",
       },
 
       hospitalManagementSystem: {
-        title: "Hospital Management System",
+        title: "Sistema de Gestión Hospitalaria",
         description:
-          "Sistema seguro de gestión hospitalaria basado en roles para administrar departamentos, médicos, personal, pacientes y la administración del hospital desde un panel.",
+          "Sistema seguro de gestión hospitalaria basado en roles para administrar departamentos, médicos, personal, pacientes y la administración del hospital mediante un panel de control.",
       },
 
       invoiceMaker: {
-        title: "Invoice Maker",
+        title: "Generador de Facturas",
         description:
           "Aplicación profesional para crear facturas.",
       },
 
       pdfConverter: {
-        title: "PDF Converter",
+        title: "Conversor de PDF",
         description:
           "Convierte imágenes en archivos PDF de alta calidad.",
       },
 
       pdfLockUnlock: {
-        title: "PDF Lock Unlock",
+        title: "Bloquear y Desbloquear PDF",
         description:
           "Protege y desbloquea archivos PDF mediante una contraseña.",
       },
 
       sampleFiles: {
-        title: "Sample Files",
+        title: "Archivos de Ejemplo",
         description:
-          "Descarga diferentes tipos de archivos de muestra.",
+          "Descarga diferentes tipos de archivos de ejemplo.",
       },
 
       imageToPdf: {
-        title: "Image To PDF",
+        title: "Imagen a PDF",
         description:
           "Convierte imágenes en archivos PDF de alta calidad.",
       },

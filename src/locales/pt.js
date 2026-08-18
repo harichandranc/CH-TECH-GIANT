@@ -1598,14 +1598,27 @@ const pt = {
   // PORTFOLIO PAGE
   // =========================
 
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
   portfolio: {
+    seo: {
+      title: "Portfólio | CH TECH GIANT",
+      description:
+        "Explore sites, aplicativos móveis, sistemas de software e projetos digitais desenvolvidos pela CH TECH GIANT.",
+      keywords:
+        "portfólio CH TECH GIANT, projetos de desenvolvimento web, projetos de aplicativos móveis, projetos de software, portfólio de desenvolvimento de aplicativos, portfólio de desenvolvimento de software",
+    },
+
     eyebrow: "Nosso Portfólio",
 
     title: "Projetos",
+
     titleHighlight: "em Destaque",
 
     description:
-      "Explore websites premium, aplicativos móveis, sistemas de software e projetos de desenvolvimento de jogos criados pela CH TECH GIANT.",
+      "Explore sites premium, aplicativos móveis, softwares e projetos de desenvolvimento de jogos criados pela CH TECH GIANT.",
 
     filters: {
       all: "Todos",
@@ -1615,17 +1628,24 @@ const pt = {
       game: "Jogo",
     },
 
-    installApp: "Instalar Aplicativo",
+    categories: {
+      app: "Aplicativo",
+      web: "Web",
+      software: "Software",
+      game: "Jogo",
+    },
 
-    viewSoftware: "Ver Software",
-
-    visitWebsite: "Visitar Website",
+    actions: {
+      installApp: "Instalar Aplicativo",
+      viewSoftware: "Ver Software",
+      visitWebsite: "Visitar Site",
+    },
 
     projects: {
       webCodshop: {
         title: "Web Codshop",
         description:
-          "Aplicativo de marketplace com templates premium de websites, códigos-fonte e projetos acadêmicos.",
+          "Aplicativo de marketplace com modelos premium de sites, códigos-fonte e projetos universitários.",
       },
 
       cgpaSgpaCalculator: {
@@ -1641,33 +1661,33 @@ const pt = {
       },
 
       worldClock: {
-        title: "Aplicativo World Clock",
+        title: "Aplicativo Relógio Mundial",
         description:
-          "Aplicativo moderno para acompanhamento de fusos horários do mundo inteiro.",
+          "Aplicativo moderno para acompanhar fusos horários de todo o mundo.",
       },
 
       fileRenamer: {
         title: "Renomeador de Arquivos",
         description:
-          "Aplicativo utilitário para renomeação de arquivos em lote.",
+          "Aplicativo utilitário para renomear arquivos em lote.",
       },
 
-      schoolERP: {
+      schoolErp: {
         title: "Sistema ERP Escolar",
         description:
-          "Gerencie alunos, funcionários, atividades acadêmicas, frequência e operações escolares em um único painel centralizado.",
+          "Gerencie alunos, funcionários, atividades acadêmicas, presença e operações escolares em um único painel centralizado.",
       },
 
-      hospitalManagement: {
+      hospitalManagementSystem: {
         title: "Sistema de Gestão Hospitalar",
         description:
-          "Sistema seguro de gestão hospitalar baseado em funções para administrar departamentos, médicos, funcionários, pacientes e operações hospitalares por meio de um painel centralizado.",
+          "Sistema seguro de gestão hospitalar baseado em funções para administrar departamentos, médicos, funcionários, pacientes e a administração hospitalar por meio de um painel.",
       },
 
       invoiceMaker: {
-        title: "Criador de Faturas",
+        title: "Gerador de Faturas",
         description:
-          "Aplicativo profissional para criação e gerenciamento de faturas.",
+          "Aplicativo profissional para criação de faturas.",
       },
 
       pdfConverter: {
@@ -1679,13 +1699,13 @@ const pt = {
       pdfLockUnlock: {
         title: "Bloquear e Desbloquear PDF",
         description:
-          "Proteja e desbloqueie arquivos PDF usando senhas.",
+          "Proteja e desbloqueie arquivos PDF com uma senha.",
       },
 
       sampleFiles: {
         title: "Arquivos de Exemplo",
         description:
-          "Baixe diversos tipos de arquivos de exemplo.",
+          "Baixe diferentes tipos de arquivos de exemplo.",
       },
 
       imageToPdf: {
@@ -1695,6 +1715,7 @@ const pt = {
       },
     },
   },
+
 };
 
 export default pt;
