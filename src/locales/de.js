@@ -1598,13 +1598,17 @@ const de = {
   // PORTFOLIO PAGE
   // =========================
 
+    // =========================
+  // PORTFOLIO PAGE
+  // =========================
+
   portfolio: {
     seo: {
       title: "Portfolio | CH TECH GIANT",
       description:
         "Entdecken Sie Websites, mobile Apps, Softwaresysteme und digitale Projekte, die von CH TECH GIANT entwickelt wurden.",
       keywords:
-        "CH TECH GIANT Portfolio, Webentwicklungsprojekte, mobile App-Projekte, Softwareprojekte, App-Entwicklungsportfolio, Softwareentwicklungsportfolio",
+        "CH TECH GIANT Portfolio, Webentwicklungsprojekte, Mobile-App-Projekte, Softwareprojekte, App-Entwicklungsportfolio, Softwareentwicklungsportfolio",
     },
 
     eyebrow: "Unser Portfolio",
@@ -1645,67 +1649,67 @@ const de = {
       },
 
       cgpaSgpaCalculator: {
-        title: "CGPA SGPA Calculator",
+        title: "CGPA SGPA Rechner",
         description:
           "Intelligente mobile App zur Berechnung von CGPA und SGPA.",
       },
 
       fileConverter: {
-        title: "File Converter",
+        title: "Dateikonverter",
         description:
-          "Fortschrittliches Tool zur Konvertierung verschiedener Dateiformate.",
+          "Erweitertes Tool zur Konvertierung von Dateien in mehreren Formaten.",
       },
 
       worldClock: {
-        title: "World Clock App",
+        title: "Weltzeituhr-App",
         description:
-          "Moderne Anwendung zur Anzeige und Verfolgung von Zeitzonen weltweit.",
+          "Moderne Anwendung zur Anzeige und Verfolgung weltweiter Zeitzonen.",
       },
 
       fileRenamer: {
-        title: "File Renamer",
+        title: "Dateiumbenenner",
         description:
-          "Dienstprogramm zum stapelweisen Umbenennen von Dateien.",
+          "Dienstprogramm zum gleichzeitigen Umbenennen mehrerer Dateien.",
       },
 
       schoolErp: {
-        title: "School ERP System",
+        title: "Schul-ERP-System",
         description:
-          "Verwalten Sie Schüler, Mitarbeiter, akademische Bereiche, Anwesenheit und den gesamten Schulbetrieb über ein zentrales Dashboard.",
+          "Verwalten Sie Schüler, Mitarbeiter, akademische Bereiche, Anwesenheit und den Schulbetrieb zentral über ein intelligentes Dashboard.",
       },
 
       hospitalManagementSystem: {
-        title: "Hospital Management System",
+        title: "Krankenhausverwaltungssystem",
         description:
           "Sicheres rollenbasiertes Krankenhausverwaltungssystem zur Verwaltung von Abteilungen, Ärzten, Mitarbeitern, Patienten und der Krankenhausverwaltung über ein Dashboard.",
       },
 
       invoiceMaker: {
-        title: "Invoice Maker",
+        title: "Rechnungsersteller",
         description:
           "Professionelle App zur Erstellung von Rechnungen.",
       },
 
       pdfConverter: {
-        title: "PDF Converter",
+        title: "PDF-Konverter",
         description:
           "Konvertieren Sie Bilder in hochwertige PDF-Dateien.",
       },
 
       pdfLockUnlock: {
-        title: "PDF Lock Unlock",
+        title: "PDF Sperren & Entsperren",
         description:
           "Schützen und entsperren Sie PDF-Dateien mit einem Passwort.",
       },
 
       sampleFiles: {
-        title: "Sample Files",
+        title: "Beispieldateien",
         description:
           "Laden Sie verschiedene Arten von Beispieldateien herunter.",
       },
 
       imageToPdf: {
-        title: "Image To PDF",
+        title: "Bild zu PDF",
         description:
           "Konvertieren Sie Bilder in hochwertige PDF-Dateien.",
       },
