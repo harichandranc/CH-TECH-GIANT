@@ -203,67 +203,61 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
 
           {/* =================================================
-              LANGUAGE SWITCHER
-              Top Right - No Large Top Padding
-          ================================================= */}
+    LANGUAGE SWITCHER
+    Same positioning as Services page
+================================================= */}
 
-          <div className="relative z-50 flex justify-end pt-4">
+<div className="flex justify-center mb-2 md:mb-16">
 
-            {/* MOBILE DROPDOWN */}
+  {/* MOBILE LANGUAGE DROPDOWN */}
 
-            <div className="md:hidden">
-              <select
-                id="mobile-language"
-                value={language}
-                onChange={(e) => {
-                  const selectedLanguage =
-                    languages.find(
-                      (item) =>
-                        item.code === e.target.value
-                    );
+  <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
+    <select
+      id="mobile-language"
+      value={language}
+      onChange={(e) => {
+        const selectedLanguage = languages.find(
+          (item) => item.code === e.target.value
+        );
 
-                  if (selectedLanguage) {
-                    navigate(
-                      selectedLanguage.path
-                    );
-                  }
-                }}
-                className="h-10 w-36 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
-              >
-                {languages.map((item) => (
-                  <option
-                    key={item.code}
-                    value={item.code}
-                    className="bg-[#050816] text-white"
-                  >
-                    {item.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+        if (selectedLanguage) {
+          navigate(selectedLanguage.path);
+        }
+      }}
+      className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+    >
+      {languages.map((item) => (
+        <option
+          key={item.code}
+          value={item.code}
+          className="bg-[#050816] text-white"
+        >
+          {item.label}
+        </option>
+      ))}
+    </select>
+  </div>
 
-            {/* DESKTOP LANGUAGE BUTTONS */}
+  {/* DESKTOP LANGUAGE BUTTONS */}
 
-            <div className="hidden md:flex gap-3 flex-wrap justify-end">
-              {languages.map((item) => (
-                <button
-                  key={item.code}
-                  type="button"
-                  onClick={() =>
-                    navigate(item.path)
-                  }
-                  className={`px-5 py-2 rounded-full border transition ${
-                    language === item.code
-                      ? "bg-cyan-500 text-black border-cyan-500"
-                      : "border-white/20 text-white hover:border-cyan-500 hover:text-cyan-400"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+  <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
+    {languages.map((item) => (
+      <button
+        key={item.code}
+        type="button"
+        onClick={() => navigate(item.path)}
+        className={`px-5 py-2 rounded-full border transition ${
+          language === item.code
+            ? "bg-cyan-500 text-black border-cyan-500"
+            : "border-white/20 hover:border-cyan-500"
+        }`}
+      >
+        {item.label}
+      </button>
+    ))}
+  </div>
 
-          </div>
+</div>
 
           {/* =================================================
               HEADER
