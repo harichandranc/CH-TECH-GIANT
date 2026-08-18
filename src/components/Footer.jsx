@@ -7,7 +7,9 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+
+const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
 
 const serviceLinks = [
   {
@@ -41,6 +43,22 @@ const serviceLinks = [
 ];
 
 function Footer() {
+  const location = useLocation();
+
+  const pathParts = location.pathname.split("/").filter(Boolean);
+
+  const currentLang = supportedLanguages.includes(pathParts[0])
+    ? pathParts[0]
+    : "en";
+
+  const localizedPath = (path) => {
+    if (currentLang === "en") {
+      return path;
+    }
+
+    return `/${currentLang}${path}`;
+  };
+
   return (
     <footer className="border-t border-cyan-500/10 bg-[#050816] pt-12 sm:pt-16 pb-8 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto w-full">
@@ -132,42 +150,42 @@ function Footer() {
             <div className="flex flex-col gap-2.5 sm:gap-3">
 
               <NavLink
-                to="/"
+                to={localizedPath("/")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 Home
               </NavLink>
 
               <NavLink
-                to="/about"
+                to={localizedPath("/about")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 About
               </NavLink>
 
               <NavLink
-                to="/apps"
+                to={localizedPath("/apps")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 Our Apps
               </NavLink>
 
               <NavLink
-                to="/portfolio"
+                to={localizedPath("/portfolio")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 Portfolio
               </NavLink>
 
               <NavLink
-                to="/contact"
+                to={localizedPath("/contact")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 Contact
               </NavLink>
 
               <NavLink
-                to="/privacy-policy"
+                to={localizedPath("/privacy-policy")}
                 className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
               >
                 Privacy Policy
@@ -187,7 +205,7 @@ function Footer() {
               {serviceLinks.map((service) => (
                 <NavLink
                   key={service.name}
-                  to={service.path}
+                  to={localizedPath(service.path)}
                   className="text-gray-400 hover:text-cyan-300 transition text-sm sm:text-base"
                 >
                   {service.name}
