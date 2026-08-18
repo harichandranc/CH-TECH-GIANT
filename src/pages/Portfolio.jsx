@@ -6,104 +6,78 @@ import { translations } from "../locales";
 
 const projects = [
   {
-    title: "Web Codshop",
+    key: "webCodshop",
     category: "app",
-    description:
-      "premium website templates, source codes, and college projects Marketplace app.",
     image: "/projects/webcodshop.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop&pcampaignid=web_share",
   },
   {
-    title: "CGPA SGPA Calculator",
+    key: "cgpaSgpaCalculator",
     category: "app",
-    description:
-      "Smart CGPA & SGPA calculation mobile app.",
     image: "/projects/cgpacalculator.jpg",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator&pcampaignid=web_share",
   },
   {
-    title: "File Converter",
+    key: "fileConverter",
     category: "app",
-    description:
-      "Advanced multi-format file conversion tool.",
     image: "/projects/fileconverter.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter&pcampaignid=web_share",
   },
   {
-    title: "World Clock App",
+    key: "worldClock",
     category: "app",
-    description:
-      "Modern world timezone tracking application.",
     image: "/projects/worldclock.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock&pcampaignid=web_share",
   },
   {
-    title: "File Renamer",
+    key: "fileRenamer",
     category: "app",
-    description:
-      "Batch file renaming utility app.",
     image: "/projects/filerenamer.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner&pcampaignid=web_share",
   },
   {
-    title: "School ERP System",
+    key: "schoolErp",
     category: "software",
-    description:
-      "Smartly manage students, staff, academics, attendance, and school operations in one centralized dashboard.",
     image: "/projects/schoolerp.png",
     link: "/software-development/school-erp-system",
   },
   {
-    title: "Hospital Management System",
+    key: "hospitalManagementSystem",
     category: "software",
-    description:
-      "A secure role-based Hospital Management System for managing departments, doctors, staff, patients, & hospital administration through a dashboard.",
     image: "/projects/hospitalmanagementsystem.webp",
     link: "/software-development/hospital-management-system",
   },
   {
-    title: "Invoice Maker",
+    key: "invoiceMaker",
     category: "app",
-    description:
-      "Professional invoice generation app.",
     image: "/projects/invoicemaker.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app&pcampaignid=web_share",
   },
   {
-    title: "PDF Converter",
+    key: "pdfConverter",
     category: "web",
-    description:
-      "Convert images into high quality PDF files.",
     image: "/projects/pdfconverter.jpg",
     link: "https://pdfconverter.chtechgiant.com",
   },
   {
-    title: "PDF Lock Unlock",
+    key: "pdfLockUnlock",
     category: "app",
-    description:
-      "Protect and Unlock PDF Files with Password.",
     image: "/projects/pdf_lock_unlock.jpeg",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
   },
   {
-    title: "Sample Files",
+    key: "sampleFiles",
     category: "web",
-    description:
-      "Download Every types of sample files.",
     image: "/projects/samplefiles.png",
     link: "https://samplefiles.chtechgiant.com",
   },
   {
-    title: "Image To PDF",
+    key: "imageToPdf",
     category: "app",
-    description:
-      "Convert images into high quality PDF files.",
     image: "/projects/img2pdf copy.png",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share",
   },
 ];
-
-const filters = ["all", "web", "app", "software", "game"];
 
 const languages = [
   {
@@ -152,11 +126,19 @@ const supportedLanguages = [
   "ja",
 ];
 
+const filters = [
+  "all",
+  "web",
+  "app",
+  "software",
+  "game",
+];
+
 const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
   const { lang } = useParams();
   const navigate = useNavigate();
-
-  const [activeFilter, setActiveFilter] = useState("all");
 
   const language = supportedLanguages.includes(lang)
     ? lang
@@ -171,7 +153,8 @@ const Portfolio = () => {
   useEffect(() => {
     if (lang) return;
 
-    const browserLanguage = navigator.language.toLowerCase();
+    const browserLanguage =
+      navigator.language.toLowerCase();
 
     if (browserLanguage.startsWith("zh")) {
       navigate("/zh/portfolio", { replace: true });
@@ -191,7 +174,7 @@ const Portfolio = () => {
   }, [lang, navigate]);
 
   /* =====================================================
-     LOCALIZED PATH
+     LOCALIZED PROJECT PATH
   ===================================================== */
 
   const getLocalizedPath = (path) => {
@@ -203,26 +186,8 @@ const Portfolio = () => {
   };
 
   /* =====================================================
-     TRANSLATED PROJECT DATA
+     FILTER PROJECTS
   ===================================================== */
-
-  const portfolioProjects =
-    t.portfolio?.projects || [];
-
-  const getProjectText = (project, index) => {
-    const translatedProject =
-      portfolioProjects[index];
-
-    return {
-      title:
-        translatedProject?.title ||
-        project.title,
-
-      description:
-        translatedProject?.description ||
-        project.description,
-    };
-  };
 
   const filteredProjects =
     activeFilter === "all"
@@ -254,19 +219,15 @@ const Portfolio = () => {
                 const selectedLanguage =
                   languages.find(
                     (item) =>
-                      item.code ===
-                      e.target.value
+                      item.code === e.target.value
                   );
 
                 if (selectedLanguage) {
-                  navigate(
-                    selectedLanguage.path
-                  );
+                  navigate(selectedLanguage.path);
                 }
               }}
               className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
             >
-
               {languages.map((item) => (
                 <option
                   key={item.code}
@@ -276,7 +237,6 @@ const Portfolio = () => {
                   {item.label}
                 </option>
               ))}
-
             </select>
 
           </div>
@@ -323,27 +283,23 @@ const Portfolio = () => {
         >
 
           <p className="text-cyan-400 uppercase tracking-[4px] mb-3">
-            {t.portfolio?.eyebrow ||
-              "Our Portfolio"}
+            {t.portfolio.eyebrow}
           </p>
 
           <h1 className="text-5xl md:text-6xl font-black mb-6">
 
-            {t.portfolio?.title ||
-              "Featured"}
+            {t.portfolio.title}
 
             {" "}
 
             <span className="text-cyan-400">
-              {t.portfolio?.titleHighlight ||
-                "Projects"}
+              {t.portfolio.titleHighlight}
             </span>
 
           </h1>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            {t.portfolio?.description ||
-              "Explore premium websites, mobile apps, software, and game development projects crafted by CH TECH GIANT."}
+            {t.portfolio.description}
           </p>
 
         </motion.div>
@@ -354,29 +310,23 @@ const Portfolio = () => {
 
         <div className="flex flex-wrap justify-center gap-4 mb-16">
 
-          {filters.map((filter) => {
+          {filters.map((filter) => (
 
-            const filterLabel =
-              t.portfolio?.filters?.[filter] ||
-              filter;
+            <button
+              key={filter}
+              onClick={() =>
+                setActiveFilter(filter)
+              }
+              className={`px-6 py-3 rounded-full capitalize font-semibold transition-all duration-300 border ${
+                activeFilter === filter
+                  ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
+                  : "bg-white/5 border-white/10 text-gray-300 hover:border-cyan-400"
+              }`}
+            >
+              {t.portfolio.filters[filter]}
+            </button>
 
-            return (
-              <button
-                key={filter}
-                onClick={() =>
-                  setActiveFilter(filter)
-                }
-                className={`px-6 py-3 rounded-full capitalize font-semibold transition-all duration-300 border ${
-                  activeFilter === filter
-                    ? "bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30"
-                    : "bg-white/5 border-white/10 text-gray-300 hover:border-cyan-400"
-                }`}
-              >
-                {filterLabel}
-              </button>
-            );
-
-          })}
+          ))}
 
         </div>
 
@@ -389,38 +339,25 @@ const Portfolio = () => {
           {filteredProjects.map(
             (project, index) => {
 
+              const projectData =
+                t.portfolio.projects[
+                  project.key
+                ];
+
+              const categoryLabel =
+                t.portfolio.categories[
+                  project.category
+                ];
+
               const isInternal =
                 project.link.startsWith("/");
 
-              const originalIndex =
-                projects.findIndex(
-                  (item) =>
-                    item.title ===
-                    project.title
-                );
-
-              const projectText =
-                getProjectText(
-                  project,
-                  originalIndex
-                );
-
-              const buttonText =
+              const actionText =
                 project.category === "app"
-                  ? t.portfolio
-                      ?.buttons
-                      ?.installApp ||
-                    "Install App"
-                  : project.category ===
-                    "software"
-                  ? t.portfolio
-                      ?.buttons
-                      ?.viewSoftware ||
-                    "View Software"
-                  : t.portfolio
-                      ?.buttons
-                      ?.visitWebsite ||
-                    "Visit Website";
+                  ? t.portfolio.actions.installApp
+                  : project.category === "software"
+                  ? t.portfolio.actions.viewSoftware
+                  : t.portfolio.actions.visitWebsite;
 
               const CardContent = (
                 <>
@@ -430,7 +367,7 @@ const Portfolio = () => {
 
                     <img
                       src={project.image}
-                      alt={projectText.title}
+                      alt={projectData.title}
                       className="w-full h-full object-contain bg-black group-hover:scale-105 transition duration-700 p-2"
                     />
 
@@ -443,25 +380,29 @@ const Portfolio = () => {
                     <div className="mb-4">
 
                       <span className="px-4 py-1 rounded-full text-xs uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                        {t.portfolio
-                          ?.categories?.[
-                          project.category
-                        ] ||
-                          project.category}
+
+                        {categoryLabel}
+
                       </span>
 
                     </div>
 
                     <h2 className="text-2xl font-bold mb-3">
-                      {projectText.title}
+
+                      {projectData.title}
+
                     </h2>
 
                     <p className="text-gray-400 leading-relaxed mb-5">
-                      {projectText.description}
+
+                      {projectData.description}
+
                     </p>
 
                     <div className="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-all duration-300 shadow-lg shadow-cyan-500/30">
-                      {buttonText}
+
+                      {actionText}
+
                     </div>
 
                   </div>
@@ -470,7 +411,6 @@ const Portfolio = () => {
 
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500">
                   </div>
-
                 </>
               );
 
@@ -482,7 +422,7 @@ const Portfolio = () => {
 
                 return (
                   <motion.div
-                    key={project.title}
+                    key={project.key}
                     initial={{
                       opacity: 0,
                       y: 60,
@@ -506,12 +446,13 @@ const Portfolio = () => {
                       )}
                       className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
                     >
+
                       {CardContent}
+
                     </Link>
 
                   </motion.div>
                 );
-
               }
 
               /* =================================================
@@ -520,7 +461,7 @@ const Portfolio = () => {
 
               return (
                 <motion.a
-                  key={project.title}
+                  key={project.key}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -541,10 +482,11 @@ const Portfolio = () => {
                   }}
                   className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl block cursor-pointer"
                 >
+
                   {CardContent}
+
                 </motion.a>
               );
-
             }
           )}
 
