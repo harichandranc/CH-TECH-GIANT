@@ -68,6 +68,7 @@ function App() {
             <Route path="/:lang" element={<Home />} />
 
             <Route path="/about" element={<About />} />
+            <Route path="/:lang/about" element={<About />} />
 
             <Route path="/services" element={<Services />} />
             <Route path="/:lang/services" element={<Services />} />
@@ -75,8 +76,10 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
 
             <Route path="/contact" element={<Contact />} />
-            
+            <Route path="/:lang/contact" element={<Contact />} />
+
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
 
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
