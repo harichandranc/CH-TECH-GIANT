@@ -2,6 +2,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
+  FaLinkedinIn,
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -136,6 +137,25 @@ function Footer() {
                 "
               >
                 <FaWhatsapp />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/ch-tech-giant/"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  w-10 h-10 sm:w-11 sm:h-11
+                  rounded-xl
+                  border border-cyan-500/10
+                  bg-white/5
+                  flex items-center justify-center
+                  text-gray-300
+                  hover:bg-cyan-500
+                  hover:text-black
+                  transition-all duration-300
+                "
+              >
+                <FaLinkedinIn />
               </a>
 
             </div>
