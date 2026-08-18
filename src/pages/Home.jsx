@@ -654,7 +654,7 @@ const Home = () => {
                 className="flex flex-col sm:flex-row gap-4 md:gap-5 mt-8 md:mt-10"
               >
 
-                <Link to="/services">
+                <Link to={language === "en" ? "/services" : `/${language}/services`}>
                   <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
                     {t.exploreServices}
                   </button>
