@@ -1226,6 +1226,36 @@ const AppDevelopment = () => {
       <div className="bg-[#050816] text-white min-h-screen">
 
         {/* =====================================================
+    LANGUAGE SELECTOR
+    BELOW NAVBAR
+===================================================== */}
+
+<div className="relative z-50 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto flex justify-end">
+    <div className="relative">
+      <select
+        value={language}
+        onChange={handleLanguageChange}
+        aria-label="Select language"
+        className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
+      >
+        {languages.map((item) => (
+          <option
+            key={item.code}
+            value={item.code}
+            className="bg-[#050816] text-white"
+          >
+            {item.label}
+          </option>
+        ))}
+      </select>
+
+      <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+    </div>
+  </div>
+</div>
+
+        {/* =====================================================
             PAGE BANNER
         ===================================================== */}
 
@@ -1236,36 +1266,6 @@ const AppDevelopment = () => {
             "Building scalable Android, iOS, and Flutter applications for startups, businesses, and enterprises."
           }
         />
-
-        {/* =====================================================
-            LANGUAGE SELECTOR
-            BELOW NAVBAR / PAGE BANNER
-        ===================================================== */}
-
-        <div className="relative z-50 px-4 sm:px-6">
-          <div className="max-w-7xl mx-auto flex justify-end pt-4 md:pt-6">
-            <div className="relative">
-              <select
-                value={language}
-                onChange={handleLanguageChange}
-                aria-label="Select language"
-                className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
-              >
-                {languages.map((item) => (
-                  <option
-                    key={item.code}
-                    value={item.code}
-                    className="bg-[#050816] text-white"
-                  >
-                    {item.label}
-                  </option>
-                ))}
-              </select>
-
-              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
-            </div>
-          </div>
-        </div>
 
         {/* =====================================================
             HERO
