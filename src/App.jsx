@@ -87,6 +87,11 @@ function App() {
             />
 
             <Route
+              path="/:lang/app-development"
+              element={<AppDevelopment />}
+            />
+
+            <Route
               path="/web-development"
               element={<WebDevelopment />}
             />
