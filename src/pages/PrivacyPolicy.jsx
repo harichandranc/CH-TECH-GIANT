@@ -1,145 +1,192 @@
+import { useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
 import PageBanner from "../components/PageBanner";
 import SectionWrapper from "../components/SectionWrapper";
 
-const sections = [
+import { translations } from "../locales";
+
+const languages = [
   {
-    title: "Company Information",
-    content: `
-CH TECH GIANT (OPC) PRIVATE LIMITED is a technology company based in Davanagere, Karnataka, India.
-
-We specialize in:
-• App Development
-• Web Development
-• Software Development
-• Game Development
-• IT Solutions & Digital Services
-
-Website: https://chtechgiant.com
-Email: info@chtechgiant.com
-Phone: +91 9980785020
-    `,
+    code: "en",
+    path: "/privacy-policy",
+    label: "🇺🇸 English",
   },
   {
-    title: "Information We Collect",
-    content: `
-We may collect personal and technical information when you interact with our website or services.
-
-This may include:
-• Name
-• Email address
-• Phone number
-• Business details
-• Project requirements
-• IP address
-• Browser information
-• Device information
-• Website analytics
-    `,
+    code: "zh",
+    path: "/zh/privacy-policy",
+    label: "🇨🇳 简体中文",
   },
   {
-    title: "How We Use Your Information",
-    content: `
-We use collected information to:
-• Provide and improve our services
-• Respond to inquiries and support requests
-• Deliver project updates
-• Improve website performance
-• Maintain website security
-• Prevent unauthorized activities
-
-We do not sell or rent your personal information to third parties.
-    `,
+    code: "es",
+    path: "/es/privacy-policy",
+    label: "🇪🇸 Español",
   },
   {
-    title: "Third-Party Services",
-    content: `
-Our website may include embedded content or integrations from third-party platforms such as:
-• YouTube
-• Google Services
-• Social Media Platforms
-• Analytics Providers
-
-These services may collect data independently according to their own privacy policies.
-    `,
+    code: "pt",
+    path: "/pt/privacy-policy",
+    label: "🇧🇷 Português",
   },
   {
-    title: "Data Security",
-    content: `
-CH TECH GIANT uses industry-standard security measures to protect user data from unauthorized access, misuse, disclosure, or destruction.
-
-However, no online platform can guarantee complete security.
-    `,
+    code: "de",
+    path: "/de/privacy-policy",
+    label: "🇩🇪 Deutsch",
   },
   {
-    title: "Data Retention",
-    content: `
-We retain user information only as long as necessary for:
-• Service delivery
-• Legal compliance
-• Business records
-• Security purposes
-
-Users may request deletion of their data by contacting us.
-    `,
+    code: "ko",
+    path: "/ko/privacy-policy",
+    label: "🇰🇷 한국어",
   },
   {
-    title: "Your Rights",
-    content: `
-You may have the right to:
-• Access your personal data
-• Correct inaccurate information
-• Request deletion of data
-• Withdraw consent
-• Request a copy of stored data
-
-To exercise these rights, contact us at:
-info@chtechgiant.com
-    `,
-  },
-  {
-    title: "External Links",
-    content: `
-Our website may contain links to external websites. We are not responsible for the privacy practices or content of third-party websites.
-    `,
-  },
-  {
-    title: "Children's Privacy",
-    content: `
-Our services are not directed toward children under the age of 13. We do not knowingly collect personal information from children.
-    `,
-  },
-  {
-    title: "Policy Updates",
-    content: `
-We may update this Privacy Policy periodically to reflect:
-• Legal changes
-• Service updates
-• Security improvements
-• Business changes
-
-Updated versions will be posted on this page.
-    `,
+    code: "ja",
+    path: "/ja/privacy-policy",
+    label: "🇯🇵 日本語",
   },
 ];
 
+const supportedLanguages = [
+  "zh",
+  "es",
+  "pt",
+  "de",
+  "ko",
+  "ja",
+];
+
 function PrivacyPolicy() {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
+
+  const t = translations[language];
+
+  /* =====================================================
+     AUTO LANGUAGE DETECTION
+  ===================================================== */
+
+  useEffect(() => {
+    if (lang) return;
+
+    const browserLanguage = navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh/privacy-policy", { replace: true });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es/privacy-policy", { replace: true });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt/privacy-policy", { replace: true });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de/privacy-policy", { replace: true });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko/privacy-policy", { replace: true });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja/privacy-policy", { replace: true });
+    } else {
+      navigate("/privacy-policy", { replace: true });
+    }
+  }, [lang, navigate]);
+
   return (
     <div className="bg-black text-white min-h-screen">
-      <PageBanner
-        title="Privacy Policy"
-        subtitle="Your privacy and data security are important to us."
-      />
 
-      <SectionWrapper>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-gray-500 text-sm tracking-wide uppercase">
-              Last Updated • May 23, 2026
-            </p>
+      {/* =================================================
+          LANGUAGE SWITCHER
+      ================================================= */}
+
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="flex justify-center mb-2 md:mb-16">
+
+          {/* MOBILE LANGUAGE DROPDOWN */}
+
+          <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
+
+            <select
+              id="mobile-language"
+              value={language}
+              onChange={(e) => {
+                const selectedLanguage = languages.find(
+                  (item) => item.code === e.target.value
+                );
+
+                if (selectedLanguage) {
+                  navigate(selectedLanguage.path);
+                }
+              }}
+              className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-[#050816] text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+
           </div>
 
+          {/* DESKTOP LANGUAGE BUTTONS */}
+
+          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
+
+            {languages.map((item) => (
+              <Link
+                key={item.code}
+                to={item.path}
+                className={`px-5 py-2 rounded-full border transition ${
+                  language === item.code
+                    ? "bg-cyan-500 text-black border-cyan-500"
+                    : "border-white/20 hover:border-cyan-500"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* =================================================
+          PAGE BANNER
+      ================================================= */}
+
+      <PageBanner
+        title={t.privacyPolicy.pageTitle}
+        subtitle={t.privacyPolicy.pageSubtitle}
+      />
+
+      {/* =================================================
+          PRIVACY POLICY CONTENT
+      ================================================= */}
+
+      <SectionWrapper>
+
+        <div className="max-w-5xl mx-auto">
+
+          {/* LAST UPDATED */}
+
+          <div className="text-center mb-8">
+
+            <p className="text-gray-500 text-sm tracking-wide uppercase">
+              {t.privacyPolicy.lastUpdated}
+            </p>
+
+          </div>
+
+          {/* SECTIONS */}
+
           <div className="space-y-5">
-            {sections.map((section) => (
+
+            {t.privacyPolicy.sections.map((section) => (
               <div
                 key={section.title}
                 className="
@@ -151,6 +198,7 @@ function PrivacyPolicy() {
                   hover:border-cyan-500/30
                 "
               >
+
                 <h2 className="text-2xl font-semibold text-cyan-400 mb-4">
                   {section.title}
                 </h2>
@@ -158,9 +206,15 @@ function PrivacyPolicy() {
                 <p className="text-gray-300 leading-7 whitespace-pre-line">
                   {section.content}
                 </p>
+
               </div>
             ))}
+
           </div>
+
+          {/* =================================================
+              CONTACT
+          ================================================= */}
 
           <div
             className="
@@ -172,19 +226,37 @@ function PrivacyPolicy() {
               text-center
             "
           >
+
             <h2 className="text-3xl font-bold mb-5 text-white">
-              Contact Us
+              {t.privacyPolicy.contact.title}
             </h2>
 
             <div className="space-y-2 text-gray-300">
-              <p>CH TECH GIANT (OPC) PRIVATE LIMITED</p>
-              <p>Davanagere, Karnataka - 577001</p>
-              <p>+91 9980785020</p>
-              <p>info@chtechgiant.com</p>
+
+              <p>
+                {t.privacyPolicy.contact.company}
+              </p>
+
+              <p>
+                {t.privacyPolicy.contact.address}
+              </p>
+
+              <p>
+                {t.privacyPolicy.contact.phone}
+              </p>
+
+              <p>
+                {t.privacyPolicy.contact.email}
+              </p>
+
             </div>
+
           </div>
+
         </div>
+
       </SectionWrapper>
+
     </div>
   );
 }

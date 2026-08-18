@@ -1701,6 +1701,172 @@ const zh = {
       },
     },
   },
+    // =========================
+  // PRIVACY POLICY PAGE
+  // =========================
+
+  privacyPolicy: {
+    seo: {
+      title: "隐私政策 | CH TECH GIANT",
+      description:
+        "阅读 CH TECH GIANT (OPC) PRIVATE LIMITED 的隐私政策，了解我们如何收集、使用、保护和管理您的信息。",
+      keywords:
+        "CH TECH GIANT 隐私政策, 隐私保护, 数据保护, 个人信息, 数据安全",
+    },
+
+    title: "隐私政策",
+
+    subtitle:
+      "您的隐私和数据安全对我们非常重要。",
+
+    lastUpdated: "最后更新 • 2026年5月23日",
+
+    sections: {
+      companyInformation: {
+        title: "公司信息",
+        content: `
+CH TECH GIANT (OPC) PRIVATE LIMITED 是一家总部位于印度卡纳塔克邦达文盖雷的科技公司。
+
+我们的专业领域包括：
+• 应用程序开发
+• 网站开发
+• 软件开发
+• 游戏开发
+• IT 解决方案与数字服务
+
+网站：https://chtechgiant.com
+电子邮箱：info@chtechgiant.com
+电话：+91 9980785020
+        `,
+      },
+
+      informationWeCollect: {
+        title: "我们收集的信息",
+        content: `
+当您访问我们的网站或使用我们的服务时，我们可能会收集个人信息和技术信息。
+
+这些信息可能包括：
+• 姓名
+• 电子邮箱地址
+• 电话号码
+• 企业信息
+• 项目需求
+• IP 地址
+• 浏览器信息
+• 设备信息
+• 网站分析数据
+        `,
+      },
+
+      howWeUseInformation: {
+        title: "我们如何使用您的信息",
+        content: `
+我们使用收集的信息来：
+• 提供和改进我们的服务
+• 回复咨询和支持请求
+• 提供项目更新
+• 改善网站性能
+• 维护网站安全
+• 防止未经授权的活动
+
+我们不会向第三方出售或出租您的个人信息。
+        `,
+      },
+
+      thirdPartyServices: {
+        title: "第三方服务",
+        content: `
+我们的网站可能包含来自第三方平台的嵌入内容或集成功能，例如：
+• YouTube
+• Google 服务
+• 社交媒体平台
+• 数据分析服务提供商
+
+这些服务可能会根据其自身的隐私政策独立收集数据。
+        `,
+      },
+
+      dataSecurity: {
+        title: "数据安全",
+        content: `
+CH TECH GIANT 使用符合行业标准的安全措施，以保护用户数据免遭未经授权的访问、滥用、披露或破坏。
+
+但是，任何在线平台都无法保证绝对的数据安全。
+        `,
+      },
+
+      dataRetention: {
+        title: "数据保留",
+        content: `
+我们仅在以下目的所需的期限内保留用户信息：
+• 提供服务
+• 遵守法律法规
+• 业务记录
+• 安全目的
+
+用户可以通过联系我们来请求删除其数据。
+        `,
+      },
+
+      yourRights: {
+        title: "您的权利",
+        content: `
+您可能拥有以下权利：
+• 访问您的个人数据
+• 更正不准确的信息
+• 请求删除数据
+• 撤回您的同意
+• 请求获取已存储数据的副本
+
+如需行使这些权利，请通过以下方式联系我们：
+info@chtechgiant.com
+        `,
+      },
+
+      externalLinks: {
+        title: "外部链接",
+        content: `
+我们的网站可能包含指向外部网站的链接。对于第三方网站的隐私做法或内容，我们不承担任何责任。
+        `,
+      },
+
+      childrensPrivacy: {
+        title: "儿童隐私",
+        content: `
+我们的服务不面向13岁以下的儿童。我们不会故意收集儿童的个人信息。
+        `,
+      },
+
+      policyUpdates: {
+        title: "政策更新",
+        content: `
+我们可能会定期更新本隐私政策，以反映：
+• 法律法规的变化
+• 服务更新
+• 安全性改进
+• 业务变化
+
+更新后的版本将发布在本页面上。
+        `,
+      },
+    },
+
+    contact: {
+      title: "联系我们",
+
+      company:
+        "CH TECH GIANT (OPC) PRIVATE LIMITED",
+
+      address:
+        "Davanagere, Karnataka - 577001",
+
+      phone:
+        "+91 9980785020",
+
+      email:
+        "info@chtechgiant.com",
+    },
+  },
 
 };
 
