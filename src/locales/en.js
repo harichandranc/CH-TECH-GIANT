@@ -1993,302 +1993,752 @@ webDevelopment: {
     {
       id: 1,
       title: "Business Website Development",
+      image: "/images/web-categories/business.png",
       description:
         "Professional business websites that help companies establish a strong online presence, showcase their services, generate leads, and build customer trust.",
+      features: [
+        "Professional Design",
+        "Responsive Layout",
+        "Service Pages",
+        "Lead Generation",
+        "Contact Forms",
+        "SEO Friendly",
+      ],
     },
     {
       id: 2,
       title: "Corporate Website Development",
+      image: "/images/web-categories/corporate.png",
       description:
         "Modern corporate websites for companies and organizations to present their brand, services, team, achievements, and business information.",
+      features: [
+        "Corporate Branding",
+        "Company Profiles",
+        "Service Management",
+        "Team Profiles",
+        "Investor Information",
+        "CMS Integration",
+      ],
     },
     {
       id: 3,
       title: "E-Commerce Website Development",
+      image: "/images/web-categories/ecommerce.png",
       description:
         "Complete online shopping platforms with product catalogs, shopping carts, secure payments, order management, customer accounts, and administration.",
+      features: [
+        "Product Catalog",
+        "Shopping Cart",
+        "Secure Payments",
+        "Order Tracking",
+        "Customer Accounts",
+        "Admin Dashboard",
+      ],
     },
     {
       id: 4,
       title: "Online Store Development",
+      image: "/images/web-categories/online-store.png",
       description:
         "Modern online stores for retailers and businesses with product management, categories, offers, checkout, payments, and order tracking.",
+      features: [
+        "Product Management",
+        "Product Categories",
+        "Special Offers",
+        "Checkout",
+        "Payment Integration",
+        "Order Tracking",
+      ],
     },
     {
       id: 5,
       title: "Marketplace Website Development",
+      image: "/images/web-categories/marketplace.png",
       description:
         "Multi-vendor marketplaces that connect buyers and sellers with vendor dashboards, commissions, product management, and order processing.",
+      features: [
+        "Vendor Dashboard",
+        "Seller Management",
+        "Product Management",
+        "Commission System",
+        "Order Management",
+        "Buyer Accounts",
+      ],
     },
     {
       id: 6,
       title: "Portfolio Website Development",
+      image: "/images/web-categories/portfolio.png",
       description:
         "Creative portfolio websites for individuals, designers, developers, photographers, agencies, freelancers, and professionals.",
+      features: [
+        "Project Showcase",
+        "Gallery",
+        "Responsive Design",
+        "Animations",
+        "Contact Form",
+        "Social Integration",
+      ],
     },
     {
       id: 7,
       title: "Landing Page Development",
+      image: "/images/web-categories/landing-page.png",
       description:
         "Conversion-focused landing pages for marketing campaigns, products, services, advertising, lead generation, and business promotions.",
+      features: [
+        "Conversion Focused",
+        "Lead Generation",
+        "Call-to-Action",
+        "Responsive Design",
+        "SEO Friendly",
+        "Analytics Integration",
+      ],
     },
     {
       id: 8,
       title: "SaaS Application Development",
+      image: "/images/web-categories/saas.png",
       description:
         "Scalable Software-as-a-Service platforms with user accounts, subscriptions, dashboards, billing, analytics, and cloud infrastructure.",
+      features: [
+        "User Accounts",
+        "Subscriptions",
+        "Dashboard",
+        "Billing",
+        "Analytics",
+        "Cloud Infrastructure",
+      ],
     },
     {
       id: 9,
       title: "CRM Web Application",
+      image: "/images/web-categories/crm.png",
       description:
         "Customer relationship management platforms for managing leads, customers, sales pipelines, communication, tasks, and business analytics.",
+      features: [
+        "Lead Management",
+        "Customer Management",
+        "Sales Pipeline",
+        "Task Management",
+        "Communication",
+        "Business Analytics",
+      ],
     },
     {
       id: 10,
       title: "ERP Web Application",
+      image: "/images/web-categories/erp.png",
       description:
         "Enterprise resource planning systems that integrate business functions such as finance, inventory, HR, sales, purchasing, and reporting.",
+      features: [
+        "Finance Management",
+        "Inventory",
+        "Human Resources",
+        "Sales",
+        "Purchasing",
+        "Reports",
+      ],
     },
     {
       id: 11,
       title: "School Management System",
+      image: "/images/web-categories/school.png",
       description:
         "Complete school management systems for students, teachers, administrators, attendance, examinations, fees, notices, and academic management.",
+      features: [
+        "Student Management",
+        "Teacher Management",
+        "Attendance",
+        "Examinations",
+        "Fee Management",
+        "Notices",
+      ],
     },
     {
       id: 12,
       title: "College Management System",
+      image: "/images/web-categories/college.png",
       description:
         "Web-based college management systems for students, faculty, departments, attendance, examinations, academic operations, and administration.",
+      features: [
+        "Student Management",
+        "Faculty Management",
+        "Departments",
+        "Attendance",
+        "Examinations",
+        "Administration",
+      ],
     },
     {
       id: 13,
       title: "Learning Management System",
+      image: "/images/web-categories/lms.png",
       description:
         "Online learning platforms where students can access courses, lectures, study materials, quizzes, results, and learning progress.",
+      features: [
+        "Course Management",
+        "Video Lectures",
+        "Study Materials",
+        "Online Quizzes",
+        "Results",
+        "Student Dashboard",
+      ],
     },
     {
       id: 14,
       title: "Hospital Management System",
+      image: "/images/web-categories/hospital.png",
       description:
         "Web-based hospital management systems for doctors, staff, patients, appointments, billing, departments, reports, and medical operations.",
+      features: [
+        "Patient Management",
+        "Doctor Management",
+        "Staff Management",
+        "Appointments",
+        "Billing",
+        "Reports",
+      ],
     },
     {
       id: 15,
       title: "Healthcare Website Development",
+      image: "/images/web-categories/healthcare.png",
       description:
         "Healthcare websites and web applications for hospitals, clinics, doctors, healthcare organizations, and medical service providers.",
+      features: [
+        "Doctor Profiles",
+        "Medical Services",
+        "Appointment Booking",
+        "Patient Information",
+        "Contact Forms",
+        "Admin Dashboard",
+      ],
     },
     {
       id: 16,
       title: "Real Estate Website Development",
+      image: "/images/web-categories/real-estate.png",
       description:
         "Real estate platforms with property listings, advanced search, filters, maps, agent profiles, inquiries, and property management.",
+      features: [
+        "Property Listings",
+        "Advanced Search",
+        "Filters",
+        "Map Integration",
+        "Agent Profiles",
+        "Property Management",
+      ],
     },
     {
       id: 17,
       title: "Hotel Booking Website",
+      image: "/images/web-categories/hotel.png",
       description:
         "Hotel and resort booking platforms with room listings, availability, reservations, online payments, and booking management.",
+      features: [
+        "Room Listings",
+        "Availability",
+        "Online Booking",
+        "Online Payments",
+        "Booking Management",
+        "Customer Accounts",
+      ],
     },
     {
       id: 18,
       title: "Restaurant Website Development",
+      image: "/images/web-categories/restaurant.png",
       description:
         "Modern restaurant websites with digital menus, online ordering, reservations, offers, location information, and customer engagement.",
+      features: [
+        "Digital Menu",
+        "Online Ordering",
+        "Reservations",
+        "Offers",
+        "Location Information",
+        "Customer Reviews",
+      ],
     },
     {
       id: 19,
       title: "Food Delivery Website",
+      image: "/images/web-categories/food-delivery.png",
       description:
         "Online food ordering and delivery platforms connecting customers, restaurants, and delivery partners.",
+      features: [
+        "Restaurant Listings",
+        "Food Ordering",
+        "Online Payments",
+        "Order Tracking",
+        "Delivery Management",
+        "Customer Dashboard",
+      ],
     },
     {
       id: 20,
       title: "Job Portal Development",
+      image: "/images/web-categories/job-portal.png",
       description:
         "Recruitment platforms connecting employers and job seekers through job listings, applications, resumes, employer dashboards, and notifications.",
+      features: [
+        "Job Listings",
+        "Job Search",
+        "Resume Upload",
+        "Applications",
+        "Employer Dashboard",
+        "Job Alerts",
+      ],
     },
     {
       id: 21,
       title: "Social Networking Website",
+      image: "/images/web-categories/social-network.png",
       description:
         "Interactive social platforms with user profiles, posts, feeds, messaging, communities, notifications, and real-time interactions.",
+      features: [
+        "User Profiles",
+        "News Feed",
+        "Posts",
+        "Private Messaging",
+        "Communities",
+        "Notifications",
+      ],
     },
     {
       id: 22,
       title: "Community Website Development",
+      image: "/images/web-categories/community.png",
       description:
         "Online community platforms where users can create profiles, join groups, discuss topics, share information, and interact with others.",
+      features: [
+        "User Profiles",
+        "Discussion Forums",
+        "Groups",
+        "Messaging",
+        "Notifications",
+        "Moderation",
+      ],
     },
     {
       id: 23,
       title: "News & Magazine Website",
+      image: "/images/web-categories/news.png",
       description:
         "Modern news and magazine websites with categories, articles, breaking news, search, author profiles, and content management.",
+      features: [
+        "News Categories",
+        "Article Management",
+        "Author Profiles",
+        "Search",
+        "Media Gallery",
+        "CMS",
+      ],
     },
     {
       id: 24,
       title: "Blog Website Development",
+      image: "/images/web-categories/blog.png",
       description:
         "SEO-friendly blogging platforms with articles, categories, authors, comments, tags, media management, and content publishing.",
+      features: [
+        "Blog Management",
+        "Categories",
+        "Tags",
+        "Comments",
+        "SEO Optimization",
+        "Search",
+      ],
     },
     {
       id: 25,
       title: "Directory Website Development",
+      image: "/images/web-categories/directory.png",
       description:
         "Business and service directories that allow users to discover businesses, services, locations, reviews, and contact information.",
+      features: [
+        "Business Listings",
+        "Categories",
+        "Advanced Search",
+        "Maps",
+        "Reviews",
+        "User Submissions",
+      ],
     },
     {
       id: 26,
       title: "Booking Website Development",
+      image: "/images/web-categories/booking.png",
       description:
         "Custom booking platforms for appointments, services, hotels, events, travel, consultants, and other businesses.",
+      features: [
+        "Online Booking",
+        "Availability",
+        "Calendar",
+        "Payments",
+        "Notifications",
+        "Customer Dashboard",
+      ],
     },
     {
       id: 27,
       title: "Appointment Booking System",
+      image: "/images/web-categories/appointment.png",
       description:
         "Online appointment platforms for doctors, consultants, salons, service providers, and businesses with calendar and scheduling features.",
+      features: [
+        "Appointment Booking",
+        "Calendar",
+        "Availability",
+        "Reminders",
+        "Online Payments",
+        "Rescheduling",
+      ],
     },
     {
       id: 28,
       title: "Event Management Website",
+      image: "/images/web-categories/event.png",
       description:
         "Event and conference platforms for registrations, ticket bookings, schedules, speakers, attendees, and event management.",
+      features: [
+        "Event Registration",
+        "Ticket Booking",
+        "Event Schedules",
+        "Speaker Profiles",
+        "Attendee Management",
+        "Notifications",
+      ],
     },
     {
       id: 29,
       title: "Travel Website Development",
+      image: "/images/web-categories/travel.png",
       description:
         "Travel websites for destinations, tours, bookings, itineraries, travel packages, guides, and customer inquiries.",
+      features: [
+        "Destinations",
+        "Tour Packages",
+        "Travel Booking",
+        "Itineraries",
+        "Travel Guides",
+        "Customer Inquiries",
+      ],
     },
     {
       id: 30,
       title: "Taxi Booking Website",
+      image: "/images/web-categories/taxi.png",
       description:
         "Ride booking platforms connecting passengers and drivers with booking, location tracking, fare calculation, payments, and trip management.",
+      features: [
+        "Ride Booking",
+        "Driver Management",
+        "Location Tracking",
+        "Fare Calculation",
+        "Online Payments",
+        "Trip Management",
+      ],
     },
     {
       id: 31,
       title: "Logistics Management System",
+      image: "/images/web-categories/logistics.png",
       description:
         "Web applications for logistics companies to manage shipments, drivers, fleets, warehouses, routes, deliveries, and reports.",
+      features: [
+        "Shipment Management",
+        "Driver Management",
+        "Fleet Management",
+        "Warehouse Management",
+        "Route Management",
+        "Reports",
+      ],
     },
     {
       id: 32,
       title: "Inventory Management System",
+      image: "/images/web-categories/inventory.png",
       description:
         "Inventory platforms for managing products, stock levels, suppliers, purchases, warehouses, stock movements, and reports.",
+      features: [
+        "Product Management",
+        "Stock Management",
+        "Supplier Management",
+        "Purchases",
+        "Warehouse Management",
+        "Reports",
+      ],
     },
     {
       id: 33,
       title: "Billing & POS System",
+      image: "/images/web-categories/pos.png",
       description:
         "Web-based billing and point-of-sale systems for retail stores, restaurants, service providers, and businesses.",
+      features: [
+        "Billing",
+        "Product Management",
+        "Inventory",
+        "Invoices",
+        "Sales Reports",
+        "Customer Management",
+      ],
     },
     {
       id: 34,
       title: "HR Management System",
+      image: "/images/web-categories/hr.png",
       description:
         "Human resource management systems for employee records, attendance, leave management, payroll, recruitment, and HR administration.",
+      features: [
+        "Employee Management",
+        "Attendance",
+        "Leave Management",
+        "Payroll",
+        "Recruitment",
+        "HR Reports",
+      ],
     },
     {
       id: 35,
       title: "Project Management System",
+      image: "/images/web-categories/project-management.png",
       description:
         "Project management platforms for teams to organize projects, tasks, deadlines, milestones, users, and progress.",
+      features: [
+        "Project Management",
+        "Task Management",
+        "Team Management",
+        "Deadlines",
+        "Progress Tracking",
+        "Reports",
+      ],
     },
     {
       id: 36,
       title: "Customer Portal Development",
+      image: "/images/web-categories/customer-portal.png",
       description:
         "Secure customer portals for accessing orders, invoices, documents, support requests, profiles, and account information.",
+      features: [
+        "Customer Login",
+        "Orders",
+        "Invoices",
+        "Documents",
+        "Support Tickets",
+        "Profile Management",
+      ],
     },
     {
       id: 37,
       title: "Employee Portal Development",
+      image: "/images/web-categories/employee-portal.png",
       description:
         "Secure employee portals for attendance, leave requests, tasks, documents, notifications, and internal company resources.",
+      features: [
+        "Employee Login",
+        "Attendance",
+        "Leave Requests",
+        "Tasks",
+        "Documents",
+        "Notifications",
+      ],
     },
     {
       id: 38,
       title: "Admin Dashboard Development",
+      image: "/images/web-categories/admin-dashboard.png",
       description:
         "Modern administration dashboards for managing users, products, content, orders, reports, analytics, and settings.",
+      features: [
+        "User Management",
+        "Analytics",
+        "Reports",
+        "Role Management",
+        "Data Management",
+        "System Settings",
+      ],
     },
     {
       id: 39,
       title: "Custom Web Portal Development",
+      image: "/images/web-categories/web-portal.png",
       description:
         "Custom web portals designed specifically around business processes, user requirements, integrations, and operational workflows.",
+      features: [
+        "Custom Portal",
+        "User Management",
+        "Workflow Management",
+        "API Integration",
+        "Secure Authentication",
+        "Admin Dashboard",
+      ],
     },
     {
       id: 40,
       title: "API Development",
+      image: "/images/web-categories/api.png",
       description:
         "Secure and scalable REST API development for websites, mobile applications, dashboards, third-party integrations, and business systems.",
+      features: [
+        "REST APIs",
+        "Authentication",
+        "Authorization",
+        "Database Integration",
+        "Third-Party Integration",
+        "API Security",
+      ],
     },
     {
       id: 41,
       title: "Web Application Development",
+      image: "/images/web-categories/web-app.png",
       description:
         "Scalable web applications built around your business requirements with modern frontend, backend, database, authentication, and API architecture.",
+      features: [
+        "Custom Frontend",
+        "Backend Development",
+        "Database Integration",
+        "Authentication",
+        "API Integration",
+        "Scalable Architecture",
+      ],
     },
     {
       id: 42,
       title: "AI-Powered Web Application",
+      image: "/images/web-categories/ai-web.png",
       description:
         "Intelligent web applications using artificial intelligence for automation, recommendations, content generation, search, analytics, and smart business workflows.",
+      features: [
+        "AI Integration",
+        "Automation",
+        "Smart Search",
+        "Recommendations",
+        "Content Generation",
+        "Analytics",
+      ],
     },
     {
       id: 43,
       title: "AI Chatbot Website",
+      image: "/images/web-categories/ai-chatbot.png",
       description:
         "AI-powered chatbot websites for automated customer support, lead generation, question answering, and intelligent communication.",
+      features: [
+        "AI Chatbot",
+        "24/7 Support",
+        "Lead Generation",
+        "Knowledge Base",
+        "Live Chat",
+        "Analytics",
+      ],
     },
     {
       id: 44,
       title: "Online Learning Platform",
+      image: "/images/web-categories/online-learning.png",
       description:
         "Educational websites and online learning platforms with courses, video lectures, study materials, quizzes, subscriptions, and student dashboards.",
+      features: [
+        "Course Management",
+        "Video Lectures",
+        "Study Materials",
+        "Online Quizzes",
+        "Subscriptions",
+        "Student Dashboard",
+      ],
     },
     {
       id: 45,
       title: "Finance Web Application",
+      image: "/images/web-categories/finance.png",
       description:
         "Secure finance web applications for transactions, expenses, payments, reports, account management, and business finances.",
+      features: [
+        "Transactions",
+        "Expense Management",
+        "Payments",
+        "Financial Reports",
+        "Account Management",
+        "Dashboard",
+      ],
     },
     {
       id: 46,
       title: "SaaS Dashboard Development",
+      image: "/images/web-categories/saas-dashboard.png",
       description:
         "Modern SaaS dashboards with user management, subscriptions, analytics, billing, permissions, and notifications.",
+      features: [
+        "User Management",
+        "Subscriptions",
+        "Analytics",
+        "Billing",
+        "Permissions",
+        "Notifications",
+      ],
     },
     {
       id: 47,
       title: "Government & Organization Website",
+      image: "/images/web-categories/government.png",
       description:
         "Professional websites and information portals for organizations, institutions, associations, and public service initiatives.",
+      features: [
+        "Information Pages",
+        "Announcements",
+        "Departments",
+        "Document Management",
+        "Contact Forms",
+        "Admin Management",
+      ],
     },
     {
       id: 48,
       title: "Startup Website Development",
+      image: "/images/web-categories/startup.png",
       description:
         "Modern startup websites designed to showcase products, attract customers, generate leads, and support business growth.",
+      features: [
+        "Product Showcase",
+        "Lead Generation",
+        "Responsive Design",
+        "SEO",
+        "Analytics",
+        "Scalable Architecture",
+      ],
     },
     {
       id: 49,
       title: "Website Redesign & Modernization",
+      image: "/images/web-categories/redesign.png",
       description:
         "We transform outdated websites into modern, responsive, high-performance digital experiences with improved usability and SEO.",
+      features: [
+        "Modern UI/UX",
+        "Responsive Design",
+        "Performance Optimization",
+        "SEO Improvement",
+        "Mobile Optimization",
+        "Modern Architecture",
+      ],
     },
     {
       id: 50,
       title: "Custom Website Development",
+      image: "/images/web-categories/custom.png",
       description:
         "Need something unique? We build completely custom websites and web applications based on your business goals, audience, and industry requirements.",
+      features: [
+        "100% Custom",
+        "UI/UX Design",
+        "Frontend Development",
+        "Backend Development",
+        "API Integration",
+        "Deployment",
+      ],
     },
   ],
 
