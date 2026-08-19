@@ -102,6 +102,11 @@ function App() {
               element={<WebDevelopment />}
             />
 
+            <Route
+              path="/:lang/web-development"
+              element={<WebDevelopment />}
+            />
+
 
             <Route
               path="/software-development"
@@ -132,7 +137,7 @@ function App() {
               element={<InvoiceDesign />}
             />
 
-            
+
 
             <Route
               path="/apps/world-clock/privacy-policy"
