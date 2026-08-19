@@ -14,557 +14,824 @@ const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
 const languages = [
   {
     code: "en",
-    path: "/app-development",
+    path: "/web-development",
     label: "🇺🇸 English",
   },
   {
     code: "zh",
-    path: "/zh/app-development",
+    path: "/zh/web-development",
     label: "🇨🇳 简体中文",
   },
   {
     code: "es",
-    path: "/es/app-development",
+    path: "/es/web-development",
     label: "🇪🇸 Español",
   },
   {
     code: "pt",
-    path: "/pt/app-development",
+    path: "/pt/web-development",
     label: "🇧🇷 Português",
   },
   {
     code: "de",
-    path: "/de/app-development",
+    path: "/de/web-development",
     label: "🇩🇪 Deutsch",
   },
   {
     code: "ko",
-    path: "/ko/app-development",
+    path: "/ko/web-development",
     label: "🇰🇷 한국어",
   },
   {
     code: "ja",
-    path: "/ja/app-development",
+    path: "/ja/web-development",
     label: "🇯🇵 日本語",
   },
 ];
 
+/* ============================================================
+   FEATURES
+============================================================ */
+
 const features = [
-  "Android App Development",
-  "iOS App Development",
-  "Flutter App Development",
-  "Cross Platform Apps",
-  "Enterprise App Solutions",
-  "Custom Mobile Applications",
-  "App UI/UX Design",
+  "Custom Website Development",
+  "Business Website Development",
+  "E-Commerce Development",
+  "Web Application Development",
+  "CMS Development",
+  "Responsive Web Design",
+  "UI/UX Design",
   "Backend API Integration",
 ];
 
+/* ============================================================
+   SERVICES
+============================================================ */
+
 const services = [
   {
-    title: "Android App Development",
+    title: "Custom Website Development",
     description:
-      "Custom Android applications built for startups, businesses, and enterprises using modern technologies.",
+      "Professionally designed custom websites built around your business goals, brand identity, target audience, and specific requirements.",
   },
   {
-    title: "iOS App Development",
+    title: "Business Website Development",
     description:
-      "Premium iPhone and iPad applications optimized for performance, security, and user experience.",
+      "Modern and responsive business websites that help companies establish a strong online presence, generate leads, and build customer trust.",
   },
   {
-    title: "Flutter App Development",
+    title: "E-Commerce Website Development",
     description:
-      "Single codebase mobile applications for Android and iOS with faster development and lower costs.",
+      "Feature-rich online stores with product catalogs, shopping carts, secure payments, order management, and customer dashboards.",
   },
   {
-    title: "Enterprise Mobile Apps",
+    title: "Web Application Development",
     description:
-      "Professional React Native solutions with modern technology and scalable architecture.",
+      "Powerful and scalable web applications designed to automate business operations, manage data, and provide custom digital experiences.",
   },
   {
-    title: "App UI/UX Design",
+    title: "CMS Development",
     description:
-      "Modern interfaces and seamless user experiences that increase engagement and retention.",
+      "Flexible content management solutions that allow businesses to easily manage pages, products, blogs, media, and website content.",
   },
   {
-    title: "Maintenance & Support",
+    title: "Website Maintenance & Support",
     description:
-      "Ongoing updates, monitoring, bug fixing, and performance optimization.",
+      "Ongoing maintenance, security updates, bug fixes, performance optimization, backups, and technical support for your website.",
   },
 ];
 
-const appCategories = [
+/* ============================================================
+   WEB CATEGORIES
+============================================================ */
+
+const webCategories = [
   {
     id: 1,
-    title: "Android App Development",
-    image: "/images/app-categories/android.png",
+    title: "Business Website Development",
+    image: "/images/web-categories/business.png",
     description:
-      "Build powerful, scalable, and feature-rich Android applications for startups, SMEs, and enterprises. We develop high-performance Android apps.",
+      "Professional business websites designed to establish a strong digital presence, showcase services, generate leads, and build customer trust.",
     features: [
-      "Android Development",
-      "Material UI Design",
-      "Google API Integration",
-      "Firebase Integration",
-      "Play Store Deployment",
-      "Ongoing Support",
+      "Professional Design",
+      "Responsive Layout",
+      "Service Pages",
+      "Lead Generation",
+      "Contact Forms",
+      "SEO Friendly",
     ],
   },
   {
     id: 2,
-    title: "iOS App Development",
-    image: "/images/app-categories/ios.png",
+    title: "Corporate Website Development",
+    image: "/images/web-categories/corporate.png",
     description:
-      "Premium iPhone and iPad applications designed for speed, security, and exceptional user experiences. Our iOS apps are optimized for every Apple device.",
+      "Modern corporate websites for established companies, organizations, and enterprises with professional branding, scalable architecture, and powerful content management.",
     features: [
-      "Swift Development",
-      "Apple Guidelines",
-      "App Store Publishing",
-      "Secure Architecture",
-      "High Performance",
-      "Maintenance & Updates",
+      "Corporate Branding",
+      "Company Profiles",
+      "Service Management",
+      "Team Profiles",
+      "Investor Information",
+      "CMS Integration",
     ],
   },
   {
     id: 3,
-    title: "Flutter App Development",
-    image: "/images/app-categories/flutter.png",
+    title: "Portfolio Website Development",
+    image: "/images/web-categories/portfolio.png",
     description:
-      "Develop Android and iOS applications using a single Flutter codebase, reducing development cost while maintaining excellent performance.",
+      "Creative portfolio websites for individuals, designers, developers, photographers, agencies, and professionals to showcase their work online.",
     features: [
-      "Single Codebase",
-      "Cross Platform",
-      "Fast Development",
-      "Native Performance",
-      "Beautiful UI",
-      "API Integration",
+      "Project Showcase",
+      "Gallery",
+      "Responsive Design",
+      "Animations",
+      "Contact Form",
+      "Social Integration",
     ],
   },
   {
     id: 4,
-    title: "Dating App Development",
-    image: "/images/app-categories/dating.png",
+    title: "E-Commerce Website Development",
+    image: "/images/web-categories/ecommerce.png",
     description:
-      "Create modern dating applications with intelligent matching, location-based discovery, secure messaging, voice & video calling, and premium subscriptions.",
-    features: [
-      "Location Matching",
-      "Swipe System",
-      "Private Chat",
-      "Voice & Video Calls",
-      "Profile Verification",
-      "Premium Membership",
-    ],
-  },
-  {
-    id: 5,
-    title: "E-Commerce App Development",
-    image: "/images/app-categories/ecommerce.png",
-    description:
-      "Launch feature-rich online shopping applications with secure payment gateways, inventory management, customer analytics, and order tracking.",
+      "Complete online shopping platforms with product management, secure checkout, payment integration, order tracking, and customer accounts.",
     features: [
       "Product Catalog",
       "Shopping Cart",
       "Secure Payments",
-      "Wishlist",
       "Order Tracking",
+      "Customer Accounts",
       "Admin Dashboard",
     ],
   },
   {
-    id: 6,
-    title: "Shopping App Development",
-    image: "/images/app-categories/shopping.png",
+    id: 5,
+    title: "Online Store Development",
+    image: "/images/web-categories/online-store.png",
     description:
-      "Deliver engaging shopping experiences with personalized recommendations, loyalty programs, multiple payment options, and seamless checkout.",
+      "Modern online stores designed to provide seamless shopping experiences with product discovery, checkout, promotions, and order management.",
     features: [
       "Product Search",
-      "Discount Coupons",
-      "Payment Gateway",
-      "Reviews & Ratings",
-      "Push Notifications",
+      "Categories",
+      "Wishlist",
+      "Coupons",
+      "Payments",
       "Order History",
     ],
   },
   {
-    id: 7,
-    title: "Marketplace App Development",
-    image: "/images/app-categories/marketplace.png",
+    id: 6,
+    title: "Multi-Vendor Marketplace",
+    image: "/images/web-categories/marketplace.png",
     description:
-      "Develop multi-vendor marketplace applications connecting buyers and sellers with secure transactions, vendor dashboards, and commission management.",
+      "Scalable multi-vendor marketplaces connecting multiple sellers and customers with vendor dashboards, commissions, orders, and analytics.",
     features: [
       "Vendor Panel",
-      "Commission System",
-      "Buyer Dashboard",
       "Seller Dashboard",
-      "Analytics",
+      "Buyer Dashboard",
+      "Commission System",
       "Order Management",
+      "Analytics",
+    ],
+  },
+  {
+    id: 7,
+    title: "Real Estate Website",
+    image: "/images/web-categories/real-estate.png",
+    description:
+      "Property listing platforms for real estate companies, agents, builders, and property owners with advanced search and location-based discovery.",
+    features: [
+      "Property Listings",
+      "Advanced Search",
+      "Map Integration",
+      "Agent Profiles",
+      "Property Gallery",
+      "Inquiry Forms",
     ],
   },
   {
     id: 8,
-    title: "Food Delivery App Development",
-    image: "/images/app-categories/food.png",
+    title: "Hotel Booking Website",
+    image: "/images/web-categories/hotel.png",
     description:
-      "Build food delivery solutions for restaurants, cloud kitchens, and aggregators with real-time tracking, online payments, and customer engagement features.",
+      "Hotel and resort websites with room listings, availability management, booking systems, online payments, and guest services.",
     features: [
-      "Restaurant Listing",
-      "Live Tracking",
+      "Room Listings",
+      "Booking System",
+      "Availability",
       "Online Payments",
-      "Delivery Partner Panel",
-      "Offers & Coupons",
-      "Ratings & Reviews",
+      "Guest Management",
+      "Admin Panel",
     ],
   },
   {
     id: 9,
-    title: "Restaurant App Development",
-    image: "/images/app-categories/restaurant.png",
+    title: "Restaurant Website",
+    image: "/images/web-categories/restaurant.png",
     description:
-      "Digital restaurant applications for online ordering, reservations, menu management, loyalty programs, and customer relationship management.",
+      "Modern restaurant websites that showcase menus, locations, reservations, online ordering, promotions, and customer reviews.",
     features: [
       "Digital Menu",
-      "Table Reservation",
       "Online Ordering",
-      "Customer Loyalty",
-      "QR Ordering",
-      "Restaurant Dashboard",
+      "Reservations",
+      "Gallery",
+      "Reviews",
+      "Contact Integration",
     ],
   },
   {
     id: 10,
-    title: "Grocery Delivery App Development",
-    image: "/images/app-categories/grocery.png",
+    title: "Food Delivery Website",
+    image: "/images/web-categories/food-delivery.png",
     description:
-      "Smart grocery delivery applications with inventory management, instant ordering, scheduled deliveries, and secure payment solutions.",
+      "Food delivery platforms connecting customers, restaurants, and delivery partners with ordering, payments, tracking, and management features.",
     features: [
-      "Product Categories",
-      "Delivery Scheduling",
-      "Multiple Payments",
-      "Inventory Management",
-      "Real-Time Tracking",
-      "Customer Support",
+      "Restaurant Listings",
+      "Online Ordering",
+      "Live Tracking",
+      "Online Payments",
+      "Delivery Panel",
+      "Order Management",
     ],
   },
   {
     id: 11,
-    title: "Medical App Development",
-    image: "/images/app-categories/medical.png",
+    title: "Grocery Delivery Website",
+    image: "/images/web-categories/grocery.png",
     description:
-      "Develop secure medical applications that help healthcare providers deliver better patient care through digital health solutions, online consultations, prescriptions, and health monitoring.",
+      "Online grocery platforms with product catalogs, inventory management, shopping carts, scheduled delivery, and secure payments.",
     features: [
-      "Doctor Consultation",
-      "Electronic Prescriptions",
-      "Patient Records",
-      "Appointment Booking",
-      "Health Monitoring",
-      "HIPAA Ready",
+      "Product Categories",
+      "Shopping Cart",
+      "Inventory",
+      "Delivery Scheduling",
+      "Payments",
+      "Order Tracking",
     ],
   },
   {
     id: 12,
-    title: "Hospital Management App",
-    image: "/images/app-categories/hospital.png",
+    title: "Healthcare Website",
+    image: "/images/web-categories/healthcare.png",
     description:
-      "Comprehensive hospital management applications for clinics and healthcare organizations with appointment scheduling, billing, patient management, and medical record systems.",
+      "Secure healthcare websites for hospitals, clinics, doctors, and healthcare organizations with patient-focused digital services.",
     features: [
-      "Patient Management",
-      "Doctor Dashboard",
-      "Billing System",
-      "Appointment Scheduling",
-      "Laboratory Reports",
+      "Doctor Profiles",
+      "Appointments",
+      "Patient Information",
+      "Medical Services",
+      "Contact Forms",
       "Admin Panel",
     ],
   },
   {
     id: 13,
-    title: "Pharmacy App Development",
-    image: "/images/app-categories/pharmacy.png",
+    title: "Hospital Website",
+    image: "/images/web-categories/hospital.png",
     description:
-      "Online pharmacy applications that allow customers to order medicines, upload prescriptions, schedule deliveries, and receive medicine reminders.",
+      "Professional hospital websites with department information, doctor profiles, appointment booking, services, and patient resources.",
     features: [
-      "Medicine Catalog",
-      "Prescription Upload",
-      "Online Payments",
-      "Order Tracking",
-      "Medicine Reminder",
-      "Inventory Management",
-    ],
-  },
-  {
-    id: 14,
-    title: "Fitness & Health App",
-    image: "/images/app-categories/fitness.png",
-    description:
-      "Build engaging fitness applications with workout tracking, nutrition plans, wearable integration, progress analytics, and health monitoring.",
-    features: [
-      "Workout Plans",
-      "Diet Tracking",
-      "BMI Calculator",
-      "Step Counter",
-      "Progress Reports",
-      "Wearable Integration",
-    ],
-  },
-  {
-    id: 15,
-    title: "Educational App Development",
-    image: "/images/app-categories/education.png",
-    description:
-      "Interactive educational applications for schools, colleges, coaching institutes, and online learning platforms with engaging digital learning experiences.",
-    features: [
-      "Video Lessons",
-      "Live Classes",
-      "Quizzes",
-      "Assignments",
-      "Certificates",
-      "Student Dashboard",
-    ],
-  },
-  {
-    id: 16,
-    title: "Learning Management System",
-    image: "/images/app-categories/lms.png",
-    description:
-      "Powerful Learning Management Systems (LMS) that enable organizations to deliver online courses, assessments, certifications, and learner analytics.",
-    features: [
-      "Course Management",
-      "Student Tracking",
-      "Online Exams",
-      "Certificates",
-      "Progress Reports",
+      "Departments",
+      "Doctor Profiles",
+      "Appointments",
+      "Patient Resources",
+      "Emergency Information",
       "Admin Dashboard",
     ],
   },
   {
-    id: 17,
-    title: "School ERP App",
-    image: "/images/app-categories/school.png",
+    id: 14,
+    title: "Medical Website",
+    image: "/images/web-categories/medical.png",
     description:
-      "End-to-end school ERP solutions that automate admissions, attendance, fee management, examinations, communication, and academic reporting.",
+      "Modern medical websites for doctors, clinics, specialists, and healthcare providers with professional service presentation and appointment features.",
     features: [
-      "Attendance",
-      "Fee Management",
-      "Exam Module",
-      "Parent Portal",
-      "Teacher Dashboard",
-      "Student Reports",
+      "Doctor Profile",
+      "Medical Services",
+      "Appointment Booking",
+      "Patient Queries",
+      "Testimonials",
+      "Contact Forms",
+    ],
+  },
+  {
+    id: 15,
+    title: "Education Website",
+    image: "/images/web-categories/education.png",
+    description:
+      "Educational websites for schools, colleges, coaching institutes, and training organizations with courses, admissions, resources, and student services.",
+    features: [
+      "Course Information",
+      "Admissions",
+      "Student Resources",
+      "Faculty Profiles",
+      "Events",
+      "Online Forms",
+    ],
+  },
+  {
+    id: 16,
+    title: "College Website",
+    image: "/images/web-categories/college.png",
+    description:
+      "Complete college websites providing departments, courses, faculty information, admissions, notices, events, and academic resources.",
+    features: [
+      "Departments",
+      "Courses",
+      "Faculty",
+      "Admissions",
+      "Notices",
+      "Student Portal",
+    ],
+  },
+  {
+    id: 17,
+    title: "School Website",
+    image: "/images/web-categories/school.png",
+    description:
+      "Modern school websites with academic information, admissions, announcements, events, faculty profiles, and parent resources.",
+    features: [
+      "School Information",
+      "Admissions",
+      "Faculty",
+      "Events",
+      "Announcements",
+      "Parent Resources",
     ],
   },
   {
     id: 18,
-    title: "Travel App Development",
-    image: "/images/app-categories/travel.png",
+    title: "Learning Management System",
+    image: "/images/web-categories/lms.png",
     description:
-      "Travel applications for booking flights, hotels, tour packages, itineraries, and travel experiences with GPS navigation and digital payments.",
+      "Powerful LMS platforms that allow organizations to manage courses, learning content, assessments, students, and progress tracking.",
     features: [
-      "Flight Booking",
-      "Hotel Booking",
-      "Trip Planner",
-      "Maps Integration",
-      "Reviews",
-      "Secure Payments",
+      "Course Management",
+      "Student Management",
+      "Online Exams",
+      "Quizzes",
+      "Progress Tracking",
+      "Admin Dashboard",
     ],
   },
   {
     id: 19,
-    title: "Hotel & Resort App",
-    image: "/images/app-categories/hotel.png",
+    title: "Job Portal Website",
+    image: "/images/web-categories/job-portal.png",
     description:
-      "Modern hotel and resort booking applications with room reservations, digital check-in, guest services, online payments, and loyalty programs.",
+      "Recruitment platforms connecting employers and job seekers with job listings, applications, resumes, employer dashboards, and notifications.",
     features: [
-      "Room Booking",
-      "Availability Calendar",
-      "Guest Check-In",
-      "Online Payments",
-      "Reviews",
-      "Loyalty Program",
+      "Job Listings",
+      "Resume Upload",
+      "Job Search",
+      "Employer Dashboard",
+      "Application Tracking",
+      "Job Alerts",
     ],
   },
   {
     id: 20,
-    title: "Taxi Booking App",
-    image: "/images/app-categories/taxi.png",
+    title: "Recruitment Website",
+    image: "/images/web-categories/recruitment.png",
     description:
-      "Build taxi and ride-hailing applications with live GPS tracking, fare estimation, driver management, secure payments, and ride history.",
+      "Custom recruitment platforms designed to streamline candidate management, job postings, interviews, applications, and hiring workflows.",
     features: [
-      "Driver Panel",
-      "Passenger App",
-      "GPS Tracking",
-      "Fare Estimation",
-      "Ride History",
-      "SOS Support",
+      "Candidate Management",
+      "Job Posting",
+      "Resume Management",
+      "Interview Scheduling",
+      "Recruiter Dashboard",
+      "Reports",
     ],
   },
   {
     id: 21,
-    title: "Social Networking App",
-    image: "/images/app-categories/social.png",
+    title: "News & Magazine Website",
+    image: "/images/web-categories/news.png",
     description:
-      "Build engaging social networking applications that connect people through posts, stories, messaging, communities, and real-time interactions.",
+      "Fast and content-rich news and magazine websites with categories, articles, search, authors, media galleries, and publishing tools.",
     features: [
-      "User Profiles",
-      "News Feed",
-      "Stories",
-      "Private Messaging",
-      "Communities",
-      "Push Notifications",
+      "News Categories",
+      "Article Management",
+      "Author Profiles",
+      "Search",
+      "Media Gallery",
+      "CMS",
     ],
   },
   {
     id: 22,
-    title: "Community App Development",
-    image: "/images/app-categories/community.png",
+    title: "Blog Website Development",
+    image: "/images/web-categories/blog.png",
     description:
-      "Build online community applications where users can connect, discuss topics, organize events, and share knowledge securely.",
+      "SEO-friendly blog platforms designed for businesses, publishers, creators, and individuals to publish and manage content effectively.",
     features: [
-      "Discussion Forums",
-      "Groups",
-      "Events",
-      "Live Chat",
-      "Member Profiles",
-      "Notifications",
+      "Blog Management",
+      "Categories",
+      "Tags",
+      "Comments",
+      "SEO Optimization",
+      "Search",
     ],
   },
   {
     id: 23,
-    title: "Video Streaming App",
-    image: "/images/app-categories/video-streaming.png",
+    title: "Membership Website",
+    image: "/images/web-categories/membership.png",
     description:
-      "Launch OTT and video streaming platforms with HD streaming, subscriptions, recommendations, watchlists, and multi-device support.",
+      "Membership platforms with user registration, subscription plans, restricted content, profiles, payments, and member management.",
     features: [
-      "HD Streaming",
-      "Watchlist",
-      "Subscription Plans",
-      "Recommendations",
-      "Offline Viewing",
-      "Multi-Device Access",
+      "User Registration",
+      "Membership Plans",
+      "Restricted Content",
+      "Subscriptions",
+      "Member Dashboard",
+      "Payments",
     ],
   },
   {
     id: 24,
-    title: "Music Streaming App",
-    image: "/images/app-categories/music.png",
+    title: "Community Website",
+    image: "/images/web-categories/community.png",
     description:
-      "Develop music streaming applications featuring playlists, podcasts, offline downloads, recommendations, and premium memberships.",
+      "Interactive community platforms where users can create profiles, participate in discussions, join groups, share content, and communicate.",
     features: [
-      "Music Library",
-      "Playlists",
-      "Offline Mode",
-      "Podcasts",
-      "Favorites",
-      "Premium Plans",
+      "User Profiles",
+      "Discussion Forums",
+      "Groups",
+      "Messaging",
+      "Notifications",
+      "Moderation",
     ],
   },
   {
     id: 25,
-    title: "News & Magazine App",
-    image: "/images/app-categories/news.png",
+    title: "Social Networking Website",
+    image: "/images/web-categories/social.png",
     description:
-      "Create digital news and magazine applications with live updates, personalized feeds, offline reading, bookmarks, and push notifications.",
+      "Social networking platforms with user profiles, posts, feeds, messaging, communities, notifications, and real-time interactions.",
     features: [
-      "Breaking News",
-      "Categories",
-      "Offline Reading",
-      "Bookmarks",
-      "Search",
-      "Push Alerts",
+      "User Profiles",
+      "News Feed",
+      "Posts",
+      "Private Messaging",
+      "Communities",
+      "Notifications",
     ],
   },
   {
     id: 26,
-    title: "Sports App Development",
-    image: "/images/app-categories/sports.png",
+    title: "Forum Website Development",
+    image: "/images/web-categories/forum.png",
     description:
-      "Develop sports applications with live scores, match schedules, player statistics, fantasy leagues, and fan engagement features.",
+      "Discussion and knowledge-sharing platforms with topics, threads, user profiles, moderation, search, and community engagement.",
     features: [
-      "Live Scores",
-      "Fixtures",
-      "Player Statistics",
-      "Fantasy Sports",
-      "Highlights",
+      "Discussion Threads",
+      "Categories",
+      "User Profiles",
+      "Moderation",
+      "Search",
       "Notifications",
     ],
   },
   {
     id: 27,
-    title: "Event & Conference App",
-    image: "/images/app-categories/event.png",
+    title: "Event Management Website",
+    image: "/images/web-categories/event.png",
     description:
-      "Develop event and conference management applications with registrations, ticketing, live schedules, networking, and attendee engagement.",
+      "Event management websites for conferences, workshops, exhibitions, and public events with registrations, tickets, schedules, and attendee management.",
     features: [
       "Event Registration",
       "Ticket Booking",
-      "Agenda Management",
+      "Event Schedules",
       "Speaker Profiles",
-      "Networking",
-      "Live Notifications",
+      "Attendee Management",
+      "Notifications",
     ],
   },
   {
     id: 28,
-    title: "Job Portal App Development",
-    image: "/images/app-categories/job.png",
+    title: "Booking & Reservation Website",
+    image: "/images/web-categories/booking.png",
     description:
-      "Develop modern recruitment platforms connecting employers and job seekers with AI-powered matching, resume management, and interview scheduling.",
+      "Online booking platforms for hotels, services, appointments, events, travel, and other businesses with real-time availability.",
     features: [
-      "Job Listings",
-      "Resume Upload",
-      "Employer Dashboard",
-      "Interview Scheduling",
-      "Job Alerts",
-      "Application Tracking",
+      "Online Booking",
+      "Availability",
+      "Calendar",
+      "Payments",
+      "Notifications",
+      "Customer Dashboard",
     ],
   },
   {
     id: 29,
-    title: "Real Estate App Development",
-    image: "/images/app-categories/real-estate.png",
+    title: "Appointment Booking Website",
+    image: "/images/web-categories/appointment.png",
     description:
-      "Property listing applications with advanced search, virtual tours, agent management, mortgage calculators, and appointment booking.",
+      "Appointment scheduling websites for doctors, consultants, salons, professionals, and service businesses with calendar-based booking.",
     features: [
-      "Property Listings",
-      "Virtual Tours",
-      "Map Search",
-      "Agent Dashboard",
-      "Mortgage Calculator",
-      "Appointments",
+      "Appointment Booking",
+      "Calendar",
+      "Availability",
+      "Reminders",
+      "Online Payments",
+      "Rescheduling",
     ],
   },
   {
     id: 30,
-    title: "CRM Application",
-    image: "/images/app-categories/crm.png",
+    title: "Service Business Website",
+    image: "/images/web-categories/services.png",
     description:
-      "Customer Relationship Management applications to streamline sales, customer interactions, lead tracking, and business growth.",
+      "Lead-generating websites for service businesses such as agencies, consultants, repair companies, contractors, and professional service providers.",
     features: [
-      "Lead Management",
-      "Sales Pipeline",
-      "Customer Database",
-      "Analytics",
-      "Task Management",
-      "Reports",
+      "Service Pages",
+      "Lead Forms",
+      "Booking",
+      "Testimonials",
+      "Gallery",
+      "Contact Integration",
     ],
   },
   {
     id: 31,
-    title: "ERP Application",
-    image: "/images/app-categories/erp.png",
+    title: "Directory Website",
+    image: "/images/web-categories/directory.png",
     description:
-      "Enterprise Resource Planning applications integrating finance, HR, inventory, operations, and reporting into one platform.",
+      "Business and service directory websites that organize listings with categories, search, filtering, maps, reviews, and user submissions.",
+    features: [
+      "Business Listings",
+      "Categories",
+      "Advanced Search",
+      "Maps",
+      "Reviews",
+      "User Submissions",
+    ],
+  },
+  {
+    id: 32,
+    title: "Classifieds Website",
+    image: "/images/web-categories/classifieds.png",
+    description:
+      "Online classified platforms where users can publish, search, manage, and respond to advertisements across multiple categories.",
+    features: [
+      "Ad Listings",
+      "Categories",
+      "Search & Filters",
+      "User Accounts",
+      "Messaging",
+      "Featured Ads",
+    ],
+  },
+  {
+    id: 33,
+    title: "CRM Web Application",
+    image: "/images/web-categories/crm.png",
+    description:
+      "Custom CRM web applications that help businesses manage leads, customers, sales pipelines, tasks, communication, and reports.",
+    features: [
+      "Lead Management",
+      "Customer Database",
+      "Sales Pipeline",
+      "Task Management",
+      "Analytics",
+      "Reports",
+    ],
+  },
+  {
+    id: 34,
+    title: "ERP Web Application",
+    image: "/images/web-categories/erp.png",
+    description:
+      "Enterprise web applications integrating business operations such as finance, HR, inventory, sales, purchasing, and reporting.",
     features: [
       "HR Management",
       "Inventory",
       "Finance",
-      "Payroll",
+      "Purchasing",
       "Reports",
       "Dashboard",
     ],
   },
   {
-    id: 32,
-    title: "Cloud Based Application",
-    image: "/images/app-categories/cloud.png",
+    id: 35,
+    title: "HRMS Web Application",
+    image: "/images/web-categories/hrms.png",
     description:
-      "Cloud-native applications with secure data storage, real-time synchronization, scalability, and high availability.",
+      "Human Resource Management Systems for employee records, attendance, leave, payroll, recruitment, and workforce management.",
+    features: [
+      "Employee Management",
+      "Attendance",
+      "Leave Management",
+      "Payroll",
+      "Recruitment",
+      "Reports",
+    ],
+  },
+  {
+    id: 36,
+    title: "Inventory Management System",
+    image: "/images/web-categories/inventory.png",
+    description:
+      "Web-based inventory management systems that simplify stock control, purchasing, suppliers, warehouses, and inventory reporting.",
+    features: [
+      "Stock Management",
+      "Purchase Orders",
+      "Supplier Management",
+      "Warehouse",
+      "Low Stock Alerts",
+      "Reports",
+    ],
+  },
+  {
+    id: 37,
+    title: "Hospital Management System",
+    image: "/images/web-categories/hospital-management.png",
+    description:
+      "Complete hospital management platforms for managing patients, doctors, appointments, billing, departments, staff, and reports.",
+    features: [
+      "Patient Management",
+      "Doctor Management",
+      "Appointments",
+      "Billing",
+      "Staff Management",
+      "Reports",
+    ],
+  },
+  {
+    id: 38,
+    title: "School Management System",
+    image: "/images/web-categories/school-management.png",
+    description:
+      "Web-based school management systems that automate student records, attendance, fees, examinations, communication, and academic operations.",
+    features: [
+      "Student Management",
+      "Attendance",
+      "Fee Management",
+      "Examinations",
+      "Teacher Dashboard",
+      "Reports",
+    ],
+  },
+  {
+    id: 39,
+    title: "College Management System",
+    image: "/images/web-categories/college-management.png",
+    description:
+      "Complete college management platforms for students, faculty, departments, attendance, examinations, fees, and academic administration.",
+    features: [
+      "Student Management",
+      "Faculty Management",
+      "Departments",
+      "Attendance",
+      "Examinations",
+      "Reports",
+    ],
+  },
+  {
+    id: 40,
+    title: "Billing & POS System",
+    image: "/images/web-categories/pos.png",
+    description:
+      "Point-of-sale and billing web applications for retail stores, restaurants, businesses, and service providers with inventory integration.",
+    features: [
+      "Billing",
+      "Product Management",
+      "Inventory",
+      "Invoices",
+      "Sales Reports",
+      "Customer Management",
+    ],
+  },
+  {
+    id: 41,
+    title: "Accounting Web Application",
+    image: "/images/web-categories/accounting.png",
+    description:
+      "Accounting platforms for managing invoices, expenses, payments, customers, financial records, and business reports.",
+    features: [
+      "Invoices",
+      "Expenses",
+      "Payments",
+      "Customers",
+      "Financial Reports",
+      "Dashboard",
+    ],
+  },
+  {
+    id: 42,
+    title: "Project Management System",
+    image: "/images/web-categories/project-management.png",
+    description:
+      "Project management web applications for planning projects, assigning tasks, tracking progress, managing teams, and generating reports.",
+    features: [
+      "Project Management",
+      "Task Management",
+      "Team Management",
+      "Deadlines",
+      "Progress Tracking",
+      "Reports",
+    ],
+  },
+  {
+    id: 43,
+    title: "Customer Portal",
+    image: "/images/web-categories/customer-portal.png",
+    description:
+      "Secure customer portals that provide users with access to orders, invoices, documents, support requests, and account information.",
+    features: [
+      "Customer Login",
+      "Orders",
+      "Invoices",
+      "Documents",
+      "Support Tickets",
+      "Profile Management",
+    ],
+  },
+  {
+    id: 44,
+    title: "Employee Portal",
+    image: "/images/web-categories/employee-portal.png",
+    description:
+      "Secure employee portals for accessing company resources, attendance, leave requests, tasks, documents, and internal information.",
+    features: [
+      "Employee Login",
+      "Attendance",
+      "Leave Requests",
+      "Tasks",
+      "Documents",
+      "Notifications",
+    ],
+  },
+  {
+    id: 45,
+    title: "Admin Dashboard Development",
+    image: "/images/web-categories/admin-dashboard.png",
+    description:
+      "Powerful administrative dashboards that provide centralized control over users, content, transactions, analytics, and business operations.",
+    features: [
+      "User Management",
+      "Analytics",
+      "Reports",
+      "Role Management",
+      "Data Management",
+      "System Settings",
+    ],
+  },
+  {
+    id: 46,
+    title: "SaaS Web Application",
+    image: "/images/web-categories/saas.png",
+    description:
+      "Scalable Software-as-a-Service platforms with subscription management, user accounts, dashboards, billing, and cloud-based architecture.",
+    features: [
+      "Multi-Tenant",
+      "Subscriptions",
+      "User Dashboard",
+      "Payments",
+      "Analytics",
+      "Cloud Deployment",
+    ],
+  },
+  {
+    id: 47,
+    title: "AI-Powered Web Application",
+    image: "/images/web-categories/ai.png",
+    description:
+      "Intelligent web applications using AI for automation, content generation, search, recommendations, document processing, and business workflows.",
+    features: [
+      "Artificial Intelligence",
+      "AI Automation",
+      "Smart Search",
+      "Recommendations",
+      "Document Processing",
+      "AI Assistant",
+    ],
+  },
+  {
+    id: 48,
+    title: "AI Chatbot Website",
+    image: "/images/web-categories/chatbot.png",
+    description:
+      "AI-powered chatbot solutions that provide automated customer support, answer questions, generate leads, and assist website visitors.",
+    features: [
+      "AI Chatbot",
+      "24/7 Support",
+      "Lead Generation",
+      "Knowledge Base",
+      "Live Chat",
+      "Analytics",
+    ],
+  },
+  {
+    id: 49,
+    title: "Cloud-Based Web Application",
+    image: "/images/web-categories/cloud.png",
+    description:
+      "Cloud-ready web applications designed for scalability, secure data storage, real-time synchronization, availability, and remote access.",
     features: [
       "Cloud Storage",
       "Real-Time Sync",
@@ -575,409 +842,115 @@ const appCategories = [
     ],
   },
   {
-    id: 33,
-    title: "GPS & Geo-Fencing App",
-    image: "/images/app-categories/gps.png",
-    description:
-      "Location-aware applications using GPS tracking, geo-fencing, live navigation, and location analytics for businesses.",
-    features: [
-      "Live GPS",
-      "Geo-Fencing",
-      "Route Tracking",
-      "Maps",
-      "Location History",
-      "Alerts",
-    ],
-  },
-  {
-    id: 34,
-    title: "Directory App Development",
-    image: "/images/app-categories/directory.png",
-    description:
-      "Business directory applications that organize companies, services, and contact information with search and filtering.",
-    features: [
-      "Business Listings",
-      "Search",
-      "Categories",
-      "Reviews",
-      "Maps",
-      "Favorites",
-    ],
-  },
-  {
-    id: 35,
-    title: "Utility App Development",
-    image: "/images/app-categories/utility.png",
-    description:
-      "Utility applications that simplify everyday tasks, productivity, file management, conversions, and device optimization.",
-    features: [
-      "Tools",
-      "File Management",
-      "Offline Support",
-      "Quick Access",
-      "Productivity",
-      "Cloud Backup",
-    ],
-  },
-  {
-    id: 36,
-    title: "Lifestyle App Development",
-    image: "/images/app-categories/lifestyle.png",
-    description:
-      "Lifestyle applications covering fashion, beauty, food, travel, wellness, shopping, and personalized recommendations.",
-    features: [
-      "Recommendations",
-      "Wishlist",
-      "Notifications",
-      "Bookings",
-      "Rewards",
-      "Social Sharing",
-    ],
-  },
-  {
-    id: 37,
-    title: "On-Demand Service App",
-    image: "/images/app-categories/on-demand.png",
-    description:
-      "Develop on-demand applications for home services, beauty, repairs, healthcare, and other instant booking businesses.",
-    features: [
-      "Instant Booking",
-      "Provider Panel",
-      "Live Tracking",
-      "Ratings",
-      "Payments",
-      "Notifications",
-    ],
-  },
-  {
-    id: 38,
-    title: "Enterprise Mobile App",
-    image: "/images/app-categories/enterprise.png",
-    description:
-      "Enterprise-grade mobile applications designed for large organizations with secure workflows, integrations, and role-based access.",
-    features: [
-      "Role Management",
-      "SSO Login",
-      "Workflow Automation",
-      "Reporting",
-      "Security",
-      "API Integration",
-    ],
-  },
-  {
-    id: 39,
-    title: "Push Notification Solutions",
-    image: "/images/app-categories/push.png",
-    description:
-      "Increase user engagement with intelligent push notification systems featuring segmentation, automation, and analytics.",
-    features: [
-      "Instant Alerts",
-      "Segmentation",
-      "Automation",
-      "Scheduling",
-      "Analytics",
-      "A/B Testing",
-    ],
-  },
-  {
-    id: 40,
-    title: "Feedback & Survey App",
-    image: "/images/app-categories/feedback.png",
-    description:
-      "Collect valuable customer insights using survey and feedback applications with analytics, forms, and reporting dashboards.",
-    features: [
-      "Custom Forms",
-      "Survey Builder",
-      "Analytics",
-      "Reports",
-      "Ratings",
-      "Export Data",
-    ],
-  },
-  {
-    id: 41,
-    title: "Startup MVP Development",
-    image: "/images/app-categories/startup.png",
-    description:
-      "Transform innovative ideas into Minimum Viable Products (MVPs) with rapid development, scalable architecture, and market-ready solutions.",
-    features: [
-      "Rapid Development",
-      "Scalable Design",
-      "Cloud Ready",
-      "Investor Ready",
-      "Analytics",
-      "Future Expansion",
-    ],
-  },
-  {
-    id: 42,
-    title: "AI Powered Application",
-    image: "/images/app-categories/ai.png",
-    description:
-      "Develop intelligent AI-powered mobile applications using machine learning, natural language processing, computer vision, and predictive analytics to automate business processes and enhance user experiences.",
-    features: [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Predictive Analytics",
-      "Smart Recommendations",
-      "Automation",
-      "AI Assistant",
-    ],
-  },
-  {
-    id: 43,
-    title: "Chatbot Application",
-    image: "/images/app-categories/chatbot.png",
-    description:
-      "Build AI chatbot applications that provide instant customer support, automate conversations, generate leads, and improve customer engagement.",
-    features: [
-      "AI Chatbot",
-      "24/7 Support",
-      "Lead Generation",
-      "Live Chat",
-      "Knowledge Base",
-      "Analytics",
-    ],
-  },
-  {
-    id: 44,
-    title: "Logistics & Fleet App",
-    image: "/images/app-categories/logistics.png",
-    description:
-      "Develop logistics applications for fleet management, shipment tracking, warehouse operations, and route optimization.",
-    features: [
-      "Fleet Tracking",
-      "GPS Monitoring",
-      "Warehouse Management",
-      "Route Optimization",
-      "Driver App",
-      "Reports",
-    ],
-  },
-  {
-    id: 45,
-    title: "Inventory Management App",
-    image: "/images/app-categories/inventory.png",
-    description:
-      "Inventory management applications that simplify stock control, barcode scanning, warehouse operations, supplier management, and reporting.",
-    features: [
-      "Stock Management",
-      "Barcode Scanner",
-      "Purchase Orders",
-      "Supplier Management",
-      "Reports",
-      "Low Stock Alerts",
-    ],
-  },
-  {
-    id: 46,
-    title: "Courier Delivery App",
-    image: "/images/app-categories/courier.png",
-    description:
-      "Courier management applications with parcel booking, shipment tracking, delivery scheduling, proof of delivery, and customer notifications.",
-    features: [
-      "Parcel Booking",
-      "Shipment Tracking",
-      "Delivery Partner App",
-      "Notifications",
-      "Digital Signature",
-      "Reports",
-    ],
-  },
-  {
-    id: 47,
-    title: "Salon & Spa App",
-    image: "/images/app-categories/salon.png",
-    description:
-      "Appointment booking applications for salons, spas, and wellness centers with staff scheduling, online payments, and loyalty programs.",
-    features: [
-      "Appointment Booking",
-      "Staff Scheduling",
-      "Online Payments",
-      "Offers",
-      "Customer History",
-      "Notifications",
-    ],
-  },
-  {
-    id: 48,
-    title: "Appointment Booking App",
-    image: "/images/app-categories/appointment.png",
-    description:
-      "Develop appointment scheduling applications for doctors, consultants, service providers, and businesses with calendar integration.",
-    features: [
-      "Calendar",
-      "Booking",
-      "Reminders",
-      "Payments",
-      "Availability",
-      "Rescheduling",
-    ],
-  },
-  {
-    id: 49,
-    title: "Agriculture App",
-    image: "/images/app-categories/agriculture.png",
-    description:
-      "Agriculture applications that assist farmers with crop management, weather forecasts, market prices, irrigation monitoring, and farm analytics.",
-    features: [
-      "Weather Updates",
-      "Crop Monitoring",
-      "Market Prices",
-      "Farm Reports",
-      "Irrigation",
-      "Analytics",
-    ],
-  },
-  {
     id: 50,
-    title: "Manufacturing App",
-    image: "/images/app-categories/manufacturing.png",
+    title: "Custom Web Application",
+    image: "/images/web-categories/custom-web.png",
     description:
-      "Manufacturing applications for production planning, quality control, workforce management, maintenance scheduling, and operational efficiency.",
-    features: [
-      "Production Planning",
-      "Quality Control",
-      "Maintenance",
-      "Reports",
-      "Inventory",
-      "Dashboards",
-    ],
-  },
-  {
-    id: 51,
-    title: "Booking & Reservation App",
-    image: "/images/app-categories/booking.png",
-    description:
-      "Booking applications for hotels, travel, events, healthcare, sports, and service providers with real-time availability and online payments.",
-    features: [
-      "Online Booking",
-      "Availability",
-      "Payments",
-      "Notifications",
-      "Calendar",
-      "Customer Dashboard",
-    ],
-  },
-  {
-    id: 52,
-    title: "Business Automation App",
-    image: "/images/app-categories/business.png",
-    description:
-      "Business automation applications that streamline workflows, approvals, document management, communication, and reporting.",
-    features: [
-      "Workflow Automation",
-      "Document Management",
-      "Approvals",
-      "Reports",
-      "Notifications",
-      "Dashboards",
-    ],
-  },
-  {
-    id: 53,
-    title: "Custom Mobile Application",
-    image: "/images/app-categories/custom-mobile.png",
-    description:
-      "Need something unique? We design and develop fully customized mobile applications based on your business goals, target audience, and industry requirements.",
+      "Fully customized web applications developed around your unique business processes, requirements, workflows, users, and future growth plans.",
     features: [
       "100% Custom",
       "UI/UX Design",
+      "Frontend Development",
       "Backend Development",
-      "Cloud Integration",
+      "API Integration",
       "Deployment",
-      "Maintenance",
     ],
   },
 ];
+
+/* ============================================================
+   INDUSTRIES
+============================================================ */
 
 const industries = [
   {
     title: "Healthcare",
     icon: "🏥",
     description:
-      "Hospital management, telemedicine, pharmacy, patient management and healthcare solutions.",
+      "Hospital websites, healthcare portals, appointment systems, patient platforms, medical websites, and healthcare management solutions.",
   },
   {
     title: "Education",
     icon: "🎓",
     description:
-      "School ERP, LMS, online learning, student management and examination systems.",
+      "School websites, college portals, LMS platforms, online learning systems, student management, and educational platforms.",
   },
   {
     title: "Retail & E-Commerce",
     icon: "🛒",
     description:
-      "Online stores, marketplaces, POS systems, inventory and payment solutions.",
+      "Online stores, marketplaces, product catalogs, inventory systems, payment solutions, and e-commerce platforms.",
   },
   {
     title: "Finance",
     icon: "💳",
     description:
-      "Digital wallets, banking apps, payment gateways and fintech applications.",
+      "Financial dashboards, payment platforms, accounting systems, billing applications, fintech portals, and business management solutions.",
   },
   {
     title: "Hospitality",
     icon: "🏨",
     description:
-      "Hotel booking, resort management, restaurant ordering and travel platforms.",
+      "Hotel websites, booking systems, restaurant websites, reservation platforms, travel portals, and hospitality management solutions.",
   },
   {
     title: "Transportation",
     icon: "🚖",
     description:
-      "Taxi booking, logistics, courier tracking and fleet management solutions.",
+      "Transportation websites, fleet management, logistics platforms, courier systems, booking platforms, and tracking solutions.",
   },
   {
     title: "Real Estate",
     icon: "🏠",
     description:
-      "Property listings, broker management and real estate CRM solutions.",
+      "Property listing websites, real estate portals, agent platforms, property management systems, and real estate CRM solutions.",
   },
   {
     title: "Manufacturing",
     icon: "🏭",
     description:
-      "Production planning, inventory management and workflow automation.",
+      "Production management, inventory systems, supply chain platforms, employee management, reporting, and workflow automation.",
   },
   {
     title: "Entertainment",
     icon: "🎬",
     description:
-      "Music streaming, OTT platforms, gaming and social networking applications.",
+      "Streaming platforms, media websites, content portals, community platforms, entertainment websites, and digital experiences.",
   },
   {
     title: "Startups",
     icon: "🚀",
     description:
-      "Rapid MVP development, scalable architecture and investor-ready applications.",
+      "Startup websites, MVP development, SaaS products, custom web applications, landing pages, and scalable digital platforms.",
   },
   {
     title: "Agriculture",
     icon: "🌾",
     description:
-      "Crop management, farm monitoring, weather updates and smart agriculture.",
+      "Agriculture portals, farm management systems, market platforms, crop management, weather information, and agricultural solutions.",
   },
   {
     title: "Enterprise",
     icon: "🏢",
     description:
-      "Custom ERP, CRM, HRMS, workflow automation and business intelligence solutions.",
+      "Custom ERP, CRM, HRMS, employee portals, workflow automation, analytics dashboards, and enterprise web applications.",
   },
 ];
 
+/* ============================================================
+   TECHNOLOGIES
+============================================================ */
+
 const technologies = [
-  {
-    category: "Mobile",
-    items: ["Flutter", "Android", "Java", "Kotlin", "iOS", "Swift"],
-  },
   {
     category: "Frontend",
     items: [
-      "React",
-      "Vite",
       "HTML5",
       "CSS3",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Vite",
       "Tailwind CSS",
       "Bootstrap 5",
     ],
@@ -987,6 +960,8 @@ const technologies = [
     items: [
       "Node.js",
       "Express.js",
+      "PHP",
+      "Laravel",
       "REST API",
       "JWT Authentication",
       "Socket.IO",
@@ -995,7 +970,13 @@ const technologies = [
   },
   {
     category: "Database",
-    items: ["MongoDB", "MySQL", "SQLite", "Firebase"],
+    items: [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "Firebase",
+    ],
   },
   {
     category: "Server",
@@ -1003,6 +984,7 @@ const technologies = [
       "Ubuntu Server",
       "VPS Hosting",
       "Nginx",
+      "Apache",
       "PM2",
       "SSL",
       "Linux",
@@ -1023,9 +1005,10 @@ const technologies = [
     category: "Integrations",
     items: [
       "Google Maps",
-      "Firebase FCM",
+      "Firebase",
       "PayPal",
       "Razorpay",
+      "Stripe",
       "WhatsApp",
       "YouTube API",
     ],
@@ -1054,92 +1037,108 @@ const technologies = [
   },
 ];
 
+/* ============================================================
+   WHY CHOOSE US
+============================================================ */
+
 const whyChooseUs = [
   {
-    title: "Custom Mobile Solutions",
-    icon: "📱",
+    title: "Custom Web Solutions",
+    icon: "🌐",
     description:
-      "Every application is designed specifically for your business objectives, target audience, and operational requirements.",
+      "Every website and web application is designed specifically around your business objectives, target audience, workflows, and industry requirements.",
   },
   {
     title: "Scalable Architecture",
     icon: "🚀",
     description:
-      "Applications are built with future growth in mind, allowing your platform to scale as your business expands.",
+      "Our websites and web applications are developed with future growth in mind, allowing your platform to scale as your business expands.",
   },
   {
     title: "Modern UI/UX",
     icon: "🎨",
     description:
-      "Beautiful, intuitive, and responsive user interfaces that improve engagement and user satisfaction.",
+      "Beautiful, intuitive, responsive, and conversion-focused interfaces that provide an excellent experience across desktop, tablet, and mobile devices.",
   },
   {
     title: "High Performance",
     icon: "⚡",
     description:
-      "Optimized code and efficient architecture ensure smooth performance across all supported devices.",
+      "Optimized code, efficient architecture, fast-loading pages, and performance-focused development help deliver a smooth web experience.",
   },
   {
     title: "Secure Development",
     icon: "🔒",
     description:
-      "Industry-standard security practices including authentication, encryption, and secure API integration.",
+      "Industry-standard security practices including authentication, authorization, encryption, secure APIs, validation, and protected user data.",
   },
   {
     title: "API Integration",
     icon: "🔗",
     description:
-      "Seamless integration with payment gateways, maps, messaging services, CRMs, ERPs, and third-party platforms.",
+      "Seamless integration with payment gateways, maps, messaging services, CRMs, ERPs, analytics platforms, and third-party APIs.",
   },
   {
     title: "Self Hosted Deployment",
     icon: "🖥️",
     description:
-      "Applications can be deployed on your own VPS or dedicated server, giving you complete ownership and control.",
+      "Websites and applications can be deployed on your own VPS or dedicated server, giving you complete ownership and control.",
   },
   {
     title: "Long-Term Support",
     icon: "🛠️",
     description:
-      "Continuous maintenance, monitoring, feature enhancements, security updates, and technical assistance.",
+      "Continuous maintenance, monitoring, feature enhancements, security updates, backups, performance optimization, and technical assistance.",
   },
 ];
 
-const AppDevelopment = () => {
+/* ============================================================
+   COMPONENT
+============================================================ */
+
+const WebDevelopment = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
 
   const language = supportedLanguages.includes(lang) ? lang : "en";
   const t = translations[language];
 
-  const appT = t.appDevelopment || {};
+  const webT = t.webDevelopment || {};
 
   const currentLanguage =
     languages.find((item) => item.code === language) || languages[0];
 
+  /* ============================================================
+     TRANSLATION HELPERS
+  ============================================================ */
+
   const getCategoryTranslation = (id) => {
-    const translated = appT.appCategories?.find(
+    const translated = webT.webCategories?.find(
       (item) => item.id === id
     );
 
-    return translated || appCategories.find((item) => item.id === id);
+    return translated || webCategories.find((item) => item.id === id);
   };
 
   const getServiceTranslation = (index) => {
-    return appT.services?.[index] || services[index];
+    return webT.services?.[index] || services[index];
   };
 
   const getIndustryTranslation = (index) => {
-    return appT.industries?.[index] || industries[index];
+    return webT.industries?.[index] || industries[index];
   };
 
   const getTechnologyTranslation = (index) => {
-    return appT.technologies?.[index] || technologies[index];
+    return webT.technologies?.[index] || technologies[index];
   };
 
   const getWhyChooseTranslation = (index) => {
-    return appT.whyChooseUs?.[index] || whyChooseUs[index];
+    return webT.whyChooseUs?.[index] || whyChooseUs[index];
   };
+
+  /* ============================================================
+     LANGUAGE CHANGE
+  ============================================================ */
 
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
@@ -1150,6 +1149,7 @@ const AppDevelopment = () => {
 
     if (selected) {
       navigate(selected.path);
+
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -1159,27 +1159,31 @@ const AppDevelopment = () => {
 
   return (
     <>
+      {/* =====================================================
+          SEO
+      ===================================================== */}
+
       <Helmet>
         <html lang={language} />
 
         <title>
-          {appT.metaTitle ||
-            "Mobile App Development Company | Android, iOS & Flutter Apps | CH TECH GIANT"}
+          {webT.metaTitle ||
+            "Web Development Company | Website & Web Application Development | CH TECH GIANT"}
         </title>
 
         <meta
           name="description"
           content={
-            appT.metaDescription ||
-            "CH TECH GIANT provides Android app development, iOS app development, Flutter app development, enterprise mobile applications, UI/UX design, and custom software solutions."
+            webT.metaDescription ||
+            "CH TECH GIANT provides custom website development, business website development, e-commerce development, web application development, CMS development, responsive web design, UI/UX design, API integration, and custom software solutions."
           }
         />
 
         <meta
           name="keywords"
           content={
-            appT.metaKeywords ||
-            "mobile app development company, android app development, ios app development, flutter app development, custom mobile apps, enterprise app development"
+            webT.metaKeywords ||
+            "web development company, website development company, web development services, custom website development, web application development, e-commerce website development, business website development, responsive web design, website development company in Davangere, web development company in Karnataka, web development company in India"
           }
         />
 
@@ -1192,7 +1196,7 @@ const AppDevelopment = () => {
           rel="canonical"
           href={`https://chtechgiant.com${
             language === "en" ? "" : `/${language}`
-          }/app-development`}
+          }/web-development`}
         />
 
         {languages.map((item) => (
@@ -1212,58 +1216,60 @@ const AppDevelopment = () => {
             }
             href={`https://chtechgiant.com${
               item.code === "en" ? "" : `/${item.code}`
-            }/app-development`}
+            }/web-development`}
           />
         ))}
 
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://chtechgiant.com/app-development"
+          href="https://chtechgiant.com/web-development"
         />
       </Helmet>
 
       <div className="bg-[#050816] text-white min-h-screen">
 
         {/* =====================================================
-    LANGUAGE SELECTOR
-    BELOW NAVBAR
-===================================================== */}
+            LANGUAGE SELECTOR
+        ===================================================== */}
 
-<div className="relative z-50 px-4 sm:px-6">
-  <div className="max-w-7xl mx-auto flex justify-end">
-    <div className="relative">
-      <select
-        value={language}
-        onChange={handleLanguageChange}
-        aria-label="Select language"
-        className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
-      >
-        {languages.map((item) => (
-          <option
-            key={item.code}
-            value={item.code}
-            className="bg-[#050816] text-white"
-          >
-            {item.label}
-          </option>
-        ))}
-      </select>
+        <div className="relative z-50 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto flex justify-end">
+            <div className="relative">
+              <select
+                value={language}
+                onChange={handleLanguageChange}
+                aria-label="Select language"
+                className="appearance-none h-10 w-40 bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-sm font-medium rounded-xl pl-3 pr-10 outline-none cursor-pointer shadow-lg transition duration-300 focus:border-cyan-400"
+              >
+                {languages.map((item) => (
+                  <option
+                    key={item.code}
+                    value={item.code}
+                    className="bg-[#050816] text-white"
+                  >
+                    {item.label}
+                  </option>
+                ))}
+              </select>
 
-      <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
-    </div>
-  </div>
-</div>
+              <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+            </div>
+          </div>
+        </div>
 
         {/* =====================================================
             PAGE BANNER
         ===================================================== */}
 
         <PageBanner
-          title={appT.bannerTitle || "Mobile App Development"}
+          title={
+            webT.bannerTitle ||
+            "Web Development"
+          }
           subtitle={
-            appT.bannerSubtitle ||
-            "Building scalable Android, iOS, and Flutter applications for startups, businesses, and enterprises."
+            webT.bannerSubtitle ||
+            "Building modern, scalable, secure, and high-performance websites and web applications for startups, businesses, and enterprises."
           }
         />
 
@@ -1273,6 +1279,7 @@ const AppDevelopment = () => {
 
         <SectionWrapper id="hero">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
+
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1280,22 +1287,22 @@ const AppDevelopment = () => {
               viewport={{ once: true }}
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {appT.heroTitle ||
-                  "Custom Mobile App Development Company"}
+                {webT.heroTitle ||
+                  "Custom Web Development Company"}
               </h1>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                {appT.heroDescription1 ||
-                  "CH TECH GIANT specializes in creating powerful mobile applications that help businesses grow, engage customers, streamline operations, and generate revenue. Our team develops modern Android, iOS, and Flutter applications tailored to your unique business requirements."}
+                {webT.heroDescription1 ||
+                  "CH TECH GIANT specializes in creating modern websites and powerful web applications that help businesses establish a strong online presence, attract customers, automate operations, and grow revenue. Our development team builds responsive, secure, scalable, and high-performance digital solutions tailored to your business requirements."}
               </p>
 
               <p className="text-gray-400 leading-relaxed mb-8">
-                {appT.heroDescription2 ||
-                  "Whether you're launching a startup MVP, building an enterprise platform, or modernizing an existing application, our experts deliver secure, scalable, and high-performing mobile solutions."}
+                {webT.heroDescription2 ||
+                  "Whether you need a professional business website, e-commerce platform, custom web application, enterprise system, SaaS product, or fully customized digital solution, our team delivers reliable web experiences designed for long-term growth."}
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                {(appT.features || features).map(
+                {(webT.features || features).map(
                   (feature, index) => (
                     <div
                       key={index}
@@ -1318,24 +1325,26 @@ const AppDevelopment = () => {
               className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8"
             >
               <h2 className="text-2xl font-semibold mb-6">
-                {appT.whyChooseTitle ||
+                {webT.whyChooseTitle ||
                   "Why Choose CH TECH GIANT?"}
               </h2>
 
               <div className="space-y-4 text-gray-400">
                 {(
-                  appT.heroBenefits || [
-                    "Android & iOS Specialists",
-                    "Flutter Cross-Platform Experts",
-                    "Modern UI/UX Design",
-                    "Secure Backend Integration",
-                    "Cloud-Based Architecture",
-                    "Fast Development Cycles",
-                    "App Store & Play Store Publishing",
+                  webT.heroBenefits || [
+                    "Custom Website & Web Application Development",
+                    "Modern Responsive UI/UX Design",
+                    "High-Performance Architecture",
+                    "Secure Backend & API Integration",
+                    "E-Commerce & Payment Gateway Integration",
+                    "SEO-Friendly Development",
+                    "VPS & Cloud Deployment",
                     "Long-Term Support & Maintenance",
                   ]
                 ).map((item, index) => (
-                  <p key={index}>✔ {item}</p>
+                  <p key={index}>
+                    ✔ {item}
+                  </p>
                 ))}
               </div>
             </motion.div>
@@ -1348,19 +1357,23 @@ const AppDevelopment = () => {
 
         <SectionWrapper id="services">
           <div className="text-center mb-12">
+
             <h2 className="text-4xl font-bold mb-4">
-              {appT.servicesTitle ||
-                "Our App Development Services"}
+              {webT.servicesTitle ||
+                "Our Web Development Services"}
             </h2>
 
             <p className="text-gray-400 max-w-3xl mx-auto">
-              {appT.servicesDescription ||
-                "End-to-end mobile application development solutions designed for startups, SMEs, and enterprises."}
+              {webT.servicesDescription ||
+                "End-to-end web development solutions designed for startups, SMEs, enterprises, organizations, and growing businesses."}
             </p>
+
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
             {services.map((service, index) => {
+
               const serviceData =
                 getServiceTranslation(index);
 
@@ -1379,40 +1392,48 @@ const AppDevelopment = () => {
                 </div>
               );
             })}
+
           </div>
         </SectionWrapper>
 
         {/* =====================================================
-            MOBILE APPS
+            WEB SOLUTIONS
         ===================================================== */}
 
-        <SectionWrapper id="mobile-apps">
+        <SectionWrapper id="web-solutions">
+
           <div className="text-center mb-14">
+
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              {appT.mobileAppsTitle ||
-                "Mobile Apps We Develop"}
+              {webT.webSolutionsTitle ||
+                "Web Solutions We Develop"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              {appT.mobileAppsDescription ||
-                "We build powerful mobile applications tailored to different industries and business models. From startups to enterprises, our experienced developers create secure, scalable, and feature-rich mobile solutions that help businesses increase customer engagement, streamline operations, and drive growth."}
+              {webT.webSolutionsDescription ||
+                "We build modern websites and powerful web applications tailored to different industries, business models, and organizational requirements. From professional business websites and e-commerce platforms to enterprise systems, SaaS products, and custom web applications, our solutions are designed for performance, security, scalability, and long-term growth."}
             </p>
+
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {appCategories.map((app) => {
-              const translatedApp =
-                getCategoryTranslation(app.id);
+
+            {webCategories.map((web) => {
+
+              const translatedWeb =
+                getCategoryTranslation(web.id);
 
               return (
                 <div
-                  key={app.id}
+                  key={web.id}
                   className="overflow-hidden rounded-3xl bg-gradient-to-b from-white/5 to-white/[0.03] border border-cyan-500/10 hover:border-cyan-400 transition-colors duration-300"
                 >
+
                   <div className="relative aspect-video overflow-hidden bg-[#06101c]">
+
                     <img
-                      src={app.image}
-                      alt={translatedApp.title}
+                      src={web.image}
+                      alt={translatedWeb.title}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
@@ -1420,19 +1441,23 @@ const AppDevelopment = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent" />
 
                     <div className="absolute bottom-5 left-6 right-6">
+
                       <h3 className="text-2xl font-bold text-white leading-tight">
-                        {translatedApp.title}
+                        {translatedWeb.title}
                       </h3>
+
                     </div>
                   </div>
 
                   <div className="p-7">
+
                     <p className="text-gray-400 text-[15px] leading-7 mb-6">
-                      {translatedApp.description}
+                      {translatedWeb.description}
                     </p>
 
                     <div className="grid grid-cols-2 gap-x-5 gap-y-3 mb-8">
-                      {translatedApp.features.map(
+
+                      {translatedWeb.features.map(
                         (feature, i) => (
                           <div
                             key={i}
@@ -1440,21 +1465,25 @@ const AppDevelopment = () => {
                           >
                             <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 mr-3 shrink-0" />
 
-                            <span>{feature}</span>
+                            <span>
+                              {feature}
+                            </span>
                           </div>
                         )
                       )}
+
                     </div>
 
                     <div className="flex items-center justify-between border-t border-white/10 pt-6">
+
                       <div>
                         <p className="text-xs uppercase tracking-widest text-gray-500">
-                          {appT.customDevelopment ||
+                          {webT.customDevelopment ||
                             "Custom Development"}
                         </p>
 
                         <p className="text-cyan-400 font-semibold text-sm">
-                          Android • iOS
+                          Web • Cloud • API
                         </p>
                       </div>
 
@@ -1466,14 +1495,19 @@ const AppDevelopment = () => {
                         }
                         className="px-5 py-2.5 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-colors duration-300"
                       >
-                        {appT.getQuote || "Get Quote"}
+                        {webT.getQuote ||
+                          "Get Quote"}
                       </Link>
+
                     </div>
+
                   </div>
                 </div>
               );
             })}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1481,27 +1515,35 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="industries">
+
           <div className="text-center mb-14">
+
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.industriesTitle ||
+              {webT.industriesTitle ||
                 "Industries We Serve"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
-              {appT.industriesDescription ||
-                "We build digital products for startups, SMEs, enterprises, government organizations, educational institutions, hospitals and businesses across multiple industries."}
+              {webT.industriesDescription ||
+                "We develop websites and web applications for startups, SMEs, enterprises, government organizations, educational institutions, hospitals, retailers, service providers, and businesses across multiple industries."}
             </p>
+
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
+
             {industries.map((industry, index) => {
+
               const industryData =
                 getIndustryTranslation(index);
 
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{
+                    opacity: 0,
+                    y: 40,
+                  }}
                   whileInView={{
                     opacity: 1,
                     y: 0,
@@ -1509,10 +1551,15 @@ const AppDevelopment = () => {
                   transition={{
                     delay: index * 0.05,
                   }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -8 }}
+                  viewport={{
+                    once: true,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
                   className="bg-white/5 border border-cyan-500/10 hover:border-cyan-400 rounded-3xl p-7 transition-all duration-300"
                 >
+
                   <div className="text-5xl mb-5">
                     {industry.icon}
                   </div>
@@ -1524,10 +1571,13 @@ const AppDevelopment = () => {
                   <p className="text-gray-400 leading-7">
                     {industryData.description}
                   </p>
+
                 </motion.div>
               );
             })}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1535,20 +1585,25 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="technologies">
+
           <div className="text-center mb-14">
+
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.technologiesTitle ||
+              {webT.technologiesTitle ||
                 "Technologies We Use"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
-              {appT.technologiesDescription ||
-                "Our developers use modern technologies and industry best practices to build secure, high-performance and scalable mobile applications for startups, businesses and enterprises."}
+              {webT.technologiesDescription ||
+                "Our developers use modern technologies, secure architecture, and industry best practices to build fast, scalable, responsive, and reliable websites and web applications for startups, businesses, and enterprises."}
             </p>
+
           </div>
 
           <div className="space-y-8">
+
             {technologies.map((tech, index) => {
+
               const techData =
                 getTechnologyTranslation(index);
 
@@ -1557,11 +1612,13 @@ const AppDevelopment = () => {
                   key={index}
                   className="bg-white/5 rounded-3xl border border-cyan-500/10 p-8"
                 >
+
                   <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
                     {techData.category}
                   </h3>
 
                   <div className="flex flex-wrap gap-4">
+
                     {techData.items.map(
                       (item, i) => (
                         <div
@@ -1572,11 +1629,15 @@ const AppDevelopment = () => {
                         </div>
                       )
                     )}
+
                   </div>
+
                 </div>
               );
             })}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1584,20 +1645,25 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="why-us">
+
           <div className="text-center mb-14">
+
             <h2 className="text-4xl md:text-5xl font-bold mb-5">
-              {appT.whyUsTitle ||
+              {webT.whyUsTitle ||
                 "Why Choose CH TECH GIANT"}
             </h2>
 
             <p className="text-gray-400 max-w-4xl mx-auto leading-8">
-              {appT.whyUsDescription ||
-                "We combine innovative technologies, modern design principles, and industry experience to deliver reliable mobile applications that help businesses grow faster."}
+              {webT.whyUsDescription ||
+                "We combine modern technologies, creative design principles, secure development practices, and business-focused strategies to deliver reliable websites and web applications that help organizations grow."}
             </p>
+
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
             {whyChooseUs.map((item, index) => {
+
               const itemData =
                 getWhyChooseTranslation(index);
 
@@ -1606,6 +1672,7 @@ const AppDevelopment = () => {
                   key={index}
                   className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8"
                 >
+
                   <div className="w-14 h-14 mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400">
                     {item.icon}
                   </div>
@@ -1617,10 +1684,13 @@ const AppDevelopment = () => {
                   <p className="text-gray-400 leading-7">
                     {itemData.description}
                   </p>
+
                 </div>
               );
             })}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1628,51 +1698,63 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="stats">
+
           <div className="grid md:grid-cols-4 gap-8">
+
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
+
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 50+
               </h2>
 
               <p className="text-gray-300">
-                {appT.stats?.[0] ||
-                  "App Categories Covered"}
+                {webT.stats?.[0] ||
+                  "Web Solutions"}
               </p>
+
             </div>
 
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
+
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 100%
               </h2>
 
               <p className="text-gray-300">
-                {appT.stats?.[1] ||
+                {webT.stats?.[1] ||
                   "Custom Development"}
               </p>
+
             </div>
 
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
+
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 24/7
               </h2>
 
               <p className="text-gray-300">
-                {appT.stats?.[2] ||
+                {webT.stats?.[2] ||
                   "Technical Support"}
               </p>
+
             </div>
 
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-3xl border border-cyan-500/20 p-8 text-center">
+
               <h2 className="text-5xl font-bold text-cyan-400 mb-3">
                 ∞
               </h2>
 
               <p className="text-gray-300">
-                {appT.stats?.[3] ||
+                {webT.stats?.[3] ||
                   "Innovation & Growth"}
               </p>
+
             </div>
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1680,33 +1762,43 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="process">
+
           <h2 className="text-4xl font-bold text-center mb-12">
-            {appT.processTitle ||
-              "Our Development Process"}
+            {webT.processTitle ||
+              "Our Web Development Process"}
           </h2>
 
           <div className="grid md:grid-cols-5 gap-6">
+
             {(
-              appT.process || [
+              webT.process || [
                 "Discovery",
-                "Design",
+                "UI/UX Design",
                 "Development",
                 "Testing",
                 "Launch",
               ]
             ).map((step, index) => (
+
               <div
                 key={index}
                 className="bg-white/5 border border-cyan-500/10 rounded-3xl p-6 text-center"
               >
+
                 <div className="text-cyan-400 text-3xl font-bold mb-3">
                   {index + 1}
                 </div>
 
-                <h3>{step}</h3>
+                <h3>
+                  {step}
+                </h3>
+
               </div>
+
             ))}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1714,24 +1806,34 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="seo">
+
           <div className="max-w-5xl mx-auto">
+
             <h2 className="text-4xl font-bold mb-6 text-center">
-              {appT.seoTitle ||
-                "Professional Mobile App Development Solutions"}
+              {webT.seoTitle ||
+                "Professional Web Development Solutions"}
             </h2>
 
             <div className="space-y-6 text-gray-400 leading-relaxed">
+
               {(
-                appT.seoContent || [
-                  "Mobile applications have become essential tools for businesses looking to improve customer engagement, automate processes, and increase revenue. At CH TECH GIANT, we create innovative mobile applications that deliver measurable business results.",
-                  "Our development team uses the latest technologies including Flutter, Android, iOS, Firebase, Node.js, and cloud platforms to build secure and scalable applications. Every project is designed with performance, usability, and future growth in mind.",
-                  "From healthcare and education to fintech, logistics, e-commerce, and enterprise solutions, we help organizations leverage mobile technology to stay competitive in today's digital marketplace.",
+                webT.seoContent || [
+                  "A professional website has become an essential part of every modern business. At CH TECH GIANT, we develop custom websites and web applications that help businesses establish a strong online presence, connect with customers, generate leads, automate operations, and increase revenue.",
+
+                  "Our web development team uses modern technologies including HTML5, CSS3, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, cloud platforms, VPS servers, and secure API integrations to build fast, responsive, scalable, and reliable digital solutions. Every project is developed with performance, usability, security, maintainability, and future growth in mind.",
+
+                  "From business websites and e-commerce platforms to healthcare, education, real estate, hospitality, logistics, CRM, ERP, SaaS, AI-powered applications, and enterprise solutions, CH TECH GIANT helps organizations transform their ideas into powerful web experiences. We also provide deployment, hosting support, maintenance, security updates, performance optimization, and long-term technical assistance.",
                 ]
               ).map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index}>
+                  {paragraph}
+                </p>
               ))}
+
             </div>
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1739,38 +1841,84 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="faq">
+
           <h2 className="text-4xl font-bold text-center mb-12">
-            {appT.faqTitle ||
+            {webT.faqTitle ||
               "Frequently Asked Questions"}
           </h2>
 
           <div className="space-y-6 max-w-4xl mx-auto">
+
             {(
-              appT.faq || [
+              webT.faq || [
                 {
                   question:
-                    "How much does mobile app development cost?",
+                    "How much does website development cost?",
                   answer:
-                    "The cost depends on features, complexity, platforms, and integrations required. We provide custom quotes based on your project requirements.",
+                    "The cost depends on the type of website, number of pages, features, design requirements, integrations, backend functionality, and overall project complexity. We provide custom quotes based on your requirements.",
                 },
                 {
                   question:
-                    "Do you develop both Android and iOS apps?",
+                    "How long does it take to develop a website?",
                   answer:
-                    "Yes. We develop Android applications, iOS applications, and Flutter cross-platform apps.",
+                    "The development timeline depends on the project scope and complexity. A simple business website can be completed faster, while e-commerce platforms and custom web applications may require more development and testing time.",
                 },
                 {
                   question:
-                    "Do you provide post-launch support?",
+                    "Do you develop custom websites?",
                   answer:
-                    "Yes. We offer maintenance, updates, monitoring, bug fixes, and feature enhancements after launch.",
+                    "Yes. We build completely customized websites and web applications based on your business requirements, target audience, workflows, branding, and future growth plans.",
+                },
+                {
+                  question:
+                    "Do you develop e-commerce websites?",
+                  answer:
+                    "Yes. We develop e-commerce websites with product management, shopping carts, payment gateways, customer accounts, order management, inventory, coupons, and admin dashboards.",
+                },
+                {
+                  question:
+                    "Do you develop web applications?",
+                  answer:
+                    "Yes. We develop custom web applications such as CRM, ERP, LMS, hospital management systems, school management systems, inventory systems, SaaS platforms, dashboards, portals, and other business applications.",
+                },
+                {
+                  question:
+                    "Will the website be mobile responsive?",
+                  answer:
+                    "Yes. Our websites are designed to work across desktops, laptops, tablets, and smartphones with responsive layouts and modern user interfaces.",
+                },
+                {
+                  question:
+                    "Can you integrate payment gateways?",
+                  answer:
+                    "Yes. We can integrate payment gateways and payment services such as Razorpay, PayPal, Stripe, and other supported payment platforms based on project requirements.",
+                },
+                {
+                  question:
+                    "Do you provide website hosting and deployment?",
+                  answer:
+                    "Yes. We can assist with domain configuration, DNS setup, VPS deployment, SSL certificates, server configuration, application deployment, and production setup.",
+                },
+                {
+                  question:
+                    "Do you provide SEO-friendly website development?",
+                  answer:
+                    "Yes. We develop websites with SEO-friendly structures including optimized metadata, semantic HTML, responsive layouts, clean URLs, performance considerations, sitemap support, and search-engine-friendly content structures.",
+                },
+                {
+                  question:
+                    "Do you provide website maintenance and support?",
+                  answer:
+                    "Yes. We provide ongoing maintenance, bug fixes, security updates, performance optimization, monitoring, content-related changes, feature enhancements, and technical support after launch.",
                 },
               ]
             ).map((item, index) => (
+
               <div
                 key={index}
                 className="bg-white/5 rounded-3xl p-6"
               >
+
                 <h3 className="font-semibold mb-3">
                   {item.question}
                 </h3>
@@ -1778,9 +1926,13 @@ const AppDevelopment = () => {
                 <p className="text-gray-400">
                   {item.answer}
                 </p>
+
               </div>
+
             ))}
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1788,15 +1940,17 @@ const AppDevelopment = () => {
         ===================================================== */}
 
         <SectionWrapper id="cta">
+
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/20 rounded-3xl p-10 text-center">
+
             <h2 className="text-4xl font-bold mb-4">
-              {appT.ctaTitle ||
-                "Ready To Build Your App?"}
+              {webT.ctaTitle ||
+                "Ready To Build Your Website?"}
             </h2>
 
             <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-              {appT.ctaDescription ||
-                "Partner with CH TECH GIANT to transform your idea into a powerful mobile application."}
+              {webT.ctaDescription ||
+                "Partner with CH TECH GIANT to transform your idea into a powerful, modern, secure, and scalable website or web application."}
             </p>
 
             <Link
@@ -1807,10 +1961,12 @@ const AppDevelopment = () => {
               }
               className="inline-flex px-8 py-4 rounded-full bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold"
             >
-              {appT.ctaButton ||
+              {webT.ctaButton ||
                 "Get Free Consultation"}
             </Link>
+
           </div>
+
         </SectionWrapper>
 
         {/* =====================================================
@@ -1821,7 +1977,7 @@ const AppDevelopment = () => {
           sections={[
             "hero",
             "services",
-            "mobile-apps",
+            "web-solutions",
             "industries",
             "technologies",
             "why-us",
@@ -1832,9 +1988,10 @@ const AppDevelopment = () => {
             "cta",
           ]}
         />
+
       </div>
     </>
   );
 };
 
-export default AppDevelopment;
+export default WebDevelopment;
