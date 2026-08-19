@@ -1882,6 +1882,7 @@ A versão atualizada será publicada nesta página.
   },
 },
 
+
 };
 
 export default pt;
