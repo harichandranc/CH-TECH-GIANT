@@ -1881,7 +1881,1179 @@ Die aktualisierte Version wird auf dieser Seite veröffentlicht.
       "info@chtechgiant.com",
   },
 },
+webDevelopment: {
+  bannerTitle: "Webentwicklung",
 
+  bannerSubtitle:
+    "Wir entwickeln moderne, skalierbare, sichere und leistungsstarke Websites und Webanwendungen für Startups, Unternehmen und Konzerne.",
+
+  heroTitle: "Individuelle Webentwicklung",
+
+  heroDescription1:
+    "CH TECH GIANT ist auf die Entwicklung moderner Websites und leistungsstarker Webanwendungen spezialisiert, die Unternehmen dabei unterstützen, eine starke Online-Präsenz aufzubauen, Kunden zu gewinnen, Geschäftsprozesse zu automatisieren und den Umsatz zu steigern. Unser Entwicklungsteam erstellt responsive, sichere, skalierbare und leistungsstarke digitale Lösungen, die genau auf Ihre geschäftlichen Anforderungen zugeschnitten sind.",
+
+  heroDescription2:
+    "Ob Sie eine professionelle Unternehmenswebsite, einen E-Commerce-Shop, eine individuelle Webanwendung, ein Unternehmenssystem, ein SaaS-Produkt oder eine vollständig maßgeschneiderte digitale Lösung benötigen – unser Team entwickelt zuverlässige Weblösungen für nachhaltiges Wachstum.",
+
+  features: [
+    "Individuelle Website-Entwicklung",
+    "Entwicklung von Unternehmenswebsites",
+    "E-Commerce-Entwicklung",
+    "Entwicklung von Webanwendungen",
+    "CMS-Entwicklung",
+    "Responsive Webdesign",
+    "UI/UX-Design",
+    "Backend- und API-Integration",
+  ],
+
+  whyChooseTitle: "Warum CH TECH GIANT?",
+
+  heroBenefits: [
+    "Individuelle Website- und Webanwendungsentwicklung",
+    "Modernes responsives UI/UX-Design",
+    "Leistungsstarke und skalierbare Architektur",
+    "Sicheres Backend und API-Integration",
+    "E-Commerce- und Zahlungsintegration",
+    "SEO-freundliche Entwicklung",
+    "VPS- und Cloud-Bereitstellung",
+    "Langfristiger Support und Wartung",
+  ],
+
+  servicesTitle: "Unsere Webentwicklungsleistungen",
+
+  servicesDescription:
+    "Ganzheitliche Webentwicklungslösungen für Startups, kleine und mittlere Unternehmen, Konzerne, Organisationen und wachsende Unternehmen.",
+
+  services: [
+    {
+      title: "Individuelle Website-Entwicklung",
+      description:
+        "Professionell entwickelte individuelle Websites, die auf Ihre Geschäftsziele, Markenidentität, Zielgruppe und spezifischen Anforderungen abgestimmt sind.",
+    },
+    {
+      title: "Entwicklung von Unternehmenswebsites",
+      description:
+        "Moderne und responsive Unternehmenswebsites, die Unternehmen dabei unterstützen, eine starke Online-Präsenz aufzubauen, Leads zu generieren und Vertrauen bei Kunden aufzubauen.",
+    },
+    {
+      title: "E-Commerce-Website-Entwicklung",
+      description:
+        "Funktionsreiche Online-Shops mit Produktkatalogen, Warenkörben, sicheren Zahlungen, Bestellverwaltung und Kundenkonten.",
+    },
+    {
+      title: "Entwicklung von Webanwendungen",
+      description:
+        "Leistungsstarke und skalierbare Webanwendungen zur Automatisierung von Geschäftsprozessen, Verwaltung von Daten und Bereitstellung individueller digitaler Erlebnisse.",
+    },
+    {
+      title: "CMS-Entwicklung",
+      description:
+        "Flexible Content-Management-Lösungen, mit denen Unternehmen Seiten, Produkte, Blogs, Medien und Website-Inhalte einfach verwalten können.",
+    },
+    {
+      title: "Website-Wartung und Support",
+      description:
+        "Laufende Wartung, Sicherheitsupdates, Fehlerbehebungen, Performance-Optimierung, Backups und technischer Support für Ihre Website.",
+    },
+  ],
+
+  webSolutionsTitle: "Weblösungen, die wir entwickeln",
+
+  webSolutionsDescription:
+    "Wir entwickeln moderne Websites und leistungsstarke Webanwendungen, die auf unterschiedliche Branchen, Geschäftsmodelle und organisatorische Anforderungen zugeschnitten sind. Von professionellen Unternehmenswebsites und E-Commerce-Plattformen bis hin zu Unternehmenssystemen, SaaS-Produkten und individuellen Webanwendungen – unsere Lösungen sind auf Performance, Sicherheit, Skalierbarkeit und langfristiges Wachstum ausgelegt.",
+
+  webCategories: [
+    {
+      id: 1,
+      title: "Entwicklung von Unternehmenswebsites",
+      image: "/images/web-categories/business.png",
+      description:
+        "Professionelle Unternehmenswebsites, die eine starke digitale Präsenz aufbauen, Dienstleistungen präsentieren, Leads generieren und Kundenvertrauen schaffen.",
+      features: [
+        "Professionelles Design",
+        "Responsives Layout",
+        "Leistungsseiten",
+        "Lead-Generierung",
+        "Kontaktformulare",
+        "SEO-freundlich",
+      ],
+    },
+    {
+      id: 2,
+      title: "Entwicklung von Corporate Websites",
+      image: "/images/web-categories/corporate.png",
+      description:
+        "Moderne Corporate Websites für etablierte Unternehmen, Organisationen und Konzerne mit professionellem Branding, skalierbarer Architektur und leistungsstarkem Content-Management.",
+      features: [
+        "Corporate Branding",
+        "Unternehmensprofile",
+        "Dienstleistungsverwaltung",
+        "Teamprofile",
+        "Investoreninformationen",
+        "CMS-Integration",
+      ],
+    },
+    {
+      id: 3,
+      title: "Portfolio-Website-Entwicklung",
+      image: "/images/web-categories/portfolio.png",
+      description:
+        "Kreative Portfolio-Websites für Einzelpersonen, Designer, Entwickler, Fotografen, Agenturen und Fachkräfte zur Präsentation ihrer Arbeiten im Internet.",
+      features: [
+        "Projektpräsentation",
+        "Galerie",
+        "Responsives Design",
+        "Animationen",
+        "Kontaktformular",
+        "Social-Media-Integration",
+      ],
+    },
+    {
+      id: 4,
+      title: "E-Commerce-Website-Entwicklung",
+      image: "/images/web-categories/ecommerce.png",
+      description:
+        "Komplette Online-Shopping-Plattformen mit Produktverwaltung, Warenkorb, sicheren Zahlungen, Bestellverfolgung und Kundenkonten.",
+      features: [
+        "Produktkatalog",
+        "Warenkorb",
+        "Sichere Zahlungen",
+        "Bestellverfolgung",
+        "Kundenkonten",
+        "Admin-Dashboard",
+      ],
+    },
+    {
+      id: 5,
+      title: "Entwicklung von Online-Shops",
+      image: "/images/web-categories/online-store.png",
+      description:
+        "Moderne Online-Shops für ein nahtloses Einkaufserlebnis mit Produktsuche, Checkout, Aktionen und Bestellverwaltung.",
+      features: [
+        "Produktsuche",
+        "Kategorien",
+        "Wunschliste",
+        "Gutscheine",
+        "Zahlungen",
+        "Bestellhistorie",
+      ],
+    },
+    {
+      id: 6,
+      title: "Multi-Vendor-Marktplatz",
+      image: "/images/web-categories/marketplace.png",
+      description:
+        "Skalierbare Marktplätze, die mehrere Verkäufer und Kunden verbinden, mit Händler-Dashboards, Provisionen, Bestellungen und Analysen.",
+      features: [
+        "Händlerbereich",
+        "Verkäufer-Dashboard",
+        "Käufer-Dashboard",
+        "Provisionssystem",
+        "Bestellverwaltung",
+        "Analysen",
+      ],
+    },
+    {
+      id: 7,
+      title: "Immobilien-Website",
+      image: "/images/web-categories/real-estate.png",
+      description:
+        "Immobilienplattformen für Immobilienunternehmen, Makler, Bauträger und Eigentümer mit erweiterten Such- und standortbasierten Funktionen.",
+      features: [
+        "Immobilienangebote",
+        "Erweiterte Suche",
+        "Kartenintegration",
+        "Maklerprofile",
+        "Immobiliengalerie",
+        "Anfrageformulare",
+      ],
+    },
+    {
+      id: 8,
+      title: "Hotelbuchungs-Website",
+      image: "/images/web-categories/hotel.png",
+      description:
+        "Websites für Hotels und Resorts mit Zimmerangeboten, Verfügbarkeitsverwaltung, Buchungssystemen, Online-Zahlungen und Gästeservices.",
+      features: [
+        "Zimmerangebote",
+        "Buchungssystem",
+        "Verfügbarkeit",
+        "Online-Zahlungen",
+        "Gästeverwaltung",
+        "Admin-Bereich",
+      ],
+    },
+    {
+      id: 9,
+      title: "Restaurant-Website",
+      image: "/images/web-categories/restaurant.png",
+      description:
+        "Moderne Restaurant-Websites zur Präsentation von Speisekarten, Standorten, Reservierungen, Online-Bestellungen, Angeboten und Kundenbewertungen.",
+      features: [
+        "Digitale Speisekarte",
+        "Online-Bestellung",
+        "Reservierungen",
+        "Galerie",
+        "Bewertungen",
+        "Kontaktintegration",
+      ],
+    },
+    {
+      id: 10,
+      title: "Food-Delivery-Website",
+      image: "/images/web-categories/food-delivery.png",
+      description:
+        "Lieferplattformen für Lebensmittel, die Kunden, Restaurants und Lieferpartner mit Bestellungen, Zahlungen, Tracking und Verwaltung verbinden.",
+      features: [
+        "Restaurantangebote",
+        "Online-Bestellung",
+        "Live-Tracking",
+        "Online-Zahlungen",
+        "Lieferbereich",
+        "Bestellverwaltung",
+      ],
+    },
+    {
+      id: 11,
+      title: "Grocery-Delivery-Website",
+      image: "/images/web-categories/grocery.png",
+      description:
+        "Online-Lebensmittelplattformen mit Produktkatalogen, Bestandsverwaltung, Warenkorb, geplanter Lieferung und sicheren Zahlungen.",
+      features: [
+        "Produktkategorien",
+        "Warenkorb",
+        "Bestandsverwaltung",
+        "Lieferplanung",
+        "Zahlungen",
+        "Bestellverfolgung",
+      ],
+    },
+    {
+      id: 12,
+      title: "Gesundheits-Website",
+      image: "/images/web-categories/healthcare.png",
+      description:
+        "Sichere Gesundheitswebsites für Krankenhäuser, Kliniken, Ärzte und Gesundheitsorganisationen mit patientenorientierten digitalen Diensten.",
+      features: [
+        "Ärzteprofile",
+        "Terminvereinbarung",
+        "Patienteninformationen",
+        "Medizinische Leistungen",
+        "Kontaktformulare",
+        "Admin-Bereich",
+      ],
+    },
+    {
+      id: 13,
+      title: "Krankenhaus-Website",
+      image: "/images/web-categories/hospital.png",
+      description:
+        "Professionelle Krankenhaus-Websites mit Abteilungen, Ärzteprofilen, Terminbuchung, medizinischen Leistungen und Patienteninformationen.",
+      features: [
+        "Abteilungen",
+        "Ärzteprofile",
+        "Termine",
+        "Patienteninformationen",
+        "Notfallinformationen",
+        "Admin-Dashboard",
+      ],
+    },
+    {
+      id: 14,
+      title: "Medizinische Website",
+      image: "/images/web-categories/medical.png",
+      description:
+        "Moderne medizinische Websites für Ärzte, Kliniken, Spezialisten und Gesundheitsdienstleister mit professioneller Leistungsdarstellung und Terminfunktionen.",
+      features: [
+        "Ärzteprofil",
+        "Medizinische Leistungen",
+        "Terminbuchung",
+        "Patientenanfragen",
+        "Referenzen",
+        "Kontaktformulare",
+      ],
+    },
+    {
+      id: 15,
+      title: "Bildungs-Website",
+      image: "/images/web-categories/education.png",
+      description:
+        "Bildungswebsites für Schulen, Hochschulen, Coaching-Institute und Bildungseinrichtungen mit Kursen, Zulassung, Ressourcen und Studentenservices.",
+      features: [
+        "Kursinformationen",
+        "Zulassung",
+        "Lernressourcen",
+        "Dozentenprofile",
+        "Veranstaltungen",
+        "Online-Formulare",
+      ],
+    },
+    {
+      id: 16,
+      title: "Hochschul-Website",
+      image: "/images/web-categories/college.png",
+      description:
+        "Komplette Hochschulwebsites mit Abteilungen, Studiengängen, Dozenteninformationen, Zulassung, Mitteilungen, Veranstaltungen und akademischen Ressourcen.",
+      features: [
+        "Abteilungen",
+        "Studiengänge",
+        "Dozenten",
+        "Zulassung",
+        "Mitteilungen",
+        "Studentenportal",
+      ],
+    },
+    {
+      id: 17,
+      title: "Schul-Website",
+      image: "/images/web-categories/school.png",
+      description:
+        "Moderne Schulwebsites mit akademischen Informationen, Zulassung, Ankündigungen, Veranstaltungen, Lehrerprofilen und Elternressourcen.",
+      features: [
+        "Schulinformationen",
+        "Zulassung",
+        "Lehrer",
+        "Veranstaltungen",
+        "Ankündigungen",
+        "Elternressourcen",
+      ],
+    },
+    {
+      id: 18,
+      title: "Learning-Management-System",
+      image: "/images/web-categories/lms.png",
+      description:
+        "Leistungsstarke LMS-Plattformen zur Verwaltung von Kursen, Lerninhalten, Prüfungen, Studenten und Lernfortschritten.",
+      features: [
+        "Kursverwaltung",
+        "Studentenverwaltung",
+        "Online-Prüfungen",
+        "Quiz",
+        "Fortschrittsverfolgung",
+        "Admin-Dashboard",
+      ],
+    },
+    {
+      id: 19,
+      title: "Jobportal-Website",
+      image: "/images/web-categories/job-portal.png",
+      description:
+        "Recruiting-Plattformen, die Arbeitgeber und Jobsuchende mit Stellenangeboten, Bewerbungen, Lebensläufen, Arbeitgeber-Dashboards und Benachrichtigungen verbinden.",
+      features: [
+        "Stellenangebote",
+        "Lebenslauf-Upload",
+        "Jobsuche",
+        "Arbeitgeber-Dashboard",
+        "Bewerbungsverfolgung",
+        "Job-Benachrichtigungen",
+      ],
+    },
+    {
+      id: 20,
+      title: "Recruiting-Website",
+      image: "/images/web-categories/recruitment.png",
+      description:
+        "Individuelle Recruiting-Plattformen zur Verwaltung von Kandidaten, Stellenangeboten, Interviews, Bewerbungen und Einstellungsprozessen.",
+      features: [
+        "Kandidatenverwaltung",
+        "Stellenausschreibungen",
+        "Lebenslaufverwaltung",
+        "Interviewplanung",
+        "Recruiter-Dashboard",
+        "Berichte",
+      ],
+    },
+    {
+      id: 21,
+      title: "Nachrichten- und Magazin-Website",
+      image: "/images/web-categories/news.png",
+      description:
+        "Schnelle und inhaltsreiche Nachrichten- und Magazin-Websites mit Kategorien, Artikeln, Suche, Autoren, Mediengalerien und Publishing-Tools.",
+      features: [
+        "Nachrichtenkategorien",
+        "Artikelverwaltung",
+        "Autorenprofile",
+        "Suche",
+        "Mediengalerie",
+        "CMS",
+      ],
+    },
+    {
+      id: 22,
+      title: "Blog-Website-Entwicklung",
+      image: "/images/web-categories/blog.png",
+      description:
+        "SEO-freundliche Blogplattformen für Unternehmen, Publisher, Content-Ersteller und Einzelpersonen zur effektiven Veröffentlichung und Verwaltung von Inhalten.",
+      features: [
+        "Blogverwaltung",
+        "Kategorien",
+        "Tags",
+        "Kommentare",
+        "SEO-Optimierung",
+        "Suche",
+      ],
+    },
+    {
+      id: 23,
+      title: "Mitglieder-Website",
+      image: "/images/web-categories/membership.png",
+      description:
+        "Mitgliederplattformen mit Benutzerregistrierung, Abonnementplänen, geschützten Inhalten, Profilen, Zahlungen und Mitgliederverwaltung.",
+      features: [
+        "Benutzerregistrierung",
+        "Mitgliedschaftspläne",
+        "Geschützte Inhalte",
+        "Abonnements",
+        "Mitglieder-Dashboard",
+        "Zahlungen",
+      ],
+    },
+    {
+      id: 24,
+      title: "Community-Website",
+      image: "/images/web-categories/community.png",
+      description:
+        "Interaktive Community-Plattformen, auf denen Benutzer Profile erstellen, Diskussionen führen, Gruppen beitreten, Inhalte teilen und kommunizieren können.",
+      features: [
+        "Benutzerprofile",
+        "Diskussionsforen",
+        "Gruppen",
+        "Nachrichten",
+        "Benachrichtigungen",
+        "Moderation",
+      ],
+    },
+    {
+      id: 25,
+      title: "Soziales Netzwerk",
+      image: "/images/web-categories/social.png",
+      description:
+        "Social-Networking-Plattformen mit Benutzerprofilen, Beiträgen, Feeds, Nachrichten, Communities, Benachrichtigungen und Echtzeitinteraktionen.",
+      features: [
+        "Benutzerprofile",
+        "Newsfeed",
+        "Beiträge",
+        "Private Nachrichten",
+        "Communities",
+        "Benachrichtigungen",
+      ],
+    },
+    {
+      id: 26,
+      title: "Forum-Website-Entwicklung",
+      image: "/images/web-categories/forum.png",
+      description:
+        "Diskussions- und Wissensaustauschplattformen mit Themen, Threads, Benutzerprofilen, Moderation, Suche und Community-Funktionen.",
+      features: [
+        "Diskussionsthreads",
+        "Kategorien",
+        "Benutzerprofile",
+        "Moderation",
+        "Suche",
+        "Benachrichtigungen",
+      ],
+    },
+    {
+      id: 27,
+      title: "Event-Management-Website",
+      image: "/images/web-categories/event.png",
+      description:
+        "Event-Websites für Konferenzen, Workshops, Ausstellungen und öffentliche Veranstaltungen mit Registrierung, Tickets, Zeitplänen und Teilnehmerverwaltung.",
+      features: [
+        "Eventregistrierung",
+        "Ticketbuchung",
+        "Event-Zeitpläne",
+        "Sprecherprofile",
+        "Teilnehmerverwaltung",
+        "Benachrichtigungen",
+      ],
+    },
+    {
+      id: 28,
+      title: "Buchungs- und Reservierungs-Website",
+      image: "/images/web-categories/booking.png",
+      description:
+        "Online-Buchungsplattformen für Hotels, Dienstleistungen, Termine, Veranstaltungen, Reisen und andere Unternehmen mit Echtzeitverfügbarkeit.",
+      features: [
+        "Online-Buchung",
+        "Verfügbarkeit",
+        "Kalender",
+        "Zahlungen",
+        "Benachrichtigungen",
+        "Kunden-Dashboard",
+      ],
+    },
+    {
+      id: 29,
+      title: "Terminbuchungs-Website",
+      image: "/images/web-categories/appointment.png",
+      description:
+        "Terminplanungs-Websites für Ärzte, Berater, Salons, Fachkräfte und Dienstleistungsunternehmen mit kalenderbasierter Buchung.",
+      features: [
+        "Terminbuchung",
+        "Kalender",
+        "Verfügbarkeit",
+        "Erinnerungen",
+        "Online-Zahlungen",
+        "Umbuchung",
+      ],
+    },
+    {
+      id: 30,
+      title: "Website für Dienstleistungsunternehmen",
+      image: "/images/web-categories/services.png",
+      description:
+        "Lead-generierende Websites für Agenturen, Berater, Reparaturunternehmen, Auftragnehmer und professionelle Dienstleister.",
+      features: [
+        "Leistungsseiten",
+        "Lead-Formulare",
+        "Buchung",
+        "Kundenbewertungen",
+        "Galerie",
+        "Kontaktintegration",
+      ],
+    },
+    {
+      id: 31,
+      title: "Verzeichnis-Website",
+      image: "/images/web-categories/directory.png",
+      description:
+        "Business- und Dienstleistungsverzeichnisse mit Kategorien, Suche, Filtern, Karten, Bewertungen und Benutzereinträgen.",
+      features: [
+        "Unternehmenseinträge",
+        "Kategorien",
+        "Erweiterte Suche",
+        "Karten",
+        "Bewertungen",
+        "Benutzereinträge",
+      ],
+    },
+    {
+      id: 32,
+      title: "Kleinanzeigen-Website",
+      image: "/images/web-categories/classifieds.png",
+      description:
+        "Online-Kleinanzeigenplattformen, auf denen Benutzer Anzeigen veröffentlichen, suchen, verwalten und auf Angebote reagieren können.",
+      features: [
+        "Anzeigen",
+        "Kategorien",
+        "Suche und Filter",
+        "Benutzerkonten",
+        "Nachrichten",
+        "Hervorgehobene Anzeigen",
+      ],
+    },
+    {
+      id: 33,
+      title: "CRM-Webanwendung",
+      image: "/images/web-categories/crm.png",
+      description:
+        "Individuelle CRM-Webanwendungen zur Verwaltung von Leads, Kunden, Verkaufspipelines, Aufgaben, Kommunikation und Berichten.",
+      features: [
+        "Lead-Management",
+        "Kundendatenbank",
+        "Verkaufspipeline",
+        "Aufgabenverwaltung",
+        "Analysen",
+        "Berichte",
+      ],
+    },
+    {
+      id: 34,
+      title: "ERP-Webanwendung",
+      image: "/images/web-categories/erp.png",
+      description:
+        "Unternehmens-Webanwendungen zur Integration von Geschäftsprozessen wie Finanzen, Personal, Lager, Vertrieb, Einkauf und Berichterstattung.",
+      features: [
+        "Personalverwaltung",
+        "Inventar",
+        "Finanzen",
+        "Einkauf",
+        "Berichte",
+        "Dashboard",
+      ],
+    },
+    {
+      id: 35,
+      title: "HRMS-Webanwendung",
+      image: "/images/web-categories/hrms.png",
+      description:
+        "Human-Resource-Management-Systeme für Mitarbeiterdaten, Anwesenheit, Urlaub, Gehaltsabrechnung, Recruiting und Personalverwaltung.",
+      features: [
+        "Mitarbeiterverwaltung",
+        "Anwesenheit",
+        "Urlaubsverwaltung",
+        "Gehaltsabrechnung",
+        "Recruiting",
+        "Berichte",
+      ],
+    },
+    {
+      id: 36,
+      title: "Inventarverwaltungssystem",
+      image: "/images/web-categories/inventory.png",
+      description:
+        "Webbasierte Inventarsysteme zur Verwaltung von Beständen, Einkäufen, Lieferanten, Lagern und Inventarberichten.",
+      features: [
+        "Bestandsverwaltung",
+        "Bestellungen",
+        "Lieferantenverwaltung",
+        "Lagerverwaltung",
+        "Bestandswarnungen",
+        "Berichte",
+      ],
+    },
+    {
+      id: 37,
+      title: "Krankenhausverwaltungssystem",
+      image: "/images/web-categories/hospital-management.png",
+      description:
+        "Komplette Krankenhausverwaltungssysteme für Patienten, Ärzte, Termine, Abrechnung, Abteilungen, Personal und Berichte.",
+      features: [
+        "Patientenverwaltung",
+        "Ärzteverwaltung",
+        "Termine",
+        "Abrechnung",
+        "Personalverwaltung",
+        "Berichte",
+      ],
+    },
+    {
+      id: 38,
+      title: "Schulverwaltungssystem",
+      image: "/images/web-categories/school-management.png",
+      description:
+        "Webbasierte Schulverwaltungssysteme zur Automatisierung von Schülerdaten, Anwesenheit, Gebühren, Prüfungen, Kommunikation und akademischen Abläufen.",
+      features: [
+        "Schülerverwaltung",
+        "Anwesenheit",
+        "Gebührenverwaltung",
+        "Prüfungen",
+        "Lehrer-Dashboard",
+        "Berichte",
+      ],
+    },
+    {
+      id: 39,
+      title: "Hochschulverwaltungssystem",
+      image: "/images/web-categories/college-management.png",
+      description:
+        "Komplette Hochschulverwaltungssysteme für Studenten, Dozenten, Abteilungen, Anwesenheit, Prüfungen, Gebühren und akademische Verwaltung.",
+      features: [
+        "Studentenverwaltung",
+        "Dozentenverwaltung",
+        "Abteilungen",
+        "Anwesenheit",
+        "Prüfungen",
+        "Berichte",
+      ],
+    },
+    {
+      id: 40,
+      title: "Abrechnungs- und POS-System",
+      image: "/images/web-categories/pos.png",
+      description:
+        "Point-of-Sale- und Abrechnungssysteme für Einzelhandel, Restaurants, Unternehmen und Dienstleister mit integrierter Bestandsverwaltung.",
+      features: [
+        "Abrechnung",
+        "Produktverwaltung",
+        "Inventar",
+        "Rechnungen",
+        "Verkaufsberichte",
+        "Kundenverwaltung",
+      ],
+    },
+    {
+      id: 41,
+      title: "Buchhaltungs-Webanwendung",
+      image: "/images/web-categories/accounting.png",
+      description:
+        "Buchhaltungsplattformen zur Verwaltung von Rechnungen, Ausgaben, Zahlungen, Kunden, Finanzdaten und Geschäftsberichten.",
+      features: [
+        "Rechnungen",
+        "Ausgaben",
+        "Zahlungen",
+        "Kunden",
+        "Finanzberichte",
+        "Dashboard",
+      ],
+    },
+    {
+      id: 42,
+      title: "Projektmanagementsystem",
+      image: "/images/web-categories/project-management.png",
+      description:
+        "Projektmanagement-Webanwendungen zur Planung von Projekten, Zuweisung von Aufgaben, Fortschrittsverfolgung, Teamverwaltung und Berichterstellung.",
+      features: [
+        "Projektverwaltung",
+        "Aufgabenverwaltung",
+        "Teamverwaltung",
+        "Deadlines",
+        "Fortschrittsverfolgung",
+        "Berichte",
+      ],
+    },
+    {
+      id: 43,
+      title: "Kundenportal",
+      image: "/images/web-categories/customer-portal.png",
+      description:
+        "Sichere Kundenportale, über die Benutzer auf Bestellungen, Rechnungen, Dokumente, Supportanfragen und Kontoinformationen zugreifen können.",
+      features: [
+        "Kunden-Login",
+        "Bestellungen",
+        "Rechnungen",
+        "Dokumente",
+        "Support-Tickets",
+        "Profilverwaltung",
+      ],
+    },
+    {
+      id: 44,
+      title: "Mitarbeiterportal",
+      image: "/images/web-categories/employee-portal.png",
+      description:
+        "Sichere Mitarbeiterportale für Unternehmensressourcen, Anwesenheit, Urlaubsanträge, Aufgaben, Dokumente und interne Informationen.",
+      features: [
+        "Mitarbeiter-Login",
+        "Anwesenheit",
+        "Urlaubsanträge",
+        "Aufgaben",
+        "Dokumente",
+        "Benachrichtigungen",
+      ],
+    },
+    {
+      id: 45,
+      title: "Entwicklung von Admin-Dashboards",
+      image: "/images/web-categories/admin-dashboard.png",
+      description:
+        "Leistungsstarke Administrations-Dashboards zur zentralen Verwaltung von Benutzern, Inhalten, Transaktionen, Analysen und Geschäftsprozessen.",
+      features: [
+        "Benutzerverwaltung",
+        "Analysen",
+        "Berichte",
+        "Rollenverwaltung",
+        "Datenverwaltung",
+        "Systemeinstellungen",
+      ],
+    },
+    {
+      id: 46,
+      title: "SaaS-Webanwendung",
+      image: "/images/web-categories/saas.png",
+      description:
+        "Skalierbare Software-as-a-Service-Plattformen mit Abonnementverwaltung, Benutzerkonten, Dashboards, Abrechnung und Cloud-Architektur.",
+      features: [
+        "Mandantenfähig",
+        "Abonnements",
+        "Benutzer-Dashboard",
+        "Zahlungen",
+        "Analysen",
+        "Cloud-Bereitstellung",
+      ],
+    },
+    {
+      id: 47,
+      title: "KI-gestützte Webanwendung",
+      image: "/images/web-categories/ai.png",
+      description:
+        "Intelligente Webanwendungen mit KI für Automatisierung, Content-Erstellung, Suche, Empfehlungen, Dokumentenverarbeitung und Geschäftsprozesse.",
+      features: [
+        "Künstliche Intelligenz",
+        "KI-Automatisierung",
+        "Intelligente Suche",
+        "Empfehlungen",
+        "Dokumentenverarbeitung",
+        "KI-Assistent",
+      ],
+    },
+    {
+      id: 48,
+      title: "KI-Chatbot-Website",
+      image: "/images/web-categories/chatbot.png",
+      description:
+        "KI-gestützte Chatbot-Lösungen für automatisierten Kundensupport, Fragenbeantwortung, Lead-Generierung und Unterstützung von Website-Besuchern.",
+      features: [
+        "KI-Chatbot",
+        "24/7-Support",
+        "Lead-Generierung",
+        "Wissensdatenbank",
+        "Live-Chat",
+        "Analysen",
+      ],
+    },
+    {
+      id: 49,
+      title: "Cloud-basierte Webanwendung",
+      image: "/images/web-categories/cloud.png",
+      description:
+        "Cloud-fähige Webanwendungen für Skalierbarkeit, sichere Datenspeicherung, Echtzeit-Synchronisierung, Verfügbarkeit und Fernzugriff.",
+      features: [
+        "Cloud-Speicher",
+        "Echtzeit-Synchronisierung",
+        "Backups",
+        "Skalierbare Architektur",
+        "Sicherheit",
+        "Hohe Verfügbarkeit",
+      ],
+    },
+    {
+      id: 50,
+      title: "Individuelle Webanwendung",
+      image: "/images/web-categories/custom-web.png",
+      description:
+        "Vollständig individuelle Webanwendungen, die auf Ihre Geschäftsprozesse, Anforderungen, Workflows, Benutzer und zukünftigen Wachstumspläne zugeschnitten sind.",
+      features: [
+        "100 % individuell",
+        "UI/UX-Design",
+        "Frontend-Entwicklung",
+        "Backend-Entwicklung",
+        "API-Integration",
+        "Bereitstellung",
+      ],
+    },
+  ],
+
+  industriesTitle: "Branchen, die wir bedienen",
+
+  industriesDescription:
+    "Wir entwickeln Websites und Webanwendungen für Startups, KMU, Konzerne, Behörden, Bildungseinrichtungen, Krankenhäuser, Einzelhändler, Dienstleister und Unternehmen aus verschiedenen Branchen.",
+
+  industries: [
+    {
+      title: "Gesundheitswesen",
+      icon: "🏥",
+      description:
+        "Krankenhaus-Websites, Gesundheitsportale, Terminverwaltung, Patientenplattformen, medizinische Websites und Verwaltungslösungen.",
+    },
+    {
+      title: "Bildung",
+      icon: "🎓",
+      description:
+        "Schulwebsites, Hochschulportale, LMS-Plattformen, Online-Lernsysteme, Studentenverwaltung und Bildungsplattformen.",
+    },
+    {
+      title: "Einzelhandel und E-Commerce",
+      icon: "🛒",
+      description:
+        "Online-Shops, Marktplätze, Produktkataloge, Inventarsysteme, Zahlungslösungen und E-Commerce-Plattformen.",
+    },
+    {
+      title: "Finanzen",
+      icon: "💳",
+      description:
+        "Finanz-Dashboards, Zahlungsplattformen, Buchhaltungssysteme, Abrechnungsanwendungen, Fintech-Portale und Unternehmenslösungen.",
+    },
+    {
+      title: "Gastgewerbe",
+      icon: "🏨",
+      description:
+        "Hotel-Websites, Buchungssysteme, Restaurant-Websites, Reservierungsplattformen, Reiseportale und Hospitality-Lösungen.",
+    },
+    {
+      title: "Transport",
+      icon: "🚖",
+      description:
+        "Transport-Websites, Fuhrparkverwaltung, Logistikplattformen, Kurier-Systeme, Buchungsplattformen und Tracking-Lösungen.",
+    },
+    {
+      title: "Immobilien",
+      icon: "🏠",
+      description:
+        "Immobilienportale, Maklerplattformen, Immobilienverwaltungssysteme und CRM-Lösungen für die Immobilienbranche.",
+    },
+    {
+      title: "Produktion",
+      icon: "🏭",
+      description:
+        "Produktionsverwaltung, Inventarsysteme, Lieferkettenplattformen, Mitarbeiterverwaltung, Berichte und Workflow-Automatisierung.",
+    },
+    {
+      title: "Unterhaltung",
+      icon: "🎬",
+      description:
+        "Streaming-Plattformen, Medienwebsites, Content-Portale, Community-Plattformen und digitale Unterhaltungslösungen.",
+    },
+    {
+      title: "Startups",
+      icon: "🚀",
+      description:
+        "Startup-Websites, MVP-Entwicklung, SaaS-Produkte, individuelle Webanwendungen, Landingpages und skalierbare digitale Plattformen.",
+    },
+    {
+      title: "Landwirtschaft",
+      icon: "🌾",
+      description:
+        "Landwirtschaftsportale, Farmmanagementsysteme, Marktplätze, Ernteverwaltung, Wetterinformationen und Agrarlösungen.",
+    },
+    {
+      title: "Unternehmen",
+      icon: "🏢",
+      description:
+        "Individuelle ERP-, CRM- und HRMS-Systeme, Mitarbeiterportale, Workflow-Automatisierung, Analyse-Dashboards und Unternehmensanwendungen.",
+    },
+  ],
+
+  technologiesTitle: "Von uns eingesetzte Technologien",
+
+  technologiesDescription:
+    "Unsere Entwickler verwenden moderne Technologien, sichere Architekturen und bewährte Entwicklungsstandards, um schnelle, skalierbare, responsive und zuverlässige Websites und Webanwendungen für Startups, Unternehmen und Konzerne zu entwickeln.",
+
+  technologies: [
+    {
+      category: "Frontend",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "Bootstrap 5",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Node.js",
+        "Express.js",
+        "PHP",
+        "Laravel",
+        "REST API",
+        "JWT-Authentifizierung",
+        "Socket.IO",
+        "Multer",
+      ],
+    },
+    {
+      category: "Datenbank",
+      items: [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite",
+        "Firebase",
+      ],
+    },
+    {
+      category: "Server",
+      items: [
+        "Ubuntu Server",
+        "VPS-Hosting",
+        "Nginx",
+        "Apache",
+        "PM2",
+        "SSL",
+        "Linux",
+      ],
+    },
+    {
+      category: "Bereitstellung",
+      items: [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "CI/CD",
+        "Domain-Konfiguration",
+        "DNS-Verwaltung",
+      ],
+    },
+    {
+      category: "Integrationen",
+      items: [
+        "Google Maps",
+        "Firebase",
+        "PayPal",
+        "Razorpay",
+        "Stripe",
+        "WhatsApp",
+        "YouTube API",
+      ],
+    },
+    {
+      category: "Sicherheit",
+      items: [
+        "HTTPS",
+        "JWT",
+        "bcrypt",
+        "Rollenbasierte Zugriffskontrolle",
+        "API-Sicherheit",
+        "Datenverschlüsselung",
+      ],
+    },
+    {
+      category: "KI-Lösungen",
+      items: [
+        "OpenAI",
+        "KI-Chatbot",
+        "OCR",
+        "Bildverarbeitung",
+        "Spracherkennung",
+        "Automatisierung",
+      ],
+    },
+  ],
+
+  whyUsTitle: "Warum CH TECH GIANT",
+
+  whyUsDescription:
+    "Wir verbinden moderne Technologien, kreative Designprinzipien, sichere Entwicklungspraktiken und geschäftsorientierte Strategien, um zuverlässige Websites und Webanwendungen zu entwickeln, die Unternehmen beim Wachstum unterstützen.",
+
+  whyChooseUs: [
+    {
+      title: "Individuelle Weblösungen",
+      icon: "🌐",
+      description:
+        "Jede Website und Webanwendung wird speziell auf Ihre Geschäftsziele, Zielgruppe, Arbeitsabläufe und Branchenanforderungen zugeschnitten.",
+    },
+    {
+      title: "Skalierbare Architektur",
+      icon: "🚀",
+      description:
+        "Unsere Websites und Webanwendungen werden mit Blick auf zukünftiges Wachstum entwickelt, sodass Ihre Plattform mit Ihrem Unternehmen wachsen kann.",
+    },
+    {
+      title: "Modernes UI/UX",
+      icon: "🎨",
+      description:
+        "Schöne, intuitive, responsive und conversion-orientierte Benutzeroberflächen für eine hervorragende Nutzung auf Desktop, Tablet und Smartphone.",
+    },
+    {
+      title: "Hohe Performance",
+      icon: "⚡",
+      description:
+        "Optimierter Code, effiziente Architektur, schnelle Ladezeiten und performanceorientierte Entwicklung sorgen für ein reibungsloses Web-Erlebnis.",
+    },
+    {
+      title: "Sichere Entwicklung",
+      icon: "🔒",
+      description:
+        "Branchenübliche Sicherheitspraktiken wie Authentifizierung, Autorisierung, Verschlüsselung, sichere APIs, Validierung und Schutz von Benutzerdaten.",
+    },
+    {
+      title: "API-Integration",
+      icon: "🔗",
+      description:
+        "Nahtlose Integration von Zahlungsanbietern, Karten, Messaging-Diensten, CRMs, ERPs, Analyseplattformen und Drittanbieter-APIs.",
+    },
+    {
+      title: "Self-Hosted-Bereitstellung",
+      icon: "🖥️",
+      description:
+        "Websites und Anwendungen können auf Ihrem eigenen VPS oder dedizierten Server bereitgestellt werden, sodass Sie vollständige Kontrolle und Eigentum behalten.",
+    },
+    {
+      title: "Langfristiger Support",
+      icon: "🛠️",
+      description:
+        "Kontinuierliche Wartung, Überwachung, Funktionserweiterungen, Sicherheitsupdates, Backups, Performance-Optimierung und technischer Support.",
+    },
+  ],
+
+  stats: [
+    "Weblösungen",
+    "Individuelle Entwicklung",
+    "Technischer Support",
+    "Innovation & Wachstum",
+  ],
+
+  processTitle: "Unser Webentwicklungsprozess",
+
+  process: [
+    "Analyse",
+    "UI/UX-Design",
+    "Entwicklung",
+    "Testing",
+    "Launch",
+  ],
+
+  seoTitle: "Professionelle Webentwicklungslösungen",
+
+  seoContent: [
+    "Eine professionelle Website ist heute ein wesentlicher Bestandteil jedes modernen Unternehmens. CH TECH GIANT entwickelt individuelle Websites und Webanwendungen, die Unternehmen dabei unterstützen, eine starke Online-Präsenz aufzubauen, Kunden zu erreichen, Leads zu generieren, Geschäftsprozesse zu automatisieren und den Umsatz zu steigern.",
+
+    "Unser Webentwicklungsteam verwendet moderne Technologien wie HTML5, CSS3, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, Cloud-Plattformen, VPS-Server und sichere API-Integrationen, um schnelle, responsive, skalierbare und zuverlässige digitale Lösungen zu entwickeln. Jedes Projekt wird mit Fokus auf Performance, Benutzerfreundlichkeit, Sicherheit, Wartbarkeit und zukünftiges Wachstum entwickelt.",
+
+    "Von Unternehmenswebsites und E-Commerce-Plattformen bis hin zu Lösungen für Gesundheitswesen, Bildung, Immobilien, Gastgewerbe, Logistik, CRM, ERP, SaaS, KI-Anwendungen und Unternehmen unterstützt CH TECH GIANT Organisationen dabei, ihre Ideen in leistungsstarke Weblösungen umzusetzen. Wir bieten außerdem Bereitstellung, Hosting-Support, Wartung, Sicherheitsupdates, Performance-Optimierung und langfristige technische Unterstützung.",
+  ],
+
+  faqTitle: "Häufig gestellte Fragen",
+
+  faq: [
+    {
+      question: "Wie viel kostet die Entwicklung einer Website?",
+      answer:
+        "Die Kosten hängen von der Art der Website, der Anzahl der Seiten, den Funktionen, den Designanforderungen, Integrationen, Backend-Funktionen und der allgemeinen Projektkomplexität ab. Wir erstellen individuelle Angebote auf Grundlage Ihrer Anforderungen.",
+    },
+    {
+      question: "Wie lange dauert die Entwicklung einer Website?",
+      answer:
+        "Die Entwicklungsdauer hängt vom Umfang und der Komplexität des Projekts ab. Eine einfache Unternehmenswebsite kann schneller fertiggestellt werden, während E-Commerce-Plattformen und individuelle Webanwendungen mehr Entwicklungs- und Testzeit benötigen können.",
+    },
+    {
+      question: "Entwickeln Sie individuelle Websites?",
+      answer:
+        "Ja. Wir entwickeln vollständig individuelle Websites und Webanwendungen entsprechend Ihren Geschäftsanforderungen, Ihrer Zielgruppe, Ihren Arbeitsabläufen, Ihrem Branding und Ihren zukünftigen Wachstumsplänen.",
+    },
+    {
+      question: "Entwickeln Sie E-Commerce-Websites?",
+      answer:
+        "Ja. Wir entwickeln E-Commerce-Websites mit Produktverwaltung, Warenkorb, Zahlungs-Gateways, Kundenkonten, Bestellverwaltung, Inventar, Gutscheinen und Admin-Dashboards.",
+    },
+    {
+      question: "Entwickeln Sie Webanwendungen?",
+      answer:
+        "Ja. Wir entwickeln individuelle Webanwendungen wie CRM, ERP, LMS, Krankenhausverwaltungssysteme, Schulverwaltungssysteme, Inventarsysteme, SaaS-Plattformen, Dashboards, Portale und andere Geschäftsanwendungen.",
+    },
+    {
+      question: "Ist die Website für Mobilgeräte optimiert?",
+      answer:
+        "Ja. Unsere Websites funktionieren auf Desktop-Computern, Laptops, Tablets und Smartphones mit responsiven Layouts und modernen Benutzeroberflächen.",
+    },
+    {
+      question: "Können Sie Zahlungs-Gateways integrieren?",
+      answer:
+        "Ja. Wir können Zahlungs-Gateways und Zahlungsdienste wie Razorpay, PayPal, Stripe und andere unterstützte Zahlungsplattformen entsprechend den Projektanforderungen integrieren.",
+    },
+    {
+      question: "Bieten Sie Hosting und Bereitstellung an?",
+      answer:
+        "Ja. Wir unterstützen bei Domain-Konfiguration, DNS-Einrichtung, VPS-Bereitstellung, SSL-Zertifikaten, Serverkonfiguration, Anwendungsbereitstellung und Produktionssetup.",
+    },
+    {
+      question: "Entwickeln Sie SEO-freundliche Websites?",
+      answer:
+        "Ja. Wir entwickeln Websites mit SEO-freundlichen Strukturen, einschließlich optimierter Metadaten, semantischem HTML, responsiven Layouts, sauberen URLs, Performance-Optimierung, Sitemap-Unterstützung und suchmaschinenfreundlichen Inhaltsstrukturen.",
+    },
+    {
+      question: "Bieten Sie Website-Wartung und Support an?",
+      answer:
+        "Ja. Wir bieten laufende Wartung, Fehlerbehebungen, Sicherheitsupdates, Performance-Optimierung, Überwachung, inhaltliche Änderungen, Funktionserweiterungen und technischen Support nach dem Launch.",
+    },
+  ],
+
+  ctaTitle: "Bereit, Ihre Website zu entwickeln?",
+
+  ctaDescription:
+    "Arbeiten Sie mit CH TECH GIANT zusammen, um Ihre Idee in eine leistungsstarke, moderne, sichere und skalierbare Website oder Webanwendung zu verwandeln.",
+
+  ctaButton: "Kostenlose Beratung",
+
+  customDevelopment: "Individuelle Entwicklung",
+
+  getQuote: "Angebot erhalten",
+
+  metaTitle:
+    "Webentwicklungsunternehmen | Website- und Webanwendungsentwicklung | CH TECH GIANT",
+
+  metaDescription:
+    "CH TECH GIANT bietet individuelle Website-Entwicklung, Unternehmenswebsites, E-Commerce-Entwicklung, Webanwendungen, CMS-Entwicklung, responsives Webdesign, UI/UX-Design, API-Integration und individuelle Softwarelösungen.",
+
+  metaKeywords:
+    "Webentwicklungsunternehmen, Website-Entwicklung, Webentwicklungsdienstleistungen, individuelle Website-Entwicklung, Webanwendungsentwicklung, E-Commerce-Website-Entwicklung, Unternehmenswebsite-Entwicklung, responsives Webdesign, Webentwicklung in Davangere, Webentwicklungsunternehmen in Karnataka, Webentwicklungsunternehmen in Indien",
+},
 
 };
 export default de;
