@@ -1867,6 +1867,1179 @@ info@chtechgiant.com
       "info@chtechgiant.com",
   },
 },
+webDevelopment: {
+  bannerTitle: "网站开发",
+
+  bannerSubtitle:
+    "为初创企业、企业和组织开发现代化、可扩展、安全且高性能的网站和Web应用程序。",
+
+  heroTitle: "定制网站开发",
+
+  heroDescription1:
+    "CH TECH GIANT 专注于开发现代化、高性能的网站和Web应用程序，帮助企业建立强大的在线形象、获取客户、自动化业务流程并提升收入。我们的开发团队根据您的业务需求，构建响应式、安全、可扩展且高性能的数字解决方案。",
+
+  heroDescription2:
+    "无论您需要专业的企业网站、电子商务网站、定制Web应用程序、业务管理系统、SaaS产品，还是完全定制的数字解决方案，我们都能提供可靠且面向长期发展的Web解决方案。",
+
+  features: [
+    "定制网站开发",
+    "企业网站开发",
+    "电子商务开发",
+    "Web应用程序开发",
+    "CMS开发",
+    "响应式网站设计",
+    "UI/UX设计",
+    "后端与API集成",
+  ],
+
+  whyChooseTitle: "为什么选择 CH TECH GIANT",
+
+  heroBenefits: [
+    "定制网站和Web应用程序开发",
+    "现代化响应式UI/UX设计",
+    "可扩展且高性能的架构",
+    "安全的后端和API集成",
+    "电子商务和支付系统集成",
+    "SEO友好的网站开发",
+    "VPS和云端部署",
+    "长期技术支持与维护",
+  ],
+
+  servicesTitle: "网站开发服务",
+
+  servicesDescription:
+    "为初创企业、中小企业、大型企业和成长型企业提供全面的网站开发解决方案。",
+
+  services: [
+    {
+      title: "定制网站开发",
+      description:
+        "根据您的业务目标、品牌、目标用户和具体需求，从零开始开发专业的网站。",
+    },
+    {
+      title: "企业网站开发",
+      description:
+        "开发现代化、响应式的企业网站，帮助企业建立强大的在线形象、获取潜在客户并提升客户信任。",
+    },
+    {
+      title: "电子商务网站开发",
+      description:
+        "开发具有产品目录、购物车、安全支付、订单管理和客户账户功能的在线商店。",
+    },
+    {
+      title: "Web应用程序开发",
+      description:
+        "开发强大且可扩展的Web应用程序，用于自动化业务流程、数据管理和定制数字体验。",
+    },
+    {
+      title: "CMS开发",
+      description:
+        "开发灵活的内容管理解决方案，让企业能够轻松管理网页、产品、博客、媒体和网站内容。",
+    },
+    {
+      title: "网站维护与支持",
+      description:
+        "提供持续维护、安全更新、错误修复、性能优化、备份和技术支持。",
+    },
+  ],
+
+  webSolutionsTitle: "我们开发的Web解决方案",
+
+  webSolutionsDescription:
+    "我们为不同的行业、商业模式和组织需求开发现代化网站和高性能Web应用程序。从专业企业网站和电子商务平台，到业务管理系统、SaaS产品和定制Web应用程序，我们专注于性能、安全性、可扩展性和长期发展。",
+
+  webCategories: [
+    {
+      id: 1,
+      title: "商业网站开发",
+      image: "/images/web-categories/business.png",
+      description:
+        "帮助企业建立强大的数字形象、展示服务、获取潜在客户并提高客户信任的专业商业网站。",
+      features: [
+        "专业设计",
+        "响应式设计",
+        "服务页面",
+        "潜在客户获取",
+        "联系表单",
+        "SEO优化",
+      ],
+    },
+    {
+      id: 2,
+      title: "企业网站开发",
+      image: "/images/web-categories/corporate.png",
+      description:
+        "为企业、组织和大型公司开发现代化企业网站，支持专业品牌展示、可扩展结构和内容管理。",
+      features: [
+        "企业品牌展示",
+        "公司简介",
+        "服务管理",
+        "团队介绍",
+        "投资者信息",
+        "CMS集成",
+      ],
+    },
+    {
+      id: 3,
+      title: "作品集网站开发",
+      image: "/images/web-categories/portfolio.png",
+      description:
+        "为个人、设计师、开发人员、摄影师、代理机构和专业人士开发创意作品集网站。",
+      features: [
+        "项目展示",
+        "作品画廊",
+        "响应式设计",
+        "动画效果",
+        "联系表单",
+        "社交媒体集成",
+      ],
+    },
+    {
+      id: 4,
+      title: "电子商务网站开发",
+      image: "/images/web-categories/ecommerce.png",
+      description:
+        "开发具有产品管理、购物车、安全支付、订单跟踪和客户账户功能的完整电子商务平台。",
+      features: [
+        "产品目录",
+        "购物车",
+        "安全支付",
+        "订单跟踪",
+        "客户账户",
+        "管理员后台",
+      ],
+    },
+    {
+      id: 5,
+      title: "在线商店开发",
+      image: "/images/web-categories/online-store.png",
+      description:
+        "开发具有产品搜索、结账、促销活动和订单管理功能的现代在线商店。",
+      features: [
+        "产品搜索",
+        "产品分类",
+        "收藏列表",
+        "优惠券",
+        "支付",
+        "订单历史",
+      ],
+    },
+    {
+      id: 6,
+      title: "多商户市场平台",
+      image: "/images/web-categories/marketplace.png",
+      description:
+        "开发连接多个卖家和客户的可扩展市场平台，包括卖家后台、佣金、订单管理和分析功能。",
+      features: [
+        "卖家管理",
+        "卖家后台",
+        "买家后台",
+        "佣金系统",
+        "订单管理",
+        "数据分析",
+      ],
+    },
+    {
+      id: 7,
+      title: "房地产网站",
+      image: "/images/web-categories/real-estate.png",
+      description:
+        "为房地产公司、经纪人、开发商和房产所有者开发具有高级搜索和位置功能的房地产平台。",
+      features: [
+        "房产发布",
+        "高级搜索",
+        "地图集成",
+        "经纪人资料",
+        "房产图库",
+        "联系表单",
+      ],
+    },
+    {
+      id: 8,
+      title: "酒店预订网站",
+      image: "/images/web-categories/hotel.png",
+      description:
+        "为酒店和度假村开发包含客房信息、房态、预订系统、在线支付和客户服务功能的网站。",
+      features: [
+        "客房管理",
+        "预订系统",
+        "房态管理",
+        "在线支付",
+        "客户管理",
+        "管理员后台",
+      ],
+    },
+    {
+      id: 9,
+      title: "餐厅网站",
+      image: "/images/web-categories/restaurant.png",
+      description:
+        "开发现代餐厅网站，展示菜单、位置、预订、在线点餐、促销活动和客户评价。",
+      features: [
+        "数字菜单",
+        "在线点餐",
+        "预订",
+        "图片展示",
+        "客户评价",
+        "联系功能",
+      ],
+    },
+    {
+      id: 10,
+      title: "外卖配送网站",
+      image: "/images/web-categories/food-delivery.png",
+      description:
+        "开发连接客户、餐厅和配送人员的外卖平台，支持订单、支付、配送跟踪和管理功能。",
+      features: [
+        "餐厅列表",
+        "在线点餐",
+        "实时跟踪",
+        "在线支付",
+        "配送管理",
+        "订单管理",
+      ],
+    },
+    {
+      id: 11,
+      title: "杂货配送网站",
+      image: "/images/web-categories/grocery.png",
+      description:
+        "开发具有产品目录、库存管理、购物车、配送时间安排和安全支付功能的在线杂货平台。",
+      features: [
+        "产品分类",
+        "购物车",
+        "库存管理",
+        "配送时间安排",
+        "支付",
+        "订单跟踪",
+      ],
+    },
+    {
+      id: 12,
+      title: "医疗网站",
+      image: "/images/web-categories/healthcare.png",
+      description:
+        "为医院、诊所、医生和医疗机构开发安全、现代化的网站和数字医疗服务平台。",
+      features: [
+        "医生资料",
+        "预约",
+        "患者信息",
+        "医疗服务",
+        "联系表单",
+        "管理员后台",
+      ],
+    },
+    {
+      id: 13,
+      title: "医院网站",
+      image: "/images/web-categories/hospital.png",
+      description:
+        "开发专业医院网站，包含科室、医生资料、预约、医疗服务和患者信息。",
+      features: [
+        "科室管理",
+        "医生资料",
+        "预约",
+        "患者信息",
+        "紧急信息",
+        "管理员后台",
+      ],
+    },
+    {
+      id: 14,
+      title: "医疗机构网站",
+      image: "/images/web-categories/medical.png",
+      description:
+        "为医生、诊所、专科医生和医疗服务提供商开发现代化网站，支持服务展示和预约功能。",
+      features: [
+        "医生资料",
+        "医疗服务",
+        "预约",
+        "患者咨询",
+        "患者评价",
+        "联系表单",
+      ],
+    },
+    {
+      id: 15,
+      title: "教育网站",
+      image: "/images/web-categories/education.png",
+      description:
+        "为学校、大学、教育机构和培训机构开发教育网站，支持课程、招生、学习资料和学生服务。",
+      features: [
+        "课程信息",
+        "招生信息",
+        "教育资源",
+        "教师资料",
+        "活动",
+        "在线表单",
+      ],
+    },
+    {
+      id: 16,
+      title: "大学网站",
+      image: "/images/web-categories/college.png",
+      description:
+        "开发包含院系、课程、教师信息、招生信息、公告、活动和学习资源的大学网站。",
+      features: [
+        "院系",
+        "课程",
+        "教师",
+        "招生",
+        "公告",
+        "学生门户",
+      ],
+    },
+    {
+      id: 17,
+      title: "学校网站",
+      image: "/images/web-categories/school.png",
+      description:
+        "开发现代学校网站，展示学校信息、招生、公告、活动、教师资料和家长资源。",
+      features: [
+        "学校信息",
+        "招生信息",
+        "教师信息",
+        "活动",
+        "公告",
+        "家长资源",
+      ],
+    },
+    {
+      id: 18,
+      title: "学习管理系统（LMS）",
+      image: "/images/web-categories/lms.png",
+      description:
+        "开发用于管理课程、学习内容、考试、学生和学习进度的完整LMS平台。",
+      features: [
+        "课程管理",
+        "学生管理",
+        "在线考试",
+        "在线测验",
+        "学习进度",
+        "管理员后台",
+      ],
+    },
+    {
+      id: 19,
+      title: "招聘门户网站",
+      image: "/images/web-categories/job-portal.png",
+      description:
+        "通过职位发布、求职申请、简历、企业后台和通知功能连接企业与求职者。",
+      features: [
+        "职位发布",
+        "简历上传",
+        "职位搜索",
+        "企业后台",
+        "申请管理",
+        "职位通知",
+      ],
+    },
+    {
+      id: 20,
+      title: "招聘管理网站",
+      image: "/images/web-categories/recruitment.png",
+      description:
+        "开发用于管理候选人、职位、面试、申请和招聘流程的定制招聘平台。",
+      features: [
+        "候选人管理",
+        "职位管理",
+        "简历管理",
+        "面试安排",
+        "招聘人员后台",
+        "招聘报告",
+      ],
+    },
+    {
+      id: 21,
+      title: "新闻与杂志网站",
+      image: "/images/web-categories/news.png",
+      description:
+        "开发快速的新闻和杂志网站，支持分类、文章、搜索、作者、媒体图库和内容发布管理。",
+      features: [
+        "新闻分类",
+        "文章管理",
+        "作者资料",
+        "搜索",
+        "媒体图库",
+        "CMS",
+      ],
+    },
+    {
+      id: 22,
+      title: "博客网站开发",
+      image: "/images/web-categories/blog.png",
+      description:
+        "为企业、出版商、内容创作者和个人开发SEO友好的博客平台。",
+      features: [
+        "博客管理",
+        "分类",
+        "标签",
+        "评论",
+        "SEO优化",
+        "搜索",
+      ],
+    },
+    {
+      id: 23,
+      title: "会员制网站",
+      image: "/images/web-categories/membership.png",
+      description:
+        "开发支持用户注册、会员计划、受保护内容、个人资料、支付和会员管理的会员平台。",
+      features: [
+        "用户注册",
+        "会员计划",
+        "专属内容",
+        "订阅",
+        "会员后台",
+        "支付",
+      ],
+    },
+    {
+      id: 24,
+      title: "社区网站",
+      image: "/images/web-categories/community.png",
+      description:
+        "开发互动社区平台，让用户创建个人资料、参与讨论、加入群组并分享内容。",
+      features: [
+        "用户资料",
+        "讨论论坛",
+        "群组",
+        "消息系统",
+        "通知",
+        "内容审核",
+      ],
+    },
+    {
+      id: 25,
+      title: "社交网络平台",
+      image: "/images/web-categories/social.png",
+      description:
+        "开发具有用户资料、帖子、信息流、消息、社区、通知和实时互动功能的社交网络平台。",
+      features: [
+        "用户资料",
+        "新闻动态",
+        "帖子",
+        "私信",
+        "社区",
+        "通知",
+      ],
+    },
+    {
+      id: 26,
+      title: "论坛开发",
+      image: "/images/web-categories/forum.png",
+      description:
+        "开发具有主题、讨论、用户资料、内容审核、搜索和社区功能的知识共享平台。",
+      features: [
+        "讨论主题",
+        "分类",
+        "用户资料",
+        "内容审核",
+        "搜索",
+        "通知",
+      ],
+    },
+    {
+      id: 27,
+      title: "活动管理网站",
+      image: "/images/web-categories/event.png",
+      description:
+        "为会议、研讨会、展览和公共活动开发支持报名、门票、日程和参与者管理的网站。",
+      features: [
+        "活动报名",
+        "门票预订",
+        "活动日程",
+        "演讲者资料",
+        "参与者管理",
+        "通知",
+      ],
+    },
+    {
+      id: 28,
+      title: "预订与预约网站",
+      image: "/images/web-categories/booking.png",
+      description:
+        "为酒店、服务、活动、旅行和其他企业开发在线预订平台，并支持实时可用性。",
+      features: [
+        "在线预订",
+        "可用性",
+        "日历",
+        "支付",
+        "通知",
+        "客户后台",
+      ],
+    },
+    {
+      id: 29,
+      title: "预约管理网站",
+      image: "/images/web-categories/appointment.png",
+      description:
+        "为医生、顾问、美容院、专业人士和服务企业开发基于日历的预约和时间管理网站。",
+      features: [
+        "预约",
+        "日历",
+        "可用时间",
+        "提醒",
+        "在线支付",
+        "预约修改",
+      ],
+    },
+    {
+      id: 30,
+      title: "服务行业网站",
+      image: "/images/web-categories/services.png",
+      description:
+        "为代理机构、顾问、维修公司、承包商和专业服务企业开发以潜在客户获取为重点的网站。",
+      features: [
+        "服务页面",
+        "潜在客户表单",
+        "预约",
+        "客户评价",
+        "图片展示",
+        "联系集成",
+      ],
+    },
+    {
+      id: 31,
+      title: "目录网站",
+      image: "/images/web-categories/directory.png",
+      description:
+        "开发具有分类、搜索、筛选、地图、评价和用户注册功能的企业和服务目录平台。",
+      features: [
+        "企业列表",
+        "分类",
+        "高级搜索",
+        "地图",
+        "评价",
+        "用户注册",
+      ],
+    },
+    {
+      id: 32,
+      title: "分类信息网站",
+      image: "/images/web-categories/classifieds.png",
+      description:
+        "开发允许用户发布、搜索和管理广告，并与卖家联系的分类信息平台。",
+      features: [
+        "广告发布",
+        "分类",
+        "搜索与筛选",
+        "用户账户",
+        "消息系统",
+        "置顶广告",
+      ],
+    },
+    {
+      id: 33,
+      title: "CRM Web应用程序",
+      image: "/images/web-categories/crm.png",
+      description:
+        "开发用于管理潜在客户、客户、销售流程、任务、沟通和报告的定制CRM Web应用程序。",
+      features: [
+        "潜在客户管理",
+        "客户数据库",
+        "销售流程",
+        "任务管理",
+        "数据分析",
+        "报告",
+      ],
+    },
+    {
+      id: 34,
+      title: "ERP Web应用程序",
+      image: "/images/web-categories/erp.png",
+      description:
+        "开发用于整合财务、人力资源、库存、销售、采购和报告等业务流程的企业Web应用程序。",
+      features: [
+        "人力资源管理",
+        "库存管理",
+        "财务管理",
+        "采购管理",
+        "报告",
+        "数据仪表板",
+      ],
+    },
+    {
+      id: 35,
+      title: "HRMS Web应用程序",
+      image: "/images/web-categories/hrms.png",
+      description:
+        "开发用于管理员工、考勤、休假、工资、招聘和人力资源流程的人力资源管理系统。",
+      features: [
+        "员工管理",
+        "考勤管理",
+        "休假管理",
+        "工资管理",
+        "招聘管理",
+        "报告",
+      ],
+    },
+    {
+      id: 36,
+      title: "库存管理系统",
+      image: "/images/web-categories/inventory.png",
+      description:
+        "开发用于管理库存、采购、供应商、仓库和库存报告的Web库存管理系统。",
+      features: [
+        "库存管理",
+        "订单管理",
+        "供应商管理",
+        "仓库管理",
+        "库存提醒",
+        "报告",
+      ],
+    },
+    {
+      id: 37,
+      title: "医院管理系统",
+      image: "/images/web-categories/hospital-management.png",
+      description:
+        "开发用于管理患者、医生、预约、账单、科室、员工和报告的综合医院管理系统。",
+      features: [
+        "患者管理",
+        "医生管理",
+        "预约",
+        "账单",
+        "员工管理",
+        "报告",
+      ],
+    },
+    {
+      id: 38,
+      title: "学校管理系统",
+      image: "/images/web-categories/school-management.png",
+      description:
+        "开发用于管理学生、考勤、学费、考试、沟通和教育运营的Web学校管理系统。",
+      features: [
+        "学生管理",
+        "考勤管理",
+        "学费管理",
+        "考试管理",
+        "教师后台",
+        "报告",
+      ],
+    },
+    {
+      id: 39,
+      title: "大学管理系统",
+      image: "/images/web-categories/college-management.png",
+      description:
+        "开发用于管理学生、教师、院系、考勤、考试、学费和教育运营的大学管理系统。",
+      features: [
+        "学生管理",
+        "教师管理",
+        "院系管理",
+        "考勤管理",
+        "考试管理",
+        "报告",
+      ],
+    },
+    {
+      id: 40,
+      title: "账单与POS系统",
+      image: "/images/web-categories/pos.png",
+      description:
+        "为零售店、餐厅、企业和服务行业开发POS及账单系统，并支持库存管理集成。",
+      features: [
+        "账单生成",
+        "产品管理",
+        "库存管理",
+        "发票",
+        "销售报告",
+        "客户管理",
+      ],
+    },
+    {
+      id: 41,
+      title: "会计Web应用程序",
+      image: "/images/web-categories/accounting.png",
+      description:
+        "开发用于管理发票、费用、付款、客户、财务数据和企业报告的会计平台。",
+      features: [
+        "发票",
+        "费用",
+        "付款",
+        "客户",
+        "财务报告",
+        "数据仪表板",
+      ],
+    },
+    {
+      id: 42,
+      title: "项目管理系统",
+      image: "/images/web-categories/project-management.png",
+      description:
+        "开发用于项目规划、任务分配、进度跟踪、团队管理和报告的Web项目管理应用程序。",
+      features: [
+        "项目管理",
+        "任务管理",
+        "团队管理",
+        "截止日期管理",
+        "进度跟踪",
+        "报告",
+      ],
+    },
+    {
+      id: 43,
+      title: "客户门户",
+      image: "/images/web-categories/customer-portal.png",
+      description:
+        "开发安全的客户门户，让客户可以访问订单、发票、文件、支持请求和账户信息。",
+      features: [
+        "客户登录",
+        "订单",
+        "发票",
+        "文件",
+        "支持工单",
+        "个人资料管理",
+      ],
+    },
+    {
+      id: 44,
+      title: "员工门户",
+      image: "/images/web-categories/employee-portal.png",
+      description:
+        "开发安全的员工门户，让员工可以访问公司资源、考勤、休假、任务、文件和内部信息。",
+      features: [
+        "员工登录",
+        "考勤",
+        "休假申请",
+        "任务",
+        "文件",
+        "通知",
+      ],
+    },
+    {
+      id: 45,
+      title: "管理员仪表板开发",
+      image: "/images/web-categories/admin-dashboard.png",
+      description:
+        "开发功能强大的管理员仪表板，用于集中管理用户、内容、交易、分析和业务流程。",
+      features: [
+        "用户管理",
+        "数据分析",
+        "报告",
+        "角色管理",
+        "数据管理",
+        "系统设置",
+      ],
+    },
+    {
+      id: 46,
+      title: "SaaS Web应用程序",
+      image: "/images/web-categories/saas.png",
+      description:
+        "开发具有订阅管理、用户账户、仪表板、账单和云架构的可扩展SaaS平台。",
+      features: [
+        "多租户",
+        "订阅管理",
+        "用户仪表板",
+        "支付",
+        "数据分析",
+        "云端部署",
+      ],
+    },
+    {
+      id: 47,
+      title: "AI Web应用程序",
+      image: "/images/web-categories/ai.png",
+      description:
+        "开发使用AI进行自动化、内容生成、搜索、推荐、文档处理和业务流程优化的智能Web应用程序。",
+      features: [
+        "人工智能",
+        "AI自动化",
+        "智能搜索",
+        "推荐系统",
+        "文档处理",
+        "AI助手",
+      ],
+    },
+    {
+      id: 48,
+      title: "AI聊天机器人网站",
+      image: "/images/web-categories/chatbot.png",
+      description:
+        "开发用于自动客户支持、回答问题、获取潜在客户和帮助网站访客的AI聊天机器人解决方案。",
+      features: [
+        "AI聊天机器人",
+        "全天候支持",
+        "潜在客户获取",
+        "知识库",
+        "在线聊天",
+        "数据分析",
+      ],
+    },
+    {
+      id: 49,
+      title: "云端Web应用程序",
+      image: "/images/web-categories/cloud.png",
+      description:
+        "开发支持可扩展性、安全存储、实时同步、高可用性和远程访问的云端Web应用程序。",
+      features: [
+        "云存储",
+        "实时同步",
+        "数据备份",
+        "可扩展架构",
+        "安全性",
+        "高可用性",
+      ],
+    },
+    {
+      id: 50,
+      title: "定制Web应用程序",
+      image: "/images/web-categories/custom-web.png",
+      description:
+        "根据您的业务流程、需求、工作流、用户和未来发展计划，开发完全定制的Web应用程序。",
+      features: [
+        "完全定制开发",
+        "UI/UX设计",
+        "前端开发",
+        "后端开发",
+        "API集成",
+        "部署",
+      ],
+    },
+  ],
+
+  industriesTitle: "服务行业",
+
+  industriesDescription:
+    "我们为初创企业、中小企业、大型企业、教育机构、医院、零售商店和服务企业等多个行业开发网站和Web应用程序。",
+
+  industries: [
+    {
+      title: "医疗",
+      icon: "🏥",
+      description:
+        "医院网站、医疗门户、预约系统、患者平台、医疗网站和医疗管理解决方案。",
+    },
+    {
+      title: "教育",
+      icon: "🎓",
+      description:
+        "学校网站、大学门户、LMS、在线学习系统、学生管理和教育平台。",
+    },
+    {
+      title: "零售与电子商务",
+      icon: "🛒",
+      description:
+        "在线商店、市场平台、产品目录、库存管理、支付系统和电子商务解决方案。",
+    },
+    {
+      title: "金融",
+      icon: "💳",
+      description:
+        "金融仪表板、支付平台、会计系统、账单应用程序、金融科技门户和企业解决方案。",
+    },
+    {
+      title: "酒店与旅游",
+      icon: "🏨",
+      description:
+        "酒店网站、预订系统、餐厅网站、预约平台、旅游门户和酒店行业解决方案。",
+    },
+    {
+      title: "运输与物流",
+      icon: "🚖",
+      description:
+        "运输网站、车队管理、物流平台、配送系统、预订平台和跟踪解决方案。",
+    },
+    {
+      title: "房地产",
+      icon: "🏠",
+      description:
+        "房地产门户、经纪人平台、房产管理系统和房地产CRM解决方案。",
+    },
+    {
+      title: "制造业",
+      icon: "🏭",
+      description:
+        "生产管理、库存系统、供应链平台、员工管理、报告和业务自动化。",
+    },
+    {
+      title: "娱乐",
+      icon: "🎬",
+      description:
+        "流媒体平台、媒体网站、内容门户、社区平台和数字娱乐解决方案。",
+    },
+    {
+      title: "初创企业",
+      icon: "🚀",
+      description:
+        "创业公司网站、MVP开发、SaaS产品、定制Web应用程序、落地页和可扩展数字平台。",
+    },
+    {
+      title: "农业",
+      icon: "🌾",
+      description:
+        "农业门户、农场管理系统、农业市场、作物管理、天气信息和农业数字化解决方案。",
+    },
+    {
+      title: "企业",
+      icon: "🏢",
+      description:
+        "定制ERP、CRM、HRMS、员工门户、业务自动化、分析仪表板和企业Web应用程序。",
+    },
+  ],
+
+  technologiesTitle: "使用的技术",
+
+  technologiesDescription:
+    "我们使用现代技术、安全架构和经过验证的开发方法，构建快速、可扩展、响应式和可靠的网站及Web应用程序。",
+
+  technologies: [
+    {
+      category: "前端",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "Bootstrap 5",
+      ],
+    },
+    {
+      category: "后端",
+      items: [
+        "Node.js",
+        "Express.js",
+        "PHP",
+        "Laravel",
+        "REST API",
+        "JWT认证",
+        "Socket.IO",
+        "Multer",
+      ],
+    },
+    {
+      category: "数据库",
+      items: [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite",
+        "Firebase",
+      ],
+    },
+    {
+      category: "服务器",
+      items: [
+        "Ubuntu Server",
+        "VPS托管",
+        "Nginx",
+        "Apache",
+        "PM2",
+        "SSL",
+        "Linux",
+      ],
+    },
+    {
+      category: "部署",
+      items: [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "CI/CD",
+        "域名配置",
+        "DNS管理",
+      ],
+    },
+    {
+      category: "集成",
+      items: [
+        "Google Maps",
+        "Firebase",
+        "PayPal",
+        "Razorpay",
+        "Stripe",
+        "WhatsApp",
+        "YouTube API",
+      ],
+    },
+    {
+      category: "安全",
+      items: [
+        "HTTPS",
+        "JWT",
+        "bcrypt",
+        "基于角色的访问控制",
+        "API安全",
+        "数据加密",
+      ],
+    },
+    {
+      category: "AI解决方案",
+      items: [
+        "OpenAI",
+        "AI聊天机器人",
+        "OCR",
+        "图像处理",
+        "语音识别",
+        "自动化",
+      ],
+    },
+  ],
+
+  whyUsTitle: "为什么选择 CH TECH GIANT",
+
+  whyUsDescription:
+    "我们结合现代技术、创意设计原则、安全开发实践和以业务为中心的策略，为企业开发可靠的网站和Web应用程序，帮助企业实现持续增长。",
+
+  whyChooseUs: [
+    {
+      title: "定制Web解决方案",
+      icon: "🌐",
+      description:
+        "所有网站和Web应用程序都根据您的业务目标、目标用户、业务流程和行业需求进行定制开发。",
+    },
+    {
+      title: "可扩展架构",
+      icon: "🚀",
+      description:
+        "我们在开发网站和Web应用程序时考虑未来增长，让您的平台能够随着业务发展而扩展。",
+    },
+    {
+      title: "现代UI/UX",
+      icon: "🎨",
+      description:
+        "开发美观、直观且响应式的用户界面，在桌面、平板电脑和智能手机上提供优秀的用户体验。",
+    },
+    {
+      title: "高性能",
+      icon: "⚡",
+      description:
+        "通过优化代码、高效架构、快速加载和性能优化，实现流畅快速的Web体验。",
+    },
+    {
+      title: "安全开发",
+      icon: "🔒",
+      description:
+        "实施身份验证、授权、加密、安全API、输入验证和用户数据保护等标准安全措施。",
+    },
+    {
+      title: "API集成",
+      icon: "🔗",
+      description:
+        "实现支付网关、地图、消息服务、CRM、ERP、分析平台和第三方API的无缝集成。",
+    },
+    {
+      title: "自主托管支持",
+      icon: "🖥️",
+      description:
+        "支持将网站和应用程序部署到您自己的VPS或专用服务器，让您拥有完整的控制权和所有权。",
+    },
+    {
+      title: "长期技术支持",
+      icon: "🛠️",
+      description:
+        "提供持续维护、监控、功能改进、安全更新、备份、性能优化和技术支持。",
+    },
+  ],
+
+  stats: [
+    "Web解决方案",
+    "定制开发",
+    "技术支持",
+    "创新与增长",
+  ],
+
+  processTitle: "网站开发流程",
+
+  process: [
+    "需求分析",
+    "UI/UX设计",
+    "开发",
+    "测试",
+    "上线",
+  ],
+
+  seoTitle: "专业网站开发解决方案",
+
+  seoContent: [
+    "专业的网站对于现代企业来说非常重要。CH TECH GIANT 开发定制网站和Web应用程序，帮助企业建立强大的在线形象、接触客户、获取潜在客户、自动化业务流程并提升收入。",
+
+    "我们的Web开发团队使用HTML5、CSS3、JavaScript、React、Next.js、Node.js、Express.js、MongoDB、MySQL、PostgreSQL、云平台、VPS服务器和安全API集成等现代技术，构建快速、响应式、可扩展且可靠的数字解决方案。每个项目都注重性能、可用性、安全性、可维护性和未来扩展能力。",
+
+    "无论是企业网站、电子商务平台、医疗、教育、房地产、酒店、物流、CRM、ERP、SaaS、AI应用程序还是企业解决方案，CH TECH GIANT 都能将您的想法转化为强大的Web解决方案。我们还提供部署、托管支持、维护、安全更新、性能优化和长期技术支持。",
+  ],
+
+  faqTitle: "常见问题",
+
+  faq: [
+    {
+      question: "网站开发需要多少钱？",
+      answer:
+        "开发成本取决于网站类型、页面数量、功能、设计要求、第三方集成、后端功能以及项目整体复杂程度。我们会根据您的具体需求提供定制报价。",
+    },
+    {
+      question: "网站开发需要多长时间？",
+      answer:
+        "开发时间取决于项目的规模和复杂程度。简单的企业网站可以较快完成，而电子商务网站和定制Web应用程序通常需要更多的开发和测试时间。",
+    },
+    {
+      question: "可以开发定制网站吗？",
+      answer:
+        "可以。我们根据您的业务需求、目标用户、业务流程、品牌形象和未来发展计划开发完全定制的网站和Web应用程序。",
+    },
+    {
+      question: "可以开发电子商务网站吗？",
+      answer:
+        "可以。我们可以开发具有产品管理、购物车、支付网关、客户账户、订单管理、库存、优惠券和管理员后台等功能的电子商务网站。",
+    },
+    {
+      question: "可以开发Web应用程序吗？",
+      answer:
+        "可以。我们可以开发CRM、ERP、LMS、医院管理系统、学校管理系统、库存管理系统、SaaS平台、仪表板、门户和其他业务Web应用程序。",
+    },
+    {
+      question: "网站是否支持手机？",
+      answer:
+        "是的。我们使用响应式设计和现代UI，确保网站能够在桌面电脑、笔记本电脑、平板电脑和智能手机上正常运行。",
+    },
+    {
+      question: "可以集成支付网关吗？",
+      answer:
+        "可以。根据项目需求，我们可以集成Razorpay、PayPal、Stripe等支付网关和支付服务。",
+    },
+    {
+      question: "是否提供网站托管和部署？",
+      answer:
+        "是的。我们可以提供域名配置、DNS配置、VPS部署、SSL证书、服务器配置、应用程序部署和生产环境设置支持。",
+    },
+    {
+      question: "可以开发SEO优化的网站吗？",
+      answer:
+        "可以。我们会考虑优化的元数据、语义化HTML、响应式设计、干净的URL、性能优化、站点地图和搜索引擎友好的内容结构。",
+    },
+    {
+      question: "是否提供网站维护和技术支持？",
+      answer:
+        "是的。我们提供持续维护、错误修复、安全更新、性能优化、监控、内容修改、功能改进以及上线后的技术支持。",
+    },
+  ],
+
+  ctaTitle: "准备好开发您的网站了吗？",
+
+  ctaDescription:
+    "与 CH TECH GIANT 一起，将您的想法转化为强大、现代、安全且可扩展的网站或Web应用程序。",
+
+  ctaButton: "免费咨询",
+
+  customDevelopment: "定制开发",
+
+  getQuote: "获取报价",
+
+  metaTitle:
+    "网站开发公司 | 网站与Web应用程序开发 | CH TECH GIANT",
+
+  metaDescription:
+    "CH TECH GIANT 提供定制网站开发、企业网站、电子商务开发、Web应用程序、CMS开发、响应式网站设计、UI/UX设计、API集成和定制软件解决方案。",
+
+  metaKeywords:
+    "网站开发公司, 网站开发, Web开发服务, 定制网站开发, Web应用程序开发, 电子商务网站开发, 企业网站开发, 响应式网站设计, 印度网站开发公司, 卡纳塔克邦网站开发公司, Davangere网站开发公司",
+},
 
 };
 

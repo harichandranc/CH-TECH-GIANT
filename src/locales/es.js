@@ -1732,7 +1732,1179 @@ La versión actualizada se publicará en esta página.
       "info@chtechgiant.com",
   },
 },
+webDevelopment: {
+  bannerTitle: "Desarrollo Web",
 
+  bannerSubtitle:
+    "Desarrollamos sitios web y aplicaciones web modernas, escalables, seguras y de alto rendimiento para startups, empresas y organizaciones.",
+
+  heroTitle: "Desarrollo Web Personalizado",
+
+  heroDescription1:
+    "CH TECH GIANT se especializa en el desarrollo de sitios web modernos y aplicaciones web de alto rendimiento que ayudan a las empresas a crear una sólida presencia online, atraer clientes, automatizar procesos empresariales y aumentar sus ingresos. Nuestro equipo de desarrollo crea soluciones digitales responsivas, seguras, escalables y de alto rendimiento adaptadas a sus necesidades empresariales.",
+
+  heroDescription2:
+    "Ya sea que necesite un sitio web corporativo profesional, una tienda de comercio electrónico, una aplicación web personalizada, un sistema empresarial, un producto SaaS o una solución digital completamente personalizada, nuestro equipo desarrolla soluciones web fiables diseñadas para un crecimiento sostenible.",
+
+  features: [
+    "Desarrollo web personalizado",
+    "Desarrollo de sitios web corporativos",
+    "Desarrollo de comercio electrónico",
+    "Desarrollo de aplicaciones web",
+    "Desarrollo de CMS",
+    "Diseño web responsivo",
+    "Diseño UI/UX",
+    "Integración de backend y API",
+  ],
+
+  whyChooseTitle: "¿Por qué CH TECH GIANT?",
+
+  heroBenefits: [
+    "Desarrollo personalizado de sitios web y aplicaciones web",
+    "Diseño UI/UX moderno y responsivo",
+    "Arquitectura escalable y de alto rendimiento",
+    "Backend seguro e integración de API",
+    "Integración de comercio electrónico y pagos",
+    "Desarrollo optimizado para SEO",
+    "Implementación en VPS y la nube",
+    "Soporte y mantenimiento a largo plazo",
+  ],
+
+  servicesTitle: "Nuestros Servicios de Desarrollo Web",
+
+  servicesDescription:
+    "Soluciones integrales de desarrollo web para startups, pequeñas y medianas empresas, grandes organizaciones y negocios en crecimiento.",
+
+  services: [
+    {
+      title: "Desarrollo Web Personalizado",
+      description:
+        "Sitios web profesionales desarrollados a medida según sus objetivos empresariales, identidad de marca, público objetivo y requisitos específicos.",
+    },
+    {
+      title: "Desarrollo de Sitios Web Corporativos",
+      description:
+        "Sitios web corporativos modernos y responsivos que ayudan a las empresas a crear una sólida presencia online, generar clientes potenciales y aumentar la confianza de los clientes.",
+    },
+    {
+      title: "Desarrollo de Sitios Web de Comercio Electrónico",
+      description:
+        "Tiendas online completas con catálogos de productos, carritos de compra, pagos seguros, gestión de pedidos y cuentas de clientes.",
+    },
+    {
+      title: "Desarrollo de Aplicaciones Web",
+      description:
+        "Aplicaciones web potentes y escalables para automatizar procesos empresariales, gestionar datos y ofrecer experiencias digitales personalizadas.",
+    },
+    {
+      title: "Desarrollo de CMS",
+      description:
+        "Soluciones flexibles de gestión de contenidos que permiten a las empresas administrar fácilmente páginas, productos, blogs, medios y contenido del sitio web.",
+    },
+    {
+      title: "Mantenimiento y Soporte Web",
+      description:
+        "Mantenimiento continuo, actualizaciones de seguridad, corrección de errores, optimización del rendimiento, copias de seguridad y soporte técnico para su sitio web.",
+    },
+  ],
+
+  webSolutionsTitle: "Soluciones Web que Desarrollamos",
+
+  webSolutionsDescription:
+    "Desarrollamos sitios web modernos y aplicaciones web potentes adaptadas a diferentes sectores, modelos de negocio y necesidades organizativas. Desde sitios web corporativos profesionales y plataformas de comercio electrónico hasta sistemas empresariales, productos SaaS y aplicaciones web personalizadas, nuestras soluciones están diseñadas para ofrecer rendimiento, seguridad, escalabilidad y crecimiento a largo plazo.",
+
+  webCategories: [
+    {
+      id: 1,
+      title: "Desarrollo de Sitios Web Empresariales",
+      image: "/images/web-categories/business.png",
+      description:
+        "Sitios web empresariales profesionales que ayudan a crear una sólida presencia digital, presentar servicios, generar clientes potenciales y aumentar la confianza de los clientes.",
+      features: [
+        "Diseño profesional",
+        "Diseño responsivo",
+        "Páginas de servicios",
+        "Generación de clientes potenciales",
+        "Formularios de contacto",
+        "Optimización SEO",
+      ],
+    },
+    {
+      id: 2,
+      title: "Desarrollo de Sitios Web Corporativos",
+      image: "/images/web-categories/corporate.png",
+      description:
+        "Sitios web corporativos modernos para empresas establecidas, organizaciones y grandes compañías con branding profesional, arquitectura escalable y gestión de contenidos.",
+      features: [
+        "Branding corporativo",
+        "Perfil empresarial",
+        "Gestión de servicios",
+        "Perfiles del equipo",
+        "Información para inversores",
+        "Integración CMS",
+      ],
+    },
+    {
+      id: 3,
+      title: "Desarrollo de Sitios Web de Portafolio",
+      image: "/images/web-categories/portfolio.png",
+      description:
+        "Sitios web de portafolio creativos para personas, diseñadores, desarrolladores, fotógrafos, agencias y profesionales para mostrar sus trabajos online.",
+      features: [
+        "Presentación de proyectos",
+        "Galería",
+        "Diseño responsivo",
+        "Animaciones",
+        "Formulario de contacto",
+        "Integración con redes sociales",
+      ],
+    },
+    {
+      id: 4,
+      title: "Desarrollo de Sitios Web de Comercio Electrónico",
+      image: "/images/web-categories/ecommerce.png",
+      description:
+        "Plataformas completas de compras online con gestión de productos, carrito de compra, pagos seguros, seguimiento de pedidos y cuentas de clientes.",
+      features: [
+        "Catálogo de productos",
+        "Carrito de compra",
+        "Pagos seguros",
+        "Seguimiento de pedidos",
+        "Cuentas de clientes",
+        "Panel de administración",
+      ],
+    },
+    {
+      id: 5,
+      title: "Desarrollo de Tiendas Online",
+      image: "/images/web-categories/online-store.png",
+      description:
+        "Tiendas online modernas diseñadas para ofrecer una experiencia de compra fluida con búsqueda de productos, checkout, promociones y gestión de pedidos.",
+      features: [
+        "Búsqueda de productos",
+        "Categorías",
+        "Lista de deseos",
+        "Cupones",
+        "Pagos",
+        "Historial de pedidos",
+      ],
+    },
+    {
+      id: 6,
+      title: "Marketplace Multivendedor",
+      image: "/images/web-categories/marketplace.png",
+      description:
+        "Marketplaces escalables que conectan múltiples vendedores y clientes con paneles de vendedores, comisiones, pedidos y análisis.",
+      features: [
+        "Gestión de vendedores",
+        "Panel del vendedor",
+        "Panel del comprador",
+        "Sistema de comisiones",
+        "Gestión de pedidos",
+        "Análisis",
+      ],
+    },
+    {
+      id: 7,
+      title: "Sitio Web Inmobiliario",
+      image: "/images/web-categories/real-estate.png",
+      description:
+        "Plataformas inmobiliarias para empresas inmobiliarias, agentes, promotores y propietarios con búsqueda avanzada y funciones basadas en ubicación.",
+      features: [
+        "Listados de propiedades",
+        "Búsqueda avanzada",
+        "Integración de mapas",
+        "Perfiles de agentes",
+        "Galería de propiedades",
+        "Formularios de consulta",
+      ],
+    },
+    {
+      id: 8,
+      title: "Sitio Web de Reservas de Hoteles",
+      image: "/images/web-categories/hotel.png",
+      description:
+        "Sitios web para hoteles y resorts con habitaciones, disponibilidad, sistemas de reservas, pagos online y servicios para huéspedes.",
+      features: [
+        "Habitaciones",
+        "Sistema de reservas",
+        "Disponibilidad",
+        "Pagos online",
+        "Gestión de huéspedes",
+        "Panel de administración",
+      ],
+    },
+    {
+      id: 9,
+      title: "Sitio Web para Restaurantes",
+      image: "/images/web-categories/restaurant.png",
+      description:
+        "Sitios web modernos para restaurantes para mostrar menús, ubicaciones, reservas, pedidos online, promociones y opiniones de clientes.",
+      features: [
+        "Menú digital",
+        "Pedidos online",
+        "Reservas",
+        "Galería",
+        "Opiniones",
+        "Integración de contacto",
+      ],
+    },
+    {
+      id: 10,
+      title: "Sitio Web de Entrega de Comida",
+      image: "/images/web-categories/food-delivery.png",
+      description:
+        "Plataformas de entrega de comida que conectan clientes, restaurantes y repartidores mediante pedidos, pagos, seguimiento y administración.",
+      features: [
+        "Listado de restaurantes",
+        "Pedidos online",
+        "Seguimiento en tiempo real",
+        "Pagos online",
+        "Gestión de entregas",
+        "Gestión de pedidos",
+      ],
+    },
+    {
+      id: 11,
+      title: "Sitio Web de Entrega de Comestibles",
+      image: "/images/web-categories/grocery.png",
+      description:
+        "Plataformas online de productos alimenticios con catálogos, gestión de inventario, carrito de compra, entregas programadas y pagos seguros.",
+      features: [
+        "Categorías de productos",
+        "Carrito de compra",
+        "Gestión de inventario",
+        "Programación de entregas",
+        "Pagos",
+        "Seguimiento de pedidos",
+      ],
+    },
+    {
+      id: 12,
+      title: "Sitio Web de Atención Médica",
+      image: "/images/web-categories/healthcare.png",
+      description:
+        "Sitios web seguros para hospitales, clínicas, médicos y organizaciones sanitarias con servicios digitales centrados en los pacientes.",
+      features: [
+        "Perfiles de médicos",
+        "Citas",
+        "Información de pacientes",
+        "Servicios médicos",
+        "Formularios de contacto",
+        "Panel de administración",
+      ],
+    },
+    {
+      id: 13,
+      title: "Sitio Web para Hospitales",
+      image: "/images/web-categories/hospital.png",
+      description:
+        "Sitios web profesionales para hospitales con departamentos, perfiles médicos, reservas de citas, servicios médicos e información para pacientes.",
+      features: [
+        "Departamentos",
+        "Perfiles de médicos",
+        "Citas",
+        "Información de pacientes",
+        "Información de emergencias",
+        "Panel de administración",
+      ],
+    },
+    {
+      id: 14,
+      title: "Sitio Web Médico",
+      image: "/images/web-categories/medical.png",
+      description:
+        "Sitios web médicos modernos para médicos, clínicas, especialistas y proveedores sanitarios con presentación profesional de servicios y funciones de citas.",
+      features: [
+        "Perfil médico",
+        "Servicios médicos",
+        "Reserva de citas",
+        "Consultas de pacientes",
+        "Testimonios",
+        "Formularios de contacto",
+      ],
+    },
+    {
+      id: 15,
+      title: "Sitio Web Educativo",
+      image: "/images/web-categories/education.png",
+      description:
+        "Sitios web educativos para escuelas, universidades, institutos de formación y organizaciones educativas con cursos, admisiones, recursos y servicios para estudiantes.",
+      features: [
+        "Información de cursos",
+        "Admisiones",
+        "Recursos educativos",
+        "Perfiles de profesores",
+        "Eventos",
+        "Formularios online",
+      ],
+    },
+    {
+      id: 16,
+      title: "Sitio Web Universitario",
+      image: "/images/web-categories/college.png",
+      description:
+        "Sitios web universitarios completos con departamentos, programas académicos, información de profesores, admisiones, avisos, eventos y recursos académicos.",
+      features: [
+        "Departamentos",
+        "Programas académicos",
+        "Profesores",
+        "Admisiones",
+        "Avisos",
+        "Portal de estudiantes",
+      ],
+    },
+    {
+      id: 17,
+      title: "Sitio Web Escolar",
+      image: "/images/web-categories/school.png",
+      description:
+        "Sitios web escolares modernos con información académica, admisiones, anuncios, eventos, perfiles de profesores y recursos para padres.",
+      features: [
+        "Información escolar",
+        "Admisiones",
+        "Profesores",
+        "Eventos",
+        "Anuncios",
+        "Recursos para padres",
+      ],
+    },
+    {
+      id: 18,
+      title: "Sistema de Gestión del Aprendizaje",
+      image: "/images/web-categories/lms.png",
+      description:
+        "Plataformas LMS potentes para gestionar cursos, contenidos educativos, exámenes, estudiantes y progreso académico.",
+      features: [
+        "Gestión de cursos",
+        "Gestión de estudiantes",
+        "Exámenes online",
+        "Cuestionarios",
+        "Seguimiento del progreso",
+        "Panel de administración",
+      ],
+    },
+    {
+      id: 19,
+      title: "Sitio Web de Portal de Empleo",
+      image: "/images/web-categories/job-portal.png",
+      description:
+        "Plataformas de contratación que conectan empleadores y candidatos mediante ofertas de empleo, solicitudes, currículums, paneles empresariales y notificaciones.",
+      features: [
+        "Ofertas de empleo",
+        "Carga de currículums",
+        "Búsqueda de empleo",
+        "Panel del empleador",
+        "Seguimiento de solicitudes",
+        "Notificaciones de empleo",
+      ],
+    },
+    {
+      id: 20,
+      title: "Sitio Web de Reclutamiento",
+      image: "/images/web-categories/recruitment.png",
+      description:
+        "Plataformas de reclutamiento personalizadas para gestionar candidatos, puestos de trabajo, entrevistas, solicitudes y procesos de contratación.",
+      features: [
+        "Gestión de candidatos",
+        "Ofertas de empleo",
+        "Gestión de currículums",
+        "Programación de entrevistas",
+        "Panel de reclutadores",
+        "Informes",
+      ],
+    },
+    {
+      id: 21,
+      title: "Sitio Web de Noticias y Revista",
+      image: "/images/web-categories/news.png",
+      description:
+        "Sitios web rápidos de noticias y revistas con categorías, artículos, búsqueda, autores, galerías multimedia y herramientas de publicación.",
+      features: [
+        "Categorías de noticias",
+        "Gestión de artículos",
+        "Perfiles de autores",
+        "Búsqueda",
+        "Galería multimedia",
+        "CMS",
+      ],
+    },
+    {
+      id: 22,
+      title: "Desarrollo de Sitios Web de Blogs",
+      image: "/images/web-categories/blog.png",
+      description:
+        "Plataformas de blogs optimizadas para SEO para empresas, editores, creadores de contenido y particulares.",
+      features: [
+        "Gestión de blogs",
+        "Categorías",
+        "Etiquetas",
+        "Comentarios",
+        "Optimización SEO",
+        "Búsqueda",
+      ],
+    },
+    {
+      id: 23,
+      title: "Sitio Web de Membresía",
+      image: "/images/web-categories/membership.png",
+      description:
+        "Plataformas de membresía con registro de usuarios, planes de suscripción, contenido protegido, perfiles, pagos y gestión de miembros.",
+      features: [
+        "Registro de usuarios",
+        "Planes de membresía",
+        "Contenido protegido",
+        "Suscripciones",
+        "Panel de miembros",
+        "Pagos",
+      ],
+    },
+    {
+      id: 24,
+      title: "Sitio Web de Comunidad",
+      image: "/images/web-categories/community.png",
+      description:
+        "Plataformas comunitarias interactivas donde los usuarios pueden crear perfiles, participar en debates, unirse a grupos, compartir contenido y comunicarse.",
+      features: [
+        "Perfiles de usuario",
+        "Foros de discusión",
+        "Grupos",
+        "Mensajería",
+        "Notificaciones",
+        "Moderación",
+      ],
+    },
+    {
+      id: 25,
+      title: "Red Social",
+      image: "/images/web-categories/social.png",
+      description:
+        "Plataformas de redes sociales con perfiles de usuario, publicaciones, feeds, mensajería, comunidades, notificaciones e interacciones en tiempo real.",
+      features: [
+        "Perfiles de usuario",
+        "Feed de noticias",
+        "Publicaciones",
+        "Mensajería privada",
+        "Comunidades",
+        "Notificaciones",
+      ],
+    },
+    {
+      id: 26,
+      title: "Desarrollo de Foros",
+      image: "/images/web-categories/forum.png",
+      description:
+        "Plataformas de discusión e intercambio de conocimientos con temas, hilos, perfiles de usuario, moderación, búsqueda y funciones comunitarias.",
+      features: [
+        "Hilos de discusión",
+        "Categorías",
+        "Perfiles de usuario",
+        "Moderación",
+        "Búsqueda",
+        "Notificaciones",
+      ],
+    },
+    {
+      id: 27,
+      title: "Sitio Web de Gestión de Eventos",
+      image: "/images/web-categories/event.png",
+      description:
+        "Sitios web para conferencias, talleres, exposiciones y eventos públicos con registro, entradas, horarios y gestión de asistentes.",
+      features: [
+        "Registro de eventos",
+        "Reserva de entradas",
+        "Horarios",
+        "Perfiles de ponentes",
+        "Gestión de asistentes",
+        "Notificaciones",
+      ],
+    },
+    {
+      id: 28,
+      title: "Sitio Web de Reservas y Citas",
+      image: "/images/web-categories/booking.png",
+      description:
+        "Plataformas de reservas online para hoteles, servicios, citas, eventos, viajes y otros negocios con disponibilidad en tiempo real.",
+      features: [
+        "Reservas online",
+        "Disponibilidad",
+        "Calendario",
+        "Pagos",
+        "Notificaciones",
+        "Panel del cliente",
+      ],
+    },
+    {
+      id: 29,
+      title: "Sitio Web de Reserva de Citas",
+      image: "/images/web-categories/appointment.png",
+      description:
+        "Sitios web de programación de citas para médicos, consultores, salones, profesionales y empresas de servicios con reservas basadas en calendario.",
+      features: [
+        "Reserva de citas",
+        "Calendario",
+        "Disponibilidad",
+        "Recordatorios",
+        "Pagos online",
+        "Reprogramación",
+      ],
+    },
+    {
+      id: 30,
+      title: "Sitio Web para Empresas de Servicios",
+      image: "/images/web-categories/services.png",
+      description:
+        "Sitios web orientados a la generación de clientes potenciales para agencias, consultores, empresas de reparación, contratistas y proveedores de servicios profesionales.",
+      features: [
+        "Páginas de servicios",
+        "Formularios de clientes potenciales",
+        "Reservas",
+        "Opiniones de clientes",
+        "Galería",
+        "Integración de contacto",
+      ],
+    },
+    {
+      id: 31,
+      title: "Sitio Web de Directorio",
+      image: "/images/web-categories/directory.png",
+      description:
+        "Directorios empresariales y de servicios con categorías, búsqueda, filtros, mapas, opiniones y registros de usuarios.",
+      features: [
+        "Registros empresariales",
+        "Categorías",
+        "Búsqueda avanzada",
+        "Mapas",
+        "Opiniones",
+        "Registros de usuarios",
+      ],
+    },
+    {
+      id: 32,
+      title: "Sitio Web de Clasificados",
+      image: "/images/web-categories/classifieds.png",
+      description:
+        "Plataformas de anuncios clasificados donde los usuarios pueden publicar, buscar, gestionar y responder a anuncios.",
+      features: [
+        "Anuncios",
+        "Categorías",
+        "Búsqueda y filtros",
+        "Cuentas de usuario",
+        "Mensajería",
+        "Anuncios destacados",
+      ],
+    },
+    {
+      id: 33,
+      title: "Aplicación Web CRM",
+      image: "/images/web-categories/crm.png",
+      description:
+        "Aplicaciones web CRM personalizadas para gestionar clientes potenciales, clientes, procesos de ventas, tareas, comunicaciones e informes.",
+      features: [
+        "Gestión de clientes potenciales",
+        "Base de datos de clientes",
+        "Pipeline de ventas",
+        "Gestión de tareas",
+        "Análisis",
+        "Informes",
+      ],
+    },
+    {
+      id: 34,
+      title: "Aplicación Web ERP",
+      image: "/images/web-categories/erp.png",
+      description:
+        "Aplicaciones web empresariales para integrar procesos como finanzas, recursos humanos, inventario, ventas, compras e informes.",
+      features: [
+        "Gestión de recursos humanos",
+        "Inventario",
+        "Finanzas",
+        "Compras",
+        "Informes",
+        "Panel de control",
+      ],
+    },
+    {
+      id: 35,
+      title: "Aplicación Web HRMS",
+      image: "/images/web-categories/hrms.png",
+      description:
+        "Sistemas de gestión de recursos humanos para empleados, asistencia, permisos, nóminas, contratación y administración de personal.",
+      features: [
+        "Gestión de empleados",
+        "Asistencia",
+        "Gestión de permisos",
+        "Nóminas",
+        "Contratación",
+        "Informes",
+      ],
+    },
+    {
+      id: 36,
+      title: "Sistema de Gestión de Inventario",
+      image: "/images/web-categories/inventory.png",
+      description:
+        "Sistemas de inventario basados en web para gestionar existencias, compras, proveedores, almacenes e informes de inventario.",
+      features: [
+        "Gestión de inventario",
+        "Pedidos",
+        "Gestión de proveedores",
+        "Gestión de almacenes",
+        "Alertas de inventario",
+        "Informes",
+      ],
+    },
+    {
+      id: 37,
+      title: "Sistema de Gestión Hospitalaria",
+      image: "/images/web-categories/hospital-management.png",
+      description:
+        "Sistemas completos de gestión hospitalaria para pacientes, médicos, citas, facturación, departamentos, personal e informes.",
+      features: [
+        "Gestión de pacientes",
+        "Gestión de médicos",
+        "Citas",
+        "Facturación",
+        "Gestión de personal",
+        "Informes",
+      ],
+    },
+    {
+      id: 38,
+      title: "Sistema de Gestión Escolar",
+      image: "/images/web-categories/school-management.png",
+      description:
+        "Sistemas de gestión escolar basados en web para automatizar estudiantes, asistencia, cuotas, exámenes, comunicación y procesos académicos.",
+      features: [
+        "Gestión de estudiantes",
+        "Asistencia",
+        "Gestión de cuotas",
+        "Exámenes",
+        "Panel de profesores",
+        "Informes",
+      ],
+    },
+    {
+      id: 39,
+      title: "Sistema de Gestión Universitaria",
+      image: "/images/web-categories/college-management.png",
+      description:
+        "Sistemas completos de gestión universitaria para estudiantes, profesores, departamentos, asistencia, exámenes, cuotas y administración académica.",
+      features: [
+        "Gestión de estudiantes",
+        "Gestión de profesores",
+        "Departamentos",
+        "Asistencia",
+        "Exámenes",
+        "Informes",
+      ],
+    },
+    {
+      id: 40,
+      title: "Sistema de Facturación y POS",
+      image: "/images/web-categories/pos.png",
+      description:
+        "Sistemas de punto de venta y facturación para comercios, restaurantes, empresas y proveedores de servicios con gestión de inventario integrada.",
+      features: [
+        "Facturación",
+        "Gestión de productos",
+        "Inventario",
+        "Facturas",
+        "Informes de ventas",
+        "Gestión de clientes",
+      ],
+    },
+    {
+      id: 41,
+      title: "Aplicación Web de Contabilidad",
+      image: "/images/web-categories/accounting.png",
+      description:
+        "Plataformas contables para gestionar facturas, gastos, pagos, clientes, datos financieros e informes empresariales.",
+      features: [
+        "Facturas",
+        "Gastos",
+        "Pagos",
+        "Clientes",
+        "Informes financieros",
+        "Panel de control",
+      ],
+    },
+    {
+      id: 42,
+      title: "Sistema de Gestión de Proyectos",
+      image: "/images/web-categories/project-management.png",
+      description:
+        "Aplicaciones web de gestión de proyectos para planificar proyectos, asignar tareas, realizar seguimiento del progreso, gestionar equipos y generar informes.",
+      features: [
+        "Gestión de proyectos",
+        "Gestión de tareas",
+        "Gestión de equipos",
+        "Fechas límite",
+        "Seguimiento del progreso",
+        "Informes",
+      ],
+    },
+    {
+      id: 43,
+      title: "Portal de Clientes",
+      image: "/images/web-categories/customer-portal.png",
+      description:
+        "Portales seguros para clientes donde los usuarios pueden acceder a pedidos, facturas, documentos, solicitudes de soporte e información de cuenta.",
+      features: [
+        "Inicio de sesión de clientes",
+        "Pedidos",
+        "Facturas",
+        "Documentos",
+        "Tickets de soporte",
+        "Gestión del perfil",
+      ],
+    },
+    {
+      id: 44,
+      title: "Portal de Empleados",
+      image: "/images/web-categories/employee-portal.png",
+      description:
+        "Portales seguros para empleados con recursos empresariales, asistencia, solicitudes de permisos, tareas, documentos e información interna.",
+      features: [
+        "Inicio de sesión de empleados",
+        "Asistencia",
+        "Solicitudes de permisos",
+        "Tareas",
+        "Documentos",
+        "Notificaciones",
+      ],
+    },
+    {
+      id: 45,
+      title: "Desarrollo de Paneles de Administración",
+      image: "/images/web-categories/admin-dashboard.png",
+      description:
+        "Paneles de administración potentes para gestionar usuarios, contenidos, transacciones, análisis y procesos empresariales desde un único lugar.",
+      features: [
+        "Gestión de usuarios",
+        "Análisis",
+        "Informes",
+        "Gestión de roles",
+        "Gestión de datos",
+        "Configuración del sistema",
+      ],
+    },
+    {
+      id: 46,
+      title: "Aplicación Web SaaS",
+      image: "/images/web-categories/saas.png",
+      description:
+        "Plataformas Software as a Service escalables con gestión de suscripciones, cuentas de usuarios, paneles, facturación y arquitectura cloud.",
+      features: [
+        "Multiinquilino",
+        "Suscripciones",
+        "Panel de usuario",
+        "Pagos",
+        "Análisis",
+        "Implementación en la nube",
+      ],
+    },
+    {
+      id: 47,
+      title: "Aplicación Web con IA",
+      image: "/images/web-categories/ai.png",
+      description:
+        "Aplicaciones web inteligentes impulsadas por IA para automatización, creación de contenido, búsqueda, recomendaciones, procesamiento de documentos y procesos empresariales.",
+      features: [
+        "Inteligencia artificial",
+        "Automatización con IA",
+        "Búsqueda inteligente",
+        "Recomendaciones",
+        "Procesamiento de documentos",
+        "Asistente de IA",
+      ],
+    },
+    {
+      id: 48,
+      title: "Sitio Web con Chatbot de IA",
+      image: "/images/web-categories/chatbot.png",
+      description:
+        "Soluciones de chatbot impulsadas por IA para soporte automatizado, respuestas a preguntas, generación de clientes potenciales y asistencia a visitantes.",
+      features: [
+        "Chatbot de IA",
+        "Soporte 24/7",
+        "Generación de clientes potenciales",
+        "Base de conocimientos",
+        "Chat en vivo",
+        "Análisis",
+      ],
+    },
+    {
+      id: 49,
+      title: "Aplicación Web Basada en la Nube",
+      image: "/images/web-categories/cloud.png",
+      description:
+        "Aplicaciones web preparadas para la nube que ofrecen escalabilidad, almacenamiento seguro, sincronización en tiempo real, disponibilidad y acceso remoto.",
+      features: [
+        "Almacenamiento en la nube",
+        "Sincronización en tiempo real",
+        "Copias de seguridad",
+        "Arquitectura escalable",
+        "Seguridad",
+        "Alta disponibilidad",
+      ],
+    },
+    {
+      id: 50,
+      title: "Aplicación Web Personalizada",
+      image: "/images/web-categories/custom-web.png",
+      description:
+        "Aplicaciones web completamente personalizadas según sus procesos empresariales, requisitos, flujos de trabajo, usuarios y planes de crecimiento futuros.",
+      features: [
+        "100 % personalizada",
+        "Diseño UI/UX",
+        "Desarrollo frontend",
+        "Desarrollo backend",
+        "Integración de API",
+        "Implementación",
+      ],
+    },
+  ],
+
+  industriesTitle: "Industrias a las que Servimos",
+
+  industriesDescription:
+    "Desarrollamos sitios web y aplicaciones web para startups, pequeñas y medianas empresas, grandes organizaciones, instituciones educativas, hospitales, comercios, proveedores de servicios y empresas de diferentes sectores.",
+
+  industries: [
+    {
+      title: "Salud",
+      icon: "🏥",
+      description:
+        "Sitios web hospitalarios, portales sanitarios, gestión de citas, plataformas para pacientes, sitios web médicos y soluciones de gestión.",
+    },
+    {
+      title: "Educación",
+      icon: "🎓",
+      description:
+        "Sitios web escolares, portales universitarios, plataformas LMS, sistemas de aprendizaje online, gestión de estudiantes y plataformas educativas.",
+    },
+    {
+      title: "Comercio Minorista y E-commerce",
+      icon: "🛒",
+      description:
+        "Tiendas online, marketplaces, catálogos de productos, sistemas de inventario, soluciones de pago y plataformas de comercio electrónico.",
+    },
+    {
+      title: "Finanzas",
+      icon: "💳",
+      description:
+        "Paneles financieros, plataformas de pago, sistemas contables, aplicaciones de facturación, portales fintech y soluciones empresariales.",
+    },
+    {
+      title: "Hostelería",
+      icon: "🏨",
+      description:
+        "Sitios web de hoteles, sistemas de reservas, sitios web de restaurantes, plataformas de reservas, portales de viajes y soluciones para hostelería.",
+    },
+    {
+      title: "Transporte",
+      icon: "🚖",
+      description:
+        "Sitios web de transporte, gestión de flotas, plataformas logísticas, sistemas de mensajería, plataformas de reservas y soluciones de seguimiento.",
+    },
+    {
+      title: "Inmobiliario",
+      icon: "🏠",
+      description:
+        "Portales inmobiliarios, plataformas para agentes, sistemas de gestión de propiedades y soluciones CRM para el sector inmobiliario.",
+    },
+    {
+      title: "Manufactura",
+      icon: "🏭",
+      description:
+        "Gestión de producción, sistemas de inventario, plataformas de cadena de suministro, gestión de empleados, informes y automatización de procesos.",
+    },
+    {
+      title: "Entretenimiento",
+      icon: "🎬",
+      description:
+        "Plataformas de streaming, sitios web multimedia, portales de contenido, plataformas comunitarias y soluciones de entretenimiento digital.",
+    },
+    {
+      title: "Startups",
+      icon: "🚀",
+      description:
+        "Sitios web para startups, desarrollo de MVP, productos SaaS, aplicaciones web personalizadas, landing pages y plataformas digitales escalables.",
+    },
+    {
+      title: "Agricultura",
+      icon: "🌾",
+      description:
+        "Portales agrícolas, sistemas de gestión de explotaciones, marketplaces, gestión de cosechas, información meteorológica y soluciones agrícolas.",
+    },
+    {
+      title: "Empresas",
+      icon: "🏢",
+      description:
+        "Sistemas ERP, CRM y HRMS personalizados, portales de empleados, automatización de procesos, paneles analíticos y aplicaciones empresariales.",
+    },
+  ],
+
+  technologiesTitle: "Tecnologías que Utilizamos",
+
+  technologiesDescription:
+    "Nuestros desarrolladores utilizan tecnologías modernas, arquitecturas seguras y prácticas de desarrollo probadas para crear sitios web y aplicaciones web rápidas, escalables, responsivas y fiables para startups, empresas y organizaciones.",
+
+  technologies: [
+    {
+      category: "Frontend",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "Bootstrap 5",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Node.js",
+        "Express.js",
+        "PHP",
+        "Laravel",
+        "REST API",
+        "Autenticación JWT",
+        "Socket.IO",
+        "Multer",
+      ],
+    },
+    {
+      category: "Base de Datos",
+      items: [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite",
+        "Firebase",
+      ],
+    },
+    {
+      category: "Servidor",
+      items: [
+        "Ubuntu Server",
+        "Alojamiento VPS",
+        "Nginx",
+        "Apache",
+        "PM2",
+        "SSL",
+        "Linux",
+      ],
+    },
+    {
+      category: "Implementación",
+      items: [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "CI/CD",
+        "Configuración de dominios",
+        "Gestión DNS",
+      ],
+    },
+    {
+      category: "Integraciones",
+      items: [
+        "Google Maps",
+        "Firebase",
+        "PayPal",
+        "Razorpay",
+        "Stripe",
+        "WhatsApp",
+        "YouTube API",
+      ],
+    },
+    {
+      category: "Seguridad",
+      items: [
+        "HTTPS",
+        "JWT",
+        "bcrypt",
+        "Control de acceso basado en roles",
+        "Seguridad de API",
+        "Cifrado de datos",
+      ],
+    },
+    {
+      category: "Soluciones de IA",
+      items: [
+        "OpenAI",
+        "Chatbot de IA",
+        "OCR",
+        "Procesamiento de imágenes",
+        "Reconocimiento de voz",
+        "Automatización",
+      ],
+    },
+  ],
+
+  whyUsTitle: "Por qué elegir CH TECH GIANT",
+
+  whyUsDescription:
+    "Combinamos tecnologías modernas, principios de diseño creativo, prácticas de desarrollo seguras y estrategias orientadas al negocio para crear sitios web y aplicaciones web fiables que ayudan a las empresas a crecer.",
+
+  whyChooseUs: [
+    {
+      title: "Soluciones Web Personalizadas",
+      icon: "🌐",
+      description:
+        "Cada sitio web y aplicación web se desarrolla específicamente según sus objetivos empresariales, público objetivo, procesos de trabajo y necesidades del sector.",
+    },
+    {
+      title: "Arquitectura Escalable",
+      icon: "🚀",
+      description:
+        "Nuestros sitios web y aplicaciones web se desarrollan pensando en el crecimiento futuro, permitiendo que su plataforma crezca junto con su negocio.",
+    },
+    {
+      title: "UI/UX Moderna",
+      icon: "🎨",
+      description:
+        "Interfaces bonitas, intuitivas, responsivas y orientadas a la conversión para ofrecer una excelente experiencia en ordenadores, tablets y smartphones.",
+    },
+    {
+      title: "Alto Rendimiento",
+      icon: "⚡",
+      description:
+        "Código optimizado, arquitectura eficiente, tiempos de carga rápidos y desarrollo orientado al rendimiento para ofrecer una experiencia web fluida.",
+    },
+    {
+      title: "Desarrollo Seguro",
+      icon: "🔒",
+      description:
+        "Prácticas de seguridad estándar como autenticación, autorización, cifrado, APIs seguras, validación y protección de los datos de los usuarios.",
+    },
+    {
+      title: "Integración de API",
+      icon: "🔗",
+      description:
+        "Integración fluida con pasarelas de pago, mapas, servicios de mensajería, CRM, ERP, plataformas analíticas y APIs de terceros.",
+    },
+    {
+      title: "Implementación Autohospedada",
+      icon: "🖥️",
+      description:
+        "Los sitios web y aplicaciones pueden implementarse en su propio VPS o servidor dedicado, proporcionando control y propiedad completos.",
+    },
+    {
+      title: "Soporte a Largo Plazo",
+      icon: "🛠️",
+      description:
+        "Mantenimiento continuo, monitorización, mejoras de funciones, actualizaciones de seguridad, copias de seguridad, optimización del rendimiento y soporte técnico.",
+    },
+  ],
+
+  stats: [
+    "Soluciones Web",
+    "Desarrollo Personalizado",
+    "Soporte Técnico",
+    "Innovación y Crecimiento",
+  ],
+
+  processTitle: "Nuestro Proceso de Desarrollo Web",
+
+  process: [
+    "Análisis",
+    "Diseño UI/UX",
+    "Desarrollo",
+    "Pruebas",
+    "Lanzamiento",
+  ],
+
+  seoTitle: "Soluciones Profesionales de Desarrollo Web",
+
+  seoContent: [
+    "Un sitio web profesional es actualmente una parte fundamental de cualquier negocio moderno. CH TECH GIANT desarrolla sitios web y aplicaciones web personalizadas que ayudan a las empresas a crear una sólida presencia online, llegar a clientes, generar clientes potenciales, automatizar procesos empresariales y aumentar sus ingresos.",
+
+    "Nuestro equipo de desarrollo web utiliza tecnologías modernas como HTML5, CSS3, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, plataformas cloud, servidores VPS e integraciones API seguras para crear soluciones digitales rápidas, responsivas, escalables y fiables. Cada proyecto se desarrolla con especial atención al rendimiento, facilidad de uso, seguridad, mantenimiento y crecimiento futuro.",
+
+    "Desde sitios web corporativos y plataformas de comercio electrónico hasta soluciones para salud, educación, inmobiliaria, hostelería, logística, CRM, ERP, SaaS, aplicaciones de IA y empresas, CH TECH GIANT ayuda a las organizaciones a convertir sus ideas en soluciones web potentes. También ofrecemos implementación, soporte de hosting, mantenimiento, actualizaciones de seguridad, optimización del rendimiento y asistencia técnica a largo plazo.",
+  ],
+
+  faqTitle: "Preguntas Frecuentes",
+
+  faq: [
+    {
+      question: "¿Cuánto cuesta desarrollar un sitio web?",
+      answer:
+        "El coste depende del tipo de sitio web, número de páginas, funcionalidades, requisitos de diseño, integraciones, funciones de backend y complejidad general del proyecto. Proporcionamos presupuestos personalizados según sus necesidades.",
+    },
+    {
+      question: "¿Cuánto tiempo se tarda en desarrollar un sitio web?",
+      answer:
+        "El tiempo de desarrollo depende del alcance y la complejidad del proyecto. Un sitio web corporativo sencillo puede completarse más rápidamente, mientras que las plataformas de comercio electrónico y aplicaciones web personalizadas pueden requerir más tiempo de desarrollo y pruebas.",
+    },
+    {
+      question: "¿Desarrollan sitios web personalizados?",
+      answer:
+        "Sí. Desarrollamos sitios web y aplicaciones web completamente personalizados según sus necesidades empresariales, público objetivo, procesos de trabajo, identidad de marca y planes de crecimiento futuro.",
+    },
+    {
+      question: "¿Desarrollan sitios web de comercio electrónico?",
+      answer:
+        "Sí. Desarrollamos sitios web de comercio electrónico con gestión de productos, carrito de compra, pasarelas de pago, cuentas de clientes, gestión de pedidos, inventario, cupones y paneles de administración.",
+    },
+    {
+      question: "¿Desarrollan aplicaciones web?",
+      answer:
+        "Sí. Desarrollamos aplicaciones web personalizadas como CRM, ERP, LMS, sistemas de gestión hospitalaria, sistemas escolares, sistemas de inventario, plataformas SaaS, paneles, portales y otras aplicaciones empresariales.",
+    },
+    {
+      question: "¿El sitio web estará optimizado para dispositivos móviles?",
+      answer:
+        "Sí. Nuestros sitios web funcionan en ordenadores de escritorio, portátiles, tablets y smartphones mediante diseños responsivos e interfaces de usuario modernas.",
+    },
+    {
+      question: "¿Pueden integrar pasarelas de pago?",
+      answer:
+        "Sí. Podemos integrar pasarelas y servicios de pago como Razorpay, PayPal, Stripe y otras plataformas compatibles según los requisitos del proyecto.",
+    },
+    {
+      question: "¿Ofrecen alojamiento e implementación?",
+      answer:
+        "Sí. Ayudamos con la configuración del dominio, configuración DNS, implementación en VPS, certificados SSL, configuración del servidor, implementación de aplicaciones y preparación del entorno de producción.",
+    },
+    {
+      question: "¿Desarrollan sitios web optimizados para SEO?",
+      answer:
+        "Sí. Desarrollamos sitios web con estructuras optimizadas para SEO, incluyendo metadatos optimizados, HTML semántico, diseños responsivos, URLs limpias, optimización del rendimiento, soporte para sitemaps y estructuras de contenido compatibles con los motores de búsqueda.",
+    },
+    {
+      question: "¿Ofrecen mantenimiento y soporte para sitios web?",
+      answer:
+        "Sí. Ofrecemos mantenimiento continuo, corrección de errores, actualizaciones de seguridad, optimización del rendimiento, monitorización, cambios de contenido, mejoras de funcionalidades y soporte técnico después del lanzamiento.",
+    },
+  ],
+
+  ctaTitle: "¿Listo para desarrollar su sitio web?",
+
+  ctaDescription:
+    "Trabaje con CH TECH GIANT para convertir su idea en un sitio web o aplicación web potente, moderna, segura y escalable.",
+
+  ctaButton: "Consulta Gratuita",
+
+  customDevelopment: "Desarrollo Personalizado",
+
+  getQuote: "Solicitar Presupuesto",
+
+  metaTitle:
+    "Empresa de Desarrollo Web | Desarrollo de Sitios Web y Aplicaciones Web | CH TECH GIANT",
+
+  metaDescription:
+    "CH TECH GIANT ofrece desarrollo web personalizado, sitios web corporativos, desarrollo de comercio electrónico, aplicaciones web, desarrollo CMS, diseño web responsivo, diseño UI/UX, integración de API y soluciones de software personalizadas.",
+
+  metaKeywords:
+    "empresa de desarrollo web, desarrollo de sitios web, servicios de desarrollo web, desarrollo web personalizado, desarrollo de aplicaciones web, desarrollo de sitios web ecommerce, desarrollo de sitios web corporativos, diseño web responsivo, empresa de desarrollo web en Davangere, empresa de desarrollo web en Karnataka, empresa de desarrollo web en India",
+},
 
 };
 
