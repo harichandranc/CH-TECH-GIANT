@@ -53,31 +53,31 @@ const invoiceGallery = [
   },
   {
     image: "/images/invoices/invoice-2.png",
-    size: "small",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-3.png",
-    size: "small",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-4.png",
-    size: "medium",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-5.png",
-    size: "medium",
+    size: "large",
   },
   {
     image: "/images/invoices/invoice-6.png",
-    size: "medium",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-7.png",
-    size: "small",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-8.png",
-    size: "small",
+    size: "normal",
   },
   {
     image: "/images/invoices/invoice-9.png",
@@ -221,156 +221,170 @@ const InvoiceDesign = () => {
       {/* =====================================================
           INVOICE GALLERY
       ====================================================== */}
-      <SectionWrapper>
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            Our Invoice Designs
-          </span>
+      {/* =====================================================
+    INVOICE GALLERY
+====================================================== */}
+<SectionWrapper>
+  <div className="text-center max-w-3xl mx-auto mb-14">
+    <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
+      Our Invoice Designs
+    </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            Invoice Design Gallery
-          </h2>
+    <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
+      Invoice Design Gallery
+    </h2>
 
-          <p className="text-gray-400 leading-relaxed">
-            Explore our collection of professional invoice layouts designed
-            for different business requirements, industries, and branding
-            styles.
-          </p>
-        </div>
+    <p className="text-gray-400 leading-relaxed">
+      Explore our collection of professional invoice layouts designed
+      for different business requirements, industries, and branding
+      styles.
+    </p>
+  </div>
 
-        {/* Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-          {invoiceGallery.map((invoice, index) => {
-            const isLarge = invoice.size === "large";
-            const isMedium = invoice.size === "medium";
-            const isLast = index === invoiceGallery.length - 1;
+  {/* Desktop: 3 × 3 diagonal pattern */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+    {invoiceGallery.map((invoice, index) => {
+      const isLarge = invoice.size === "large";
 
-            let columnClass = "";
+      let columnClass = "";
 
-            if (isLast) {
-              columnClass = "lg:col-span-6 lg:col-start-4";
-            } else if (isLarge) {
-              columnClass = "lg:col-span-6";
-            } else if (isMedium) {
-              columnClass = "lg:col-span-4";
-            } else {
-              columnClass = "lg:col-span-3";
-            }
+      /*
+        Row 1:
+        Large 1 | Normal 2 | Normal 3
 
-            return (
-              <motion.div
-                key={invoice.image}
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                  scale: 0.96,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.08,
-                  ease: "easeOut",
-                }}
-                viewport={{
-                  once: true,
-                  margin: "-80px",
-                }}
-                className={`group relative ${columnClass}`}
-              >
-                <div
-                  className={`
-                    relative overflow-hidden
-                    rounded-[2rem]
-                    bg-white/[0.025]
-                    border border-white/10
-                    p-3
-                    transition-all duration-500
-                    group-hover:border-cyan-400/40
-                    group-hover:bg-cyan-400/[0.025]
-                    group-hover:-translate-y-2
-                    ${
-                      isLast
-                        ? "h-[680px]"
-                        : isLarge
-                        ? "h-[620px]"
-                        : isMedium
-                        ? "h-[500px]"
-                        : "h-[460px]"
-                    }
-                  `}
-                >
-                  {/* Glow */}
-                  <div
-                    className="
-                      absolute
-                      -inset-1
-                      bg-cyan-400/10
-                      blur-3xl
-                      opacity-0
-                      group-hover:opacity-100
-                      transition
-                      duration-700
-                      pointer-events-none
-                    "
-                  />
+        Row 2:
+        Normal 4 | Large 5 | Normal 6
 
-                  {/* Invoice Image */}
-                  <div
-                    className="
-                      relative
-                      z-10
-                      w-full
-                      h-full
-                      rounded-[1.5rem]
-                      overflow-hidden
-                      bg-[#0a0f1f]
-                      flex
-                      items-center
-                      justify-center
-                    "
-                  >
-                    <img
-                      src={invoice.image}
-                      alt=""
-                      loading="lazy"
-                      className="
-                        w-full
-                        h-full
-                        object-contain
-                        transition-all
-                        duration-700
-                        ease-out
-                        group-hover:scale-[1.035]
-                      "
-                    />
+        Row 3:
+        Normal 7 | Normal 8 | Large 9
+      */
 
-                    {/* Shine Effect */}
-                    <div
-                      className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-tr
-                        from-transparent
-                        via-white/10
-                        to-transparent
-                        -translate-x-full
-                        group-hover:translate-x-full
-                        transition-transform
-                        duration-1000
-                        pointer-events-none
-                      "
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </SectionWrapper>
+      if (index === 0) {
+        columnClass = "lg:col-span-6";
+      } else if (index === 1 || index === 2) {
+        columnClass = "lg:col-span-3";
+      } else if (index === 3) {
+        columnClass = "lg:col-span-3";
+      } else if (index === 4) {
+        columnClass = "lg:col-span-6";
+      } else if (index === 5) {
+        columnClass = "lg:col-span-3";
+      } else if (index === 6 || index === 7) {
+        columnClass = "lg:col-span-3";
+      } else if (index === 8) {
+        columnClass = "lg:col-span-6";
+      }
+
+      return (
+        <motion.div
+          key={invoice.image}
+          initial={{
+            opacity: 0,
+            y: 50,
+            scale: 0.96,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.7,
+            delay: index * 0.08,
+            ease: "easeOut",
+          }}
+          viewport={{
+            once: true,
+            margin: "-80px",
+          }}
+          className={`group relative ${columnClass}`}
+        >
+          <div
+            className={`
+              relative overflow-hidden
+              rounded-[2rem]
+              bg-white/[0.025]
+              border border-white/10
+              p-3
+              transition-all duration-500
+              group-hover:border-cyan-400/40
+              group-hover:bg-cyan-400/[0.025]
+              group-hover:-translate-y-2
+              ${
+                isLarge
+                  ? "h-[620px]"
+                  : "h-[460px]"
+              }
+            `}
+          >
+            {/* Glow */}
+            <div
+              className="
+                absolute
+                -inset-1
+                bg-cyan-400/10
+                blur-3xl
+                opacity-0
+                group-hover:opacity-100
+                transition
+                duration-700
+                pointer-events-none
+              "
+            />
+
+            {/* Invoice */}
+            <div
+              className="
+                relative
+                z-10
+                w-full
+                h-full
+                rounded-[1.5rem]
+                overflow-hidden
+                bg-[#0a0f1f]
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <img
+                src={invoice.image}
+                alt=""
+                loading="lazy"
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  transition-all
+                  duration-700
+                  ease-out
+                  group-hover:scale-[1.035]
+                "
+              />
+
+              {/* Shine */}
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-tr
+                  from-transparent
+                  via-white/10
+                  to-transparent
+                  -translate-x-full
+                  group-hover:translate-x-full
+                  transition-transform
+                  duration-1000
+                  pointer-events-none
+                "
+              />
+            </div>
+          </div>
+        </motion.div>
+      );
+    })}
+  </div>
+</SectionWrapper>
 
       {/* =====================================================
           DESIGN FEATURES
