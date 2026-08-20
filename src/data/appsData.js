@@ -130,7 +130,7 @@ const apps = [
     },
     image: "/projects/invoicemaker.png",
     playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app",
     apk: "http://147.93.110.58:8080/InvoiceMaker.apk",
   },
 
