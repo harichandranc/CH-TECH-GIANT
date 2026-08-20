@@ -1649,6 +1649,69 @@ const ja = {
       },
     },
   },
+
+  // =========================
+// CONTACT PAGE
+// =========================
+
+contact: {
+  seo: {
+    title: "お問い合わせ | CH TECH GIANT",
+    description:
+      "アプリ開発、Web開発、ソフトウェア開発、ゲーム開発、カスタムデジタルソリューションについて、CH TECH GIANTにお問い合わせください。",
+    keywords:
+      "CH TECH GIANT お問い合わせ, ソフトウェア開発会社, アプリ開発, Web開発, カスタムソフトウェア, ソフトウェア会社 お問い合わせ",
+  },
+
+  badge: "一緒に仕事をしましょう",
+
+  title: "素晴らしいものを",
+  titleHighlight: "一緒につくりましょう。",
+
+  description:
+    "アイデア、プロジェクト、またはビジネスのご相談はありますか？詳しくお聞かせください。できるだけ早くご連絡いたします。",
+
+  contact: "お問い合わせ",
+
+  conversationTitle: "ご相談を始めましょう。",
+
+  conversationDescription:
+    "Webサイト、モバイルアプリ、ゲーム、カスタムソフトウェアなど、どのようなご相談でもお任せください。あなたのアイデアを現実にするお手伝いをします。",
+
+  email: "メール",
+
+  response: "返信",
+
+  responseTime: "通常24時間以内",
+
+  projectQuestion: "プロジェクトをお考えですか？",
+
+  nameLabel: "お名前",
+  namePlaceholder: "山田 太郎",
+
+  emailLabel: "メールアドレス",
+  emailPlaceholder: "you@example.com",
+
+  subjectLabel: "件名",
+  subjectPlaceholder: "どのようなご相談ですか？",
+
+  messageLabel: "メッセージ",
+  messagePlaceholder:
+    "プロジェクトについて簡単にお聞かせください...",
+
+  sendMessage: "メッセージを送信",
+
+  sendingMessage: "送信中...",
+
+  successMessage:
+    "メッセージが正常に送信されました。折り返しご連絡いたします。",
+
+  errorMessage:
+    "問題が発生しました。もう一度お試しください。",
+
+  agreement:
+    "このフォームを送信することで、お問い合わせに関してご連絡することに同意したものとします。",
+},
   // =========================
 // PRIVACY POLICY PAGE
 // =========================
