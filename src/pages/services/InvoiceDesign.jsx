@@ -53,23 +53,35 @@ const invoiceGallery = [
   },
   {
     image: "/images/invoices/invoice-2.png",
-    size: "normal",
+    size: "small",
   },
   {
     image: "/images/invoices/invoice-3.png",
-    size: "normal",
+    size: "small",
   },
   {
     image: "/images/invoices/invoice-4.png",
-    size: "normal",
+    size: "medium",
   },
   {
     image: "/images/invoices/invoice-5.png",
-    size: "large",
+    size: "medium",
   },
   {
     image: "/images/invoices/invoice-6.png",
-    size: "normal",
+    size: "medium",
+  },
+  {
+    image: "/images/invoices/invoice-7.png",
+    size: "small",
+  },
+  {
+    image: "/images/invoices/invoice-8.png",
+    size: "small",
+  },
+  {
+    image: "/images/invoices/invoice-9.png",
+    size: "large",
   },
 ];
 
@@ -103,6 +115,9 @@ const designProcess = [
 const InvoiceDesign = () => {
   return (
     <div className="bg-[#050816] text-white">
+      {/* =====================================================
+          PAGE BANNER
+      ====================================================== */}
       <PageBanner
         title="Invoice Design"
         subtitle="Premium invoice and billing designs tailored for modern businesses, startups, and professional services."
@@ -113,7 +128,7 @@ const InvoiceDesign = () => {
       ====================================================== */}
       <SectionWrapper>
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left */}
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -161,7 +176,7 @@ const InvoiceDesign = () => {
             </div>
           </motion.div>
 
-          {/* Right */}
+          {/* Right Content */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -227,6 +242,20 @@ const InvoiceDesign = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {invoiceGallery.map((invoice, index) => {
             const isLarge = invoice.size === "large";
+            const isMedium = invoice.size === "medium";
+            const isLast = index === invoiceGallery.length - 1;
+
+            let columnClass = "";
+
+            if (isLast) {
+              columnClass = "lg:col-span-6 lg:col-start-4";
+            } else if (isLarge) {
+              columnClass = "lg:col-span-6";
+            } else if (isMedium) {
+              columnClass = "lg:col-span-4";
+            } else {
+              columnClass = "lg:col-span-3";
+            }
 
             return (
               <motion.div
@@ -250,10 +279,7 @@ const InvoiceDesign = () => {
                   once: true,
                   margin: "-80px",
                 }}
-                className={`
-                  group relative
-                  ${isLarge ? "lg:col-span-6" : "lg:col-span-3"}
-                `}
+                className={`group relative ${columnClass}`}
               >
                 <div
                   className={`
@@ -267,17 +293,46 @@ const InvoiceDesign = () => {
                     group-hover:bg-cyan-400/[0.025]
                     group-hover:-translate-y-2
                     ${
-                      isLarge
+                      isLast
+                        ? "h-[680px]"
+                        : isLarge
                         ? "h-[620px]"
+                        : isMedium
+                        ? "h-[500px]"
                         : "h-[460px]"
                     }
                   `}
                 >
                   {/* Glow */}
-                  <div className="absolute -inset-1 bg-cyan-400/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+                  <div
+                    className="
+                      absolute
+                      -inset-1
+                      bg-cyan-400/10
+                      blur-3xl
+                      opacity-0
+                      group-hover:opacity-100
+                      transition
+                      duration-700
+                      pointer-events-none
+                    "
+                  />
 
-                  {/* Invoice */}
-                  <div className="relative z-10 w-full h-full rounded-[1.5rem] overflow-hidden bg-[#0a0f1f] flex items-center justify-center">
+                  {/* Invoice Image */}
+                  <div
+                    className="
+                      relative
+                      z-10
+                      w-full
+                      h-full
+                      rounded-[1.5rem]
+                      overflow-hidden
+                      bg-[#0a0f1f]
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
                     <img
                       src={invoice.image}
                       alt=""
@@ -293,7 +348,7 @@ const InvoiceDesign = () => {
                       "
                     />
 
-                    {/* Shine */}
+                    {/* Shine Effect */}
                     <div
                       className="
                         absolute
@@ -425,7 +480,20 @@ const InvoiceDesign = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-3xl border border-cyan-500/20 bg-gradient-to-br from-cyan-400/10 via-white/5 to-transparent p-10 md:p-14 text-center"
+          className="
+            relative
+            overflow-hidden
+            rounded-3xl
+            border
+            border-cyan-500/20
+            bg-gradient-to-br
+            from-cyan-400/10
+            via-white/5
+            to-transparent
+            p-10
+            md:p-14
+            text-center
+          "
         >
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-cyan-400/10 blur-3xl rounded-full" />
 
@@ -445,7 +513,19 @@ const InvoiceDesign = () => {
 
             <a
               href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition"
+              className="
+                inline-flex
+                items-center
+                justify-center
+                px-7
+                py-3
+                rounded-full
+                bg-cyan-400
+                text-black
+                font-semibold
+                hover:bg-cyan-300
+                transition
+              "
             >
               Get Started
             </a>
