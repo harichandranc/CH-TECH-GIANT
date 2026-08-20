@@ -47,36 +47,12 @@ const invoiceFeatures = [
 ];
 
 const invoiceGallery = [
-  {
-    image: "/images/invoices/invoice-1.png",
-    title: "Professional Business Invoice",
-    description: "Clean and modern invoice layout for professional businesses.",
-  },
-  {
-    image: "/images/invoices/invoice-2.png",
-    title: "GST Invoice Design",
-    description: "Structured GST invoice design with clear tax information.",
-  },
-  {
-    image: "/images/invoices/invoice-3.png",
-    title: "Corporate Invoice",
-    description: "Premium corporate invoice design with strong brand presentation.",
-  },
-  {
-    image: "/images/invoices/invoice-4.png",
-    title: "Service Invoice",
-    description: "Simple billing layout designed for service-based businesses.",
-  },
-  {
-    image: "/images/invoices/invoice-5.png",
-    title: "Modern Invoice",
-    description: "Minimal and modern invoice design with a professional appearance.",
-  },
-  {
-    image: "/images/invoices/invoice-6.png",
-    title: "Branded Invoice",
-    description: "Custom branded invoice layout designed around your business identity.",
-  },
+  "/images/invoices/invoice-1.png",
+  "/images/invoices/invoice-2.png",
+  "/images/invoices/invoice-3.png",
+  "/images/invoices/invoice-4.png",
+  "/images/invoices/invoice-5.png",
+  "/images/invoices/invoice-6.png",
 ];
 
 const designProcess = [
@@ -196,6 +172,7 @@ const InvoiceDesign = () => {
                   className="flex items-center gap-3"
                 >
                   <span className="text-cyan-400 text-lg">✓</span>
+
                   <p className="text-gray-400">{benefit}</p>
                 </motion.div>
               ))}
@@ -216,17 +193,16 @@ const InvoiceDesign = () => {
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            Explore examples of professional invoice layouts created for
-            different business requirements. From GST billing documents to
-            modern corporate invoices, our designs focus on clarity,
-            professionalism, and brand consistency.
+            Explore our collection of professional invoice layouts designed
+            for different business requirements, industries, and branding
+            styles.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {invoiceGallery.map((invoice, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {invoiceGallery.map((image, index) => (
             <motion.div
-              key={index}
+              key={image}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -236,36 +212,20 @@ const InvoiceDesign = () => {
               viewport={{ once: true }}
               className="group overflow-hidden rounded-3xl bg-white/5 border border-cyan-500/10 hover:border-cyan-400/40 transition duration-300"
             >
-              <div className="relative overflow-hidden bg-white/5 aspect-[4/3]">
+              <div className="relative overflow-hidden bg-white aspect-[3/4]">
                 <img
-                  src={invoice.image}
-                  alt={invoice.title}
+                  src={image}
+                  alt=""
                   loading="lazy"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
                 />
-
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300 flex items-center justify-center">
-                  <span className="opacity-0 group-hover:opacity-100 transition duration-300 px-5 py-2 rounded-full bg-cyan-400 text-black font-semibold text-sm">
-                    Invoice Design
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
-                  {invoice.title}
-                </h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {invoice.description}
-                </p>
               </div>
             </motion.div>
           ))}
         </div>
       </SectionWrapper>
 
-      {/* Features */}
+      {/* Design Features */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
