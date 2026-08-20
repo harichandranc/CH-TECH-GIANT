@@ -47,12 +47,30 @@ const invoiceFeatures = [
 ];
 
 const invoiceGallery = [
-  "/images/invoices/invoice-1.png",
-  "/images/invoices/invoice-2.png",
-  "/images/invoices/invoice-3.png",
-  "/images/invoices/invoice-4.png",
-  "/images/invoices/invoice-5.png",
-  "/images/invoices/invoice-6.png",
+  {
+    image: "/images/invoices/invoice-1.png",
+    size: "large",
+  },
+  {
+    image: "/images/invoices/invoice-2.png",
+    size: "normal",
+  },
+  {
+    image: "/images/invoices/invoice-3.png",
+    size: "normal",
+  },
+  {
+    image: "/images/invoices/invoice-4.png",
+    size: "normal",
+  },
+  {
+    image: "/images/invoices/invoice-5.png",
+    size: "large",
+  },
+  {
+    image: "/images/invoices/invoice-6.png",
+    size: "normal",
+  },
 ];
 
 const designProcess = [
@@ -90,9 +108,12 @@ const InvoiceDesign = () => {
         subtitle="Premium invoice and billing designs tailored for modern businesses, startups, and professional services."
       />
 
-      {/* Introduction */}
+      {/* =====================================================
+          INTRODUCTION
+      ====================================================== */}
       <SectionWrapper>
         <div className="grid lg:grid-cols-2 gap-14 items-center">
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -140,6 +161,7 @@ const InvoiceDesign = () => {
             </div>
           </motion.div>
 
+          {/* Right */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -181,7 +203,9 @@ const InvoiceDesign = () => {
         </div>
       </SectionWrapper>
 
-      {/* Invoice Gallery */}
+      {/* =====================================================
+          INVOICE GALLERY
+      ====================================================== */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
@@ -199,33 +223,103 @@ const InvoiceDesign = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {invoiceGallery.map((image, index) => (
-            <motion.div
-              key={image}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-              }}
-              viewport={{ once: true }}
-              className="group overflow-hidden rounded-3xl bg-white/5 border border-cyan-500/10 hover:border-cyan-400/40 transition duration-300"
-            >
-              <div className="relative overflow-hidden bg-white aspect-[3/4]">
-                <img
-                  src={image}
-                  alt=""
-                  loading="lazy"
-                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
-            </motion.div>
-          ))}
+        {/* Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+          {invoiceGallery.map((invoice, index) => {
+            const isLarge = invoice.size === "large";
+
+            return (
+              <motion.div
+                key={invoice.image}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                  scale: 0.96,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.08,
+                  ease: "easeOut",
+                }}
+                viewport={{
+                  once: true,
+                  margin: "-80px",
+                }}
+                className={`
+                  group relative
+                  ${isLarge ? "lg:col-span-6" : "lg:col-span-3"}
+                `}
+              >
+                <div
+                  className={`
+                    relative overflow-hidden
+                    rounded-[2rem]
+                    bg-white/[0.025]
+                    border border-white/10
+                    p-3
+                    transition-all duration-500
+                    group-hover:border-cyan-400/40
+                    group-hover:bg-cyan-400/[0.025]
+                    group-hover:-translate-y-2
+                    ${
+                      isLarge
+                        ? "h-[620px]"
+                        : "h-[460px]"
+                    }
+                  `}
+                >
+                  {/* Glow */}
+                  <div className="absolute -inset-1 bg-cyan-400/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+
+                  {/* Invoice */}
+                  <div className="relative z-10 w-full h-full rounded-[1.5rem] overflow-hidden bg-[#0a0f1f] flex items-center justify-center">
+                    <img
+                      src={invoice.image}
+                      alt=""
+                      loading="lazy"
+                      className="
+                        w-full
+                        h-full
+                        object-contain
+                        transition-all
+                        duration-700
+                        ease-out
+                        group-hover:scale-[1.035]
+                      "
+                    />
+
+                    {/* Shine */}
+                    <div
+                      className="
+                        absolute
+                        inset-0
+                        bg-gradient-to-tr
+                        from-transparent
+                        via-white/10
+                        to-transparent
+                        -translate-x-full
+                        group-hover:translate-x-full
+                        transition-transform
+                        duration-1000
+                        pointer-events-none
+                      "
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </SectionWrapper>
 
-      {/* Design Features */}
+      {/* =====================================================
+          DESIGN FEATURES
+      ====================================================== */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
@@ -274,7 +368,9 @@ const InvoiceDesign = () => {
         </div>
       </SectionWrapper>
 
-      {/* Process */}
+      {/* =====================================================
+          DESIGN PROCESS
+      ====================================================== */}
       <SectionWrapper>
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
@@ -320,7 +416,9 @@ const InvoiceDesign = () => {
         </div>
       </SectionWrapper>
 
-      {/* CTA */}
+      {/* =====================================================
+          CTA
+      ====================================================== */}
       <SectionWrapper>
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
