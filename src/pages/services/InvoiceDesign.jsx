@@ -1,7 +1,76 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
+import { useNavigate, useParams } from "react-router-dom";
 
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
+
+/* =========================================================
+   LANGUAGE LIST
+========================================================= */
+
+const languages = [
+  {
+    code: "en",
+    path: "/invoice-design",
+    label: "🇺🇸 English",
+    shortLabel: "English",
+  },
+  {
+    code: "zh",
+    path: "/zh/invoice-design",
+    label: "🇨🇳 简体中文",
+    shortLabel: "中文",
+  },
+  {
+    code: "es",
+    path: "/es/invoice-design",
+    label: "🇪🇸 Español",
+    shortLabel: "Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/invoice-design",
+    label: "🇧🇷 Português",
+    shortLabel: "Português",
+  },
+  {
+    code: "de",
+    path: "/de/invoice-design",
+    label: "🇩🇪 Deutsch",
+    shortLabel: "Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/invoice-design",
+    label: "🇰🇷 한국어",
+    shortLabel: "한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/invoice-design",
+    label: "🇯🇵 日本語",
+    shortLabel: "日本語",
+  },
+];
+
+/* =========================================================
+   SUPPORTED LANGUAGES
+========================================================= */
+
+const supportedLanguages = [
+  "zh",
+  "es",
+  "pt",
+  "de",
+  "ko",
+  "ja",
+];
+
+/* =========================================================
+   INVOICE SERVICES
+========================================================= */
 
 const invoiceServices = [
   "Professional Invoice Templates",
@@ -14,6 +83,10 @@ const invoiceServices = [
   "Receipt & Payment Templates",
 ];
 
+/* =========================================================
+   INVOICE BENEFITS
+========================================================= */
+
 const invoiceBenefits = [
   "Professional business appearance",
   "Easy-to-read billing structure",
@@ -22,6 +95,10 @@ const invoiceBenefits = [
   "Clean modern typography",
   "Clear tax and payment information",
 ];
+
+/* =========================================================
+   INVOICE FEATURES
+========================================================= */
 
 const invoiceFeatures = [
   {
@@ -45,6 +122,10 @@ const invoiceFeatures = [
       "Every section is structured for easy reading so customers can quickly understand products, services, and payment details.",
   },
 ];
+
+/* =========================================================
+   INVOICE GALLERY
+========================================================= */
 
 const invoiceGallery = [
   {
@@ -85,6 +166,10 @@ const invoiceGallery = [
   },
 ];
 
+/* =========================================================
+   DESIGN PROCESS
+========================================================= */
+
 const designProcess = [
   {
     number: "01",
@@ -112,12 +197,85 @@ const designProcess = [
   },
 ];
 
+/* =========================================================
+   INVOICE DESIGN COMPONENT
+========================================================= */
+
 const InvoiceDesign = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  /* =======================================================
+     LANGUAGE
+  ======================================================= */
+
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
+
+  const currentLanguage =
+    languages.find((item) => item.code === language) ||
+    languages[0];
+
+  /* =======================================================
+     CHANGE LANGUAGE
+  ======================================================= */
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+
+    const selected = languages.find(
+      (item) => item.code === selectedLanguage
+    );
+
+    if (selected) {
+      navigate(selected.path);
+    }
+  };
+
   return (
     <div className="bg-[#050816] text-white">
+
+      {/* =====================================================
+          LANGUAGE DROPDOWN
+      ====================================================== */}
+
+      <section className="relative px-4 pt-0 sm:pt-0">
+
+        {/* Same language selector style as Home page */}
+        <div className="flex justify-end w-full relative z-50">
+
+          <div className="relative">
+
+            <select
+              value={language}
+              onChange={handleLanguageChange}
+              aria-label="Select language"
+              className="appearance-none bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-xs sm:text-sm font-medium rounded-xl pl-3 pr-9 py-2.5 outline-none cursor-pointer shadow-lg transition"
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-black text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+
+            <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* =====================================================
           PAGE BANNER
       ====================================================== */}
+
       <PageBanner
         title="Invoice Design"
         subtitle="Premium invoice and billing designs tailored for modern businesses, startups, and professional services."
@@ -126,15 +284,20 @@ const InvoiceDesign = () => {
       {/* =====================================================
           INTRODUCTION
       ====================================================== */}
+
       <SectionWrapper>
+
         <div className="grid lg:grid-cols-2 gap-14 items-center">
+
           {/* Left Content */}
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+
             <span className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-4">
               Professional Invoice Solutions
             </span>
@@ -158,6 +321,7 @@ const InvoiceDesign = () => {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
+
               {invoiceServices.map((service, index) => (
                 <motion.div
                   key={index}
@@ -170,13 +334,18 @@ const InvoiceDesign = () => {
                   viewport={{ once: true }}
                   className="bg-white/5 border border-cyan-500/10 rounded-2xl p-4 backdrop-blur-xl hover:border-cyan-400/30 hover:bg-cyan-400/5 transition"
                 >
-                  <p className="text-gray-300">{service}</p>
+                  <p className="text-gray-300">
+                    {service}
+                  </p>
                 </motion.div>
               ))}
+
             </div>
+
           </motion.div>
 
           {/* Right Content */}
+
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -184,6 +353,7 @@ const InvoiceDesign = () => {
             viewport={{ once: true }}
             className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8 backdrop-blur-xl"
           >
+
             <h3 className="text-2xl font-semibold mb-6">
               Why Professional Invoice Design Matters
             </h3>
@@ -196,6 +366,7 @@ const InvoiceDesign = () => {
             </p>
 
             <div className="space-y-5">
+
               {invoiceBenefits.map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -208,189 +379,215 @@ const InvoiceDesign = () => {
                   viewport={{ once: true }}
                   className="flex items-center gap-3"
                 >
-                  <span className="text-cyan-400 text-lg">✓</span>
+                  <span className="text-cyan-400 text-lg">
+                    ✓
+                  </span>
 
-                  <p className="text-gray-400">{benefit}</p>
+                  <p className="text-gray-400">
+                    {benefit}
+                  </p>
                 </motion.div>
               ))}
+
             </div>
+
           </motion.div>
+
         </div>
+
       </SectionWrapper>
 
       {/* =====================================================
           INVOICE GALLERY
       ====================================================== */}
-      {/* =====================================================
-    INVOICE GALLERY
-====================================================== */}
-<SectionWrapper>
-  <div className="text-center max-w-3xl mx-auto mb-14">
-    <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-      Our Invoice Designs
-    </span>
 
-    <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-      Invoice Design Gallery
-    </h2>
+      <SectionWrapper>
 
-    <p className="text-gray-400 leading-relaxed">
-      Explore our collection of professional invoice layouts designed
-      for different business requirements, industries, and branding
-      styles.
-    </p>
-  </div>
+        <div className="text-center max-w-3xl mx-auto mb-14">
 
-  {/* Desktop: 3 × 3 diagonal pattern */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-    {invoiceGallery.map((invoice, index) => {
-      const isLarge = invoice.size === "large";
+          <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
+            Our Invoice Designs
+          </span>
 
-      let columnClass = "";
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
+            Invoice Design Gallery
+          </h2>
 
-      /*
-        Row 1:
-        Large 1 | Normal 2 | Normal 3
+          <p className="text-gray-400 leading-relaxed">
+            Explore our collection of professional invoice layouts designed
+            for different business requirements, industries, and branding
+            styles.
+          </p>
 
-        Row 2:
-        Normal 4 | Large 5 | Normal 6
+        </div>
 
-        Row 3:
-        Normal 7 | Normal 8 | Large 9
-      */
+        {/* Desktop: 3 × 3 diagonal pattern */}
 
-      if (index === 0) {
-        columnClass = "lg:col-span-6";
-      } else if (index === 1 || index === 2) {
-        columnClass = "lg:col-span-3";
-      } else if (index === 3) {
-        columnClass = "lg:col-span-3";
-      } else if (index === 4) {
-        columnClass = "lg:col-span-6";
-      } else if (index === 5) {
-        columnClass = "lg:col-span-3";
-      } else if (index === 6 || index === 7) {
-        columnClass = "lg:col-span-3";
-      } else if (index === 8) {
-        columnClass = "lg:col-span-6";
-      }
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
 
-      return (
-        <motion.div
-          key={invoice.image}
-          initial={{
-            opacity: 0,
-            y: 50,
-            scale: 0.96,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.7,
-            delay: index * 0.08,
-            ease: "easeOut",
-          }}
-          viewport={{
-            once: true,
-            margin: "-80px",
-          }}
-          className={`group relative ${columnClass}`}
-        >
-          <div
-            className={`
-              relative overflow-hidden
-              rounded-[2rem]
-              bg-white/[0.025]
-              border border-white/10
-              p-3
-              transition-all duration-500
-              group-hover:border-cyan-400/40
-              group-hover:bg-cyan-400/[0.025]
-              group-hover:-translate-y-2
-              ${
-                isLarge
-                  ? "h-[620px]"
-                  : "h-[460px]"
-              }
-            `}
-          >
-            {/* Glow */}
-            <div
-              className="
-                absolute
-                -inset-1
-                bg-cyan-400/10
-                blur-3xl
-                opacity-0
-                group-hover:opacity-100
-                transition
-                duration-700
-                pointer-events-none
-              "
-            />
+          {invoiceGallery.map((invoice, index) => {
 
-            {/* Invoice */}
-            <div
-              className="
-                relative
-                z-10
-                w-full
-                h-full
-                rounded-[1.5rem]
-                overflow-hidden
-                bg-[#0a0f1f]
-                flex
-                items-center
-                justify-center
-              "
-            >
-              <img
-                src={invoice.image}
-                alt=""
-                loading="lazy"
-                className="
-                  w-full
-                  h-full
-                  object-contain
-                  transition-all
-                  duration-700
-                  ease-out
-                  group-hover:scale-[1.035]
-                "
-              />
+            const isLarge = invoice.size === "large";
 
-              {/* Shine */}
-              <div
-                className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-tr
-                  from-transparent
-                  via-white/10
-                  to-transparent
-                  -translate-x-full
-                  group-hover:translate-x-full
-                  transition-transform
-                  duration-1000
-                  pointer-events-none
-                "
-              />
-            </div>
-          </div>
-        </motion.div>
-      );
-    })}
-  </div>
-</SectionWrapper>
+            let columnClass = "";
+
+            /*
+              Row 1:
+              Large 1 | Normal 2 | Normal 3
+
+              Row 2:
+              Normal 4 | Large 5 | Normal 6
+
+              Row 3:
+              Normal 7 | Normal 8 | Large 9
+            */
+
+            if (index === 0) {
+              columnClass = "lg:col-span-6";
+            } else if (index === 1 || index === 2) {
+              columnClass = "lg:col-span-3";
+            } else if (index === 3) {
+              columnClass = "lg:col-span-3";
+            } else if (index === 4) {
+              columnClass = "lg:col-span-6";
+            } else if (index === 5) {
+              columnClass = "lg:col-span-3";
+            } else if (index === 6 || index === 7) {
+              columnClass = "lg:col-span-3";
+            } else if (index === 8) {
+              columnClass = "lg:col-span-6";
+            }
+
+            return (
+              <motion.div
+                key={invoice.image}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                  scale: 0.96,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.08,
+                  ease: "easeOut",
+                }}
+                viewport={{
+                  once: true,
+                  margin: "-80px",
+                }}
+                className={`group relative ${columnClass}`}
+              >
+
+                <div
+                  className={`
+                    relative overflow-hidden
+                    rounded-[2rem]
+                    bg-white/[0.025]
+                    border border-white/10
+                    p-3
+                    transition-all duration-500
+                    group-hover:border-cyan-400/40
+                    group-hover:bg-cyan-400/[0.025]
+                    group-hover:-translate-y-2
+                    ${
+                      isLarge
+                        ? "h-[620px]"
+                        : "h-[460px]"
+                    }
+                  `}
+                >
+
+                  {/* Glow */}
+
+                  <div
+                    className="
+                      absolute
+                      -inset-1
+                      bg-cyan-400/10
+                      blur-3xl
+                      opacity-0
+                      group-hover:opacity-100
+                      transition
+                      duration-700
+                      pointer-events-none
+                    "
+                  />
+
+                  {/* Invoice */}
+
+                  <div
+                    className="
+                      relative
+                      z-10
+                      w-full
+                      h-full
+                      rounded-[1.5rem]
+                      overflow-hidden
+                      bg-[#0a0f1f]
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+
+                    <img
+                      src={invoice.image}
+                      alt=""
+                      loading="lazy"
+                      className="
+                        w-full
+                        h-full
+                        object-contain
+                        transition-all
+                        duration-700
+                        ease-out
+                        group-hover:scale-[1.035]
+                      "
+                    />
+
+                    {/* Shine */}
+
+                    <div
+                      className="
+                        absolute
+                        inset-0
+                        bg-gradient-to-tr
+                        from-transparent
+                        via-white/10
+                        to-transparent
+                        -translate-x-full
+                        group-hover:translate-x-full
+                        transition-transform
+                        duration-1000
+                        pointer-events-none
+                      "
+                    />
+
+                  </div>
+
+                </div>
+
+              </motion.div>
+            );
+          })}
+
+        </div>
+
+      </SectionWrapper>
 
       {/* =====================================================
           DESIGN FEATURES
       ====================================================== */}
+
       <SectionWrapper>
+
         <div className="text-center max-w-3xl mx-auto mb-14">
+
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
             Design Features
           </span>
@@ -404,9 +601,11 @@ const InvoiceDesign = () => {
             requirements to create invoice layouts that work for your
             business.
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
+
           {invoiceFeatures.map((feature, index) => (
             <motion.div
               key={index}
@@ -419,10 +618,13 @@ const InvoiceDesign = () => {
               viewport={{ once: true }}
               className="bg-white/5 border border-cyan-500/10 rounded-3xl p-7 hover:border-cyan-400/30 transition"
             >
+
               <div className="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-5">
+
                 <span className="text-cyan-400 font-bold">
                   0{index + 1}
                 </span>
+
               </div>
 
               <h3 className="text-xl font-semibold mb-3">
@@ -432,16 +634,22 @@ const InvoiceDesign = () => {
               <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
+
             </motion.div>
           ))}
+
         </div>
+
       </SectionWrapper>
 
       {/* =====================================================
           DESIGN PROCESS
       ====================================================== */}
+
       <SectionWrapper>
+
         <div className="text-center max-w-3xl mx-auto mb-14">
+
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
             Our Process
           </span>
@@ -454,9 +662,11 @@ const InvoiceDesign = () => {
             From understanding your requirements to delivering the final
             design, we follow a simple and structured invoice design process.
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
           {designProcess.map((step, index) => (
             <motion.div
               key={index}
@@ -469,6 +679,7 @@ const InvoiceDesign = () => {
               viewport={{ once: true }}
               className="relative bg-white/5 border border-cyan-500/10 rounded-3xl p-7 hover:border-cyan-400/30 transition"
             >
+
               <span className="text-4xl font-bold text-cyan-400/30">
                 {step.number}
               </span>
@@ -480,15 +691,20 @@ const InvoiceDesign = () => {
               <p className="text-gray-400 text-sm leading-relaxed">
                 {step.description}
               </p>
+
             </motion.div>
           ))}
+
         </div>
+
       </SectionWrapper>
 
       {/* =====================================================
           CTA
       ====================================================== */}
+
       <SectionWrapper>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -509,9 +725,11 @@ const InvoiceDesign = () => {
             text-center
           "
         >
+
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-cyan-400/10 blur-3xl rounded-full" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
+
             <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
               Get Started
             </span>
@@ -526,7 +744,11 @@ const InvoiceDesign = () => {
             </p>
 
             <a
-              href="/contact"
+              href={
+                language === "en"
+                  ? "/contact"
+                  : `/${language}/contact`
+              }
               className="
                 inline-flex
                 items-center
@@ -543,9 +765,13 @@ const InvoiceDesign = () => {
             >
               Get Started
             </a>
+
           </div>
+
         </motion.div>
+
       </SectionWrapper>
+
     </div>
   );
 };
