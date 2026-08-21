@@ -1,10 +1,11 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
+
+import translations from "../../locales";
 
 /* =========================================================
    LANGUAGE LIST
@@ -15,43 +16,36 @@ const languages = [
     code: "en",
     path: "/invoice-design",
     label: "🇺🇸 English",
-    shortLabel: "English",
   },
   {
     code: "zh",
     path: "/zh/invoice-design",
     label: "🇨🇳 简体中文",
-    shortLabel: "中文",
   },
   {
     code: "es",
     path: "/es/invoice-design",
     label: "🇪🇸 Español",
-    shortLabel: "Español",
   },
   {
     code: "pt",
     path: "/pt/invoice-design",
     label: "🇧🇷 Português",
-    shortLabel: "Português",
   },
   {
     code: "de",
     path: "/de/invoice-design",
     label: "🇩🇪 Deutsch",
-    shortLabel: "Deutsch",
   },
   {
     code: "ko",
     path: "/ko/invoice-design",
     label: "🇰🇷 한국어",
-    shortLabel: "한국어",
   },
   {
     code: "ja",
     path: "/ja/invoice-design",
     label: "🇯🇵 日本語",
-    shortLabel: "日本語",
   },
 ];
 
@@ -60,6 +54,7 @@ const languages = [
 ========================================================= */
 
 const supportedLanguages = [
+  "en",
   "zh",
   "es",
   "pt",
@@ -69,62 +64,8 @@ const supportedLanguages = [
 ];
 
 /* =========================================================
-   INVOICE SERVICES
-========================================================= */
-
-const invoiceServices = [
-  "Professional Invoice Templates",
-  "GST Invoice Design",
-  "Business Billing Layouts",
-  "Custom Branding",
-  "Print Ready Invoices",
-  "Digital Invoice Systems",
-  "Quotation & Estimate Designs",
-  "Receipt & Payment Templates",
-];
-
-/* =========================================================
-   INVOICE BENEFITS
-========================================================= */
-
-const invoiceBenefits = [
-  "Professional business appearance",
-  "Easy-to-read billing structure",
-  "Brand-integrated invoice layouts",
-  "Print & digital compatibility",
-  "Clean modern typography",
-  "Clear tax and payment information",
-];
-
-/* =========================================================
-   INVOICE FEATURES
-========================================================= */
-
-const invoiceFeatures = [
-  {
-    title: "Custom Branding",
-    description:
-      "We design invoices that match your company logo, brand colors, typography, and overall visual identity.",
-  },
-  {
-    title: "GST Ready Layouts",
-    description:
-      "Create clean invoice layouts with organized GST, tax, subtotal, discount, and total sections.",
-  },
-  {
-    title: "Digital & Print",
-    description:
-      "Our invoice designs are optimized for both digital sharing and professional printing.",
-  },
-  {
-    title: "Business Friendly",
-    description:
-      "Every section is structured for easy reading so customers can quickly understand products, services, and payment details.",
-  },
-];
-
-/* =========================================================
    INVOICE GALLERY
+   Gallery images remain the same for every language.
 ========================================================= */
 
 const invoiceGallery = [
@@ -167,37 +108,6 @@ const invoiceGallery = [
 ];
 
 /* =========================================================
-   DESIGN PROCESS
-========================================================= */
-
-const designProcess = [
-  {
-    number: "01",
-    title: "Understand Your Business",
-    description:
-      "We understand your business, billing requirements, products or services, and the information that needs to appear on your invoice.",
-  },
-  {
-    number: "02",
-    title: "Create the Layout",
-    description:
-      "Our designers organize your invoice structure with clear sections for customer details, products, taxes, totals, and payment information.",
-  },
-  {
-    number: "03",
-    title: "Apply Your Branding",
-    description:
-      "Your logo, colors, typography, and brand identity are integrated into the invoice design.",
-  },
-  {
-    number: "04",
-    title: "Final Delivery",
-    description:
-      "After final approval, we provide the completed invoice design in suitable formats for digital use and printing.",
-  },
-];
-
-/* =========================================================
    INVOICE DESIGN COMPONENT
 ========================================================= */
 
@@ -213,9 +123,20 @@ const InvoiceDesign = () => {
     ? lang
     : "en";
 
-  const currentLanguage =
-    languages.find((item) => item.code === language) ||
-    languages[0];
+  /* =======================================================
+     TRANSLATIONS
+  ======================================================= */
+
+  const t = translations[language]?.invoiceDesign;
+
+  /*
+   * Safety fallback.
+   *
+   * If a language translation has not yet been added,
+   * English will be used instead of breaking the page.
+   */
+  const content =
+    t || translations.en.invoiceDesign;
 
   /* =======================================================
      CHANGE LANGUAGE
@@ -242,7 +163,6 @@ const InvoiceDesign = () => {
 
       <section className="relative px-4 pt-0 sm:pt-0">
 
-        {/* Same language selector style as Home page */}
         <div className="flex justify-end w-full relative z-50">
 
           <div className="relative">
@@ -277,8 +197,8 @@ const InvoiceDesign = () => {
       ====================================================== */}
 
       <PageBanner
-        title="Invoice Design"
-        subtitle="Premium invoice and billing designs tailored for modern businesses, startups, and professional services."
+        title={content.bannerTitle}
+        subtitle={content.bannerSubtitle}
       />
 
       {/* =====================================================
@@ -299,30 +219,24 @@ const InvoiceDesign = () => {
           >
 
             <span className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Professional Invoice Solutions
+              {content.introduction.badge}
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Smart Billing Design Solutions
+              {content.introduction.title}
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-5">
-              A professional invoice is more than a billing document. It is
-              also an important part of your business identity. We create
-              clean, modern, and professional invoice designs that make your
-              billing documents easier to understand while maintaining a
-              strong brand presence.
+              {content.introduction.paragraph1}
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              Whether you need a GST invoice, service invoice, corporate
-              invoice, quotation, estimate, or custom billing document, we
-              create layouts tailored to your business requirements.
+              {content.introduction.paragraph2}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
 
-              {invoiceServices.map((service, index) => (
+              {content.services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -355,19 +269,16 @@ const InvoiceDesign = () => {
           >
 
             <h3 className="text-2xl font-semibold mb-6">
-              Why Professional Invoice Design Matters
+              {content.benefits.title}
             </h3>
 
             <p className="text-gray-400 leading-relaxed mb-7">
-              Your invoice is one of the documents your customers interact
-              with after purchasing your product or service. A well-designed
-              invoice improves readability, builds trust, and creates a
-              consistent professional image for your business.
+              {content.benefits.description}
             </p>
 
             <div className="space-y-5">
 
-              {invoiceBenefits.map((benefit, index) => (
+              {content.benefits.items.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
@@ -379,6 +290,7 @@ const InvoiceDesign = () => {
                   viewport={{ once: true }}
                   className="flex items-center gap-3"
                 >
+
                   <span className="text-cyan-400 text-lg">
                     ✓
                   </span>
@@ -386,6 +298,7 @@ const InvoiceDesign = () => {
                   <p className="text-gray-400">
                     {benefit}
                   </p>
+
                 </motion.div>
               ))}
 
@@ -406,17 +319,15 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            Our Invoice Designs
+            {content.gallery.badge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            Invoice Design Gallery
+            {content.gallery.title}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            Explore our collection of professional invoice layouts designed
-            for different business requirements, industries, and branding
-            styles.
+            {content.gallery.description}
           </p>
 
         </div>
@@ -430,17 +341,6 @@ const InvoiceDesign = () => {
             const isLarge = invoice.size === "large";
 
             let columnClass = "";
-
-            /*
-              Row 1:
-              Large 1 | Normal 2 | Normal 3
-
-              Row 2:
-              Normal 4 | Large 5 | Normal 6
-
-              Row 3:
-              Normal 7 | Normal 8 | Large 9
-            */
 
             if (index === 0) {
               columnClass = "lg:col-span-6";
@@ -589,24 +489,22 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            Design Features
+            {content.features.badge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            Everything Your Invoice Needs
+            {content.features.title}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            We combine professional visual design with practical billing
-            requirements to create invoice layouts that work for your
-            business.
+            {content.features.description}
           </p>
 
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
 
-          {invoiceFeatures.map((feature, index) => (
+          {content.features.items.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -651,23 +549,22 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            Our Process
+            {content.process.badge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            How We Create Your Invoice
+            {content.process.title}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            From understanding your requirements to delivering the final
-            design, we follow a simple and structured invoice design process.
+            {content.process.description}
           </p>
 
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {designProcess.map((step, index) => (
+          {content.process.steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -731,16 +628,15 @@ const InvoiceDesign = () => {
           <div className="relative z-10 max-w-3xl mx-auto">
 
             <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-              Get Started
+              {content.cta.badge}
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-              Need a Professional Invoice Design?
+              {content.cta.title}
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              Give your business a professional edge with a clean, branded,
-              and easy-to-use invoice design tailored to your requirements.
+              {content.cta.description}
             </p>
 
             <a
@@ -763,7 +659,7 @@ const InvoiceDesign = () => {
                 transition
               "
             >
-              Get Started
+              {content.cta.button}
             </a>
 
           </div>
