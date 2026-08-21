@@ -3227,6 +3227,48 @@ invoiceDesign: {
 
   ctaButton: "Jetzt starten",
 },
+/* =========================================================
+   IT CONSULTING
+========================================================= */
+
+itConsulting: {
+  seo: {
+    title: "IT-Beratung | CH TECH GIANT",
+    description:
+      "Professionelle IT-Beratung für Unternehmen zur Verbesserung der Technologiestrategie, Modernisierung der Infrastruktur, Automatisierung von Geschäftsprozessen und Entwicklung skalierbarer digitaler Lösungen.",
+    keywords:
+      "IT-Beratung, Technologieberatung, IT-Strategie, Cloud-Beratung, digitale Transformation, Geschäftsautomatisierung, Infrastrukturplanung, technischer Support",
+  },
+
+  bannerTitle: "IT-Beratung",
+
+  bannerSubtitle:
+    "Professionelle Technologieberatung, die Unternehmen dabei unterstützt, zu wachsen, ihre Systeme zu modernisieren und ihre Abläufe zu optimieren.",
+
+  heroTitle: "Intelligente Technologieberatung",
+
+  heroDescription:
+    "Wir unterstützen Startups, Organisationen und Unternehmen dabei, die richtigen Technologien einzusetzen, Arbeitsabläufe zu verbessern und skalierbare digitale Ökosysteme aufzubauen.",
+
+  services: [
+    "Technologiestrategie",
+    "Cloud-Beratung",
+    "Geschäftsautomatisierung",
+    "Digitale Transformation",
+    "Infrastrukturplanung",
+    "Technischer Support",
+  ],
+
+  benefitsTitle: "Vorteile unserer IT-Beratung",
+
+  benefits: [
+    "Geschäftsorientierte IT-Strategien",
+    "Moderne cloudbasierte Lösungen",
+    "Skalierbare digitale Infrastruktur",
+    "Optimierung von Sicherheit und Leistung",
+    "Langfristige Technologieplanung",
+  ],
+},
 
 };
 export default de;

@@ -3224,6 +3224,48 @@ invoiceDesign: {
 
   ctaButton: "Get Started",
 },
+/* =========================================================
+   IT CONSULTING
+========================================================= */
+
+itConsulting: {
+  seo: {
+    title: "IT Consulting Services | CH TECH GIANT",
+    description:
+      "Professional IT consulting services to help businesses improve technology strategy, modernize infrastructure, automate operations, and build scalable digital solutions.",
+    keywords:
+      "IT consulting, technology consulting, IT strategy, cloud consulting, digital transformation, business automation, infrastructure planning, technical support",
+  },
+
+  bannerTitle: "IT Consulting",
+
+  bannerSubtitle:
+    "Professional technology consulting services to help businesses scale, modernize, and optimize operations.",
+
+  heroTitle: "Smart Technology Consulting",
+
+  heroDescription:
+    "We guide startups, organizations, and enterprises in adopting the right technologies, improving workflows, and building scalable digital ecosystems.",
+
+  services: [
+    "Technology Strategy",
+    "Cloud Consulting",
+    "Business Automation",
+    "Digital Transformation",
+    "Infrastructure Planning",
+    "Technical Support",
+  ],
+
+  benefitsTitle: "Consulting Benefits",
+
+  benefits: [
+    "Business-focused IT strategies",
+    "Modern cloud-based solutions",
+    "Scalable digital infrastructure",
+    "Security and performance optimization",
+    "Long-term technology planning",
+  ],
+},
 
 };
 
