@@ -1,310 +1,666 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
+import { useNavigate, useParams } from "react-router-dom";
 
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
+import { translations } from "../../locales";
 
-const services = [
-  "2D Game Development",
-  "3D Game Development",
-  "Unity Game Development",
-  "Unreal Engine Development",
-  "Mobile Game Development",
-  "Multiplayer Game Development",
-  "AR & VR Game Development",
-  "Educational & Simulation Games",
+/* =========================================================
+   LANGUAGE LIST
+========================================================= */
+
+const languages = [
+  {
+    code: "en",
+    path: "/game-development",
+    label: "🇺🇸 English",
+    shortLabel: "English",
+  },
+  {
+    code: "zh",
+    path: "/zh/game-development",
+    label: "🇨🇳 简体中文",
+    shortLabel: "中文",
+  },
+  {
+    code: "es",
+    path: "/es/game-development",
+    label: "🇪🇸 Español",
+    shortLabel: "Español",
+  },
+  {
+    code: "pt",
+    path: "/pt/game-development",
+    label: "🇧🇷 Português",
+    shortLabel: "Português",
+  },
+  {
+    code: "de",
+    path: "/de/game-development",
+    label: "🇩🇪 Deutsch",
+    shortLabel: "Deutsch",
+  },
+  {
+    code: "ko",
+    path: "/ko/game-development",
+    label: "🇰🇷 한국어",
+    shortLabel: "한국어",
+  },
+  {
+    code: "ja",
+    path: "/ja/game-development",
+    label: "🇯🇵 日本語",
+    shortLabel: "日本語",
+  },
 ];
 
-const platforms = [
-  "Android",
-  "iOS",
-  "Windows",
-  "macOS",
-  "Web Games",
-  "Cross-Platform Solutions",
+/* =========================================================
+   SUPPORTED LANGUAGES
+========================================================= */
+
+const supportedLanguages = [
+  "zh",
+  "es",
+  "pt",
+  "de",
+  "ko",
+  "ja",
 ];
 
-const technologies = [
-  "Unity",
-  "Unreal Engine",
-  "C#",
-  "C++",
-  "Photon Multiplayer",
-  "Firebase",
-  "Node.js",
-  "MongoDB",
-];
-
-const process = [
-  "Game Concept & Planning",
-  "Game Design & Prototyping",
-  "Development & Testing",
-  "Deployment & Support",
-];
+/* =========================================================
+   GAME DEVELOPMENT COMPONENT
+========================================================= */
 
 const GameDevelopment = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
+
+  /* =======================================================
+     LANGUAGE
+  ======================================================= */
+
+  const language = supportedLanguages.includes(lang)
+    ? lang
+    : "en";
+
+  const t = translations[language];
+
+  const currentLanguage =
+    languages.find((item) => item.code === language) ||
+    languages[0];
+
+  /* =======================================================
+     AUTO LANGUAGE DETECTION
+  ======================================================= */
+
+  useEffect(() => {
+    if (lang) return;
+
+    const browserLanguage =
+      navigator.language.toLowerCase();
+
+    if (browserLanguage.startsWith("zh")) {
+      navigate("/zh/game-development", { replace: true });
+    } else if (browserLanguage.startsWith("es")) {
+      navigate("/es/game-development", { replace: true });
+    } else if (browserLanguage.startsWith("pt")) {
+      navigate("/pt/game-development", { replace: true });
+    } else if (browserLanguage.startsWith("de")) {
+      navigate("/de/game-development", { replace: true });
+    } else if (browserLanguage.startsWith("ko")) {
+      navigate("/ko/game-development", { replace: true });
+    } else if (browserLanguage.startsWith("ja")) {
+      navigate("/ja/game-development", { replace: true });
+    } else {
+      navigate("/game-development", { replace: true });
+    }
+  }, [lang, navigate]);
+
+  /* =======================================================
+     CHANGE LANGUAGE
+  ======================================================= */
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+
+    const selected = languages.find(
+      (item) => item.code === selectedLanguage
+    );
+
+    if (selected) {
+      navigate(selected.path);
+    }
+  };
+
   return (
     <div className="bg-[#050816] text-white">
+
+      {/* =====================================================
+          LANGUAGE DROPDOWN
+      ====================================================== */}
+
+      <section className="relative px-4 pt-0 sm:pt-0">
+
+        <div className="flex justify-end w-full relative z-50">
+
+          <div className="relative">
+
+            <select
+              value={language}
+              onChange={handleLanguageChange}
+              aria-label="Select language"
+              className="
+                appearance-none
+                bg-black/80
+                backdrop-blur-xl
+                border
+                border-white/20
+                hover:border-cyan-400
+                text-white
+                text-xs
+                sm:text-sm
+                font-medium
+                rounded-xl
+                pl-3
+                pr-9
+                py-2.5
+                outline-none
+                cursor-pointer
+                shadow-lg
+                transition
+              "
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-black text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+
+            <FaChevronDown
+              className="
+                absolute
+                right-3
+                top-1/2
+                -translate-y-1/2
+                pointer-events-none
+                text-cyan-400
+                text-xs
+              "
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* =====================================================
+          PAGE BANNER
+      ====================================================== */}
+
       <PageBanner
-        title="Game Development Services"
-        subtitle="Professional game development services for mobile, PC, multiplayer, and cross-platform gaming experiences."
+        title={t.gameDevelopment.bannerTitle}
+        subtitle={t.gameDevelopment.bannerSubtitle}
       />
 
-      {/* INTRO */}
+      {/* =====================================================
+          INTRODUCTION
+      ====================================================== */}
+
       <SectionWrapper>
+
         <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+          {/* LEFT */}
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">
-              Professional Game Development Company
+
+            <span className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-4">
+              {t.gameDevelopment.introBadge}
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t.gameDevelopment.introTitle}
             </h2>
 
-            <p className="text-gray-400 leading-relaxed mb-5">
-              CH TECH GIANT provides professional game development services
-              for startups, businesses, educational institutions, and gaming
-              companies. We create engaging, scalable, and visually impressive
-              games designed to deliver smooth gameplay and memorable user
-              experiences across multiple platforms.
-            </p>
-
-            <p className="text-gray-400 leading-relaxed mb-5">
-              Our game development expertise covers mobile games, Unity
-              projects, Unreal Engine development, multiplayer gaming,
-              educational games, simulation games, casual games, and custom
-              gaming solutions. We combine creative design with reliable
-              technology to build games that meet specific business and
-              audience requirements.
-            </p>
-
             <p className="text-gray-400 leading-relaxed mb-8">
-              From an initial game concept and prototype to development,
-              testing, deployment, and ongoing support, we help turn your idea
-              into a polished and market-ready gaming product.
+              {t.gameDevelopment.introDescription}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 border border-cyan-500/10 rounded-2xl p-4 backdrop-blur-xl hover:border-cyan-400/30 transition"
-                >
-                  <p className="text-gray-300">{service}</p>
-                </div>
-              ))}
+
+              {t.gameDevelopment.services.map(
+                (service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{
+                      opacity: 0,
+                      y: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.05,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    className="
+                      bg-white/5
+                      border
+                      border-cyan-500/10
+                      rounded-2xl
+                      p-4
+                      backdrop-blur-xl
+                      hover:border-cyan-400/30
+                      hover:bg-cyan-400/5
+                      transition
+                    "
+                  >
+                    <p className="text-gray-300">
+                      {service}
+                    </p>
+                  </motion.div>
+                )
+              )}
+
             </div>
+
           </motion.div>
+
+          {/* RIGHT */}
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8 backdrop-blur-xl"
+            className="
+              bg-white/5
+              border
+              border-cyan-500/10
+              rounded-3xl
+              p-8
+              backdrop-blur-xl
+            "
           >
+
             <h3 className="text-2xl font-semibold mb-6">
-              Why Choose Our Game Development Services?
+              {t.gameDevelopment.benefitsTitle}
             </h3>
 
-            <div className="space-y-5 text-gray-400">
-              <p>✔ Custom Game Development Solutions</p>
-              <p>✔ Unity & Unreal Engine Development</p>
-              <p>✔ Multiplayer & Online Game Systems</p>
-              <p>✔ Performance & Gameplay Optimization</p>
-              <p>✔ Cross-Platform Development</p>
-              <p>✔ Game Monetization Integration</p>
-              <p>✔ Backend & Cloud Infrastructure</p>
-              <p>✔ Testing, Deployment & Technical Support</p>
+            <div className="space-y-5">
+
+              {t.gameDevelopment.benefits.map(
+                (benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{
+                      opacity: 0,
+                      x: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.08,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    className="flex items-center gap-3"
+                  >
+
+                    <span className="text-cyan-400 text-lg">
+                      ✓
+                    </span>
+
+                    <p className="text-gray-400">
+                      {benefit}
+                    </p>
+
+                  </motion.div>
+                )
+              )}
+
             </div>
+
           </motion.div>
+
         </div>
+
       </SectionWrapper>
 
-      {/* SERVICES */}
+      {/* =====================================================
+          GAME DEVELOPMENT SERVICES
+      ====================================================== */}
+
       <SectionWrapper>
+
         <div className="text-center mb-12">
+
           <h2 className="text-4xl font-bold mb-4">
-            Complete Game Development Services
+            {t.gameDevelopment.servicesTitle}
           </h2>
 
           <p className="text-gray-400 max-w-4xl mx-auto">
-            We provide end-to-end game development services covering game
-            concept, design, prototyping, programming, testing, deployment,
-            monetization, and ongoing technical support.
+            {t.gameDevelopment.servicesDescription}
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white/5 rounded-3xl p-8 border border-cyan-500/10">
-            <h3 className="text-2xl font-semibold mb-4">
-              Mobile Game Development
-            </h3>
 
-            <p className="text-gray-400 leading-relaxed">
-              Develop engaging Android and iOS games with responsive controls,
-              optimized performance, smooth gameplay, cloud integration,
-              leaderboards, achievements, and monetization features.
-            </p>
-          </div>
+          {t.gameDevelopment.serviceDetails.map(
+            (service, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="
+                  bg-white/5
+                  rounded-3xl
+                  p-8
+                  border
+                  border-cyan-500/10
+                  hover:border-cyan-400/30
+                  hover:bg-cyan-400/5
+                  transition
+                "
+              >
 
-          <div className="bg-white/5 rounded-3xl p-8 border border-cyan-500/10">
-            <h3 className="text-2xl font-semibold mb-4">
-              Multiplayer Game Development
-            </h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  {service.title}
+                </h3>
 
-            <p className="text-gray-400 leading-relaxed">
-              Build online multiplayer experiences with real-time networking,
-              matchmaking, player synchronization, chat systems, rankings,
-              player accounts, and scalable backend infrastructure.
-            </p>
-          </div>
+                <p className="text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
 
-          <div className="bg-white/5 rounded-3xl p-8 border border-cyan-500/10">
-            <h3 className="text-2xl font-semibold mb-4">
-              3D Game Development
-            </h3>
+              </motion.div>
+            )
+          )}
 
-            <p className="text-gray-400 leading-relaxed">
-              Create immersive 3D games with detailed environments, realistic
-              physics, character animations, interactive gameplay systems,
-              optimized graphics, and smooth rendering performance.
-            </p>
-          </div>
-
-          <div className="bg-white/5 rounded-3xl p-8 border border-cyan-500/10">
-            <h3 className="text-2xl font-semibold mb-4">
-              AR & VR Game Development
-            </h3>
-
-            <p className="text-gray-400 leading-relaxed">
-              Develop interactive augmented and virtual reality experiences
-              for entertainment, education, simulation, training, marketing,
-              and immersive digital applications.
-            </p>
-          </div>
         </div>
+
       </SectionWrapper>
 
-      {/* PROCESS */}
+      {/* =====================================================
+          DEVELOPMENT PROCESS
+      ====================================================== */}
+
       <SectionWrapper>
+
         <div className="text-center mb-12">
+
           <h2 className="text-4xl font-bold mb-4">
-            Our Game Development Process
+            {t.gameDevelopment.processTitle}
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto">
-            Our structured development process helps transform your concept
-            into a reliable, engaging, and market-ready gaming product.
+            {t.gameDevelopment.processDescription}
           </p>
+
         </div>
 
         <div className="grid md:grid-cols-4 gap-6">
-          {process.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white/5 border border-cyan-500/10 rounded-3xl p-6 text-center"
-            >
-              <div className="text-cyan-400 text-3xl font-bold mb-4">
-                0{index + 1}
-              </div>
 
-              <h3 className="font-semibold">{item}</h3>
-            </div>
-          ))}
+          {t.gameDevelopment.process.map(
+            (item, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="
+                  bg-white/5
+                  border
+                  border-cyan-500/10
+                  rounded-3xl
+                  p-6
+                  text-center
+                  hover:border-cyan-400/30
+                  transition
+                "
+              >
+
+                <div className="text-cyan-400 text-3xl font-bold mb-4">
+                  0{index + 1}
+                </div>
+
+                <h3 className="font-semibold">
+                  {item}
+                </h3>
+
+              </motion.div>
+            )
+          )}
+
         </div>
+
       </SectionWrapper>
 
-      {/* PLATFORMS */}
+      {/* =====================================================
+          PLATFORMS
+      ====================================================== */}
+
       <SectionWrapper>
+
         <h2 className="text-4xl font-bold text-center mb-12">
-          Platforms We Support
+          {t.gameDevelopment.platformsTitle}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {platforms.map((platform, index) => (
-            <div
-              key={index}
-              className="bg-white/5 rounded-2xl p-5 border border-cyan-500/10 text-center"
-            >
-              {platform}
-            </div>
-          ))}
+
+          {t.gameDevelopment.platforms.map(
+            (platform, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.05,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="
+                  bg-white/5
+                  rounded-2xl
+                  p-5
+                  border
+                  border-cyan-500/10
+                  text-center
+                  hover:border-cyan-400/30
+                  transition
+                "
+              >
+                {platform}
+              </motion.div>
+            )
+          )}
+
         </div>
+
       </SectionWrapper>
 
-      {/* TECHNOLOGY */}
+      {/* =====================================================
+          TECHNOLOGIES
+      ====================================================== */}
+
       <SectionWrapper>
+
         <h2 className="text-4xl font-bold text-center mb-12">
-          Technologies & Tools
+          {t.gameDevelopment.technologiesTitle}
         </h2>
 
         <div className="grid md:grid-cols-4 gap-5">
-          {technologies.map((tech, index) => (
-            <div
-              key={index}
-              className="bg-white/5 rounded-2xl p-5 border border-cyan-500/10 text-center"
-            >
-              {tech}
-            </div>
-          ))}
+
+          {t.gameDevelopment.technologies.map(
+            (technology, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.05,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                className="
+                  bg-white/5
+                  rounded-2xl
+                  p-5
+                  border
+                  border-cyan-500/10
+                  text-center
+                  hover:border-cyan-400/30
+                  transition
+                "
+              >
+                {technology}
+              </motion.div>
+            )
+          )}
+
         </div>
+
       </SectionWrapper>
 
-      {/* SEO CONTENT */}
+      {/* =====================================================
+          SEO CONTENT
+      ====================================================== */}
+
       <SectionWrapper>
-        <div className="bg-white/5 border border-cyan-500/10 rounded-3xl p-10">
+
+        <div className="
+          bg-white/5
+          border
+          border-cyan-500/10
+          rounded-3xl
+          p-10
+        ">
+
           <h2 className="text-4xl font-bold mb-6">
-            Custom Game Development Solutions for Different Industries
+            {t.gameDevelopment.seoTitle}
           </h2>
 
           <div className="space-y-6 text-gray-400 leading-relaxed">
-            <p>
-              Our custom game development services help startups, businesses,
-              educational institutions, and gaming companies create engaging
-              interactive experiences. We develop action games, puzzle games,
-              strategy games, educational games, simulation games, racing
-              games, adventure games, multiplayer games, and other custom
-              gaming solutions.
-            </p>
 
-            <p>
-              By combining creative game design, modern programming
-              technologies, game engines, backend infrastructure, and
-              performance optimization, we build gaming products that provide
-              smooth experiences and support long-term growth.
-            </p>
+            {t.gameDevelopment.seoContent.map(
+              (paragraph, index) => (
+                <p key={index}>
+                  {paragraph}
+                </p>
+              )
+            )}
 
-            <p>
-              Our solutions can be developed for entertainment, education,
-              marketing, employee training, simulations, customer engagement,
-              and other interactive use cases. Every project is planned around
-              the target audience, gameplay requirements, platform, and
-              business objectives.
-            </p>
           </div>
+
         </div>
+
       </SectionWrapper>
 
-      {/* CTA */}
+      {/* =====================================================
+          CTA
+      ====================================================== */}
+
       <SectionWrapper>
-        <div className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-3xl p-12">
+
+        <div className="
+          text-center
+          bg-gradient-to-r
+          from-cyan-500/10
+          to-blue-500/10
+          border
+          border-cyan-500/20
+          rounded-3xl
+          p-12
+        ">
+
           <h2 className="text-4xl font-bold mb-4">
-            Start Your Game Development Project Today
+            {t.gameDevelopment.ctaTitle}
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-            Looking for a professional game development company? Contact
-            CH TECH GIANT to discuss your mobile game, multiplayer game,
-            Unity project, Unreal Engine project, or custom gaming solution.
+            {t.gameDevelopment.ctaDescription}
           </p>
 
-          <button className="px-8 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 transition font-semibold">
-            Get a Free Consultation
+          <button
+            className="
+              px-8
+              py-3
+              rounded-xl
+              bg-cyan-500
+              hover:bg-cyan-600
+              transition
+              font-semibold
+            "
+          >
+            {t.gameDevelopment.ctaButton}
           </button>
+
         </div>
+
       </SectionWrapper>
+
     </div>
   );
 };

@@ -3267,6 +3267,151 @@ itConsulting: {
     "Langfristige Technologieplanung",
   ],
 },
+gameDevelopment: {
+  seo: {
+    title:
+      "Spieleentwicklung | Mobile, 2D- & 3D-Spieleentwicklung | CH TECH GIANT",
+
+    description:
+      "CH TECH GIANT bietet professionelle Dienstleistungen für die Spieleentwicklung, darunter Mobile Games, 2D- und 3D-Spiele, Unity, Unreal Engine, Multiplayer, AR & VR sowie individuelle Spielelösungen.",
+
+    keywords:
+      "Spieleentwicklung, Spieleentwicklungsunternehmen, Spieleentwicklung Dienstleistungen, Mobile Spieleentwicklung, 2D Spieleentwicklung, 3D Spieleentwicklung, Unity Spieleentwicklung, Unreal Engine Entwicklung, Multiplayer Spieleentwicklung, AR VR Spieleentwicklung, individuelle Spieleentwicklung",
+  },
+
+  bannerTitle: "Spieleentwicklung",
+
+  bannerSubtitle:
+    "Professionelle Spieleentwicklung für Mobile, PC, Multiplayer- und plattformübergreifende Gaming-Erlebnisse.",
+
+  introBadge: "Spieleentwicklungslösungen",
+
+  introTitle:
+    "Professionelles Unternehmen für Spieleentwicklung",
+
+  introDescription:
+    "CH TECH GIANT bietet professionelle Dienstleistungen für die Spieleentwicklung für Start-ups, Unternehmen, Bildungseinrichtungen und Gaming-Unternehmen. Wir entwickeln ansprechende, skalierbare und visuell beeindruckende Spiele, die ein flüssiges Gameplay und ein überzeugendes Nutzererlebnis auf verschiedenen Plattformen ermöglichen. Unser Leistungsspektrum umfasst Mobile Games, Unity-Projekte, Unreal-Engine-Entwicklung, Multiplayer-Spiele, Lernspiele, Simulationsspiele, Casual Games und individuelle Gaming-Lösungen. Von der ersten Idee und dem Prototyping über die Entwicklung und das Testing bis hin zur Veröffentlichung und laufenden Betreuung unterstützen wir Sie dabei, Ihre Idee in ein hochwertiges und marktreifes Gaming-Produkt zu verwandeln.",
+
+  services: [
+    "2D-Spieleentwicklung",
+    "3D-Spieleentwicklung",
+    "Unity-Spieleentwicklung",
+    "Unreal-Engine-Entwicklung",
+    "Mobile-Spieleentwicklung",
+    "Multiplayer-Spieleentwicklung",
+    "AR- & VR-Spieleentwicklung",
+    "Lern- & Simulationsspiele",
+  ],
+
+  benefitsTitle:
+    "Warum unsere Dienstleistungen für Spieleentwicklung?",
+
+  benefits: [
+    "Individuelle Spieleentwicklung",
+    "Unity- & Unreal-Engine-Entwicklung",
+    "Multiplayer- & Online-Spiele-Systeme",
+    "Performance- & Gameplay-Optimierung",
+    "Plattformübergreifende Entwicklung",
+    "Integration von Monetarisierungssystemen",
+    "Backend- & Cloud-Infrastruktur",
+    "Testing, Veröffentlichung & technischer Support",
+  ],
+
+  servicesTitle:
+    "Umfassende Dienstleistungen für Spieleentwicklung",
+
+  servicesDescription:
+    "Wir bieten umfassende Dienstleistungen für die Spieleentwicklung – von der Spielidee, dem Design und Prototyping über Programmierung und Testing bis hin zu Veröffentlichung, Monetarisierung und laufendem technischen Support.",
+
+  serviceDetails: [
+    {
+      title: "Mobile-Spieleentwicklung",
+
+      description:
+        "Entwicklung ansprechender Android- und iOS-Spiele mit intuitiver Steuerung, optimierter Performance, flüssigem Gameplay, Cloud-Integration, Bestenlisten, Erfolgen und Monetarisierungsfunktionen.",
+    },
+
+    {
+      title: "Multiplayer-Spieleentwicklung",
+
+      description:
+        "Entwicklung von Online-Multiplayer-Erlebnissen mit Echtzeit-Netzwerkfunktionen, Matchmaking, Spielersynchronisierung, Chatsystemen, Ranglisten, Spielerkonten und skalierbarer Backend-Infrastruktur.",
+    },
+
+    {
+      title: "3D-Spieleentwicklung",
+
+      description:
+        "Entwicklung immersiver 3D-Spiele mit detaillierten Umgebungen, realistischer Physik, Charakteranimationen, interaktiven Gameplay-Systemen, optimierter Grafik und flüssiger Rendering-Performance.",
+    },
+
+    {
+      title: "AR- & VR-Spieleentwicklung",
+
+      description:
+        "Entwicklung interaktiver Augmented-Reality- und Virtual-Reality-Erlebnisse für Unterhaltung, Bildung, Simulation, Training, Marketing und immersive digitale Anwendungen.",
+    },
+  ],
+
+  processTitle:
+    "Unser Prozess für die Spieleentwicklung",
+
+  processDescription:
+    "Unser strukturierter Entwicklungsprozess hilft dabei, Ihre Spielidee in ein zuverlässiges, ansprechendes und marktreifes Gaming-Produkt zu verwandeln.",
+
+  process: [
+    "Spielkonzept & Planung",
+    "Game Design & Prototyping",
+    "Entwicklung & Testing",
+    "Veröffentlichung & Support",
+  ],
+
+  platformsTitle:
+    "Unterstützte Plattformen",
+
+  platforms: [
+    "Android",
+    "iOS",
+    "Windows",
+    "macOS",
+    "Web Games",
+    "Plattformübergreifende Lösungen",
+  ],
+
+  technologiesTitle:
+    "Technologien & Tools",
+
+  technologies: [
+    "Unity",
+    "Unreal Engine",
+    "C#",
+    "C++",
+    "Photon",
+    "Firebase",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  seoTitle:
+    "Individuelle Spieleentwicklung für verschiedene Branchen",
+
+  seoContent: [
+    "Unsere Dienstleistungen für individuelle Spieleentwicklung unterstützen Start-ups, Unternehmen, Bildungseinrichtungen und Gaming-Unternehmen bei der Entwicklung interaktiver und ansprechender digitaler Erlebnisse. Wir entwickeln Actionspiele, Puzzlespiele, Strategiespiele, Lernspiele, Simulationsspiele, Rennspiele, Abenteuerspiele, Multiplayer-Spiele und weitere individuelle Gaming-Lösungen.",
+
+    "Durch die Kombination aus kreativem Game Design, modernen Programmiertechnologien, leistungsfähigen Game Engines, Backend-Infrastruktur und Performance-Optimierung entwickeln wir Gaming-Produkte, die ein flüssiges Spielerlebnis bieten und langfristiges Wachstum unterstützen.",
+
+    "Unsere Lösungen können für Unterhaltung, Bildung, Marketing, Mitarbeiterschulungen, Simulationen, Kundenbindung und weitere interaktive Anwendungsbereiche entwickelt werden. Jedes Projekt wird auf die Zielgruppe, Gameplay-Anforderungen, Plattform und individuellen Geschäftsziele abgestimmt.",
+  ],
+
+  ctaTitle:
+    "Starten Sie jetzt Ihr Spieleentwicklungsprojekt",
+
+  ctaDescription:
+    "Sie suchen ein professionelles Unternehmen für Spieleentwicklung? Kontaktieren Sie CH TECH GIANT, um über Ihr Mobile Game, Multiplayer-Spiel, Unity-Projekt, Unreal-Engine-Projekt oder Ihre individuelle Gaming-Lösung zu sprechen.",
+
+  ctaButton:
+    "Kostenlose Beratung anfragen",
+},
 
 };
 export default de;

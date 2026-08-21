@@ -3264,6 +3264,149 @@ itConsulting: {
     "Long-term technology planning",
   ],
 },
+gameDevelopment: {
+  seo: {
+    title:
+      "Game Development Company | Mobile, 2D & 3D Game Development | CH TECH GIANT",
+    description:
+      "CH TECH GIANT provides professional game development services including mobile, 2D, 3D, Unity, Unreal Engine, multiplayer, AR & VR, educational, and custom game development solutions.",
+    keywords:
+      "game development company, game development services, mobile game development, 2D game development, 3D game development, Unity game development, Unreal Engine development, multiplayer game development, AR VR game development, custom game development",
+  },
+
+  bannerTitle: "Game Development Services",
+
+  bannerSubtitle:
+    "Professional game development services for mobile, PC, multiplayer, and cross-platform gaming experiences.",
+
+  introBadge: "Game Development Solutions",
+
+  introTitle:
+    "Professional Game Development Company",
+
+  introDescription:
+    "CH TECH GIANT provides professional game development services for startups, businesses, educational institutions, and gaming companies. We create engaging, scalable, and visually impressive games designed to deliver smooth gameplay and memorable user experiences across multiple platforms. Our expertise covers mobile games, Unity projects, Unreal Engine development, multiplayer gaming, educational games, simulation games, casual games, and custom gaming solutions. From initial concept and prototyping to development, testing, deployment, and ongoing support, we help transform your ideas into polished and market-ready gaming products.",
+
+  services: [
+    "2D Game Development",
+    "3D Game Development",
+    "Unity Game Development",
+    "Unreal Engine Development",
+    "Mobile Game Development",
+    "Multiplayer Game Development",
+    "AR & VR Game Development",
+    "Educational & Simulation Games",
+  ],
+
+  benefitsTitle:
+    "Why Choose Our Game Development Services?",
+
+  benefits: [
+    "Custom Game Development Solutions",
+    "Unity & Unreal Engine Development",
+    "Multiplayer & Online Game Systems",
+    "Performance & Gameplay Optimization",
+    "Cross-Platform Development",
+    "Game Monetization Integration",
+    "Backend & Cloud Infrastructure",
+    "Testing, Deployment & Technical Support",
+  ],
+
+  servicesTitle:
+    "Complete Game Development Services",
+
+  servicesDescription:
+    "We provide end-to-end game development services covering game concept, design, prototyping, programming, testing, deployment, monetization, and ongoing technical support.",
+
+  serviceDetails: [
+    {
+      title: "Mobile Game Development",
+
+      description:
+        "Develop engaging Android and iOS games with responsive controls, optimized performance, smooth gameplay, cloud integration, leaderboards, achievements, and monetization features.",
+    },
+
+    {
+      title: "Multiplayer Game Development",
+
+      description:
+        "Build online multiplayer experiences with real-time networking, matchmaking, player synchronization, chat systems, rankings, player accounts, and scalable backend infrastructure.",
+    },
+
+    {
+      title: "3D Game Development",
+
+      description:
+        "Create immersive 3D games with detailed environments, realistic physics, character animations, interactive gameplay systems, optimized graphics, and smooth rendering performance.",
+    },
+
+    {
+      title: "AR & VR Game Development",
+
+      description:
+        "Develop interactive augmented and virtual reality experiences for entertainment, education, simulation, training, marketing, and immersive digital applications.",
+    },
+  ],
+
+  processTitle:
+    "Our Game Development Process",
+
+  processDescription:
+    "Our structured development process helps transform your concept into a reliable, engaging, and market-ready gaming product.",
+
+  process: [
+    "Game Concept & Planning",
+    "Game Design & Prototyping",
+    "Development & Testing",
+    "Deployment & Support",
+  ],
+
+  platformsTitle:
+    "Platforms We Support",
+
+  platforms: [
+    "Android",
+    "iOS",
+    "Windows",
+    "macOS",
+    "Web Games",
+    "Cross-Platform Solutions",
+  ],
+
+  technologiesTitle:
+    "Technologies & Tools",
+
+  technologies: [
+    "Unity",
+    "Unreal Engine",
+    "C#",
+    "C++",
+    "Photon",
+    "Firebase",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  seoTitle:
+    "Custom Game Development Solutions for Different Industries",
+
+  seoContent: [
+    "Our custom game development services help startups, businesses, educational institutions, and gaming companies create engaging interactive experiences. We develop action games, puzzle games, strategy games, educational games, simulation games, racing games, adventure games, multiplayer games, and other custom gaming solutions.",
+
+    "By combining creative game design, modern programming technologies, game engines, backend infrastructure, and performance optimization, we build gaming products that provide smooth experiences and support long-term growth.",
+
+    "Our solutions can be developed for entertainment, education, marketing, employee training, simulations, customer engagement, and other interactive use cases. Every project is planned around the target audience, gameplay requirements, platform, and business objectives.",
+  ],
+
+  ctaTitle:
+    "Start Your Game Development Project Today",
+
+  ctaDescription:
+    "Looking for a professional game development company? Contact CH TECH GIANT to discuss your mobile game, multiplayer game, Unity project, Unreal Engine project, or custom gaming solution.",
+
+  ctaButton:
+    "Get a Free Consultation",
+},
 
 };
 
