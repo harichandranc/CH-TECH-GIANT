@@ -3227,6 +3227,46 @@ invoiceDesign: {
 
   ctaButton: "Começar",
 },
+itConsulting: {
+  seo: {
+    title: "Consultoria de TI | CH TECH GIANT",
+    description:
+      "Serviços profissionais de consultoria de TI para ajudar empresas a melhorar sua estratégia tecnológica, modernizar sua infraestrutura, automatizar processos e criar soluções digitais escaláveis.",
+    keywords:
+      "consultoria de TI, consultoria tecnológica, estratégia de TI, consultoria em nuvem, transformação digital, automação empresarial, planejamento de infraestrutura, suporte técnico",
+  },
+
+  bannerTitle: "Consultoria de TI",
+
+  bannerSubtitle:
+    "Serviços profissionais de consultoria em tecnologia para ajudar empresas a crescer, modernizar suas operações e otimizar seus processos.",
+
+  introBadge: "Consultoria de TI Profissional",
+
+  introTitle: "Consultoria Inteligente em Tecnologia",
+
+  introDescription:
+    "Ajudamos startups, organizações e empresas a adotar as tecnologias certas, melhorar seus fluxos de trabalho e construir ecossistemas digitais escaláveis.",
+
+  services: [
+    "Estratégia de Tecnologia",
+    "Consultoria em Nuvem",
+    "Automação de Negócios",
+    "Transformação Digital",
+    "Planejamento de Infraestrutura",
+    "Suporte Técnico",
+  ],
+
+  benefitsTitle: "Benefícios da Consultoria de TI",
+
+  benefits: [
+    "Estratégias de TI focadas no negócio",
+    "Soluções modernas baseadas em nuvem",
+    "Infraestrutura digital escalável",
+    "Otimização de segurança e desempenho",
+    "Planejamento tecnológico de longo prazo",
+  ],
+},
 
 
 };

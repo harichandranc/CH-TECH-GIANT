@@ -3078,6 +3078,46 @@ invoiceDesign: {
 
   ctaButton: "Comenzar",
 },
+itConsulting: {
+  seo: {
+    title: "Consultoría IT | CH TECH GIANT",
+    description:
+      "Servicios profesionales de consultoría IT para ayudar a las empresas a mejorar su estrategia tecnológica, modernizar su infraestructura, automatizar procesos y crear soluciones digitales escalables.",
+    keywords:
+      "consultoría IT, consultoría tecnológica, estrategia IT, consultoría cloud, transformación digital, automatización empresarial, planificación de infraestructura, soporte técnico",
+  },
+
+  bannerTitle: "Consultoría IT",
+
+  bannerSubtitle:
+    "Servicios profesionales de consultoría tecnológica para ayudar a las empresas a crecer, modernizarse y optimizar sus operaciones.",
+
+  introBadge: "Consultoría Tecnológica Profesional",
+
+  introTitle: "Consultoría Tecnológica Inteligente",
+
+  introDescription:
+    "Ayudamos a startups, organizaciones y empresas a adoptar las tecnologías adecuadas, mejorar sus flujos de trabajo y construir ecosistemas digitales escalables.",
+
+  services: [
+    "Estrategia Tecnológica",
+    "Consultoría Cloud",
+    "Automatización Empresarial",
+    "Transformación Digital",
+    "Planificación de Infraestructura",
+    "Soporte Técnico",
+  ],
+
+  benefitsTitle: "Beneficios de la Consultoría IT",
+
+  benefits: [
+    "Estrategias IT enfocadas en el negocio",
+    "Soluciones modernas basadas en la nube",
+    "Infraestructura digital escalable",
+    "Optimización de seguridad y rendimiento",
+    "Planificación tecnológica a largo plazo",
+  ],
+},
 
 };
 
