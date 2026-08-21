@@ -163,6 +163,7 @@ function Navbar() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-white text-3xl"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
@@ -171,9 +172,9 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-cyan-500/10 bg-[#0b1120]/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-cyan-500/10 bg-[#0b1120]/95 backdrop-blur-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
 
-          <div className="flex flex-col px-6 py-6 gap-3">
+          <div className="flex flex-col px-6 py-6 pb-10 gap-3">
 
             {navLinks.map((link) => (
               <NavLink
