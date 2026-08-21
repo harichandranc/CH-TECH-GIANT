@@ -125,6 +125,12 @@ function App() {
               element={<ITConsulting />}
             />
 
+            <Route
+              path="/:lang/it-consulting"
+              element={<ITConsulting />}
+            />
+
+
 
             <Route
               path="/pamphlet-design"
