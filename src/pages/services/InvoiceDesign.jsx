@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import PageBanner from "../../components/PageBanner";
 import SectionWrapper from "../../components/SectionWrapper";
 
-import translations from "../../locales";
+import { translations } from "../../locales";
 
 /* =========================================================
    LANGUAGE LIST
@@ -16,36 +16,43 @@ const languages = [
     code: "en",
     path: "/invoice-design",
     label: "🇺🇸 English",
+    shortLabel: "English",
   },
   {
     code: "zh",
     path: "/zh/invoice-design",
     label: "🇨🇳 简体中文",
+    shortLabel: "中文",
   },
   {
     code: "es",
     path: "/es/invoice-design",
     label: "🇪🇸 Español",
+    shortLabel: "Español",
   },
   {
     code: "pt",
     path: "/pt/invoice-design",
     label: "🇧🇷 Português",
+    shortLabel: "Português",
   },
   {
     code: "de",
     path: "/de/invoice-design",
     label: "🇩🇪 Deutsch",
+    shortLabel: "Deutsch",
   },
   {
     code: "ko",
     path: "/ko/invoice-design",
     label: "🇰🇷 한국어",
+    shortLabel: "한국어",
   },
   {
     code: "ja",
     path: "/ja/invoice-design",
     label: "🇯🇵 日本語",
+    shortLabel: "日本語",
   },
 ];
 
@@ -54,7 +61,6 @@ const languages = [
 ========================================================= */
 
 const supportedLanguages = [
-  "en",
   "zh",
   "es",
   "pt",
@@ -65,7 +71,6 @@ const supportedLanguages = [
 
 /* =========================================================
    INVOICE GALLERY
-   Gallery images remain the same for every language.
 ========================================================= */
 
 const invoiceGallery = [
@@ -123,20 +128,27 @@ const InvoiceDesign = () => {
     ? lang
     : "en";
 
-  /* =======================================================
-     TRANSLATIONS
-  ======================================================= */
-
-  const t = translations[language]?.invoiceDesign;
+  /*
+   * Same translation system used by Home.jsx
+   */
+  const t = translations[language];
 
   /*
-   * Safety fallback.
+   * Invoice translations
    *
-   * If a language translation has not yet been added,
-   * English will be used instead of breaking the page.
+   * Expected structure:
+   *
+   * translations[language].invoiceDesign
    */
-  const content =
-    t || translations.en.invoiceDesign;
+  const invoice = t.invoiceDesign;
+
+  /* =======================================================
+     CURRENT LANGUAGE
+  ======================================================= */
+
+  const currentLanguage =
+    languages.find((item) => item.code === language) ||
+    languages[0];
 
   /* =======================================================
      CHANGE LANGUAGE
@@ -154,8 +166,12 @@ const InvoiceDesign = () => {
     }
   };
 
+  /* =======================================================
+     RENDER
+  ======================================================= */
+
   return (
-    <div className="bg-[#050816] text-white">
+    <div className="bg-[#050816] text-white min-h-screen overflow-x-hidden">
 
       {/* =====================================================
           LANGUAGE DROPDOWN
@@ -171,7 +187,26 @@ const InvoiceDesign = () => {
               value={language}
               onChange={handleLanguageChange}
               aria-label="Select language"
-              className="appearance-none bg-black/80 backdrop-blur-xl border border-white/20 hover:border-cyan-400 text-white text-xs sm:text-sm font-medium rounded-xl pl-3 pr-9 py-2.5 outline-none cursor-pointer shadow-lg transition"
+              className="
+                appearance-none
+                bg-black/80
+                backdrop-blur-xl
+                border
+                border-white/20
+                hover:border-cyan-400
+                text-white
+                text-xs
+                sm:text-sm
+                font-medium
+                rounded-xl
+                pl-3
+                pr-9
+                py-2.5
+                outline-none
+                cursor-pointer
+                shadow-lg
+                transition
+              "
             >
               {languages.map((item) => (
                 <option
@@ -184,7 +219,17 @@ const InvoiceDesign = () => {
               ))}
             </select>
 
-            <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-cyan-400 text-xs" />
+            <FaChevronDown
+              className="
+                absolute
+                right-3
+                top-1/2
+                -translate-y-1/2
+                pointer-events-none
+                text-cyan-400
+                text-xs
+              "
+            />
 
           </div>
 
@@ -197,8 +242,8 @@ const InvoiceDesign = () => {
       ====================================================== */}
 
       <PageBanner
-        title={content.bannerTitle}
-        subtitle={content.bannerSubtitle}
+        title={invoice.bannerTitle}
+        subtitle={invoice.bannerSubtitle}
       />
 
       {/* =====================================================
@@ -209,7 +254,7 @@ const InvoiceDesign = () => {
 
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-          {/* Left Content */}
+          {/* LEFT CONTENT */}
 
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -219,34 +264,52 @@ const InvoiceDesign = () => {
           >
 
             <span className="inline-block text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              {content.introduction.badge}
+              {invoice.introBadge}
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {content.introduction.title}
+              {invoice.introTitle}
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-5">
-              {content.introduction.paragraph1}
+              {invoice.introParagraph1}
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              {content.introduction.paragraph2}
+              {invoice.introParagraph2}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
 
-              {content.services.map((service, index) => (
+              {invoice.services.map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
                   transition={{
                     duration: 0.4,
                     delay: index * 0.05,
                   }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 border border-cyan-500/10 rounded-2xl p-4 backdrop-blur-xl hover:border-cyan-400/30 hover:bg-cyan-400/5 transition"
+                  viewport={{
+                    once: true,
+                  }}
+                  className="
+                    bg-white/5
+                    border
+                    border-cyan-500/10
+                    rounded-2xl
+                    p-4
+                    backdrop-blur-xl
+                    hover:border-cyan-400/30
+                    hover:bg-cyan-400/5
+                    transition
+                  "
                 >
                   <p className="text-gray-300">
                     {service}
@@ -258,36 +321,61 @@ const InvoiceDesign = () => {
 
           </motion.div>
 
-          {/* Right Content */}
+          {/* RIGHT CONTENT */}
 
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white/5 border border-cyan-500/10 rounded-3xl p-8 backdrop-blur-xl"
+            initial={{
+              opacity: 0,
+              x: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="
+              bg-white/5
+              border
+              border-cyan-500/10
+              rounded-3xl
+              p-8
+              backdrop-blur-xl
+            "
           >
 
             <h3 className="text-2xl font-semibold mb-6">
-              {content.benefits.title}
+              {invoice.whyTitle}
             </h3>
 
             <p className="text-gray-400 leading-relaxed mb-7">
-              {content.benefits.description}
+              {invoice.whyDescription}
             </p>
 
             <div className="space-y-5">
 
-              {content.benefits.items.map((benefit, index) => (
+              {invoice.benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{
+                    opacity: 0,
+                    x: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
                   transition={{
                     duration: 0.4,
                     delay: index * 0.08,
                   }}
-                  viewport={{ once: true }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="flex items-center gap-3"
                 >
 
@@ -319,28 +407,41 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            {content.gallery.badge}
+            {invoice.galleryBadge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            {content.gallery.title}
+            {invoice.galleryTitle}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            {content.gallery.description}
+            {invoice.galleryDescription}
           </p>
 
         </div>
 
-        {/* Desktop: 3 × 3 diagonal pattern */}
+        {/* =================================================
+            3 × 3 DIAGONAL GALLERY
+        ================================================== */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
 
-          {invoiceGallery.map((invoice, index) => {
+          {invoiceGallery.map((item, index) => {
 
-            const isLarge = invoice.size === "large";
+            const isLarge = item.size === "large";
 
             let columnClass = "";
+
+            /*
+              Row 1:
+              Large 1 | Normal 2 | Normal 3
+
+              Row 2:
+              Normal 4 | Large 5 | Normal 6
+
+              Row 3:
+              Normal 7 | Normal 8 | Large 9
+            */
 
             if (index === 0) {
               columnClass = "lg:col-span-6";
@@ -360,7 +461,7 @@ const InvoiceDesign = () => {
 
             return (
               <motion.div
-                key={invoice.image}
+                key={item.image}
                 initial={{
                   opacity: 0,
                   y: 50,
@@ -385,12 +486,15 @@ const InvoiceDesign = () => {
 
                 <div
                   className={`
-                    relative overflow-hidden
+                    relative
+                    overflow-hidden
                     rounded-[2rem]
                     bg-white/[0.025]
-                    border border-white/10
+                    border
+                    border-white/10
                     p-3
-                    transition-all duration-500
+                    transition-all
+                    duration-500
                     group-hover:border-cyan-400/40
                     group-hover:bg-cyan-400/[0.025]
                     group-hover:-translate-y-2
@@ -436,8 +540,8 @@ const InvoiceDesign = () => {
                   >
 
                     <img
-                      src={invoice.image}
-                      alt=""
+                      src={item.image}
+                      alt={invoice.galleryAlt}
                       loading="lazy"
                       className="
                         w-full
@@ -489,35 +593,64 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            {content.features.badge}
+            {invoice.featuresBadge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            {content.features.title}
+            {invoice.featuresTitle}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            {content.features.description}
+            {invoice.featuresDescription}
           </p>
 
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
 
-          {content.features.items.map((feature, index) => (
+          {invoice.features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              viewport={{ once: true }}
-              className="bg-white/5 border border-cyan-500/10 rounded-3xl p-7 hover:border-cyan-400/30 transition"
+              viewport={{
+                once: true,
+              }}
+              className="
+                bg-white/5
+                border
+                border-cyan-500/10
+                rounded-3xl
+                p-7
+                hover:border-cyan-400/30
+                transition
+              "
             >
 
-              <div className="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-5">
+              <div
+                className="
+                  w-10
+                  h-10
+                  rounded-xl
+                  bg-cyan-400/10
+                  border
+                  border-cyan-400/20
+                  flex
+                  items-center
+                  justify-center
+                  mb-5
+                "
+              >
 
                 <span className="text-cyan-400 font-bold">
                   0{index + 1}
@@ -549,32 +682,49 @@ const InvoiceDesign = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
 
           <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-            {content.process.badge}
+            {invoice.processBadge}
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-            {content.process.title}
+            {invoice.processTitle}
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            {content.process.description}
+            {invoice.processDescription}
           </p>
 
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {content.process.steps.map((step, index) => (
+          {invoice.process.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              viewport={{ once: true }}
-              className="relative bg-white/5 border border-cyan-500/10 rounded-3xl p-7 hover:border-cyan-400/30 transition"
+              viewport={{
+                once: true,
+              }}
+              className="
+                relative
+                bg-white/5
+                border
+                border-cyan-500/10
+                rounded-3xl
+                p-7
+                hover:border-cyan-400/30
+                transition
+              "
             >
 
               <span className="text-4xl font-bold text-cyan-400/30">
@@ -603,10 +753,20 @@ const InvoiceDesign = () => {
       <SectionWrapper>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            scale: 0.96,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="
             relative
             overflow-hidden
@@ -623,27 +783,40 @@ const InvoiceDesign = () => {
           "
         >
 
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-cyan-400/10 blur-3xl rounded-full" />
+          <div
+            className="
+              absolute
+              -top-20
+              -right-20
+              w-60
+              h-60
+              bg-cyan-400/10
+              blur-3xl
+              rounded-full
+            "
+          />
 
           <div className="relative z-10 max-w-3xl mx-auto">
 
             <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
-              {content.cta.badge}
+              {invoice.ctaBadge}
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
-              {content.cta.title}
+              {invoice.ctaTitle}
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              {content.cta.description}
+              {invoice.ctaDescription}
             </p>
 
-            <a
-              href={
-                language === "en"
-                  ? "/contact"
-                  : `/${language}/contact`
+            <button
+              onClick={() =>
+                navigate(
+                  language === "en"
+                    ? "/contact"
+                    : `/${language}/contact`
+                )
               }
               className="
                 inline-flex
@@ -659,8 +832,8 @@ const InvoiceDesign = () => {
                 transition
               "
             >
-              {content.cta.button}
-            </a>
+              {invoice.ctaButton}
+            </button>
 
           </div>
 
