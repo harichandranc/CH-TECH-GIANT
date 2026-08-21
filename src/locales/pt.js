@@ -3267,6 +3267,151 @@ itConsulting: {
     "Planejamento tecnológico de longo prazo",
   ],
 },
+gameDevelopment: {
+  seo: {
+    title:
+      "Empresa de Desenvolvimento de Jogos | Desenvolvimento de Jogos Mobile, 2D e 3D | CH TECH GIANT",
+
+    description:
+      "A CH TECH GIANT oferece serviços profissionais de desenvolvimento de jogos, incluindo jogos mobile, 2D, 3D, Unity, Unreal Engine, multiplayer, AR e VR, além de soluções personalizadas para jogos.",
+
+    keywords:
+      "empresa de desenvolvimento de jogos, desenvolvimento de jogos, serviços de desenvolvimento de jogos, desenvolvimento de jogos mobile, desenvolvimento de jogos 2D, desenvolvimento de jogos 3D, desenvolvimento Unity, desenvolvimento Unreal Engine, desenvolvimento de jogos multiplayer, desenvolvimento de jogos AR VR, desenvolvimento de jogos personalizados",
+  },
+
+  bannerTitle: "Serviços de Desenvolvimento de Jogos",
+
+  bannerSubtitle:
+    "Serviços profissionais de desenvolvimento de jogos para experiências mobile, PC, multiplayer e multiplataforma.",
+
+  introBadge: "Soluções de Desenvolvimento de Jogos",
+
+  introTitle:
+    "Empresa Profissional de Desenvolvimento de Jogos",
+
+  introDescription:
+    "A CH TECH GIANT oferece serviços profissionais de desenvolvimento de jogos para startups, empresas, instituições de ensino e empresas do setor de games. Criamos jogos envolventes, escaláveis e visualmente impressionantes, desenvolvidos para oferecer uma experiência de jogo fluida e memorável em diferentes plataformas. Nossa experiência inclui jogos mobile, projetos com Unity, desenvolvimento com Unreal Engine, jogos multiplayer, jogos educativos, jogos de simulação, jogos casuais e soluções personalizadas. Desde o conceito inicial e a criação de protótipos até o desenvolvimento, testes, lançamento e suporte contínuo, ajudamos a transformar suas ideias em produtos de jogos profissionais e prontos para o mercado.",
+
+  services: [
+    "Desenvolvimento de Jogos 2D",
+    "Desenvolvimento de Jogos 3D",
+    "Desenvolvimento com Unity",
+    "Desenvolvimento com Unreal Engine",
+    "Desenvolvimento de Jogos Mobile",
+    "Desenvolvimento de Jogos Multiplayer",
+    "Desenvolvimento de Jogos AR e VR",
+    "Jogos Educativos e de Simulação",
+  ],
+
+  benefitsTitle:
+    "Por Que Escolher Nossos Serviços de Desenvolvimento de Jogos?",
+
+  benefits: [
+    "Soluções Personalizadas de Desenvolvimento de Jogos",
+    "Desenvolvimento com Unity e Unreal Engine",
+    "Sistemas de Jogos Multiplayer e Online",
+    "Otimização de Desempenho e Gameplay",
+    "Desenvolvimento Multiplataforma",
+    "Integração de Sistemas de Monetização",
+    "Infraestrutura de Backend e Cloud",
+    "Testes, Lançamento e Suporte Técnico",
+  ],
+
+  servicesTitle:
+    "Serviços Completos de Desenvolvimento de Jogos",
+
+  servicesDescription:
+    "Oferecemos serviços completos de desenvolvimento de jogos, abrangendo conceito, design, prototipagem, programação, testes, lançamento, monetização e suporte técnico contínuo.",
+
+  serviceDetails: [
+    {
+      title: "Desenvolvimento de Jogos Mobile",
+
+      description:
+        "Desenvolvemos jogos envolventes para Android e iOS com controles intuitivos, desempenho otimizado, gameplay fluido, integração com serviços em nuvem, rankings, conquistas e recursos de monetização.",
+    },
+
+    {
+      title: "Desenvolvimento de Jogos Multiplayer",
+
+      description:
+        "Criamos experiências multiplayer online com redes em tempo real, matchmaking, sincronização de jogadores, sistemas de chat, rankings, contas de usuários e infraestrutura backend escalável.",
+    },
+
+    {
+      title: "Desenvolvimento de Jogos 3D",
+
+      description:
+        "Criamos jogos 3D imersivos com ambientes detalhados, física realista, animações de personagens, sistemas de gameplay interativos, gráficos otimizados e desempenho de renderização suave.",
+    },
+
+    {
+      title: "Desenvolvimento de Jogos AR e VR",
+
+      description:
+        "Desenvolvemos experiências interativas de realidade aumentada e realidade virtual para entretenimento, educação, simulação, treinamento, marketing e aplicações digitais imersivas.",
+    },
+  ],
+
+  processTitle:
+    "Nosso Processo de Desenvolvimento de Jogos",
+
+  processDescription:
+    "Nosso processo estruturado de desenvolvimento ajuda a transformar seu conceito em um produto de jogos confiável, envolvente e pronto para o mercado.",
+
+  process: [
+    "Conceito e Planejamento do Jogo",
+    "Design e Prototipagem",
+    "Desenvolvimento e Testes",
+    "Lançamento e Suporte",
+  ],
+
+  platformsTitle:
+    "Plataformas que Suportamos",
+
+  platforms: [
+    "Android",
+    "iOS",
+    "Windows",
+    "macOS",
+    "Jogos para Web",
+    "Soluções Multiplataforma",
+  ],
+
+  technologiesTitle:
+    "Tecnologias e Ferramentas",
+
+  technologies: [
+    "Unity",
+    "Unreal Engine",
+    "C#",
+    "C++",
+    "Photon",
+    "Firebase",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  seoTitle:
+    "Soluções Personalizadas de Desenvolvimento de Jogos para Diferentes Setores",
+
+  seoContent: [
+    "Nossos serviços personalizados de desenvolvimento de jogos ajudam startups, empresas, instituições de ensino e empresas do setor de games a criar experiências digitais interativas e envolventes. Desenvolvemos jogos de ação, quebra-cabeças, estratégia, jogos educativos, simulações, corridas, aventura, multiplayer e outras soluções personalizadas.",
+
+    "Ao combinar design criativo de jogos, tecnologias modernas de programação, engines de jogos, infraestrutura backend e otimização de desempenho, desenvolvemos produtos que oferecem experiências fluidas e ajudam a apoiar o crescimento a longo prazo.",
+
+    "Nossas soluções podem ser desenvolvidas para entretenimento, educação, marketing, treinamento de funcionários, simulações, relacionamento com clientes e outros casos de uso interativos. Cada projeto é planejado de acordo com o público-alvo, os requisitos de gameplay, a plataforma e os objetivos do negócio.",
+  ],
+
+  ctaTitle:
+    "Comece Seu Projeto de Desenvolvimento de Jogos Hoje",
+
+  ctaDescription:
+    "Está procurando uma empresa profissional de desenvolvimento de jogos? Entre em contato com a CH TECH GIANT para conversar sobre seu jogo mobile, jogo multiplayer, projeto Unity, projeto Unreal Engine ou solução personalizada de jogos.",
+
+  ctaButton:
+    "Solicitar uma Consulta Gratuita",
+},
 
 
 };
