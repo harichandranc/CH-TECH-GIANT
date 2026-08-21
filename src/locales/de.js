@@ -3227,15 +3227,11 @@ invoiceDesign: {
 
   ctaButton: "Jetzt starten",
 },
-/* =========================================================
-   IT CONSULTING
-========================================================= */
-
 itConsulting: {
   seo: {
     title: "IT-Beratung | CH TECH GIANT",
     description:
-      "Professionelle IT-Beratung für Unternehmen zur Verbesserung der Technologiestrategie, Modernisierung der Infrastruktur, Automatisierung von Geschäftsprozessen und Entwicklung skalierbarer digitaler Lösungen.",
+      "Professionelle IT-Beratungsleistungen, die Unternehmen dabei unterstützen, ihre Technologiestrategie zu verbessern, ihre Infrastruktur zu modernisieren, Abläufe zu automatisieren und skalierbare digitale Lösungen aufzubauen.",
     keywords:
       "IT-Beratung, Technologieberatung, IT-Strategie, Cloud-Beratung, digitale Transformation, Geschäftsautomatisierung, Infrastrukturplanung, technischer Support",
   },
@@ -3243,12 +3239,14 @@ itConsulting: {
   bannerTitle: "IT-Beratung",
 
   bannerSubtitle:
-    "Professionelle Technologieberatung, die Unternehmen dabei unterstützt, zu wachsen, ihre Systeme zu modernisieren und ihre Abläufe zu optimieren.",
+    "Professionelle IT-Beratungsleistungen, die Unternehmen dabei unterstützen, zu wachsen, ihre Technologien zu modernisieren und ihre Geschäftsabläufe zu optimieren.",
 
-  heroTitle: "Intelligente Technologieberatung",
+  introBadge: "Professionelle IT-Beratung",
 
-  heroDescription:
-    "Wir unterstützen Startups, Organisationen und Unternehmen dabei, die richtigen Technologien einzusetzen, Arbeitsabläufe zu verbessern und skalierbare digitale Ökosysteme aufzubauen.",
+  introTitle: "Intelligente Technologieberatung",
+
+  introDescription:
+    "Wir unterstützen Startups, Organisationen und Unternehmen bei der Auswahl der richtigen Technologien, der Optimierung von Arbeitsabläufen und dem Aufbau skalierbarer digitaler Systeme.",
 
   services: [
     "Technologiestrategie",
@@ -3259,7 +3257,7 @@ itConsulting: {
     "Technischer Support",
   ],
 
-  benefitsTitle: "Vorteile unserer IT-Beratung",
+  benefitsTitle: "Vorteile der IT-Beratung",
 
   benefits: [
     "Geschäftsorientierte IT-Strategien",

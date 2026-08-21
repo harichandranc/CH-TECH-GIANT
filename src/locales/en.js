@@ -3224,10 +3224,6 @@ invoiceDesign: {
 
   ctaButton: "Get Started",
 },
-/* =========================================================
-   IT CONSULTING
-========================================================= */
-
 itConsulting: {
   seo: {
     title: "IT Consulting Services | CH TECH GIANT",
@@ -3242,9 +3238,11 @@ itConsulting: {
   bannerSubtitle:
     "Professional technology consulting services to help businesses scale, modernize, and optimize operations.",
 
-  heroTitle: "Smart Technology Consulting",
+  introBadge: "Professional IT Consulting",
 
-  heroDescription:
+  introTitle: "Smart Technology Consulting",
+
+  introDescription:
     "We guide startups, organizations, and enterprises in adopting the right technologies, improving workflows, and building scalable digital ecosystems.",
 
   services: [
