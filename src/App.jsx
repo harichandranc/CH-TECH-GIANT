@@ -118,6 +118,10 @@ function App() {
               path="/game-development"
               element={<GameDevelopment />}
             />
+            <Route
+              path="/:lang/game-development"
+              element={<GameDevelopment />}
+            />
 
 
             <Route
