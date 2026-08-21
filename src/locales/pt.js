@@ -3054,6 +3054,179 @@ webDevelopment: {
   metaKeywords:
     "empresa de desenvolvimento web, desenvolvimento de sites, serviços de desenvolvimento web, desenvolvimento web personalizado, desenvolvimento de aplicações web, desenvolvimento de sites ecommerce, desenvolvimento de sites corporativos, design web responsivo, empresa de desenvolvimento web em Davangere, empresa de desenvolvimento web em Karnataka, empresa de desenvolvimento web na Índia",
 },
+invoiceDesign: {
+  /* =====================================================
+     PAGE BANNER
+  ===================================================== */
+
+  bannerTitle: "Design de Faturas",
+
+  bannerSubtitle:
+    "Designs premium de faturas e documentos de cobrança desenvolvidos para empresas modernas, startups e serviços profissionais.",
+
+  /* =====================================================
+     INTRODUCTION
+  ===================================================== */
+
+  introBadge: "Soluções Profissionais de Faturação",
+
+  introTitle: "Soluções Inteligentes para Design de Faturas",
+
+  introParagraph1:
+    "Uma fatura profissional é mais do que um simples documento de cobrança. Ela também é uma parte importante da identidade da sua empresa. Criamos designs de faturas limpos, modernos e profissionais que tornam os seus documentos de cobrança mais fáceis de compreender, mantendo uma forte presença da sua marca.",
+
+  introParagraph2:
+    "Seja uma fatura GST, fatura de serviços, fatura empresarial, orçamento, estimativa ou documento de cobrança personalizado, criamos layouts adaptados às necessidades específicas do seu negócio.",
+
+  /* =====================================================
+     INVOICE SERVICES
+  ===================================================== */
+
+  services: [
+    "Modelos Profissionais de Faturas",
+    "Design de Faturas GST",
+    "Layouts de Faturação Empresarial",
+    "Branding Personalizado",
+    "Faturas Prontas para Impressão",
+    "Sistemas de Faturação Digital",
+    "Design de Orçamentos e Estimativas",
+    "Modelos de Recibos e Pagamentos",
+  ],
+
+  /* =====================================================
+     WHY PROFESSIONAL INVOICE DESIGN
+  ===================================================== */
+
+  whyTitle: "Por Que o Design Profissional de Faturas é Importante",
+
+  whyDescription:
+    "A sua fatura é um dos documentos com os quais os seus clientes têm contacto após adquirir o seu produto ou serviço. Uma fatura bem concebida melhora a legibilidade, transmite confiança e cria uma imagem profissional e consistente para a sua empresa.",
+
+  benefits: [
+    "Aparência empresarial profissional",
+    "Estrutura de faturação fácil de ler",
+    "Layouts de faturas integrados com a marca",
+    "Compatibilidade digital e para impressão",
+    "Tipografia moderna e limpa",
+    "Informações claras sobre impostos e pagamentos",
+  ],
+
+  /* =====================================================
+     INVOICE GALLERY
+  ===================================================== */
+
+  galleryBadge: "Os Nossos Designs de Faturas",
+
+  galleryTitle: "Galeria de Designs de Faturas",
+
+  galleryDescription:
+    "Explore a nossa coleção de layouts profissionais de faturas criados para diferentes necessidades empresariais, setores e estilos de marca.",
+
+  galleryAlt: "Design profissional de fatura",
+
+  /* =====================================================
+     DESIGN FEATURES
+  ===================================================== */
+
+  featuresBadge: "Características do Design",
+
+  featuresTitle: "Tudo o Que a Sua Fatura Precisa",
+
+  featuresDescription:
+    "Combinamos um design visual profissional com requisitos práticos de faturação para criar layouts de faturas que funcionam para o seu negócio.",
+
+  features: [
+    {
+      title: "Branding Personalizado",
+
+      description:
+        "Criamos faturas que correspondem ao logótipo da sua empresa, às cores da sua marca, à tipografia e à sua identidade visual geral.",
+    },
+
+    {
+      title: "Layouts Preparados para GST",
+
+      description:
+        "Criamos layouts de faturas claros com secções organizadas para GST, impostos, subtotal, descontos e valores totais.",
+    },
+
+    {
+      title: "Digital e Impressão",
+
+      description:
+        "Os nossos designs de faturas são otimizados tanto para partilha digital como para impressão profissional.",
+    },
+
+    {
+      title: "Orientado para Empresas",
+
+      description:
+        "Cada secção é estruturada para facilitar a leitura, permitindo que os clientes compreendam rapidamente os produtos, serviços e informações de pagamento.",
+    },
+  ],
+
+  /* =====================================================
+     DESIGN PROCESS
+  ===================================================== */
+
+  processBadge: "O Nosso Processo",
+
+  processTitle: "Como Criamos a Sua Fatura",
+
+  processDescription:
+    "Desde a compreensão dos seus requisitos até à entrega do design final, seguimos um processo simples e estruturado para criar o design da sua fatura.",
+
+  process: [
+    {
+      number: "01",
+
+      title: "Compreendemos o Seu Negócio",
+
+      description:
+        "Compreendemos o seu negócio, os seus requisitos de faturação, produtos ou serviços e todas as informações que precisam de aparecer na sua fatura.",
+    },
+
+    {
+      number: "02",
+
+      title: "Criamos o Layout",
+
+      description:
+        "Os nossos designers organizam a estrutura da sua fatura com secções claras para dados do cliente, produtos, impostos, totais e informações de pagamento.",
+    },
+
+    {
+      number: "03",
+
+      title: "Aplicamos a Sua Marca",
+
+      description:
+        "O seu logótipo, cores, tipografia e identidade da marca são integrados profissionalmente no design da fatura.",
+    },
+
+    {
+      number: "04",
+
+      title: "Entrega Final",
+
+      description:
+        "Após a aprovação final, fornecemos o design de fatura concluído em formatos adequados para utilização digital e impressão.",
+    },
+  ],
+
+  /* =====================================================
+     CTA
+  ===================================================== */
+
+  ctaBadge: "Começar",
+
+  ctaTitle: "Precisa de um Design Profissional de Faturas?",
+
+  ctaDescription:
+    "Dê à sua empresa uma vantagem profissional com um design de fatura limpo, personalizado e fácil de utilizar, desenvolvido especificamente para as suas necessidades.",
+
+  ctaButton: "Começar",
+},
 
 
 };
