@@ -8,19 +8,19 @@ const services = [
   "3D Game Development",
   "Unity Game Development",
   "Unreal Engine Development",
-  "Android Game Development",
-  "iOS Game Development",
+  "Mobile Game Development",
   "Multiplayer Game Development",
   "AR & VR Game Development",
+  "Educational & Simulation Games",
 ];
 
 const platforms = [
   "Android",
   "iOS",
   "Windows",
-  "MacOS",
+  "macOS",
   "Web Games",
-  "Cross Platform Solutions",
+  "Cross-Platform Solutions",
 ];
 
 const technologies = [
@@ -46,7 +46,7 @@ const GameDevelopment = () => {
     <div className="bg-[#050816] text-white">
       <PageBanner
         title="Game Development Services"
-        subtitle="Professional game development company delivering high-performance mobile, PC, multiplayer, and cross-platform gaming solutions."
+        subtitle="Professional game development services for mobile, PC, multiplayer, and cross-platform gaming experiences."
       />
 
       {/* INTRO */}
@@ -63,26 +63,26 @@ const GameDevelopment = () => {
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-5">
-              CH TECH GIANT provides professional game development
-              services for startups, enterprises, educational
-              institutions, and gaming brands. We create engaging,
-              scalable, and visually stunning games that deliver
-              exceptional user experiences across multiple platforms.
+              CH TECH GIANT provides professional game development services
+              for startups, businesses, educational institutions, and gaming
+              companies. We create engaging, scalable, and visually impressive
+              games designed to deliver smooth gameplay and memorable user
+              experiences across multiple platforms.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-5">
-              Our game developers specialize in mobile game development,
-              Unity game development, Unreal Engine projects,
-              multiplayer gaming systems, educational games,
-              simulation games, casual games, and custom gaming
-              solutions designed to meet business goals.
+              Our game development expertise covers mobile games, Unity
+              projects, Unreal Engine development, multiplayer gaming,
+              educational games, simulation games, casual games, and custom
+              gaming solutions. We combine creative design with reliable
+              technology to build games that meet specific business and
+              audience requirements.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              Whether you need a simple mobile game, a multiplayer
-              gaming platform, or a large-scale commercial game,
-              our experienced team can transform your concept into
-              a market-ready product.
+              From an initial game concept and prototype to development,
+              testing, deployment, and ongoing support, we help turn your idea
+              into a polished and market-ready gaming product.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -110,13 +110,13 @@ const GameDevelopment = () => {
 
             <div className="space-y-5 text-gray-400">
               <p>✔ Custom Game Development Solutions</p>
-              <p>✔ Advanced Unity & Unreal Expertise</p>
+              <p>✔ Unity & Unreal Engine Development</p>
               <p>✔ Multiplayer & Online Game Systems</p>
-              <p>✔ High Performance Optimization</p>
-              <p>✔ Cross Platform Compatibility</p>
-              <p>✔ Monetization Integration</p>
-              <p>✔ Cloud & Backend Infrastructure</p>
-              <p>✔ Long-Term Technical Support</p>
+              <p>✔ Performance & Gameplay Optimization</p>
+              <p>✔ Cross-Platform Development</p>
+              <p>✔ Game Monetization Integration</p>
+              <p>✔ Backend & Cloud Infrastructure</p>
+              <p>✔ Testing, Deployment & Technical Support</p>
             </div>
           </motion.div>
         </div>
@@ -130,9 +130,9 @@ const GameDevelopment = () => {
           </h2>
 
           <p className="text-gray-400 max-w-4xl mx-auto">
-            We provide end-to-end game development services from
-            concept design and prototyping to development,
-            testing, deployment, monetization, and ongoing support.
+            We provide end-to-end game development services covering game
+            concept, design, prototyping, programming, testing, deployment,
+            monetization, and ongoing technical support.
           </p>
         </div>
 
@@ -143,9 +143,9 @@ const GameDevelopment = () => {
             </h3>
 
             <p className="text-gray-400 leading-relaxed">
-              Build engaging Android and iOS games with optimized
-              performance, smooth gameplay, cloud integration,
-              leaderboards, achievements, and monetization systems.
+              Develop engaging Android and iOS games with responsive controls,
+              optimized performance, smooth gameplay, cloud integration,
+              leaderboards, achievements, and monetization features.
             </p>
           </div>
 
@@ -155,9 +155,9 @@ const GameDevelopment = () => {
             </h3>
 
             <p className="text-gray-400 leading-relaxed">
-              Create real-time multiplayer games with matchmaking,
-              networking, player synchronization, chat systems,
-              ranking systems, and scalable server architecture.
+              Build online multiplayer experiences with real-time networking,
+              matchmaking, player synchronization, chat systems, rankings,
+              player accounts, and scalable backend infrastructure.
             </p>
           </div>
 
@@ -167,9 +167,9 @@ const GameDevelopment = () => {
             </h3>
 
             <p className="text-gray-400 leading-relaxed">
-              Develop immersive 3D gaming experiences using modern
-              graphics technologies, realistic physics systems,
-              advanced animations, and optimized rendering.
+              Create immersive 3D games with detailed environments, realistic
+              physics, character animations, interactive gameplay systems,
+              optimized graphics, and smooth rendering performance.
             </p>
           </div>
 
@@ -179,9 +179,9 @@ const GameDevelopment = () => {
             </h3>
 
             <p className="text-gray-400 leading-relaxed">
-              Deliver next-generation augmented reality and virtual
-              reality gaming experiences for entertainment,
-              education, simulation, and training applications.
+              Develop interactive augmented and virtual reality experiences
+              for entertainment, education, simulation, training, marketing,
+              and immersive digital applications.
             </p>
           </div>
         </div>
@@ -195,8 +195,8 @@ const GameDevelopment = () => {
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto">
-            A structured development workflow ensures quality,
-            scalability, and successful project delivery.
+            Our structured development process helps transform your concept
+            into a reliable, engaging, and market-ready gaming product.
           </p>
         </div>
 
@@ -237,7 +237,7 @@ const GameDevelopment = () => {
       {/* TECHNOLOGY */}
       <SectionWrapper>
         <h2 className="text-4xl font-bold text-center mb-12">
-          Technologies & Game Engines
+          Technologies & Tools
         </h2>
 
         <div className="grid md:grid-cols-4 gap-5">
@@ -256,32 +256,32 @@ const GameDevelopment = () => {
       <SectionWrapper>
         <div className="bg-white/5 border border-cyan-500/10 rounded-3xl p-10">
           <h2 className="text-4xl font-bold mb-6">
-            Custom Game Development Solutions for Every Industry
+            Custom Game Development Solutions for Different Industries
           </h2>
 
           <div className="space-y-6 text-gray-400 leading-relaxed">
             <p>
-              Our custom game development services help businesses,
-              startups, educational institutions, and gaming companies
-              create innovative digital experiences. We build action
-              games, puzzle games, strategy games, educational games,
-              simulation games, racing games, adventure games,
-              multiplayer games, and custom gaming platforms.
+              Our custom game development services help startups, businesses,
+              educational institutions, and gaming companies create engaging
+              interactive experiences. We develop action games, puzzle games,
+              strategy games, educational games, simulation games, racing
+              games, adventure games, multiplayer games, and other custom
+              gaming solutions.
             </p>
 
             <p>
-              By combining creative game design, advanced programming,
-              cloud infrastructure, and modern game engines, we deliver
-              gaming products that engage players, improve retention,
-              and generate revenue through effective monetization
-              strategies.
+              By combining creative game design, modern programming
+              technologies, game engines, backend infrastructure, and
+              performance optimization, we build gaming products that provide
+              smooth experiences and support long-term growth.
             </p>
 
             <p>
-              Whether your goal is entertainment, education, marketing,
-              employee training, or customer engagement, our expert
-              game developers can create solutions tailored to your
-              unique requirements and target audience.
+              Our solutions can be developed for entertainment, education,
+              marketing, employee training, simulations, customer engagement,
+              and other interactive use cases. Every project is planned around
+              the target audience, gameplay requirements, platform, and
+              business objectives.
             </p>
           </div>
         </div>
@@ -295,14 +295,13 @@ const GameDevelopment = () => {
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-            Looking for a trusted game development company? Contact
-            CH TECH GIANT to build high-quality mobile games,
-            multiplayer games, Unity projects, Unreal Engine games,
-            and custom gaming solutions.
+            Looking for a professional game development company? Contact
+            CH TECH GIANT to discuss your mobile game, multiplayer game,
+            Unity project, Unreal Engine project, or custom gaming solution.
           </p>
 
           <button className="px-8 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 transition font-semibold">
-            Get Free Consultation
+            Get a Free Consultation
           </button>
         </div>
       </SectionWrapper>
