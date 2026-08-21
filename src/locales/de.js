@@ -3054,6 +3054,151 @@ webDevelopment: {
   metaKeywords:
     "Webentwicklungsunternehmen, Website-Entwicklung, Webentwicklungsdienstleistungen, individuelle Website-Entwicklung, Webanwendungsentwicklung, E-Commerce-Website-Entwicklung, Unternehmenswebsite-Entwicklung, responsives Webdesign, Webentwicklung in Davangere, Webentwicklungsunternehmen in Karnataka, Webentwicklungsunternehmen in Indien",
 },
+invoiceDesign: {
+  seo: {
+    title: "Professionelles Rechnungsdesign | CH TECH GIANT",
+    description:
+      "Professionelle Rechnungsdesign-Dienstleistungen für Unternehmen, Startups und Selbstständige. Individuelle GST-Rechnungen, Abrechnungslayouts, Angebote, Kostenvoranschläge, Quittungen und markengerechte Rechnungsdesigns.",
+    keywords:
+      "Rechnungsdesign, Rechnungsdesign Dienstleistungen, professionelles Rechnungsdesign, GST Rechnung Design, Geschäftsrechnung Design, Abrechnungsdesign, individuelles Rechnungsdesign, Rechnungsvorlagen Design",
+  },
+
+  bannerTitle: "Rechnungsdesign",
+
+  bannerSubtitle:
+    "Hochwertige Rechnungs- und Abrechnungsdesigns, maßgeschneidert für moderne Unternehmen, Startups und professionelle Dienstleister.",
+
+  languageSelector: {
+    label: "Sprache auswählen",
+  },
+
+  introduction: {
+    badge: "Professionelle Rechnungslösungen",
+
+    title: "Intelligente Lösungen für das Rechnungsdesign",
+
+    paragraph1:
+      "Eine professionelle Rechnung ist mehr als nur ein Abrechnungsdokument. Sie ist auch ein wichtiger Bestandteil Ihrer Unternehmensidentität. Wir erstellen klare, moderne und professionelle Rechnungsdesigns, die Ihre Abrechnungsdokumente verständlicher machen und gleichzeitig einen starken Markenauftritt gewährleisten.",
+
+    paragraph2:
+      "Egal, ob Sie eine GST-Rechnung, Dienstleistungsrechnung, Unternehmensrechnung, ein Angebot, einen Kostenvoranschlag oder ein individuelles Abrechnungsdokument benötigen – wir erstellen Layouts, die auf Ihre geschäftlichen Anforderungen zugeschnitten sind.",
+  },
+
+  services: [
+    "Professionelle Rechnungsvorlagen",
+    "GST-Rechnungsdesign",
+    "Geschäftliche Abrechnungslayouts",
+    "Individuelles Branding",
+    "Druckfertige Rechnungen",
+    "Digitale Rechnungssysteme",
+    "Angebots- und Kostenvoranschlagsdesigns",
+    "Quittungs- und Zahlungsvorlagen",
+  ],
+
+  benefits: {
+    title: "Warum professionelles Rechnungsdesign wichtig ist",
+
+    description:
+      "Ihre Rechnung gehört zu den Dokumenten, mit denen Ihre Kunden nach dem Kauf Ihres Produkts oder Ihrer Dienstleistung in Kontakt kommen. Ein gut gestaltetes Rechnungsdesign verbessert die Lesbarkeit, schafft Vertrauen und vermittelt ein einheitliches professionelles Erscheinungsbild Ihres Unternehmens.",
+
+    items: [
+      "Professionelles Erscheinungsbild Ihres Unternehmens",
+      "Übersichtliche Abrechnungsstruktur",
+      "Markengerechte Rechnungslayouts",
+      "Für digitale Nutzung und Druck geeignet",
+      "Klare und moderne Typografie",
+      "Übersichtliche Steuer- und Zahlungsinformationen",
+    ],
+  },
+
+  gallery: {
+    badge: "Unsere Rechnungsdesigns",
+
+    title: "Galerie für Rechnungsdesign",
+
+    description:
+      "Entdecken Sie unsere Sammlung professioneller Rechnungslayouts, die für unterschiedliche Geschäftsanforderungen, Branchen und Markenstile entwickelt wurden.",
+  },
+
+  features: {
+    badge: "Designmerkmale",
+
+    title: "Alles, was Ihre Rechnung benötigt",
+
+    description:
+      "Wir verbinden professionelles visuelles Design mit praktischen Anforderungen an die Abrechnung, um Rechnungslayouts zu erstellen, die optimal zu Ihrem Unternehmen passen.",
+
+    items: [
+      {
+        title: "Individuelles Branding",
+        description:
+          "Wir gestalten Rechnungen passend zu Ihrem Firmenlogo, Ihren Markenfarben, Ihrer Typografie und Ihrer gesamten visuellen Identität.",
+      },
+      {
+        title: "GST-fertige Layouts",
+        description:
+          "Erstellen Sie übersichtliche Rechnungslayouts mit klar strukturierten Bereichen für GST, Steuern, Zwischensummen, Rabatte und Gesamtbeträge.",
+      },
+      {
+        title: "Digital & Druck",
+        description:
+          "Unsere Rechnungsdesigns sind sowohl für die digitale Weitergabe als auch für den professionellen Druck optimiert.",
+      },
+      {
+        title: "Geschäftsfreundlich",
+        description:
+          "Jeder Bereich ist übersichtlich strukturiert, damit Kunden Produkte, Dienstleistungen und Zahlungsinformationen schnell verstehen können.",
+      },
+    ],
+  },
+
+  process: {
+    badge: "Unser Prozess",
+
+    title: "So erstellen wir Ihre Rechnung",
+
+    description:
+      "Von der Analyse Ihrer Anforderungen bis zur Lieferung des fertigen Designs folgen wir einem einfachen und strukturierten Prozess für das Rechnungsdesign.",
+
+    steps: [
+      {
+        number: "01",
+        title: "Ihr Unternehmen verstehen",
+        description:
+          "Wir analysieren Ihr Unternehmen, Ihre Abrechnungsanforderungen, Produkte oder Dienstleistungen sowie die Informationen, die auf Ihrer Rechnung enthalten sein müssen.",
+      },
+      {
+        number: "02",
+        title: "Layout erstellen",
+        description:
+          "Unsere Designer strukturieren Ihre Rechnung mit klaren Bereichen für Kundendaten, Produkte, Steuern, Gesamtbeträge und Zahlungsinformationen.",
+      },
+      {
+        number: "03",
+        title: "Ihr Branding integrieren",
+        description:
+          "Ihr Logo, Ihre Farben, Ihre Typografie und Ihre Markenidentität werden in das Rechnungsdesign integriert.",
+      },
+      {
+        number: "04",
+        title: "Fertigstellung und Lieferung",
+        description:
+          "Nach der endgültigen Freigabe stellen wir das fertige Rechnungsdesign in geeigneten Formaten für die digitale Nutzung und den Druck bereit.",
+      },
+    ],
+  },
+
+  cta: {
+    badge: "Jetzt starten",
+
+    title: "Benötigen Sie ein professionelles Rechnungsdesign?",
+
+    description:
+      "Verleihen Sie Ihrem Unternehmen einen professionellen Auftritt mit einem klaren, markengerechten und einfach zu verwendenden Rechnungsdesign, das speziell auf Ihre Anforderungen zugeschnitten ist.",
+
+    button: "Jetzt starten",
+  },
+},
 
 };
 export default de;

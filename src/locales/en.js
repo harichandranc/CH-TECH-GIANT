@@ -3051,6 +3051,151 @@ webDevelopment: {
   metaKeywords:
     "web development company, website development company, web development services, custom website development, web application development, e-commerce website development, business website development, responsive web design, website development company in Davangere, web development company in Karnataka, web development company in India",
 },
+invoiceDesign: {
+  seo: {
+    title: "Professional Invoice Design Services | CH TECH GIANT",
+    description:
+      "Professional invoice design services for businesses, startups, and professionals. Get custom GST invoices, billing layouts, quotations, estimates, receipts, and branded invoice designs.",
+    keywords:
+      "invoice design, invoice design services, professional invoice design, GST invoice design, business invoice design, billing design, custom invoice design, invoice template design",
+  },
+
+  bannerTitle: "Invoice Design",
+
+  bannerSubtitle:
+    "Premium invoice and billing designs tailored for modern businesses, startups, and professional services.",
+
+  languageSelector: {
+    label: "Select Language",
+  },
+
+  introduction: {
+    badge: "Professional Invoice Solutions",
+
+    title: "Smart Billing Design Solutions",
+
+    paragraph1:
+      "A professional invoice is more than a billing document. It is also an important part of your business identity. We create clean, modern, and professional invoice designs that make your billing documents easier to understand while maintaining a strong brand presence.",
+
+    paragraph2:
+      "Whether you need a GST invoice, service invoice, corporate invoice, quotation, estimate, or custom billing document, we create layouts tailored to your business requirements.",
+  },
+
+  services: [
+    "Professional Invoice Templates",
+    "GST Invoice Design",
+    "Business Billing Layouts",
+    "Custom Branding",
+    "Print Ready Invoices",
+    "Digital Invoice Systems",
+    "Quotation & Estimate Designs",
+    "Receipt & Payment Templates",
+  ],
+
+  benefits: {
+    title: "Why Professional Invoice Design Matters",
+
+    description:
+      "Your invoice is one of the documents your customers interact with after purchasing your product or service. A well-designed invoice improves readability, builds trust, and creates a consistent professional image for your business.",
+
+    items: [
+      "Professional business appearance",
+      "Easy-to-read billing structure",
+      "Brand-integrated invoice layouts",
+      "Print & digital compatibility",
+      "Clean modern typography",
+      "Clear tax and payment information",
+    ],
+  },
+
+  gallery: {
+    badge: "Our Invoice Designs",
+
+    title: "Invoice Design Gallery",
+
+    description:
+      "Explore our collection of professional invoice layouts designed for different business requirements, industries, and branding styles.",
+  },
+
+  features: {
+    badge: "Design Features",
+
+    title: "Everything Your Invoice Needs",
+
+    description:
+      "We combine professional visual design with practical billing requirements to create invoice layouts that work for your business.",
+
+    items: [
+      {
+        title: "Custom Branding",
+        description:
+          "We design invoices that match your company logo, brand colors, typography, and overall visual identity.",
+      },
+      {
+        title: "GST Ready Layouts",
+        description:
+          "Create clean invoice layouts with organized GST, tax, subtotal, discount, and total sections.",
+      },
+      {
+        title: "Digital & Print",
+        description:
+          "Our invoice designs are optimized for both digital sharing and professional printing.",
+      },
+      {
+        title: "Business Friendly",
+        description:
+          "Every section is structured for easy reading so customers can quickly understand products, services, and payment details.",
+      },
+    ],
+  },
+
+  process: {
+    badge: "Our Process",
+
+    title: "How We Create Your Invoice",
+
+    description:
+      "From understanding your requirements to delivering the final design, we follow a simple and structured invoice design process.",
+
+    steps: [
+      {
+        number: "01",
+        title: "Understand Your Business",
+        description:
+          "We understand your business, billing requirements, products or services, and the information that needs to appear on your invoice.",
+      },
+      {
+        number: "02",
+        title: "Create the Layout",
+        description:
+          "Our designers organize your invoice structure with clear sections for customer details, products, taxes, totals, and payment information.",
+      },
+      {
+        number: "03",
+        title: "Apply Your Branding",
+        description:
+          "Your logo, colors, typography, and brand identity are integrated into the invoice design.",
+      },
+      {
+        number: "04",
+        title: "Final Delivery",
+        description:
+          "After final approval, we provide the completed invoice design in suitable formats for digital use and printing.",
+      },
+    ],
+  },
+
+  cta: {
+    badge: "Get Started",
+
+    title: "Need a Professional Invoice Design?",
+
+    description:
+      "Give your business a professional edge with a clean, branded, and easy-to-use invoice design tailored to your requirements.",
+
+    button: "Get Started",
+  },
+},
 
 };
 

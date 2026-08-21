@@ -137,6 +137,11 @@ function App() {
               element={<InvoiceDesign />}
             />
 
+            <Route
+              path="/:lang/invoice-design"
+              element={<InvoiceDesign />}
+            />
+
 
 
             <Route
