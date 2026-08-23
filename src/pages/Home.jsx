@@ -18,6 +18,7 @@ import {
   FaReact,
   FaNodeJs,
   FaGooglePlay,
+  FaBootstrap,
   FaChevronDown,
 } from "react-icons/fa";
 
@@ -26,6 +27,17 @@ import {
   SiFirebase,
   SiMongodb,
   SiTailwindcss,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiExpress,
+  SiPython,
+  SiMysql,
+  SiPostgresql,
+  SiDocker,
+  SiGit,
+  SiUnity,
 } from "react-icons/si";
 
 import { translations } from "../locales";
@@ -94,24 +106,68 @@ const technologies = [
     title: "React",
   },
   {
+    icon: <SiNextdotjs />,
+    title: "Next.js",
+  },
+  {
+    icon: <SiTypescript />,
+    title: "TypeScript",
+  },
+  {
+    icon: <SiJavascript />,
+    title: "JavaScript",
+  },
+  {
     icon: <SiFlutter />,
     title: "Flutter",
+  },
+  {
+    icon: <SiReact />,
+    title: "React Native",
   },
   {
     icon: <FaNodeJs />,
     title: "Node.js",
   },
   {
-    icon: <SiFirebase />,
-    title: "Firebase",
+    icon: <SiExpress />,
+    title: "Express.js",
+  },
+  {
+    icon: <SiPython />,
+    title: "Python",
   },
   {
     icon: <SiMongodb />,
     title: "MongoDB",
   },
   {
+    icon: <SiMysql />,
+    title: "MySQL",
+  },
+  {
+    icon: <SiPostgresql />,
+    title: "PostgreSQL",
+  },
+  {
+    icon: <SiFirebase />,
+    title: "Firebase",
+  },
+  {
     icon: <SiTailwindcss />,
     title: "Tailwind CSS",
+  },
+  {
+    icon: <FaBootstrap />,
+    title: "Bootstrap",
+  },
+  {
+    icon: <SiDocker />,
+    title: "Docker",
+  },
+  {
+    icon: <SiUnity />,
+    title: "Unity",
   },
 ];
 
