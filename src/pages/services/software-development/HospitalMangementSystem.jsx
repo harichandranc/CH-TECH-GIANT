@@ -361,27 +361,7 @@ const HospitalManagementSystem = () => {
         </div>
       </SectionWrapper>
 
-      {/* Note */}
-      <SectionWrapper>
-        <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-3xl p-10">
-
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Basic Edition
-          </h2>
-
-          <p className="text-gray-300 text-center max-w-4xl mx-auto leading-8">
-            This Hospital Management System is the <strong>Basic
-            Edition</strong>, focusing on secure authentication,
-            role-based dashboards, user management, doctor profiles,
-            departments, staff, and patient management.
-            Advanced features such as Appointment Booking, Billing,
-            Prescriptions, Pharmacy, Laboratory, Medical Reports,
-            Inventory, and other enterprise healthcare modules are
-            available in higher editions.
-          </p>
-
-        </div>
-      </SectionWrapper>
+      
 
       {/* Stats */}
       <SectionWrapper>
