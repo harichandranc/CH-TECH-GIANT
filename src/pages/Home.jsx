@@ -20,6 +20,12 @@ import {
   FaGooglePlay,
   FaBootstrap,
   FaChevronDown,
+  FaMoneyBillWave,
+  FaHome,
+  FaPlane,
+  FaTruck,
+  FaStore,
+  FaFilm,
 } from "react-icons/fa";
 
 import {
@@ -93,6 +99,30 @@ const industries = [
   {
     icon: <FaNewspaper />,
     key: "mediaNews",
+  },
+  {
+    icon: <FaMoneyBillWave />,
+    key: "finance",
+  },
+  {
+    icon: <FaHome />,
+    key: "realEstate",
+  },
+  {
+    icon: <FaPlane />,
+    key: "travel",
+  },
+  {
+    icon: <FaTruck />,
+    key: "logistics",
+  },
+  {
+    icon: <FaStore />,
+    key: "retail",
+  },
+  {
+    icon: <FaFilm />,
+    key: "entertainment",
   },
 ];
 

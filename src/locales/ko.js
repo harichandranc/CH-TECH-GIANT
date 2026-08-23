@@ -87,7 +87,7 @@ const ko = {
     },
   },
 
-  // Industries
+    // Industries
 
   industries: "산업 분야",
 
@@ -98,8 +98,14 @@ const ko = {
     education: "교육",
     ecommerce: "전자상거래",
     corporate: "기업",
-    restaurants: "레스토랑",
+    restaurants: "레스토랑 및 외식업",
     mediaNews: "미디어 및 뉴스",
+    finance: "금융 및 은행",
+    realEstate: "부동산",
+    travel: "여행 및 관광",
+    logistics: "물류 및 운송",
+    retail: "소매업",
+    entertainment: "엔터테인먼트 및 게임",
   },
 
   // Technologies

@@ -87,7 +87,7 @@ const en = {
     },
   },
 
-  // Industries
+    // Industries
 
   industries: "Industries",
 
@@ -98,8 +98,14 @@ const en = {
     education: "Education",
     ecommerce: "E-Commerce",
     corporate: "Corporate",
-    restaurants: "Restaurants",
+    restaurants: "Restaurants & Food",
     mediaNews: "Media & News",
+    finance: "Finance & Banking",
+    realEstate: "Real Estate",
+    travel: "Travel & Tourism",
+    logistics: "Logistics & Transportation",
+    retail: "Retail",
+    entertainment: "Entertainment & Gaming",
   },
 
   // Technologies

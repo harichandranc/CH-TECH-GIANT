@@ -83,7 +83,7 @@ const zh = {
     },
   },
 
-  // Industries
+    // Industries
 
   industries: "行业",
 
@@ -94,8 +94,14 @@ const zh = {
     education: "教育",
     ecommerce: "电子商务",
     corporate: "企业",
-    restaurants: "餐饮",
+    restaurants: "餐饮与美食",
     mediaNews: "媒体与新闻",
+    finance: "金融与银行",
+    realEstate: "房地产",
+    travel: "旅游与出行",
+    logistics: "物流与运输",
+    retail: "零售",
+    entertainment: "娱乐与游戏",
   },
 
   // Technologies

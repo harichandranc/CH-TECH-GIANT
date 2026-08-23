@@ -87,7 +87,7 @@ const ja = {
     },
   },
 
-  // Industries
+    // Industries
 
   industries: "業界",
 
@@ -98,8 +98,14 @@ const ja = {
     education: "教育",
     ecommerce: "Eコマース",
     corporate: "企業",
-    restaurants: "レストラン",
+    restaurants: "飲食・レストラン",
     mediaNews: "メディア・ニュース",
+    finance: "金融・銀行",
+    realEstate: "不動産",
+    travel: "旅行・観光",
+    logistics: "物流・輸送",
+    retail: "小売",
+    entertainment: "エンターテインメント・ゲーム",
   },
 
   // Technologies
