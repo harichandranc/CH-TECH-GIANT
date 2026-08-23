@@ -3,7 +3,9 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
 
-  <!-- Main Pages -->
+  <!-- =========================
+       MAIN PAGES
+  ========================== -->
 
   <url>
     <loc>https://chtechgiant.com/</loc>
@@ -35,7 +37,25 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Services -->
+
+  <!-- =========================
+       APPS
+  ========================== -->
+
+  <url>
+    <loc>https://chtechgiant.com/apps</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/zh/apps</loc>
+    <priority>0.9</priority>
+  </url>
+
+
+  <!-- =========================
+       MAIN SERVICES
+  ========================== -->
 
   <url>
     <loc>https://chtechgiant.com/app-development</loc>
@@ -44,12 +64,12 @@
 
   <url>
     <loc>https://chtechgiant.com/web-development</loc>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://chtechgiant.com/software-development</loc>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
@@ -72,7 +92,10 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- App Development Pages -->
+
+  <!-- =========================
+       APP DEVELOPMENT PAGES
+  ========================== -->
 
   <url>
     <loc>https://chtechgiant.com/app-development/flutter-development</loc>
@@ -109,7 +132,10 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- App Privacy Policies -->
+
+  <!-- =========================
+       APP PRIVACY POLICIES
+  ========================== -->
 
   <url>
     <loc>https://chtechgiant.com/apps/world-clock/privacy-policy</loc>
@@ -142,17 +168,45 @@
   </url>
 
   <url>
-    <loc>https://chtechgiant.com/apps</loc>
-    <priority>0.9</priority>
+    <loc>https://chtechgiant.com/apps/web-codshop/privacy-policy</loc>
+    <priority>0.5</priority>
   </url>
 
   <url>
-      <loc>https://chtechgiant.com/zh/apps</loc>
-      <priority>0.9</priority>
+    <loc>https://chtechgiant.com/apps/pdf-lock-unlock/privacy-policy</loc>
+    <priority>0.5</priority>
   </url>
 
 
-  <!-- Web Development SEO Pages -->
+  <!-- =========================
+       APP DELETE ACCOUNT
+  ========================== -->
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/delete-account</loc>
+    <priority>0.4</priority>
+  </url>
+
+
+  <!-- =========================
+       SOFTWARE DEVELOPMENT
+  ========================== -->
+
+  <url>
+    <loc>https://chtechgiant.com/software-development/school-erp-system</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/software-development/hospital-management-system</loc>
+    <priority>0.9</priority>
+  </url>
+
+
+  <!-- =========================
+       WEB DEVELOPMENT SEO
+       LOCATION PAGES
+  ========================== -->
 
   <url>
     <loc>https://chtechgiant.com/web-development-davanagere</loc>
@@ -199,11 +253,5 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Software Development Pages -->
-
-  <url>
-    <loc>https://chtechgiant.com/software-development/school-erp-system</loc>
-    <priority>0.8</priority>
-  </url>
 
 </urlset>
