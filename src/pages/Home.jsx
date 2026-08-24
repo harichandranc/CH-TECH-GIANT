@@ -659,29 +659,29 @@ const Home = () => {
         </section>
 
         {/* ===================================================
-            VIDEO SECTION
-        =================================================== */}
+    VIDEO SECTION
+=================================================== */}
 
-        <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[100vh] overflow-hidden mt-8">
+<section className="relative w-full overflow-hidden mt-8 bg-black">
 
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster="/images/video-thumbnail.jpg"
-            className="w-full h-full object-cover"
-          >
-            <source
-              src="/videos/hero1080p.mp4"
-              type="video/mp4"
-            />
-          </video>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    poster="/images/video-thumbnail.jpg"
+    className="block w-full h-auto"
+  >
+    <source
+      src="/videos/hero1080p.mp4"
+      type="video/mp4"
+    />
+  </video>
 
-          <div className="absolute inset-0 bg-black/30" />
+  <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
-        </section>
+</section>
 
         {/* ===================================================
             HERO CONTENT
