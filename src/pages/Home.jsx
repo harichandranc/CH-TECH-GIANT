@@ -674,7 +674,7 @@ const Home = () => {
             className="w-full h-full object-cover"
           >
             <source
-              src="/videos/hero-video.mp4"
+              src="/videos/hero1080p.mp4"
               type="video/mp4"
             />
           </video>
