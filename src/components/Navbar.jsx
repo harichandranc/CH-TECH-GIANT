@@ -5,6 +5,7 @@ import {
   HiMenuAlt3,
   HiX,
   HiChevronDown,
+  HiShieldCheck,
 } from "react-icons/hi";
 
 const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
@@ -54,36 +55,12 @@ function Navbar() {
 
   const location = useLocation();
 
-  /*
-   * Detect the current language from the URL.
-   *
-   * Examples:
-   * /services              -> en
-   * /zh/services           -> zh
-   * /es/services           -> es
-   * /pt/services           -> pt
-   * /de/services           -> de
-   * /ko/services           -> ko
-   * /ja/services           -> ja
-   */
   const pathParts = location.pathname.split("/").filter(Boolean);
 
   const currentLang = supportedLanguages.includes(pathParts[0])
     ? pathParts[0]
     : "en";
 
-  /*
-   * Add the current language to internal links.
-   *
-   * English:
-   * /app-development
-   *
-   * Chinese:
-   * /zh/app-development
-   *
-   * Spanish:
-   * /es/app-development
-   */
   const localizedPath = (path) => {
     if (currentLang === "en") {
       return path;
@@ -108,7 +85,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
 
             {navLinks.map((link) => (
               <NavLink
@@ -129,7 +106,10 @@ function Navbar() {
             {/* Services Dropdown */}
             <div className="relative group">
 
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-cyan-300 transition-all duration-300">
+              <button
+                type="button"
+                className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-cyan-300 transition-all duration-300"
+              >
                 Services
                 <HiChevronDown className="text-lg" />
               </button>
@@ -157,6 +137,25 @@ function Navbar() {
                 </div>
               </div>
             </div>
+
+            {/* Admin Login */}
+            <NavLink
+              to={localizedPath("/admin-dashboard")}
+              className={({ isActive }) =>
+                `group flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 ${
+                  isActive
+                    ? "border-cyan-400/50 bg-cyan-500/20 text-cyan-300"
+                    : "border-cyan-500/20 bg-cyan-500/5 text-cyan-300 hover:border-cyan-400/50 hover:bg-cyan-500/10"
+                }`
+              }
+            >
+              <HiShieldCheck className="text-lg transition-transform duration-300 group-hover:scale-110" />
+
+              <span className="text-sm font-semibold">
+                Admin Login
+              </span>
+            </NavLink>
+
           </nav>
 
           {/* Mobile Menu Button */}
@@ -167,6 +166,7 @@ function Navbar() {
           >
             {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
+
         </div>
       </div>
 
@@ -221,6 +221,30 @@ function Navbar() {
 
               </div>
             </div>
+
+            {/* Mobile Admin Login */}
+            <div className="pt-3">
+
+              <NavLink
+                to={localizedPath("/admin-dashboard")}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-4 py-3 rounded-xl border transition-all duration-300 ${
+                    isActive
+                      ? "border-cyan-400/50 bg-cyan-500/20 text-cyan-300"
+                      : "border-cyan-500/20 bg-cyan-500/5 text-cyan-300 hover:border-cyan-400/50 hover:bg-cyan-500/10"
+                  }`
+                }
+              >
+                <HiShieldCheck className="text-xl" />
+
+                <span className="text-sm font-semibold">
+                  Admin Login
+                </span>
+              </NavLink>
+
+            </div>
+
           </div>
         </div>
       )}
