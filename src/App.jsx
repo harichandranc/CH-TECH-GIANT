@@ -11,6 +11,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apps from "./pages/Apps";
+import AdminDashboard from "./pages/AdminDashboard";
 
 import AppDevelopment from "./pages/services/AppDevelopment";
 import WebDevelopment from "./pages/services/WebDevelopment";
@@ -84,6 +85,8 @@ function App() {
 
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
+
+            <Route path="/admin" element={<AdminDashboard />} />
 
 
             <Route
