@@ -86,7 +86,7 @@ function App() {
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
 
-            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
 
             <Route
