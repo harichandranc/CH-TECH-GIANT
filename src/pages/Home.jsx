@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import {
@@ -42,8 +41,8 @@ import {
   SiMysql,
   SiPostgresql,
   SiDocker,
-  SiGit,
   SiUnity,
+  SiGit,
 } from "react-icons/si";
 
 import { translations } from "../locales";
@@ -659,29 +658,29 @@ const Home = () => {
         </section>
 
         {/* ===================================================
-    VIDEO SECTION
-=================================================== */}
+            VIDEO SECTION
+        =================================================== */}
 
-<section className="relative w-full overflow-hidden mt-8 bg-black">
+        <section className="relative w-full overflow-hidden mt-8 bg-black">
 
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-    poster="/images/video-thumbnail.jpg"
-    className="block w-full h-auto"
-  >
-    <source
-      src="/videos/hero.mp4"
-      type="video/mp4"
-    />
-  </video>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/video-thumbnail.jpg"
+            className="block w-full h-auto"
+          >
+            <source
+              src="/videos/hero.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-  <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
-</section>
+        </section>
 
         {/* ===================================================
             HERO CONTENT
@@ -695,52 +694,32 @@ const Home = () => {
 
             <div className="max-w-4xl">
 
-              <motion.p
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="uppercase tracking-[4px] md:tracking-[6px] text-cyan-400 text-xs md:text-sm mb-5"
-              >
+              <p className="uppercase tracking-[4px] md:tracking-[6px] text-cyan-400 text-xs md:text-sm mb-5">
                 CH TECH GIANT (OPC) PRIVATE LIMITED
-              </motion.p>
+              </p>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 35 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight"
-              >
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight">
                 {t.homeHeroTitle1}
 
                 <span className="text-cyan-400">
                   {" "}
                   {t.homeHeroTitle2}
                 </span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 35 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.2,
-                  duration: 0.7,
-                }}
-                className="text-gray-400 text-base md:text-lg leading-relaxed mt-6 md:mt-8 max-w-2xl"
-              >
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed mt-6 md:mt-8 max-w-2xl">
                 {t.homeHeroDescription}
-              </motion.p>
+              </p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.4,
-                  duration: 0.7,
-                }}
-                className="flex flex-col sm:flex-row gap-4 md:gap-5 mt-8 md:mt-10"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mt-8 md:mt-10">
 
-                <Link to={language === "en" ? "/services" : `/${language}/services`}>
+                <Link
+                  to={
+                    language === "en"
+                      ? "/services"
+                      : `/${language}/services`
+                  }
+                >
                   <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
                     {t.exploreServices}
                   </button>
@@ -753,7 +732,7 @@ const Home = () => {
                   </button>
                 </Link>
 
-              </motion.div>
+              </div>
 
             </div>
 
@@ -767,12 +746,7 @@ const Home = () => {
 
         <section className="px-6 md:px-12 lg:px-20 py-20 md:py-24">
 
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div className="text-center max-w-3xl mx-auto">
 
             <p className="uppercase tracking-[5px] text-cyan-400 text-sm mb-4">
               {t.ourExpertise}
@@ -782,17 +756,13 @@ const Home = () => {
               {t.servicesWeProvide}
             </h2>
 
-          </motion.div>
+          </div>
 
           <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 mt-14 md:mt-16">
 
-            {services.map((service, index) => (
-              <motion.div
+            {services.map((service) => (
+              <div
                 key={service.key}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 backdrop-blur-lg hover:border-cyan-400/40 transition duration-500"
               >
 
@@ -808,7 +778,7 @@ const Home = () => {
                   {t.services[service.key].description}
                 </p>
 
-              </motion.div>
+              </div>
             ))}
 
           </div>
@@ -835,13 +805,9 @@ const Home = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-14">
 
-            {industries.map((industry, index) => (
-              <motion.div
+            {industries.map((industry) => (
+              <div
                 key={industry.key}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
               >
 
@@ -853,7 +819,7 @@ const Home = () => {
                   {t.industriesList[industry.key]}
                 </h3>
 
-              </motion.div>
+              </div>
             ))}
 
           </div>
@@ -881,12 +847,8 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-14">
 
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
               >
 
@@ -898,7 +860,7 @@ const Home = () => {
                   {tech.title}
                 </h3>
 
-              </motion.div>
+              </div>
             ))}
 
           </div>
@@ -925,16 +887,12 @@ const Home = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
 
-            {latestApps.map((app, index) => (
-              <motion.a
+            {latestApps.map((app) => (
+              <a
                 href={app.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={app.key}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
                 className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-lg hover:border-cyan-400/40 transition duration-500"
               >
 
@@ -967,7 +925,7 @@ const Home = () => {
 
                 </div>
 
-              </motion.a>
+              </a>
             ))}
 
           </div>
