@@ -53,19 +53,19 @@ import { translations } from "../locales";
 
 const services = [
   {
-    icon: <FaCode />,
+    icon: <FaCode className="text-blue-400" />,
     key: "webDevelopment",
   },
   {
-    icon: <FaMobileAlt />,
+    icon: <FaMobileAlt className="text-green-400" />,
     key: "appDevelopment",
   },
   {
-    icon: <FaLaptopCode />,
+    icon: <FaLaptopCode className="text-purple-400" />,
     key: "softwareDevelopment",
   },
   {
-    icon: <FaGamepad />,
+    icon: <FaGamepad className="text-orange-400" />,
     key: "gameDevelopment",
   },
 ];
@@ -767,7 +767,7 @@ const Home = () => {
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 backdrop-blur-lg hover:border-cyan-400/40 transition duration-500"
               >
 
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-2xl text-cyan-400 mb-6">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/5 flex items-center justify-center text-2xl mb-6">
                   {service.icon}
                 </div>
 
