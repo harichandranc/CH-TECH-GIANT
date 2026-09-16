@@ -17,4 +17,53 @@ html {
 body {
   background-color: #050816;
   overflow-x: hidden;
+  cursor: none;
+}
+
+/* ================================
+   CUSTOM FUTURISTIC CURSOR
+================================ */
+
+.custom-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #22d3ee;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 8px rgba(34, 211, 238, 0.9),
+    0 0 18px rgba(34, 211, 238, 0.5);
+
+  transition:
+    width 0.15s ease,
+    height 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.custom-cursor.hover {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(34, 211, 238, 0.12);
+  border-color: #67e8f9;
+
+  box-shadow:
+    0 0 10px rgba(34, 211, 238, 0.9),
+    0 0 25px rgba(34, 211, 238, 0.6);
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
 }

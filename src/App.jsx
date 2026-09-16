@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -56,8 +57,55 @@ import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 import WebCodshopDeleteAccount from "./pages/apps/WebCodshopDeleteAccount";
 
 function App() {
+  const [cursor, setCursor] = useState({
+    x: 0,
+    y: 0,
+    hover: false,
+  });
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      setCursor((prev) => ({
+        ...prev,
+        x: e.clientX,
+        y: e.clientY,
+      }));
+    };
+
+    const handleMouseOver = (e) => {
+      const target = e.target.closest(
+        "a, button, select, input, textarea, [role='button']"
+      );
+
+      setCursor((prev) => ({
+        ...prev,
+        hover: !!target,
+      }));
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+    document.addEventListener("mouseover", handleMouseOver);
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener("mouseover", handleMouseOver);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
+
+      {/* CUSTOM CURSOR */}
+      <div
+        className={`custom-cursor ${
+          cursor.hover ? "hover" : ""
+        }`}
+        style={{
+          left: `${cursor.x}px`,
+          top: `${cursor.y}px`,
+        }}
+      />
+
       <ScrollToTop />
 
       <div className="bg-[#050816] text-white min-h-screen flex flex-col">
@@ -65,30 +113,48 @@ function App() {
 
         <main className="flex-grow">
           <Routes>
+
+            {/* HOME */}
             <Route path="/" element={<Home />} />
             <Route path="/:lang" element={<Home />} />
 
+            {/* ABOUT */}
             <Route path="/about" element={<About />} />
             <Route path="/:lang/about" element={<About />} />
 
+            {/* SERVICES */}
             <Route path="/services" element={<Services />} />
             <Route path="/:lang/services" element={<Services />} />
 
+            {/* PORTFOLIO */}
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/:lang/portfolio" element={<Portfolio />} />
 
+            {/* CONTACT */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/:lang/contact" element={<Contact />} />
 
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/:lang/privacy-policy" element={<PrivacyPolicy />} />
+            {/* PRIVACY POLICY */}
+            <Route
+              path="/privacy-policy"
+              element={<PrivacyPolicy />}
+            />
+            <Route
+              path="/:lang/privacy-policy"
+              element={<PrivacyPolicy />}
+            />
 
+            {/* APPS */}
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
 
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            {/* ADMIN DASHBOARD */}
+            <Route
+              path="/admin-dashboard"
+              element={<AdminDashboard />}
+            />
 
-
+            {/* APP DEVELOPMENT */}
             <Route
               path="/app-development"
               element={<AppDevelopment />}
@@ -99,7 +165,7 @@ function App() {
               element={<AppDevelopment />}
             />
 
-
+            {/* WEB DEVELOPMENT */}
             <Route
               path="/web-development"
               element={<WebDevelopment />}
@@ -110,23 +176,24 @@ function App() {
               element={<WebDevelopment />}
             />
 
-
+            {/* SOFTWARE DEVELOPMENT */}
             <Route
               path="/software-development"
               element={<SoftwareDevelopment />}
             />
 
-
+            {/* GAME DEVELOPMENT */}
             <Route
               path="/game-development"
               element={<GameDevelopment />}
             />
+
             <Route
               path="/:lang/game-development"
               element={<GameDevelopment />}
             />
 
-
+            {/* IT CONSULTING */}
             <Route
               path="/it-consulting"
               element={<ITConsulting />}
@@ -137,14 +204,13 @@ function App() {
               element={<ITConsulting />}
             />
 
-
-
+            {/* PAMPHLET DESIGN */}
             <Route
               path="/pamphlet-design"
               element={<PamphletDesign />}
             />
 
-
+            {/* INVOICE DESIGN */}
             <Route
               path="/invoice-design"
               element={<InvoiceDesign />}
@@ -155,7 +221,7 @@ function App() {
               element={<InvoiceDesign />}
             />
 
-
+            {/* APP PRIVACY POLICIES */}
 
             <Route
               path="/apps/world-clock/privacy-policy"
@@ -197,12 +263,12 @@ function App() {
               element={<PDFLockUnlockPrivacyPolicy />}
             />
 
-
             <Route
               path="/apps/web-codshop/delete-account"
               element={<WebCodshopDeleteAccount />}
             />
 
+            {/* APP DEVELOPMENT SUB-PAGES */}
 
             <Route
               path="/app-development/flutter-development"
@@ -239,10 +305,19 @@ function App() {
               element={<MobileAppDevelopment />}
             />
 
+            {/* SOFTWARE DEVELOPMENT SUB-PAGES */}
+
             <Route
               path="/software-development/school-erp-system"
               element={<SchoolERPSystem />}
             />
+
+            <Route
+              path="/software-development/hospital-management-system"
+              element={<HospitalManagementSystem />}
+            />
+
+            {/* LOCATION SEO PAGES */}
 
             <Route
               path="/web-development-davanagere"
@@ -289,6 +364,8 @@ function App() {
               element={<WebDevelopmentBellary />}
             />
 
+            {/* PAYPAL */}
+
             <Route
               path="/paypal-success"
               element={<PaypalSuccess />}
@@ -297,11 +374,6 @@ function App() {
             <Route
               path="/paypal-cancel"
               element={<PaypalCancel />}
-            />
-
-            <Route
-              path="/software-development/hospital-management-system"
-              element={<HospitalManagementSystem />}
             />
 
           </Routes>
