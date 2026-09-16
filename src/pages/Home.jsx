@@ -88,6 +88,7 @@ const industries = [
     key: "ecommerce",
   },
   {
+
     icon: "🏢",
     key: "corporate",
   },
@@ -131,71 +132,71 @@ const industries = [
 
 const technologies = [
   {
-    icon: <FaReact />,
+    icon: <FaReact className="text-[#61DAFB]" />,
     title: "React",
   },
   {
-    icon: <SiNextdotjs />,
+    icon: <SiNextdotjs className="text-white" />,
     title: "Next.js",
   },
   {
-    icon: <SiTypescript />,
+    icon: <SiTypescript className="text-[#3178C6]" />,
     title: "TypeScript",
   },
   {
-    icon: <SiJavascript />,
+    icon: <SiJavascript className="text-[#F7DF1E]" />,
     title: "JavaScript",
   },
   {
-    icon: <SiFlutter />,
+    icon: <SiFlutter className="text-[#54C5F8]" />,
     title: "Flutter",
   },
   {
-    icon: <SiReact />,
+    icon: <SiReact className="text-[#61DAFB]" />,
     title: "React Native",
   },
   {
-    icon: <FaNodeJs />,
+    icon: <FaNodeJs className="text-[#68A063]" />,
     title: "Node.js",
   },
   {
-    icon: <SiExpress />,
+    icon: <SiExpress className="text-white" />,
     title: "Express.js",
   },
   {
-    icon: <SiPython />,
+    icon: <SiPython className="text-[#3776AB]" />,
     title: "Python",
   },
   {
-    icon: <SiMongodb />,
+    icon: <SiMongodb className="text-[#47A248]" />,
     title: "MongoDB",
   },
   {
-    icon: <SiMysql />,
+    icon: <SiMysql className="text-[#4479A1]" />,
     title: "MySQL",
   },
   {
-    icon: <SiPostgresql />,
+    icon: <SiPostgresql className="text-[#4169E1]" />,
     title: "PostgreSQL",
   },
   {
-    icon: <SiFirebase />,
+    icon: <SiFirebase className="text-[#FFCA28]" />,
     title: "Firebase",
   },
   {
-    icon: <SiTailwindcss />,
+    icon: <SiTailwindcss className="text-[#06B6D4]" />,
     title: "Tailwind CSS",
   },
   {
-    icon: <FaBootstrap />,
+    icon: <FaBootstrap className="text-[#7952B3]" />,
     title: "Bootstrap",
   },
   {
-    icon: <SiDocker />,
+    icon: <SiDocker className="text-[#2496ED]" />,
     title: "Docker",
   },
   {
-    icon: <SiUnity />,
+    icon: <SiUnity className="text-white" />,
     title: "Unity",
   },
 ];
@@ -852,9 +853,9 @@ const Home = () => {
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
               >
 
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400 mb-5">
-                  {tech.icon}
-                </div>
+               <div className="w-16 h-16 mx-auto rounded-2xl bg-white/5 flex items-center justify-center text-3xl mb-5">
+                {tech.icon}
+              </div>
 
                 <h3 className="text-lg font-semibold text-gray-200">
                   {tech.title}
