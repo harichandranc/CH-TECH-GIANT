@@ -76,51 +76,51 @@ const services = [
 
 const industries = [
   {
-    icon: <FaHospital />,
+    icon: "🏥",
     key: "healthcare",
   },
   {
-    icon: <FaGraduationCap />,
+    icon: "🎓",
     key: "education",
   },
   {
-    icon: <FaShoppingCart />,
+    icon: "🛒",
     key: "ecommerce",
   },
   {
-    icon: <FaBuilding />,
+    icon: "🏢",
     key: "corporate",
   },
   {
-    icon: <FaUtensils />,
+    icon: "🍽️",
     key: "restaurants",
   },
   {
-    icon: <FaNewspaper />,
+    icon: "📰",
     key: "mediaNews",
   },
   {
-    icon: <FaMoneyBillWave />,
+    icon: "💳",
     key: "finance",
   },
   {
-    icon: <FaHome />,
+    icon: "🏠",
     key: "realEstate",
   },
   {
-    icon: <FaPlane />,
+    icon: "✈️",
     key: "travel",
   },
   {
-    icon: <FaTruck />,
+    icon: "🚚",
     key: "logistics",
   },
   {
-    icon: <FaStore />,
+    icon: "🛍️",
     key: "retail",
   },
   {
-    icon: <FaFilm />,
+    icon: "🎬",
     key: "entertainment",
   },
 ];
@@ -207,19 +207,19 @@ const technologies = [
 const latestApps = [
   {
     key: "fileConverter",
-    image: "/projects/fileconverter.png",
+    image: "/projects/fileconverter.webp",
     link:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
   },
   {
     key: "fileRenamer",
-    image: "/projects/filerenamer.png",
+    image: "/projects/filerenamer.webp",
     link:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
   },
   {
     key: "webCodshop",
-    image: "/projects/webcodshop.png",
+    image: "/projects/webcodshop.webp",
     link:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
   },
@@ -811,7 +811,7 @@ const Home = () => {
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-lg text-center hover:border-cyan-400/40 transition duration-500"
               >
 
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-cyan-500/10 flex items-center justify-center text-3xl text-cyan-400 mb-5">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/5 flex items-center justify-center text-3xl mb-5">
                   {industry.icon}
                 </div>
 
