@@ -27,6 +27,7 @@ import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
 import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
 import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
+import FileConverterPrivacyPolicyChinese from "./pages/apps/FileConverterPrivacyPolicyChinese";
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
 import PDFLockUnlockPrivacyPolicy from "./pages/apps/PdfLockUnlockPrivacyPolicy";
 
@@ -246,6 +247,11 @@ function App() {
             <Route
               path="/apps/file-converter/privacy-policy"
               element={<FileConverterPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/file-converter/privacy-policy/chinese"
+              element={<FileConverterPrivacyPolicyChinese />}
             />
 
             <Route
