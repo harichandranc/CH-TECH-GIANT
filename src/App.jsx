@@ -31,7 +31,9 @@ import FileRenamerPrivacyPolicyChinese from "./pages/apps/FileRenamerPrivacyPoli
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
 import FileConverterPrivacyPolicyChinese from "./pages/apps/FileConverterPrivacyPolicyChinese";
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
+import ImageToPDFPrivacyPolicyChinese from "./pages/apps/ImageToPDFPrivacyPolicyChinese";
 import PDFLockUnlockPrivacyPolicy from "./pages/apps/PdfLockUnlockPrivacyPolicy";
+import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
@@ -56,7 +58,7 @@ import WebDevelopmentBellary from "./pages/services/web-development/SEO/WebDevel
 
 import PaypalSuccess from "./pages/PaypalSuccess";
 import PaypalCancel from "./pages/PaypalCancel";
-import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
+
 import WebCodshopDeleteAccount from "./pages/apps/WebCodshopDeleteAccount";
 
 function App() {
@@ -265,13 +267,18 @@ function App() {
               path="/apps/file-converter/privacy-policy/chinese"
               element={<FileConverterPrivacyPolicyChinese />}
             />
-
-            
+           
 
             <Route
               path="/apps/image-to-pdf/privacy-policy"
               element={<ImageToPDFPrivacyPolicy />}
             />
+
+            <Route
+              path="/apps/image-to-pdf/privacy-policy/chinese"
+              element={<ImageToPDFPrivacyPolicyChinese />}
+            />
+
 
             <Route
               path="/apps/web-codshop/privacy-policy"
