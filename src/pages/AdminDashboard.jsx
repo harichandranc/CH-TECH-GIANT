@@ -432,5 +432,4 @@ function AdminDashboard() {
     </main>
   );
 }
-
 export default AdminDashboard;

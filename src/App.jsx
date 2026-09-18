@@ -26,6 +26,7 @@ import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
 import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
 import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
 import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
+import FileRenamerPrivacyPolicyChinese from "./pages/apps/FileRenamerPrivacyPolicyChinese";
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
 import FileConverterPrivacyPolicyChinese from "./pages/apps/FileConverterPrivacyPolicyChinese";
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
@@ -245,6 +246,11 @@ function App() {
             />
 
             <Route
+              path="/apps/file-converter/privacy-policy/chinese"
+              element={<FileRenamerPrivacyPolicyChinese />}
+            />
+
+            <Route
               path="/apps/file-converter/privacy-policy"
               element={<FileConverterPrivacyPolicy />}
             />
@@ -253,6 +259,8 @@ function App() {
               path="/apps/file-converter/privacy-policy/chinese"
               element={<FileConverterPrivacyPolicyChinese />}
             />
+
+            
 
             <Route
               path="/apps/image-to-pdf/privacy-policy"

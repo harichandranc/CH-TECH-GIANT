@@ -20,7 +20,7 @@ const apps = [
       ko: "아름답고 사용하기 쉬운 인터페이스로 여러 국가와 도시의 현재 시간을 확인하세요.",
       ja: "美しく使いやすいインターフェースで、複数の国や都市の現在時刻を確認できます。",
     },
-    image: "/projects/worldclock.png",
+    image: "/projects/worldclock.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.worldclock",
     apk: "http://147.93.110.58:8080/WorldClock.apk",
@@ -47,7 +47,7 @@ const apps = [
       ko: "하나의 앱에서 이미지, 동영상, 오디오, 문서, 압축 파일 및 다양한 파일 형식을 변환하세요.",
       ja: "1つのアプリで、画像、動画、音声、ドキュメント、アーカイブなど、さまざまなファイル形式を変換できます。",
     },
-    image: "/projects/fileconverter.png",
+    image: "/projects/fileconverter.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
     apk: "http://147.93.110.58:8080/FileConverter.apk",
@@ -74,7 +74,7 @@ const apps = [
       ko: "접두사, 접미사, 번호 지정, 교체 규칙 등을 사용하여 수천 개의 파일 이름을 빠르게 변경하세요.",
       ja: "接頭辞、接尾辞、連番、置換ルールなどを使って、数千のファイル名を一括ですばやく変更できます。",
     },
-    image: "/projects/filerenamer.png",
+    image: "/projects/filerenamer.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.file_name_cleaner",
     apk: "http://147.93.110.58:8080/BulkFileRenamer.apk",
@@ -101,7 +101,7 @@ const apps = [
       ko: "웹사이트 소스 코드, 웹 템플릿 및 전문 웹 개발 리소스를 제공하는 마켓플레이스입니다.",
       ja: "Webサイトのソースコード、Webテンプレート、プロフェッショナルなWeb開発リソースを提供するマーケットプレイスです。",
     },
-    image: "/projects/webcodshop.png",
+    image: "/projects/webcodshop.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop",
     apk: null,
@@ -128,7 +128,7 @@ const apps = [
       ko: "PDF 내보내기 및 공유 기능을 사용하여 전문적인 청구서, 견적서 및 영수증을 만들어 보세요.",
       ja: "PDFへのエクスポートと共有に対応した、プロフェッショナルな請求書、見積書、領収書を作成できます。",
     },
-    image: "/projects/invoicemaker.png",
+    image: "/projects/invoicemaker.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.invoice_generator_app",
     apk: "http://147.93.110.58:8080/InvoiceMaker.apk",
@@ -155,7 +155,7 @@ const apps = [
       ko: "다양한 성적 평가 시스템을 지원하여 학기 SGPA와 전체 CGPA를 정확하게 계산하세요.",
       ja: "複数の成績評価システムに対応し、学期SGPAと総合CGPAを正確に計算できます。",
     },
-    image: "/projects/cgpacalculator.jpg",
+    image: "/projects/cgpacalculator.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.ch_cgpa_sgpa_calculator",
     apk: "http://147.93.110.58:8080/CGPASGPACalculator.apk",
@@ -182,7 +182,7 @@ const apps = [
       ko: "뛰어난 이미지 품질을 유지하면서 원하는 파일 크기로 이미지를 압축하세요.",
       ja: "高品質を維持しながら、画像を希望するファイルサイズまで圧縮できます。",
     },
-    image: "/projects/image-compressor.png",
+    image: "/projects/image-compressor.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
     apk: null,
@@ -209,7 +209,7 @@ const apps = [
       ko: "모든 이미지 형식을 빠르고 간편하게 PDF 파일로 변환하세요.",
       ja: "あらゆる画像形式をすばやく簡単にPDFファイルへ変換できます。",
     },
-    image: "/projects/img2pdf copy.png",
+    image: "/projects/img2pdf.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter",
     apk: "http://147.93.110.58:8080/ImageToPDFConverter.apk",
@@ -236,7 +236,7 @@ const apps = [
       ko: "비밀번호를 사용하여 PDF 파일을 잠그거나 잠금을 해제하세요.",
       ja: "パスワードを使用してPDFファイルをロックまたはロック解除できます。",
     },
-    image: "/projects/pdf_lock_unlock.jpeg",
+    image: "/projects/pdf_lock_unlock.webp",
     playStore:
       "https://play.google.com/store/apps/details?id=com.chtechgiant.pdf_lock_unlock",
     apk: "http://147.93.110.58:8080/PDFLockUnlock.apk",
