@@ -43,7 +43,7 @@ const FileRenamerPrivacyPolicy = () => {
 
               <p>
                 File Renamer – Bulk Rename does not collect, store, or share
-                personal information from users.
+                personal information directly from users.
               </p>
 
               <p className="mt-4">
@@ -84,38 +84,42 @@ const FileRenamerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                This app may display advertisements provided by third-party
-                advertising services such as Google AdMob.
+                This app may display advertisements provided by the third-party
+                advertising service Start.io.
               </p>
 
               <p className="mt-4">
-                These services may collect limited non-personal information
-                including:
+                Start.io may collect and process certain information from your
+                device for advertising, analytics, fraud prevention, and
+                related purposes. Depending on the applicable settings and
+                regulations, this information may include:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Device information</li>
-                <li>Advertising ID</li>
-                <li>App interaction data</li>
+                <li>Advertising ID or other device identifiers</li>
+                <li>IP address</li>
+                <li>App interaction and usage information</li>
                 <li>Approximate location information</li>
               </ul>
 
               <p className="mt-4">
-                This data is used to provide and improve advertising
-                experiences.
+                The information collected by Start.io is subject to Start.io's
+                own privacy practices and policies.
               </p>
 
               <p className="mt-4">
-                For more information, please review Google’s Privacy Policy:
+                For more information about how Start.io handles data, please
+                review Start.io's Privacy Policy:
               </p>
 
               <a
-                href="https://policies.google.com/privacy"
+                href="https://www.start.io/policy/privacy-policy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition duration-300"
               >
-                Google Privacy Policy
+                Start.io Privacy Policy
               </a>
             </section>
 
@@ -125,9 +129,14 @@ const FileRenamerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                We value user privacy and security. Since the app does not
-                collect or store personal information, your data remains on
-                your device.
+                We value user privacy and security. The app does not upload or
+                store users' files on our servers. File renaming operations are
+                performed locally on your device.
+              </p>
+
+              <p className="mt-4">
+                Any information processed by third-party advertising services
+                is handled according to their respective privacy policies.
               </p>
             </section>
 

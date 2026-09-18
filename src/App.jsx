@@ -24,6 +24,7 @@ import InvoiceDesign from "./pages/services/InvoiceDesign";
 
 import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
 import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
+import CGPASGPAPrivacyPolicyChinese from "./pages/apps/CGPASGPAPrivacyPolicyChinese";
 import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
 import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
 import FileRenamerPrivacyPolicyChinese from "./pages/apps/FileRenamerPrivacyPolicyChinese";
@@ -233,6 +234,11 @@ function App() {
             <Route
               path="/apps/cgpa-sgpa-calculator/privacy-policy"
               element={<CGPASGPAPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/cgpa-sgpa-calculator/privacy-policy/chinese"
+              element={<CGPASGPAPrivacyPolicyChinese />}
             />
 
             <Route

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const FileRenamerPrivacyPolicyChinese = () => {
+const ImageToPDFPrivacyPolicyChinese = () => {
   return (
     <div className="min-h-screen bg-[#050816] text-white pt-32 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -10,11 +10,11 @@ const FileRenamerPrivacyPolicyChinese = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
-            隐私政策 – File Renamer – Bulk Rename
+            隐私政策 – 图片转 PDF
           </h1>
 
           <p className="text-gray-400 mb-10">
-            生效日期：2026年3月
+            最后更新日期：2026年5月24日
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
@@ -28,9 +28,9 @@ const FileRenamerPrivacyPolicyChinese = () => {
                 </span>{" "}
                 开发的{" "}
                 <span className="text-cyan-400 font-semibold">
-                  File Renamer – Bulk Rename
-                </span>
-                。
+                  图片转 PDF
+                </span>{" "}
+                应用。
               </p>
 
               <p className="mt-4">
@@ -45,7 +45,7 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                File Renamer – Bulk Rename 不会直接收集、存储或共享用户的个人信息。
+                图片转 PDF 不会直接收集、存储或共享用户的个人信息。
               </p>
 
               <p className="mt-4">
@@ -53,36 +53,47 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </p>
 
               <p className="mt-4">
-                所有文件重命名操作均在您的设备本地完成。
+                所有图片处理和 PDF 生成操作均尽可能在您的设备本地完成。
               </p>
 
               <p className="mt-4">
-                但是，本应用使用第三方广告服务 Start.io，该服务可能会根据其隐私政策处理某些设备和广告相关信息。
+                但是，本应用集成的第三方广告服务可能会根据其隐私政策处理某些技术信息或广告相关信息。
               </p>
             </section>
 
-            {/* File Access Permission */}
+            {/* Permissions */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                文件访问权限
+                使用的权限
               </h2>
 
-              <p>
-                本应用可能会请求访问您设备上的文件和存储空间，仅用于以下目的：
-              </p>
-
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>选择文件</li>
-                <li>重命名文件</li>
-                <li>保存重命名后的文件</li>
+                <li>存储空间 / 照片访问权限</li>
+                <li>从设备中选择图片</li>
+                <li>保存生成的 PDF 文件</li>
+                <li>分享导出的 PDF 文档</li>
               </ul>
 
               <p className="mt-4">
-                您的文件不会被上传到我们的外部服务器，并始终由您自行控制。
+                本应用仅访问用户主动选择或授权用于相关操作的文件和照片。
               </p>
             </section>
 
-            {/* Advertisements */}
+            {/* File Handling */}
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                文件处理
+              </h2>
+
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>您的图片保留在您的设备上</li>
+                <li>我们不会将您的文件上传到我们的服务器</li>
+                <li>我们不会出售或共享您的文件</li>
+                <li>PDF 生成操作在您的设备本地完成</li>
+              </ul>
+            </section>
+
+            {/* Advertising */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 广告
@@ -97,8 +108,7 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </p>
 
               <p className="mt-4">
-                Start.io 可能会根据其隐私政策收集和处理与广告、分析、
-                欺诈预防及相关服务有关的某些信息。这些信息可能包括：
+                Start.io 可能会根据其隐私政策，为广告、分析、欺诈预防及相关服务收集和处理设备中的某些信息。根据适用的设置和法规，这些信息可能包括：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
@@ -110,16 +120,15 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </ul>
 
               <p className="mt-4">
-                Start.io 收集和处理的信息可能用于提供广告、
-                衡量广告效果、分析、欺诈预防以及改进相关广告服务。
+                这些信息可能用于提供广告、衡量广告效果、进行分析、防止欺诈以及改进广告服务。
               </p>
 
               <p className="mt-4">
-                Start.io 对相关数据的处理受其自身隐私政策和适用法律的约束。
+                Start.io 对相关信息的收集和处理受其自身隐私政策以及适用法律的约束。
               </p>
 
               <p className="mt-4">
-                如需了解 Start.io 如何处理用户数据，请查看其隐私政策：
+                如需了解更多信息，请查看 Start.io 的隐私政策：
               </p>
 
               <a
@@ -139,12 +148,15 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                我们重视用户的隐私和数据安全。本应用不会将用户的文件上传或存储在我们的服务器上。
-                所有文件重命名操作均在您的设备本地完成。
+                由于图片处理和 PDF 生成操作在设备本地完成，您的文件始终由您自行控制。
               </p>
 
               <p className="mt-4">
-                如果第三方广告服务处理相关信息，该信息将按照相应第三方服务的隐私政策进行处理。
+                我们不会将您的图片或生成的 PDF 文件上传或存储在我们的外部服务器上。
+              </p>
+
+              <p className="mt-4">
+                第三方广告服务处理的信息将按照其各自的隐私政策进行处理。
               </p>
             </section>
 
@@ -155,11 +167,11 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                File Renamer – Bulk Rename 不专门面向13岁以下的儿童。
+                本应用并非专门面向13岁以下的儿童。
               </p>
 
               <p className="mt-4">
-                我们不会故意收集13岁以下儿童的个人信息。
+                我们不会故意直接收集儿童的个人信息。
               </p>
             </section>
 
@@ -170,8 +182,7 @@ const FileRenamerPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                我们可能会不时更新本隐私政策。任何更新都会发布在本页面，
-                并会更新相应的生效日期。
+                我们可能会不时更新本隐私政策。任何更新都会发布在本页面，并更新相应的日期。
               </p>
             </section>
 
@@ -181,13 +192,10 @@ const FileRenamerPrivacyPolicyChinese = () => {
                 联系我们
               </h2>
 
-              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                  CH TECH GIANT (OPC) PRIVATE LIMITED
-                </h3>
-
+              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6">
                 <div className="space-y-2">
-                  <p>印度卡纳塔克邦达文盖雷 577001</p>
+                  <p>CH TECH GIANT (OPC) PRIVATE LIMITED</p>
+                  <p>印度卡纳塔克邦达文盖雷 – 577001</p>
                   <p>电子邮箱：info@chtechgiant.com</p>
                   <p>电话：+91 9980785020</p>
                 </div>
@@ -201,4 +209,4 @@ const FileRenamerPrivacyPolicyChinese = () => {
   );
 };
 
-export default FileRenamerPrivacyPolicyChinese;
+export default ImageToPDFPrivacyPolicyChinese;
