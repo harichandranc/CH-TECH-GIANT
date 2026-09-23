@@ -29,7 +29,8 @@ const InvoiceMakerPrivacyPolicy = () => {
 
               <p className="mt-4">
                 Your privacy is important to us. This Privacy Policy explains
-                how our app handles user information.
+                how our app handles user information and third-party services
+                used within the app.
               </p>
             </section>
 
@@ -39,8 +40,8 @@ const InvoiceMakerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                Invoice Maker does not collect, store, or share any personal
-                information from users.
+                Invoice Maker does not directly collect, store, or share
+                personal information from users.
               </p>
 
               <p className="mt-4">
@@ -61,8 +62,8 @@ const InvoiceMakerPrivacyPolicy = () => {
                 </li>
 
                 <li>
-                  <strong>Internet Access</strong> — May be used for
-                  advertisements or optional online features.
+                  <strong>Internet Access</strong> — Used to provide
+                  advertisements and other optional online features.
                 </li>
               </ul>
 
@@ -79,19 +80,35 @@ const InvoiceMakerPrivacyPolicy = () => {
 
               <p>
                 Your invoice data remains on your device. We do not upload or
-                store your business data on our servers.
+                store your invoice or business data on our servers.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Third-Party Services
+                Advertising and Third-Party Services
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <p>
+                Invoice Maker uses third-party services to provide
+                advertisements within the app. These services may collect
+                certain information from your device, such as advertising
+                identifiers, device information, IP address, and information
+                related to advertising interactions, in accordance with their
+                own privacy policies.
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2 mt-4">
                 <li>Google Play Services</li>
-                <li>Google AdMob</li>
+                <li>Start.io</li>
               </ul>
+
+              <p className="mt-4">
+                Start.io may process information for advertising,
+                personalization, measurement, fraud prevention, and related
+                advertising purposes. The collection and use of such
+                information is governed by Start.io's privacy practices.
+              </p>
             </section>
 
             <section>
@@ -101,6 +118,8 @@ const InvoiceMakerPrivacyPolicy = () => {
 
               <p>
                 This app is not directed toward children under the age of 13.
+                We do not knowingly collect personal information directly from
+                children.
               </p>
             </section>
 
@@ -110,7 +129,9 @@ const InvoiceMakerPrivacyPolicy = () => {
               </h2>
 
               <p>
-                We may update this Privacy Policy from time to time.
+                We may update this Privacy Policy from time to time. Any
+                changes will be reflected on this page with an updated
+                "Last Updated" date.
               </p>
             </section>
 

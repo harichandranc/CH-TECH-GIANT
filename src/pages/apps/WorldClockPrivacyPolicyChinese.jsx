@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const WorldClockPrivacyPolicy = () => {
+const WorldClockPrivacyPolicyChinese = () => {
   return (
     <div className="min-h-screen bg-[#050816] text-white pt-32 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -10,76 +10,74 @@ const WorldClockPrivacyPolicy = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
-            Privacy Policy – World Clock
+            隐私政策 – 世界时钟
           </h1>
 
           <p className="text-gray-400 mb-10">
-            Effective Date: May 24, 2026
+            生效日期：2026年5月24日
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
             <section>
               <p>
-                World Clock (“the App”) is developed and published by{" "}
+                世界时钟（“本应用”）由{" "}
                 <span className="text-cyan-400 font-semibold">
                   CH TECH GIANT (OPC) PRIVATE LIMITED
-                </span>.
+                </span>{" "}
+                开发和发布。
               </p>
 
               <p className="mt-4">
-                This Privacy Policy explains how information is handled when
-                you use the World Clock mobile application.
+                本隐私政策说明了当您使用世界时钟移动应用程序时，
+                我们如何处理相关信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Information Collection and Use
+                信息收集与使用
               </h2>
 
               <p>
-                World Clock does not collect personally identifiable
-                information from users directly.
+                世界时钟不会直接收集用户的个人身份信息。
               </p>
 
               <p className="mt-4">
-                However, the app may use trusted third-party services that may
-                collect limited technical information such as:
+                但是，本应用可能会使用可信赖的第三方服务，
+                这些服务可能会收集有限的技术信息，例如：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Device information</li>
-                <li>App performance data</li>
-                <li>Crash reports</li>
-                <li>Advertising identifiers</li>
-                <li>Usage analytics</li>
+                <li>设备信息</li>
+                <li>应用性能数据</li>
+                <li>崩溃报告</li>
+                <li>广告标识符</li>
+                <li>使用分析数据</li>
               </ul>
 
               <p className="mt-4">
-                This information is used only to improve app stability,
-                performance, and user experience.
+                这些信息仅用于改善应用程序的稳定性、性能和用户体验。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Third-Party Services
+                第三方服务
               </h2>
 
               <p>
-                The app may use third-party services including:
+                本应用可能使用以下第三方服务：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Start.io</li>
-                <li>Google Play Services</li>
+                <li>Google Play 服务</li>
                 <li>Firebase Analytics</li>
                 <li>Firebase Crashlytics</li>
               </ul>
 
               <p className="mt-4">
-                These services may collect information in accordance with their
-                own privacy policies.
+                这些第三方服务可能会根据其各自的隐私政策收集和处理相关信息。
               </p>
 
               <div className="space-y-2 mt-4">
@@ -89,7 +87,7 @@ const WorldClockPrivacyPolicy = () => {
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Start.io Privacy Policy
+                  Start.io 隐私政策
                 </a>
 
                 <a
@@ -98,32 +96,30 @@ const WorldClockPrivacyPolicy = () => {
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Google Privacy Policy
+                  Google 隐私政策
                 </a>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Advertisements
+                广告
               </h2>
 
               <p>
-                World Clock may display advertisements provided by Start.io.
+                世界时钟可能会展示由 Start.io 提供的广告。
               </p>
 
               <p className="mt-4">
-                Start.io may collect and process certain information such as
-                device information, advertising identifiers, IP address,
-                application usage data, ad interactions, and technical or
-                diagnostic information. This information may be used to
-                provide advertisements, measure advertising performance,
-                improve services, and help prevent fraud or abuse.
+                Start.io 可能会收集和处理某些信息，例如设备信息、
+                广告标识符、IP 地址、应用使用数据、广告互动信息以及
+                技术或诊断信息。这些信息可能用于提供广告、
+                衡量广告效果、改进服务以及帮助防止欺诈或滥用。
               </p>
 
               <p className="mt-4">
-                Depending on applicable laws and available settings,
-                advertisements may be personalized or non-personalized.
+                根据适用的法律法规以及可用的设置，
+                广告可能是个性化广告或非个性化广告。
               </p>
 
               <a
@@ -138,100 +134,92 @@ const WorldClockPrivacyPolicy = () => {
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Permissions Used
+                使用的权限
               </h2>
 
               <p>
-                World Clock may request the following permissions for app
-                functionality:
+                为了提供应用功能，世界时钟可能会请求以下权限：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-3">
                 <li>
-                  <strong>Internet Access</strong> — used for advertisements
-                  and online services.
+                  <strong>互联网访问权限</strong> — 用于广告和在线服务。
                 </li>
 
                 <li>
-                  <strong>Notification Permission</strong> — used for alarms,
-                  reminders, and notifications.
+                  <strong>通知权限</strong> — 用于闹钟、提醒和通知。
                 </li>
 
                 <li>
-                  <strong>Exact Alarm Permission</strong> — used to schedule
-                  accurate alarms and alerts.
+                  <strong>精确闹钟权限</strong> — 用于安排准确的闹钟和提醒。
                 </li>
 
                 <li>
-                  <strong>Boot Completed Permission</strong> — used to restore
-                  alarms and widgets after device restart.
+                  <strong>开机完成权限</strong> — 用于设备重启后恢复闹钟和小组件。
                 </li>
 
                 <li>
-                  <strong>Wake Lock Permission</strong> — used to ensure alarms
-                  function correctly.
+                  <strong>唤醒锁定权限</strong> — 用于确保闹钟能够正常运行。
                 </li>
 
                 <li>
-                  <strong>Storage / Media Access Permission</strong> — used for
-                  selecting custom alarm sounds or audio files.
+                  <strong>存储 / 媒体访问权限</strong> — 用于选择自定义闹钟铃声
+                  或音频文件。
                 </li>
 
                 <li>
-                  <strong>Widget Access</strong> — used to provide home screen
-                  clock widgets and live clock functionality.
+                  <strong>小组件访问</strong> — 用于提供主屏幕时钟小组件
+                  和实时钟表功能。
                 </li>
               </ul>
 
               <p className="mt-4">
-                Permissions are only used for core app features.
+                这些权限仅用于应用程序的核心功能。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Data Security
+                数据安全
               </h2>
 
               <p>
-                We value user privacy and use reasonable measures to protect
-                app functionality and data handled by third-party services.
+                我们重视用户隐私，并采取合理措施保护应用功能以及
+                第三方服务所处理的数据。
               </p>
 
               <p className="mt-4">
-                No personal information is sold, traded, or shared with
-                unauthorized parties.
+                我们不会向未经授权的第三方出售、交易或分享个人信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Children’s Privacy
+                儿童隐私
               </h2>
 
               <p>
-                World Clock is not intended for children under the age of 13.
+                世界时钟不面向13岁以下的儿童。
               </p>
 
               <p className="mt-4">
-                We do not knowingly collect personal information from children.
+                我们不会故意收集儿童的个人信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Changes to This Privacy Policy
+                隐私政策的变更
               </h2>
 
               <p>
-                This Privacy Policy may be updated periodically. Any changes
-                will be reflected on this page.
+                本隐私政策可能会定期更新。任何变更都会反映在本页面上。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Contact Us
+                联系我们
               </h2>
 
               <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md">
@@ -240,9 +228,9 @@ const WorldClockPrivacyPolicy = () => {
                 </h3>
 
                 <div className="space-y-2">
-                  <p>Email: info@chtechgiant.com</p>
-                  <p>Phone: +91 9980785020</p>
-                  <p>Location: Davangere, Karnataka – 577001, India</p>
+                  <p>电子邮件：info@chtechgiant.com</p>
+                  <p>电话：+91 9980785020</p>
+                  <p>所在地：印度卡纳塔克邦达文盖雷 – 577001</p>
                 </div>
               </div>
             </section>
@@ -253,4 +241,4 @@ const WorldClockPrivacyPolicy = () => {
   );
 };
 
-export default WorldClockPrivacyPolicy;
+export default WorldClockPrivacyPolicyChinese;

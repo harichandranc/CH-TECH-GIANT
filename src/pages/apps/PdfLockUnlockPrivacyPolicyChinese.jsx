@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const PDFLockUnlockPrivacyPolicy = () => {
+const PDFLockUnlockPrivacyPolicyChinese = () => {
   return (
     <div className="min-h-screen bg-[#050816] text-white pt-32 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -10,194 +10,176 @@ const PDFLockUnlockPrivacyPolicy = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
-            Privacy Policy – PDF Lock Unlock
+            隐私政策 – PDF 加锁与解锁
           </h1>
 
           <p className="text-gray-400 mb-10">
-            Effective Date: July 26, 2026
+            生效日期：2026年7月26日
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
 
             <section>
               <p>
-                Welcome to{" "}
+                欢迎使用{" "}
                 <span className="text-cyan-400 font-semibold">
-                  PDF Lock Unlock
-                </span>{" "}
-                ("the App"). Your privacy is important to us. This Privacy
-                Policy explains how we collect, use, and protect your
-                information when you use our application.
+                  PDF 加锁与解锁
+                </span>
+                （以下简称“本应用”）。我们非常重视您的隐私。
+                本隐私政策说明了您使用本应用时，我们如何收集、使用和保护您的信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                1. Information We Collect
+                1. 我们收集的信息
               </h2>
 
               <p>
-                Our app is designed to protect and unlock PDF documents
-                securely. We collect only the information necessary to provide
-                these services.
+                本应用旨在安全地保护和解锁 PDF 文档。
+                我们仅收集提供相关服务所必需的信息。
               </p>
 
               <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">
-                PDF Files
+                PDF 文件
               </h3>
 
               <p>
-                When you choose to lock or unlock a PDF, the selected file is
-                temporarily uploaded to our secure server for processing.
+                当您选择锁定或解锁 PDF 文件时，所选择的文件会被临时上传到我们的安全服务器进行处理。
               </p>
 
               <p className="mt-4">
-                The uploaded file is used solely to:
+                上传的文件仅用于以下目的：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Protect a PDF with a password</li>
-                <li>Remove a password from a PDF</li>
-                <li>Generate the processed PDF for download</li>
+                <li>使用密码保护 PDF 文件</li>
+                <li>移除 PDF 文件的密码</li>
+                <li>生成处理后的 PDF 文件供您下载</li>
               </ul>
 
               <p className="mt-4">
-                We do not use your files for any other purpose.
+                我们不会将您的文件用于其他目的。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                2. Temporary File Processing
+                2. 临时文件处理
               </h2>
 
               <p>
-                Uploaded PDF files are processed temporarily to complete your
-                requested operation.
+                上传的 PDF 文件仅在完成您请求的操作所需的时间内进行临时处理。
               </p>
 
               <p className="mt-4">
-                Files are automatically deleted from our server after
-                processing and are not permanently stored.
+                文件处理完成后会自动从我们的服务器中删除，不会被永久存储。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                3. Advertising
+                3. 广告
               </h2>
 
               <p>
-                Our app uses{" "}
+                本应用使用{" "}
                 <strong>Start.io</strong>{" "}
-                to display advertisements.
+                提供和展示广告。
               </p>
 
               <p className="mt-4">
-                Start.io may collect or process certain information from your
-                device for advertising and related purposes, which may include:
+                Start.io 可能会从您的设备收集或处理某些信息，用于广告展示及相关目的，其中可能包括：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Device information</li>
-                <li>Advertising identifiers</li>
-                <li>IP address</li>
-                <li>App interaction and advertising information</li>
-                <li>Diagnostic and technical information</li>
+                <li>设备信息</li>
+                <li>广告标识符</li>
+                <li>IP 地址</li>
+                <li>应用使用和广告互动信息</li>
+                <li>诊断和技术信息</li>
               </ul>
 
               <p className="mt-4">
-                The information collected by Start.io is handled according to
-                its own privacy policy and applicable laws.
+                Start.io 收集的信息将根据其自身的隐私政策及适用法律进行处理。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                4. Data Security
+                4. 数据安全
               </h2>
 
               <p>
-                We take reasonable security measures to protect your
-                information.
+                我们采取合理的安全措施来保护您的信息。
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>
-                  Secure HTTPS connections are used for communications.
-                </li>
-                <li>
-                  PDF files are processed securely.
-                </li>
-                <li>
-                  We do not permanently retain uploaded documents.
-                </li>
+                <li>所有通信均使用安全的 HTTPS 连接。</li>
+                <li>PDF 文件会以安全的方式进行处理。</li>
+                <li>我们不会永久保存上传的文档。</li>
               </ul>
 
               <p className="mt-4">
-                However, no method of transmission over the Internet is 100%
-                secure.
+                但是，任何通过互联网进行的数据传输都无法保证100%安全。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                5. Permissions
+                5. 应用权限
               </h2>
 
               <p>
-                The app may request permissions required to:
+                本应用可能请求以下必要权限：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-3">
-                <li>Select PDF files from your device</li>
-                <li>Save processed PDF files</li>
-                <li>Access the internet for processing documents</li>
-                <li>Display advertisements</li>
+                <li>从您的设备中选择 PDF 文件</li>
+                <li>保存处理后的 PDF 文件</li>
+                <li>访问互联网以处理文档</li>
+                <li>显示广告</li>
               </ul>
 
               <p className="mt-4">
-                The app does not access unnecessary personal information.
+                本应用不会访问不必要的个人信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                6. Children's Privacy
+                6. 儿童隐私
               </h2>
 
               <p>
-                Our app is not directed toward children under the age of 13.
+                本应用不面向13岁以下的儿童。
               </p>
 
               <p className="mt-4">
-                We do not knowingly collect personal information from
-                children.
+                我们不会在明知的情况下收集儿童的个人信息。
               </p>
 
               <p className="mt-4">
-                If you believe a child has provided personal information,
-                please contact us so that we can remove it.
+                如果您认为儿童向我们提供了个人信息，请联系我们，以便我们采取措施删除相关信息。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                7. Third-Party Services
+                7. 第三方服务
               </h2>
 
               <p>
-                Our application uses the following third-party services:
+                本应用使用以下第三方服务：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Start.io</li>
-                <li>Google Play Services</li>
+                <li>Google Play 服务</li>
               </ul>
 
               <p className="mt-4">
-                These services may collect or process information according to
-                their own privacy policies.
+                这些第三方服务可能会根据其各自的隐私政策收集或处理相关信息。
               </p>
 
               <div className="mt-4 space-y-2">
@@ -207,7 +189,7 @@ const PDFLockUnlockPrivacyPolicy = () => {
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Start.io Privacy Policy
+                  Start.io 隐私政策
                 </a>
 
                 <a
@@ -216,41 +198,40 @@ const PDFLockUnlockPrivacyPolicy = () => {
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Google Play Services
+                  Google Play 服务
                 </a>
               </div>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                8. Your Rights
+                8. 您的权利
               </h2>
 
               <ul className="list-disc pl-6 space-y-2">
-                <li>Stop using the app at any time.</li>
-                <li>Delete processed files from your device.</li>
-                <li>Contact us with privacy-related questions.</li>
+                <li>您可以随时停止使用本应用。</li>
+                <li>您可以从设备中删除已处理的文件。</li>
+                <li>您可以联系我们咨询与隐私相关的问题。</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                9. Changes to This Privacy Policy
+                9. 隐私政策的变更
               </h2>
 
               <p>
-                We may update this Privacy Policy from time to time.
+                我们可能会不时更新本隐私政策。
               </p>
 
               <p className="mt-4">
-                Any changes will be posted on this page with an updated
-                Effective Date.
+                如有任何变更，我们将在本页面发布更新后的生效日期。
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                10. Contact Us
+                10. 联系我们
               </h2>
 
               <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md">
@@ -259,8 +240,8 @@ const PDFLockUnlockPrivacyPolicy = () => {
                 </h3>
 
                 <div className="space-y-2">
-                  <p>Email: support@chtechgiant.com</p>
-                  <p>Website: https://chtechgiant.com</p>
+                  <p>电子邮件：support@chtechgiant.com</p>
+                  <p>网站：https://chtechgiant.com</p>
                 </div>
               </div>
             </section>
@@ -272,4 +253,4 @@ const PDFLockUnlockPrivacyPolicy = () => {
   );
 };
 
-export default PDFLockUnlockPrivacyPolicy;
+export default PDFLockUnlockPrivacyPolicyChinese;

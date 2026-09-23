@@ -14,6 +14,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apps from "./pages/Apps";
 import AdminDashboard from "./pages/AdminDashboard";
 
+import WebCodshop from "./pages/apps/WebCodshop";
+
 import AppDevelopment from "./pages/services/AppDevelopment";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
@@ -23,9 +25,11 @@ import PamphletDesign from "./pages/services/PamphletDesign";
 import InvoiceDesign from "./pages/services/InvoiceDesign";
 
 import WorldClockPrivacyPolicy from "./pages/apps/WorldClockPrivacyPolicy";
+import WorldClockPrivacyPolicyChinese from "./pages/apps/WorldClockPrivacyPolicyChinese";
 import CGPASGPAPrivacyPolicy from "./pages/apps/CGPASGPAPrivacyPolicy";
 import CGPASGPAPrivacyPolicyChinese from "./pages/apps/CGPASGPAPrivacyPolicyChinese";
 import InvoiceMakerPrivacyPolicy from "./pages/apps/InvoiceMakerPrivacyPolicy";
+import InvoiceMakerPrivacyPolicyChinese from "./pages/apps/InvoiceMakerPrivacyPolicyChinese";
 import FileRenamerPrivacyPolicy from "./pages/apps/FileRenamerPrivacyPolicy";
 import FileRenamerPrivacyPolicyChinese from "./pages/apps/FileRenamerPrivacyPolicyChinese";
 import FileConverterPrivacyPolicy from "./pages/apps/FileConverterPrivacyPolicy";
@@ -33,7 +37,9 @@ import FileConverterPrivacyPolicyChinese from "./pages/apps/FileConverterPrivacy
 import ImageToPDFPrivacyPolicy from "./pages/apps/ImageToPDFPrivacyPolicy";
 import ImageToPDFPrivacyPolicyChinese from "./pages/apps/ImageToPDFPrivacyPolicyChinese";
 import PDFLockUnlockPrivacyPolicy from "./pages/apps/PdfLockUnlockPrivacyPolicy";
+import PDFLockUnlockPrivacyPolicyChinese from "./pages/apps/PdfLockUnlockPrivacyPolicyChinese";
 import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
+import WebCodshopPrivacyPolicyChinese from "./pages/apps/WebCodshopPrivacyPolicyChinese";
 
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
@@ -153,6 +159,9 @@ function App() {
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
 
+
+            <Route path="/apps/web-codshop" element={<WebCodshop />} />
+
             {/* ADMIN DASHBOARD */}
             <Route
               path="/admin-dashboard"
@@ -234,6 +243,11 @@ function App() {
             />
 
             <Route
+              path="/apps/world-clock/privacy-policy/chinese"
+              element={<WorldClockPrivacyPolicyChinese />}
+            />
+
+            <Route
               path="/apps/cgpa-sgpa-calculator/privacy-policy"
               element={<CGPASGPAPrivacyPolicy />}
             />
@@ -246,6 +260,11 @@ function App() {
             <Route
               path="/apps/invoice-maker/privacy-policy"
               element={<InvoiceMakerPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/invoice-maker/privacy-policy/chinese"
+              element={<InvoiceMakerPrivacyPolicyChinese />}
             />
 
             <Route
@@ -286,8 +305,18 @@ function App() {
             />
 
             <Route
+              path="/apps/web-codshop/privacy-policy/chinese"
+              element={<WebCodshopPrivacyPolicyChinese />}
+            />
+
+            <Route
               path="/apps/pdf-lock-unlock/privacy-policy"
               element={<PDFLockUnlockPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/pdf-lock-unlock/privacy-policy/chinese"
+              element={<PDFLockUnlockPrivacyPolicyChinese />}
             />
 
             <Route
