@@ -342,7 +342,7 @@ export default function WebCodshop() {
 
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/40">
                 <img
-                  src="/assets/web-codshop/banner.png"
+                  src="/assets/images/webcodshop/banner.png"
                   alt="WEB CODSHOP website source code and web development marketplace"
                   className="h-auto w-full rounded-[1.5rem] object-cover"
                 />
