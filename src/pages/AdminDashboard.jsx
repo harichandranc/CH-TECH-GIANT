@@ -65,6 +65,22 @@ const dashboardGroups = [
   },
 
   {
+    title: "Moneization & Analytics",
+    description: "Access your server and infrastructure management systems.",
+    icon: HiLightningBolt,
+    dashboards: [
+      {
+        name: "Start io Analytics",
+        description: "Manage advertising, monetization and performance platforms",
+        icon: HiLightningBolt,
+        url: "https://portal.start.io/#/pub/reports/analytics",
+        status: "Live",
+        enabled: true,
+      },
+    ],
+  },
+
+  {
     title: "Developer Platforms",
     description: "Quick access to your application publishing and developer platforms.",
     icon: HiGlobeAlt,
@@ -101,6 +117,14 @@ const dashboardGroups = [
         status: "Live",
         enabled: true,
       },
+      {
+      name: "APKPure Console",
+      description: "Manage Android applications and distribution through APKPure.",
+      icon: HiDeviceMobile,
+      url: "https://developer.apkpure.com/console",
+      status: "Live",
+      enabled: true,
+    },
     ],
   },
 ];
