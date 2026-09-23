@@ -127,6 +127,38 @@ const dashboardGroups = [
     },
     ],
   },
+
+  {
+  title: "Social Media",
+  description: "Access and manage your CH TECH GIANT social media accounts.",
+  icon: HiGlobeAlt,
+  dashboards: [
+    {
+      name: "Instagram",
+      description: "Access and manage the CH TECH GIANT Instagram account.",
+      icon: HiGlobeAlt,
+      url: "https://www.instagram.com/chtechgiant/",
+      status: "Live",
+      enabled: true,
+    },
+    {
+      name: "Facebook",
+      description: "Access and manage the CH TECH GIANT Facebook account.",
+      icon: HiGlobeAlt,
+      url: "https://www.facebook.com/CHTECHGIANT/",
+      status: "Live",
+      enabled: true,
+    },
+    {
+      name: "LinkedIn",
+      description: "Access and manage the CH TECH GIANT LinkedIn account.",
+      icon: HiGlobeAlt,
+      url: "https://www.linkedin.com/company/ch-tech-giant/",
+      status: "Live",
+      enabled: true,
+    },
+  ],
+},
 ];
 
 function AdminDashboard() {

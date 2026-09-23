@@ -22,6 +22,11 @@ import BestHtmlWebsiteTemplates from "./pages/blog/web-codshop/BestHtmlWebsiteTe
 import BestHtmlWebsiteTemplatesZh from "./pages/blog/web-codshop/BestHtmlWebsiteTemplatesZh";
 import WebsiteSourceCodeForDevelopers from "./pages/blog/web-codshop/WebsiteSourceCodeForDevelopers";
 import WebsiteSourceCodeForDevelopersZh from "./pages/blog/web-codshop/WebsiteSourceCodeForDevelopersZh";
+import ReactWebsiteProjects from "./pages/blog/web-codshop/ReactWebsiteProjects";
+import ReactWebsiteProjectsZh from "./pages/blog/web-codshop/ReactWebsiteProjectsZh";
+
+
+
 
 import AppDevelopment from "./pages/services/AppDevelopment";
 import WebDevelopment from "./pages/services/WebDevelopment";
@@ -175,6 +180,8 @@ function App() {
             <Route path="/blog/web-codshop/zh/best-html-website-templates" element={<BestHtmlWebsiteTemplatesZh />}/>
             <Route path="/blog/web-codshop/website-source-code-for-developers" element={<WebsiteSourceCodeForDevelopers />}/>
             <Route path="/blog/web-codshop/zh/website-source-code-for-developers" element={<WebsiteSourceCodeForDevelopersZh />}/>
+            <Route path="/blog/web-codshop/react-website-projects" element={<ReactWebsiteProjects />}/>
+            <Route path="/blog/web-codshop/zh/react-website-projects" element={<ReactWebsiteProjectsZh />}/>
 
             {/* ADMIN DASHBOARD */}
             <Route
