@@ -752,28 +752,6 @@ export default function WebCodshop() {
         </div>
       </section>
 
-      {/* =========================================================
-          PROMOTIONAL IMAGE
-      ========================================================== */}
-      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-black/30"
-          >
-            <img
-              src="/assets/images/webcodshop-banner.png"
-              alt="WEB CODSHOP premium templates and source codes"
-              className="w-full rounded-[1.5rem]"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      
 
       {/* =========================================================
           FAQ
