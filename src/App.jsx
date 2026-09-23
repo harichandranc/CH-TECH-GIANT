@@ -20,6 +20,8 @@ import WhereToFindWebsiteSourceCode from "./pages/blog/web-codshop/WhereToFindWe
 import WhereToFindWebsiteSourceCodeZh from "./pages/blog/web-codshop/WhereToFindWebsiteSourceCodeZh";
 import BestHtmlWebsiteTemplates from "./pages/blog/web-codshop/BestHtmlWebsiteTemplates";
 import BestHtmlWebsiteTemplatesZh from "./pages/blog/web-codshop/BestHtmlWebsiteTemplatesZh";
+import WebsiteSourceCodeForDevelopers from "./pages/blog/web-codshop/WebsiteSourceCodeForDevelopers";
+import WebsiteSourceCodeForDevelopersZh from "./pages/blog/web-codshop/WebsiteSourceCodeForDevelopersZh";
 
 import AppDevelopment from "./pages/services/AppDevelopment";
 import WebDevelopment from "./pages/services/WebDevelopment";
@@ -171,6 +173,8 @@ function App() {
             <Route path="/apps/web-codshop/where-to-find-website-source-code/chinese" element={<WhereToFindWebsiteSourceCodeZh />} />
             <Route path="/blog/web-codshop/best-html-website-templates" element={<BestHtmlWebsiteTemplates />}/>
             <Route path="/blog/web-codshop/zh/best-html-website-templates" element={<BestHtmlWebsiteTemplatesZh />}/>
+            <Route path="/blog/web-codshop/website-source-code-for-developers" element={<WebsiteSourceCodeForDevelopers />}/>
+            <Route path="/blog/web-codshop/zh/website-source-code-for-developers" element={<WebsiteSourceCodeForDevelopersZh />}/>
 
             {/* ADMIN DASHBOARD */}
             <Route
