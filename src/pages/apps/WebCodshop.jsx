@@ -370,6 +370,93 @@ export default function WebCodshop() {
       </section>
 
       {/* =========================================================
+          DOWNLOAD
+      ========================================================== */}
+      <section
+        id="download"
+        className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-16 lg:py-28"
+      >
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute left-1/2 top-1/2 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/10 blur-[140px]" />
+        </div>
+
+        <div className="mx-auto max-w-6xl">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute -inset-10 rounded-full bg-red-500/10 blur-3xl" />
+
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white p-6 shadow-2xl">
+                  <img
+                    src="/assets/images/webcodshop-logo.png"
+                    alt="WEB CODSHOP logo"
+                    className="h-52 w-52 object-contain sm:h-64 sm:w-64"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+            >
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
+                Get WEB CODSHOP
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+                Explore web development resources wherever you are
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
+                Download WEB CODSHOP through your preferred platform and
+                explore website source code, templates and professional web
+                development resources.
+              </p>
+
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                <StoreButton
+                  icon={Download}
+                  title="Google Play"
+                  subtitle="Download from"
+                  href="https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop"
+                />
+
+                <StoreButton
+                  icon={Globe}
+                  title="Huawei AppGallery"
+                  subtitle="Available on"
+                  href="https://appgallery.huawei.com/app/CPLACEHOLDER"
+                />
+
+                <StoreButton
+                  icon={Smartphone}
+                  title="Xiaomi GetApps"
+                  subtitle="Available on"
+                  href="https://global.app.mi.com/details?appId=com.chtechgiant.webcodshop"
+                />
+
+                <StoreButton
+                  icon={Download}
+                  title="Direct APK"
+                  subtitle="Download"
+                  href="https://chtechgiant.com/downloads/web-codshop.apk"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
           INTRO
       ========================================================== */}
       <section className="px-6 py-20 sm:px-10 lg:px-16">
@@ -678,7 +765,7 @@ export default function WebCodshop() {
             className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-black/30"
           >
             <img
-              src="/assets/web-codshop/banner.png"
+              src="/assets/images/webcodshop-banner.png"
               alt="WEB CODSHOP premium templates and source codes"
               className="w-full rounded-[1.5rem]"
             />
@@ -686,92 +773,7 @@ export default function WebCodshop() {
         </div>
       </section>
 
-      {/* =========================================================
-          DOWNLOAD
-      ========================================================== */}
-      <section
-        id="download"
-        className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-16 lg:py-28"
-      >
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-1/2 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/10 blur-[140px]" />
-        </div>
-
-        <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute -inset-10 rounded-full bg-red-500/10 blur-3xl" />
-
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white p-6 shadow-2xl">
-                  <img
-                    src="/assets/web-codshop/logo.png"
-                    alt="WEB CODSHOP logo"
-                    className="h-52 w-52 object-contain sm:h-64 sm:w-64"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUp}
-            >
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Get WEB CODSHOP
-              </span>
-
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Explore web development resources wherever you are
-              </h2>
-
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Download WEB CODSHOP through your preferred platform and
-                explore website source code, templates and professional web
-                development resources.
-              </p>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <StoreButton
-                  icon={Download}
-                  title="Google Play"
-                  subtitle="Download from"
-                  href="https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop"
-                />
-
-                <StoreButton
-                  icon={Globe}
-                  title="Huawei AppGallery"
-                  subtitle="Available on"
-                  href="https://appgallery.huawei.com/app/CPLACEHOLDER"
-                />
-
-                <StoreButton
-                  icon={Smartphone}
-                  title="Xiaomi GetApps"
-                  subtitle="Available on"
-                  href="https://global.app.mi.com/details?appId=com.chtechgiant.webcodshop"
-                />
-
-                <StoreButton
-                  icon={Download}
-                  title="Direct APK"
-                  subtitle="Download"
-                  href="https://chtechgiant.com/downloads/web-codshop.apk"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* =========================================================
           FAQ
