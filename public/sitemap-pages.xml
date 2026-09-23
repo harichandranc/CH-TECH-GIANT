@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- =========================
-       MAIN PAGES
-  ========================== -->
+  <!-- MAIN PAGES -->
 
   <url>
     <loc>https://chtechgiant.com/</loc>
@@ -38,9 +34,7 @@
   </url>
 
 
-  <!-- =========================
-       APPS
-  ========================== -->
+  <!-- APPS -->
 
   <url>
     <loc>https://chtechgiant.com/apps</loc>
@@ -52,10 +46,18 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop</loc>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- =========================
-       MAIN SERVICES
-  ========================== -->
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/chinese</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- MAIN SERVICES -->
 
   <url>
     <loc>https://chtechgiant.com/app-development</loc>
@@ -93,9 +95,7 @@
   </url>
 
 
-  <!-- =========================
-       APP DEVELOPMENT PAGES
-  ========================== -->
+  <!-- APP DEVELOPMENT PAGES -->
 
   <url>
     <loc>https://chtechgiant.com/app-development/flutter-development</loc>
@@ -133,64 +133,7 @@
   </url>
 
 
-  <!-- =========================
-       APP PRIVACY POLICIES
-  ========================== -->
-
-  <url>
-    <loc>https://chtechgiant.com/apps/world-clock/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/cgpa-sgpa-calculator/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/invoice-maker/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/file-renamer/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/file-converter/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/image-to-pdf/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/web-codshop/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://chtechgiant.com/apps/pdf-lock-unlock/privacy-policy</loc>
-    <priority>0.5</priority>
-  </url>
-
-
-  <!-- =========================
-       APP DELETE ACCOUNT
-  ========================== -->
-
-  <url>
-    <loc>https://chtechgiant.com/apps/web-codshop/delete-account</loc>
-    <priority>0.4</priority>
-  </url>
-
-
-  <!-- =========================
-       SOFTWARE DEVELOPMENT
-  ========================== -->
+  <!-- SOFTWARE DEVELOPMENT -->
 
   <url>
     <loc>https://chtechgiant.com/software-development/school-erp-system</loc>
@@ -203,10 +146,7 @@
   </url>
 
 
-  <!-- =========================
-       WEB DEVELOPMENT SEO
-       LOCATION PAGES
-  ========================== -->
+  <!-- WEB DEVELOPMENT LOCATION PAGES -->
 
   <url>
     <loc>https://chtechgiant.com/web-development-davanagere</loc>
@@ -253,5 +193,148 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- WEB CODSHOP SEO BLOG -->
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/where-to-find-website-source-code</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/where-to-find-website-source-code/chinese</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/best-html-website-templates</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/zh/best-html-website-templates</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/website-source-code-for-developers</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/zh/website-source-code-for-developers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/react-website-projects</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/zh/react-website-projects</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/next-js-website-projects</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/blog/web-codshop/zh/next-js-website-projects</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- APP PRIVACY POLICIES -->
+
+  <url>
+    <loc>https://chtechgiant.com/apps/world-clock/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/world-clock/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/cgpa-sgpa-calculator/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/cgpa-sgpa-calculator/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/invoice-maker/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/invoice-maker/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/file-renamer/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/file-renamer/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/file-converter/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/file-converter/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/image-to-pdf/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/image-to-pdf/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/pdf-lock-unlock/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/pdf-lock-unlock/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/privacy-policy/chinese</loc>
+    <priority>0.4</priority>
+  </url>
+
+
+  <!-- DELETE ACCOUNT -->
+
+  <url>
+    <loc>https://chtechgiant.com/apps/web-codshop/delete-account</loc>
+    <priority>0.4</priority>
+  </url>
 
 </urlset>

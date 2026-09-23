@@ -24,9 +24,8 @@ import WebsiteSourceCodeForDevelopers from "./pages/blog/web-codshop/WebsiteSour
 import WebsiteSourceCodeForDevelopersZh from "./pages/blog/web-codshop/WebsiteSourceCodeForDevelopersZh";
 import ReactWebsiteProjects from "./pages/blog/web-codshop/ReactWebsiteProjects";
 import ReactWebsiteProjectsZh from "./pages/blog/web-codshop/ReactWebsiteProjectsZh";
-
-
-
+import NextJsWebsiteProjects from "./pages/blog/web-codshop/NextJsWebsiteProjects";
+import NextJsWebsiteProjectsZh from "./pages/blog/web-codshop/NextJsWebsiteProjectsZh";
 
 import AppDevelopment from "./pages/services/AppDevelopment";
 import WebDevelopment from "./pages/services/WebDevelopment";
@@ -171,7 +170,7 @@ function App() {
             <Route path="/apps" element={<Apps />} />
             <Route path="/:lang/apps" element={<Apps />} />
 
-
+            {/* WEB CODSHOP */}
             <Route path="/apps/web-codshop" element={<WebCodshop />} />
             <Route path="/apps/web-codshop/chinese" element={<WebCodshopZh />} />
             <Route path="/apps/web-codshop/where-to-find-website-source-code" element={<WhereToFindWebsiteSourceCode />} />
@@ -182,6 +181,8 @@ function App() {
             <Route path="/blog/web-codshop/zh/website-source-code-for-developers" element={<WebsiteSourceCodeForDevelopersZh />}/>
             <Route path="/blog/web-codshop/react-website-projects" element={<ReactWebsiteProjects />}/>
             <Route path="/blog/web-codshop/zh/react-website-projects" element={<ReactWebsiteProjectsZh />}/>
+            <Route path="/blog/web-codshop/next-js-website-projects" element={<NextJsWebsiteProjects />}/>
+            <Route path="/blog/web-codshop/zh/next-js-website-projects" element={<NextJsWebsiteProjectsZh />}/>
 
             {/* ADMIN DASHBOARD */}
             <Route
