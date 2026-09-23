@@ -51,157 +51,117 @@ const stagger = {
 const categories = [
   {
     icon: Code2,
-    title: "HTML Templates",
-    description: "Ready-to-use HTML website templates for different projects and use cases.",
+    title: "HTML 网站模板",
+    description:
+      "适用于不同项目和使用场景的即用型 HTML 网站模板。",
   },
   {
     icon: Palette,
-    title: "CSS & JavaScript",
-    description: "Frontend projects, UI elements and JavaScript-based web resources.",
+    title: "CSS 与 JavaScript 项目",
+    description:
+      "前端项目、UI 元素以及基于 JavaScript 的网页开发资源。",
   },
   {
     icon: Layers3,
-    title: "React.js Projects",
-    description: "Modern React.js projects and reusable website source code.",
+    title: "React.js 项目",
+    description:
+      "现代 React.js 项目以及可复用的网站源代码。",
   },
   {
     icon: Monitor,
-    title: "Next.js Projects",
-    description: "Next.js projects for modern web application development.",
+    title: "Next.js 项目",
+    description:
+      "适用于现代 Web 应用开发的 Next.js 项目。",
   },
   {
-    icon: ServerIcon,
-    title: "Node.js Applications",
-    description: "Node.js applications and backend-oriented web projects.",
+    icon: Code2,
+    title: "Node.js 应用",
+    description:
+      "Node.js 应用程序以及面向后端开发的 Web 项目。",
   },
   {
     icon: Layers3,
-    title: "MERN Stack",
-    description: "Full-stack MERN projects combining modern web technologies.",
+    title: "MERN Stack 项目",
+    description:
+      "结合现代 Web 技术的全栈 MERN 项目。",
   },
   {
     icon: FileCode2,
-    title: "PHP Scripts",
-    description: "PHP-based scripts and website projects for web development.",
+    title: "PHP 脚本",
+    description:
+      "适用于 Web 开发的 PHP 脚本和网站项目。",
   },
   {
     icon: LayoutDashboard,
-    title: "Admin Dashboards",
-    description: "Dashboard interfaces and admin panel source code.",
+    title: "管理后台",
+    description:
+      "管理后台界面以及 Admin Panel 源代码。",
   },
   {
     icon: Monitor,
-    title: "Landing Pages",
-    description: "Professional landing page templates for websites and campaigns.",
+    title: "Landing Page",
+    description:
+      "适用于网站和营销活动的专业 Landing Page 模板。",
   },
   {
     icon: Briefcase,
-    title: "Portfolio Websites",
-    description: "Portfolio website projects for professionals and creators.",
+    title: "个人作品集网站",
+    description:
+      "适用于专业人士、开发者和创作者的 Portfolio 网站项目。",
   },
   {
     icon: ShoppingCart,
-    title: "E-Commerce",
-    description: "E-commerce website templates and online store projects.",
+    title: "电子商务网站",
+    description:
+      "电子商务网站模板以及在线商店项目。",
   },
   {
     icon: Store,
-    title: "Business Websites",
-    description: "Website templates designed for businesses and organizations.",
-  },
-];
-
-function ServerIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="8" x="2" y="2" rx="2" />
-      <rect width="20" height="8" x="2" y="14" rx="2" />
-      <line x1="6" x2="6.01" y1="6" y2="6" />
-      <line x1="6" x2="6.01" y1="18" y2="18" />
-    </svg>
-  );
-}
-
-const audiences = [
-  {
-    icon: Code2,
-    title: "Developers",
+    title: "企业网站",
     description:
-      "Explore source code and projects that can help speed up web development.",
-  },
-  {
-    icon: Laptop,
-    title: "Freelancers",
-    description:
-      "Find ready-to-use website projects that can help accelerate client work.",
-  },
-  {
-    icon: Rocket,
-    title: "Startups",
-    description:
-      "Discover website resources for building and launching digital products.",
-  },
-  {
-    icon: Users,
-    title: "Agencies",
-    description:
-      "Browse web projects and templates for different client requirements.",
-  },
-  {
-    icon: Briefcase,
-    title: "Business Owners",
-    description:
-      "Explore website templates and digital resources for business websites.",
+      "为企业、公司和组织设计的网站模板。",
   },
 ];
 
 const benefits = [
-  "Browse website source code and templates in one place.",
-  "Explore projects across multiple web technologies.",
-  "Find resources for personal, academic, freelance and business projects.",
-  "Save development time by starting with existing project resources.",
-  "Request custom solutions when you cannot find what you need.",
-  "Access the marketplace from anywhere through the mobile app.",
+  "在一个平台中浏览网站源代码和网站模板。",
+  "探索适用于多种 Web 技术的项目。",
+  "为个人、学习、自由职业和商业项目寻找开发资源。",
+  "使用现有项目资源作为开发起点，节省开发时间。",
+  "如果找不到需要的项目，可以提交定制项目请求。",
+  "通过移动应用随时随地访问 WEB CODSHOP。",
 ];
 
 const faqs = [
   {
-    question: "What is WEB CODSHOP?",
+    question: "什么是 WEB CODSHOP？",
     answer:
-      "WEB CODSHOP is a marketplace focused on website source code, web templates and professional web development resources.",
+      "WEB CODSHOP 是一个专注于网站源代码、网站模板以及专业 Web 开发资源的数字平台。",
   },
   {
-    question: "Who can use WEB CODSHOP?",
+    question: "谁可以使用 WEB CODSHOP？",
     answer:
-      "WEB CODSHOP is designed for developers, freelancers, startups, agencies, business owners and others looking for website development resources.",
+      "WEB CODSHOP 面向开发者、自由职业者、创业公司、数字机构、企业主以及其他需要网站开发资源的用户。",
   },
   {
-    question: "What types of projects are available?",
+    question: "WEB CODSHOP 提供哪些类型的项目？",
     answer:
-      "The marketplace includes HTML templates, CSS and JavaScript projects, React.js projects, Next.js projects, Node.js applications, MERN stack projects, PHP scripts, admin dashboards, landing pages, portfolio websites, e-commerce templates, business websites and UI resources.",
+      "平台提供 HTML 网站模板、CSS 和 JavaScript 项目、React.js 项目、Next.js 项目、Node.js 应用、MERN Stack 项目、PHP 脚本、管理后台、Landing Page、个人作品集网站、电子商务模板、企业网站以及 UI 资源等。",
   },
   {
-    question: "Does WEB CODSHOP support different web technologies?",
+    question: "WEB CODSHOP 支持不同的 Web 技术吗？",
     answer:
-      "Yes. The marketplace includes resources across technologies such as HTML, CSS, JavaScript, React.js, Next.js, Node.js, MERN Stack and PHP.",
+      "支持。平台包含 HTML、CSS、JavaScript、React.js、Next.js、Node.js、MERN Stack 和 PHP 等多种 Web 技术相关资源。",
   },
   {
-    question: "Can I request a project if I cannot find what I need?",
+    question: "如果找不到需要的项目，可以提交项目请求吗？",
     answer:
-      "Yes. WEB CODSHOP provides a custom request option for users who cannot find the resource or project they are looking for.",
+      "可以。如果用户无法找到需要的网站资源或项目，可以使用 WEB CODSHOP 提供的定制项目请求选项。",
   },
   {
-    question: "Where can I download WEB CODSHOP?",
+    question: "在哪里可以下载 WEB CODSHOP？",
     answer:
-      "WEB CODSHOP can be downloaded through supported app stores and a direct APK download option.",
+      "WEB CODSHOP 可以通过支持的应用商店以及直接 APK 下载方式获取。",
   },
 ];
 
@@ -227,6 +187,7 @@ function StoreButton({
         <div className="text-[11px] uppercase tracking-wider text-slate-400">
           {subtitle}
         </div>
+
         <div className="truncate text-sm font-semibold text-white">
           {title}
         </div>
@@ -240,52 +201,54 @@ function StoreButton({
   );
 }
 
-export default function WebCodshop() {
+export default function WebCodshopZh() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
+
       {/* =========================================================
           HERO
       ========================================================== */}
+
       <section className="relative isolate px-6 pb-20 pt-28 sm:px-10 lg:px-16 lg:pb-28 lg:pt-36">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute left-[-10%] top-[-10%] h-[420px] w-[420px] rounded-full bg-red-500/10 blur-[120px]" />
-          <div className="absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-red-600/10 blur-[140px]" />
-          <div className="absolute bottom-[-15%] left-[35%] h-[400px] w-[400px] rounded-full bg-orange-500/5 blur-[130px]" />
+          <div className="absolute left-[-10%] top-[-10%] h-[500px] w-[500px] rounded-full bg-red-500/10 blur-[140px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-orange-500/10 blur-[140px]" />
         </div>
 
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
             <motion.div
               initial="hidden"
               animate="visible"
               variants={stagger}
             >
-              <motion.div variants={fadeUp} className="mb-6">
-                <span className="inline-flex items-center gap-2 rounded-full border border-red-400/20 bg-red-400/10 px-4 py-2 text-sm font-medium text-red-300">
-                  <Sparkles size={15} />
-                  Premium Web Development Resources
+              <motion.div variants={fadeUp}>
+                <span className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-red-400">
+                  <Sparkles size={14} />
+                  WEB CODSHOP
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={fadeUp}
-                className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl"
+                className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
               >
-                Discover
-                <span className="block bg-gradient-to-r from-red-400 via-red-500 to-orange-400 bg-clip-text text-transparent">
-                  Website Source Code
+                网站源代码与
+                <span className="text-red-400">
+                  {" "}
+                  Web 开发资源
                 </span>
-                & Web Projects
+                平台
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
+                className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg"
               >
-                WEB CODSHOP is a premium marketplace dedicated to website
-                source code, web templates, and professional web development
-                resources. Discover projects that can help save development
-                time and accelerate project delivery.
+                WEB CODSHOP 是一个专业的网站源代码、网站模板和
+                Web 开发资源平台。开发者、自由职业者、创业公司、
+                数字机构和企业主都可以在这里寻找适合自己项目的开发资源。
               </motion.p>
 
               <motion.div
@@ -299,35 +262,35 @@ export default function WebCodshop() {
                   className="inline-flex items-center gap-2 rounded-full bg-red-500 px-6 py-3.5 font-semibold text-white shadow-lg shadow-red-500/20 transition-all hover:-translate-y-1 hover:bg-red-400"
                 >
                   <Download size={18} />
-                  Download App
+                  下载应用
                 </a>
 
                 <a
                   href="#features"
                   className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-slate-200 transition-all hover:-translate-y-1 hover:bg-white/[0.1]"
                 >
-                  Explore Features
+                  探索功能
                   <ArrowRight size={18} />
                 </a>
               </motion.div>
 
               <motion.div
                 variants={fadeUp}
-                className="mt-8 flex flex-wrap gap-3 text-sm text-slate-400"
+                className="mt-8 flex flex-wrap gap-4 text-sm text-slate-400"
               >
                 <span className="flex items-center gap-2">
                   <Check size={16} className="text-red-400" />
-                  Website Templates
+                  网站模板
                 </span>
 
                 <span className="flex items-center gap-2">
                   <Check size={16} className="text-red-400" />
-                  Source Code
+                  源代码
                 </span>
 
                 <span className="flex items-center gap-2">
                   <Check size={16} className="text-red-400" />
-                  Web Projects
+                  Web 项目
                 </span>
               </motion.div>
             </motion.div>
@@ -343,7 +306,7 @@ export default function WebCodshop() {
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/40">
                 <img
                   src="/assets/images/webcodshop-banner.png"
-                  alt="WEB CODSHOP website source code and web development marketplace"
+                  alt="WEB CODSHOP 网站源代码和 Web 开发资源平台"
                   className="h-auto w-full rounded-[1.5rem] object-cover"
                 />
               </div>
@@ -356,15 +319,17 @@ export default function WebCodshop() {
 
                   <div>
                     <p className="text-sm font-bold text-white">
-                      Web Development
+                      Web 开发
                     </p>
+
                     <p className="text-xs text-slate-400">
-                      Templates & Source Code
+                      模板与源代码
                     </p>
                   </div>
                 </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -372,6 +337,7 @@ export default function WebCodshop() {
       {/* =========================================================
           DOWNLOAD
       ========================================================== */}
+
       <section
         id="download"
         className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-16 lg:py-28"
@@ -382,6 +348,7 @@ export default function WebCodshop() {
 
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -409,49 +376,51 @@ export default function WebCodshop() {
               variants={fadeUp}
             >
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Get WEB CODSHOP
+                获取 WEB CODSHOP
               </span>
 
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Explore web development resources wherever you are
+                随时随地探索 Web 开发资源
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Download WEB CODSHOP through your preferred platform and
-                explore website source code, templates and professional web
-                development resources.
+                通过你喜欢的平台下载 WEB CODSHOP，
+                探索网站源代码、模板以及专业 Web 开发资源。
               </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
+
                 <StoreButton
                   icon={Download}
                   title="Google Play"
-                  subtitle="Download from"
+                  subtitle="从以下平台下载"
                   href="https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop"
                 />
 
                 <StoreButton
                   icon={Globe}
                   title="Huawei AppGallery"
-                  subtitle="Available on"
+                  subtitle="应用商店"
                   href="https://appgallery.huawei.com/app/CPLACEHOLDER"
                 />
 
                 <StoreButton
                   icon={Smartphone}
                   title="Xiaomi GetApps"
-                  subtitle="Available on"
+                  subtitle="应用商店"
                   href="https://global.app.mi.com/details?appId=com.chtechgiant.webcodshop"
                 />
 
                 <StoreButton
                   icon={Download}
-                  title="Direct APK"
-                  subtitle="Download"
+                  title="直接下载 APK"
+                  subtitle="下载"
                   href="https://chtechgiant.com/downloads/web-codshop.apk"
                 />
+
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -459,6 +428,7 @@ export default function WebCodshop() {
       {/* =========================================================
           INTRO
       ========================================================== */}
+
       <section className="px-6 py-20 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-5xl">
           <motion.div
@@ -469,19 +439,18 @@ export default function WebCodshop() {
             className="text-center"
           >
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-              About WEB CODSHOP
+              关于 WEB CODSHOP
             </span>
 
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              A marketplace for website source code and web resources
+              网站源代码与 Web 开发资源平台
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
-              WEB CODSHOP helps developers, freelancers, startups, agencies
-              and business owners discover high-quality website projects and
-              development resources. Instead of starting every project from
-              scratch, users can explore existing source code, templates and
-              web projects to help accelerate development.
+              WEB CODSHOP 帮助开发者、自由职业者、创业公司、
+              数字机构和企业主寻找高质量的网站项目和开发资源。
+              无需每次都从零开始，你可以探索现有的网站源代码、
+              模板和 Web 项目，从而帮助加快开发流程。
             </p>
           </motion.div>
         </div>
@@ -490,11 +459,13 @@ export default function WebCodshop() {
       {/* =========================================================
           FEATURES / CATEGORIES
       ========================================================== */}
+
       <section
         id="features"
         className="border-y border-white/5 bg-white/[0.015] px-6 py-20 sm:px-10 lg:px-16 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -503,16 +474,16 @@ export default function WebCodshop() {
           >
             <div className="max-w-3xl">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Explore Categories
+                探索分类
               </span>
 
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Web projects for different technologies and needs
+                适用于不同技术和开发需求的 Web 项目
               </h2>
 
               <p className="mt-5 text-base leading-8 text-slate-400 sm:text-lg">
-                Browse a growing collection of website templates, source code,
-                applications and professional web development resources.
+                浏览不断扩展的网站模板、源代码、应用程序
+                以及专业 Web 开发资源。
               </p>
             </div>
           </motion.div>
@@ -522,7 +493,7 @@ export default function WebCodshop() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
-            className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {categories.map((category) => {
               const Icon = category.icon;
@@ -531,100 +502,126 @@ export default function WebCodshop() {
                 <motion.div
                   key={category.title}
                   variants={fadeUp}
-                  className="group rounded-2xl border border-white/8 bg-white/[0.035] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-red-400/20 hover:bg-white/[0.06]"
+                  className="group rounded-2xl border border-white/8 bg-white/[0.035] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-red-400/30 hover:bg-white/[0.06]"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-400 transition group-hover:bg-red-500/15">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-400 transition-transform duration-300 group-hover:scale-110">
                     <Icon size={23} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="mt-5 text-lg font-bold text-white">
                     {category.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-7 text-slate-400">
+                  <p className="mt-3 text-sm leading-7 text-slate-400">
                     {category.description}
                   </p>
                 </motion.div>
               );
             })}
           </motion.div>
+
         </div>
       </section>
 
       {/* =========================================================
-          AUDIENCE
+          TARGET USERS
       ========================================================== */}
+
       <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUp}
-            >
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Built for different users
-              </span>
+        <div className="mx-auto max-w-6xl">
 
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Resources for your next web project
-              </h2>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeUp}
+            className="text-center"
+          >
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
+              适合谁使用
+            </span>
 
-              <p className="mt-6 text-base leading-8 text-slate-400">
-                Whether you're building a client website, working on a
-                startup, developing a personal project or exploring web
-                development resources, WEB CODSHOP brings different project
-                categories together in one marketplace.
-              </p>
-            </motion.div>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+              为不同类型的 Web 开发用户打造
+            </h2>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.15 }}
-              variants={stagger}
-              className="grid gap-4 sm:grid-cols-2"
-            >
-              {audiences.map((item) => {
-                const Icon = item.icon;
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-400">
+              无论你是开发者、学生、自由职业者还是企业主，
+              WEB CODSHOP 都可以帮助你寻找合适的网站开发资源。
+            </p>
+          </motion.div>
 
-                return (
-                  <motion.div
-                    key={item.title}
-                    variants={fadeUp}
-                    className="rounded-2xl border border-white/8 bg-white/[0.035] p-6"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-400">
-                        <Icon size={21} />
-                      </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={stagger}
+            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {[
+              {
+                icon: Code2,
+                title: "开发者",
+                description:
+                  "寻找源代码、Web 项目和开发资源，加快项目开发。",
+              },
+              {
+                icon: Laptop,
+                title: "自由职业者",
+                description:
+                  "寻找适合客户网站项目的模板和开发资源。",
+              },
+              {
+                icon: Rocket,
+                title: "创业公司",
+                description:
+                  "使用现有 Web 项目资源帮助更快构建产品。",
+              },
+              {
+                icon: Briefcase,
+                title: "企业与机构",
+                description:
+                  "寻找企业网站、Landing Page 和电子商务项目。",
+              },
+            ].map((user) => {
+              const Icon = user.icon;
 
-                      <div>
-                        <h3 className="font-bold text-white">
-                          {item.title}
-                        </h3>
+              return (
+                <motion.div
+                  key={user.title}
+                  variants={fadeUp}
+                  className="rounded-2xl border border-white/8 bg-white/[0.035] p-6 text-center"
+                >
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-400">
+                    <Icon size={23} />
+                  </div>
 
-                        <p className="mt-2 text-sm leading-6 text-slate-400">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </div>
+                  <h3 className="mt-5 text-lg font-bold">
+                    {user.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-400">
+                    {user.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
         </div>
       </section>
 
       {/* =========================================================
           WHY WEB CODSHOP
       ========================================================== */}
+
       <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[2rem] border border-red-500/10 bg-gradient-to-br from-red-500/[0.08] via-white/[0.025] to-transparent">
+        <div className="mx-auto max-w-6xl">
+
+          <div className="overflow-hidden rounded-[2rem] border border-white/8 bg-gradient-to-br from-red-500/[0.08] via-white/[0.025] to-transparent">
+
             <div className="grid gap-12 p-8 sm:p-12 lg:grid-cols-2 lg:p-16">
+
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -632,17 +629,16 @@ export default function WebCodshop() {
                 variants={fadeUp}
               >
                 <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                  Why WEB CODSHOP?
+                  为什么选择 WEB CODSHOP？
                 </span>
 
                 <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                  Start with resources that fit your project
+                  从适合你项目的资源开始
                 </h2>
 
                 <p className="mt-5 text-base leading-8 text-slate-400">
-                  WEB CODSHOP brings together website source code, templates
-                  and web development resources across multiple technologies
-                  and project categories.
+                  WEB CODSHOP 将网站源代码、模板和 Web 开发资源
+                  集中在一个平台中，并覆盖多种技术和项目类别。
                 </p>
               </motion.div>
 
@@ -669,16 +665,20 @@ export default function WebCodshop() {
                   </motion.div>
                 ))}
               </motion.div>
+
             </div>
           </div>
+
         </div>
       </section>
 
       {/* =========================================================
           HOW IT WORKS
       ========================================================== */}
+
       <section className="border-y border-white/5 bg-white/[0.015] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto max-w-6xl">
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -687,36 +687,37 @@ export default function WebCodshop() {
             className="text-center"
           >
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-              How it works
+              使用方式
             </span>
 
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-              Find resources for your project
+              为你的项目寻找合适的资源
             </h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
+
             {[
               {
                 number: "01",
                 icon: Search,
-                title: "Explore",
+                title: "探索",
                 description:
-                  "Browse website templates, source code and web development resources.",
+                  "浏览网站模板、源代码以及 Web 开发资源。",
               },
               {
                 number: "02",
                 icon: Layers3,
-                title: "Choose",
+                title: "选择",
                 description:
-                  "Explore available project categories and find resources relevant to your needs.",
+                  "探索不同项目类别，寻找与你需求相关的资源。",
               },
               {
                 number: "03",
                 icon: Rocket,
-                title: "Build Faster",
+                title: "更快开发",
                 description:
-                  "Use suitable project resources as a starting point for development.",
+                  "使用合适的项目资源作为开发起点。",
               },
             ].map((step) => {
               const Icon = step.icon;
@@ -724,23 +725,28 @@ export default function WebCodshop() {
               return (
                 <motion.div
                   key={step.number}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={fadeUp}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: Number(step.number) * 0.08,
+                  }}
                   className="relative rounded-2xl border border-white/8 bg-white/[0.035] p-7"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-400">
-                      <Icon size={22} />
+                      <Icon size={23} />
                     </div>
 
-                    <span className="text-sm font-bold text-white/20">
+                    <span className="text-4xl font-black text-white/5">
                       {step.number}
                     </span>
                   </div>
 
-                  <h3 className="mt-6 text-xl font-bold">{step.title}</h3>
+                  <h3 className="mt-6 text-xl font-bold">
+                    {step.title}
+                  </h3>
 
                   <p className="mt-3 text-sm leading-7 text-slate-400">
                     {step.description}
@@ -748,16 +754,44 @@ export default function WebCodshop() {
                 </motion.div>
               );
             })}
+
           </div>
         </div>
       </section>
 
+      {/* =========================================================
+          PROMOTIONAL IMAGE
+      ========================================================== */}
+
+      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+        <div className="mx-auto max-w-6xl">
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
+            className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-3"
+          >
+            <div className="absolute -inset-20 -z-10 bg-red-500/10 blur-[120px]" />
+
+            <img
+              src="/assets/images/webcodshop-banner.png"
+              alt="WEB CODSHOP 网站模板和源代码"
+              className="w-full rounded-[1.5rem] object-cover"
+            />
+          </motion.div>
+
+        </div>
+      </section>
 
       {/* =========================================================
           FAQ
       ========================================================== */}
-      <section className="border-t border-white/5 bg-white/[0.015] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-4xl">
+
+      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+        <div className="mx-auto max-w-5xl">
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -766,11 +800,11 @@ export default function WebCodshop() {
             className="text-center"
           >
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-              FAQ
+              常见问题
             </span>
 
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-              Frequently asked questions
+              关于 WEB CODSHOP 的常见问题
             </h2>
           </motion.div>
 
@@ -789,7 +823,9 @@ export default function WebCodshop() {
                     <HelpCircle size={18} />
                   </div>
 
-                  <span className="flex-1">{faq.question}</span>
+                  <span className="flex-1">
+                    {faq.question}
+                  </span>
 
                   <span className="text-xl text-slate-500 transition-transform group-open:rotate-45">
                     +
@@ -802,14 +838,17 @@ export default function WebCodshop() {
               </motion.details>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* =========================================================
           PRIVACY + FINAL CTA
       ========================================================== */}
+
       <section className="px-6 pb-24 pt-20 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-5xl">
+
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -823,22 +862,23 @@ export default function WebCodshop() {
             />
 
             <h2 className="mt-5 text-2xl font-bold sm:text-3xl">
-              Learn more about WEB CODSHOP
+              了解更多关于 WEB CODSHOP 的信息
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-400">
-              Read the WEB CODSHOP privacy policy to learn more about how the
-              app handles information and third-party services.
+              阅读 WEB CODSHOP 隐私政策，
+              了解应用如何处理信息以及第三方服务。
             </p>
 
             <div className="mt-7 flex flex-wrap justify-center gap-3">
+
               <a
                 href="https://chtechgiant.com/apps/web-codshop/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-6 py-3 font-semibold text-white transition hover:bg-white/[0.1]"
               >
-                Privacy Policy
+                隐私政策
                 <ExternalLink size={16} />
               </a>
 
@@ -848,11 +888,13 @@ export default function WebCodshop() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-red-500 px-6 py-3 font-semibold text-white transition hover:bg-red-400"
               >
-                Get the App
+                获取应用
                 <ArrowRight size={17} />
               </a>
+
             </div>
           </motion.div>
+
         </div>
       </section>
 
