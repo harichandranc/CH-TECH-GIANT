@@ -65,20 +65,36 @@ const dashboardGroups = [
   },
 
   {
-    title: "Moneization & Analytics",
-    description: "Access your server and infrastructure management systems.",
-    icon: HiLightningBolt,
-    dashboards: [
-      {
-        name: "Start io Analytics",
-        description: "Manage advertising, monetization and performance platforms",
-        icon: HiLightningBolt,
-        url: "https://portal.start.io/#/pub/reports/analytics",
-        status: "Live",
-        enabled: true,
-      },
-    ],
-  },
+  title: "Monetization & Analytics",
+  description: "Access advertising, monetization, analytics and performance platforms.",
+  icon: HiLightningBolt,
+  dashboards: [
+    {
+      name: "Start.io Analytics",
+      description: "Manage advertising, monetization and performance analytics.",
+      icon: HiLightningBolt,
+      url: "https://portal.start.io/#/pub/reports/analytics",
+      status: "Live",
+      enabled: true,
+    },
+    {
+      name: "ironSource LevelPlay",
+      description: "Manage mediation, ad networks, monetization and advertising performance.",
+      icon: HiLightningBolt,
+      url: "https://platform.ironsrc.com/platform/dashboard",
+      status: "Live",
+      enabled: true,
+    },
+    {
+      name: "Unity Cloud",
+      description: "Manage Unity projects, organizations, services and cloud-based development tools.",
+      icon: HiGlobeAlt,
+      url: "https://cloud.unity.com/organizations/13469930217962/dashboard",
+      status: "Live",
+      enabled: true,
+    },
+  ],
+},
 
   {
     title: "Developer Platforms",
