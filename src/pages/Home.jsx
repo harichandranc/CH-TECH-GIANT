@@ -1242,60 +1242,61 @@ const Home = () => {
 
 <section className="relative min-h-[760px] w-full overflow-hidden bg-[#020611] sm:min-h-[800px] lg:min-h-[calc(100vh-72px)]">
 
-  {/* ===================================================
-      HERO IMAGE
-  =================================================== */}
-
+  {/* HERO IMAGE */}
   <img
     src="/images/home/hero-tech.png"
     alt="CH TECH GIANT futuristic technology workspace"
-    className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+    className="
+      absolute
+      inset-0
+      z-0
+      h-full
+      w-full
+      object-cover
+      object-center
+    "
   />
 
-  {/* ===================================================
-      CINEMATIC OVERLAY
-  =================================================== */}
-
-  {/* Strong dark area behind the text */}
+  {/* LEFT DARK OVERLAY */}
   <div
     className="
       absolute
       inset-0
       z-[1]
       bg-[linear-gradient(90deg,
-        rgba(2,6,17,0.98)_0%,
-        rgba(2,6,17,0.94)_18%,
-        rgba(2,6,17,0.78)_38%,
-        rgba(2,6,17,0.40)_58%,
-        rgba(2,6,17,0.08)_82%,
+        rgba(2,6,17,0.99)_0%,
+        rgba(2,6,17,0.96)_20%,
+        rgba(2,6,17,0.82)_35%,
+        rgba(2,6,17,0.55)_50%,
+        rgba(2,6,17,0.18)_70%,
         rgba(2,6,17,0)_100%
       )]
     "
   />
 
-  {/* Top cinematic shadow */}
+  {/* TOP DARK FADE */}
   <div
     className="
       absolute
       inset-x-0
       top-0
       z-[2]
-      h-40
+      h-36
       bg-gradient-to-b
-      from-[#020611]/80
+      from-[#020611]/90
       to-transparent
       pointer-events-none
     "
   />
 
-  {/* Bottom cinematic shadow */}
+  {/* BOTTOM DARK FADE */}
   <div
     className="
       absolute
       inset-x-0
       bottom-0
       z-[2]
-      h-44
+      h-40
       bg-gradient-to-t
       from-[#020611]
       via-[#020611]/70
@@ -1304,30 +1305,28 @@ const Home = () => {
     "
   />
 
-  {/* ===================================================
-      FUTURISTIC GLOW
-  =================================================== */}
-
+  {/* CYAN GLOW */}
   <div
     className="
       absolute
-      left-[-120px]
-      top-[28%]
+      left-[-180px]
+      top-1/3
       z-[2]
       h-[420px]
       w-[420px]
       rounded-full
       bg-cyan-400/10
-      blur-[140px]
+      blur-[150px]
       animate-pulse
       pointer-events-none
     "
   />
 
+  {/* RIGHT BLUE GLOW */}
   <div
     className="
       absolute
-      right-[-100px]
+      right-[-120px]
       bottom-[-100px]
       z-[2]
       h-[500px]
@@ -1339,20 +1338,17 @@ const Home = () => {
     "
   />
 
-  {/* ===================================================
-      FUTURISTIC GRID
-  =================================================== */}
-
+  {/* FUTURISTIC GRID */}
   <div
-    className="absolute inset-0 z-[2] pointer-events-none opacity-[0.10]"
+    className="absolute inset-0 z-[2] pointer-events-none opacity-[0.08]"
     style={{
       backgroundImage:
         "linear-gradient(rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.35) 1px, transparent 1px)",
-      backgroundSize: "72px 72px",
+      backgroundSize: "70px 70px",
       maskImage:
-        "linear-gradient(to right, black 0%, black 35%, transparent 78%)",
+        "linear-gradient(to right, black 0%, black 45%, transparent 80%)",
       WebkitMaskImage:
-        "linear-gradient(to right, black 0%, black 35%, transparent 78%)",
+        "linear-gradient(to right, black 0%, black 45%, transparent 80%)",
     }}
   />
 
@@ -1361,32 +1357,33 @@ const Home = () => {
   =================================================== */}
 
   <div
-    className="
-      relative
-      z-10
-      mx-auto
-      flex
-      min-h-[760px]
-      w-full
-      max-w-7xl
-      items-center
-      px-5
-      py-24
-      sm:min-h-[800px]
-      sm:px-8
-      md:px-12
-      lg:min-h-[calc(100vh-72px)]
-      lg:px-16
-      xl:px-20
-    "
-  >
+  className="
+    relative
+    z-10
+    flex
+    min-h-[760px]
+    w-full
+    items-start
+    px-5
+    pt-4
+    pb-20
+    sm:min-h-[800px]
+    sm:px-8
+    sm:pt-5
+    md:px-10
+    md:pt-6
+    lg:min-h-[calc(100vh-72px)]
+    lg:px-12
+    lg:pt-7
+    xl:px-16
+    xl:pt-7
+  "
+>
 
-    <div className="w-full max-w-[760px]">
+    {/* CONTENT STARTS FROM LEFT */}
+    <div className="w-full max-w-[720px]">
 
-      {/* ===================================================
-          COMPANY BADGE
-      =================================================== */}
-
+      {/* COMPANY BADGE */}
       <div
         className="
           mb-6
@@ -1396,7 +1393,7 @@ const Home = () => {
           rounded-full
           border
           border-cyan-400/30
-          bg-black/35
+          bg-black/40
           px-4
           py-2.5
           backdrop-blur-xl
@@ -1409,7 +1406,6 @@ const Home = () => {
           <span
             className="
               absolute
-              inline-flex
               h-full
               w-full
               animate-ping
@@ -1422,7 +1418,6 @@ const Home = () => {
           <span
             className="
               relative
-              inline-flex
               h-2.5
               w-2.5
               rounded-full
@@ -1441,7 +1436,7 @@ const Home = () => {
             tracking-[2.5px]
             text-cyan-300
             sm:text-xs
-            sm:tracking-[3.5px]
+            sm:tracking-[3px]
           "
         >
           CH TECH GIANT (OPC) PRIVATE LIMITED
@@ -1450,16 +1445,16 @@ const Home = () => {
       </div>
 
       {/* ===================================================
-          MAIN HEADLINE
+          HEADLINE
       =================================================== */}
 
       <h1
         className="
-          max-w-[760px]
+          max-w-[720px]
           text-4xl
           font-black
           leading-[0.98]
-          tracking-[-0.035em]
+          tracking-[-0.04em]
           text-white
           sm:text-5xl
           md:text-6xl
@@ -1490,10 +1485,7 @@ const Home = () => {
 
       </h1>
 
-      {/* ===================================================
-          DESCRIPTION
-      =================================================== */}
-
+      {/* DESCRIPTION */}
       <p
         className="
           mt-7
@@ -1511,7 +1503,7 @@ const Home = () => {
       </p>
 
       {/* ===================================================
-          CTA BUTTONS
+          BUTTONS
       =================================================== */}
 
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -1522,12 +1514,7 @@ const Home = () => {
               ? "/services"
               : `/${language}/services`
           }
-          className="
-            group
-            inline-flex
-            w-full
-            sm:w-auto
-          "
+          className="group inline-flex w-full sm:w-auto"
         >
 
           <button
@@ -1551,16 +1538,8 @@ const Home = () => {
             "
           >
 
-            <span
-              className="
-                relative
-                z-10
-                flex
-                items-center
-                justify-center
-                gap-2
-              "
-            >
+            <span className="relative z-10 flex items-center justify-center gap-2">
+
               {t.exploreServices}
 
               <FaArrowRight
@@ -1570,9 +1549,9 @@ const Home = () => {
                   group-hover:translate-x-1
                 "
               />
+
             </span>
 
-            {/* Button shine */}
             <span
               className="
                 absolute
@@ -1594,12 +1573,7 @@ const Home = () => {
 
         <Link
           to="/contact"
-          className="
-            group
-            inline-flex
-            w-full
-            sm:w-auto
-          "
+          className="group inline-flex w-full sm:w-auto"
         >
 
           <button
@@ -1652,7 +1626,7 @@ const Home = () => {
         className="
           mt-10
           grid
-          max-w-[700px]
+          max-w-[720px]
           grid-cols-2
           gap-3
           sm:mt-12
@@ -1671,7 +1645,7 @@ const Home = () => {
               rounded-2xl
               border
               border-white/10
-              bg-black/35
+              bg-black/45
               p-3
               backdrop-blur-xl
               transition-all
@@ -1679,7 +1653,7 @@ const Home = () => {
               hover:-translate-y-2
               hover:border-cyan-400/40
               hover:bg-cyan-400/10
-              hover:shadow-[0_15px_45px_rgba(34,211,238,0.10)]
+              hover:shadow-[0_15px_45px_rgba(34,211,238,0.12)]
               sm:p-4
             "
             style={{
@@ -1746,19 +1720,21 @@ const Home = () => {
             </p>
 
             {/* Description */}
-            <p
-              className="
-                relative
-                mt-1
-                hidden
-                text-[10px]
-                leading-4
-                text-gray-400
-                sm:block
-              "
-            >
-              {t.services[service.key].description}
-            </p>
+            {t.services[service.key].description && (
+              <p
+                className="
+                  relative
+                  mt-1
+                  hidden
+                  text-[10px]
+                  leading-4
+                  text-gray-400
+                  sm:block
+                "
+              >
+                {t.services[service.key].description}
+              </p>
+            )}
 
           </div>
 
@@ -1770,33 +1746,7 @@ const Home = () => {
 
   </div>
 
-  {/* ===================================================
-      RIGHT SIDE IMAGE GLOW
-  =================================================== */}
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      right-[8%]
-      top-1/2
-      z-[3]
-      hidden
-      h-2
-      w-2
-      -translate-y-1/2
-      rounded-full
-      bg-cyan-300
-      shadow-[0_0_30px_10px_rgba(34,211,238,0.35)]
-      lg:block
-      animate-pulse
-    "
-  />
-
-  {/* ===================================================
-      BOTTOM FADE
-  =================================================== */}
-
+  {/* BOTTOM FADE */}
   <div
     className="
       pointer-events-none
@@ -1804,17 +1754,15 @@ const Home = () => {
       inset-x-0
       bottom-0
       z-[5]
-      h-24
+      h-28
       bg-gradient-to-t
       from-black
+      via-black/60
       to-transparent
     "
   />
 
-  {/* ===================================================
-      SCROLL INDICATOR
-  =================================================== */}
-
+  {/* SCROLL INDICATOR */}
   <div
     className="
       absolute
