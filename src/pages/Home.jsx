@@ -1244,7 +1244,7 @@ const Home = () => {
 
           {/* Cinematic hero image */}
           <img
-            src="/images/hero/hero-tech.png"
+            src="/images/home/hero-tech.png"
             alt="CH TECH GIANT futuristic technology workspace"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
