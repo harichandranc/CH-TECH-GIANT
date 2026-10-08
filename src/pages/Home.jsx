@@ -1237,136 +1237,618 @@ const Home = () => {
 
 
         {/* ===================================================
-            FUTURISTIC HERO
-        =================================================== */}
+    FUTURISTIC HERO
+=================================================== */}
 
-        <section className="relative min-h-[720px] sm:min-h-[780px] lg:min-h-[calc(100vh-72px)] w-full overflow-hidden bg-[#020611]">
+<section className="relative min-h-[760px] w-full overflow-hidden bg-[#020611] sm:min-h-[800px] lg:min-h-[calc(100vh-72px)]">
 
-          {/* Cinematic hero image */}
-          <img
-            src="/images/home/hero-tech.png"
-            alt="CH TECH GIANT futuristic technology workspace"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+  {/* ===================================================
+      HERO IMAGE
+  =================================================== */}
+
+  <img
+    src="/images/home/hero-tech.png"
+    alt="CH TECH GIANT futuristic technology workspace"
+    className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+  />
+
+  {/* ===================================================
+      CINEMATIC OVERLAY
+  =================================================== */}
+
+  {/* Strong dark area behind the text */}
+  <div
+    className="
+      absolute
+      inset-0
+      z-[1]
+      bg-[linear-gradient(90deg,
+        rgba(2,6,17,0.98)_0%,
+        rgba(2,6,17,0.94)_18%,
+        rgba(2,6,17,0.78)_38%,
+        rgba(2,6,17,0.40)_58%,
+        rgba(2,6,17,0.08)_82%,
+        rgba(2,6,17,0)_100%
+      )]
+    "
+  />
+
+  {/* Top cinematic shadow */}
+  <div
+    className="
+      absolute
+      inset-x-0
+      top-0
+      z-[2]
+      h-40
+      bg-gradient-to-b
+      from-[#020611]/80
+      to-transparent
+      pointer-events-none
+    "
+  />
+
+  {/* Bottom cinematic shadow */}
+  <div
+    className="
+      absolute
+      inset-x-0
+      bottom-0
+      z-[2]
+      h-44
+      bg-gradient-to-t
+      from-[#020611]
+      via-[#020611]/70
+      to-transparent
+      pointer-events-none
+    "
+  />
+
+  {/* ===================================================
+      FUTURISTIC GLOW
+  =================================================== */}
+
+  <div
+    className="
+      absolute
+      left-[-120px]
+      top-[28%]
+      z-[2]
+      h-[420px]
+      w-[420px]
+      rounded-full
+      bg-cyan-400/10
+      blur-[140px]
+      animate-pulse
+      pointer-events-none
+    "
+  />
+
+  <div
+    className="
+      absolute
+      right-[-100px]
+      bottom-[-100px]
+      z-[2]
+      h-[500px]
+      w-[500px]
+      rounded-full
+      bg-blue-500/10
+      blur-[160px]
+      pointer-events-none
+    "
+  />
+
+  {/* ===================================================
+      FUTURISTIC GRID
+  =================================================== */}
+
+  <div
+    className="absolute inset-0 z-[2] pointer-events-none opacity-[0.10]"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.35) 1px, transparent 1px)",
+      backgroundSize: "72px 72px",
+      maskImage:
+        "linear-gradient(to right, black 0%, black 35%, transparent 78%)",
+      WebkitMaskImage:
+        "linear-gradient(to right, black 0%, black 35%, transparent 78%)",
+    }}
+  />
+
+  {/* ===================================================
+      HERO CONTENT
+  =================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      flex
+      min-h-[760px]
+      w-full
+      max-w-7xl
+      items-center
+      px-5
+      py-24
+      sm:min-h-[800px]
+      sm:px-8
+      md:px-12
+      lg:min-h-[calc(100vh-72px)]
+      lg:px-16
+      xl:px-20
+    "
+  >
+
+    <div className="w-full max-w-[760px]">
+
+      {/* ===================================================
+          COMPANY BADGE
+      =================================================== */}
+
+      <div
+        className="
+          mb-6
+          inline-flex
+          items-center
+          gap-3
+          rounded-full
+          border
+          border-cyan-400/30
+          bg-black/35
+          px-4
+          py-2.5
+          backdrop-blur-xl
+          shadow-[0_0_35px_rgba(34,211,238,0.10)]
+        "
+      >
+
+        <span className="relative flex h-2.5 w-2.5">
+
+          <span
+            className="
+              absolute
+              inline-flex
+              h-full
+              w-full
+              animate-ping
+              rounded-full
+              bg-cyan-400
+              opacity-60
+            "
           />
 
-          {/* Dark cinematic overlays for readable content */}
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,17,0.96)_0%,rgba(2,6,17,0.82)_30%,rgba(2,6,17,0.38)_58%,rgba(2,6,17,0.10)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,17,0.55)_0%,transparent_28%,transparent_72%,rgba(2,6,17,0.96)_100%)]" />
+          <span
+            className="
+              relative
+              inline-flex
+              h-2.5
+              w-2.5
+              rounded-full
+              bg-cyan-400
+              shadow-[0_0_16px_rgba(34,211,238,0.95)]
+            "
+          />
 
-          {/* Cyan atmospheric glow */}
-          <div className="absolute -left-32 top-1/3 h-72 w-72 rounded-full bg-cyan-400/10 blur-[120px] animate-pulse" />
-          <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 blur-[140px]" />
+        </span>
 
-          {/* Subtle futuristic grid */}
+        <span
+          className="
+            text-[9px]
+            font-semibold
+            uppercase
+            tracking-[2.5px]
+            text-cyan-300
+            sm:text-xs
+            sm:tracking-[3.5px]
+          "
+        >
+          CH TECH GIANT (OPC) PRIVATE LIMITED
+        </span>
+
+      </div>
+
+      {/* ===================================================
+          MAIN HEADLINE
+      =================================================== */}
+
+      <h1
+        className="
+          max-w-[760px]
+          text-4xl
+          font-black
+          leading-[0.98]
+          tracking-[-0.035em]
+          text-white
+          sm:text-5xl
+          md:text-6xl
+          lg:text-[4.5rem]
+          xl:text-[5rem]
+        "
+      >
+
+        <span className="block">
+          {t.homeHeroTitle1}
+        </span>
+
+        <span
+          className="
+            mt-1
+            block
+            bg-gradient-to-r
+            from-cyan-300
+            via-cyan-400
+            to-blue-500
+            bg-clip-text
+            text-transparent
+            drop-shadow-[0_0_35px_rgba(34,211,238,0.20)]
+          "
+        >
+          {t.homeHeroTitle2}
+        </span>
+
+      </h1>
+
+      {/* ===================================================
+          DESCRIPTION
+      =================================================== */}
+
+      <p
+        className="
+          mt-7
+          max-w-[650px]
+          text-sm
+          font-medium
+          leading-7
+          text-gray-300/90
+          sm:text-base
+          md:text-lg
+          md:leading-8
+        "
+      >
+        {t.homeHeroDescription}
+      </p>
+
+      {/* ===================================================
+          CTA BUTTONS
+      =================================================== */}
+
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+
+        <Link
+          to={
+            language === "en"
+              ? "/services"
+              : `/${language}/services`
+          }
+          className="
+            group
+            inline-flex
+            w-full
+            sm:w-auto
+          "
+        >
+
+          <button
+            className="
+              relative
+              w-full
+              overflow-hidden
+              rounded-2xl
+              bg-cyan-400
+              px-7
+              py-4
+              font-bold
+              text-black
+              shadow-[0_0_35px_rgba(34,211,238,0.30)]
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-cyan-300
+              hover:shadow-[0_0_55px_rgba(34,211,238,0.50)]
+              sm:w-auto
+            "
+          >
+
+            <span
+              className="
+                relative
+                z-10
+                flex
+                items-center
+                justify-center
+                gap-2
+              "
+            >
+              {t.exploreServices}
+
+              <FaArrowRight
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+              />
+            </span>
+
+            {/* Button shine */}
+            <span
+              className="
+                absolute
+                inset-y-0
+                -left-full
+                w-1/2
+                rotate-12
+                bg-white/30
+                blur-md
+                transition-all
+                duration-700
+                group-hover:left-[130%]
+              "
+            />
+
+          </button>
+
+        </Link>
+
+        <Link
+          to="/contact"
+          className="
+            group
+            inline-flex
+            w-full
+            sm:w-auto
+          "
+        >
+
+          <button
+            className="
+              w-full
+              rounded-2xl
+              border
+              border-white/20
+              bg-white/5
+              px-7
+              py-4
+              font-semibold
+              text-white
+              backdrop-blur-xl
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:border-cyan-400/60
+              hover:bg-cyan-400/10
+              hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+              sm:w-auto
+            "
+          >
+
+            <span className="flex items-center justify-center gap-2">
+
+              {t.contactUs}
+
+              <FaArrowRight
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+              />
+
+            </span>
+
+          </button>
+
+        </Link>
+
+      </div>
+
+      {/* ===================================================
+          SERVICE CARDS
+      =================================================== */}
+
+      <div
+        className="
+          mt-10
+          grid
+          max-w-[700px]
+          grid-cols-2
+          gap-3
+          sm:mt-12
+          sm:grid-cols-4
+        "
+      >
+
+        {services.map((service, index) => (
+
           <div
-            className="absolute inset-0 opacity-[0.08] pointer-events-none"
+            key={service.key}
+            className="
+              group
+              relative
+              overflow-hidden
+              rounded-2xl
+              border
+              border-white/10
+              bg-black/35
+              p-3
+              backdrop-blur-xl
+              transition-all
+              duration-500
+              hover:-translate-y-2
+              hover:border-cyan-400/40
+              hover:bg-cyan-400/10
+              hover:shadow-[0_15px_45px_rgba(34,211,238,0.10)]
+              sm:p-4
+            "
             style={{
-              backgroundImage:
-                "linear-gradient(rgba(34,211,238,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.35) 1px, transparent 1px)",
-              backgroundSize: "70px 70px",
-              maskImage:
-                "linear-gradient(to right, black 0%, transparent 70%)",
-              WebkitMaskImage:
-                "linear-gradient(to right, black 0%, transparent 70%)",
+              animationDelay: `${index * 120}ms`,
             }}
-          />
+          >
 
-          {/* Hero content */}
-          <div className="relative z-10 mx-auto flex min-h-[720px] sm:min-h-[780px] lg:min-h-[calc(100vh-72px)] max-w-7xl items-center px-5 py-24 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+            {/* Card glow */}
+            <div
+              className="
+                absolute
+                -right-8
+                -top-8
+                h-20
+                w-20
+                rounded-full
+                bg-cyan-400/10
+                blur-2xl
+                opacity-0
+                transition-opacity
+                duration-500
+                group-hover:opacity-100
+              "
+            />
 
-            <div className="w-full max-w-3xl">
-
-              {/* Eyebrow */}
-              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-400/25 bg-black/30 px-4 py-2.5 backdrop-blur-xl shadow-[0_0_35px_rgba(34,211,238,0.08)]">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-60" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(34,211,238,0.9)]" />
-                </span>
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[3px] text-cyan-300">
-                  CH TECH GIANT (OPC) PRIVATE LIMITED
-                </span>
-              </div>
-
-              {/* Main headline */}
-              <h1 className="text-4xl font-black leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-                {t.homeHeroTitle1}
-                <span className="block bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.18)]">
-                  {t.homeHeroTitle2}
-                </span>
-              </h1>
-
-              {/* Description */}
-              <p className="mt-7 max-w-2xl text-sm leading-7 text-gray-300/90 sm:text-base md:text-lg md:leading-8">
-                {t.homeHeroDescription}
-              </p>
-
-              {/* CTA buttons */}
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-
-                <Link
-                  to={
-                    language === "en"
-                      ? "/services"
-                      : `/${language}/services`
-                  }
-                  className="group inline-flex"
-                >
-                  <button className="relative w-full overflow-hidden rounded-2xl bg-cyan-400 px-7 py-4 font-bold text-black shadow-[0_0_35px_rgba(34,211,238,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-[0_0_50px_rgba(34,211,238,0.45)] sm:w-auto">
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      {t.exploreServices}
-                      <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                  </button>
-                </Link>
-
-                <Link to="/contact" className="group inline-flex">
-                  <button className="w-full rounded-2xl border border-white/20 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/70 hover:bg-cyan-400/10 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)] sm:w-auto">
-                    <span className="flex items-center justify-center gap-2">
-                      {t.contactUs}
-                      <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                  </button>
-                </Link>
-
-              </div>
-
-              {/* Floating service glass cards */}
-              <div className="mt-12 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-
-                {services.map((service, index) => (
-                  <div
-                    key={service.key}
-                    className="group rounded-2xl border border-white/10 bg-black/30 p-3.5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10"
-                    style={{
-                      animationDelay: `${index * 120}ms`,
-                    }}
-                  >
-                    <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 text-lg">
-                      {service.icon}
-                    </div>
-
-                    <p className="text-xs font-semibold leading-5 text-gray-200">
-                      {t.services[service.key].title}
-                    </p>
-                  </div>
-                ))}
-
-              </div>
-
+            {/* Icon */}
+            <div
+              className="
+                relative
+                mb-3
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                border
+                border-white/10
+                bg-white/5
+                text-lg
+                transition-all
+                duration-300
+                group-hover:border-cyan-400/30
+                group-hover:bg-cyan-400/10
+                sm:h-11
+                sm:w-11
+              "
+            >
+              {service.icon}
             </div>
 
+            {/* Title */}
+            <p
+              className="
+                relative
+                text-xs
+                font-bold
+                leading-5
+                text-white
+                sm:text-sm
+              "
+            >
+              {t.services[service.key].title}
+            </p>
+
+            {/* Description */}
+            <p
+              className="
+                relative
+                mt-1
+                hidden
+                text-[10px]
+                leading-4
+                text-gray-400
+                sm:block
+              "
+            >
+              {t.services[service.key].description}
+            </p>
+
           </div>
 
-          {/* Bottom cinematic fade */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none" />
+        ))}
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[4px] text-cyan-300/70 sm:flex">
-            <span>Explore</span>
-            <span className="h-8 w-px bg-gradient-to-b from-cyan-400 to-transparent" />
-          </div>
+      </div>
 
-        </section>
+    </div>
+
+  </div>
+
+  {/* ===================================================
+      RIGHT SIDE IMAGE GLOW
+  =================================================== */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-[8%]
+      top-1/2
+      z-[3]
+      hidden
+      h-2
+      w-2
+      -translate-y-1/2
+      rounded-full
+      bg-cyan-300
+      shadow-[0_0_30px_10px_rgba(34,211,238,0.35)]
+      lg:block
+      animate-pulse
+    "
+  />
+
+  {/* ===================================================
+      BOTTOM FADE
+  =================================================== */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      inset-x-0
+      bottom-0
+      z-[5]
+      h-24
+      bg-gradient-to-t
+      from-black
+      to-transparent
+    "
+  />
+
+  {/* ===================================================
+      SCROLL INDICATOR
+  =================================================== */}
+
+  <div
+    className="
+      absolute
+      bottom-7
+      left-1/2
+      z-10
+      hidden
+      -translate-x-1/2
+      flex-col
+      items-center
+      gap-2
+      text-[9px]
+      uppercase
+      tracking-[4px]
+      text-cyan-300/60
+      sm:flex
+    "
+  >
+
+    <span>Explore</span>
+
+    <span
+      className="
+        h-8
+        w-px
+        bg-gradient-to-b
+        from-cyan-400
+        to-transparent
+      "
+    />
+
+  </div>
+
+</section>
 
 
         {/* ===================================================
