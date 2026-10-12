@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -126,22 +130,95 @@ const About = () => {
 
      const aboutT = t.about || translations.en.about;
 
-  // Scroll-driven parallax for the existing About hero image and background.
+  // GSAP + ScrollTrigger power the page parallax and pinned horizontal gallery.
   const pageRef = useRef(null);
-  const imageSectionRef = useRef(null);
   const galleryRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: pageRef,
-    offset: ["start start", "end end"],
-  });
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -260]);
-  const backgroundYReverse = useTransform(scrollYProgress, [0, 1], [0, 180]);
-  const imageY = useTransform(scrollYProgress, [0, 0.45], [0, -70]);
-  const { scrollYProgress: galleryProgress } = useScroll({
-    target: galleryRef,
-    offset: ["start start", "end end"],
-  });
-  const galleryX = useTransform(galleryProgress, [0, 1], ["0%", "-70%"]);
+  const galleryTrackRef = useRef(null);
+  const galleryProgressRef = useRef(null);
+
+  useEffect(() => {
+    const page = pageRef.current;
+    if (!page) return undefined;
+
+    const context = gsap.context(() => {
+      // Gentle cinematic parallax on the ambient glows and hero photograph.
+      gsap.utils.toArray("[data-parallax]", page).forEach((element) => {
+        const direction = element.dataset.parallax === "reverse" ? 1 : -1;
+        gsap.to(element, {
+          y: () => direction * (element.dataset.parallax === "image" ? 90 : 150),
+          ease: "none",
+          scrollTrigger: {
+            trigger: element.closest("section") || element,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        });
+      });
+
+      const section = galleryRef.current;
+      const track = galleryTrackRef.current;
+      const progress = galleryProgressRef.current;
+      if (!section || !track) return;
+
+      const media = gsap.matchMedia();
+      media.add("(min-width: 1024px)", () => {
+        const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth + 48);
+        gsap.set(track, { x: 0 });
+        if (progress) gsap.set(progress, { scaleX: 0, transformOrigin: "left center" });
+
+        gsap.to(track, {
+          x: () => -getDistance(),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: () => `+=${getDistance()}`,
+            pin: true,
+            pinSpacing: true,
+            scrub: 1,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        if (progress) {
+          gsap.to(progress, {
+            scaleX: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top top",
+              end: () => `+=${getDistance()}`,
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        }
+      });
+
+      const refresh = () => ScrollTrigger.refresh();
+      track.querySelectorAll("img").forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener("load", refresh);
+          img.addEventListener("error", refresh);
+        }
+      });
+      const refreshFrame = requestAnimationFrame(refresh);
+
+      return () => {
+        cancelAnimationFrame(refreshFrame);
+        track.querySelectorAll("img").forEach((img) => {
+          img.removeEventListener("load", refresh);
+          img.removeEventListener("error", refresh);
+        });
+        media.revert();
+      };
+    }, page);
+
+    return () => context.revert();
+  }, []);
 
 
 
@@ -415,15 +492,15 @@ const About = () => {
 
 
 
-         <div ref={pageRef} className="relative min-h-screen bg-[#050816] text-white px-6 overflow-hidden isolate">
+         <div ref={pageRef} className="relative min-h-screen bg-[#050816] text-white px-6 isolate">
       {/* Parallax atmosphere — decorative only, existing content stays above it. */}
       <motion.div
-        style={{ y: backgroundY }}
+        data-parallax="slow"
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -left-48 h-[34rem] w-[34rem] rounded-full bg-cyan-500/10 blur-[120px]"
       />
       <motion.div
-        style={{ y: backgroundYReverse }}
+        data-parallax="reverse"
         aria-hidden="true"
         className="pointer-events-none absolute top-[38%] -right-56 h-[32rem] w-[32rem] rounded-full bg-blue-600/10 blur-[130px]"
       />
@@ -668,7 +745,7 @@ const About = () => {
                  }}
 
                
-                 style={{ y: imageY }}>
+                 data-parallax="image">
 
 
 
@@ -1713,8 +1790,8 @@ const About = () => {
 
 
              {/* SCROLL-DRIVEN HORIZONTAL PROJECT GALLERY */}
-        <section ref={galleryRef} className="relative mb-24 h-[300vh]" aria-label="CH TECH GIANT visual gallery">
-          <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden py-12">
+        <section ref={galleryRef} className="relative mb-24 overflow-hidden bg-[#080808] text-white lg:h-screen" aria-label="CH TECH GIANT visual gallery">
+          <div className="relative flex min-h-screen flex-col justify-center overflow-hidden py-12 lg:h-screen">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1722,16 +1799,17 @@ const About = () => {
               transition={{ duration: 0.7 }}
               className="relative z-10 mb-10 px-1 md:mb-14"
             >
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-400">Ideas in motion</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">Ideas in motion</p>
               <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
-                A closer look at <span className="text-cyan-400">what we create.</span>
+                A closer look at <span className="text-amber-100">what we create.</span>
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
                 Scroll to explore our world of apps, web experiences, software, and digital design.
               </p>
             </motion.div>
 
-            <motion.div style={{ x: galleryX }} className="flex w-max gap-5 pl-1 md:gap-8">
+            <div className="w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible">
+            <div ref={galleryTrackRef} className="flex w-max gap-5 pl-1 pr-[9vw] md:gap-8 lg:items-center lg:gap-[6vw] lg:pl-[9vw]">
               {[
                 {
                   title: "Web experiences",
@@ -1773,7 +1851,7 @@ const About = () => {
                 <motion.article
                   key={item.title}
                   whileHover={{ y: -8 }}
-                  className="group relative h-[42vh] min-h-[280px] w-[78vw] max-w-[620px] overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:h-[52vh] md:w-[42vw]"
+                  className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[68vh] lg:w-[38vw]"
                 >
                   <img
                     src={item.image}
@@ -1783,24 +1861,28 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-9">
-                    <p className="mb-3 text-[10px] font-bold tracking-[0.28em] text-cyan-300 md:text-xs">{item.category}</p>
+                    <p className="mb-3 text-[10px] font-bold tracking-[0.28em] text-amber-100/80 md:text-xs">{item.category}</p>
                     <h3 className="text-2xl font-black text-white md:text-4xl">{item.title}</h3>
-                    <span className="mt-5 block h-px w-14 bg-cyan-400 transition-all duration-500 group-hover:w-24" />
+                    <span className="mt-5 block h-px w-14 bg-amber-100 transition-all duration-500 group-hover:w-24" />
                   </div>
                   <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-white/80 backdrop-blur">0{index + 1} / 06</span>
                 </motion.article>
               ))}
-            </motion.div>
+            </div>
+            </div>
 
-            <div className="mt-8 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.22em] text-gray-500">
-              <span className="h-px w-10 bg-cyan-400" /> Keep scrolling to explore
+            <div className="mt-8 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.22em] text-gray-500 lg:absolute lg:bottom-8 lg:left-[9vw]">
+              <span className="h-px w-10 bg-amber-200" /> Keep scrolling to explore
+            </div>
+            <div className="absolute bottom-0 left-6 right-6 h-px bg-white/10 lg:left-[9vw] lg:right-[9vw]">
+              <div ref={galleryProgressRef} className="h-px w-full origin-left bg-amber-100/80" style={{ transform: "scaleX(0)" }} />
             </div>
           </div>
         </section>
 
         {/* EXTRA COMPANY STORY — added section */}
         <section className="relative mb-24 overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-white/[0.03] to-blue-500/10 px-7 py-12 md:px-14 md:py-16">
-          <motion.div style={{ y: backgroundYReverse }} aria-hidden="true" className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full border border-cyan-400/10" />
+          <motion.div data-parallax="reverse" aria-hidden="true" className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full border border-cyan-400/10" />
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
