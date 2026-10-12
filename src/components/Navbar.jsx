@@ -20,39 +20,17 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  {
-    name: "Web Development",
-    path: "/web-development",
-  },
-  {
-    name: "App Development",
-    path: "/app-development",
-  },
-  {
-    name: "Software Development",
-    path: "/software-development",
-  },
-  {
-    name: "Game Development",
-    path: "/game-development",
-  },
-  {
-    name: "IT Consulting",
-    path: "/it-consulting",
-  },
-  {
-    name: "Pamphlet Design",
-    path: "/pamphlet-design",
-  },
-  {
-    name: "Invoice Design",
-    path: "/invoice-design",
-  },
+  { name: "Web Development", path: "/web-development" },
+  { name: "App Development", path: "/app-development" },
+  { name: "Software Development", path: "/software-development" },
+  { name: "Game Development", path: "/game-development" },
+  { name: "IT Consulting", path: "/it-consulting" },
+  { name: "Pamphlet Design", path: "/pamphlet-design" },
+  { name: "Invoice Design", path: "/invoice-design" },
 ];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const location = useLocation();
 
   const pathParts = location.pathname.split("/").filter(Boolean);
@@ -61,32 +39,33 @@ function Navbar() {
     ? pathParts[0]
     : "en";
 
-  const localizedPath = (path) => {
-    if (currentLang === "en") {
-      return path;
-    }
-
-    return `/${currentLang}${path}`;
-  };
+  const localizedPath = (path) =>
+    currentLang === "en" ? path : `/${currentLang}${path}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-cyan-500/10 backdrop-blur-xl bg-black/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
+          {/* Logo and Brand Name */}
           <Link
             to={localizedPath("/")}
-            className="flex items-center"
+            className="flex items-center gap-2.5 shrink-0"
           >
-            <span className="text-2xl font-bold tracking-wide text-white">
+            <img
+              src="/chtechgiant.png"
+              alt="CH TECH GIANT Logo"
+              className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
+              width="40"
+              height="40"
+            />
+            <span className="text-xl sm:text-2xl font-bold tracking-wide text-white whitespace-nowrap">
               CH TECH GIANT
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-7">
-
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -105,7 +84,6 @@ function Navbar() {
 
             {/* Services Dropdown */}
             <div className="relative group">
-
               <button
                 type="button"
                 className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-cyan-300 transition-all duration-300"
@@ -115,9 +93,7 @@ function Navbar() {
               </button>
 
               <div className="absolute top-12 right-0 w-72 rounded-2xl border border-cyan-500/10 bg-[#0b1120]/95 backdrop-blur-xl shadow-2xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
                 <div className="flex flex-col gap-1">
-
                   {serviceLinks.map((service) => (
                     <NavLink
                       key={service.name}
@@ -133,7 +109,6 @@ function Navbar() {
                       {service.name}
                     </NavLink>
                   ))}
-
                 </div>
               </div>
             </div>
@@ -150,12 +125,8 @@ function Navbar() {
               }
             >
               <HiShieldCheck className="text-lg transition-transform duration-300 group-hover:scale-110" />
-
-              <span className="text-sm font-semibold">
-                Admin Login
-              </span>
+              <span className="text-sm font-semibold">Admin Login</span>
             </NavLink>
-
           </nav>
 
           {/* Mobile Menu Button */}
@@ -163,19 +134,17 @@ function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-white text-3xl"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
-
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-cyan-500/10 bg-[#0b1120]/95 backdrop-blur-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-
           <div className="flex flex-col px-6 py-6 pb-10 gap-3">
-
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -195,13 +164,11 @@ function Navbar() {
 
             {/* Mobile Services */}
             <div className="pt-2">
-
               <p className="text-cyan-400 text-sm font-semibold mb-3 px-2">
                 Services
               </p>
 
               <div className="flex flex-col gap-2">
-
                 {serviceLinks.map((service) => (
                   <NavLink
                     key={service.name}
@@ -218,13 +185,11 @@ function Navbar() {
                     {service.name}
                   </NavLink>
                 ))}
-
               </div>
             </div>
 
             {/* Mobile Admin Login */}
             <div className="pt-3">
-
               <NavLink
                 to={localizedPath("/admin-dashboard")}
                 onClick={() => setMenuOpen(false)}
@@ -237,14 +202,9 @@ function Navbar() {
                 }
               >
                 <HiShieldCheck className="text-xl" />
-
-                <span className="text-sm font-semibold">
-                  Admin Login
-                </span>
+                <span className="text-sm font-semibold">Admin Login</span>
               </NavLink>
-
             </div>
-
           </div>
         </div>
       )}
