@@ -29,22 +29,7 @@ const dashboardGroups = [
         status: "Live",
         enabled: true,
       },
-      {
-        name: "Sri Muthu Mariamman Temple",
-        description: "Manage temple content, donations, sevas, gallery and website.",
-        icon: HiShieldCheck,
-        url: "https://admin.srimuthumariamman.com",
-        status: "Coming Soon",
-        enabled: false,
-      },
-      {
-        name: "School ERP",
-        description: "Manage students, teachers, academics and school operations.",
-        icon: HiDeviceMobile,
-        url: "",
-        status: "Coming Soon",
-        enabled: false,
-      },
+      
     ],
   },
 
