@@ -140,12 +140,16 @@ const About = () => {
     const page = pageRef.current;
     if (!page) return undefined;
 
+    let refreshFrame;
+    const track = galleryTrackRef.current;
+    const media = gsap.matchMedia();
+
     const context = gsap.context(() => {
-      // Gentle cinematic parallax on the ambient glows and hero photograph.
+      // Keep decorative parallax subtle so it never shifts whole sections.
       gsap.utils.toArray("[data-parallax]", page).forEach((element) => {
         const direction = element.dataset.parallax === "reverse" ? 1 : -1;
         gsap.to(element, {
-          y: () => direction * (element.dataset.parallax === "image" ? 90 : 150),
+          y: () => direction * (element.dataset.parallax === "image" ? 45 : 70),
           ease: "none",
           scrollTrigger: {
             trigger: element.closest("section") || element,
@@ -158,28 +162,33 @@ const About = () => {
       });
 
       const section = galleryRef.current;
-      const track = galleryTrackRef.current;
       const progress = galleryProgressRef.current;
       if (!section || !track) return;
 
-      const media = gsap.matchMedia();
       media.add("(min-width: 1024px)", () => {
-        const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth + 48);
+        const getDistance = () =>
+          Math.max(0, track.scrollWidth - document.documentElement.clientWidth);
+
         gsap.set(track, { x: 0 });
         if (progress) gsap.set(progress, { scaleX: 0, transformOrigin: "left center" });
 
-        gsap.to(track, {
+        const distance = getDistance();
+        if (distance <= 0) return undefined;
+
+        const horizontalTween = gsap.to(track, {
           x: () => -getDistance(),
           ease: "none",
           scrollTrigger: {
             trigger: section,
-            start: "top top",
+            // The site navbar is fixed and about 96px tall; don't pin content beneath it.
+            start: "top top+=96",
             end: () => `+=${getDistance()}`,
             pin: true,
             pinSpacing: true,
             scrub: 1,
             anticipatePin: 1,
             invalidateOnRefresh: true,
+            refreshPriority: 1,
           },
         });
 
@@ -189,37 +198,41 @@ const About = () => {
             ease: "none",
             scrollTrigger: {
               trigger: section,
-              start: "top top",
+              start: "top top+=96",
               end: () => `+=${getDistance()}`,
               scrub: 1,
               invalidateOnRefresh: true,
             },
           });
         }
-      });
 
-      const refresh = () => ScrollTrigger.refresh();
+        return () => horizontalTween.scrollTrigger?.kill();
+      });
+    }, page);
+
+    const refresh = () => ScrollTrigger.refresh();
+    const imageListeners = [];
+    if (track) {
       track.querySelectorAll("img").forEach((img) => {
         if (!img.complete) {
           img.addEventListener("load", refresh);
           img.addEventListener("error", refresh);
+          imageListeners.push(img);
         }
       });
-      const refreshFrame = requestAnimationFrame(refresh);
+    }
+    refreshFrame = requestAnimationFrame(refresh);
 
-      return () => {
-        cancelAnimationFrame(refreshFrame);
-        track.querySelectorAll("img").forEach((img) => {
-          img.removeEventListener("load", refresh);
-          img.removeEventListener("error", refresh);
-        });
-        media.revert();
-      };
-    }, page);
-
-    return () => context.revert();
+    return () => {
+      cancelAnimationFrame(refreshFrame);
+      imageListeners.forEach((img) => {
+        img.removeEventListener("load", refresh);
+        img.removeEventListener("error", refresh);
+      });
+      media.revert();
+      context.revert();
+    };
   }, []);
-
 
 
      /* =====================================================
@@ -1790,14 +1803,14 @@ const About = () => {
 
 
              {/* SCROLL-DRIVEN HORIZONTAL PROJECT GALLERY */}
-        <section ref={galleryRef} className="relative mb-24 overflow-hidden bg-[#080808] text-white lg:h-screen" aria-label="CH TECH GIANT visual gallery">
-          <div className="relative flex min-h-screen flex-col justify-center overflow-hidden py-12 lg:h-screen">
+        <section ref={galleryRef} className="relative mb-24 overflow-hidden bg-[#080808] text-white lg:h-[calc(100svh-96px)]" aria-label="CH TECH GIANT visual gallery">
+          <div className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden py-12 lg:min-h-0 lg:h-full lg:py-8">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.7 }}
-              className="relative z-10 mb-10 px-1 md:mb-14"
+              className="relative z-10 mb-8 px-1 md:mb-10"
             >
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">Ideas in motion</p>
               <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
@@ -1851,7 +1864,7 @@ const About = () => {
                 <motion.article
                   key={item.title}
                   whileHover={{ y: -8 }}
-                  className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[68vh] lg:w-[38vw]"
+                  className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[62vh] lg:w-[34vw]"
                 >
                   <img
                     src={item.image}
