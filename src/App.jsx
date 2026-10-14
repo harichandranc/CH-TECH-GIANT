@@ -51,6 +51,7 @@ import PDFLockUnlockPrivacyPolicy from "./pages/apps/PdfLockUnlockPrivacyPolicy"
 import PDFLockUnlockPrivacyPolicyChinese from "./pages/apps/PdfLockUnlockPrivacyPolicyChinese";
 import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 import WebCodshopPrivacyPolicyChinese from "./pages/apps/WebCodshopPrivacyPolicyChinese";
+import AllInOneConverterPrivacyPolicy from "./pages/apps/AllInOneConverterPrivacyPolicy";
 
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
@@ -339,6 +340,11 @@ function App() {
             <Route
               path="/apps/pdf-lock-unlock/privacy-policy/chinese"
               element={<PDFLockUnlockPrivacyPolicyChinese />}
+            />
+
+            <Route
+              path="/apps/all-in-one-converter/privacy-policy"
+              element={<AllInOneConverterPrivacyPolicy />}
             />
 
             <Route
