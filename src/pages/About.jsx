@@ -505,7 +505,10 @@ const About = () => {
 
 
 
-         <div ref={pageRef} className="relative min-h-screen bg-[#050816] text-white px-6 isolate">
+         <div
+  ref={pageRef}
+  className="relative isolate min-h-screen w-full max-w-full overflow-x-clip bg-[#050816] px-4 text-white sm:px-6"
+>
       {/* Parallax atmosphere — decorative only, existing content stays above it. */}
       <motion.div
         data-parallax="slow"
@@ -524,13 +527,9 @@ const About = () => {
 
 
 
-             {/* =================================================
-
+             {/* 
        LANGUAGE SWITCHER
-
-       Same positioning as Services page
-
-================================================= */}
+       Same positioning as Services page */}
 
 
 
@@ -639,9 +638,7 @@ const About = () => {
 
 
              {/* =================================================
-
                  HEADER
-
              ================================================= */}
 
 
@@ -670,29 +667,16 @@ const About = () => {
 
                }}
 
-               className="text-center mb-24 pt-12"
-
+               className="mb-16 pt-12 text-center sm:mb-24"
              
                >
-
-
-
                <p className="text-gray-400 uppercase tracking-[5px] mb-4">
 
                  {aboutT.hero.eyebrow}
 
                </p>
-
-
-
                <h1 className="text-4xl md:text-7xl font-black leading-tight mb-8">
-
-
-
                  {aboutT.hero.title}
-
-
-
                  <span className="block text-white/80">
 
                    {aboutT.hero.titleHighlight}
@@ -809,9 +793,6 @@ const About = () => {
                  }}
 
                >
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black leading-tight mb-8">
 
                    {aboutT.main.title}
@@ -1203,12 +1184,8 @@ const About = () => {
 
 
              {/* =================================================
-
                  SERVICES
-
              ================================================= */}
-
-
 
              <section className="mb-24">
 
@@ -1349,17 +1326,10 @@ const About = () => {
 
 
              {/* =================================================
-
                  FEATURES
-
              ================================================= */}
 
-
-
              <div className="mb-24">
-
-
-
                <motion.div
 
                  initial={{
@@ -1413,21 +1383,11 @@ const About = () => {
                      {aboutT.features.titleHighlight}
 
                    </span>
-
-
-
                  </h2>
-
-
 
                </motion.div>
 
-
-
                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-
-
                  {aboutT.features.items.map(
 
                    (feature, index) => (
@@ -1499,29 +1459,12 @@ const About = () => {
                    )
 
                  )}
-
-
-
                </div>
-
-
-
              </div>
-
-
-
              {/* =================================================
-
                  TECHNOLOGIES
-
              ================================================= */}
-
-
-
              <section className="mb-24">
-
-
-
                <motion.div
 
                  initial={{
@@ -1575,17 +1518,8 @@ const About = () => {
                      {aboutT.technologies.titleHighlight}
 
                    </span>
-
-
-
                  </h2>
-
-
-
                </motion.div>
-
-
-
                <div className="flex flex-wrap justify-center gap-4">
 
 
@@ -1638,8 +1572,6 @@ const About = () => {
 
                  )}
 
-
-
                </div>
 
 
@@ -1649,17 +1581,9 @@ const About = () => {
 
 
              {/* =================================================
-
                  PROCESS
-
              ================================================= */}
-
-
-
              <section className="mb-24">
-
-
-
                <motion.div
 
                  initial={{
@@ -1803,95 +1727,97 @@ const About = () => {
 
 
              {/* SCROLL-DRIVEN HORIZONTAL PROJECT GALLERY */}
-        <section ref={galleryRef} className="relative mb-24 overflow-hidden bg-[#080808] text-white lg:h-[calc(100svh-96px)]" aria-label="CH TECH GIANT visual gallery">
-          <div className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden py-12 lg:min-h-0 lg:h-full lg:py-8">
-            <motion.div
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.7 }}
-              className="relative z-10 mb-8 px-1 md:mb-10"
-            >
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">Ideas in motion</p>
-              <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
-                A closer look at <span className="text-amber-100">what we create.</span>
-              </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
-                Scroll to explore our world of apps, web experiences, software, and digital design.
-              </p>
-            </motion.div>
-
-            <div className="w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible">
-            <div ref={galleryTrackRef} className="flex w-max gap-5 pl-1 pr-[9vw] md:gap-8 lg:items-center lg:gap-[6vw] lg:pl-[9vw]">
-              {[
-                {
-                  title: "Web experiences",
-                  category: "WEB DEVELOPMENT",
-                  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Analytics dashboard displayed on a laptop",
-                },
-                {
-                  title: "Apps that connect",
-                  category: "APP DEVELOPMENT",
-                  image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Mobile devices showing app interfaces",
-                },
-                {
-                  title: "Thoughtful design",
-                  category: "UI / UX DESIGN",
-                  image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Designer working on a digital interface",
-                },
-                {
-                  title: "Engineering ideas",
-                  category: "SOFTWARE DEVELOPMENT",
-                  image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Close-up of electronic components and circuit board",
-                },
-                {
-                  title: "Built for performance",
-                  category: "DIGITAL SOLUTIONS",
-                  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Developer workspace with a laptop and code",
-                },
-                {
-                  title: "From concept to launch",
-                  category: "PRODUCT DEVELOPMENT",
-                  image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1400&q=85",
-                  alt: "Creative team planning a digital product",
-                },
-              ].map((item, index) => (
-                <motion.article
-                  key={item.title}
-                  whileHover={{ y: -8 }}
-                  className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[62vh] lg:w-[34vw]"
+            <section ref={galleryRef} 
+            className="w-full min-w-0 max-w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible"
+            aria-label="CH TECH GIANT visual gallery">
+              <div className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden py-12 lg:min-h-0 lg:h-full lg:py-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{ duration: 0.7 }}
+                  className="relative z-10 mb-8 px-1 md:mb-10"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-9">
-                    <p className="mb-3 text-[10px] font-bold tracking-[0.28em] text-amber-100/80 md:text-xs">{item.category}</p>
-                    <h3 className="text-2xl font-black text-white md:text-4xl">{item.title}</h3>
-                    <span className="mt-5 block h-px w-14 bg-amber-100 transition-all duration-500 group-hover:w-24" />
-                  </div>
-                  <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-white/80 backdrop-blur">0{index + 1} / 06</span>
-                </motion.article>
-              ))}
-            </div>
-            </div>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">Ideas in motion</p>
+                  <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
+                    A closer look at <span className="text-amber-100">what we create.</span>
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
+                    Scroll to explore our world of apps, web experiences, software, and digital design.
+                  </p>
+                </motion.div>
 
-            <div className="mt-8 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.22em] text-gray-500 lg:absolute lg:bottom-8 lg:left-[9vw]">
-              <span className="h-px w-10 bg-amber-200" /> Keep scrolling to explore
-            </div>
-            <div className="absolute bottom-0 left-6 right-6 h-px bg-white/10 lg:left-[9vw] lg:right-[9vw]">
-              <div ref={galleryProgressRef} className="h-px w-full origin-left bg-amber-100/80" style={{ transform: "scaleX(0)" }} />
-            </div>
-          </div>
-        </section>
+                <div className="w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible">
+                <div ref={galleryTrackRef} className="flex w-max gap-5 pl-1 pr-[9vw] md:gap-8 lg:items-center lg:gap-[6vw] lg:pl-[9vw]">
+                  {[
+                    {
+                      title: "Web experiences",
+                      category: "WEB DEVELOPMENT",
+                      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Analytics dashboard displayed on a laptop",
+                    },
+                    {
+                      title: "Apps that connect",
+                      category: "APP DEVELOPMENT",
+                      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Mobile devices showing app interfaces",
+                    },
+                    {
+                      title: "Thoughtful design",
+                      category: "UI / UX DESIGN",
+                      image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Designer working on a digital interface",
+                    },
+                    {
+                      title: "Engineering ideas",
+                      category: "SOFTWARE DEVELOPMENT",
+                      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Close-up of electronic components and circuit board",
+                    },
+                    {
+                      title: "Built for performance",
+                      category: "DIGITAL SOLUTIONS",
+                      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Developer workspace with a laptop and code",
+                    },
+                    {
+                      title: "From concept to launch",
+                      category: "PRODUCT DEVELOPMENT",
+                      image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1400&q=85",
+                      alt: "Creative team planning a digital product",
+                    },
+                  ].map((item, index) => (
+                    <motion.article
+                      key={item.title}
+                      whileHover={{ y: -8 }}
+                      className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[62vh] lg:w-[34vw]"
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.alt}
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6 md:p-9">
+                        <p className="mb-3 text-[10px] font-bold tracking-[0.28em] text-amber-100/80 md:text-xs">{item.category}</p>
+                        <h3 className="text-2xl font-black text-white md:text-4xl">{item.title}</h3>
+                        <span className="mt-5 block h-px w-14 bg-amber-100 transition-all duration-500 group-hover:w-24" />
+                      </div>
+                      <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-white/80 backdrop-blur">0{index + 1} / 06</span>
+                    </motion.article>
+                  ))}
+                </div>
+                </div>
+
+                <div className="mt-8 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.22em] text-gray-500 lg:absolute lg:bottom-8 lg:left-[9vw]">
+                  <span className="h-px w-10 bg-amber-200" /> Keep scrolling to explore
+                </div>
+                <div className="absolute bottom-0 left-6 right-6 h-px bg-white/10 lg:left-[9vw] lg:right-[9vw]">
+                  <div ref={galleryProgressRef} className="h-px w-full origin-left bg-amber-100/80" style={{ transform: "scaleX(0)" }} />
+                </div>
+              </div>
+            </section>
 
         {/* EXTRA COMPANY STORY — added section */}
         <section className="relative mb-24 overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-white/[0.03] to-blue-500/10 px-7 py-12 md:px-14 md:py-16">
@@ -1928,13 +1854,8 @@ const About = () => {
         </section>
 
         {/* =================================================
-
                  MISSION
-
-             ================================================= */}
-
-
-
+            ================================================= */}
              <motion.div
 
                initial={{
@@ -1962,9 +1883,6 @@ const About = () => {
                className="bg-gradient-to-r from-cyan-500/10 to-white/5 border border-white/10 rounded-[40px] p-8 md:p-16 text-center mb-24"
 
              >
-
-
-
                <p className="text-cyan-400 uppercase tracking-[5px] mb-4">
 
                  {aboutT.mission.eyebrow}
@@ -1974,13 +1892,7 @@ const About = () => {
 
 
                <h2 className="text-3xl md:text-6xl font-black leading-tight mb-8">
-
-
-
                  {aboutT.mission.title}
-
-
-
                  <span className="text-cyan-400">
 
                    {" "}
@@ -1988,25 +1900,13 @@ const About = () => {
                    {aboutT.mission.titleHighlight}
 
                  </span>
-
-
-
                </h2>
-
-
-
                <p className="max-w-4xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
 
                  {aboutT.mission.description}
 
                </p>
-
-
-
              </motion.div>
-
-
-
            </div>
 
          </div>
@@ -2016,7 +1916,5 @@ const About = () => {
      );
 
 };
-
-
 
 export default About;
