@@ -161,32 +161,34 @@ const apps = [
     apk: "http://147.93.110.58:8080/CGPASGPACalculator.apk",
   },
 
-  {
-    id: 7,
-    title: {
-      en: "Image Compressor",
-      zh: "图片压缩器",
-      es: "Compresor de imágenes",
-      pt: "Compressor de imagens",
-      de: "Bildkompressor",
-      ko: "이미지 압축기",
-      ja: "画像圧縮ツール",
-    },
-    category: "Photography",
-    description: {
-      en: "Compress images to your desired file size while maintaining excellent quality.",
-      zh: "在保持高质量的同时，将图片压缩到所需文件大小。",
-      es: "Comprime imágenes al tamaño de archivo deseado manteniendo una excelente calidad.",
-      pt: "Comprima imagens para o tamanho de arquivo desejado mantendo uma excelente qualidade.",
-      de: "Komprimieren Sie Bilder auf die gewünschte Dateigröße und behalten Sie dabei eine hervorragende Qualität bei.",
-      ko: "뛰어난 이미지 품질을 유지하면서 원하는 파일 크기로 이미지를 압축하세요.",
-      ja: "高品質を維持しながら、画像を希望するファイルサイズまで圧縮できます。",
-    },
-    image: "/projects/image-compressor.webp",
-    playStore:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.imagecompressor",
-    apk: null,
+  
+{
+  id: 7,
+  title: {
+    en: "All in One Converter",
+    zh: "全能转换器",
+    es: "Convertidor Todo en Uno",
+    pt: "Conversor Tudo em Um",
+    de: "All-in-One-Konverter",
+    ko: "올인원 변환기",
+    ja: "オールインワン変換ツール",
   },
+  category: "Utilities",
+  description: {
+    en: "Convert documents, images, videos, audio, and text with one powerful app. Enjoy unlimited conversions with no ads.",
+    zh: "使用一款强大的应用转换文档、图片、视频、音频和文本。享受无限次转换，无广告干扰。",
+    es: "Convierte documentos, imágenes, vídeos, audio y texto con una potente aplicación. Disfruta de conversiones ilimitadas y sin anuncios.",
+    pt: "Converta documentos, imagens, vídeos, áudio e texto com um único aplicativo poderoso. Aproveite conversões ilimitadas e sem anúncios.",
+    de: "Konvertieren Sie Dokumente, Bilder, Videos, Audio und Text mit einer leistungsstarken App. Genießen Sie unbegrenzte Konvertierungen ohne Werbung.",
+    ko: "강력한 앱 하나로 문서, 이미지, 동영상, 오디오 및 텍스트를 변환하세요. 광고 없이 무제한으로 변환할 수 있습니다.",
+    ja: "強力なアプリ1つで、ドキュメント、画像、動画、音声、テキストを変換。広告なしで無制限に変換できます。",
+  },
+  image: "/projects/allinone.webp",
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.chtechgiant.all_in_one_converter",
+  apk: null,
+},
+
 
   {
     id: 8,
