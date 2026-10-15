@@ -55,14 +55,6 @@ const dashboardGroups = [
   icon: HiLightningBolt,
   dashboards: [
     {
-      name: "Start.io Analytics",
-      description: "Manage advertising, monetization and performance analytics.",
-      icon: HiLightningBolt,
-      url: "https://portal.start.io/#/pub/reports/analytics",
-      status: "Live",
-      enabled: true,
-    },
-    {
       name: "ironSource LevelPlay",
       description: "Manage mediation, ad networks, monetization and advertising performance.",
       icon: HiLightningBolt,
