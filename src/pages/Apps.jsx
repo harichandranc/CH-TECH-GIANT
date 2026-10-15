@@ -680,22 +680,7 @@ const Apps = () => {
 
                   </p>
 
-                  <div className="flex justify-between items-center">
-
-                    <div>
-
-                      <p className="text-gray-500">
-                        {t.size}
-                      </p>
-
-                      <p className="font-semibold text-white">
-                        {app.size}
-                      </p>
-
-                    </div>
-
-                  </div>
-
+                  
                   {/* ACTION BUTTONS */}
 
                   <div
