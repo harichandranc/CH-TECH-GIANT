@@ -12,7 +12,7 @@ const ko = {
     "CH TECH GIANT에서 개발한 고품질 생산성, PDF, 비즈니스, 교육 및 유틸리티 애플리케이션을 만나보세요.",
 
   applications: "애플리케이션",
-  freeDownload: "무료 다운로드",
+  LegitApps: "합법적인 앱",
   supported: "지원됨",
   updates: "업데이트",
 

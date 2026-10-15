@@ -496,7 +496,7 @@ const Apps = () => {
               </h2>
 
               <p className="text-gray-400 mt-2">
-                {t.freeDownload}
+                {t.LegitApps}
               </p>
 
             </div>

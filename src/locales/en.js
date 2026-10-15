@@ -12,7 +12,7 @@ const en = {
     "Discover high-quality productivity, PDF, business, education and utility applications developed by",
 
   applications: "Applications",
-  freeDownload: "Free Download",
+  LegitApps: "Legit Apps",
   supported: "Supported",
   updates: "Updates",
 

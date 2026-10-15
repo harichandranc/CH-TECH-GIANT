@@ -12,7 +12,7 @@ const es = {
     "Descubre aplicaciones de productividad, PDF, negocios, educación y utilidades de alta calidad desarrolladas por",
 
   applications: "Aplicaciones",
-  freeDownload: "Descarga Gratuita",
+  LegitApps: "Aplicaciones legítimas",
   supported: "Compatibles",
   updates: "Actualizaciones",
 

@@ -12,7 +12,7 @@ const pt = {
     "Descubra aplicativos de produtividade, PDF, negócios, educação e utilidade de alta qualidade desenvolvidos pela",
 
   applications: "Aplicativos",
-  freeDownload: "Download Gratuito",
+  LegitApps: "Aplicativos legitimados",
   supported: "Compatível",
   updates: "Atualizações",
 

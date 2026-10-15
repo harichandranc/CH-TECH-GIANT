@@ -12,7 +12,7 @@ const ja = {
     "CH TECH GIANTが開発した、高品質な生産性、PDF、ビジネス、教育、ユーティリティアプリをご覧ください。",
 
   applications: "アプリケーション",
-  freeDownload: "無料ダウンロード",
+  LegitApps: "正規アプリ",
   supported: "対応",
   updates: "アップデート",
 

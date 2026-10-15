@@ -12,7 +12,7 @@ const de = {
     "Entdecken Sie hochwertige Produktivitäts-, PDF-, Business-, Bildungs- und Utility-Anwendungen, entwickelt von",
 
   applications: "Anwendungen",
-  freeDownload: "Kostenloser Download",
+  LegitApps: "Betrouwbare apps",
   supported: "Unterstützt",
   updates: "Updates",
 

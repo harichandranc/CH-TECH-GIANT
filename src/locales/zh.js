@@ -12,7 +12,7 @@ const zh = {
     "探索由 CH TECH GIANT 开发的高品质生产力、PDF、商业、教育和实用工具应用程序。",
 
   applications: "应用程序",
-  freeDownload: "免费下载",
+  LegitApps: "正规应用",
   supported: "支持",
   updates: "更新",
 
