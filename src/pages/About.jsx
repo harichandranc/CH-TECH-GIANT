@@ -556,9 +556,6 @@ const About = () => {
              (item) => item.code === e.target.value
 
            );
-
-
-
            if (selectedLanguage) {
 
              navigate(selectedLanguage.path);
@@ -1492,25 +1489,13 @@ const About = () => {
                  className="text-center mb-16"
 
                >
-
-
-
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
 
                    {aboutT.technologies.eyebrow}
 
                  </p>
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black">
-
-
-
                    {aboutT.technologies.title}
-
-
-
                    <span className="text-cyan-400">
 
                      {" "}
@@ -1521,19 +1506,11 @@ const About = () => {
                  </h2>
                </motion.div>
                <div className="flex flex-wrap justify-center gap-4">
-
-
-
                  {aboutT.technologies.items.map(
-
                    (tech, index) => (
-
                      <motion.div
-
                        key={index}
-
                        initial={{
-
                          opacity: 0,
 
                          scale: 0.9,
@@ -1573,16 +1550,8 @@ const About = () => {
                  )}
 
                </div>
-
-
-
              </section>
-
-
-
-             {/* =================================================
-                 PROCESS
-             ================================================= */}
+             {/*PROCESS*/}
              <section className="mb-24">
                <motion.div
 
@@ -1611,25 +1580,13 @@ const About = () => {
                  className="text-center mb-16"
 
                >
-
-
-
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
 
                    {aboutT.process.eyebrow}
 
                  </p>
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black">
-
-
-
                    {aboutT.process.title}
-
-
-
                    <span className="text-cyan-400">
 
                      {" "}
@@ -1637,21 +1594,9 @@ const About = () => {
                      {aboutT.process.titleHighlight}
 
                    </span>
-
-
-
                  </h2>
-
-
-
                </motion.div>
-
-
-
                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-
-
-
                  {aboutT.process.items.map(
 
                    (step, index) => (
@@ -1707,117 +1652,145 @@ const About = () => {
                          {step}
 
                        </p>
-
-
-
                      </motion.div>
 
                    )
 
                  )}
-
-
-
                </div>
-
-
-
              </section>
 
+             
+{/* SCROLL-DRIVEN HORIZONTAL PROJECT GALLERY */}
+<section
+  ref={galleryRef}
+  className="relative w-full min-w-0 max-w-full"
+  aria-label="CH TECH GIANT visual gallery"
+>
+  <div className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden py-12 lg:min-h-0 lg:py-8">
+    {/* Gallery heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{ duration: 0.7 }}
+      className="relative z-10 mb-8 px-1 md:mb-10"
+    >
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">
+        Ideas in motion
+      </p>
 
+      <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
+        A closer look at{" "}
+        <span className="text-amber-100">what we create.</span>
+      </h2>
 
-             {/* SCROLL-DRIVEN HORIZONTAL PROJECT GALLERY */}
-            <section ref={galleryRef} 
-            className="w-full min-w-0 max-w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible"
-            aria-label="CH TECH GIANT visual gallery">
-              <div className="relative flex min-h-[70svh] flex-col justify-center overflow-hidden py-12 lg:min-h-0 lg:h-full lg:py-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 28 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.35 }}
-                  transition={{ duration: 0.7 }}
-                  className="relative z-10 mb-8 px-1 md:mb-10"
-                >
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">Ideas in motion</p>
-                  <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
-                    A closer look at <span className="text-amber-100">what we create.</span>
-                  </h2>
-                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
-                    Scroll to explore our world of apps, web experiences, software, and digital design.
-                  </p>
-                </motion.div>
+      <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-400 md:text-base">
+        Scroll to explore our world of apps, web experiences,
+        software, and digital design.
+      </p>
+    </motion.div>
 
-                <div className="w-full overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible">
-                <div ref={galleryTrackRef} className="flex w-max gap-5 pl-1 pr-[9vw] md:gap-8 lg:items-center lg:gap-[6vw] lg:pl-[9vw]">
-                  {[
-                    {
-                      title: "Web experiences",
-                      category: "WEB DEVELOPMENT",
-                      image: "services/web.webp",
-                      alt: "Analytics dashboard displayed on a laptop",
-                    },
-                    {
-                      title: "Apps that connect",
-                      category: "APP DEVELOPMENT",
-                      image: "services/app.webp",
-                      alt: "Mobile devices showing app interfaces",
-                    },
-                    {
-                      title: "Thoughtful design",
-                      category: "UI / UX DESIGN",
-                      image: "services/pamphlet.webp",
-                      alt: "Designer working on a digital interface",
-                    },
-                    {
-                      title: "Engineering ideas",
-                      category: "SOFTWARE DEVELOPMENT",
-                      image: "services/software.webp",
-                      alt: "Close-up of electronic components and circuit board",
-                    },
-                    {
-                      title: "Built for performance",
-                      category: "DIGITAL SOLUTIONS",
-                      image: "services/itconsult.webp",
-                      alt: "Developer workspace with a laptop and code",
-                    },
-                    {
-                      title: "From concept to launch",
-                      category: "GAME DEVELOPMENT",
-                      image: "services/game.webp",
-                      alt: "Creative team planning a digital product",
-                    },
-                  ].map((item, index) => (
-                    <motion.article
-                      key={item.title}
-                      whileHover={{ y: -8 }}
-                      className="group relative h-[48vh] min-h-[300px] w-[78vw] max-w-[620px] overflow-hidden rounded-sm border border-white/10 bg-white/5 md:h-[58vh] md:w-[42vw] lg:h-[62vh] lg:w-[34vw]"
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.alt}
-                        loading="lazy"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent" />
-                      <div className="absolute inset-x-0 bottom-0 p-6 md:p-9">
-                        <p className="mb-3 text-[10px] font-bold tracking-[0.28em] text-amber-100/80 md:text-xs">{item.category}</p>
-                        <h3 className="text-2xl font-black text-white md:text-4xl">{item.title}</h3>
-                        <span className="mt-5 block h-px w-14 bg-amber-100 transition-all duration-500 group-hover:w-24" />
-                      </div>
-                      <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-white/80 backdrop-blur">0{index + 1} / 06</span>
-                    </motion.article>
-                  ))}
-                </div>
-                </div>
+    {/* Single horizontal scrolling container */}
+    <div className="w-full overflow-x-auto overscroll-x-contain pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-visible">
+      <div
+        ref={galleryTrackRef}
+        className="flex w-max items-stretch gap-5 pl-1 pr-6 md:gap-8 lg:gap-[4vw] lg:pl-[9vw] lg:pr-[9vw]"
+      >
+        {[
+          {
+            title: "Web experiences",
+            category: "WEB DEVELOPMENT",
+            image: "/services/web.webp",
+            alt: "Website design and web development showcase",
+          },
+          {
+            title: "Apps that connect",
+            category: "APP DEVELOPMENT",
+            image: "/services/app.webp",
+            alt: "Mobile application development showcase",
+          },
+          {
+            title: "Thoughtful design",
+            category: "UI / UX DESIGN",
+            image: "/services/pamphlet.webp",
+            alt: "Digital design and creative design showcase",
+          },
+          {
+            title: "Engineering ideas",
+            category: "SOFTWARE DEVELOPMENT",
+            image: "/services/software.webp",
+            alt: "Software development showcase",
+          },
+          {
+            title: "Built for performance",
+            category: "DIGITAL SOLUTIONS",
+            image: "/services/itconsult.webp",
+            alt: "IT consulting and digital solutions showcase",
+          },
+          {
+            title: "From concept to launch",
+            category: "GAME DEVELOPMENT",
+            image: "/services/game.webp",
+            alt: "Game development showcase",
+          },
+        ].map((item, index) => (
+          <motion.article
+            key={item.title}
+            whileHover={{ y: -5 }}
+            className="group relative flex w-[86vw] max-w-[620px] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#080b12] sm:w-[72vw] md:w-[55vw] lg:w-[34vw]"
+          >
+            {/* Complete image: no cropping or zoom */}
+            <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#080b12]">
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading={index < 2 ? "eager" : "lazy"}
+                decoding="async"
+                draggable="false"
+                className="block h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
+              />
 
-                <div className="mt-8 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.22em] text-gray-500 lg:absolute lg:bottom-8 lg:left-[9vw]">
-                  <span className="h-px w-10 bg-amber-200" /> Keep scrolling to explore
-                </div>
-                <div className="absolute bottom-0 left-6 right-6 h-px bg-white/10 lg:left-[9vw] lg:right-[9vw]">
-                  <div ref={galleryProgressRef} className="h-px w-full origin-left bg-amber-100/80" style={{ transform: "scaleX(0)" }} />
-                </div>
+              {/* Readable text overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent" />
+
+              <span className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/50 px-3 py-1 text-xs text-white/90 backdrop-blur-md md:right-5 md:top-5">
+                {String(index + 1).padStart(2, "0")} / 06
+              </span>
+
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 md:p-8">
+                <p className="mb-2 text-[10px] font-bold tracking-[0.2em] text-amber-100/90 sm:text-xs sm:tracking-[0.28em]">
+                  {item.category}
+                </p>
+
+                <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl lg:text-4xl">
+                  {item.title}
+                </h3>
+
+                <span className="mt-4 block h-px w-14 bg-amber-100 transition-all duration-500 group-hover:w-24" />
               </div>
-            </section>
+            </div>
+          </motion.article>
+        ))}
+      </div>
+    </div>
+
+    {/* Scroll progress indicator */}
+    <div className="mt-6 flex items-center gap-3 px-1 text-xs font-medium uppercase tracking-[0.18em] text-gray-500 lg:absolute lg:bottom-2 lg:left-[9vw] lg:mt-0">
+      <span className="h-px w-10 shrink-0 bg-amber-200" />
+      <span>Keep scrolling to explore</span>
+    </div>
+
+    <div className="absolute bottom-0 left-6 right-6 h-px bg-white/10 lg:left-[9vw] lg:right-[9vw]">
+      <div
+        ref={galleryProgressRef}
+        className="h-px w-full origin-left bg-amber-100/80"
+        style={{ transform: "scaleX(0)" }}
+      />
+    </div>
+  </div>
+</section>
+
 
         {/* EXTRA COMPANY STORY — added section */}
         <section className="relative mb-24 overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-white/[0.03] to-blue-500/10 px-7 py-12 md:px-14 md:py-16">
@@ -1867,21 +1840,14 @@ const About = () => {
                }}
 
                whileInView={{
-
                  opacity: 1,
-
                  y: 0,
-
                }}
-
                viewport={{
-
                  once: true,
 
                }}
-
                className="bg-gradient-to-r from-cyan-500/10 to-white/5 border border-white/10 rounded-[40px] p-8 md:p-16 text-center mb-24"
-
              >
                <p className="text-cyan-400 uppercase tracking-[5px] mb-4">
 
@@ -1912,9 +1878,7 @@ const About = () => {
          </div>
 
        </>
-
      );
-
 };
 
 export default About;
