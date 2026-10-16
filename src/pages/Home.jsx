@@ -208,9 +208,9 @@ const technologies = [
 const latestApps = [
   {
     key: "fileConverter",
-    image: "/projects/fileconverter.webp",
+    image: "/projects/allinone.webp",
     link:
-      "https://play.google.com/store/apps/details?id=com.chtechgiant.everything_converter",
+      "https://play.google.com/store/apps/details?id=com.chtechgiant.all_in_one_converter",
   },
   {
     key: "fileRenamer",
