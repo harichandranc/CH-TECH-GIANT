@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -43,65 +44,23 @@ const services = [
 ];
 
 const languages = [
-  {
-    code: "en",
-    path: "/services",
-    label: "🇺🇸 English",
-  },
-  {
-    code: "zh",
-    path: "/zh/services",
-    label: "🇨🇳 简体中文",
-  },
-  {
-    code: "es",
-    path: "/es/services",
-    label: "🇪🇸 Español",
-  },
-  {
-    code: "pt",
-    path: "/pt/services",
-    label: "🇧🇷 Português",
-  },
-  {
-    code: "de",
-    path: "/de/services",
-    label: "🇩🇪 Deutsch",
-  },
-  {
-    code: "ko",
-    path: "/ko/services",
-    label: "🇰🇷 한국어",
-  },
-  {
-    code: "ja",
-    path: "/ja/services",
-    label: "🇯🇵 日本語",
-  },
+  { code: "en", path: "/services", label: "🇺🇸 English" },
+  { code: "zh", path: "/zh/services", label: "🇨🇳 简体中文" },
+  { code: "es", path: "/es/services", label: "🇪🇸 Español" },
+  { code: "pt", path: "/pt/services", label: "🇧🇷 Português" },
+  { code: "de", path: "/de/services", label: "🇩🇪 Deutsch" },
+  { code: "ko", path: "/ko/services", label: "🇰🇷 한국어" },
+  { code: "ja", path: "/ja/services", label: "🇯🇵 日本語" },
 ];
 
-const supportedLanguages = [
-  "zh",
-  "es",
-  "pt",
-  "de",
-  "ko",
-  "ja",
-];
+const supportedLanguages = ["zh", "es", "pt", "de", "ko", "ja"];
 
 const Services = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
 
-  const language = supportedLanguages.includes(lang)
-    ? lang
-    : "en";
-
+  const language = supportedLanguages.includes(lang) ? lang : "en";
   const t = translations[language];
-
-  /* =====================================================
-     AUTO LANGUAGE DETECTION
-  ===================================================== */
 
   useEffect(() => {
     if (lang) return;
@@ -125,70 +84,51 @@ const Services = () => {
     }
   }, [lang, navigate]);
 
-  /* =====================================================
-     LOCALIZED SERVICE PATH
-  ===================================================== */
-
   const getLocalizedPath = (path) => {
-    if (language === "en") {
-      return path;
-    }
-
-    return `/${language}${path}`;
+    return language === "en" ? path : `/${language}${path}`;
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-6 overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-black px-4 py-6 text-white sm:px-6">
+      <div className="mx-auto max-w-7xl">
 
-      <div className="max-w-7xl mx-auto">
+        {/* LANGUAGE SWITCHER */}
+        <div className="mb-8 flex justify-center md:mb-16">
+          <div className="relative z-50 flex w-full justify-end md:hidden">
+            <select
+              id="mobile-language"
+              value={language}
+              onChange={(e) => {
+                const selectedLanguage = languages.find(
+                  (item) => item.code === e.target.value
+                );
 
-        {/* =================================================
-            LANGUAGE SWITCHER
-            Desktop = Buttons
-            Mobile = Dropdown
-        ================================================= */}
+                if (selectedLanguage) {
+                  navigate(selectedLanguage.path);
+                }
+              }}
+              className="h-10 w-36 cursor-pointer rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none transition focus:border-cyan-400"
+            >
+              {languages.map((item) => (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="bg-[#050816] text-white"
+                >
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <div className="flex justify-center mb-2 md:mb-16">
-
-          {/* MOBILE LANGUAGE DROPDOWN */}
-          <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
-  <select
-    id="mobile-language"
-    value={language}
-    onChange={(e) => {
-      const selectedLanguage = languages.find(
-        (item) => item.code === e.target.value
-      );
-
-      if (selectedLanguage) {
-        navigate(selectedLanguage.path);
-      }
-    }}
-    className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
-  >
-    {languages.map((item) => (
-      <option
-        key={item.code}
-        value={item.code}
-        className="bg-[#050816] text-white"
-      >
-        {item.label}
-      </option>
-    ))}
-  </select>
-</div>
-
-
-          {/* DESKTOP LANGUAGE BUTTONS */}
-
-          <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
+          <div className="hidden flex-wrap justify-center gap-3 pt-20 md:flex">
             {languages.map((item) => (
               <Link
                 key={item.code}
                 to={item.path}
-                className={`px-5 py-2 rounded-full border transition ${
+                className={`rounded-full border px-5 py-2 transition ${
                   language === item.code
-                    ? "bg-cyan-500 text-black border-cyan-500"
+                    ? "border-cyan-500 bg-cyan-500 text-black"
                     : "border-white/20 hover:border-cyan-500"
                 }`}
               >
@@ -196,129 +136,84 @@ const Services = () => {
               </Link>
             ))}
           </div>
-
         </div>
 
-        {/* =================================================
-            HEADER
-        ================================================= */}
-
+        {/* PAGE HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="mb-14 text-center md:mb-20"
         >
-
-          <p className="text-cyan-400 uppercase tracking-[4px] mb-4">
+          <p className="mb-4 uppercase tracking-[4px] text-cyan-400">
             {t.ourServices}
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-black mb-6">
-
-            {t.whatWe}
-
-            {" "}
-
-            <span className="text-cyan-400">
-              {t.provide}
-            </span>
-
+          <h1 className="mb-6 text-4xl font-black sm:text-5xl md:text-7xl">
+            {t.whatWe}{" "}
+            <span className="text-cyan-400">{t.provide}</span>
           </h1>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-400 sm:text-lg">
             {t.servicesDescription}
           </p>
-
         </motion.div>
 
-        {/* =================================================
-            SERVICES GRID
-        ================================================= */}
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        {/* SERVICES GRID */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
-
-            const serviceData =
-              t.serviceData[service.key];
+            const serviceData = t.serviceData[service.key];
 
             return (
               <Link
                 to={getLocalizedPath(service.link)}
                 key={service.key}
-                className="block"
+                className="block min-w-0"
               >
-
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 60,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1,
-                  }}
-                  whileHover={{
-                    y: -10,
-                  }}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl cursor-pointer h-full"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -6 }}
+                  className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-[#0b0b0b] transition-colors duration-300 hover:border-cyan-500/40"
                 >
-
-                  {/* IMAGE */}
-
-                  <div className="relative h-72 overflow-hidden">
-
+                  {/* FULL THUMBNAIL — NO CROPPING OR ZOOM */}
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#080b12]">
                     <img
                       src={service.image}
                       alt={serviceData.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                      loading={index < 3 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="block h-full w-full object-contain object-center transition-transform duration-500"
                     />
+                  </div>
 
-                    {/* OVERLAY */}
+                  {/* SERVICE INFORMATION */}
+                  <div className="relative p-5 sm:p-6">
+                    <h2 className="mb-3 text-2xl font-bold leading-tight transition-colors duration-300 group-hover:text-cyan-400 sm:text-3xl">
+                      {serviceData.title}
+                    </h2>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
+                    <p className="leading-relaxed text-gray-400">
+                      {serviceData.description}
+                    </p>
+
+                    <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-cyan-400">
+                      <span>Explore Service</span>
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
                     </div>
-
                   </div>
 
-                  {/* CONTENT */}
-
-                  <div className="relative p-8 -mt-20 z-10">
-
-                    <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-2xl p-6">
-
-                      <h2 className="text-3xl font-bold mb-4">
-                        {serviceData.title}
-                      </h2>
-
-                      <p className="text-gray-400 leading-relaxed">
-                        {serviceData.description}
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                  {/* GLOW EFFECT */}
-
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition duration-500">
-                  </div>
-
+                  {/* SUBTLE HOVER GLOW */}
+                  <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/0 transition duration-300 group-hover:ring-cyan-400/20" />
                 </motion.div>
-
               </Link>
             );
           })}
-
         </div>
-
       </div>
-
     </div>
   );
 };
