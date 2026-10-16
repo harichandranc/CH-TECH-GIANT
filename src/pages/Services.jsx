@@ -12,32 +12,32 @@ const services = [
   },
   {
     key: "softwareDevelopment",
-    image: "/services/software.jpg",
+    image: "/services/software.webp",
     link: "/software-development",
   },
   {
     key: "webDevelopment",
-    image: "/services/web.jpg",
+    image: "/services/web.webp",
     link: "/web-development",
   },
   {
     key: "gameDevelopment",
-    image: "/services/game.jpeg",
+    image: "/services/game.webp",
     link: "/game-development",
   },
   {
     key: "itConsulting",
-    image: "/services/itconsult.jpg",
+    image: "/services/itconsult.webp",
     link: "/it-consulting",
   },
   {
     key: "pamphletDesign",
-    image: "/services/pamphlet.png",
+    image: "/services/pamphlet.webp",
     link: "/pamphlet-design",
   },
   {
     key: "invoiceDesign",
-    image: "/services/invoice.png",
+    image: "/services/invoice.webp",
     link: "/invoice-design",
   },
 ];
