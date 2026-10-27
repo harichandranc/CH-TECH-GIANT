@@ -44,7 +44,7 @@ const projects = [
   {
     key: "hospitalManagementSystem",
     category: "software",
-    image: "/projects/hospitalmanagementsystem.webp",
+    image: "/projects/hms.webp",
     link: "/software-development/hospital-management-system",
   },
   {
