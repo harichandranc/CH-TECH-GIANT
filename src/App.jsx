@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apps from "./pages/Apps";
 import AdminDashboard from "./pages/AdminDashboard";
+import BookPortfolio from "./pages/BookPortfolio";
 
 import WebCodshop from "./pages/apps/WebCodshop";
 import WebCodshopZh from "./pages/apps/WebCodshopZh";
@@ -184,6 +185,8 @@ function App() {
             <Route path="/blog/web-codshop/zh/react-website-projects" element={<ReactWebsiteProjectsZh />}/>
             <Route path="/blog/web-codshop/next-js-website-projects" element={<NextJsWebsiteProjects />}/>
             <Route path="/blog/web-codshop/zh/next-js-website-projects" element={<NextJsWebsiteProjectsZh />}/>
+
+            <Route path="/book-portfolio" element={<BookPortfolio />} />
 
             {/* ADMIN DASHBOARD */}
             <Route

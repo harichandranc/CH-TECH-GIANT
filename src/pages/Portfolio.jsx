@@ -77,6 +77,12 @@ const projects = [
     image: "/projects/img2pdf.webp",
     link: "https://play.google.com/store/apps/details?id=com.chtechgiant.image_to_pdf_converter&pcampaignid=web_share",
   },
+  {
+    key: "BookPortfolio",
+    category: "books",
+    image: "images/books/thumbnail.png",
+    link: "https://chtechgiant.com/book-portfolio",
+  },
 ];
 
 const languages = [
@@ -132,6 +138,7 @@ const filters = [
   "app",
   "software",
   "game",
+  "books",
 ];
 
 const Portfolio = () => {
