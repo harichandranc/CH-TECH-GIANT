@@ -389,7 +389,7 @@ const About = () => {
          ===================================================== */}
          <div
   ref={pageRef}
-  className="relative isolate min-h-screen w-full max-w-full overflow-x-clip bg-[#050816] px-4 text-white sm:px-6"
+  className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-x-clip bg-[#050816] px-4 pt-36 text-white sm:px-6 sm:pt-36 md:pt-0"
 >
       {/* Parallax atmosphere — decorative only, existing content stays above it. */}
       <motion.div
@@ -402,13 +402,13 @@ const About = () => {
         aria-hidden="true"
         className="pointer-events-none absolute top-[38%] -right-56 h-[32rem] w-[32rem] rounded-full bg-blue-600/10 blur-[130px]"
       />
-           <div className="max-w-7xl mx-auto">
+           <div className="mx-auto w-full min-w-0 max-w-7xl">
             {/* 
             LANGUAGE SWITCHER
             Same positioning as Services page */}
-<div className="flex justify-center mb-2 md:mb-16">
+<div className="flex min-w-0 justify-center mb-2 md:mb-16">
      {/* MOBILE LANGUAGE DROPDOWN */}
-     <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
+     <div className="relative z-50 mb-6 flex w-full min-w-0 justify-end md:hidden">
 
        <select
 
@@ -503,15 +503,15 @@ const About = () => {
                transition={{
                  duration: 0.7,
                }}
-               className="mb-16 pt-12 text-center sm:mb-24"
+               className="mx-auto mb-14 w-full min-w-0 max-w-5xl pt-4 text-center sm:mb-24 sm:pt-12"
              
                >
-               <p className="text-gray-400 uppercase tracking-[5px] mb-4">
+               <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-gray-400 sm:text-sm sm:tracking-[5px]">
 
                  {aboutT.hero.eyebrow}
 
                </p>
-               <h1 className="text-4xl md:text-7xl font-black leading-tight mb-8">
+               <h1 className="mb-6 break-words text-3xl font-black leading-tight sm:mb-8 sm:text-4xl md:text-7xl">
                  {aboutT.hero.title}
                  <span className="block text-white/80">
 
@@ -519,7 +519,7 @@ const About = () => {
 
                  </span>
                </h1>
-               <p className="max-w-4xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
+               <p className="mx-auto max-w-4xl break-words px-1 text-base leading-relaxed text-gray-400 sm:text-lg">
 
                  {aboutT.hero.description}
 
@@ -528,29 +528,31 @@ const About = () => {
              {/* =================================================
                  MAIN SECTION
              ================================================= */}
-             <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+             <div className="mb-16 grid w-full min-w-0 grid-cols-1 items-center gap-10 sm:gap-12 lg:mb-24 lg:grid-cols-2 lg:gap-20">
                {/* IMAGE */}
                {/* RESPONSIVE ABOUT IMAGE */}
                 <motion.div
-                  initial={{ opacity: 0, x: -40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  data-parallax="image"
-                  className="w-full min-w-0 max-w-full overflow-hidden"
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.65, ease: "easeOut" }}
+                  className="relative mx-auto w-full min-w-0 max-w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-2xl sm:rounded-3xl"
                 >
                   <img
                     src="/about/about.png"
                     alt="CH TECH GIANT — Software, Website, App and IT Services"
                     loading="lazy"
                     decoding="async"
-                    className="block h-auto w-full max-w-full rounded-2xl border border-white/10 shadow-2xl sm:rounded-3xl"
+                    className="block h-auto w-full max-w-full object-contain"
+                    style={{ width: "100%", height: "auto", maxWidth: "100%" }}
                   />
                 </motion.div>
                {/* CONTENT */}
                <motion.div
+                 className="min-w-0"
                  initial={{
                    opacity: 0,
-                   x: 40,
+                   x: 0,
                  }}
                  animate={{
                    opacity: 1,
@@ -750,7 +752,7 @@ const About = () => {
                    </span>
                  </h2>
                </motion.div>
-               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+               <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                  {aboutT.services.items.map(
                    (service, index) => (
                      <motion.div
@@ -1232,7 +1234,7 @@ const About = () => {
                  once: true,
 
                }}
-               className="bg-gradient-to-r from-cyan-500/10 to-white/5 border border-white/10 rounded-[40px] p-8 md:p-16 text-center mb-24"
+               className="mb-16 rounded-3xl border border-white/10 bg-gradient-to-r from-cyan-500/10 to-white/5 p-6 text-center sm:mb-24 sm:rounded-[40px] sm:p-8 md:p-16"
              >
                <p className="text-cyan-400 uppercase tracking-[5px] mb-4">
 
