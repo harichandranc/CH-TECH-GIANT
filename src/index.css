@@ -1,4 +1,15 @@
+
 @import "tailwindcss";
+
+/* ================================
+   GLOBAL BASE STYLES
+================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body,
@@ -6,18 +17,41 @@ body,
   margin: 0;
   padding: 0;
   min-height: 100%;
+  width: 100%;
+  max-width: 100%;
   background-color: #050816;
   color: white;
 }
 
 html {
   background-color: #050816;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #050816;
-  overflow-x: hidden;
+  overflow-x: clip;
   cursor: none;
+}
+
+/* Prevent media from exceeding the viewport */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/* Avoid long text causing horizontal overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 /* ================================
@@ -26,6 +60,8 @@ body {
 
 .custom-cursor {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 12px;
   height: 12px;
   border: 2px solid #22d3ee;
@@ -57,7 +93,10 @@ body {
     0 0 25px rgba(34, 211, 238, 0.6);
 }
 
-/* Hide custom cursor on touch devices */
+/* ================================
+   TOUCH DEVICES
+================================ */
+
 @media (hover: none), (pointer: coarse) {
   body {
     cursor: auto;
@@ -65,5 +104,21 @@ body {
 
   .custom-cursor {
     display: none;
+  }
+}
+
+/* ================================
+   MOBILE VIEWPORT SAFETY
+================================ */
+
+@media (max-width: 767px) {
+  html,
+  body,
+  #root {
+    min-width: 0;
+  }
+
+  img {
+    height: auto;
   }
 }
