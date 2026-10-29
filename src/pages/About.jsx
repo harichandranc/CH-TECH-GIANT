@@ -454,7 +454,6 @@ const About = () => {
      <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
 
        {languages.map((item) => (
-
          <button
 
            key={item.code}
@@ -472,7 +471,6 @@ const About = () => {
                : "border-white/20 hover:border-cyan-500"
 
            }`}
-
          >
 
            {item.label}
@@ -520,13 +518,7 @@ const About = () => {
                    {aboutT.hero.titleHighlight}
 
                  </span>
-
-
-
                </h1>
-
-
-
                <p className="max-w-4xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
 
                  {aboutT.hero.description}
@@ -538,25 +530,22 @@ const About = () => {
              ================================================= */}
              <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
                {/* IMAGE */}
-               <motion.div
-                 initial={{
-                   opacity: 0,
-                   x: -40,
-                 }}
-                 animate={{
-                   opacity: 1,
-                   x: 0,
-                 }}
-                 transition={{
-                   duration: 0.8,
-                 }}               
-                 data-parallax="image">
-                 <img src="/about/about.png"
-                   alt="About CH TECH GIANT"
-                   loading="lazy"
-                   className="rounded-3xl border border-white/10 shadow-2xl object-cover w-full"
-                 />
-               </motion.div>
+               {/* RESPONSIVE ABOUT IMAGE */}
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  data-parallax="image"
+                  className="w-full min-w-0 max-w-full overflow-hidden"
+                >
+                  <img
+                    src="/about/about.png"
+                    alt="CH TECH GIANT — Software, Website, App and IT Services"
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full max-w-full rounded-2xl border border-white/10 shadow-2xl sm:rounded-3xl"
+                  />
+                </motion.div>
                {/* CONTENT */}
                <motion.div
                  initial={{
