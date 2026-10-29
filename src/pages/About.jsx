@@ -389,7 +389,7 @@ const About = () => {
          ===================================================== */}
          <div
   ref={pageRef}
-  className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-x-clip bg-[#050816] px-4 pt-24 text-white sm:px-6 sm:pt-36 md:pt-0"
+  className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-x-clip bg-[#050816] px-4 pt-24 text-white sm:px-6 sm:pt-24 md:pt-0"
 >
       {/* Parallax atmosphere — decorative only, existing content stays above it. */}
       <motion.div
