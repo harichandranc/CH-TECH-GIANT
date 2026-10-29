@@ -417,8 +417,7 @@ export default function WebCodshop() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Download WEB CODSHOP through your preferred platform and
-                explore website source code, templates and professional web
+                Download WEB CODSHOP through play store and explore website source code, templates and professional web
                 development resources.
               </p>
 
@@ -428,27 +427,6 @@ export default function WebCodshop() {
                   title="Google Play"
                   subtitle="Download from"
                   href="https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop"
-                />
-
-                <StoreButton
-                  icon={Globe}
-                  title="Huawei AppGallery"
-                  subtitle="Available on"
-                  href="https://appgallery.huawei.com/app/CPLACEHOLDER"
-                />
-
-                <StoreButton
-                  icon={Smartphone}
-                  title="Xiaomi GetApps"
-                  subtitle="Available on"
-                  href="https://global.app.mi.com/details?appId=com.chtechgiant.webcodshop"
-                />
-
-                <StoreButton
-                  icon={Download}
-                  title="Direct APK"
-                  subtitle="Download"
-                  href="https://chtechgiant.com/downloads/web-codshop.apk"
                 />
               </div>
             </motion.div>
