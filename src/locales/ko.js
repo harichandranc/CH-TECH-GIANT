@@ -1628,6 +1628,7 @@ const ko = {
       app: "앱",
       software: "소프트웨어",
       game: "게임",
+      books: "Books",
     },
 
     categories: {
@@ -1635,6 +1636,7 @@ const ko = {
       web: "웹",
       software: "소프트웨어",
       game: "게임",
+      books: "Books",
     },
 
     actions: {
@@ -1714,6 +1716,11 @@ const ko = {
         title: "Image To PDF",
         description:
           "이미지를 고품질 PDF 파일로 변환할 수 있습니다.",
+      },
+      BookPortfolio: {
+        title: "도서 포트폴리오",
+        description:
+          "도서와 교육 자료 컬렉션을 살펴보세요.",
       },
     },
   },

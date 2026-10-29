@@ -1618,6 +1618,7 @@ const zh = {
       app: "应用",
       software: "软件",
       game: "游戏",
+      books: "Books",
     },
 
     categories: {
@@ -1625,6 +1626,7 @@ const zh = {
       web: "网站",
       software: "软件",
       game: "游戏",
+      books: "Books",
     },
 
     actions: {
@@ -1705,6 +1707,11 @@ const zh = {
         description:
           "将图片转换为高质量 PDF 文件。",
       },
+      BookPortfolio: {
+  title: "图书作品集",
+  description:
+    "探索我们的图书和教育资源合集。",
+},
     },
   },
   // =========================

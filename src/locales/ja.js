@@ -1566,6 +1566,7 @@ const ja = {
       app: "アプリ",
       software: "ソフトウェア",
       game: "ゲーム",
+      books: "Books",
     },
 
     categories: {
@@ -1573,6 +1574,7 @@ const ja = {
       web: "Web",
       software: "ソフトウェア",
       game: "ゲーム",
+      books: "Books",
     },
 
     actions: {
@@ -1652,6 +1654,11 @@ const ja = {
         title: "Image To PDF",
         description:
           "画像を高品質なPDFファイルに変換できます。",
+      },
+      BookPortfolio: {
+        title: "書籍ポートフォリオ",
+        description:
+          "書籍や教育関連コンテンツのコレクションをご覧ください。",
       },
     },
   },

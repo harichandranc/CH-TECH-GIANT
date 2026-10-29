@@ -1632,6 +1632,7 @@ const pt = {
       app: "Aplicativo",
       software: "Software",
       game: "Jogo",
+      books: "Books"
     },
 
     categories: {
@@ -1639,6 +1640,7 @@ const pt = {
       web: "Web",
       software: "Software",
       game: "Jogo",
+      books: "Books"
     },
 
     actions: {
@@ -1718,6 +1720,11 @@ const pt = {
         title: "Imagem para PDF",
         description:
           "Converta imagens em arquivos PDF de alta qualidade.",
+      },
+      BookPortfolio: {
+        title: "Portfólio de Livros",
+        description:
+          "Explore nossa coleção de livros e recursos educacionais.",
       },
     },
   },

@@ -1632,6 +1632,7 @@ const de = {
       app: "App",
       software: "Software",
       game: "Spiel",
+      books: "Books",
     },
 
     categories: {
@@ -1639,6 +1640,7 @@ const de = {
       web: "Web",
       software: "Software",
       game: "Spiel",
+      books: "Books",
     },
 
     actions: {
@@ -1718,6 +1720,11 @@ const de = {
         title: "Bild zu PDF",
         description:
           "Konvertieren Sie Bilder in hochwertige PDF-Dateien.",
+      },
+      BookPortfolio: {
+        title: "Buchportfolio",
+        description:
+          "Entdecken Sie unsere Sammlung von Büchern und Lernmaterialien.",
       },
     },
   },
