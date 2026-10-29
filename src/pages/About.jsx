@@ -1,25 +1,15 @@
 import { useEffect, useRef } from "react";
-
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
 import { useNavigate, useParams } from "react-router-dom";
-
 import { Helmet } from "react-helmet-async";
-
-
-
 import { translations } from "../locales";
-
-
 
 const languages = [
 
      {
-
        code: "en",
 
        path: "/about",
@@ -108,28 +98,14 @@ const supportedLanguages = [
 
 ];
 
-
-
 const About = () => {
-
      const { lang } = useParams();
-
      const navigate = useNavigate();
-
-
-
      const language = supportedLanguages.includes(lang)
-
        ? lang
-
        : "en";
-
-
-
      const t = translations[language] || translations.en;
-
      const aboutT = t.about || translations.en.about;
-
   // GSAP + ScrollTrigger power the page parallax and pinned horizontal gallery.
   const pageRef = useRef(null);
   const galleryRef = useRef(null);
@@ -139,11 +115,9 @@ const About = () => {
   useEffect(() => {
     const page = pageRef.current;
     if (!page) return undefined;
-
     let refreshFrame;
     const track = galleryTrackRef.current;
     const media = gsap.matchMedia();
-
     const context = gsap.context(() => {
       // Keep decorative parallax subtle so it never shifts whole sections.
       gsap.utils.toArray("[data-parallax]", page).forEach((element) => {
@@ -233,30 +207,15 @@ const About = () => {
       context.revert();
     };
   }, []);
-
-
      /* =====================================================
-
         AUTO LANGUAGE DETECTION
-
      ===================================================== */
-
-
-
      useEffect(() => {
 
        if (lang) return;
-
-
-
        const browserLanguage = navigator.language.toLowerCase();
-
-
-
        if (browserLanguage.startsWith("zh")) {
-
          navigate("/zh/about", { replace: true });
-
        } else if (browserLanguage.startsWith("es")) {
 
          navigate("/es/about", { replace: true });
@@ -284,87 +243,41 @@ const About = () => {
        }
 
      }, [lang, navigate]);
-
-
-
      return (
 
        <>
-
          {/* =====================================================
-
              SEO
-
          ===================================================== */}
-
-
-
          <Helmet>
 
            <title>{aboutT.seo.title}</title>
-
-
-
            <meta
-
              name="description"
-
              content={aboutT.seo.description}
-
            />
-
-
-
            <meta
-
              name="keywords"
-
              content={aboutT.seo.keywords}
 
            />
-
-
-
            <meta
-
              name="author"
-
              content={aboutT.seo.author}
-
            />
-
-
-
            <meta
-
              property="og:title"
-
              content={aboutT.seo.ogTitle}
-
            />
-
-
-
            <meta
-
              property="og:description"
-
              content={aboutT.seo.ogDescription}
-
            />
-
-
-
            <meta
-
              property="og:image"
-
-             content="https://chtechgiant.com/about-preview.png"
+             content="https://chtechgiant.com/about.png"
 
            />
-
-
-
            <meta
 
              property="og:url"
@@ -378,25 +291,13 @@ const About = () => {
                  : `/${language}/about`
 
              }`}
-
            />
-
-
-
            <meta property="og:type" content="website" />
-
-
-
            <meta
-
              name="twitter:card"
-
              content="summary_large_image"
 
            />
-
-
-
            <link
 
              rel="canonical"
@@ -412,9 +313,6 @@ const About = () => {
              }`}
 
            />
-
-
-
            <meta
 
              name="theme-color"
@@ -422,17 +320,9 @@ const About = () => {
              content="#050816"
 
            />
-
-
-
            {/* =====================================================
-
                STRUCTURED DATA
-
            ===================================================== */}
-
-
-
            <script type="application/ld+json">
 
              {JSON.stringify({
@@ -494,17 +384,9 @@ const About = () => {
            </script>
 
          </Helmet>
-
-
-
          {/* =====================================================
-
              PAGE
-
          ===================================================== */}
-
-
-
          <div
   ref={pageRef}
   className="relative isolate min-h-screen w-full max-w-full overflow-x-clip bg-[#050816] px-4 text-white sm:px-6"
@@ -520,27 +402,12 @@ const About = () => {
         aria-hidden="true"
         className="pointer-events-none absolute top-[38%] -right-56 h-[32rem] w-[32rem] rounded-full bg-blue-600/10 blur-[130px]"
       />
-
-
-
            <div className="max-w-7xl mx-auto">
-
-
-
-             {/* 
-       LANGUAGE SWITCHER
-       Same positioning as Services page */}
-
-
-
+            {/* 
+            LANGUAGE SWITCHER
+            Same positioning as Services page */}
 <div className="flex justify-center mb-2 md:mb-16">
-
-
-
      {/* MOBILE LANGUAGE DROPDOWN */}
-
-
-
      <div className="md:hidden flex justify-end w-full relative z-50 mb-8">
 
        <select
@@ -577,25 +444,13 @@ const About = () => {
              value={item.code}
 
              className="bg-[#050816] text-white"
-
            >
-
              {item.label}
-
            </option>
-
          ))}
-
        </select>
-
      </div>
-
-
-
      {/* DESKTOP LANGUAGE BUTTONS */}
-
-
-
      <div className="hidden md:flex justify-center gap-3 flex-wrap pt-20">
 
        {languages.map((item) => (
@@ -625,21 +480,11 @@ const About = () => {
          </button>
 
        ))}
-
      </div>
-
-
-
 </div>
-
-
-
              {/* =================================================
                  HEADER
              ================================================= */}
-
-
-
              <motion.div
 
                initial={{
@@ -657,13 +502,9 @@ const About = () => {
                  y: 0,
 
                }}
-
                transition={{
-
                  duration: 0.7,
-
                }}
-
                className="mb-16 pt-12 text-center sm:mb-24"
              
                >
@@ -691,201 +532,86 @@ const About = () => {
                  {aboutT.hero.description}
 
                </p>
-
-
-
              </motion.div>
-
-
-
              {/* =================================================
-
                  MAIN SECTION
-
              ================================================= */}
-
-
-
              <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
-
-
-
                {/* IMAGE */}
-
-
-
                <motion.div
-
                  initial={{
-
                    opacity: 0,
-
                    x: -40,
-
                  }}
-
                  animate={{
-
                    opacity: 1,
-
                    x: 0,
-
                  }}
-
                  transition={{
-
                    duration: 0.8,
-
-                 }}
-
-               
+                 }}               
                  data-parallax="image">
-
-
-
-                 <img
-
-                   src="/about/about.jpg"
-
+                 <img src="/about/about.png"
                    alt="About CH TECH GIANT"
-
                    loading="lazy"
-
                    className="rounded-3xl border border-white/10 shadow-2xl object-cover w-full"
-
                  />
-
-
-
                </motion.div>
-
-
-
                {/* CONTENT */}
-
-
-
                <motion.div
-
                  initial={{
-
                    opacity: 0,
-
                    x: 40,
-
                  }}
-
                  animate={{
-
                    opacity: 1,
-
                    x: 0,
-
                  }}
-
                  transition={{
 
                    duration: 0.8,
 
                  }}
-
                >
                  <h2 className="text-3xl md:text-5xl font-black leading-tight mb-8">
-
                    {aboutT.main.title}
-
                  </h2>
-
-
-
                  {aboutT.main.paragraphs.map(
-
                    (paragraph, index) => (
-
                      <p
-
                        key={index}
-
                        className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 last:mb-0"
-
                      >
-
                        {paragraph}
-
                      </p>
-
                    )
 
                  )}
-
-
-
                </motion.div>
-
-
-
              </div>
-
-
-
              {/* =================================================
-
                  COMPANY INFORMATION
-
              ================================================= */}
-
-
-
              <section className="mb-24">
-
-
-
                <motion.div
-
                  initial={{
-
                    opacity: 0,
-
                    y: 30,
-
                  }}
-
                  whileInView={{
-
                    opacity: 1,
-
                    y: 0,
-
                  }}
-
                  viewport={{
-
                    once: true,
-
                  }}
-
                  className="text-center mb-16"
-
                >
-
-
-
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-
                    {aboutT.company.eyebrow}
-
                  </p>
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black">
-
-
-
                    {aboutT.company.title}
-
-
-
                    <span className="text-cyan-400">
 
                      {" "}
@@ -893,257 +619,99 @@ const About = () => {
                      {aboutT.company.titleHighlight}
 
                    </span>
-
-
-
                  </h2>
-
-
-
                </motion.div>
-
-
-
                <motion.div
 
                  initial={{
-
                    opacity: 0,
-
                    y: 40,
-
                  }}
-
                  whileInView={{
-
                    opacity: 1,
-
                    y: 0,
-
                  }}
-
                  viewport={{
-
                    once: true,
-
                  }}
-
                  transition={{
-
                    duration: 0.7,
-
                  }}
-
                  className="bg-white/5 border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-xl"
-
                >
-
-
-
                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-
-
-
                    {/* LEGAL NAME */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-
                        {aboutT.company.legalNameLabel}
-
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
-
                        {aboutT.company.legalName}
-
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* CIN */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-
                        {aboutT.company.cinLabel}
-
                      </p>
-
-
-
                      <p className="text-cyan-400 text-lg font-semibold break-all">
-
                        {aboutT.company.cin}
-
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* ENTITY TYPE */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-
                        {aboutT.company.entityTypeLabel}
-
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
-
                        {aboutT.company.entityType}
-
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* INCORPORATION */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-
                        {aboutT.company.incorporationLabel}
-
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
-
                        {aboutT.company.incorporation}
-
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* ROC */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
-
                        {aboutT.company.rocLabel}
-
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
-
                        {aboutT.company.roc}
-
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* DIRECTOR */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
 
                        {aboutT.company.directorLabel}
 
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
 
                        {aboutT.company.director}
 
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* APPOINTMENT DATE */}
-
-
-
                    <div>
-
-
-
                      <p className="text-gray-500 text-sm uppercase tracking-wider mb-2">
 
                        {aboutT.company.appointmentLabel}
 
                      </p>
-
-
-
                      <p className="text-white text-lg font-semibold">
 
                        {aboutT.company.appointmentDate}
 
                      </p>
-
-
-
                    </div>
-
-
-
                    {/* REGISTERED ADDRESS */}
-
-
-
                    <div className="md:col-span-2">
 
 
@@ -1153,226 +721,104 @@ const About = () => {
                        {aboutT.company.addressLabel}
 
                      </p>
-
-
-
                      <p className="text-gray-300 text-base md:text-lg leading-relaxed">
 
                        {aboutT.company.address}
 
                      </p>
-
-
-
                    </div>
-
-
-
                  </div>
-
-
-
                </motion.div>
-
-
-
              </section>
-
-
-
              {/* =================================================
                  SERVICES
              ================================================= */}
 
              <section className="mb-24">
-
-
-
                <motion.div
-
                  initial={{
-
                    opacity: 0,
-
                    y: 30,
-
                  }}
-
                  whileInView={{
-
                    opacity: 1,
-
                    y: 0,
-
                  }}
-
                  viewport={{
-
                    once: true,
-
                  }}
-
                  className="text-center mb-16"
-
                >
-
-
-
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
 
                    {aboutT.services.eyebrow}
-
                  </p>
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black">
-
-
-
                    {aboutT.services.title}
-
-
-
                    <span className="text-cyan-400">
-
                      {" "}
-
                      {aboutT.services.titleHighlight}
-
                    </span>
-
-
-
                  </h2>
-
-
-
                </motion.div>
-
-
-
                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-
-
-
                  {aboutT.services.items.map(
-
                    (service, index) => (
-
                      <motion.div
-
                        key={index}
-
                        initial={{
-
                          opacity: 0,
-
                          y: 30,
-
                        }}
-
                        whileInView={{
-
                          opacity: 1,
-
                          y: 0,
-
                        }}
-
                        transition={{
-
                          delay: index * 0.08,
-
                        }}
-
                        viewport={{
-
                          once: true,
-
                        }}
-
                        className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-xl hover:border-cyan-400/30 transition"
-
                      >
-
-
-
                        <p className="text-gray-300 font-medium">
-
                          {service}
-
                        </p>
-
-
-
                      </motion.div>
 
                    )
-
                  )}
-
-
-
                </div>
-
-
-
              </section>
-
-
-
              {/* =================================================
                  FEATURES
              ================================================= */}
 
              <div className="mb-24">
                <motion.div
-
                  initial={{
-
                    opacity: 0,
-
                    y: 30,
-
                  }}
-
                  whileInView={{
-
                    opacity: 1,
-
                    y: 0,
-
                  }}
-
                  viewport={{
-
                    once: true,
-
                  }}
 
                  className="text-center mb-16"
 
                >
-
-
-
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
 
                    {aboutT.features.eyebrow}
 
                  </p>
-
-
-
                  <h2 className="text-3xl md:text-5xl font-black">
-
-
-
                    {aboutT.features.title}
-
-
-
                    <span className="text-cyan-400">
 
                      {" "}
@@ -1424,37 +870,23 @@ const About = () => {
                        }}
 
                        whileHover={{
-
                          y: -8,
 
                        }}
-
                        className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl hover:border-cyan-400/30 transition"
-
                      >
-
-
-
                        <h3 className="text-2xl font-bold mb-5">
 
                          {feature.title}
 
                        </h3>
-
-
-
                        <p className="text-gray-400 leading-relaxed">
 
                          {feature.description}
 
                        </p>
-
-
-
                      </motion.div>
-
                    )
-
                  )}
                </div>
              </div>
@@ -1497,9 +929,7 @@ const About = () => {
                  <h2 className="text-3xl md:text-5xl font-black">
                    {aboutT.technologies.title}
                    <span className="text-cyan-400">
-
                      {" "}
-
                      {aboutT.technologies.titleHighlight}
 
                    </span>
@@ -1512,43 +942,26 @@ const About = () => {
                        key={index}
                        initial={{
                          opacity: 0,
-
                          scale: 0.9,
-
                        }}
-
                        whileInView={{
-
                          opacity: 1,
-
                          scale: 1,
-
                        }}
-
                        transition={{
-
                          delay: index * 0.05,
-
                        }}
-
                        viewport={{
-
                          once: true,
-
                        }}
-
                        className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-gray-300 backdrop-blur-xl hover:border-cyan-400/30 transition"
-
                      >
 
                        {tech}
 
                      </motion.div>
-
                    )
-
                  )}
-
                </div>
              </section>
              {/*PROCESS*/}
@@ -1556,34 +969,20 @@ const About = () => {
                <motion.div
 
                  initial={{
-
                    opacity: 0,
-
                    y: 30,
-
                  }}
-
                  whileInView={{
-
                    opacity: 1,
-
                    y: 0,
-
                  }}
-
                  viewport={{
-
                    once: true,
-
                  }}
-
                  className="text-center mb-16"
-
                >
                  <p className="text-gray-400 uppercase tracking-[5px] mb-4">
-
                    {aboutT.process.eyebrow}
-
                  </p>
                  <h2 className="text-3xl md:text-5xl font-black">
                    {aboutT.process.title}
@@ -1830,11 +1229,8 @@ const About = () => {
                  MISSION
             ================================================= */}
              <motion.div
-
                initial={{
-
                  opacity: 0,
-
                  y: 40,
 
                }}
@@ -1876,7 +1272,6 @@ const About = () => {
            </div>
 
          </div>
-
        </>
      );
 };
