@@ -389,7 +389,7 @@ const About = () => {
          ===================================================== */}
          <div
   ref={pageRef}
-  className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-x-clip bg-[#050816] px-4 pt-30 text-white sm:px-6 sm:pt-36 md:pt-0"
+  className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-x-clip bg-[#050816] px-4 pt-24 text-white sm:px-6 sm:pt-36 md:pt-0"
 >
       {/* Parallax atmosphere — decorative only, existing content stays above it. */}
       <motion.div
@@ -432,9 +432,7 @@ const About = () => {
          }}
 
          className="h-10 w-32 rounded-xl border border-white/20 bg-[#050816] px-3 text-sm text-white outline-none backdrop-blur-xl focus:border-cyan-400 transition cursor-pointer"
-
        >
-
          {languages.map((item) => (
 
            <option
@@ -484,27 +482,18 @@ const About = () => {
                  HEADER
              ================================================= */}
              <motion.div
-
                initial={{
-
                  opacity: 0,
-
                  y: 30,
-
                }}
-
                animate={{
-
                  opacity: 1,
-
                  y: 0,
-
                }}
                transition={{
                  duration: 0.7,
                }}
-               className="mx-auto mb-14 w-full min-w-0 max-w-5xl pt-4 text-center sm:mb-24 sm:pt-12"
-             
+               className="mx-auto mb-14 w-full min-w-0 max-w-5xl pt-4 text-center sm:mb-24 sm:pt-12"             
                >
                <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-gray-400 sm:text-sm sm:tracking-[5px]">
 
