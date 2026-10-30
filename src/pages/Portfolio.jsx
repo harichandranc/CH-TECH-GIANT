@@ -48,6 +48,12 @@ const projects = [
     link: "/software-development/hospital-management-system",
   },
   {
+    key: "inventoryManagementSystem",
+    category: "software",
+    image: "/projects/inventory.webp",
+    link: "https://inventory.demo.chtechgiant.com",
+  },
+  {
     key: "invoiceMaker",
     category: "app",
     image: "/projects/invoicemaker.webp",
@@ -80,7 +86,7 @@ const projects = [
   {
     key: "BookPortfolio",
     category: "books",
-    image: "images/books/thumbnail.png",
+    image: "images/books/thumbnail.webp",
     link: "https://chtechgiant.com/book-portfolio",
   },
 ];
