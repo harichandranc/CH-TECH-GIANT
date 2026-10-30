@@ -1726,6 +1726,11 @@ const pt = {
         description:
           "Explore nossa coleção de livros e recursos educacionais.",
       },
+      inventoryManagementSystem: {
+  title: "Sistema de Gestão de Inventário",
+  description:
+    "Gira produtos, níveis de stock, vendas, compras, fornecedores e o desempenho do seu negócio com um sistema completo de gestão de inventário.",
+},
     },
   },
   // =========================

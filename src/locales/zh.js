@@ -1712,6 +1712,11 @@ const zh = {
   description:
     "探索我们的图书和教育资源合集。",
 },
+inventoryManagementSystem: {
+  title: "库存管理系统",
+  description:
+    "通过全面的库存管理系统，高效管理产品、库存水平、销售、采购、供应商和业务绩效。",
+},
     },
   },
   // =========================

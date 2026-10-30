@@ -1577,6 +1577,11 @@ const es = {
         description:
           "Explora nuestra colección de libros y recursos educativos.",
       },
+      inventoryManagementSystem: {
+  title: "Sistema de Gestión de Inventario",
+  description:
+    "Administre productos, niveles de existencias, ventas, compras, proveedores y el rendimiento de su negocio con un completo sistema de gestión de inventario.",
+},
     },
   },
   // =========================

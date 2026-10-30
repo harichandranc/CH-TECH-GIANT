@@ -1723,6 +1723,11 @@ const en = {
         description:
           "Explore our collection of books and educational resources.",
       },
+      inventoryManagementSystem: {
+        title: "Inventory Management System",
+        description:
+          "Manage products, stock levels, sales, purchases, suppliers, and business performance with a comprehensive inventory management system.",
+      },
     },
   },
   // =========================

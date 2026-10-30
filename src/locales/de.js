@@ -1726,6 +1726,11 @@ const de = {
         description:
           "Entdecken Sie unsere Sammlung von Büchern und Lernmaterialien.",
       },
+      inventoryManagementSystem: {
+        title: "Bestandsverwaltungssystem",
+        description:
+          "Verwalten Sie Produkte, Lagerbestände, Verkäufe, Einkäufe, Lieferanten und Ihre Geschäftsleistung mit einem umfassenden Bestandsverwaltungssystem.",
+      },
     },
   },
   // =========================
