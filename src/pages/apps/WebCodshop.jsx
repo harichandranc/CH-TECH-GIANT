@@ -246,9 +246,9 @@ export default function WebCodshop() {
   const playStoreUrl =
     "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop";
   const pageTitle =
-    "WEB CODSHOP App Download | Website Source Code & Templates";
+    "Web Codshop App Download | Website Source Code & Templates";
   const pageDescription =
-    "Download the WEB CODSHOP Android app by CH TECH GIANT. Explore website source code, HTML templates, React.js and Next.js projects, UI kits, admin dashboards and web development resources.";
+    "Download the Web Codshop Android app by CH TECH GIANT. Explore website source code, HTML templates, React.js and Next.js projects, UI kits, admin dashboards and web development resources.";
   const bannerUrl =
     "https://chtechgiant.com/assets/images/webcodshop-banner.png";
 
@@ -271,7 +271,7 @@ export default function WebCodshop() {
       {
         "@type": "MobileApplication",
         "@id": `${siteUrl}#app`,
-        name: "WEB CODSHOP",
+        name: "Web Codshop",
         alternateName: "Web Codshop App",
         operatingSystem: "Android",
         applicationCategory: "ShoppingApplication",
@@ -298,12 +298,12 @@ export default function WebCodshop() {
         <link rel="canonical" href={siteUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="CH TECH GIANT" />
-        <meta property="og:title" content="WEB CODSHOP App - Download for Android" />
+        <meta property="og:title" content="Web Codshop App - Download for Android" />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content={bannerUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="WEB CODSHOP App - Download for Android" />
+        <meta name="twitter:title" content="Web Codshop App - Download for Android" />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={bannerUrl} />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -338,7 +338,7 @@ export default function WebCodshop() {
                 variants={fadeUp}
                 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl"
               >
-                WEB CODSHOP App
+                Web Codshop App
                 <span className="block bg-gradient-to-r from-red-400 via-red-500 to-orange-400 bg-clip-text text-transparent">
                   Download for Android
                 </span>
@@ -351,7 +351,7 @@ export default function WebCodshop() {
                 variants={fadeUp}
                 className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
               >
-                WEB CODSHOP is an Android app by CH TECH GIANT for exploring
+                Web Codshop is an Android app by CH TECH GIANT for exploring
                 website source code, HTML templates, React.js and Next.js
                 projects, UI kits, admin dashboards and web development
                 resources. Download the app from Google Play and discover
@@ -413,7 +413,7 @@ export default function WebCodshop() {
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/40">
                 <img
                   src="/assets/images/webcodshop-banner.png"
-                  alt="WEB CODSHOP website source code and web development marketplace"
+                  alt="Web Codshop website source code and web development marketplace"
                   className="h-auto w-full rounded-[1.5rem] object-cover"
                 />
               </div>
@@ -465,7 +465,7 @@ export default function WebCodshop() {
                 <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white p-6 shadow-2xl">
                   <img
                     src="/assets/images/webcodshop-logo.png"
-                    alt="WEB CODSHOP logo"
+                    alt="Web Codshop logo"
                     className="h-52 w-52 object-contain sm:h-64 sm:w-64"
                   />
                 </div>
@@ -479,7 +479,7 @@ export default function WebCodshop() {
               variants={fadeUp}
             >
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Get WEB CODSHOP
+                Get Web Codshop
               </span>
 
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
@@ -487,7 +487,7 @@ export default function WebCodshop() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Download WEB CODSHOP through play store and explore website source code, templates and professional web
+                Download Web Codshop through play store and explore website source code, templates and professional web
                 development resources.
               </p>
 
