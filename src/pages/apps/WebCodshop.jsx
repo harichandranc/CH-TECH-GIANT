@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -241,8 +242,74 @@ function StoreButton({
 }
 
 export default function WebCodshop() {
+  const siteUrl = "https://chtechgiant.com/apps/web-codshop";
+  const playStoreUrl =
+    "https://play.google.com/store/apps/details?id=com.chtechgiant.webcodshop";
+  const pageTitle =
+    "WEB CODSHOP App Download | Website Source Code & Templates";
+  const pageDescription =
+    "Download the WEB CODSHOP Android app by CH TECH GIANT. Explore website source code, HTML templates, React.js and Next.js projects, UI kits, admin dashboards and web development resources.";
+  const bannerUrl =
+    "https://chtechgiant.com/assets/images/webcodshop-banner.png";
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}#webpage`,
+        url: siteUrl,
+        name: pageTitle,
+        description: pageDescription,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "CH TECH GIANT",
+          url: "https://chtechgiant.com/",
+        },
+        about: { "@id": `${siteUrl}#app` },
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": `${siteUrl}#app`,
+        name: "WEB CODSHOP",
+        alternateName: "Web Codshop App",
+        operatingSystem: "Android",
+        applicationCategory: "ShoppingApplication",
+        description: pageDescription,
+        url: siteUrl,
+        downloadUrl: playStoreUrl,
+        installUrl: playStoreUrl,
+        publisher: {
+          "@type": "Organization",
+          name: "CH TECH GIANT (OPC) PRIVATE LIMITED",
+          url: "https://chtechgiant.com/",
+        },
+      },
+    ],
+  };
+
   return (
-    <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
+    <>
+      <Helmet>
+        <html lang="en" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href={siteUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="CH TECH GIANT" />
+        <meta property="og:title" content="WEB CODSHOP App - Download for Android" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={bannerUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="WEB CODSHOP App - Download for Android" />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={bannerUrl} />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
+
+      <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
       {/* =========================================================
           HERO
       ========================================================== */}
@@ -271,21 +338,24 @@ export default function WebCodshop() {
                 variants={fadeUp}
                 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl"
               >
-                Discover
+                WEB CODSHOP App
                 <span className="block bg-gradient-to-r from-red-400 via-red-500 to-orange-400 bg-clip-text text-transparent">
-                  Website Source Code
+                  Download for Android
                 </span>
-                & Web Projects
+                <span className="mt-4 block text-2xl font-bold sm:text-3xl lg:text-4xl">
+                  Website Source Code &amp; Web Development Resources
+                </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
                 className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
               >
-                WEB CODSHOP is a premium marketplace dedicated to website
-                source code, web templates, and professional web development
-                resources. Discover projects that can help save development
-                time and accelerate project delivery.
+                WEB CODSHOP is an Android app by CH TECH GIANT for exploring
+                website source code, HTML templates, React.js and Next.js
+                projects, UI kits, admin dashboards and web development
+                resources. Download the app from Google Play and discover
+                resources for your next web development project.
               </motion.p>
 
               <motion.div
@@ -834,6 +904,7 @@ export default function WebCodshop() {
         </div>
       </section>
 
-    </main>
+      </main>
+    </>
   );
 }
