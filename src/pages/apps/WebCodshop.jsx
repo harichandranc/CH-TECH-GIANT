@@ -479,7 +479,7 @@ export default function WebCodshop() {
               variants={fadeUp}
             >
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
-                Get Web Codshop
+                Get WEB CODSHOP
               </span>
 
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
@@ -487,7 +487,7 @@ export default function WebCodshop() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Download Web Codshop through play store and explore website source code, templates and professional web
+                Download WEB CODSHOP through play store and explore website source code, templates and professional web
                 development resources.
               </p>
 

@@ -5,7 +5,6 @@ const FileConverterPrivacyPolicyChinese = () => {
   return (
     <div className="min-h-screen bg-[#050b14] text-gray-300 px-4 py-12">
       <div className="max-w-5xl mx-auto">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -17,12 +16,10 @@ const FileConverterPrivacyPolicyChinese = () => {
             隐私政策
           </h1>
 
-          <p className="text-gray-400">
-            File Converter
-          </p>
+          <p className="text-gray-400">File Converter</p>
 
           <p className="text-sm text-gray-500 mt-2">
-            最后更新日期：2026年9月17日
+            最后更新日期：2026年11月4日
           </p>
         </motion.div>
 
@@ -33,14 +30,12 @@ const FileConverterPrivacyPolicyChinese = () => {
           transition={{ duration: 0.7 }}
           className="bg-[#0b1422] border border-cyan-500/20 rounded-2xl p-6 md:p-10 shadow-xl"
         >
-
           {/* Introduction */}
           <section className="mb-10">
             <h2 className="section-title">1. 隐私政策简介</h2>
 
             <p>
-              File Converter 是一款文件转换和文件处理应用程序，
-              由{" "}
+              File Converter 是一款文件转换和文件处理应用程序，由{" "}
               <strong className="text-white">
                 CH TECH GIANT (OPC) PRIVATE LIMITED
               </strong>
@@ -104,7 +99,8 @@ const FileConverterPrivacyPolicyChinese = () => {
               <li>应用程序信息</li>
               <li>网络信息</li>
               <li>广告标识符</li>
-              <li>广告互动信息</li>
+              <li>广告展示和互动信息</li>
+              <li>诊断和防止欺诈所需的信息</li>
             </ul>
           </section>
 
@@ -154,7 +150,7 @@ const FileConverterPrivacyPolicyChinese = () => {
             </p>
 
             <p className="mt-4">
-              根据我们的服务器清理程序，临时文件会在处理完成后进行删除，
+              根据我们的服务器清理程序，临时文件会在处理完成后进行删除。
               在技术条件允许的情况下，我们会尽快清理这些临时文件。
             </p>
 
@@ -173,33 +169,45 @@ const FileConverterPrivacyPolicyChinese = () => {
             </p>
 
             <p className="mt-4">
-              我们的应用程序目前使用{" "}
-              <strong className="text-white">
-                Start.io
-              </strong>{" "}
-              提供广告服务。
+              我们的应用程序使用 Unity LevelPlay 广告中介平台。
+              根据广告配置和可用性，广告可能由 Unity Ads、ironSource
+              或通过该平台启用的其他广告合作伙伴提供。
             </p>
 
             <p className="mt-4">
               广告服务提供商可能会根据其隐私政策以及适用法律，
-              处理某些技术信息，例如广告标识符、IP 地址、设备信息、
-              应用程序信息、网络信息以及广告互动数据，
-              用于展示和衡量广告等相关目的。
+              处理某些技术信息，例如广告标识符、IP 地址、设备和应用程序信息、
+              网络信息、广告展示和点击记录、诊断数据以及防止欺诈所需的信息，
+              用于投放、个性化（如适用）、衡量和改进广告服务。
             </p>
 
             <p className="mt-4">
-              有关 Start.io 隐私处理方式的更多信息，
-              请查看其隐私政策。
+              有关广告数据处理方式的更多信息，请查看相关服务提供商的隐私政策：
             </p>
 
-            <a
-              href="https://www.start.io/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 underline"
-            >
-              Start.io 隐私政策
-            </a>
+            <ul className="privacy-list">
+              <li>
+                <a
+                  href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-400 hover:text-cyan-300 underline"
+                >
+                  Unity 隐私政策
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.is.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-400 hover:text-cyan-300 underline"
+                >
+                  ironSource 隐私政策
+                </a>
+              </li>
+            </ul>
           </section>
 
           {/* Permissions */}
@@ -237,7 +245,9 @@ const FileConverterPrivacyPolicyChinese = () => {
             </p>
 
             <ul className="privacy-list">
-              <li>Start.io — 广告服务</li>
+              <li>Unity LevelPlay — 广告中介服务</li>
+              <li>Unity Ads — 广告服务（如已启用）</li>
+              <li>ironSource — 广告服务（如已启用）</li>
               <li>FFmpeg — 多媒体处理</li>
               <li>LibreOffice — 文档转换</li>
               <li>Sharp — 图片处理</li>
@@ -380,7 +390,6 @@ const FileConverterPrivacyPolicyChinese = () => {
               </p>
             </div>
           </section>
-
         </motion.div>
 
         {/* Footer */}

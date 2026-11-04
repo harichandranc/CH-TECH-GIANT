@@ -54,6 +54,15 @@ import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 import WebCodshopPrivacyPolicyChinese from "./pages/apps/WebCodshopPrivacyPolicyChinese";
 import AllInOneConverterPrivacyPolicy from "./pages/apps/AllInOneConverterPrivacyPolicy";
 
+import AllInOneConverterPrivacyPolicy from "./pages/apps/AllInOneConverterPrivacyPolicy";
+import CGPASGPATerms from "./pages/apps/CGPASGPATerms";
+import WebCodshopTerms from "./pages/apps/WebCodshopTerms";
+import FileConverterTerms from "./pages/apps/FileConverterTerms";
+import FileRenamerTerms from "./pages/apps/FileRenamerTerms";
+import WorldClockTerms from "./pages/apps/WorldClockTerms";
+import PDFLockUnlockTerms from "./pages/apps/PDFLockUnlockTerms";
+
+
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
 import IOSDevelopment from "./pages/services/app-development/IOSDevelopment";
@@ -354,6 +363,45 @@ function App() {
               path="/apps/web-codshop/delete-account"
               element={<WebCodshopDeleteAccount />}
             />
+            
+            {/* APP terms conditions-PAGES */}
+
+            <Route
+              path="/apps/all-in-one-converter/privacy-policy"
+              element={<AllInOneConverterPrivacyPolicy />}
+            />
+
+            <Route
+              path="/apps/cgpa-sgpa-calculator/terms"
+              element={<CGPASGPATerms />}
+            />
+
+            <Route
+              path="/apps/web-codshop/terms"
+              element={<WebCodshopTerms />}
+            />
+
+            <Route
+              path="/apps/file-converter/terms"
+              element={<FileConverterTerms />}
+            />
+
+            <Route
+              path="/apps/file-renamer/terms"
+              element={<FileRenamerTerms />}
+            />
+
+            <Route
+              path="/apps/world-clock/terms"
+              element={<WorldClockTerms />}
+            />
+
+            <Route
+              path="/apps/pdf-lock-unlock/terms"
+              element={<PDFLockUnlockTerms />}
+            />
+
+
 
             {/* APP DEVELOPMENT SUB-PAGES */}
 

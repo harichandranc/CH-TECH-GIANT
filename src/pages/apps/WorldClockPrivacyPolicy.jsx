@@ -14,7 +14,7 @@ const WorldClockPrivacyPolicy = () => {
           </h1>
 
           <p className="text-gray-400 mb-10">
-            Effective Date: May 24, 2026
+            Effective Date: November 4, 2026
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
@@ -27,8 +27,9 @@ const WorldClockPrivacyPolicy = () => {
               </p>
 
               <p className="mt-4">
-                This Privacy Policy explains how information is handled when
-                you use the World Clock mobile application.
+                This Privacy Policy explains how information may be collected,
+                used, stored, and shared when you use the World Clock mobile
+                application.
               </p>
             </section>
 
@@ -38,26 +39,29 @@ const WorldClockPrivacyPolicy = () => {
               </h2>
 
               <p>
-                World Clock does not collect personally identifiable
-                information from users directly.
+                World Clock does not directly request or collect personally
+                identifiable information unless a feature specifically
+                requires it. However, third-party services integrated into
+                the app may automatically collect certain technical
+                information, depending on the SDKs enabled in the app.
               </p>
 
-              <p className="mt-4">
-                However, the app may use trusted third-party services that may
-                collect limited technical information such as:
-              </p>
+              <p className="mt-4">Such information may include:</p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Device information</li>
-                <li>App performance data</li>
-                <li>Crash reports</li>
-                <li>Advertising identifiers</li>
-                <li>Usage analytics</li>
+                <li>Device model, operating system, and technical details</li>
+                <li>IP address and approximate location derived from it</li>
+                <li>Advertising identifiers and device identifiers</li>
+                <li>Ad impressions, clicks, and advertising interactions</li>
+                <li>App usage, session, and interaction information</li>
+                <li>Crash reports, diagnostics, and performance data</li>
               </ul>
 
               <p className="mt-4">
-                This information is used only to improve app stability,
-                performance, and user experience.
+                Depending on the service used, this information may help
+                deliver advertisements, measure advertising performance,
+                diagnose technical problems, prevent fraud, and improve app
+                stability and functionality.
               </p>
             </section>
 
@@ -67,29 +71,43 @@ const WorldClockPrivacyPolicy = () => {
               </h2>
 
               <p>
-                The app may use third-party services including:
+                World Clock may use the following third-party services,
+                depending on the SDKs and features included in the published
+                version of the app:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Start.io</li>
+                <li>Unity Ads</li>
+                <li>Unity LevelPlay (ironSource), if integrated</li>
                 <li>Google Play Services</li>
-                <li>Firebase Analytics</li>
-                <li>Firebase Crashlytics</li>
+                <li>Firebase Analytics, if integrated</li>
+                <li>Firebase Crashlytics, if integrated</li>
               </ul>
 
               <p className="mt-4">
-                These services may collect information in accordance with their
-                own privacy policies.
+                These providers may process technical information according
+                to their own privacy policies. The information collected and
+                processed depends on the services actually integrated and
+                enabled in the app.
               </p>
 
               <div className="space-y-2 mt-4">
                 <a
-                  href="https://www.start.io/privacy"
+                  href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Start.io Privacy Policy
+                  Unity Privacy Policy
+                </a>
+
+                <a
+                  href="https://www.is.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
+                >
+                  Unity LevelPlay / ironSource Privacy Policy
                 </a>
 
                 <a
@@ -100,6 +118,15 @@ const WorldClockPrivacyPolicy = () => {
                 >
                   Google Privacy Policy
                 </a>
+
+                <a
+                  href="https://firebase.google.com/support/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
+                >
+                  Firebase Privacy Information
+                </a>
               </div>
             </section>
 
@@ -109,31 +136,46 @@ const WorldClockPrivacyPolicy = () => {
               </h2>
 
               <p>
-                World Clock may display advertisements provided by Start.io.
+                World Clock may display advertisements provided by Unity Ads
+                or through Unity LevelPlay mediation, if these services are
+                integrated and enabled.
               </p>
 
               <p className="mt-4">
-                Start.io may collect and process certain information such as
-                device information, advertising identifiers, IP address,
-                application usage data, ad interactions, and technical or
-                diagnostic information. This information may be used to
-                provide advertisements, measure advertising performance,
-                improve services, and help prevent fraud or abuse.
+                Depending on the advertising provider and configuration,
+                advertising partners may process device information,
+                advertising identifiers, IP addresses, approximate location,
+                ad impressions, clicks, app interaction data, and technical
+                or diagnostic information. This information may be used to
+                deliver advertisements, measure ad performance, improve
+                advertising services, and detect or prevent fraud and abuse.
               </p>
 
               <p className="mt-4">
-                Depending on applicable laws and available settings,
-                advertisements may be personalized or non-personalized.
+                Advertisements may be personalized or non-personalized
+                depending on the provider, your settings, applicable law,
+                and any consent required in your region.
               </p>
 
-              <a
-                href="https://www.start.io/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition duration-300"
-              >
-                https://www.start.io/privacy
-              </a>
+              <div className="space-y-2 mt-4">
+                <a
+                  href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
+                >
+                  Unity Advertising Privacy Policy
+                </a>
+
+                <a
+                  href="https://www.is.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
+                >
+                  Unity LevelPlay / ironSource Privacy Policy
+                </a>
+              </div>
             </section>
 
             <section>
@@ -142,79 +184,124 @@ const WorldClockPrivacyPolicy = () => {
               </h2>
 
               <p>
-                World Clock may request the following permissions for app
-                functionality:
+                World Clock may request permissions required for its
+                implemented features. Depending on the version of the app,
+                these may include:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-3">
                 <li>
-                  <strong>Internet Access</strong> — used for advertisements
-                  and online services.
+                  <strong>Internet Access</strong> — used for online
+                  functionality, advertising, and related services.
                 </li>
 
                 <li>
-                  <strong>Notification Permission</strong> — used for alarms,
-                  reminders, and notifications.
+                  <strong>Notification Permission</strong> — used for clock
+                  alerts, reminders, or notifications, if supported.
                 </li>
 
                 <li>
                   <strong>Exact Alarm Permission</strong> — used to schedule
-                  accurate alarms and alerts.
+                  precise alarms, if the app includes alarm functionality.
                 </li>
 
                 <li>
-                  <strong>Boot Completed Permission</strong> — used to restore
-                  alarms and widgets after device restart.
+                  <strong>Boot Completed Permission</strong> — may be used to
+                  restore scheduled alarms or widgets after a device restart,
+                  if supported.
                 </li>
 
                 <li>
-                  <strong>Wake Lock Permission</strong> — used to ensure alarms
-                  function correctly.
+                  <strong>Wake Lock Permission</strong> — may help keep
+                  relevant operations active when required by supported
+                  features.
                 </li>
 
                 <li>
-                  <strong>Storage / Media Access Permission</strong> — used for
-                  selecting custom alarm sounds or audio files.
+                  <strong>Storage or Media Access</strong> — may be used to
+                  select custom sounds or media, if that feature is available.
                 </li>
 
                 <li>
-                  <strong>Widget Access</strong> — used to provide home screen
-                  clock widgets and live clock functionality.
+                  <strong>Widget Functionality</strong> — used to provide
+                  home-screen clock widgets, if supported.
                 </li>
               </ul>
 
               <p className="mt-4">
-                Permissions are only used for core app features.
+                Only permissions required by the features available in the
+                installed version of the app should be requested. Permissions
+                not used by the app should be removed from its configuration.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Data Security
+                Data Sharing and Security
               </h2>
 
               <p>
-                We value user privacy and use reasonable measures to protect
-                app functionality and data handled by third-party services.
+                We do not sell users' personal information. Technical data
+                may be processed or shared by third-party providers when
+                necessary to provide advertising, analytics, crash reporting,
+                app functionality, security, or other services enabled in
+                the app.
               </p>
 
               <p className="mt-4">
-                No personal information is sold, traded, or shared with
-                unauthorized parties.
+                We use reasonable measures to protect information under our
+                control. However, no method of electronic transmission or
+                storage can be guaranteed to be completely secure. Third-party
+                providers process information under their own policies and
+                practices.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Children’s Privacy
+                Data Retention
               </h2>
 
               <p>
-                World Clock is not intended for children under the age of 13.
+                Information handled directly by the app is retained only as
+                necessary for its intended functionality. Third-party
+                providers may retain information according to their own
+                retention policies, contractual obligations, and applicable
+                laws.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Children's Privacy
+              </h2>
+
+              <p>
+                World Clock is not specifically directed at children under
+                the age of 13. We do not knowingly collect personal
+                information directly from children. If you believe that a
+                child has provided personal information in connection with
+                the app, please contact us so that we can review the matter.
               </p>
 
               <p className="mt-4">
-                We do not knowingly collect personal information from children.
+                Advertising and other third-party SDK configurations should
+                comply with applicable child privacy requirements whenever
+                children are part of the intended audience.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Your Privacy Choices
+              </h2>
+
+              <p>
+                Depending on your location and applicable law, you may have
+                choices regarding personalized advertising and certain data
+                processing activities. You may be able to manage advertising
+                preferences through your device settings or consent options
+                presented in the app, where available.
               </p>
             </section>
 
@@ -224,8 +311,10 @@ const WorldClockPrivacyPolicy = () => {
               </h2>
 
               <p>
-                This Privacy Policy may be updated periodically. Any changes
-                will be reflected on this page.
+                We may update this Privacy Policy periodically to reflect
+                changes to the app, third-party services, or applicable
+                requirements. The updated policy will be published on this
+                page with a revised effective date.
               </p>
             </section>
 
@@ -234,7 +323,13 @@ const WorldClockPrivacyPolicy = () => {
                 Contact Us
               </h2>
 
-              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md">
+              <p>
+                If you have questions about this Privacy Policy or the
+                handling of information related to World Clock, contact us
+                using the details below.
+              </p>
+
+              <div className="bg-white/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-md mt-4">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">
                   CH TECH GIANT (OPC) PRIVATE LIMITED
                 </h3>
@@ -243,6 +338,17 @@ const WorldClockPrivacyPolicy = () => {
                   <p>Email: info@chtechgiant.com</p>
                   <p>Phone: +91 9980785020</p>
                   <p>Location: Davangere, Karnataka – 577001, India</p>
+                  <p>
+                    Website:{" "}
+                    <a
+                      href="https://chtechgiant.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      https://chtechgiant.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </section>

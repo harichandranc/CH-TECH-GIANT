@@ -109,7 +109,7 @@ const AllInOneConverterPrivacyPolicy = () => {
 
               <p>
                 The app may use third-party libraries or services to support
-                file conversion, advertising, analytics, crash reporting, or
+                file conversion, analytics, crash reporting, or
                 other functionality.
               </p>
 

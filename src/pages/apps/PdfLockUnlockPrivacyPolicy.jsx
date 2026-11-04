@@ -14,32 +14,36 @@ const PDFLockUnlockPrivacyPolicy = () => {
           </h1>
 
           <p className="text-gray-400 mb-10">
-            Effective Date: July 26, 2026
+            Last Updated: November 4, 2026
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
-
+            {/* Introduction */}
             <section>
               <p>
                 Welcome to{" "}
                 <span className="text-cyan-400 font-semibold">
                   PDF Lock Unlock
-                </span>{" "}
-                ("the App"). Your privacy is important to us. This Privacy
-                Policy explains how we collect, use, and protect your
-                information when you use our application.
+                </span>
+                , developed by{" "}
+                <span className="text-cyan-400 font-semibold">
+                  CH TECH GIANT (OPC) PRIVATE LIMITED
+                </span>
+                . Your privacy is important to us. This Privacy Policy explains
+                how the app handles your information when you use its features.
               </p>
             </section>
 
+            {/* Information Collection */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 1. Information We Collect
               </h2>
 
               <p>
-                Our app is designed to protect and unlock PDF documents
-                securely. We collect only the information necessary to provide
-                these services.
+                PDF Lock Unlock allows you to password-protect PDF documents
+                and remove passwords from supported PDF files. Information
+                processed depends on the features you use.
               </p>
 
               <h3 className="text-xl font-semibold text-cyan-400 mt-6 mb-3">
@@ -47,207 +51,268 @@ const PDFLockUnlockPrivacyPolicy = () => {
               </h3>
 
               <p>
-                When you choose to lock or unlock a PDF, the selected file is
-                temporarily uploaded to our secure server for processing.
+                When you choose to lock or unlock a PDF, the selected file may
+                be uploaded temporarily to our server for processing, as
+                required by the app's implementation.
               </p>
 
               <p className="mt-4">
-                The uploaded file is used solely to:
+                The file may be processed to:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Protect a PDF with a password</li>
-                <li>Remove a password from a PDF</li>
-                <li>Generate the processed PDF for download</li>
+                <li>Remove a password from a supported PDF</li>
+                <li>Generate a processed PDF for download</li>
               </ul>
 
               <p className="mt-4">
-                We do not use your files for any other purpose.
+                Uploaded files are used to provide the operation you request
+                and are not intended to be used for unrelated purposes.
               </p>
             </section>
 
+            {/* Temporary File Processing */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 2. Temporary File Processing
               </h2>
 
               <p>
-                Uploaded PDF files are processed temporarily to complete your
-                requested operation.
+                If PDF processing requires a server upload, the selected file
+                is transferred for the purpose of completing your requested
+                operation.
               </p>
 
               <p className="mt-4">
-                Files are automatically deleted from our server after
-                processing and are not permanently stored.
+                Files should be deleted from the server after processing
+                according to the application's actual retention and cleanup
+                procedures. Please ensure your server implementation follows
+                this policy before publishing it.
+              </p>
+
+              <p className="mt-4">
+                Avoid uploading documents containing sensitive or confidential
+                information unless you are comfortable with the processing
+                required to provide the requested feature.
               </p>
             </section>
 
+            {/* Advertising */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 3. Advertising
               </h2>
 
               <p>
-                Our app uses{" "}
-                <strong>Start.io</strong>{" "}
-                to display advertisements.
+                The app may use{" "}
+                <span className="text-cyan-400 font-semibold">
+                  Unity LevelPlay
+                </span>{" "}
+                mediation and advertising partners, such as Unity Ads and
+                ironSource, where enabled and configured in the app.
               </p>
 
               <p className="mt-4">
-                Start.io may collect or process certain information from your
-                device for advertising and related purposes, which may include:
+                Depending on the services enabled, advertising providers may
+                collect or process information for ad delivery, measurement,
+                analytics, fraud prevention, and related purposes. This
+                information may include:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Device information</li>
-                <li>Advertising identifiers</li>
-                <li>IP address</li>
-                <li>App interaction and advertising information</li>
-                <li>Diagnostic and technical information</li>
+                <li>Device type, model, and operating system</li>
+                <li>Advertising IDs and other device identifiers</li>
+                <li>IP address and general network information</li>
+                <li>Advertising impressions and interactions</li>
+                <li>App usage, diagnostic, and technical information</li>
+                <li>Approximate location information, where permitted</li>
               </ul>
 
               <p className="mt-4">
-                The information collected by Start.io is handled according to
-                its own privacy policy and applicable laws.
+                The information processed depends on the advertising partners
+                integrated into your app version, your device settings, and
+                applicable laws. Third-party providers handle information
+                according to their own privacy policies.
               </p>
+
+              <p className="mt-4">
+                For more information, please review the applicable policies:
+              </p>
+
+              <ul className="list-disc pl-6 mt-4 space-y-3">
+                <li>
+                  <a
+                    href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300"
+                  >
+                    Unity Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.is.com/privacy-policy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300"
+                  >
+                    ironSource Privacy Policy
+                  </a>
+                </li>
+              </ul>
             </section>
 
+            {/* Data Security */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 4. Data Security
               </h2>
 
               <p>
-                We take reasonable security measures to protect your
-                information.
+                We take reasonable measures to protect information processed
+                through the app. Where supported by the server configuration,
+                secure HTTPS connections should be used to transfer files.
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>
-                  Secure HTTPS connections are used for communications.
-                </li>
-                <li>
-                  PDF files are processed securely.
-                </li>
-                <li>
-                  We do not permanently retain uploaded documents.
-                </li>
+                <li>Use secure connections when transferring PDF files.</li>
+                <li>Restrict access to uploaded documents.</li>
+                <li>Delete temporary files according to the configured retention policy.</li>
+                <li>Avoid retaining uploaded documents longer than necessary.</li>
               </ul>
 
               <p className="mt-4">
-                However, no method of transmission over the Internet is 100%
-                secure.
+                No method of electronic transmission or storage can be
+                guaranteed to be completely secure.
               </p>
             </section>
 
+            {/* Permissions */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 5. Permissions
               </h2>
 
-              <p>
-                The app may request permissions required to:
-              </p>
+              <p>The app may require permissions to:</p>
 
               <ul className="list-disc pl-6 mt-4 space-y-3">
                 <li>Select PDF files from your device</li>
                 <li>Save processed PDF files</li>
-                <li>Access the internet for processing documents</li>
-                <li>Display advertisements</li>
+                <li>Access the internet for server-based processing</li>
+                <li>Load advertisements when advertising services are enabled</li>
               </ul>
 
               <p className="mt-4">
-                The app does not access unnecessary personal information.
+                Permissions depend on your device, operating system, and app
+                version. The app should access only the resources needed for
+                its features and authorized by you.
               </p>
             </section>
 
+            {/* Children's Privacy */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 6. Children's Privacy
               </h2>
 
               <p>
-                Our app is not directed toward children under the age of 13.
+                The app is not specifically directed toward children under
+                the age of 13.
               </p>
 
               <p className="mt-4">
-                We do not knowingly collect personal information from
-                children.
-              </p>
-
-              <p className="mt-4">
-                If you believe a child has provided personal information,
-                please contact us so that we can remove it.
+                We do not knowingly collect children's personal information
+                directly through our own services. Third-party advertising
+                providers may process information according to their own
+                policies and applicable laws.
               </p>
             </section>
 
+            {/* Third-Party Services */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 7. Third-Party Services
               </h2>
 
               <p>
-                Our application uses the following third-party services:
+                Depending on the app version and services enabled, the app
+                may use third-party services for advertising and platform
+                functionality, including:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Start.io</li>
-                <li>Google Play Services</li>
+                <li>Unity LevelPlay mediation</li>
+                <li>Unity Ads, where enabled</li>
+                <li>ironSource, where enabled</li>
+                <li>Google Play Services, where applicable</li>
               </ul>
 
               <p className="mt-4">
-                These services may collect or process information according to
-                their own privacy policies.
+                These services may process information according to their
+                respective privacy policies.
               </p>
 
-              <div className="mt-4 space-y-2">
+              <div className="mt-4 space-y-3">
                 <a
-                  href="https://www.start.io/privacy"
+                  href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Start.io Privacy Policy
+                  Unity Privacy Policy
                 </a>
 
                 <a
-                  href="https://play.google.com/about/play-terms/index.html"
+                  href="https://www.is.com/privacy-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
                 >
-                  Google Play Services
+                  ironSource Privacy Policy
+                </a>
+
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-cyan-400 hover:text-cyan-300 transition duration-300"
+                >
+                  Google Privacy Policy
                 </a>
               </div>
             </section>
 
+            {/* Your Rights */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                8. Your Rights
+                8. Your Privacy Choices
               </h2>
 
               <ul className="list-disc pl-6 space-y-2">
                 <li>Stop using the app at any time.</li>
-                <li>Delete processed files from your device.</li>
-                <li>Contact us with privacy-related questions.</li>
+                <li>Delete downloaded or processed files from your device.</li>
+                <li>Manage advertising preferences through available device settings.</li>
+                <li>Contact us with privacy-related questions or concerns.</li>
               </ul>
             </section>
 
+            {/* Changes */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 9. Changes to This Privacy Policy
               </h2>
 
               <p>
-                We may update this Privacy Policy from time to time.
-              </p>
-
-              <p className="mt-4">
-                Any changes will be posted on this page with an updated
-                Effective Date.
+                We may update this Privacy Policy from time to time. Changes
+                will be posted on this page with a revised "Last Updated"
+                date.
               </p>
             </section>
 
+            {/* Contact */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
                 10. Contact Us
@@ -259,12 +324,30 @@ const PDFLockUnlockPrivacyPolicy = () => {
                 </h3>
 
                 <div className="space-y-2">
-                  <p>Email: support@chtechgiant.com</p>
-                  <p>Website: https://chtechgiant.com</p>
+                  <p>Davangere, Karnataka 577001, India</p>
+                  <p>
+                    Email:{" "}
+                    <a
+                      href="mailto:support@chtechgiant.com"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      support@chtechgiant.com
+                    </a>
+                  </p>
+                  <p>
+                    Website:{" "}
+                    <a
+                      href="https://chtechgiant.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      https://chtechgiant.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </section>
-
           </div>
         </motion.div>
       </div>

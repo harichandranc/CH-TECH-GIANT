@@ -14,11 +14,10 @@ const CGPASGPAPrivacyPolicy = () => {
           </h1>
 
           <p className="text-gray-400 mb-10">
-            Last Updated: May 24, 2026
+            Last Updated: November 4, 2026
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
-
             {/* Introduction */}
             <section>
               <p>
@@ -60,9 +59,7 @@ const CGPASGPAPrivacyPolicy = () => {
                 <li>Internet access for core calculation functionality</li>
               </ul>
 
-              <p className="mt-4">
-                We do not directly collect:
-              </p>
+              <p className="mt-4">We do not directly collect:</p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Name</li>
@@ -104,18 +101,21 @@ const CGPASGPAPrivacyPolicy = () => {
               </h2>
 
               <p>
-                The app may display advertisements provided by the third-party
-                advertising service{" "}
+                The app may display advertisements through{" "}
                 <span className="text-cyan-400 font-semibold">
-                  Start.io
-                </span>.
+                  Unity LevelPlay
+                </span>
+                , an advertising mediation platform. Depending on the
+                configuration and enabled advertising networks, ads may be
+                provided by Unity Ads, ironSource, or other enabled partners.
               </p>
 
               <p className="mt-4">
-                Start.io may collect and process certain information from your
-                device for advertising, analytics, fraud prevention, and
-                related purposes. Depending on applicable settings and
-                regulations, this information may include:
+                Advertising service providers may collect and process certain
+                information from your device for advertising, analytics, fraud
+                prevention, and related purposes. Depending on the service,
+                configuration, and applicable laws, this information may
+                include:
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
@@ -124,6 +124,8 @@ const CGPASGPAPrivacyPolicy = () => {
                 <li>IP address</li>
                 <li>App usage and interaction information</li>
                 <li>Approximate location information</li>
+                <li>Ad impressions and clicks</li>
+                <li>Diagnostic and fraud-prevention information</li>
               </ul>
 
               <p className="mt-4">
@@ -133,22 +135,38 @@ const CGPASGPAPrivacyPolicy = () => {
               </p>
 
               <p className="mt-4">
-                The collection and processing of information by Start.io is
-                subject to Start.io's own privacy policy and applicable laws.
+                Advertising providers process information according to their
+                own privacy policies and applicable laws.
               </p>
 
               <p className="mt-4">
-                For more information, please review Start.io's Privacy Policy:
+                For more information, please review the relevant privacy
+                policies:
               </p>
 
-              <a
-                href="https://www.start.io/policy/privacy-policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition duration-300"
-              >
-                Start.io Privacy Policy
-              </a>
+              <ul className="list-disc pl-6 mt-4 space-y-2">
+                <li>
+                  <a
+                    href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300 underline"
+                  >
+                    Unity Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.is.com/privacy-policy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300 underline"
+                  >
+                    ironSource Privacy Policy
+                  </a>
+                </li>
+              </ul>
             </section>
 
             {/* Permissions */}
@@ -158,9 +176,10 @@ const CGPASGPAPrivacyPolicy = () => {
               </h2>
 
               <p>
-                The CGPA/SGPA Calculator app currently does not request or
-                require any special device permissions for its core
-                functionality.
+                The CGPA/SGPA Calculator app does not require special device
+                permissions for its core calculation functionality. Any
+                permissions used by advertising SDKs or other integrated
+                services depend on the app's actual configuration.
               </p>
             </section>
 
@@ -193,18 +212,19 @@ const CGPASGPAPrivacyPolicy = () => {
                 Third-Party Services
               </h2>
 
-              <p>
-                The app may use third-party services including:
-              </p>
+              <p>The app may use third-party services including:</p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Start.io</li>
+                <li>Unity LevelPlay — advertising mediation</li>
+                <li>Unity Ads — advertising</li>
+                <li>ironSource — advertising</li>
+                <li>Other advertising partners enabled in the mediation configuration</li>
               </ul>
 
               <p className="mt-4">
-                These third-party services may collect or process limited
-                technical, advertising, or usage-related information according
-                to their own privacy policies.
+                These third-party services may collect or process technical,
+                advertising, or usage-related information according to their
+                own privacy policies.
               </p>
             </section>
 
@@ -215,14 +235,28 @@ const CGPASGPAPrivacyPolicy = () => {
               </h2>
 
               <p>
-                Since the app does not upload or store academic information or
-                personal data on our external servers, your calculator data
-                remains on your device.
+                Since the app does not upload or store academic information on
+                our external servers, your calculator data remains on your
+                device, as described in this policy.
               </p>
 
               <p className="mt-4">
                 Information processed by third-party advertising services is
                 handled according to their respective privacy policies.
+              </p>
+            </section>
+
+            {/* Data Sharing */}
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Data Sharing
+              </h2>
+
+              <p>
+                We do not upload academic calculation data to our external
+                servers or share it with advertising providers. Third-party
+                advertising services may independently process technical or
+                advertising-related information as described in this policy.
               </p>
             </section>
 
@@ -250,9 +284,27 @@ const CGPASGPAPrivacyPolicy = () => {
                 </h3>
 
                 <div className="space-y-2">
-                  <p>Davangere, Karnataka – 577001</p>
-                  <p>Email: info@chtechgiant.com</p>
-                  <p>Phone: +91 9980785020</p>
+                  <p>Davangere, Karnataka – 577001, India</p>
+
+                  <p>
+                    Email:{" "}
+                    <a
+                      href="mailto:info@chtechgiant.com"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      info@chtechgiant.com
+                    </a>
+                  </p>
+
+                  <p>
+                    Phone:{" "}
+                    <a
+                      href="tel:+919980785020"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      +91 9980785020
+                    </a>
+                  </p>
                 </div>
               </div>
             </section>
@@ -264,11 +316,11 @@ const CGPASGPAPrivacyPolicy = () => {
               </h2>
 
               <p>
-                By using the CGPA/SGPA Calculator app, you acknowledge and
-                agree to this Privacy Policy.
+                By using the CGPA/SGPA Calculator app, you acknowledge that
+                you have read this Privacy Policy and understand how
+                information may be handled as described here.
               </p>
             </section>
-
           </div>
         </motion.div>
       </div>

@@ -14,11 +14,10 @@ const ImageToPDFPrivacyPolicyChinese = () => {
           </h1>
 
           <p className="text-gray-400 mb-10">
-            最后更新日期：2026年5月24日
+            最后更新日期：2026年11月4日
           </p>
 
           <div className="space-y-10 text-gray-300 leading-8">
-
             {/* Introduction */}
             <section>
               <p>
@@ -34,7 +33,7 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </p>
 
               <p className="mt-4">
-                我们非常重视您的隐私。本隐私政策说明本应用如何处理用户信息。
+                我们非常重视您的隐私。本隐私政策说明本应用如何处理用户信息，包括第三方广告服务可能处理的信息。
               </p>
             </section>
 
@@ -45,7 +44,7 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                图片转 PDF 不会直接收集、存储或共享用户的个人信息。
+                图片转 PDF 不会通过我们自己的服务器直接收集、存储或共享您的个人文件。
               </p>
 
               <p className="mt-4">
@@ -53,11 +52,11 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </p>
 
               <p className="mt-4">
-                所有图片处理和 PDF 生成操作均尽可能在您的设备本地完成。
+                在应用支持的情况下，图片选择和 PDF 生成操作会在您的设备本地完成。
               </p>
 
               <p className="mt-4">
-                但是，本应用集成的第三方广告服务可能会根据其隐私政策处理某些技术信息或广告相关信息。
+                本应用集成的第三方广告服务可能会根据其隐私政策收集或处理某些技术信息、设备信息和广告相关信息，具体内容如下。
               </p>
             </section>
 
@@ -68,14 +67,14 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </h2>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>存储空间 / 照片访问权限</li>
+                <li>照片或媒体访问权限（如有需要）</li>
                 <li>从设备中选择图片</li>
-                <li>保存生成的 PDF 文件</li>
-                <li>分享导出的 PDF 文档</li>
+                <li>将生成的 PDF 文件保存到经授权的位置</li>
+                <li>根据用户请求分享导出的 PDF 文档</li>
               </ul>
 
               <p className="mt-4">
-                本应用仅访问用户主动选择或授权用于相关操作的文件和照片。
+                本应用仅访问您主动选择或授权用于相关操作的文件和照片。具体权限取决于您的设备、操作系统和应用版本。
               </p>
             </section>
 
@@ -86,59 +85,91 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </h2>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>您的图片保留在您的设备上</li>
-                <li>我们不会将您的文件上传到我们的服务器</li>
-                <li>我们不会出售或共享您的文件</li>
-                <li>PDF 生成操作在您的设备本地完成</li>
+                <li>在应用支持的情况下，您选择的图片会在设备本地处理。</li>
+                <li>作为本地转换流程的一部分，我们不会将您的图片或生成的 PDF 文件上传到我们的服务器。</li>
+                <li>我们不会出售您的图片或生成的 PDF 文档。</li>
+                <li>导出的文件会保存到您选择或授权的位置。</li>
               </ul>
+
+              <p className="mt-4">
+                如果未来的功能或应用集成需要将文件或信息传输到设备之外，我们应在使用该功能之前说明相关情况。
+              </p>
             </section>
 
             {/* Advertising */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">
-                广告
+                广告与第三方服务
               </h2>
 
               <p>
-                本应用可能会显示由第三方广告服务{" "}
+                本应用可能通过{" "}
                 <span className="text-cyan-400 font-semibold">
-                  Start.io
+                  Unity LevelPlay
                 </span>{" "}
-                提供的广告。
+                广告中介平台展示广告，并可能使用 Unity Ads、ironSource
+                等广告合作伙伴，具体取决于应用中实际启用和配置的服务。
               </p>
 
               <p className="mt-4">
-                Start.io 可能会根据其隐私政策，为广告、分析、欺诈预防及相关服务收集和处理设备中的某些信息。根据适用的设置和法规，这些信息可能包括：
+                这些广告服务可能会收集或处理某些信息，用于展示广告、衡量广告效果、进行分析、防止欺诈以及改进其服务。根据实际启用的服务、设备设置和适用法律，这些信息可能包括：
               </p>
 
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>设备信息</li>
-                <li>广告标识符或其他设备标识符</li>
-                <li>IP 地址</li>
-                <li>应用使用情况和互动信息</li>
-                <li>大致位置信息</li>
+                <li>设备类型、型号和操作系统</li>
+                <li>广告标识符及其他设备标识符</li>
+                <li>IP 地址和一般网络信息</li>
+                <li>广告展示、互动及与广告相关的应用使用信息</li>
+                <li>在法律允许的情况下，根据 IP 地址或设备设置获取的大致位置信息</li>
+                <li>诊断、性能和防欺诈相关信息</li>
               </ul>
 
               <p className="mt-4">
-                这些信息可能用于提供广告、衡量广告效果、进行分析、防止欺诈以及改进广告服务。
+                实际收集的信息取决于您所使用的应用版本中集成的广告合作伙伴，以及您的设备隐私设置。我们无法控制第三方广告服务提供商独立进行的数据处理活动。
               </p>
 
               <p className="mt-4">
-                Start.io 对相关信息的收集和处理受其自身隐私政策以及适用法律的约束。
+                如需了解更多信息，请查看相关服务的隐私政策：
+              </p>
+
+              <ul className="list-disc pl-6 mt-4 space-y-3">
+                <li>
+                  <a
+                    href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300"
+                  >
+                    Unity 隐私政策
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.is.com/privacy-policy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 transition duration-300"
+                  >
+                    ironSource 隐私政策
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            {/* Data Sharing */}
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                数据共享
+              </h2>
+
+              <p>
+                我们不会出售您的个人文件或生成的 PDF 文档。当第三方广告服务在应用中启用时，这些服务可能会根据其隐私政策和适用法律处理相关信息。
               </p>
 
               <p className="mt-4">
-                如需了解更多信息，请查看 Start.io 的隐私政策：
+                在本地转换流程中，我们不会将您选择的图片或生成的 PDF 文档共享给广告合作伙伴。
               </p>
-
-              <a
-                href="https://www.start.io/policy/privacy-policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition duration-300"
-              >
-                Start.io 隐私政策
-              </a>
             </section>
 
             {/* Data Security */}
@@ -148,15 +179,15 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                由于图片处理和 PDF 生成操作在设备本地完成，您的文件始终由您自行控制。
+                在应用支持的情况下，我们通过在您的设备本地处理图片和生成 PDF 文件，尽可能保护您的隐私。
               </p>
 
               <p className="mt-4">
-                我们不会将您的图片或生成的 PDF 文件上传或存储在我们的外部服务器上。
+                作为本地转换流程的一部分，我们不会将您选择的图片或生成的 PDF 文件上传或存储在我们的外部服务器上。
               </p>
 
               <p className="mt-4">
-                第三方广告服务处理的信息将按照其各自的隐私政策进行处理。
+                第三方广告服务处理的信息将按照其各自的隐私政策和安全措施进行处理。
               </p>
             </section>
 
@@ -171,7 +202,18 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </p>
 
               <p className="mt-4">
-                我们不会故意直接收集儿童的个人信息。
+                我们不会通过自己的服务器故意直接收集儿童的个人信息。第三方广告服务可能会根据其自身政策和适用法律处理相关信息。
+              </p>
+            </section>
+
+            {/* User Choices */}
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                您的隐私选择
+              </h2>
+
+              <p>
+                您可以通过设备的隐私设置管理个性化广告或限制广告标识符的使用。可用的控制选项取决于设备、操作系统、所在地区和适用法律。
               </p>
             </section>
 
@@ -182,7 +224,7 @@ const ImageToPDFPrivacyPolicyChinese = () => {
               </h2>
 
               <p>
-                我们可能会不时更新本隐私政策。任何更新都会发布在本页面，并更新相应的日期。
+                我们可能会不时更新本隐私政策。任何变更都会发布在本页面，并更新相应的日期。我们建议您定期查看本页面。
               </p>
             </section>
 
@@ -196,12 +238,27 @@ const ImageToPDFPrivacyPolicyChinese = () => {
                 <div className="space-y-2">
                   <p>CH TECH GIANT (OPC) PRIVATE LIMITED</p>
                   <p>印度卡纳塔克邦达文盖雷 – 577001</p>
-                  <p>电子邮箱：info@chtechgiant.com</p>
-                  <p>电话：+91 9980785020</p>
+                  <p>
+                    电子邮箱：
+                    <a
+                      href="mailto:info@chtechgiant.com"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      info@chtechgiant.com
+                    </a>
+                  </p>
+                  <p>
+                    电话：
+                    <a
+                      href="tel:+919980785020"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      +91 9980785020
+                    </a>
+                  </p>
                 </div>
               </div>
             </section>
-
           </div>
         </motion.div>
       </div>
