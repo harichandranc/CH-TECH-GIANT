@@ -54,14 +54,14 @@ import WebCodshopPrivacyPolicy from "./pages/apps/WebCodshopPrivacyPolicy";
 import WebCodshopPrivacyPolicyChinese from "./pages/apps/WebCodshopPrivacyPolicyChinese";
 import AllInOneConverterPrivacyPolicy from "./pages/apps/AllInOneConverterPrivacyPolicy";
 
-import AllInOneConverterPrivacyPolicy from "./pages/apps/AllInOneConverterPrivacyPolicy";
 import CGPASGPATerms from "./pages/apps/CGPASGPATerms";
 import WebCodshopTerms from "./pages/apps/WebCodshopTerms";
 import FileConverterTerms from "./pages/apps/FileConverterTerms";
 import FileRenamerTerms from "./pages/apps/FileRenamerTerms";
 import WorldClockTerms from "./pages/apps/WorldClockTerms";
 import PDFLockUnlockTerms from "./pages/apps/PDFLockUnlockTerms";
-
+import InvoiceMakerTerms from "./pages/apps/InvoiceMakerTerms";
+import ImageToPDFTerms from "./pages/apps/ImageToPDFTerms";
 
 import FlutterDevelopment from "./pages/services/app-development/FlutterDevelopment";
 import AndroidDevelopment from "./pages/services/app-development/AndroidDevelopment";
@@ -308,7 +308,7 @@ function App() {
             />
 
             <Route
-              path="/apps/file-converter/privacy-policy/chinese"
+              path="/apps/file-renamer/privacy-policy/chinese"
               element={<FileRenamerPrivacyPolicyChinese />}
             />
 
@@ -399,6 +399,16 @@ function App() {
             <Route
               path="/apps/pdf-lock-unlock/terms"
               element={<PDFLockUnlockTerms />}
+            />
+
+            <Route
+              path="/apps/invoice-maker/terms"
+              element={<InvoiceMakerTerms />}
+            />
+
+            <Route
+              path="/apps/image-to-pdf/terms"
+              element={<ImageToPDFTerms />}
             />
 
 
